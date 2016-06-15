@@ -22,13 +22,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="131">
+              <caret line="112" column="104" selection-start-line="112" selection-start-column="104" selection-end-line="112" selection-end-column="104" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="sheet.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/designs/sheet.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
@@ -152,10 +156,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1466008721718</updated>
+      <workItem from="1466008727089" duration="2919000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="2919000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="0" width="1378" height="754" extended-state="0" />
@@ -193,17 +199,26 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/template.html">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="112" column="104" selection-start-line="112" selection-start-column="104" selection-end-line="112" selection-end-column="104" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/designs/sheet.css">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
           <folding />
         </state>
       </provider>
