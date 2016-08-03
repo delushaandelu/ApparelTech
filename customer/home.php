@@ -3,7 +3,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Theme</title>
-    <link rel="stylesheet" href="designs/template.css" type="text/css" />
+    <link rel="stylesheet" href="designs/home.css" type="text/css" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -59,13 +59,38 @@
 </nav>
 </div>
 </br></br>
-<div id ="lol"</div>
+<div id ="lol"></div>
 <div id="main">
     <div id="header">
         <img src="images/4p-banner-buyer.jpg">
     </div>
 
     <div id="menu">
+        <div id = info>
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading" align="center">Welcome!</div>
+                    <div class="panel-body">
+                        <table>
+                            <form method="get">
+                                <tr>
+                                    <td>Customer name : </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Customer ID : </td>
+                                </tr>
+                                <tr>
+                                    <td>Company name : </td>
+                                    <td></td>
+                                </tr>
+
+                            </form>
+                        </table>
+                    </div>
+                </div>
+
+        </div>
 
     </div>
 
@@ -73,7 +98,5 @@
         <p>&nbsp;</p>
         <p>&nbsp;</p>
     </div>
-    <div id="footer"></div>
-</div>
 </body>
 </html>
