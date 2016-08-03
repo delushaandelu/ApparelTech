@@ -136,3 +136,13 @@ img
 	height:70px;
 	
 	}
+	
+	
+.previous_report_history_table{
+	height:300px;
+	background-color:#F00;
+	}
+.previous_report_stock_report{
+	height:600px;
+	background-color:#00F;
+	}
