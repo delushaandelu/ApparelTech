@@ -162,5 +162,14 @@ img
 	top:1px;
 }
 
-     
- 
+
+ul.dropdown-menu{
+	padding:0;
+	}
+
+#drop_down_list_effect{
+
+	background-color:#CCC;
+	
+	color:#000;
+	}
