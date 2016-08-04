@@ -22,8 +22,9 @@
 				</div>
 			
 				<ul class="nav navbar-nav navbar-right">
-					<li class="active"><a href="Home.html">Home</a></li>
-					<li><a href="Company.html">Company</a></li>
+					
+					<li><a href="Home.html">Home</a></li>
+					<li class="active"><a href="Company.html">Company</a></li>
 					<li><a href="Service.html">Service</a></li>
 					<li><a href="Product.html">Product</a></li>
 					<li><a href="Contact us.html">Contact us</a></li>
@@ -33,30 +34,6 @@
 		</nav>
 	</div>
 </div>
-
-<div class="w3-content w3-section" style="max-width:500px"
-align="top" >
-  <img class="mySlides" src="1.jpg" height="640" width="1400">
-  <img class="mySlides" src="2.jpg" height="640" width="1400">
-  <img class="mySlides" src="3.jpg" height="640" width="1400">
-</div>
-
-<script>
-var myIndex = 0;
-carousel();
-
-function carousel() {
-    var i;
-    var x = document.getElementsByClassName("mySlides");
-    for (i = 0; i < x.length; i++) {
-       x[i].style.display = "none";  
-    }
-    myIndex++;
-    if (myIndex > x.length) {myIndex = 1}    
-    x[myIndex-1].style.display = "block";  
-    setTimeout(carousel, 4000); 
-}
-</script>
 
 </body>
 </html>
