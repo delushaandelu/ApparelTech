@@ -2,24 +2,50 @@
 /* CSS Document */
 
 
-#main
+#main1
 {
-	
-	padding: 40% 30% 40% 30%;
+	font-weight:bold;
 	background-color:white;
-	margin: 2% 3% 2% 3%;
-	border-radius:2%;
+	margin:2% 1% 1% 1%;
+	width:95%;
+	height:100%;
+	border-radius:100%;
+	padding-bottom:150%;
+}
+#kl{
+margin-right:0%;
+width:95%;
+height:20%;
+}
+
+li {
+    display:inline;
+    float: left;
+
+}
+ul {
+    list-style-type: none;
+    
+   
+}
+.active {
+    background-color:red;
+	
+	
 	
 }
-#al{
-padding: 0% 0% 0% 0%;
-margin: 2% 3% 2% 3%;
+.mySlides {
+	display:none;
+	}
+
+
+li a {
+    width:150px;
+	height:60px;
+	text-align: center;
+	
+	
 }
-
-
-
-
-
 
 
 
