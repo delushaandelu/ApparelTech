@@ -5,13 +5,14 @@ body
 {
     margin:0;
     padding:0;
-    background:url("../images/12.jpg");
+    background:url("../images/7.jpg");
+	margin-bottom:200px;
 }
 
 #main
 {
     width:980px;
-    height:auto;
+    height:1000px;
     margin-left:auto;
     margin-right:auto;
     margin-top:21px;
@@ -23,15 +24,65 @@ body
 
 #header
 {
-    height:850px;
-    margin-bottom:5px;
+    margin-top:40px;
+    height: 750px;
+    margin-bottom:-470px;
+}
+
+#panel-heading
+{
+	background-color:#000
+	
 }
 
 #menu
 {
-	height: auto;
-	margin-left: 2%;
-	margin-right: 2%;
+	height: 20px;
+	margin-top:-70px;
+	background-color:#000;
+	font-style:normal;
+	font-size:12px;
+	color:#FFF;
+	
+}
+#h2
+{
+	font-style:normal;
+	font-size:5px;
+	color:#FFF;
+}
+
+#top
+{
+    height:500px;
+	margin-top:-50px;
+    margin-left: 5%;
+    margin-right: 5%;
+	color:#000;
+	
+	padding:80px;
+	
+}
+
+#top-left{
+	width:500px;
+	height:500px;
+	float:left
+	}
+	
+#top-right{
+	height:500px;
+	width:150px;
+	
+	float:right;
+	}
+	
+#button-effect{
+	border-radius:8px;
+	width:100px;
+	height:45px;
+	color:#FFF;
+	background-color:#006
 }
 
 #content
