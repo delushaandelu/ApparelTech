@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="designs/template.css" type="text/css" />
     <link rel="stylesheet" href="../config/design/css/theme.css" type="text/css">
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <?php
         include ("../config/headerstock.html");
     ?>

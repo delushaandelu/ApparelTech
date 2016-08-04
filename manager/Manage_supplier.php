@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="designs/template.css" type="text/css" />
     <link rel="stylesheet" href="../config/design/css/theme.css" type="text/css">
     <?php
-        include ("../config/headerstock.html");
+        include ("../config/headermanager.html");
     ?>
 </head>
 <body>
