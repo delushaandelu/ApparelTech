@@ -4,70 +4,13 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Theme</title>
     <link rel="stylesheet" href="designs/template.css" type="text/css" />
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../config/design/css/theme.css" type="text/css">
+    <?php
+        include ("../config/headerstock.html");
+    ?>
 </head>
 <body>
-<div id ="md">
-<nav class="navbar navbar-inverse">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="#">Stock Manager</a>
-        </div>
-        <ul class="nav navbar-nav">
-            <li><a href="#" >Home</a></li>
-            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#" id="menu_bar_effect">Stock <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Manage Stock</a></li>
-                    <li><a href="#">New Report</a></li>
-                    <li><a href="#">Prevoius Reports</a></li>
-                </ul>
-            </li>
-            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Purchase Order <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">*** customer</a></li>
-                    	<ul class="dropdown-menu">
-                        	<li><a href="#"> Manage Purchae Order</a></li>
-                            <li><a href="#"> Invoice</a></li>
-                        </ul>
-                    <li><a href="#">Create</a></li>
-                    	<ul class="dropdown-menu">
-                        	<li><a href="#"> Purchase Order</a></li>
-                            <li><a href="#"> View Purchase Order</a></li>
-                        </ul>
-                </ul>
-            </li>
-            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Rent <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Manage Rent</a></li>
-                    <li><a href="#">View Rent Reports</a></li>
-                </ul>
-            </li>
-            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Delivery <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Manage Delivery</a></li>
-                    <li><a href="#">Delivery Reports</a></li>
-                    <li><a href="#">Delivery Details</a></li>
-                    <li><a href="#">Vehicle Details</a></li>
-                </ul>
-            </li>
-            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Setting <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Change Username</a></li>
-                    <li><a href="#">Reset Password</a></li>
-                </ul>
-            </li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-            
-            <li><a href="index.html"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
-        </ul>
-    </div>
-</nav>
-</div>
+
 </br></br>
 <div id ="lol"></div>
 <div id="main">

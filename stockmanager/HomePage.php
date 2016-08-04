@@ -7,25 +7,23 @@
     <link rel="stylesheet" href="../config/design/css/theme.css" type="text/css">
     <meta charset="utf-8">
     <?php
-    include ("../config/headercustomer.html");
+        include ("../config/headerstock.html");
     ?>
 </head>
 <body>
+
 </br></br>
+<div id ="lol"</div>
 <div id="main">
     <div id="header">
-        <img src="images/4p-banner-buyer.jpg">
-    </div>
-
-    <div id="menu">
-        PHP TABLE HERE
-        <br></br>
-        <input type="button" value="Cancel Po" class="myButton">
+        <img src="images/background-image2-1600x743.jpg">
     </div>
 
     <div id="content">
-        <p>&nbsp;</p>
-        <p>&nbsp;</p>
+
     </div>
+
+    <div id="footer"></div>
+</div>
 </body>
 </html>
