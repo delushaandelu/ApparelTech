@@ -5,30 +5,27 @@
     <title>Theme</title>
     <link rel="stylesheet" href="designs/template.css" type="text/css" />
     <link rel="stylesheet" href="../config/design/css/theme.css" type="text/css">
-    <link rel="stylesheet" href="designs/dsgn.css" type="text/css">
-    <meta charset="utf-8">
     <?php
-    include ("../config/headercustomer.html");
+        include ("../config/headermanager.html");
     ?>
 </head>
 <body>
+
 </br></br>
 <div id="main">
     <div id="header">
-        <?php
-            include("slide/slides.html");
-        ?>
+        <img src="images/Managing.jpg">
     </div>
 
     <div id="menu">
-        PHP TABLE HERE
-        <br></br>
-        <input type="button" value="Cancel Po" class="myButton">
+
     </div>
 
     <div id="content">
         <p>&nbsp;</p>
         <p>&nbsp;</p>
     </div>
+    <div id="footer"></div>
+</div>
 </body>
 </html>

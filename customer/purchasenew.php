@@ -5,6 +5,7 @@
     <title>Theme</title>
     <link rel="stylesheet" href="designs/template.css" type="text/css" />
     <link rel="stylesheet" href="../config/design/css/theme.css" type="text/css">
+    <link rel="stylesheet" href="designs/dsgn.css" type="text/css">
     <meta charset="utf-8">
     <?php
     include ("../config/headercustomer.html");
@@ -14,10 +15,12 @@
 </br></br>
 <div id="main">
     <div id="header">
-        <img src="images/4p-banner-buyer.jpg">
+        <?php
+            include("slide/slides.html");
+        ?>
     </div>
 
-    <div id="menu">
+    <div id="menu"></br>
         <h1>Table here</h1>
         <div class="box">
             <a class="button" href="#popup1">Let me Pop up</a>

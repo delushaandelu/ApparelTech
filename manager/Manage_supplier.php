@@ -77,8 +77,8 @@
 						  </tr>
                           <tr>
                                         
-							<td id="table_font" width="60%" align="right">
-								Mobile                           
+							<td id="table_font" width="60%" align="left">
+								                     Mobile                           
 							</td> 
                                          
 							<td>
@@ -117,7 +117,7 @@
                             <form>
                             	  <tr>
                            			 <td>
-                            			<input type="text" name="Search by id"><br><br>
+                            			<input type="text" name="Search by id" placeholder="Search by ID" class="form-control"><br><br>
                            			</td>
                          	      </tr>
                                  <button type="button" id="button-effect">Search</button> <br><br>
