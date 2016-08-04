@@ -36,7 +36,8 @@
                             	Supplier ID
                             </td>
                             <td>
-                            	<input type="text" name="Supplier ID"><br><br>
+                            	<input type="text" name="Supplier ID" class="form-control">
+								<br><br>
                             </td>
 						</tr>
                         <tr>
@@ -44,7 +45,8 @@
                             	Supplier name
 							</td>
                             <td>
-                            	<input type="text" name="Supplier name"><br><br>
+                            	<input type="text" name="Supplier name" class="form-control">
+								<br><br>
                             </td>
 </tr>
                          <tr>
@@ -52,7 +54,8 @@
                             	Location							
                             </td>
                             <td>
-                            	<input type="text" name="Location"><br><br>
+                            	<input type="text" name="Location" class="form-control">
+								<br><br>
                            </td>
                          </tr>
                          <tr>
@@ -72,7 +75,8 @@
 							</td> 
                                          
 							<td>
-								<input type="tel" name="Telephone" ><br><br>
+								<input type="tel" name="Telephone" class="form-control">
+								<br><br>
 							</td>
 						  </tr>
                           <tr>
@@ -82,14 +86,15 @@
 							</td> 
                                          
 							<td>
-								<input type="tel" name="Mobile" ><br><br>
+								<input type="tel" name="Mobile" class="form-control">
+								<br><br>
 							</td>
 						  </tr>
 						  <tr>
                         	<td id="table-font" width="60%">
                             	Address
 							</td>
-                            <td><textarea name="Address" rows="3"></textarea>
+                            <td><textarea name="Address" rows="3" class="form-control"></textarea>
                               <br><br>
  						    </td>
 						  </tr>
@@ -98,7 +103,8 @@
                             	e-mail address							
                             </td>
                             <td>
-                            	<input type="email" name="e-mail address"><br><br>
+                            	<input type="email" name="e-mail address" class="form-control">
+								<br><br>
                            </td>
                          </tr>
                          <tr>
@@ -106,7 +112,8 @@
                             	Item type						
                             </td>
                             <td>
-                            	<input type="text" name="Item type"><br><br>
+                            	<input type="text" name="Item type" class="form-control">
+								<br><br>
                            </td>
                          </tr>
                          
@@ -117,21 +124,24 @@
                             <form>
                             	  <tr>
                            			 <td>
-                            			<input type="text" name="Search by id"><br><br>
+                            			<input type="text" name="Search by id" class="form-control">
+										 <br><br>
                            			</td>
                          	      </tr>
-                                 <button type="button" id="button-effect">Search</button> <br><br>
-                                 <button type="button" id="button-effect">Delete</button> <br><br>
-                                 <button type="button" id="button-effect">Update</button> <br><br>
-                                 <button type="button" id="button-effect">Clear</button> <br><br>
-                                 <button type="button" id="button-effect">Refresh</button>
+									<button type="button" id="button" class="btn btn-default btn-lg active">Search</button>
+									<br><br>
+                                 	<button type="button" id="button" class="btn btn-default btn-lg active">Delete</button>
+									<br><br>
+                                 	<button type="button" id="button" class="btn btn-default btn-lg active">Update</button>
+									<br><br>
+                                 	<button type="button" id="button" class="btn btn-default btn-lg active">Clear</button>
+									<br><br>
+									<button type="button" id="button" class="btn btn-default btn-lg active">Refresh</button>
                             </form>
                         
-                        </div>
-
-
-        <p>&nbsp;</p>
-		<p>&nbsp;</p>
+				  </div>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
     </div>
     <div id="footer"></div>
 </div>
