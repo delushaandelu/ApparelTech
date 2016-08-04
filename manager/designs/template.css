@@ -5,14 +5,14 @@ body
 {
     margin:0;
     padding:0;
-    background:url("../images/7.jpg");
+    background:url("../images/12.jpg");
 	margin-bottom:200px;
 }
 
 #main
 {
     width:980px;
-    height:1000px;
+    height:2000px;
     margin-left:auto;
     margin-right:auto;
     margin-top:21px;
@@ -67,7 +67,7 @@ body
 #top-left{
 	width:500px;
 	height:500px;
-	float:left
+	float:left;
 	}
 	
 #top-right{
@@ -77,12 +77,19 @@ body
 	float:right;
 	}
 	
-#button-effect{
+#button{
 	border-radius:8px;
 	width:100px;
 	height:45px;
-	color:#FFF;
-	background-color:#006
+	color:#FFFFFF;
+	background-color:#006;
+}
+
+button:hover {background-color: #000000}
+
+button:active {
+    background-color: #000000;
+    transform: translateY(4px);
 }
 
 #content
