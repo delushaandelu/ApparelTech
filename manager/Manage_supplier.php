@@ -5,69 +5,13 @@
     <title>Theme</title>
     <link rel="stylesheet" href="designs/template.css" type="text/css" />
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="designs/template.css" type="text/css" />
+    <link rel="stylesheet" href="../config/design/css/theme.css" type="text/css">
+    <?php
+        include ("../config/headerstock.html");
+    ?>
 </head>
 <body>
-<div id ="md">
-<nav class="navbar navbar-inverse">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="#">Manager</a>
-        </div>
-        <ul class="nav navbar-nav">
-            <li><a href="#">Home</a></li>
-            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Supplier <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Manage supplier</a></li>
-                    <li><a href="#">View</a></li>
-                </ul>
-            </li>
-            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Stock <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Manage stock</a></li>
-                    <li><a href="#">View Stock</a></li>
-                    <li><a href="#">Order Stock</a></li>
-                    <li><a href="#">View Order Stock</a></li>
-                </ul>
-            </li>
-            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Customer <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Manage customer</a></li>
-                    <li><a href="#">View customer</a></li>
-                </ul>
-            </li>
-            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">View <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Rent</a></li>
-                    <li><a href="#">Purchase order</a></li>
-                    <li><a href="#">Delivery</a></li>
-                    <li><a href="#">Vehicle details</a></li>
-                    <li><a href="#">Driver details</a></li>
-                </ul>
-            </li>
-            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Quotation <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Manage</a></li>
-                    <li><a href="#">View</a></li>
-                </ul>
-            </li>
-            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Setting <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Change Username</a></li>
-                    <li><a href="#">Change Password</a></li>
-                </ul>
-            </li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-            <li><a href="index.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-            <li><a href="index.html"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
-        </ul>
-    </div>
-</nav>
-</div>
 </br></br>
 <div id ="lol"</div>
 <div id="main">
