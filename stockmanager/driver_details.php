@@ -31,7 +31,7 @@
                             <td id="table_font">Driver Name</td>
 
                             <td>
-                                <input type="text" name="drivername" class="form-control">
+                                <input type="text" name="drivername"  class="form-control">
                             </td>
 
 
@@ -42,7 +42,7 @@
                             <td id="table_font">Driver ID</td>
 
                             <td>
-                                <input type="text" name="driverid" class="form-control">
+                                <input type="text" name="driverid"  class="form-control">
                             </td>
                         </tr>
 
@@ -51,7 +51,7 @@
                             <td id="table_font">Licence Number</td>
 
                             <td>
-                                <input type="text" name="licencenumber" class="form-control">
+                                <input type="text" name="licencenumber"  class="form-control">
                             </td>
                         </tr>
 
@@ -67,7 +67,7 @@
                             <td id="table_font" align="center">Mobile 01</td>
 
                              <td>
-                                <input type="text" name="mobile1" class="form-control" >
+                                <input type="text" name="mobile1"  class="form-control" >
                             </td>
                         </tr>
 
@@ -76,7 +76,7 @@
                             <td id="table_font" align="center">Mobile 02</td>
 
                             <td>
-                                <input type="text" name="mobile2" class="form-control" >
+                                <input type="text" name="mobile2"  class="form-control" >
                             </td>
                         </tr>
 
@@ -85,7 +85,7 @@
                             <td id="table_font">Address</td>
 
                             <td>
-                                <input type="text" name="address" class="form-control" >
+                                <input type="text" name="address"  class="form-control" >
                             </td>
                         </tr>
                         <tr>
@@ -93,7 +93,7 @@
                             <td id="table_font">Location</td>
 
                             <td>
-                                <input type="text" name="location" class="form-control">
+                                <input type="text" name="location"  class="form-control">
                             </td>
                         </tr>
 
