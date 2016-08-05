@@ -20,7 +20,7 @@ body
     margin-top:21px;
     margin-bottom:21px;
     background-color:#CCC;
-    border-radius:2%;
+    border-radius:4%;
     opacity:1;
 }
 
@@ -202,7 +202,6 @@ button:active {
 #bottom-right1{
     height:500px;
     width:150px;
-
     float:right;
 }
 
@@ -221,4 +220,79 @@ button:active {
 button1:active {
     background-color: #000000;
     transform: translateY(4px);
+}
+
+/* Manage Stock2*/
+
+#top2 {
+    height: 500px;
+    margin-top: -50px;
+    margin-left: 5%;
+    margin-right: 5%;
+    color: #000;
+    padding: 80px;
+}
+
+#bottom2{
+    height:500px;
+    margin-top:10px;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding:80px;
+}
+
+#table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th{
+    text-align: center;
+    height: 40px;
+
+}
+
+td{
+    text-align: left;
+    height: 40px;
+}
+
+#h3{
+    font-size: 30px;
+    margin-left: 70%;
+}
+
+/* Order_Stock*/
+
+#top3{
+    height: 500px;
+    margin-top: -50px;
+    margin-left: 5%;
+    margin-right: 5%;
+    color: #000;
+    padding: 80px;
+}
+
+#bottom3{
+    height:500px;
+    margin-top:10px;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding:80px;
+}
+
+#bottom-left3{
+    width:500px;
+    height:500px;
+    float:left;
+}
+
+#bottom-right3{
+    height:500px;
+    width:150px;
+    float:right;
+}
+
+#h4{
+    font-size: 20px;
 }

@@ -122,7 +122,7 @@
                     </h4>
                     <tr>
                         <td>
-                            <input type="text" name="Search item" class="form-control">
+                            <input type="text" name="Search item" placeholder="Search by item name" class="form-control">
                             <br><br>
                         </td>
                     </tr>
