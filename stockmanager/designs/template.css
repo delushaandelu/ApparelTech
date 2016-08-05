@@ -41,7 +41,7 @@ body
 }
 
 #top_left_section{
-	width:500px;
+	width:600px;
 	height:550px;
 	background-color: 	#808080;
 	border-style: outset;
@@ -157,7 +157,7 @@ img
 	}
 	
 #button_effect {
-<<<<<<< HEAD
+
 	background:  	#FF4500;
 	background-image: -webkit-linear-gradient(top,  	#FF4500,  	 	#FF4500);
 	background-image: -moz-linear-gradient(top,  	#FF4500,  	 	#FF4500);
