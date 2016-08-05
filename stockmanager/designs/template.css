@@ -175,3 +175,30 @@ ul.dropdown-menu{
 	
 	color:#000;
 	}
+
+.manage_delivery_table{
+	height:400px;
+	background-color:#00C;
+	}
+	
+.manage_delivery_form{
+	height:450px;
+	background-color:#CCC;
+	margin-left: 10%;
+    margin-right: 10%;
+	color:#000;
+	
+	padding:10px;
+	}
+	
+.manage_delivery_middle_part{
+	height:100px;
+	
+	}
+	
+.manage_delivery_button_section{
+	height:100px;
+	background-color:#CCC;
+	margin-left:400px;
+	
+	}
