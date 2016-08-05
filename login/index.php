@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <?php
+        include ("../config/database.php");
+    ?>
 </head>
 <body>
 
@@ -79,7 +82,7 @@
                                         </tr>
                                         <tr>
                                             <td><input type="text" name="fname" required></td>
-                                            <td><input type="text" name="lname" required></td>
+                                            <td><input type="text" name="des" required></td>
                                         </tr>
                                         <td colspan="2">Address <input type="text" name="address" required></td>
                                         </tr>
@@ -94,23 +97,23 @@
                                             <td>Mobile <input type="text" name="mob" required></td>
                                         </tr>
                                         </tr>
-                                        <td colspan="2">Email <input type="email" name="address" required></td>
+                                        <td colspan="2">Email <input type="email" name="mail" required></td>
                                         </tr>
                                         <tr>
+                                            <td>Username</td>
                                             <td>Password</td>
-                                            <td>Conform Password</td>
                                         </tr>
                                         <tr>
+                                            <td><input type="password" name="user" required></td>
                                             <td><input type="password" name="pass" required></td>
-                                            <td><input type="password" name="cpass" required></td>
                                         </tr>
                                         </tr>
                                         <td colspan="2">Company Name <input type="text" name="company" required></td>
                                         </tr>
                                         <tr>
                                             <td>Customer Photo
-                                            <input type="file" name="pto" required></td>
-                                            <td><input type="submit" name="ok" value="I Agree. Register"></td>
+                                            <input type="file" name="pto"></td>
+                                            <td><input type="submit" name="signup" value="I Agree. Register"></td>
                                         </tr>
                                     </table>
                                     </form>
@@ -131,4 +134,55 @@
                 </div>
         </div>
 </body>
+
+<?php
+if(isset($_POST['signup']))
+{
+    $fname = $_POST['fname'];
+    $des = $_POST['des'];
+    $address = $_POST['address'];
+    $nic = $_POST['nic'];
+    $tele = $_POST['tele'];
+    $mob = $_POST['mob'];
+    $mail = $_POST['mail'];
+    $user = $_POST['user'];
+    $pass = $_POST['pass'];
+    $company = $_POST['company'];
+
+    $sql = "INSERT INTO customer(fullname,designation,address,nic,tele,mob,email,username,password,companyName)VALUE ('$fname','$des','$address','$nic','$tele','$mob','$mail','$user','$pass','$company')";
+    mysqli_query($conn,$sql);
+
+    echo '<script language="javascript">';
+    echo 'alert("Your request sent for the approvel! Have a good day")';
+    echo '</script>';
+}
+?>
+<?php
+
+if(isset($_SESSION['user'])!="")
+{
+    header("Location: ../customer/template.php");
+}
+
+if(isset($_POST['login']))
+{
+    $user = $_POST['username'];
+    $pass = $_POST['pass'];
+    $res="SELECT * FROM customer WHERE username='$user'";
+    //$row=mysql_fetch_array($res);
+    if($row['password']==pass($upass))
+    {
+        $_SESSION['user'] = $row['customer_id'];
+        header("Location: ../customer/template.php");
+    }
+    else
+    {
+
+    }
+    ?>
+    echo '<script>';alert('wrong details');</script>
+    <?php
+}
+?>
+
 </html>
