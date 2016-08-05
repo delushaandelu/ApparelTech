@@ -16,15 +16,15 @@
 <div id ="lol"</div>
 <div id="main">
     <div id="header">
-        <img src="images/background-image2-1600x743.jpg">
+        <img src="images/55.jpg">
     </div>
 
     <div id="content">
         <div id ="top_section">
 
             <div id = "top_left_section">
-                <form method="post">
-                    <table border="0" width="500" height="500">
+                <form method="post" >
+                    <table id="tableleft" border="0" width="500" height="500" >
 
                         <tr>
 
@@ -103,7 +103,7 @@
             </div>
 
             <div id="top_right_section">
-                <form>
+                <div id="button1">
                     <button type="button" id="button_effect">Search</button> <br><br>
                     <button type="button" id="button_effect">Refresh</button><br><br>
                     <button type="button" id="button_effect">Delete</button> <br><br>
@@ -111,7 +111,7 @@
                     <button type="button" id="button_effect">Clear</button> <br><br>
                     <button type="button" id="button_effect">Refresh</button>
 
-                </form>
+                </div>
 
 
             </div>
