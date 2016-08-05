@@ -157,31 +157,32 @@ if(isset($_POST['signup']))
     echo '</script>';
 }
 ?>
+
 <?php
-
-if(isset($_SESSION['user'])!="")
-{
-    header("Location: ../customer/template.php");
-}
-
 if(isset($_POST['login']))
 {
-    $user = $_POST['username'];
-    $pass = $_POST['pass'];
-    $res="SELECT * FROM customer WHERE username='$user'";
-    //$row=mysql_fetch_array($res);
-    if($row['password']==pass($upass))
+    $name=$_POST['username'];
+    $pwd=$_POST['password'];
+    if($name!=''&&$pwd!='')
     {
-        $_SESSION['user'] = $row['customer_id'];
-        header("Location: ../customer/template.php");
+        $sql = "select * from customer where username='".$name."' and password='".$pwd."'";
+        $query=mysqli_query($conn,$sql) or die("Not user found");
+        $res=mysqli_fetch_row($query);
+
+        if($res)
+        {
+            $_SESSION['name']=$name;
+            header('location:signup.php');
+        }
+        else
+        {
+            echo'You entered username or password is incorrect';
+        }
     }
     else
     {
-
+        echo'Enter both username and password';
     }
-    ?>
-    echo '<script>';alert('wrong details');</script>
-    <?php
 }
 ?>
 
