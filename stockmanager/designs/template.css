@@ -5,7 +5,7 @@ body
 {
     margin:0;
     padding:0;
-    background:url("../images/2.jpg");
+	background-image: url("../images/88.jpg");
 }
 
 #main
@@ -16,7 +16,7 @@ body
     margin-right:auto;
     margin-top:21px;
     margin-bottom:21px;
-    background-color:#CCC;
+    background-color: 	#696969;
     border-radius:2%;
     opacity:1;
 }
@@ -42,16 +42,31 @@ body
 
 #top_left_section{
 	width:500px;
-	height:500px;
+	height:550px;
+	background-color: 	#808080;
+	border-style: outset;
 	float:left
+
+
 	}
+#tableleft{
+	margin-left: 10%;
+}
 	
 #top_right_section{
-	height:500px;
-	width:150px;
-	
-	float:right;
+	height:400px;
+	width:260px;
+	background-color: #000000;
+	margin-top: 7%;
+	margin-left:97%;
+	border-radius:15px;
+
 	}
+#button1{
+	position: absolute;
+	margin-left: 5%;
+	margin-top: 5%;
+}
 	
 
 
@@ -142,22 +157,34 @@ img
 	}
 	
 #button_effect {
-	background-color:#111412;
-	-moz-border-radius:28px;
-	-webkit-border-radius:28px;
-	border-radius:20px;
-	border:1px solid #0a0a0a;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:15px;
-	padding:12px 33px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #2f6627;
+	background:  	#FF4500;
+	background-image: -webkit-linear-gradient(top,  	#FF4500,  	 	#FF4500);
+	background-image: -moz-linear-gradient(top,  	#FF4500,  	 	#FF4500);
+	background-image: -ms-linear-gradient(top,  	#FF4500,  	 	#FF4500);
+	background-image: -o-linear-gradient(top,  	#FF4500,  	 	#FF4500);
+	background-image: linear-gradient(to bottom,  	#FF4500,  	 	#FF4500);
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0px;
+	text-shadow: 1px 1px 3px #666666;
+	-webkit-box-shadow: 0px 3px 6px #666666;
+	-moz-box-shadow: 0px 3px 6px #666666;
+	box-shadow: 0px 3px 6px #666666;
+	font-family: Arial;
+	color: #ffffff;
+	font-size: 14px;
+	padding: 3px 40px 2px 40px;
+	border: solid #ff4400 0px;
+	text-decoration: none;
 }
 #button_effect:hover {
-	background-color:#0c3261;
+	background: #ffffff;
+	background-image: -webkit-linear-gradient(top, #ffffff, #ff6f00);
+	background-image: -moz-linear-gradient(top, #ffffff, #ff6f00);
+	background-image: -ms-linear-gradient(top, #ffffff, #ff6f00);
+	background-image: -o-linear-gradient(top, #ffffff, #ff6f00);
+	background-image: linear-gradient(to bottom, #ffffff, #ff6f00);
+	text-decoration: none;
 }
 #button_effect:active {
 	position:relative;
