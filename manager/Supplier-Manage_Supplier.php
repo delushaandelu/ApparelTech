@@ -48,7 +48,7 @@
                             	<input type="text" name="Supplier name" class="form-control">
 								<br><br>
                             </td>
-</tr>
+                        </tr>
                          <tr>
                        	   <td id="table-font" width="60%">
                             	Location							
@@ -66,7 +66,7 @@
 							<td>
 								<br><br>
 							</td>
-</tr>
+                        </tr>
                                     
 						  <tr>
                                         
@@ -81,8 +81,8 @@
 						  </tr>
                           <tr>
                                         
-							<td id="table_font" width="60%" align="right">
-								Mobile                           
+							<td id="table_font" width="60%" align="left">
+								                     Mobile                           
 							</td> 
                                          
 							<td>
@@ -124,8 +124,9 @@
                             <form>
                             	  <tr>
                            			 <td>
-                            			<input type="text" name="Search by id" class="form-control">
-										 <br><br>
+
+                            			<input type="text" name="Search by id" placeholder="Search by ID" class="form-control"><br><br>
+
                            			</td>
                          	      </tr>
 									<button type="button" id="button" class="btn btn-default btn-lg active">Search</button>

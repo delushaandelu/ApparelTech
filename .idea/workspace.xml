@@ -21,9 +21,23 @@
     <favorites_list name="GroupProject" />
   </component>
   <component name="FileEditorManager">
+<<<<<<< HEAD
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="template.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/manager/designs/template.css">
+=======
+<<<<<<< HEAD
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="purchasenew.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/customer/purchasenew.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="84">
+              <caret line="28" column="41" selection-start-line="28" selection-start-column="41" selection-end-line="28" selection-end-column="41" />
+=======
+    <leaf>
+      <file leaf-file-name="Manage_Stock.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/manager/Manage_Stock.php">
+>>>>>>> origin/master
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="267">
               <caret line="84" column="4" selection-start-line="84" selection-start-column="4" selection-end-line="84" selection-end-column="4" />
@@ -45,8 +59,14 @@
       <file leaf-file-name="Supplier-Manage_Supplier.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/manager/Supplier-Manage_Supplier.php">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="233">
               <caret line="130" column="107" selection-start-line="130" selection-start-column="44" selection-end-line="130" selection-end-column="107" />
+=======
+            <state relative-caret-position="63">
+              <caret line="83" column="18" selection-start-line="83" selection-start-column="18" selection-end-line="83" selection-end-column="18" />
+>>>>>>> origin/master
+>>>>>>> origin/master
               <folding />
             </state>
           </provider>
@@ -54,6 +74,17 @@
       </file>
     </leaf>
   </component>
+<<<<<<< HEAD
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+=======
+>>>>>>> origin/master
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -64,6 +95,46 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/login/index.html" />
         <option value="$PROJECT_DIR$/login/index.php" />
+<<<<<<< HEAD
+        <option value="$PROJECT_DIR$/config/header.php" />
+        <option value="$PROJECT_DIR$/config/header.html" />
+        <option value="$PROJECT_DIR$/stockmanager/template.html" />
+        <option value="$PROJECT_DIR$/stockmanager/Stock_Previous Reports.html" />
+        <option value="$PROJECT_DIR$/stockmanager/Stock_NewReport.html" />
+        <option value="$PROJECT_DIR$/stockmanager/Stock_ManageStock.html" />
+        <option value="$PROJECT_DIR$/stockmanager/Purchase Order_ManagePurchaseOrder.html" />
+        <option value="$PROJECT_DIR$/stockmanager/HomePage.html" />
+        <option value="$PROJECT_DIR$/manager/template.html" />
+        <option value="$PROJECT_DIR$/manager/template.php" />
+        <option value="$PROJECT_DIR$/stockmanager/Purchase Order_ManagePurchaseOrder.php" />
+        <option value="$PROJECT_DIR$/stockmanager/Stock_ManageStock.php" />
+        <option value="$PROJECT_DIR$/stockmanager/Stock_NewReport.php" />
+        <option value="$PROJECT_DIR$/stockmanager/Stock_Previous Reports.php" />
+        <option value="$PROJECT_DIR$/config/headerstock.html" />
+        <option value="$PROJECT_DIR$/manager/Manage supplier.html" />
+        <option value="$PROJECT_DIR$/config/headermanager.html" />
+        <option value="$PROJECT_DIR$/stockmanager/HomePage.php" />
+        <option value="$PROJECT_DIR$/stockmanager/template.php" />
+        <option value="$PROJECT_DIR$/manager/designs/ksf.css" />
+        <option value="$PROJECT_DIR$/manager/designs/template.css" />
+        <option value="$PROJECT_DIR$/manager/Manage_supplier.php" />
+        <option value="$PROJECT_DIR$/customer/slide/dsgn.css" />
+        <option value="$PROJECT_DIR$/config/headercustomer.html" />
+        <option value="$PROJECT_DIR$/customer/designs/template.css" />
+        <option value="$PROJECT_DIR$/customer/dsgn.css" />
+        <option value="$PROJECT_DIR$/customer/designs/dsgn.css" />
+        <option value="$PROJECT_DIR$/customer/slide.html" />
+        <option value="$PROJECT_DIR$/customer/slide/new.html" />
+        <option value="$PROJECT_DIR$/customer/new.html" />
+        <option value="$PROJECT_DIR$/customer/slides.html" />
+        <option value="$PROJECT_DIR$/customer/slide/slides.html" />
+        <option value="$PROJECT_DIR$/customer/slide/slide.html" />
+        <option value="$PROJECT_DIR$/customer/template.php" />
+        <option value="$PROJECT_DIR$/customer/cancelPO.php" />
+        <option value="$PROJECT_DIR$/customer/purchasenew.php" />
+        <option value="$PROJECT_DIR$/customer/home.php" />
+        <option value="$PROJECT_DIR$/customer/designs/home.css" />
+=======
         <option value="$PROJECT_DIR$/customer/template.php" />
         <option value="$PROJECT_DIR$/customer/home.php" />
         <option value="$PROJECT_DIR$/customer/purchasenew.php" />
@@ -71,8 +142,12 @@
         <option value="$PROJECT_DIR$/customer/designs/template.css" />
         <option value="$PROJECT_DIR$/manager/Manage_Stock.php" />
         <option value="$PROJECT_DIR$/manager/Manage_Supplier.php" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/manager/Customer-Manage_Customer.php" />
         <option value="$PROJECT_DIR$/manager/designs/template.css" />
+=======
+>>>>>>> origin/master
+>>>>>>> origin/master
       </list>
     </option>
   </component>
@@ -134,6 +209,8 @@
               <option name="myItemId" value="GroupProject" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
+<<<<<<< HEAD
+=======
             <PATH_ELEMENT>
               <option name="myItemId" value="stockmanager" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
@@ -180,6 +257,7 @@
               <option name="myItemId" value="GroupProject" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
+>>>>>>> origin/master
           </PATH>
         </subPane>
       </pane>
@@ -193,8 +271,17 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
+<<<<<<< HEAD
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+=======
+>>>>>>> origin/master
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\GroupProject\customer\slide" />
+      <recent name="C:\xampp\htdocs\GroupProject\customer\designs" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\GroupProject\customer" />
       <recent name="C:\xampp\htdocs\GroupProject\login" />
@@ -252,22 +339,46 @@
       <workItem from="1466179447669" duration="20000" />
       <workItem from="1469856788752" duration="734000" />
       <workItem from="1470193626184" duration="8648000" />
+<<<<<<< HEAD
+      <workItem from="1470282575073" duration="9805000" />
+      <workItem from="1470296873522" duration="363000" />
+      <workItem from="1470321561425" duration="4133000" />
+=======
       <workItem from="1470295652272" duration="89000" />
       <workItem from="1470295876398" duration="320000" />
       <workItem from="1470298315776" duration="150000" />
+<<<<<<< HEAD
       <workItem from="1470298505718" duration="9718000" />
       <workItem from="1470368650745" duration="1281000" />
+=======
+      <workItem from="1470298505718" duration="8393000" />
+>>>>>>> origin/master
+>>>>>>> origin/master
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="26989000" />
+=======
+<<<<<<< HEAD
+    <option name="totallyTimeSpent" value="29732000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15959005" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+=======
+    <option name="totallyTimeSpent" value="24383000" />
+>>>>>>> origin/master
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1378" height="754" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1328928" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+>>>>>>> origin/master
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32817337" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -307,6 +418,7 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/manager/Manage_Stock.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2363">
@@ -331,6 +443,10 @@
         </state>
       </provider>
     </entry>
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/master
     <entry file="file://$PROJECT_DIR$/customer/designs/template.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2941">
@@ -395,6 +511,7 @@
     <entry file="file://$PROJECT_DIR$/template.html" />
     <entry file="file://$PROJECT_DIR$/index.html" />
     <entry file="file://$PROJECT_DIR$/designs/sheet.css" />
+>>>>>>> origin/master
     <entry file="file://$PROJECT_DIR$/template.html" />
     <entry file="file://$PROJECT_DIR$/index.html" />
     <entry file="file://$PROJECT_DIR$/designs/sheet.css" />
@@ -411,6 +528,83 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/customer/template.html" />
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/config/header.php" />
+    <entry file="file://$PROJECT_DIR$/config/header.html" />
+    <entry file="file://$PROJECT_DIR$/stockmanager/template.html" />
+    <entry file="file://$PROJECT_DIR$/stockmanager/Stock_Previous Reports.html" />
+    <entry file="file://$PROJECT_DIR$/stockmanager/Stock_NewReport.phpl" />
+    <entry file="file://$PROJECT_DIR$/stockmanager/Stock_NewReport.html" />
+    <entry file="file://$PROJECT_DIR$/stockmanager/Stock_ManageStock.html" />
+    <entry file="file://$PROJECT_DIR$/stockmanager/Purchase Order_ManagePurchaseOrder.html" />
+    <entry file="file://$PROJECT_DIR$/stockmanager/HomePage.html" />
+    <entry file="file://$PROJECT_DIR$/1.jpg" />
+    <entry file="file://$PROJECT_DIR$/manager/template.html" />
+    <entry file="file://$PROJECT_DIR$/stockmanager/Purchase Order_ManagePurchaseOrder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stockmanager/Stock_ManageStock.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="81" selection-start-line="6" selection-start-column="81" selection-end-line="6" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stockmanager/Stock_NewReport.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="81" selection-start-line="6" selection-start-column="81" selection-end-line="6" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stockmanager/Stock_Previous Reports.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="81" selection-start-line="7" selection-start-column="81" selection-end-line="7" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manager/Manage supplier.html" />
+    <entry file="file://$PROJECT_DIR$/manager/Manage supplier.php" />
+    <entry file="file://$PROJECT_DIR$/stockmanager/template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="27" column="8" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stockmanager/HomePage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/headerstock.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="5" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/headermanager.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manager/example.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+=======
     <entry file="file://$PROJECT_DIR$/customer/home.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -436,11 +630,98 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="22" column="49" selection-start-line="22" selection-start-column="49" selection-end-line="22" selection-end-column="49" />
+>>>>>>> origin/master
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/customer/designs/template.css">
+    <entry file="file://$PROJECT_DIR$/manager/designs/ksf.css" />
+    <entry file="file://$PROJECT_DIR$/manager/designs/template.css">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="170">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manager/new function.php" />
+    <entry file="file://$PROJECT_DIR$/config/headercustomer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="492">
+          <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manager/Manage_supplier.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="80" column="53" selection-start-line="80" selection-start-column="49" selection-end-line="80" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manager/template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/customer/slide/dsgn.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="11" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/customer/slide.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/customer/slide/new.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="39" selection-start-line="3" selection-start-column="39" selection-end-line="3" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/customer/new.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="40" selection-start-line="3" selection-start-column="40" selection-end-line="3" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/customer/slide/slides.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="6" selection-start-line="26" selection-start-column="6" selection-end-line="26" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/customer/slide/slide.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/customer/cancelPO.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="433">
+          <caret line="26" column="10" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="10" />
+=======
         <state relative-caret-position="2941">
           <caret line="173" column="37" selection-start-line="173" selection-start-column="37" selection-end-line="174" selection-end-column="9" />
         </state>
@@ -465,19 +746,84 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/manager/Customer-Manage_Customer.php">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="131">
           <caret line="73" column="57" selection-start-line="73" selection-start-column="57" selection-end-line="73" selection-end-column="57" />
+=======
+        <state relative-caret-position="63">
+          <caret line="83" column="18" selection-start-line="83" selection-start-column="18" selection-end-line="83" selection-end-column="18" />
+>>>>>>> origin/master
+>>>>>>> origin/master
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/manager/designs/template.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="267">
           <caret line="84" column="4" selection-start-line="84" selection-start-column="4" selection-end-line="84" selection-end-column="4" />
+=======
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/customer/designs/home.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="55" column="1" selection-start-line="55" selection-start-column="1" selection-end-line="55" selection-end-column="1" />
+=======
+    <entry file="file://$PROJECT_DIR$/manager/Manage_Supplier.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="137" column="36" selection-start-line="137" selection-start-column="36" selection-end-line="137" selection-end-column="36" />
+>>>>>>> origin/master
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/customer/home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="23" column="23" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/customer/template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="67">
+          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="67" />
+          <folding>
+            <marker date="1470325821135" expanded="true" signature="604:624" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/customer/designs/dsgn.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="53" selection-start-line="11" selection-start-column="53" selection-end-line="11" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/customer/designs/template.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="75" column="0" selection-start-line="75" selection-start-column="0" selection-end-line="174" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/customer/purchasenew.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="28" column="41" selection-start-line="28" selection-start-column="41" selection-end-line="28" selection-end-column="41" />
+>>>>>>> origin/master
+          <folding />
+        </state>
+      </provider>
+    </entry>
+=======
+>>>>>>> origin/master
   </component>
 </project>

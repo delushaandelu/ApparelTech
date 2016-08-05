@@ -26,8 +26,8 @@
     </div>
 
     <div id="content">
-		<div id="top">
-        	<div id="top-left">
+		<div id="top1">
+        	<div id="top-left1">
 				<form method="post">
 					<table border="0">
 						<tr></tr>
@@ -64,35 +64,166 @@
 						<tr>
 							<td id="table-font" width="60%">
 								Company
+                                <br><br>
 							</td>
 							<td>
 								<input type="text" name="Company" class="form-control">
 								<br><br>
 							</td>
 						</tr>
-						
-						<button type="button" id="button1" class="btn btn-default btn-lg active">Approve</button>
-
 					</table>
 				</form>
 			</div>
-			<div id="top-right">
+
+			<div id="top-right1">
+                <form>
+                    <tr>
+                        <label>Customer ID</label>
+                        <br><br>
+                        <td>
+                            <input type="" name="Search by id" placeholder="Attach Here!!" class="form-control" size="60%"><br><br>
+                            <br><br>
+                        </td>
+                    </tr>
+                    <button type="button" id="button1" class="btn btn-default btn-lg active">Approve</button>
+                    <br><br>
+                    <button type="button" id="button1" class="btn btn-default btn-lg active">Reject</button>
+                    <br><br>
+                </form>
 			</div>
 		</div>
-		<div id="mid">
-			<div id="mid-left">
 
+		<div id="mid1">
+			<div id="mid-left1">
+                <form method="post">
+                    <table border="0">
+                        <tr></tr>
+                        <tr>
+                            <td id="table-font" width="60%">
+                                First Name
+                            </td>
+                            <td>
+                                <input type="text" name="First Name" class="form-control">
+                                <br><br>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td id="table-font" width="60%">
+                                Last Name
+                            </td>
+                            <td>
+                                <input type="text" name="Last Name" class="form-control">
+                                <br><br>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td id="table-font" width="60%">
+                                NIC Number
+                            </td>
+                            <td>
+                                <input type="text" name="NIC Number" class="form-control">
+                                <br><br>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td id="table-font" width="60%">
+                                Company
+                                <br><br>
+                            </td>
+                            <td>
+                                <input type="text" name="Company" class="form-control">
+                                <br><br>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
 			</div>
-			<div id="mid-right">
 
+			<div id="mid-right1">
+                <form>
+                    <tr>
+                        <label>Customer ID</label>
+                        <br><br>
+                        <td>
+                            <input type="" name="Search by id" placeholder="Attach Here!!" class="form-control" size="60%"><br><br>
+                            <br><br>
+                        </td>
+                    </tr>
+                    <button type="button" id="button1" class="btn btn-default btn-lg active">Approve</button>
+                    <br><br>
+                    <button type="button" id="button1" class="btn btn-default btn-lg active">Reject</button>
+                    <br><br>
+                </form>
 			</div>
 		</div>
-		<div id="bottom">
-			<div id="bottom-left">
 
+		<div id="bottom1">
+			<div id="bottom-left1">
+                <form method="post">
+                    <table border="0">
+                        <tr></tr>
+                        <tr>
+                            <td id="table-font" width="60%">
+                                First Name
+                            </td>
+                            <td>
+                                <input type="text" name="First Name" class="form-control">
+                                <br><br>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td id="table-font" width="60%">
+                                Last Name
+                            </td>
+                            <td>
+                                <input type="text" name="Last Name" class="form-control">
+                                <br><br>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td id="table-font" width="60%">
+                                NIC Number
+                            </td>
+                            <td>
+                                <input type="text" name="NIC Number" class="form-control">
+                                <br><br>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td id="table-font" width="60%">
+                                Company
+                                <br><br>
+                            </td>
+                            <td>
+                                <input type="text" name="Company" class="form-control">
+                                <br><br>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
 			</div>
-			<div id="bottom-right">
 
+			<div id="bottom-right1">
+                <form>
+                    <tr>
+                        <label>Customer ID</label>
+                        <br><br>
+                        <td>
+                            <input type="" name="Search by id" placeholder="Attach Here!!" class="form-control" size="60%"><br><br>
+                            <br><br>
+                        </td>
+                    </tr>
+                    <button type="button" id="button1" class="btn btn-default btn-lg active">Approve</button>
+                    <br><br>
+                    <button type="button" id="button1" class="btn btn-default btn-lg active">Reject</button>
+                    <br><br>
+                </form>
 			</div>
 		</div>
 	</div>

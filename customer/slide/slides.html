@@ -1,0 +1,27 @@
+<style>.mySlides {display:none;}
+</style>
+<div class="slide" style="max-width:60%" style="max-height: 10%">
+    <img class="mySlides" src="images/grey-global-window-header-design.jpg" style="width:100%">
+    <img class="mySlides" src="images/Service+Header.png" style="width:100%">
+    <img class="mySlides" src="images/services-header.jpg" style="width:100%">
+    <img class="mySlides" src="images/welcome-to-our-business-accounting-services-web-header.jpg" style="width:100%">
+</div>
+<script>
+    var slideIndex = 0;
+    carousel();
+    function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > x.length) {slideIndex = 1}
+        x[slideIndex-1].style.display = "block";
+        setTimeout(carousel, 2000);
+    }
+</script>
+<div id ="company">
+    <h4 align="center">"To give without any reward, or any notice,</br> has a special quality of its own. "</h4>
+    <h3 align="center">Priyantha Enterprices, Colombo 11</h3>
+</div>

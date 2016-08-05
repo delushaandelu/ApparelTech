@@ -1,6 +1,8 @@
 @charset "utf-8";
 /* CSS Document */
 
+/* Common */
+
 body
 {
     margin:0;
@@ -52,59 +54,6 @@ body
 	color:#FFF;
 }
 
-#top
-{
-    height:500px;
-	margin-top:-50px;
-    margin-left: 5%;
-    margin-right: 5%;
-	color:#000;
-	
-	padding:80px;
-	
-}
-
-#top-left{
-	width:500px;
-	height:500px;
-	float:left;
-	}
-
-#button1{
-    border-radius:8px;
-    width:120px;
-    height:50px;
-    color:#FFFFFF;
-    background-color:#006;
-}
-
-button1:active {
-    background-color: #000000;
-    transform: translateY(4px);
-}
-	
-#top-right{
-	height:500px;
-	width:150px;
-	
-	float:right;
-	}
-	
-#button{
-	border-radius:8px;
-	width:120px;
-	height:50px;
-	color:#FFFFFF;
-	background-color:#006;
-}
-
-
-
-button:active {
-    background-color: #000000;
-    transform: translateY(4px);
-}
-
 #content
 {
     height:600px;
@@ -135,4 +84,141 @@ img
     position: fixed;
     margin-top: 0%;
     width: 100%;
+}
+
+/* Manage_Supplier & Manage_Stock*/
+
+#top
+{
+    height:500px;
+	margin-top:-50px;
+    margin-left: 5%;
+    margin-right: 5%;
+	color:#000;
+	padding:80px;
+	
+}
+
+#top-left{
+	width:500px;
+	height:500px;
+	float:left;
+	}
+
+
+	
+#top-right{
+	height:500px;
+	width:150px;
+	float:right;
+	}
+
+#button{
+	border-radius:8px;
+	width:120px;
+	height:50px;
+	color:#FFFFFF;
+	background-color:#006;
+}
+
+#button:hover{
+    background-color: #0a0a0a;
+}
+
+button:active {
+    background-color: #000000;
+    transform: translateY(4px);
+}
+
+
+
+/* Manage_Customer*/
+
+#top1
+{
+    height:500px;
+    margin-top:-50px;
+    margin-left: 5%;
+    margin-right: 5%;
+    color:#000;
+    padding:80px;
+}
+
+#top-left1{
+    width:500px;
+    height:500px;
+    float:left;
+}
+
+#top-right1{
+    height:500px;
+    width:150px;
+    float:right;
+}
+
+#mid1
+{
+    height:500px;
+    margin-top:10px;
+    margin-left: 5%;
+    margin-right: 5%;
+    color:#000;
+
+    padding:80px;
+
+}
+
+#mid-left1{
+    width:500px;
+    height:500px;
+    float:left;
+}
+
+#mid-right1{
+    height:500px;
+    width:150px;
+
+    float:right;
+}
+
+#bottom1
+{
+    height:500px;
+    margin-top:80px;
+    margin-left: 5%;
+    margin-right: 5%;
+    color:#000;
+
+    padding:80px;
+
+}
+
+#bottom-left1{
+    width:500px;
+    height:500px;
+    float:left;
+}
+
+#bottom-right1{
+    height:500px;
+    width:150px;
+
+    float:right;
+}
+
+#button1{
+    border-radius:8px;
+    width:120px;
+    height:50px;
+    color:#FFFFFF;
+    background-color:#006;
+}
+
+#button1:hover{
+    background-color: #0a0a0a;
+}
+
+button1:active {
+    background-color: #000000;
+    transform: translateY(4px);
 }
