@@ -16,19 +16,20 @@
 <div id ="lol"</div>
 <div id="main">
     <div id="header">
-        <img src="images/background-image2-1600x743.jpg">
+        <img src="images/55.jpg">
     </div>
 
     <div id="content">
+        <div id="changepwd">
         <form method="post">
-            <table border="0" width="400" height="400">
+            <table id="pwdtb" border="0" width="400" height="400">
 
             <tr>
 
                 <td id="table_font">User Name*</td>
 
                 <td>
-                    <input type="text" name="username">
+                    <input type="text" name="username"  class="form-control">
                 </td>
 
 
@@ -39,7 +40,7 @@
                 <td id="table_font">New Password*</td>
 
                 <td>
-                    <input type="text" name="newpassword">
+                    <input type="text" name="newpassword"  class="form-control">
                 </td>
             </tr>
 
@@ -48,22 +49,23 @@
                 <td id="table_font">Conform Password*</td>
 
                 <td>
-                    <input type="text" name="conformpassword">
+                    <input type="text" name="conformpassword"  class="form-control">
                 </td>
             </tr>
-                <tr>
 
-                    <td>
-                        <button type="button" id="button_effect">Change</button>
-                        <button type="button" id="button_effect">Clear</button>
-                    </td>
-
-
-                </tr>    
             </table>
         </form>
+        </div>
+        <div id="bottom_section">
 
-    </div>
+        <div id="button2">
+
+            <button type="button" id="button_effect">Change</button><br><br>
+            <button type="button" id="button_effect">Clear</button>
+
+        </div>
+        </div>
+</div>
 
    
     <div id="footer">
