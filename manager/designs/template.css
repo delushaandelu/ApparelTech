@@ -69,6 +69,19 @@ body
 	height:500px;
 	float:left;
 	}
+
+#button1{
+    border-radius:8px;
+    width:120px;
+    height:50px;
+    color:#FFFFFF;
+    background-color:#006;
+}
+
+button1:active {
+    background-color: #000000;
+    transform: translateY(4px);
+}
 	
 #top-right{
 	height:500px;
@@ -79,13 +92,13 @@ body
 	
 #button{
 	border-radius:8px;
-	width:100px;
-	height:45px;
+	width:120px;
+	height:50px;
 	color:#FFFFFF;
 	background-color:#006;
 }
 
-button:hover {background-color: #000000}
+
 
 button:active {
     background-color: #000000;
