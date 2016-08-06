@@ -82,17 +82,21 @@
 	color: #ffffff;
 }
 #image_effect{
+<<<<<<< HEAD
 	 opacity:0.9s;
     filter: alpha(opacity=50); 
+=======
+	  
+>>>>>>> origin/master
 	
 	}
 #text_on_image{
 	position:absolute;
 	z-index:100;
 	left:500px;
-	top:780px;
+	top:770px;
 	color:#FFF;
-	font-size:18px;
+	font-size:24px;
 	
 	
 	}
