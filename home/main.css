@@ -2,52 +2,52 @@
 /* CSS Document */
 
 
-#main1
-{
-	font-weight:bold;
-	background-color:white;
-<<<<<<< HEAD
-	margin:2% 1% 1% 1%;
-	width:95%;
-	height:100%;
-	border-radius:100%;
-	padding-bottom:150%;
+
+ul.topnav {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: white;
 }
+
+ul.topnav li {float: left;}
+#jk{
+margin-top:5%;
+margin-right:20%;
+}
+ul.topnav li a {
+	
+	display: arial;
+	color: black;
+	text-align: center;
+	padding: 20px 20px;
+	text-decoration: none;
+	font-size:20px;
+	border-radius:15%
+}
+
+ul.topnav li a:hover:not(.active) {background-color: blue;}
+
+ul.topnav li a.active {background-color: red;}
+
+ul.topnav li.right {float: right;}
+
+@media screen and (max-width: 600px){
+	ul.topnav li.right,
+	ul.topnav li {float: none;}
+}
+
 #kl{
-margin-right:0%;
-width:95%;
-height:20%;
-=======
-	width:100%;
-	height:100%;
->>>>>>> origin/master
+margin-top:2%;
+}
+#klm{
+margin-top:-1%;
 }
 
 li {
     display:inline;
     float: left;
-
-<<<<<<< HEAD
-}
-ul {
-    list-style-type: none;
-    
-   
-}
-.active {
-    background-color:red;
-	
-	
-	
-}
-.mySlides {
-	display:none;
-	}
-=======
-li {
-    display:inline;
-    float: left;
->>>>>>> origin/master
 
 }
 ul {
@@ -55,20 +55,12 @@ ul {
     
    
 }
-.active {
-    background-color:red;
-	
-	
-	
-}
+
 .mySlides {
 	display:none;
 	}
 
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/master
 li a {
     width:150px;
 	height:60px;
