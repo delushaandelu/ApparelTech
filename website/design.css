@@ -1,7 +1,7 @@
 @charset "utf-8";
 /* CSS Document */
 .menu_bar{
-	height:70px;
+	height:53px;
 	background-color:#000;
 	
 	
@@ -53,18 +53,18 @@
 
 #nav_bar_effect{
 	width:60%;
-	height:40px;
+	height:53px;
 	float:right;
 	color:#FFF;
 	font-size:16px;
-	background-color:#000;
+	background-color:#000000;
 	
 	}
 #product_image_effect{
 	height:500px;
 	background-position:center;
 	
-	width:1300px;
+	width:1350px;
 	opacity:0.8;
 	filter: alpha(opacity=70);
 	position:relative;
@@ -72,11 +72,17 @@
 	}
 	
 #nav_bar_effect:hover{
-	background-color:#003;
+	background-color:#000000;
 	
 	}
+#nav_bar_effect a:hover{
+	background-color: #FF4500;
+}
+#nav_bar_effect a{
+	color: #ffffff;
+}
 #image_effect{
-	 opacity: 0.75;
+	 opacity:0.9s;
     filter: alpha(opacity=50); 
 	
 	}
