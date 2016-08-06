@@ -56,9 +56,9 @@
             </table>
         </form>
         </div>
-        <div id="bottom_section">
+        <div id="pwd_button_sec">
 
-        <div id="button2">
+        <div id="pwd_button_panel">
 
             <button type="button" id="button_effect">Change</button><br><br>
             <button type="button" id="button_effect">Clear</button>

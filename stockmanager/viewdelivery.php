@@ -16,39 +16,75 @@
 <div id ="lol"</div>
 <div id="main">
     <div id="header">
-        <img src="images/background-image2-1600x743.jpg">
+        <img src="images/55.jpg">
     </div>
 
     <div id="content">
-        <div id="bottom">
-            <form method="post">
-                <table border="1">
-                <tr>
-                    <td id="table_font">Note ID</td>
-                    <td><input type="text" name="noteid"> </td>
+        <div id="topdelivery">
 
-                </tr>
+        </div>
+        <div id="bottomdelivery">
+            <form method="post">
+                <table id="deliverytb" border="0">
+                    <caption id="delivery_cap">Delivery Note</caption>
+                    <tr>
+                        <td id="table_font">Note ID</td>
+                        <td><input type="text" name="noteid" class="form-control"> </td>
+
+                        <td id="table_font">Address</td>
+
+
+
+                    </tr>
                     <tr>
                         <td id="table_font">P/O ID</td>
-                        <td><input type="text" name="poid" </td>
+                        <td><input type="text" name="poid" class="form-control"> </td>
 
+                        <td id="table_font">Line1</td>
+                        <td><input type="text" name="line1" class="form-control" ></td>
                     </tr>
                     <tr>
-                        <td id="table_font">Note</td>
-                        <td><textarea rows="3" cols="4">comment here</textarea></td>
+                        <td id="table_font">Date</td>
+                        <td><input type="text" name="deliverydate" class="form-control"></td>
+
+                        <td id="table_font">Line2</td>
+                        <td><input type="text" name="line2" class="form-control" ></td>
                     </tr>
+                    <tr>
+                        <td id="table_font" >Note</td>
+                        <td><textarea>comment here</textarea></td>
+
+
+                        <td id="table_font">District</td>
+                        <td><input type="text" name="district" class="form-control" ></td>
+
+                    </tr>
+
+
+                    <tr>
+                        <td id="table_font">Driver</td>
+                        <td><input type="text" name="driver" class="form-control" ></td>
+                        <td id="table_font">Vehicle</td>
+                        <td><input type="text" name="Vehicle" class="form-control" ></td>
+                    </tr>
+                    <tr>
+                        <td id="table_font">Vehicle</td>
+                        <td><input type="text" name="Vehicle" class="form-control" ></td>
+
+                    </tr>
+
 
                 </table>
 
 
             </form>
 
+        </div>
     </div>
 
-   
-    <div id="footer">
-    	
-    </div>
+    <div id="footer"></div>
+
 </div>
+
 </body>
 </html>

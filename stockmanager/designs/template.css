@@ -10,13 +10,21 @@ body
 
 #main
 {
+	background:
+			linear-gradient(30deg, #000000 12%, transparent 12.5%, transparent 87%, #000000 87.5%, #000000 0),
+			linear-gradient(150deg,  	#000000 12%, transparent 12.5%, transparent 87%, #000000 87.5%, #000000 0),
+			linear-gradient(30deg, #000000 12%, transparent 12.5%, transparent 87%, #000000 87.5%, #000000 0),
+			linear-gradient(150deg, #000000 12%, transparent 12.5%, transparent 87%, #000000 87.5%, #000000 0),
+			linear-gradient(60deg,  #000000 25%, transparent 25.5%, transparent 75%, #000000 75%, #000000 0),
+			linear-gradient(60deg, #dbdbdb 25%, transparent 25.5%, transparent 75%,  #000000 75%,  #000000 0), #008B8B;
+
     width:980px;
-    height:auto;
+    height: auto;
     margin-left:auto;
     margin-right:auto;
     margin-top:21px;
     margin-bottom:21px;
-    background-color: 	#696969;
+    /*background-color: 	#696969;*/
     border-radius:2%;
     opacity:1;
 }
@@ -43,8 +51,8 @@ body
 #top_left_section{
 	width:600px;
 	height:550px;
-	background-color: 	#808080;
-	border-style: outset;
+	background-color: #a6a6a6;
+	border-radius:15px;
 	float:left
 
 
@@ -52,11 +60,21 @@ body
 #drivertb{
 	margin-left: 10%;
 }
+#bottomdriver{
+	width: 600px;
+	height: 550px;
+	background-color: #a6a6a6 ;
+	border-radius:5%;
+	margin-top:8%;
+	margin-left:13%;
+}
 	
 #top_right_section{
+
 	height:400px;
 	width:260px;
 	background-color: #000000;
+	border-style: outset;
 	margin-top: 7%;
 	margin-left:97%;
 	border-radius:15px;
@@ -271,23 +289,77 @@ ul.dropdown-menu{
 	height:450px;
 	margin-left: 20%;
 	margin-top: 15%;
-	border-style: outset;
+	border-radius: 15px;
 
 }
-#button2{
+#pwd_button_panel{
 	position: absolute;
 	margin-top:4%;
 	margin-left:4%;
 }
-#bottom_section{
+#pwd_button_sec{
 	background-color: #000000;
 	height:200px;
 	width:260px;
 	background-color: #000000;
+	border-style: outset;
 	margin-top: -35%;
 	margin-left:80%;
 	border-radius:15px;
 }
 #pwdtb{
 margin-left: 10%;
+
+}
+#topdelivery{
+	background-color:  #a6a6a6;
+	width: 600px;
+	height: 400px;
+	border-radius: 5%;
+	margin-left: 20%;
+	margin-top:0;
+}
+#bottomdelivery{
+	background-color: #a6a6a6;
+	width: 600px;
+	height: 500px;
+	border-radius: 15px;
+	margin-left:20%;
+	margin-top: 10%;
+}
+#deliverytb{
+	position: absolute;
+	margin-left: 4%;
+	margin-top: 2%;
+	width:500px;
+	height: 400px;
+}
+#delivery_cap{
+	font-size: 18px;
+	color: #000000;
+	text-align: center;
+	border-bottom:outset;
+}
+#toprent{
+	background-color: #a6a6a6;
+	width: 600px;
+	height: 500px;
+	border-radius: 15px;
+	margin-left:10%;
+	margin-top: 10%;
+}
+#rent_button_panel{
+	position: absolute;
+	margin-top:4%;
+	margin-left:4%;
+}
+#rent_button_sec {
+	background-color: #000000;
+	height: 200px;
+	width: 260px;
+	background-color: #000000;
+	border-style: outset;
+	margin-top: -35%;
+	margin-left: 80%;
+	border-radius: 15px;
 }

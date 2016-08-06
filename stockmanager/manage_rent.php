@@ -4,6 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Theme</title>
     <link rel="stylesheet" href="designs/template.css" type="text/css" />
+    <meta charset="utf-8">
     <link rel="stylesheet" href="../config/design/css/theme.css" type="text/css">
     <?php
         include ("../config/headerstock.html");
@@ -19,27 +20,25 @@
     </div>
 
     <div id="content">
-    	<div class="panel">
-        	<div class="panel-heading">
-            	View Rent Reports
-            </div>
+        <div id="toprent">
             
-            <div class="panel-body">
-            	<div class="newreport_date_and_reportID_section">
-                	<p> Rent report table should be done in php </p>
-                    
-                </div>
-                
-                <div class="newreport_report_section">
-                </div>
-            	
+        </div>
+        <div id="rent_button_sec">
+
+            <div id="rent_button_panel">
+
+                <button type="button" id="button_effect">Approve</button><br><br>
+                <button type="button" id="button_effect">Reject</button>
+
             </div>
         </div>
 
     </div>
 
-    
-    <div id="footer"></div>
+   
+    <div id="footer">
+    	
+    </div>
 </div>
 </body>
 </html>
