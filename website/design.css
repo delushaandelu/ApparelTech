@@ -1,0 +1,152 @@
+@charset "utf-8";
+/* CSS Document */
+.menu_bar{
+	height:70px;
+	background-color:#000;
+	
+	
+	}
+
+.header{
+	height:200px;
+	
+	}
+	
+	
+.description{
+	height:300px;
+	background-color:#FFF;
+	}
+	
+
+.product{
+	height:500px;
+	
+	
+	
+	
+	
+	}
+	
+.community{
+	height:400px;
+	background-color:#936;
+	}
+	
+.last{
+	height:300px;
+	background-color:#363;
+	
+	
+	}
+.footer{
+	height:100px;
+	background-color:#000;
+	}
+	
+#menu_left{
+	
+	
+	color:#FFF;
+	
+	}
+
+#nav_bar_effect{
+	width:60%;
+	height:40px;
+	float:right;
+	color:#FFF;
+	font-size:16px;
+	background-color:#000;
+	
+	}
+#product_image_effect{
+	height:500px;
+	background-position:center;
+	
+	width:1300px;
+	opacity:0.8;
+	filter: alpha(opacity=70);
+	position:relative;
+	
+	}
+	
+#nav_bar_effect:hover{
+	background-color:#003;
+	
+	}
+#image_effect{
+	 opacity: 0.75;
+    filter: alpha(opacity=50); 
+	
+	}
+#text_on_image{
+	position:absolute;
+	z-index:100;
+	left:500px;
+	top:780px;
+	color:#FFF;
+	font-size:18px;
+	
+	
+	}
+
+.emboss1{
+	width: 200px;
+	height: 400px;
+	position:absolute;
+	opacity:0.2;
+	top:820px;
+	left:50px;
+	z-index:100;
+	box-shadow: inset 5px 5px 5px 0 #e9f0b7, inset -5px -5px 5px #7b6c51;
+	background: #CCC;
+	margin-bottom: 8px;
+	-moz-box-shadow: inset 5px 5px 5px 0 #e9f0b7, inset -5px -5px 5px #7b6c51;
+	-webkit-box-shadow: inset 5px 5px 5px 0 #e9f0b7, inset -5px -5px 5px #7b6c51;
+	box-shadow: inset 5px 5px 5px 0 #333, inset -5px -5px 5px #7b6c51;
+	text-align:center;
+	font-size:24px;
+	color:#F00;
+	
+	}
+	
+.emboss2{
+	width: 200px;
+	height: 400px;
+	position:absolute;
+	opacity:0.2;
+	top:820px;
+	left:280px;
+	z-index:100;
+	box-shadow: inset 5px 5px 5px 0 #e9f0b7, inset -5px -5px 5px #7b6c51;
+	background: #CCC;
+	margin-bottom: 8px;
+	-moz-box-shadow: inset 5px 5px 5px 0 #e9f0b7, inset -5px -5px 5px #7b6c51;
+	-webkit-box-shadow: inset 5px 5px 5px 0 #e9f0b7, inset -5px -5px 5px #7b6c51;
+	box-shadow: inset 5px 5px 5px 0 #333, inset -5px -5px 5px #7b6c51;
+	text-align:center;
+	font-size:24px;
+	color:#F00;
+	
+	}
+	
+.emboss3{
+	width: 200px;
+	height: 400px;
+	position:absolute;
+	opacity:0.3;
+	top:820px;
+	left:500px;
+	z-index:100;
+	box-shadow: inset 5px 5px 5px 0 #e9f0b7, inset -5px -5px 5px #7b6c51;
+	background: #CCC;
+	margin-bottom: 8px;
+	-moz-box-shadow: inset 5px 5px 5px 0 #e9f0b7, inset -5px -5px 5px #7b6c51;
+	-webkit-box-shadow: inset 5px 5px 5px 0 #e9f0b7, inset -5px -5px 5px #7b6c51;
+	box-shadow: inset 5px 5px 5px 0 #333, inset -5px -5px 5px #7b6c51;
+	text-align:center;
+	font-size:24px;
+	color:#F00;
+	
+	}
