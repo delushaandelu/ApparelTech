@@ -3,7 +3,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Theme</title>
-    <link rel="stylesheet" href="designs/template.css" type="text/css" />
+    <link rel="stylesheet" href="designs/template1.css" type="text/css" />
     <meta charset="utf-8">
     <link rel="stylesheet" href="../config/design/css/theme.css" type="text/css">
     <?php
