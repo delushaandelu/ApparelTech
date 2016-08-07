@@ -12,7 +12,7 @@
 <body>
 
 </br></br>
-<div id ="lol"></div>
+<div id ="lol"</div>
 <div id="main">
     <div id="header">
         <img src="images/background-image2-1600x743.jpg">
