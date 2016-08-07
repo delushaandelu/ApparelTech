@@ -3,40 +3,42 @@
 /*#klm{
 margin-top:-1%;
 }*/
-.black{color:black;}
+.main{
+	background-color:black;
+	padding-bottom:0.05%;
+	}
 ul{
 	/*list-style-type: none;*/
 	margin-right:-8%;
 	padding: 0;
 	overflow: hidden;
-	background-color: white;
+	background-color: black;
 	vertical-align:center;
 }
 
  /*li {float: left;}*/
 #img{
-	margin:0;
+	margin-top:-0.5%;
 }
-#jk{
-margin-top:2.5%;
+#nav{
+margin-top:2%;
 vertical-align: left;
 
 }
 
  li a {
-	
 	display: arial;
 	font-weight:200;
-	color:black;
+	color:white;
 	/*text-align:center-left;*/
-	padding: 30px;
+	padding: 25px;
 	text-decoration: none;
 	font-size:24px;
 	}
 
  li a:hover:not(.active) {
 	background-color: blue;
-	color:white;
+	color:red;
 	text-decoration:none;
 }
 
@@ -66,9 +68,9 @@ li {
    
 }*/
 
-/*.mySlides {
-	display:none;
-	}*/
+.mySlides {
+	opacity: 0.8;
+	}
 
 
 /*li a {
@@ -77,7 +79,110 @@ li {
 	text-align: center;
 	
 	
+}
+
+#para{
+	
 }*/
 
+.backimg { 
+    opacity: 0.3;
+}
 
+.left {
+    float: left;
+    width: 45%;
+    border: 3px solid #73AD21;
+    padding: 80px;
+}
 
+.right {
+    float: right;
+    width: 45%;
+    border: 3px solid #73AD21;
+    padding: 80px;
+}
+
+.first {
+    float: left;
+    width: 70%;
+    border: 3px solid #73AD21;
+    padding: 80px;
+	margin-bottom:0%
+}
+
+.second{
+	float: right;
+    width: 70%;
+    border: 3px solid #73AD21;
+    padding: 80px;
+	margin-bottom:4%
+}
+
+.third{
+	float: left;
+    width: 70%;
+    border: 3px solid #73AD21;
+    padding: 80px;
+	margin-bottom:0%
+}
+
+.fourth{
+	float: right;
+    width: 70%;
+    border: 3px solid #73AD21;
+    padding: 80px;
+	margin-bottom:4%
+}
+
+.fifth{
+	float: left;
+    width: 70%;
+    border: 3px solid #73AD21;
+    padding: 80px;
+	margin-bottom:0%
+}
+
+.sixth{
+	float: right;
+    width: 70%;
+    border: 3px solid #73AD21;
+    padding: 80px;
+	margin-bottom:0%
+}
+
+.seventh{
+	float: left;
+    width: 65%;
+    border: 3px solid #73AD21;
+    padding: 130px 20px;
+	margin-bottom:2%
+}
+
+.eighth{
+	float: right;
+    width: 65%;
+    border: 3px solid #73AD21;
+    padding: 130px 20px;
+	margin-bottom:3%
+}
+
+.ninth{
+	float: left;
+    width: 65%;
+    border: 3px solid #73AD21;
+    padding: 130px 20px;
+	margin-bottom:2%
+}
+
+.tenth{
+	float: right;
+    width: 65%;
+    border: 3px solid #73AD21;
+    padding: 130px 20px;
+	margin-bottom:0%
+}
+
+section{
+	display:block;
+}
