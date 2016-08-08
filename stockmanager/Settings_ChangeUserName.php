@@ -32,7 +32,7 @@
                                     
                                     <td id = "table_font" width="60%"><br>
 
-                                    	<input type="text" name="username">
+                                    	<input type="text" class="form-control" name="username">
                                     </td>
                                 </tr>
                                 
@@ -43,7 +43,7 @@
                                     
                                     <td id = "table_font" width="60%"><br>
 
-                                    	<input type="text" name="newusername">
+                                    	<input type="text" class="form-control" name="newusername">
                                     </td>
                                 </tr>
                                 
@@ -54,7 +54,7 @@
                                     
                                     <td id = "table_font" width="60%"><br>
 
-                                    	<input type="password" name="password">
+                                    	<input type="password" class="form-control" name="password">
                                     </td>
                                 </tr>
                                 

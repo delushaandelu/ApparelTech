@@ -44,7 +44,7 @@
                                     </td> 
                                     
                                     <td>
-                                    	<input type="text" name="noteid"><br><br>
+                                    	<input type="text" class="form-control" name="noteid"><br><br>
                                     </td>
                                   </tr>
                                   
@@ -68,7 +68,7 @@
                                     </td> 
                                     
                                     <td>
-                                    	<input type="text" name="date"><br><br>
+                                    	<input type="text" class="form-control"  name="date"><br><br>
                                     </td>
                                   </tr>
                                   
@@ -78,7 +78,7 @@
                                     </td> 
                                     
                                     <td>
-                                    	<input type="text" name="note"><br><br>
+                                    	<input type="text" class="form-control"  name="note"><br><br>
                                     </td>
                                   </tr>
                                   
@@ -94,7 +94,7 @@
                                     </td> 
                                     
                                     <td>
-                                    	<input type="text" name="line1"><br><br>
+                                    	<input type="text" class="form-control" name="line1"><br><br>
                                     </td>
                                   </tr>
                                   
@@ -104,7 +104,7 @@
                                     </td> 
                                     
                                     <td>
-                                    	<input type="text" name="line2"><br><br>
+                                    	<input type="text" class="form-control"  name="line2"><br><br>
                                     </td>
                                   </tr>
                                   
@@ -114,7 +114,7 @@
                                     </td> 
                                     
                                     <td>
-                                    	<input type="text" name="city"><br><br>
+                                    	<input type="text" class="form-control"  name="city"><br><br>
                                     </td>
                                   </tr>
                                   

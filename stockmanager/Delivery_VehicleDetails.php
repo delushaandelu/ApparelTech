@@ -35,7 +35,7 @@
                                         </td> 
                                         
                                         <td>
-                                            <input type="text" name="vehicletype"><br><br> 
+                                            <input type="text" class="form-control" name="vehicletype"><br><br> 
               
                                         </td>
                                             
@@ -49,7 +49,7 @@
                                         </td> 
                                         
                                         <td>
-                                            <input type="text" name="vehicleid"><br><br>
+                                            <input type="text" class="form-control" name="vehicleid"><br><br>
                                         </td>
                                     </tr>
                                     
@@ -60,7 +60,7 @@
                                         </td> 
                                           
                                         <td>
-                                            <input type="text" name="vehicleno"><br><br>
+                                            <input type="text" class="form-control" name="vehicleno"><br><br>
                                         </td>
                                     </tr>
                                     
@@ -71,7 +71,7 @@
                                         </td> 
                                           
                                         <td>
-                                            <input type="text" name="capacity"><br><br>
+                                            <input type="text" class="form-control"  name="capacity"><br><br>
                                         </td>
                                     </tr>
                                     
