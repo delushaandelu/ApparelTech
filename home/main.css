@@ -89,6 +89,30 @@ li {
     opacity: 0.3;
 }
 
+
+#rightimg{
+width:25%;
+height:20%;
+float:right;
+}
+
+#leftimg{
+width:25%;
+height:20%;
+float:left;
+}
+
+#servicerightimg{
+width:10%;
+height:10%;
+float:right;
+}
+
+#serviceleftimg{
+width:10%;
+height:10%;
+float:left;
+}
 .left {
     float: left;
     width: 45%;
@@ -108,7 +132,7 @@ li {
     width: 70%;
     border: 3px solid #73AD21;
     padding: 80px;
-	margin-bottom:0%
+	margin-bottom:2%
 }
 
 .second{
@@ -116,7 +140,7 @@ li {
     width: 70%;
     border: 3px solid #73AD21;
     padding: 80px;
-	margin-bottom:4%
+	margin-bottom:2%
 }
 
 .third{
@@ -124,7 +148,7 @@ li {
     width: 70%;
     border: 3px solid #73AD21;
     padding: 80px;
-	margin-bottom:0%
+	margin-bottom:2%
 }
 
 .fourth{
@@ -132,7 +156,7 @@ li {
     width: 70%;
     border: 3px solid #73AD21;
     padding: 80px;
-	margin-bottom:4%
+	margin-bottom:2%
 }
 
 .fifth{
@@ -140,7 +164,7 @@ li {
     width: 70%;
     border: 3px solid #73AD21;
     padding: 80px;
-	margin-bottom:0%
+	margin-bottom:2%
 }
 
 .sixth{
@@ -148,41 +172,41 @@ li {
     width: 70%;
     border: 3px solid #73AD21;
     padding: 80px;
-	margin-bottom:0%
+	margin-bottom:2%;
 }
 
 .seventh{
 	float: left;
-    width: 65%;
+    width: 60%;
     border: 3px solid #73AD21;
-    padding: 130px 20px;
-	margin-bottom:2%
+    padding-bottom:22%;
+	margin-bottom:2%;
 }
 
 .eighth{
 	float: right;
-    width: 65%;
+    width: 60%;
     border: 3px solid #73AD21;
-    padding: 130px 20px;
-	margin-bottom:3%
+    padding-bottom:  22%;
+	margin-bottom:2%;
 }
 
 .ninth{
 	float: left;
-    width: 65%;
+    width: 60%;
     border: 3px solid #73AD21;
-    padding: 130px 20px;
-	margin-bottom:2%
+    padding-bottom: 22%;
+	margin-bottom:2%;
 }
 
 .tenth{
 	float: right;
-    width: 65%;
+    width: 60%;
     border: 3px solid #73AD21;
-    padding: 130px 20px;
-	margin-bottom:0%
+    padding-bottom: 22%;
+	margin-bottom:2%;
 }
 
-section{
-	display:block;
-}
+/*section{
+	display:block-inline;
+}*/
