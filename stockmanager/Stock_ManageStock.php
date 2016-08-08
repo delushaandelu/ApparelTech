@@ -54,7 +54,7 @@
                                         </td> 
                                         
                                         <td>
-                                            <input type="text" name="itemname"><br><br>
+                                            <input type="text" class="form-control" name="itemname"><br><br>
                                         </td>
                                     </tr>
                                     
@@ -65,7 +65,7 @@
                                         </td> 
                                           
                                         <td>
-                                            <input type="text" name="itemid"><br><br>
+                                            <input type="text" class="form-control"  name="itemid"><br><br>
                                         </td>
                                     </tr>
                                     
@@ -76,7 +76,7 @@
                                         </td> 
                                           
                                         <td>
-                                            <input type="text" name="brand"><br><br>
+                                            <input type="text" class="form-control"  name="brand"><br><br>
                                         </td>
                                     </tr>
                                     
@@ -98,7 +98,7 @@
                                         </td> 
                                          
                                         <td>
-                                            <input type="text" name="cost" ><br><br>
+                                            <input type="text" class="form-control"  name="cost" ><br><br>
                                         </td>
                                     </tr>
                                     
@@ -109,7 +109,7 @@
                                         </td> 
                                          
                                         <td>
-                                            <input type="text" name="sellingprice" ><br><br>
+                                            <input type="text" class="form-control" name="sellingprice" ><br><br>
                                         </td>
                                     </tr>
                                     
@@ -120,7 +120,7 @@
                                         </td> 
                                          
                                         <td>
-                                            <input type="text" name="squantity" ><br><br>
+                                            <input type="text" class="form-control" name="squantity" ><br><br>
                                         </td>
                                     </tr>
                                     
