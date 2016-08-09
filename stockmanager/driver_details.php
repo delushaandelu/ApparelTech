@@ -22,7 +22,7 @@
     <div id="content">
         <div id ="top_section">
 
-            <div id = "top_left_section">
+            <div id = "top_left_driver">
                 <form method="post" >
                     <table id="drivertb" border="0" width="500" height="500" >
 
