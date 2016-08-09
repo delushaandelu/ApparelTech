@@ -131,6 +131,7 @@
                         
                         <div id="top_right_section">
                             <form>
+                            	 <button type="button" id="button_effect">Insert</button>
                                  <button type="button" id="button_effect">Search</button> <br><br>
                                  <button type="button" id="button_effect">Delete</button> <br><br>
                                  <button type="button" id="button_effect">Update</button> <br><br>
