@@ -10,6 +10,9 @@
 
 
 	function addItem(){
+
+		include('database_connection.php');
+
 		$categoryName = $_POST['categoryname'];
 		$itemName = $_POST['itemname'];
 		$brand = $_POST['brand'];
