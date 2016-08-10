@@ -131,6 +131,8 @@
                         
                         <div id="top_right_section">
                             <form>
+                            	 <input type="submit" id="button_effect" name="btnManageStockInsert" value="Insert" /><br><br>
+                            	 <input type="submit" id="button_effect" name="btnManageStockSearch" value="Search" /><br><br>
                                  <button type="button" id="button_effect">Search</button> <br><br>
                                  <button type="button" id="button_effect">Delete</button> <br><br>
                                  <button type="button" id="button_effect">Update</button> <br><br>
