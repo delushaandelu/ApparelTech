@@ -36,7 +36,7 @@
                                         
                                         <td>
                                             
-                                            <select>
+                                            <select name="categoryname">
                                                 <option value="volvo">Volvosdggewefefd</option>
                                                 <option value="saab">Saabgregegefffefe</option>
              
@@ -120,7 +120,7 @@
                                         </td> 
                                          
                                         <td>
-                                            <input type="text" class="form-control" name="squantity" ><br><br>
+                                            <input type="text" class="form-control" name="quantity" ><br><br>
                                         </td>
                                     </tr>
                                     
@@ -139,6 +139,16 @@
                                  <button type="button" id="button_effect">Clear</button> <br><br>
                                  <button type="button" id="button_effect">Refresh</button>
                             </form>
+                            
+                            <?php
+								if(isset($_POST['btnManageStockInsert'])){
+									$Item = new Item();
+									$Item -> addItem();
+									
+									
+									}
+                            
+							?>
                         
                         </div>
                     </div>
