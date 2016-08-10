@@ -51,10 +51,10 @@ body
 #top_left_driver{
 	width:600px;
 	height:550px;
-	background-color:#D3D3D3;
+	background-color: #a6a6a6;
 	border-radius:15px;
 	float:left;
-
+	border-style: outset;
 
 
 	}
@@ -64,7 +64,7 @@ body
 #bottomdriver{
 	width: 600px;
 	height: 550px;
-	background-color:#D3D3D3 ;
+	background-color: #a6a6a6 ;
 	border-radius:5%;
 	margin-top:8%;
 	margin-left:13%;
@@ -239,14 +239,14 @@ ul.dropdown-menu{
 
 #drop_down_list_effect{
 
-	background-color: 	#D3D3D3;
+	background-color:#000000;
 
 	}
 #drop_down_list_effect a{
-	color: #000000;
+	color: #FFFFFF;
 }
 #drop_down_list_effect a:hover{
-	background-color: #ff6f00;
+	background-color:#ff4400;
 }
 .manage_delivery_table{
 	height:400px;
