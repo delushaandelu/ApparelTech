@@ -130,7 +130,7 @@
                         </div>
                         
                         <div id="top_right_section">
-                            <form method="post">
+                            <form method="post" >
                             	 <input type="submit" id="button_effect" name="btnManageStockInsert" value="Insert" /><br><br>
                             	 <input type="submit" id="button_effect" name="btnManageStockSearch" value="Search" /><br><br>
                                  <button type="button" id="button_effect">Search</button> <br><br>
@@ -141,10 +141,13 @@
                             </form>
                             
                             <?php
+								include('database_connection.php');
+								include ('Item.php');
 								if(isset($_POST['btnManageStockInsert'])){
+									
 									$Item = new Item();
 									$Item -> addItem();
-									
+									echo("item addes");
 									
 									}
                             

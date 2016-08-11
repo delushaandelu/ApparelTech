@@ -8,10 +8,9 @@
 		var $categoryName;
 		var $quantity;
 
+	public function addItem(){
 
-	function addItem(){
-
-		include('database_connection.php');
+		
 
 		$categoryName = $_POST['categoryname'];
 		$itemName = $_POST['itemname'];
