@@ -141,13 +141,13 @@
                             </form>
                             
                             <?php
-								include('database_connection.php');
-								include ('Item.php');
+								
+								include ('ItemClass.php');
 								if(isset($_POST['btnManageStockInsert'])){
 									
-									$Item = new Item();
-									$Item -> addItem();
-									echo("item addes");
+									$myItem = new Item();
+									$myItem -> addItem();
+									echo("item added");
 									
 									}
                             
