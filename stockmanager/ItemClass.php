@@ -1,6 +1,5 @@
 <?php
 	class Item{
-		var $itemId;
 		var $itemName;
 		var $brand;
 		var $sellingPrice;
@@ -12,15 +11,15 @@
 
 		include('database_connection.php');
 
-		$categoryName = $_POST['categoryname'];
+		
 		$itemName = $_POST['itemname'];
 		$brand = $_POST['brand'];
 		$sellingPrice = $_POST['sellingprice'];
 		$cost = $_POST['cost'];
-		$itemId = $_POSt['itemid'];
+		$categoryName = $_POST['categoryname'];
 		$quantity = $_POST['quantity'];
 
-		$sqlinsert = "INSERT INTO item (item_id,itemName,buyingPrice,sellingPrice,brand,catagery,stockQty) VALUES ('$itemId','$itemName','$cost','$sellingPrice','$brand','$categoryName','$quantity')";
+		$sqlinsert = "INSERT INTO item (itemName,buyingPrice,sellingPrice,brand,catagery,stockQty) VALUES ('$itemName','$cost','$sellingPrice','$brand','$categoryName','$quantity')";
 
 		if(!mysqli_query($dbcon, $sqlinsert)){
 			die('Error inserting new record');
