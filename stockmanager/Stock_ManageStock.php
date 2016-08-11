@@ -147,7 +147,7 @@
 									
 									$Item = new Item();
 									$Item -> addItem();
-									echo("item addes");
+									echo("item added");
 									
 									}
                             
