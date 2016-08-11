@@ -145,8 +145,8 @@
 								include ('ItemClass.php');
 								if(isset($_POST['btnManageStockInsert'])){
 									
-									$Item = new Item();
-									$Item -> addItem();
+									$myItem = new Item();
+									$myItem -> addItem();
 									echo("item added");
 									
 									}
