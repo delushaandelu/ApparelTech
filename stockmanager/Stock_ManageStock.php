@@ -141,7 +141,7 @@
                             </form>
                             
                             <?php
-								include('database_connection.php');
+								
 								include ('Item.php');
 								if(isset($_POST['btnManageStockInsert'])){
 									
