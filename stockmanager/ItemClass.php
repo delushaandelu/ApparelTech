@@ -16,7 +16,11 @@
 		$brand = $_POST['brand'];
 		$sellingPrice = $_POST['sellingprice'];
 		$cost = $_POST['cost'];
+<<<<<<< HEAD
 		$categoryName = $_POST['categoryname'];
+=======
+		$itemId = $_POST['itemid'];
+>>>>>>> origin/master
 		$quantity = $_POST['quantity'];
 
 		$sqlinsert = "INSERT INTO item (itemName,buyingPrice,sellingPrice,brand,catagery,stockQty) VALUES ('$itemName','$cost','$sellingPrice','$brand','$categoryName','$quantity')";

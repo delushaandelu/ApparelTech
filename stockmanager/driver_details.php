@@ -18,12 +18,13 @@
     <div id="header">
         <img src="images/55.jpg">
     </div>
+    
 
     <div id="content">
         <div id ="top_section">
 
             <div id = "top_left_driver">
-                <form method="post" >
+                <form method="post" action="driver.php" >
                     <table id="drivertb" border="0" width="500" height="500" >
 
                         <tr>
@@ -90,10 +91,10 @@
                         </tr>
                         <tr>
 
-                            <td id="table_font">Location</td>
+                            <td id="table_font">Vehicle ID</td>
 
                             <td>
-                                <input type="text" name="location"  class="form-control">
+                                <input type="text" name="vehicleid"  class="form-control">
                             </td>
                         </tr>
 
@@ -104,8 +105,8 @@
 
             <div id="top_right_section">
                 <div id="button1">
-                    <button type="button" id="button_effect">Search</button> <br><br>
-                    <button type="button" id="button_effect">Refresh</button><br><br>
+                    <button type="button" id="button_effect">Insert</button> <br><br>
+                    <button type="button" id="button_effect">Search</button><br><br>
                     <button type="button" id="button_effect">Delete</button> <br><br>
                     <button type="button" id="button_effect">Update</button> <br><br>
                     <button type="button" id="button_effect">Clear</button> <br><br>
@@ -129,5 +130,6 @@
     	
     </div>
 </div>
+
 </body>
 </html>
