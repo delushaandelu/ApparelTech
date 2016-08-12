@@ -5,7 +5,7 @@
  * Date: 8/11/2016
  * Time: 12:13 PM
  */
-//require("database_connection.php");
+require("database_connection.php");
 Class Driver{
 
     var $diverid;
@@ -17,7 +17,7 @@ Class Driver{
     var $mobile2;
 
     public function insert(){
-        require("database_connection.php");
+        //require("database_connection.php");
         $drivername = $_POST["drivername"];
         $licencenumber = $_POST["licencenumber"];
         $address=$_POST["address"];
@@ -26,7 +26,9 @@ Class Driver{
         $sqlinsert="INSERT INTO driver(driverName,LicenceNo,driverAddress,vehicle_id) VALUES('".$drivername."','".$licencenumber."','".$address."','".$vehicleid."')";
         if(mysqli_query($dbcon,$sqlinsert)){
             die();
-        } else{echo "error";}
+        } else{
+            echo "error";
+        }
             
 
 

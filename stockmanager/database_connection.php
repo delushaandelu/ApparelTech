@@ -1,15 +1,10 @@
 <?php
-	define('DB_USER', 'root');
-	define('DB_PSWD', '123');
-	define('DB_HOST', 'localhost');
-	define('DB_NAME', 'appareltech');
-
-$dbcon = mysqli_connect(DB_HOST,DB_USER,DB_PSWD,DB_NAME);
+	/*$DB_USER= 'chamrith';
+	$DB_PSWD= '';
+	$DB_HOST='localhost';
+	$DB_NAME='appareltech';*/
+$dbcon = mysqli_connect('localhost','chamrith','','apperaltec');
 
 if (!$dbcon) {
 	die("Error connecting to database");
 }
-
-
-
-?>
