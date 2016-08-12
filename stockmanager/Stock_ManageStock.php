@@ -20,11 +20,11 @@
 	<div class = "panel">
     	<div class="panel-heading"> Manage Stock</div>
         	<div class="panel-body">
-    			<div id="content">
+    			<div id="manage_stock_content">
   
-					<div id ="top_section">
+					<div id ="manage_stock_top_section">
             
-                        <div id = "top_left_section">
+                        <div id = "manage_stock_top_left_section">
                             <form method="post">
                                 <table border="0" >
                                     <tr></tr>
@@ -129,7 +129,7 @@
                              
                         </div>
                         
-                        <div id="top_right_section">
+                        <div id="manage_stock_top_right_section">
                             
                             	 <input type="submit" id="button_effect" name="btnManageStockInsert" value="Insert"  /><br><br>
                             	 <input type="submit" id="button_effect" name="btnManageStockSearch" value="Search" /><br><br>
@@ -163,7 +163,7 @@
                         </div>
                     </div>
          	
-					<div id="below_section">
+					<div id="manage_stock_below_section">
                     	<br><br><br><br>
                     	<?php
 							if(isset($_POST['btnManageStockSearch'])){

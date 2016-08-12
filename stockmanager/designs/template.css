@@ -28,25 +28,25 @@ body
     margin-bottom:-450px;
 }
 
-#top_section
+#manage_stock_top_section
 {
     height:500px;
 	
     margin-left: 5%;
     margin-right: 5%;
 	color:#000;
-	
+	margin-bottom:10%;
 	padding:80px;
 	
 }
 
-#top_left_section{
+#manage_stock_top_left_section{
 	width:500px;
 	height:500px;
 	float:left
 	}
 	
-#top_right_section{
+#manage_stock_top_right_section{
 	height:500px;
 	width:150px;
 	
@@ -55,7 +55,7 @@ body
 	
 
 
-#content{
+#manage_stock_content{
 	height: 600px;
 	}
 
@@ -102,10 +102,11 @@ img
 	
 	opacity:80%;
 	}
-#below_section{
-	padding:80px;
+#manage_stock_below_section{
+	
 	margin-left: 5%;
     margin-right: 5%;
+	height:500px;
 	}
 
 #below_table{

@@ -39,17 +39,17 @@
 					echo "<table>";
 						echo "<tr>";
 							echo "<th>Item ID</th>"; echo"<td></td>";
-							echo "<th>Item Name</th>";
-                			echo "<th>Category</th>";
-                			echo "<th>Brand</th>";
-                			echo "<th>Buying Price</th>";
-                			echo "<th>Selling Price</th>";
+							echo "<th>Item Name</th>";echo"<td></td>";
+                			echo "<th>Category</th>";echo"<td></td>";
+                			echo "<th>Brand</th>";echo"<td></td>";
+                			echo "<th>Buying Price</th>";echo"<td></td>";
+                			echo "<th>Selling Price</th>";echo"<td></td>";
                 			echo "<th>Quantity</th>";
                 		echo "</tr>";
 
                 	while($row = mysqli_fetch_array($result)){
 						echo "<tr>";
-							echo "<td>" . $row['item_id'] . "</td>";
+							echo "<td>" . $row['item_id'] . "</td>"; 
                 			echo "<td>" . $row['itemName'] . "</td>";
                 			echo "<td>" . $row['catagery'] . "</td>";
                 			echo "<td>" . $row['brand'] . "</td>";
