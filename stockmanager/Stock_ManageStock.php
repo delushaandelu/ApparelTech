@@ -37,8 +37,9 @@
                                         <td>
                                             
                                             <select name="categoryname">
-                                                <option value="volvo">Volvosdggewefefd</option>
-                                                <option value="saab">Saabgregegefffefe</option>
+                                                <option value="volvo">Machine</option>
+                                                <option value="saab">Machine Spare Part</option>
+                                                <option value="saab">Tool</option>
              
                                             </select><br><br>
               
@@ -58,17 +59,7 @@
                                         </td>
                                     </tr>
                                     
-                                    <tr>
-                                        
-                                        <td id="table_font"  width="55%">
-                                            Item ID
-                                        </td> 
-                                          
-                                        <td>
-                                            <input type="text" class="form-control"  name="itemid"><br><br>
-                                        </td>
-                                    </tr>
-                                    
+                                   
                                    <tr>
                                         
                                         <td id="table_font"  width="55%">
