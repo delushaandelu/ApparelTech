@@ -126,12 +126,12 @@
                                     
                                     
                                 </table> 
-                             </form>
+                             
                         </div>
                         
                         <div id="top_right_section">
-                            <form method="post" >
-                            	 <input type="submit" id="button_effect" name="btnManageStockInsert" value="Insert" action="itemclass.php" /><br><br>
+                            
+                            	 <input type="submit" id="button_effect" name="btnManageStockInsert" value="Insert"  /><br><br>
                             	 <input type="submit" id="button_effect" name="btnManageStockSearch" value="Search" /><br><br>
                                  <button type="button" id="button_effect">Search</button> <br><br>
                                  <button type="button" id="button_effect">Delete</button> <br><br>
@@ -142,12 +142,21 @@
                             
                             <?php
 								
-								include ('ItemClass.php');
+								include ('Item.php');
 								if(isset($_POST['btnManageStockInsert'])){
 									
+									$itemname = $_POST['itemname'];
+									$brand = $_POST['brand'];
+									$sellingprice = $_POST['sellingprice'];
+									$cost = $_POST['cost'];
+									$categoryname = $_POST['categoryname'];
+									$itemid = $_POST['itemid'];
+									$quantity = $_POST['quantity'];
 									$myItem = new Item();
-									$myItem -> addItem();
-									echo("item added");
+									$myItem -> addItem($itemname, $brand,$sellingprice,$cost, $categoryname, $itemid,$quantity );
+									
+									
+								
 									
 									}
                             
