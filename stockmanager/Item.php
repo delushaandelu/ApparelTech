@@ -33,27 +33,42 @@
 
 	public function searchItem($itemname){
 		include('database_connection.php');
-		$sqlinsert = "SELECT * FROM item WHERE itemName == $itemname";
+		$sql = "SELECT * FROM item WHERE itemName = '$itemname'";
+			if($result = mysqli_query($dbcon, $sql)){
+				if(mysqli_num_rows($result) > 0){
+					echo "<table>";
+						echo "<tr>";
+							echo "<th>Item ID</th>";
+							echo "<th>Item Name</th>";
+                			echo "<th>Category</th>";
+                			echo "<th>Brand</th>";
+                			echo "<th>Buying Price</th>";
+                			echo "<th>Selling Price</th>";
+                			echo "<th>Quantity</th>";
+                		echo "</tr>";
 
-		$result = mysqli_query($dbcon, $sqlinsert);
-
-		if($result->num_rows > 0){
-			 echo "<table><tr><th>Category Name</th><th>Item ID</th><th>Item Name</th><th>Brand</th><th>Cost</th><th>Selling Price</th><th>Quantity</th></tr>";
-			 while($row = $result->fetch_assoc()) {
-        		echo "<tr><td>".$row["catagery"]."</td><td>".$row["itemName"]."</td><td>".$row["item_id"]."</td><td>".$row["buyingPrice"]."</td><td>".$row["sellingPrice"]."</td><td>".$row['brand']."</td><td>".$row['stockQty']."</td></tr>";
-    		}
-    			echo "</table>";
-		} else {
-    			echo "0 results";
-
+                	while($row = mysqli_fetch_array($result)){
+						echo "<tr>";
+							echo "<td>" . $row['item_id'] . "</td>";
+                			echo "<td>" . $row['itemName'] . "</td>";
+                			echo "<td>" . $row['catagery'] . "</td>";
+                			echo "<td>" . $row['brand'] . "</td>";
+                			echo "<td>" . $row['buyingPrice'] . "</td>";
+                			echo "<td>" . $row['sellingPrice'] . "</td>";
+                			echo "<td>" . $row['stockQty'] . "</td>";
+                		echo "</tr>";
+                	}
+                	echo "</table>";
+        			// Close result set
+					mysqli_free_result($result);
+				} else{
+					echo "No records matching your query were found.";
+			}
+		} else{
+			echo "ERROR: Could not able to execute $sql. " . mysqli_error($dbcon);
 		}
-
-
-
-
-
+		mysqli_close($dbcon);
 	}
-
 }
 
 
