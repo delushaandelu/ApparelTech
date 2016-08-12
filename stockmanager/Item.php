@@ -38,7 +38,7 @@
 				if(mysqli_num_rows($result) > 0){
 					echo "<table>";
 						echo "<tr>";
-							echo "<th>Item ID</th>";
+							echo "<th>Item ID</th>"; echo"<td></td>";
 							echo "<th>Item Name</th>";
                 			echo "<th>Category</th>";
                 			echo "<th>Brand</th>";
