@@ -40,7 +40,7 @@
 		if($result->num_rows > 0){
 			 echo "<table><tr><th>Category Name</th><th>Item ID</th><th>Item Name</th><th>Brand</th><th>Cost</th><th>Selling Price</th><th>Quantity</th></tr>";
 			 while($row = $result->fetch_assoc()) {
-        		echo "<tr><td>".$row["id"]."</td><td>".$row["firstname"]." ".$row["lastname"]."</td></tr>";
+        		echo "<tr><td>".$row["catagery"]."</td><td>".$row["itemName"]."</td><td>".$row["item_id"]."</td><td>".$row["buyingPrice"]."</td><td>".$row["sellingPrice"]."</td><td>".$row['brand']."</td><td>".$row['stockQty']."</td></tr>";
     		}
     			echo "</table>";
 		} else {

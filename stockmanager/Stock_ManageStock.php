@@ -155,6 +155,13 @@
 									$myItem = new Item();
 									$myItem -> addItem($itemname, $brand,$sellingprice,$cost, $categoryname, $itemid,$quantity );
 								}
+								
+								if(isset($_POST[btnManageStockSearch])){
+									
+									$itemname = $_POST['itemname'];
+									$myItem = new Item();
+									$myItem -> searchItem($itemname);
+									}
 							
 							?>
                         
