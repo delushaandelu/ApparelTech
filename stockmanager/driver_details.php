@@ -11,12 +11,6 @@
     ?>
 </head>
 <body>
-<?php
-require("database_connection.php");
-
-
-?>
-
 
 </br></br>
 <div id ="lol"></div>

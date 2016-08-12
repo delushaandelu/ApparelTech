@@ -16,7 +16,7 @@
 
         <div data-role="page">
             <div data-role="header">
-                <h1>Welcome To Apperal<span style="color:#FF4500">Tech</span> </h1>
+                <h1>Welcome To ApperalTec</h1>
             </div>
         <div id="sys">
             </br></br></br>
