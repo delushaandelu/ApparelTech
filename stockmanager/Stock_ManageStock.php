@@ -124,8 +124,9 @@
                             
                             	 <input type="submit" id="button_effect" name="btnManageStockInsert" value="Insert"  /><br><br>
                             	 <input type="submit" id="button_effect" name="btnManageStockSearch" value="Search" /><br><br>
+                                 <input type="submit" id="button_effect" name="btnManageStockDelete" value="Delete" /><br><br>
                                  
-                                 <button type="button" id="button_effect">Delete</button> <br><br>
+                                 
                                  <button type="button" id="button_effect">Update</button> <br><br>
                                  <button type="button" id="button_effect">Clear</button> <br><br>
                                  <button type="button" id="button_effect">Refresh</button>
@@ -147,16 +148,21 @@
 									$myItem -> addItem($itemname, $brand,$sellingprice,$cost, $categoryname, $itemid,$quantity );
 								}
 								
-								
+								if(isset($_POST['btnManageStockDelete'])){
+									$itemname = $_POST['itemname'];
+									$myItem = new Item();
+									$myItem -> deleteItem($itemname);
+									}
 							
 							?>
                         
                         </div>
                     </div>
-         	
+         			
 					<div id="manage_stock_below_section">
-                    	<br><br><br><br>
+                    	<br><br>
                     	<?php
+						
 							if(isset($_POST['btnManageStockSearch'])){
 									
 									$itemname = $_POST['itemname'];

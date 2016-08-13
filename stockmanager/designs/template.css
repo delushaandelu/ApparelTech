@@ -28,6 +28,9 @@ body
     margin-bottom:-450px;
 }
 
+#manage_stock_content{
+	height:500px;
+	}
 #manage_stock_top_section
 {
     height:500px;
@@ -54,10 +57,6 @@ body
 	}
 	
 
-
-#manage_stock_content{
-	height: 600px;
-	}
 
 
 
@@ -106,7 +105,7 @@ img
 	
 	margin-left: 5%;
     margin-right: 5%;
-	height:500px;
+	height:1000px;
 	}
 
 #below_table{
@@ -117,6 +116,7 @@ img
 	
 .panel-body{
 	background-color:#CCC;
+	height:900px;
 	}
 	
 .panel-heading {

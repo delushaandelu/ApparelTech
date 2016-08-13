@@ -69,6 +69,18 @@
 		}
 		mysqli_close($dbcon);
 	}
+
+	public function deleteItem($itemname){
+		include('database_connection.php');
+		$sql = "DELETE FROM item WHERE itemName = '$itemname'";
+		$result = mysqli_query($dbcon,$sql);
+		if(!$result){
+			echo "Error deleting record: " . $dbcon->error;
+		}else{
+			echo "Record deleted successfully";
+		}
+		mysqli_close($dbcon);
+	}
 }
 
 
