@@ -24,7 +24,7 @@
         <div id ="top_section">
 
             <div id = "top_left_driver">
-                <form method="post" action="driver.php" >
+                <form method="post">
                     <table id="drivertb" border="0" width="500" height="500" >
 
                         <tr>
@@ -100,28 +100,33 @@
 
 
                     </table>
-                </form>
-            </div>
+             
 
             <div id="top_right_section">
                 <div id="button1">
-                    <button type="button" id="button_effect">Insert</button> <br><br>
-                    <button type="button" id="button_effect">Search</button><br><br>
-                    <button type="button" id="button_effect">Delete</button> <br><br>
+                    <input type="submit" id="button_effect" name="DriverInsert" value="Insert"/><br><br>
+                    <input type="submit" id="button_effect" name="DriverSearch" value="Search" /><br><br>
+                    <input type="submit" id="button_effect" name="DriverDelete" value="Delete" /><br><br>
                     <button type="button" id="button_effect">Update</button> <br><br>
                     <button type="button" id="button_effect">Clear</button> <br><br>
-                    <button type="button" id="button_effect">Refresh</button>
+                    <button type="reset" id="button_effect">Refresh</button>
 
                 </div>
-
-
             </div>
-        </div>
-
+        </form>
+    </div>
+</div>
     </div>
     <div id="bottomdriver">
         
-        
+    <?php
+    if(isset($_POST['DriverSearch'])){
+    include('driver.php');
+        $myDriver1 = new Driver();
+        $myDriver1 -> searchDriver();
+     
+        }
+    ?>
         
     </div>
 
@@ -130,6 +135,27 @@
     	
     </div>
 </div>
+<?php
+
+if(isset($_POST['DriverInsert'])){
+    include('driver.php');
+    
+        /*$drivername = $_POST['drivername'];
+        $licencenumber = $_POST['licencenumber'];
+        $address = $_POST['address'];*/
+        /*$vehicleid = $_POST['vehicleid']; 
+         $mobile1 = $_POST['mobile1'];
+        $mobile2 = $_POST['mobile2'];*/
+        $myDriver = new Driver();
+        $myDriver -> addDriver();
+}
+if(isset($_POST['DriverDelete'])){
+    include('driver.php');
+    $myDriver2 = new Driver();
+    $myDriver2 -> deleteDriver();
+}
+
+?>
 
 </body>
 </html>

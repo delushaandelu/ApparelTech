@@ -60,6 +60,7 @@ body
 	}
 #drivertb{
 	margin-left: 10%;
+
 }
 #bottomdriver{
 	width: 600px;
@@ -76,8 +77,8 @@ body
 	width:260px;
 	background-color: #000000;
 	border-style: outset;
-	margin-top: 7%;
-	margin-left:97%;
+	margin-top: -75%;
+	margin-left:110%;
 	border-radius:15px;
 
 	}
