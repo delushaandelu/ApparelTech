@@ -1,8 +1,8 @@
 <?php
-	define('DB_USER', 'chamrith');
-	define('DB_PSWD', '');
-	define('DB_HOST', 'localhost');
-	define('DB_NAME', 'apperaltec');
+	define('DB_USER', 'root');
+	define('DB_PSWD', '123');
+	define('DB_HOST', '127.0.0.1');
+	define('DB_NAME', 'appareltech');
 
 $dbcon = mysqli_connect(DB_HOST,DB_USER,DB_PSWD,DB_NAME);
 
