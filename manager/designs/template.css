@@ -7,7 +7,7 @@ body
 {
     margin:0;
     padding:0;
-    background:url("../images/12.jpg");
+    background:url("../images/2.3.jpg");
 	margin-bottom:200px;
 }
 
@@ -118,7 +118,7 @@ img
 	width:120px;
 	height:50px;
 	color:#FFFFFF;
-	background-color:#006;
+	background-color:#000066;
 }
 
 #button:hover{
@@ -295,4 +295,26 @@ td{
 
 #h4{
     font-size: 20px;
+}
+
+/*View Supplier*/
+
+#top4{
+    height: 200px;
+    margin-top: -50px;
+    margin-left: 5%;
+    margin-right: 5%;
+    color: #000;
+    padding: 80px;
+}
+#bottom4{
+    margin-left: 5%;
+    margin-right: 5%;
+    padding:80px;
+}
+
+#h5{
+    font-style:italic;
+    font-size:8px;
+    color:#0000FF;
 }

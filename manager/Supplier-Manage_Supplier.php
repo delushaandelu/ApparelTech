@@ -16,7 +16,7 @@
 <div id ="lol"</div>
 <div id="main">
 <div id="header">
-        <img src="images/Managing.jpg">
+        <img src="images/Managing1.jpg">
     </div>
 
 <div id="menu">

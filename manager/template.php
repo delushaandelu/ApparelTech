@@ -14,7 +14,7 @@
 </br></br>
 <div id="main">
     <div id="header">
-        <img src="images/Managing.jpg">
+        <img src="images/managing1.jpg">
     </div>
 
     <div id="menu">

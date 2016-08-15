@@ -16,7 +16,7 @@
 <div id ="lol"</div>
 <div id="main">
 <div id="header">
-        <img src="images/Managing.jpg">
+        <img src="images/managing1.jpg">
     </div>
 
 <div id="menu">
@@ -56,7 +56,7 @@
 								NIC Number
 							</td>
 							<td>
-								<input type="text" name="NIC Number" class="form-control">
+								<input type="text" name="NIC Number" class="form-control" required>
 								<br><br>
 							</td>
 						</tr>
@@ -67,7 +67,7 @@
                                 <br><br>
 							</td>
 							<td>
-								<input type="text" name="Company" class="form-control">
+								<input type="text" name="Company" class="form-control" required>
 								<br><br>
 							</td>
 						</tr>
@@ -81,7 +81,7 @@
                         <label>Customer ID</label>
                         <br><br>
                         <td>
-                            <input type="" name="Search by id" placeholder="Attach Here!!" class="form-control" size="60%"><br><br>
+                            <input type="" name="Search by id" placeholder="Attach Here!!" class="form-control" size="60%" required><br><br>
                             <br><br>
                         </td>
                     </tr>
@@ -222,6 +222,7 @@
                     <button type="button" id="button1" class="btn btn-default btn-lg active">Approve</button>
                     <br><br>
                     <button type="button" id="button1" class="btn btn-default btn-lg active">Reject</button>
+                    <div data-role="popup" id="myPopup1">
                     <br><br>
                 </form>
 			</div>
