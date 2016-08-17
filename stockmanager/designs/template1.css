@@ -370,3 +370,13 @@ margin-left: 10%;
 	margin-left: 80%;
 	border-radius: 15px;
 }
+#top_left_vehicle{
+    width:600px;
+	height:550px;
+	background-color:#D3D3D3;
+	border-radius:15px;
+	float:left;
+}
+#vehicletb{
+    margin-left: 10%;
+}
