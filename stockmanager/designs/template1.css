@@ -16,15 +16,15 @@ body
 			linear-gradient(30deg, #000000 12%, transparent 12.5%, transparent 87%, #000000 87.5%, #000000 0),
 			linear-gradient(150deg, #000000 12%, transparent 12.5%, transparent 87%, #000000 87.5%, #000000 0),
 			linear-gradient(60deg,  #000000 25%, transparent 25.5%, transparent 75%, #000000 75%, #000000 0),
-			linear-gradient(60deg, #dbdbdb 25%, transparent 25.5%, transparent 75%,  #000000 75%,  #000000 0), #008B8B;
-
+			linear-gradient(60deg, #dbdbdb 25%, transparent 25.5%, transparent 75%,  #000000 75%,  #000000 0),  #808080;
+        
     width:980px;
     height: auto;
     margin-left:auto;
     margin-right:auto;
     margin-top:21px;
     margin-bottom:21px;
-    /*background-color: 	#696969;*/
+    
     border-radius:2%;
     opacity:1;
 }
@@ -65,8 +65,7 @@ body
 #bottomdriver{
 	width: 600px;
 	height: 550px;
-	background-color:#D3D3D3 ;
-	border-radius:5%;
+	background-color:#D3D3D3;
 	margin-top:8%;
 	margin-left:13%;
 }
@@ -310,8 +309,8 @@ ul.dropdown-menu{
 	width:260px;
 	background-color: #000000;
 	border-style: outset;
-	margin-top: -35%;
-	margin-left:80%;
+	margin-top: -50%;
+	margin-left:125%;
 	border-radius:15px;
 }
 #pwdtb{

@@ -12,7 +12,7 @@
  * Date: 8/11/2016
  * Time: 12:13 PM
  */
-//require("database_connection.php");
+//require("database_connection1.php");
 class Driver{
 
     
@@ -24,7 +24,7 @@ class Driver{
     var $Mobile2='';
 
     public function addDriver(){
-        require("database_connection.php");
+        require("database_connection1.php");
         $DriverName = $_POST["drivername"];
         $LicenceNumber = $_POST["licencenumber"];
         $Address=$_POST["address"];
@@ -33,69 +33,69 @@ class Driver{
         //$Mobile2=$_POST["mobile2"];
 
         $sqlinsert="INSERT INTO driver(driverName,LicenceNo,driverAddress,vehicleid) VALUES('".$DriverName."','".$LicenceNumber."','".$Address."','".$VehicleId."')";
-        if(mysqli_query($dbcon,$sqlinsert)){
-        echo "error";}
-       $sqlinsert1="INSERT INTO drivercontact(contactNo) VALUES('".$Mobile1."')";
-        if(mysqli_query($dbcon,$sqlinsert1)){
-            die();
-        } else{
-            echo "error";}
-         }
-    
-    public function searchDriver(){
-         require("database_connection.php");
-        $DriverID=$_POST["driverid"];
-        $sqlsearch="SELECT * FROM driver WHERE driver_id='$DriverID'";
-    
-        $result=mysqli_query($dbcon,$sqlsearch);
-        
+        $result=mysqli_query($dbcon,$sqlinsert);
         if(!$result){
         echo "error";}
-        echo"<table>";
-    echo"<tr>";
-         echo"<th>".'DriverID'."</th>";
-        echo"<th>" .'DriverName'."</th>";
-        echo"<th>" .'Address'."</th>";
-    echo"<tr>";
-    $i = 0;
-    while ($row = mysqli_fetch_assoc($result) ){
+       $sqlinsert1="INSERT INTO drivercontact(contactNo) VALUES('".$Mobile1."')";
+        $result1=mysqli_query($dbcon,$sqlinsert1);
+        if(!$result1){
+            echo "error";}
+    }
+         
 
-        if ($i % 2 == 0) {
-            $bgColor = ' style="background-color:#CCFFFF;" ';
-        } else {
-            $bgColor = ' style="background-color:#FFFF99;" ';
-        }
-        echo "<tr>";
-            echo "<td $bgColor>";
-            echo $row['driver_id'];
-            echo "</td>";
-
-            echo "<td $bgColor>";
-            echo $row['driverName'];
-            echo "</td>";
+   public function searchDriver(){
+       require("database_connection1.php");
+       $DriverId=$_POST["driverid"];
+       $sqlsearch="SELECT * FROM driver WHERE driver_id='$DriverID'";
+       $result=mysqli_query($dbcon,$sqlsearch);
+       while($res=mysqli_fetch_array($result)){
         
-            echo "<td $bgColor>";
-            echo $row['driverAddress'];
-            echo "</td>";
-        echo "</tr>";
-
-        $i++;
+           
+       }
+       
+       
+       
     }
-    
-echo"</table>";
- 
-    }
+        
     public function deleteDriver(){
-        require("database_connection.php");
+        require("database_connection1.php");
         $DriverID=$_POST["driverid"];
-        $sqldelete = "DELETE FROM driver WHERE driver_id='$DriverID'";
+        $sqldelete = "DELETE FROM driver WHERE driverdriver_id='$DriverID'";
          $result=mysqli_query($dbcon,$sqldelete);
         
         if(!$result){
         echo "error";}
+        $sqldelete1="DELETE FROM drivercontact WHERE driver_id='$DriverID'";
+         $result1=mysqli_query($dbcon,$sqldelete1);
+        
+        if(!$result1){
+        echo "error";}
         
     }
-
+    public function updateDriver(){
+        require("database_connection1.php");
+        $DriverID=$_POST["driverid"];
+        $DriverName = $_POST["drivername"];
+        /*$LicenceNumber = $_POST["licencenumber"];
+        $Address=$_POST["address"];
+        $VehicleId=$_POST["vehicleid"];
+        $Mobile1=$_POST["mobile1"];*/
+        $sqlupdate="UPDATE driver SET driverName='$DriverName' WHERE driver_id='$DriverID'";
+        $result=mysqli_query($dbcon,$sqlupdate);
+        
+        if(!$result){
+        echo "error";}
+        /*$sqlupdate1="UPDATE drivercontact SET contactNo='$Mobile1' WHERE driver_id='$DriverID'";
+        $result1=mysqli_query($dbcon,$sqlupdate1);
+        
+        if(!$result1){
+        echo "error";}*/
+        
+        
+        
+        
+        
+    }
 
 
 

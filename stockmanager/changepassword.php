@@ -26,10 +26,10 @@
 
             <tr>
 
-                <td id="table_font">User Name*</td>
+                <td id="table_font">Old Password*</td>
 
                 <td>
-                    <input type="text" name="username"  class="form-control">
+                    <input type="text" name="oldpassword"  class="form-control">
                 </td>
 
 
@@ -54,16 +54,17 @@
             </tr>
 
             </table>
-        </form>
-        </div>
+       
         <div id="pwd_button_sec">
 
         <div id="pwd_button_panel">
 
-            <button type="button" id="button_effect">Change</button><br><br>
-            <button type="button" id="button_effect">Clear</button>
+            <input type="reset" id="button_effect" value="Reset" /><br><br>
+            <input type="submit" id="button_effect" name="changepswd" value="Change"/>
 
         </div>
+        </div>
+             </form>
         </div>
 </div>
 
@@ -72,5 +73,17 @@
     	
     </div>
 </div>
+
+<?php
+
+if(isset($_POST["changepswd"])){
+    include('user.php');
+    $myUser = new User();
+    $myUser -> changepswd();
+    
+}
+
+
+?>
 </body>
 </html>
