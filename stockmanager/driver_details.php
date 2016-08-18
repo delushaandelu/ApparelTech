@@ -9,6 +9,13 @@
     <?php
         include ("../config/headerstock.html");
     ?>
+    <style type="text/css">
+        #driverdisplaytb{
+            width: 600px;
+            height: 550px;
+        }
+    
+    </style>
 </head>
 <body>
 
@@ -107,7 +114,7 @@
                     <input type="submit" id="button_effect" name="DriverInsert" value="Insert"/><br><br>
                     <input type="submit" id="button_effect" name="DriverSearch" value="Search" /><br><br>
                     <input type="submit" id="button_effect" name="DriverDelete" value="Delete" /><br><br>
-                    <button type="button" id="button_effect">Update</button> <br><br>
+                    <input type="submit" id="button_effect" name="DriverUpdate" value="Update"/> <br><br>
                     <button type="button" id="button_effect">Clear</button> <br><br>
                     <button type="reset" id="button_effect">Refresh</button>
 
@@ -118,19 +125,10 @@
 </div>
     </div>
     <div id="bottomdriver">
-        
-    <?php
-    if(isset($_POST['DriverSearch'])){
-    include('driver.php');
-        $myDriver1 = new Driver();
-        $myDriver1 -> searchDriver();
-     
-        }
-    ?>
-        
+    
+    
     </div>
-
-   
+       
     <div id="footer">
     	
     </div>
@@ -140,14 +138,16 @@
 if(isset($_POST['DriverInsert'])){
     include('driver.php');
     
-        /*$drivername = $_POST['drivername'];
-        $licencenumber = $_POST['licencenumber'];
-        $address = $_POST['address'];*/
-        /*$vehicleid = $_POST['vehicleid']; 
-         $mobile1 = $_POST['mobile1'];
-        $mobile2 = $_POST['mobile2'];*/
-        $myDriver = new Driver();
-        $myDriver -> addDriver();
+    $myDriver = new Driver();
+    $myDriver -> addDriver();
+}
+if(isset($_POST['DriverSearch'])){
+   include('driver.php');
+    
+    $myDriver4 = new Driver();
+    $myDriver4 -> searchDriver(); 
+    
+    
 }
 if(isset($_POST['DriverDelete'])){
     include('driver.php');
@@ -155,6 +155,12 @@ if(isset($_POST['DriverDelete'])){
     $myDriver2 -> deleteDriver();
 }
 
+if(isset($_POST['DriverUpadate'])){
+    include('driver.php');
+    $myDriver3 = new Driver();
+    $myDriver3 -> updateDriver();
+    
+}
 ?>
 
 </body>

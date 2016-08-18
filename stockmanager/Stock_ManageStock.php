@@ -142,10 +142,10 @@
 									$sellingprice = $_POST['sellingprice'];
 									$cost = $_POST['cost'];
 									$categoryname = $_POST['categoryname'];
-									$itemid = $_POST['itemid'];
+								
 									$quantity = $_POST['quantity'];
 									$myItem = new Item();
-									$myItem -> addItem($itemname, $brand,$sellingprice,$cost, $categoryname, $itemid,$quantity );
+									$myItem -> addItem($itemname, $brand,$sellingprice,$cost, $categoryname,$quantity );
 								}
 								
 								if(isset($_POST['btnManageStockDelete'])){

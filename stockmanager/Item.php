@@ -7,7 +7,7 @@
 		var $categoryName = "";
 		var $quantity = "";
 
-	public function addItem($itemname,$brand,$sellingprice,$cost,$categoryname,$itemid,$quantity){
+	public function addItem($itemname,$brand,$sellingprice,$cost,$categoryname,$quantity){
 
 		include('database_connection.php');
 
@@ -19,7 +19,7 @@
 
 		$categoryName = $categoryname;
 
-		$itemId = $itemid;
+		
 
 		$quantity = $quantity;
 

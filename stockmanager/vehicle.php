@@ -13,33 +13,28 @@
  * Time: 12:13 PM
  */
 //require("database_connection1.php");
-class Driver{
+class Vehicle{
 
     
-    var $DriverName='';
-    var $LicenceNumber='';
-    var $Address='';
-    var $VehicleId='';
-    var $Mobile1='';
-    var $Mobile2='';
+    var $VehicleType='';
+    var $VehicleNumber='';
+    var $Capacity='';
+    var $VehicleID='';
+   
 
-    public function addDriver(){
+    public function addVehicle(){
         require("database_connection1.php");
-        $DriverName = $_POST["drivername"];
-        $LicenceNumber = $_POST["licencenumber"];
-        $Address=$_POST["address"];
-        $VehicleId=$_POST["vehicleid"];
-        $Mobile1=$_POST["mobile1"];
-        //$Mobile2=$_POST["mobile2"];
+        $VehicleType = $_POST["vehicletype"];
+        $VehicleNumber = $_POST["vehiclenumber"];
+        $Capacity=$_POST["vehiclecapacity"];
+        //$VehicleID=$_POST["vehicleid"];
+        
 
-        $sqlinsert="INSERT INTO driver(driverName,LicenceNo,driverAddress,vehicleid) VALUES('".$DriverName."','".$LicenceNumber."','".$Address."','".$VehicleId."')";
+        $sqlinsert="INSERT INTO vehicle(vehicleType,vehicleNo,capacity) VALUES('".$VehicleType."','".$VehicleNumber."','".$Capacity."')";
         $result=mysqli_query($dbcon,$sqlinsert);
         if(!$result){
         echo "error";}
-       $sqlinsert1="INSERT INTO drivercontact(contactNo) VALUES('".$Mobile1."')";
-        $result1=mysqli_query($dbcon,$sqlinsert1);
-        if(!$result1){
-            echo "error";}
+       
     }
          
 
