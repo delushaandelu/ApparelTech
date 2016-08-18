@@ -12,7 +12,19 @@
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 </head>
-
+<?php
+ ob_start();
+ session_start();
+ require_once ('../config/database.php');
+ 
+ if( !isset($_SESSION['user']) ) {
+  header("Location: tet.php");
+  exit;
+ }
+ // select loggedin users detail
+ $res=mysql_query("SELECT * FROM customer_id WHERE username=".$_SESSION['user']);
+ $userRow=mysql_fetch_array($res);
+?>
 <body>
 	<div class="container">
 		

@@ -60,5 +60,38 @@
 		$('label[for="password"]').removeClass('selected');
 	});
 </script>
-
+<?php
+       ob_start();
+       session_start();
+       require_once ('../config/database.php');
+       
+       if ( isset($_SESSION['user'])!="" ) {
+        header("Location: forgot.php");
+        exit;
+       }
+       
+       if( isset($_POST['signin']) ) { 
+        
+        $uname = $_POST['username'];
+        $upass = $_POST['password'];
+        
+        $uname = strip_tags(trim($uname));
+        $upass = strip_tags(trim($upass));
+        
+        $password = hash('sha256', $upass);
+        
+        $res=mysqli_query($conn,"SELECT * FROM customer WHERE username='$uname'");
+        
+        $row=mysqli_fetch_array($res);
+        
+        $count = mysqli_num_rows($res);
+        
+        if( $count == 1 && $row['password']==$password ) {
+        $_SESSION['user'] = $row['customer_id'];
+         header("Location: forgot.php");
+        } else {
+        $errMSG = "Wrong Credentials, Try again...";
+        }
+       }
+?>
 </html>

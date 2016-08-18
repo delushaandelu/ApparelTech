@@ -1,11 +1,11 @@
 <?php
-$servername = "31.170.160.89";
-$username = "a3837866_apperal";
-$password = "apperal";
-$database = "a3837866_apperal";
+$servername = "127.0.0.1";
+$username = "root";
+$password = "";
+$database = "apperaltech";
 
 // Create connection
-$conn = new mysqli($servername, $username, $password, $database) or die (mysqli_errno());
+$conn = new mysqli($servername, $username, $password, $database) or die ("ERROR: Database");
 /**
 // Check connection
 if ($conn->connect_error) {
