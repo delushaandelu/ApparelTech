@@ -55,7 +55,7 @@
             
             <br><br>
             
-            <button type="button" id="button2" class="btn btn-default btn-lg active">Change Password</button>
+            <button type="button" id="button2" class="btn btn-default btn-lg active" onclick="location.href='Settings-Change_password.php'">Change Password</button>
         </div>
         
         <p>&nbsp;</p>
