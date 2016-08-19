@@ -1,7 +1,7 @@
 <?php
-$servername = "127.0.0.1";
-$username = "root";
-$password = "";
+$servername = "ap-cdbr-azure-southeast-b.cloudapp.net";
+$username = "b477c41467c518";
+$password = "955eff62";
 $database = "apperaltech";
 
 // Create connection
