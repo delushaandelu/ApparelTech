@@ -1,23 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>ApperalTech | </title>
-    <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link href="../build/css/custom.min.css" rel="stylesheet">
-  </head>
-
-  <body class="nav-md">
     <div class="container body">
       <div class="main_container">
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-              <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>Customer</span></a>
+              <a class="site_title"><i class="fa fa-paw"></i> <span>Customer</span></a>
             </div>
 
             <div class="clearfix"></div>
@@ -39,38 +25,38 @@
               <div class="menu_section">
                 <h3>General</h3>
                 <ul class="nav side-menu">
-                  <li><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
+                  <li><a href="../customer/home.php"><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
                   </li>
                   <li><a><i class="fa fa-edit"></i> Purchase <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="form.html">New Purchase</a></li>
-                      <li><a href="form_advanced.html">Cancel Purchase</a></li>
+                      <li><a href="../customer/newPurchase.php">New Purchase</a></li>
+                      <li><a href="../customer/cancelPurchase.php">Cancel Purchase</a></li>
                     </ul>
                   </li>
                   <li><a><i class="fa fa-desktop"></i> Rent <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="general_elements.html">New Rent</a></li>
-                      <li><a href="media_gallery.html">Cancel Rent</a></li>
+                      <li><a href="../customer/newRent.php">New Rent</a></li>
+                      <li><a href="../customer/canceRent.php">Cancel Rent</a></li>
                     </ul>
                   </li>
                   <li><a><i class="fa fa-table"></i> Reports <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="tables.html">purchase Reports</a></li>
-                      <li><a href="tables_dynamic.html">Rent Reports</a></li>
+                      <li><a href="../customer/purchaseReport.php">Purchase Reports</a></li>
+                      <li><a href="../customer/rentReport.php">Rent Reports</a></li>
                     </ul>
                   </li>
                   <li><a><i class="fa fa-bar-chart-o"></i> Delivery <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="chartjs.html">Request Delivery</a></li>
-                      <li><a href="chartjs2.html">View Status</a></li>
-                      <li><a href="morisjs.html">Cancel Delivery</a></li>
+                      <li><a href=../customer/requestDelivery.php>Request Delivery</a></li>
+                      <li><a href="../customer/viewStatus.php">View Status</a></li>
+                      <li><a href="../customer/cancelDelivery.php">Cancel Delivery</a></li>
                     </ul>
                   </li>
-                  <li><a><i class="fa fa-clone"></i>Setting <span class="fa fa-chevron-down"></span></a>
+                  <li><a><i class="fa fa-clone"></i> Setting <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="fixed_sidebar.html">Change Username</a></li>
-                      <li><a href="fixed_footer.html">Change Password</a></li>
-                      <li><a href="fixed_footer.html">Update Profile</a></li>
+                      <li><a href="../customer/changeUsername.php">Change Username</a></li>
+                      <li><a href="../customer/changePassword.php">Change Password</a></li>
+                      <li><a href="../customer/updateProfile.php">Update Profile</a></li>
                     </ul>
                   </li>
                 </ul>
@@ -124,27 +110,12 @@
                     <span class=" fa fa-angle-down"></span>
                   </a>
                   <ul class="dropdown-menu dropdown-usermenu pull-right">
-                    <li><a href="javascript:;"> Profile</a></li>
-                    <li><a href="javascript:;">Help</a></li>
-                    <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                    <li><a href="#"> Profile</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
                   </ul>
                 </li>
             </nav>
           </div>
         </div>
         <!-- /top navigation -->
-
-        <!-- page content -->
-        <div class="right_col" role="main">
-          <!-- top tiles -->
-          delushaandsdkjfjdsklfj
-          </div>
-          <!-- /top tiles -->
-             <!-- jQuery -->
-    <script src="../vendors/jquery/dist/jquery.min.js"></script>
-    <!-- Bootstrap -->
-    <script src="../vendors/bootstrap/dist/js/bootstrap.min.js"></script>
-    <!-- FastClick -->
-      <!-- Custom Theme Scripts -->
-    <script src="../build/js/custom.min.js"></script>
-    
