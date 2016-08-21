@@ -34,64 +34,32 @@
 			<input type="password" name="password">
 			<br/>
 			<button type="submit" name="signin">Sign In</button>
-            <button type="submit" name="signup">Sign Up</button>
+            
 			<br/>
 			</form>
+            Dont't have an account!<a href="signup.php"> Signup </a> Now    
+            </br>
 			<a href="#"><p class="small">Forgot your password?</p></a>
 		</div>
 	</div>
 </body>
 
-<script>
-	$(document).ready(function () {
-    	$('#logo').addClass('animated fadeInDown');
-    	$("input:text:visible:first").focus();
-	});
-	$('#username').focus(function() {
-		$('label[for="username"]').addClass('selected');
-	});
-	$('#username').blur(function() {
-		$('label[for="username"]').removeClass('selected');
-	});
-	$('#password').focus(function() {
-		$('label[for="password"]').addClass('selected');
-	});
-	$('#password').blur(function() {
-		$('label[for="password"]').removeClass('selected');
-	});
-</script>
+
 <?php
-       ob_start();
-       session_start();
-       require_once ('../config/database.php');
-       
-       if ( isset($_SESSION['user'])!="" ) {
-        header("Location: forgot.php");
-        exit;
-       }
-       
-       if( isset($_POST['signin']) ) { 
-        
-        $uname = $_POST['username'];
-        $upass = $_POST['password'];
-        
-        $uname = strip_tags(trim($uname));
-        $upass = strip_tags(trim($upass));
-        
-        $password = hash('sha256', $upass);
-        
-        $res=mysqli_query($conn,"SELECT * FROM customer WHERE username='$uname'");
-        
-        $row=mysqli_fetch_array($res);
-        
-        $count = mysqli_num_rows($res);
-        
-        if( $count == 1 && $row['password']==$password ) {
-        $_SESSION['user'] = $row['customer_id'];
-         header("Location: forgot.php");
-        } else {
-        $errMSG = "Wrong Credentials, Try again...";
-        }
-       }
+session_start();
+if(isset($_POST['signin'])){
+    require ('../config/database.php');
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+   
+    $result = mysqli_query($conn, 'select * from customer where username="'.$username.'" and password="'.$password.'"');
+    if (mysqli_num_rows($result)==1){
+        $_SESSION['username'] = $username;
+        header('location: ../customer/home.php');
+    }else
+        echo "<script>";
+        echo "alert('ERROR| Your are not an authoriezed user! Cheack your information again')";
+        echo "</script>";
+}
 ?>
 </html>
