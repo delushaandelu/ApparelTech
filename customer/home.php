@@ -42,8 +42,11 @@
                 </div>
         </div>
 
-
-    
+    <div id="dashbutton">
+         <a href="#" class="myButton">Make a Purchase</a>
+         <a href="#" class="myButton">Order Rent Item</a>
+         <a href="#" class="myButton">Request Delivery</a>
+    </div>
 </div>
 </body>
 
