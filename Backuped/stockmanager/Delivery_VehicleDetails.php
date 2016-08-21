@@ -1,20 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>        
-        <title>Stock Manager</title>                   
-        <link rel="stylesheet" type="text/css" id="theme" href="css/main.css"/>                        
-    </head>
-    <body>
-        
-        <?php
-            include("../config/stockmgrmenu.php");
-        ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Theme</title>
+    <link rel="stylesheet" href="designs/template.css" type="text/css" />
+    <link rel="stylesheet" href="../config/design/css/theme.css" type="text/css">
+    <?php
+        include ("../config/headerstock.html");
+    ?>
+</head>
+<body>
 
-                <ul class="breadcrumb">
-                    <h2>Page Heading here!</li></h2>
-                </ul>
-
-                <div id = "top_left_section">
+</br></br>
+<div id ="lol"></div>
+<div id="main">
+    <div id="header">
+        <img src="images/background-image2-1600x743.jpg">
+    </div>
+	<div class = "panel">
+    	<div class="panel-heading"> Vehicle Details </div>
+        	<div class="panel-body">
+    			<div id="content">
+  
+					<div id ="top_section">
+            
+                        <div id = "top_left_section">
                             <form method="post">
                                 <table border="0" >
                                     <tr></tr>
@@ -81,26 +91,19 @@
                         
                         </div>
                     </div>
+         	
+					<div id="below_section">
+        				<p>**********php table</p>
             
-                    <div id="below_section">
-                        <p>**********php table</p>
-            
-                    </div>
-                </div>
-             </div>
+        			</div>
+    			</div>
+   			 </div>
     </div>
+        
 
-        <script type="text/javascript" src="js/plugins/jquery/jquery.min.js"></script>
-        <script type="text/javascript" src="js/plugins/jquery/jquery-ui.min.js"></script>
-        <script type="text/javascript" src="js/plugins/bootstrap/bootstrap.min.js"></script>        
-        <script type="text/javascript" src="js/settings.js"></script>
-        <script type="text/javascript" src="js/plugins.js"></script>        
-        <script type="text/javascript" src="js/actions.js"></script>
-    </body>
+    
+    <div id="footer"></div>
+</div>
+</div>
+</body>
 </html>
-
-
-
-
-
-

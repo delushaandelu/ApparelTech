@@ -1,24 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>        
-        <title>Stock Manager</title>                   
-        <link rel="stylesheet" type="text/css" id="theme" href="css/main.css"/>                        
-    </head>
-    <body>
-        
-        <?php
-            include("../config/stockmgrmenu.php");
-        ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Theme</title>
+    <link rel="stylesheet" href="designs/template.css" type="text/css" />
+    <link rel="stylesheet" href="../config/design/css/theme.css" type="text/css">
+    <?php
+        include ("../config/headerstock.html");
+    ?>
+</head>
+<body>
 
-                <ul class="breadcrumb">
-                    <h2>Page Heading here!</li></h2>
-                </ul>
-<div class = "panel">
-        <div class="panel-heading"> Manage Stock</div>
-            <div class="panel-body">
-                <div id="manage_stock_content">
+</br></br>
+<div id ="lol"></div>
+<div id="main">
+    <div id="header">
+        <img src="images/background-image2-1600x743.jpg">
+    </div>
+	<div class = "panel">
+    	<div class="panel-heading"> Manage Stock</div>
+        	<div class="panel-body">
+    			<div id="manage_stock_content">
   
-                    <div id ="manage_stock_top_section">
+					<div id ="manage_stock_top_section">
             
                         <div id = "manage_stock_top_left_section">
                             <form method="post">
@@ -81,7 +85,7 @@
                                      <tr>
                                         
                                         <td id="table_font" width="55%" align="right">
-                                            Cost                            
+											Cost                            
                                         </td> 
                                          
                                         <td>
@@ -118,8 +122,8 @@
                         
                         <div id="manage_stock_top_right_section">
                             
-                                 <input type="submit" id="button_effect" name="btnManageStockInsert" value="Insert"  /><br><br>
-                                 <input type="submit" id="button_effect" name="btnManageStockSearch" value="Search" /><br><br>
+                            	 <input type="submit" id="button_effect" name="btnManageStockInsert" value="Insert"  /><br><br>
+                            	 <input type="submit" id="button_effect" name="btnManageStockSearch" value="Search" /><br><br>
                                  <input type="submit" id="button_effect" name="btnManageStockDelete" value="Delete" /><br><br>
                                  
                                  
@@ -129,66 +133,55 @@
                             </form>
                             
                             <?php
-                                
-                                include ('Item.php');
-                                if(isset($_POST['btnManageStockInsert'])){
-                                    
-                                    $itemname = $_POST['itemname'];
-                                    $brand = $_POST['brand'];
-                                    $sellingprice = $_POST['sellingprice'];
-                                    $cost = $_POST['cost'];
-                                    $categoryname = $_POST['categoryname'];
-                                
-                                    $quantity = $_POST['quantity'];
-                                    $myItem = new Item();
-                                    $myItem -> addItem($itemname, $brand,$sellingprice,$cost, $categoryname,$quantity );
-                                }
-                                
-                                if(isset($_POST['btnManageStockDelete'])){
-                                    $itemname = $_POST['itemname'];
-                                    $myItem = new Item();
-                                    $myItem -> deleteItem($itemname);
-                                    }
-                            
-                            ?>
+								
+								include ('Item.php');
+								if(isset($_POST['btnManageStockInsert'])){
+									
+									$itemname = $_POST['itemname'];
+									$brand = $_POST['brand'];
+									$sellingprice = $_POST['sellingprice'];
+									$cost = $_POST['cost'];
+									$categoryname = $_POST['categoryname'];
+								
+									$quantity = $_POST['quantity'];
+									$myItem = new Item();
+									$myItem -> addItem($itemname, $brand,$sellingprice,$cost, $categoryname,$quantity );
+								}
+								
+								if(isset($_POST['btnManageStockDelete'])){
+									$itemname = $_POST['itemname'];
+									$myItem = new Item();
+									$myItem -> deleteItem($itemname);
+									}
+							
+							?>
                         
                         </div>
                     </div>
-                    
-                    <div id="manage_stock_below_section">
-                        <br><br>
-                        <?php
-                        
-                            if(isset($_POST['btnManageStockSearch'])){
-                                    
-                                    $itemname = $_POST['itemname'];
-                                    $myItem = new Item();
-                                    $myItem -> searchItem($itemname);
-                                    }
-                            
+         			
+					<div id="manage_stock_below_section">
+                    	<br><br>
+                    	<?php
+						
+							if(isset($_POST['btnManageStockSearch'])){
+									
+									$itemname = $_POST['itemname'];
+									$myItem = new Item();
+									$myItem -> searchItem($itemname);
+									}
+							
                         ?>
-                        
+        				
             
-                    </div>
-                </div>
-             </div>
+        			</div>
+    			</div>
+   			 </div>
     </div>
         
 
     
     <div id="footer"></div>
 </div>
-        <script type="text/javascript" src="js/plugins/jquery/jquery.min.js"></script>
-        <script type="text/javascript" src="js/plugins/jquery/jquery-ui.min.js"></script>
-        <script type="text/javascript" src="js/plugins/bootstrap/bootstrap.min.js"></script>        
-        <script type="text/javascript" src="js/settings.js"></script>
-        <script type="text/javascript" src="js/plugins.js"></script>        
-        <script type="text/javascript" src="js/actions.js"></script>
-    </body>
+</div>
+</body>
 </html>
-
-
-
-
-
-
