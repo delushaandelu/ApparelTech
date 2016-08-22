@@ -1,12 +1,13 @@
 <?php
-define('DB_USER', 'madhara');
-define('DB_PSWD', '');
-define('DB_HOST', 'localhost');
-define('DB_NAME', 'apperaltec');
+    $serverhost='localhost';
+    $username='root';
+    $password='';
 
-$dbcon = mysqli_connect(DB_HOST,DB_USER,DB_PSWD,DB_NAME);
+    $conn = mysqli_connect($serverhost,$username,$password);
 
-if (!$dbcon) {
-    die("Error connecting to database");
-}
+    if (!$conn){
+        die("connection failed: " . mysqli_connect_error());
+    }
+    echo "Connected successfully";
 ?>
+

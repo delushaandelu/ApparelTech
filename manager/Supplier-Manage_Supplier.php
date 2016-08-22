@@ -7,6 +7,7 @@
     <link href="dist/css/sb-admin-2.css" rel="stylesheet">
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="designs/template.css" type="text/css" />
+	<link rel="stylesheet" href="../config/styles.css" type="text/css" />
 </head>
 
 <body>
@@ -18,7 +19,7 @@
 <div id="page-wrapper">
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">Manager Supplier</h1>
+            <h1 class="page-header">Manage Supplier</h1>
         </div>
         
     </div>

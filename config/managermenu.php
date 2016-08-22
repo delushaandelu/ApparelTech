@@ -1,5 +1,5 @@
  <div id="wrapper">
-        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="background-color: #0a0a0a; color: white">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="sr-only">Toggle navigation</span>
@@ -7,12 +7,12 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Manger Contral Panel</a>
+                <a class="navbar-brand" href="index.html" style="background-color: #0a0a0a; font-size: 30px; color: white; margin-left: 10%" >Manager</a>
             </div>
             <ul class="nav navbar-top-links navbar-right">
                 <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="color: white">
+                        <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down" style="color: white"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
                         <li><a href="#"><i class="fa fa-user fa-fw"></i> My Profile</a>
@@ -37,16 +37,16 @@
                             </div>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-dashboard fa-fw"></i> Home</a>
+                            <a href="../manager/template.php"><i class="fa fa-dashboard fa-fw"></i> Home</a>
                         </li>
                         <li>
                             <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Supplier<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="#">Manage supplier</a>
+                                    <a href="../manager/supplier-manage_supplier.php">Manage supplier</a>
                                 </li>
                                 <li>
-                                    <a href="#">View</a>
+                                    <a href="../manager/Supplier-View_Supplier.php">View</a>
                                 </li>
                             </ul>
                         </li>
@@ -54,30 +54,30 @@
                             <a href="#"><i class="fa fa-edit fa-fw"></i> Stock<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="#">Manage stock</a>
+                                    <a href="../manager/Stock-Manage_Stock.php">Manage stock</a>
                                 </li>
                                 <li>
-                                    <a href="#">View Stock</a>
+                                    <a href="../manager/Stock-View_Stock.php">View Stock</a>
                                 </li>
                                 <li>
-                                    <a href="#">Order Stock</a>
+                                    <a href="../manager/Stock-Order_Stock.php">Order Stock</a>
                                 </li>
                                 <li>
-                                    <a href="#">View Order Stock</a>
+                                    <a href="../manager/Stock-View_Order_Stock.php">View Order Stock</a>
                                 </li>
                             </ul>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-sitemap fa-fw"></i> Manager Users<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-sitemap fa-fw"></i> Manage Users<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="#">Manage customer</a>
+                                    <a href="../manager/ManageUser-Manage_Customer.php">Manage customer</a>
                                 </li>
                                 <li>
-                                    <a href="#">View customer</a>
+                                    <a href="../manager/ManageUser-View_Customer.php">View customer</a>
                                 </li>
                                 <li>
-                                    <a href="#">Manger Stock Manager</a>
+                                    <a href="../manager/ManageUser-Manage_Stock_Manager.php">Manage Stock Manager</a>
                                 </li>
                             </ul>
                         </li>
@@ -85,19 +85,19 @@
                             <a href="#"><i class="fa fa-files-o fa-fw"></i> View<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="#">Rent</a>
+                                    <a href="../manager/View-Rent.php">Rent</a>
                                 </li>
                                 <li>
-                                    <a href="#">Purchase order</a>
+                                    <a href="../manager/View-Purchase_Order.php">Purchase order</a>
                                 </li>
                                 <li>
-                                    <a href="#">Delivery</a>
+                                    <a href="../manager/View-Delivery.php">Delivery</a>
                                 </li>
                                 <li>
-                                    <a href="#">Vehicle details</a>
+                                    <a href="../manager/View-Vehicle_Details.php">Vehicle details</a>
                                 </li>
                                 <li>
-                                    <a href="#">Driver details</a>
+                                    <a href="../manager/View-Driver_Details.php">Driver details</a>
                                 </li>
                             </ul>
                         </li>
@@ -105,10 +105,10 @@
                             <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Quotation<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="#">Manage</a>
+                                    <a href="../manager/Quotation-Manage_Quotation.php">Manage</a>
                                 </li>
                                 <li>
-                                    <a href="#">View</a>
+                                    <a href="../manager/Quotation-View_Quotation.php">View</a>
                                 </li>
                             </ul>
                         </li>
@@ -116,10 +116,10 @@
                             <a href="#"><i class="fa fa-wrench fa-fw"></i> Setting<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="#">Change Username</a>
+                                    <a href="../manager/Settings-Change_username.php">Change Username</a>
                                 </li>
                                 <li>
-                                    <a href="#">Change Password</a>
+                                    <a href="../manager/Settings-Change_password.php">Change Password</a>
                                 </li>
                             </ul>
                         </li>
