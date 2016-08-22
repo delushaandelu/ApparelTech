@@ -72,8 +72,8 @@
 			<br/>
             </table>
             <center>
-                <button type="sumbit" name="sumbit" value="submit">Submit to Finish</button></br>
-                <a href="index.php">Login!</a> Now
+            <button type="sumbit" name="sumbit" value="submit">Submit to Finish</button>
+            <button type="sumbit" name="Login" value="Login">Login</button>
             </center>
         </form>
 
@@ -92,9 +92,9 @@ if(isset($_POST["sumbit"])){
     $email = $_POST['email'];
     $cname = $_POST['cname'];
     $uname = $_POST['uname'];
-    $password = $_POST['pword'];
+    $pword = $_POST['pword'];
 
-    
+    $password = hash('sha256', $pword);
 
     $sql = "INSERT INTO customer (fullname, designation, address, nic, mobile, tele, email, companyName, username, password) VALUES ('$fname','$desi','$address','$nic','$mob','$tele','$email','$cname','$uname','$password')";
 
