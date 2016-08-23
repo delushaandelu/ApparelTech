@@ -1,7 +1,7 @@
 <?php
-    $serverhost='localhost';
-    $username='root';
-    $password='';
+    $serverhost='ap-cdbr-azure-southeast-b.cloudapp.net';
+    $username='b477c41467c518';
+    $password='955eff62';
 
     $conn = mysqli_connect($serverhost,$username,$password);
 
