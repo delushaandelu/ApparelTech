@@ -23,6 +23,51 @@
         
     </div>
     <div class="row">
+        <?php
+        $servername = "ap-cdbr-azure-southeast-b.cloudapp.net";
+        $username = "b477c41467c518";
+        $password = "955eff62";
+        $dbname = "apperaltech";
+
+        // Create connection
+        $conn = new mysqli($servername, $username, $password, $dbname);
+        // Check connection
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+        }
+
+        $sql = "SELECT rent_id, item_id, startDate, endDate, rentedQty, rentedOrderAmount FROM renteditem";
+        $result = $conn->query($sql);
+
+        if ($result->num_rows > 0) {
+            echo "<table class='table' style='border: solid 2px black;'>";
+            echo"<tr>
+                <th style='border: solid 2px black;'>Rent ID </th>
+                <th style='border: solid 2px black;'>Item ID </th>
+                <th style='border: solid 2px black;'>Start Date </th>
+                <th style='border: solid 2px black;'>End Date </th>
+                <th style='border: solid 2px black;'>Quantity </th>
+                <th style='border: solid 2px black;'>Order Amount </th>
+            </tr>";
+
+            while($row = $result->fetch_assoc()) {
+                echo "<tr>
+                    <td style='border: solid 2px black;'>" . $row["rent_id"]. "</td>
+                    <td style='border: solid 2px black;'>" . $row["item_id"]. "</td>
+                    <td style='border: solid 2px black;'>" . $row["startDate"]. "</td>
+                    <td style='border: solid 2px black;'>" . $row["endDate"]. "</td>
+                    <td style='border: solid 2px black;'>" . $row["rentedQty"]. "</td>
+                    <td style='border: solid 2px black;'>" . $row["rentedOrderAmount"]. "</td>
+                </tr>";
+            }
+            echo "</table>";
+        } else {
+            echo "0 results";
+        }
+
+        $conn->close();
+
+        ?>
 
 
     </div>      
