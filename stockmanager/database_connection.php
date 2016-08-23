@@ -1,8 +1,8 @@
 <?php
-	define('DB_USER', 'root');
-	define('DB_PSWD', '123');
-	define('DB_HOST', '127.0.0.1');
-	define('DB_NAME', 'appareltech');
+	define('DB_USER', 'b477c41467c518');
+	define('DB_PSWD', '955eff62');
+	define('DB_HOST', 'ap-cdbr-azure-southeast-b.cloudapp.net');
+	define('DB_NAME', 'apperaltech');
 
 $dbcon = mysqli_connect(DB_HOST,DB_USER,DB_PSWD,DB_NAME);
 

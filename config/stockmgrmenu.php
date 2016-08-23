@@ -27,6 +27,9 @@
                         <a href="#"><span class="fa fa-columns"></span> <span class="xn-text"> Stock</span></a>
                         <ul>
                             <li><a href="#"><span class="fa fa-edit"></span> Manage Stock</a></li>
+                            	<ul>
+                                	<li><a href="#"><span class>
+                                </ul>
                             <li><a href="#"><span class="fa fa-user"></span> New Report</a></li>
                             <li><a href="#"><span class="fa fa-users"></span> Previous Report</a></li>   
                         </ul>

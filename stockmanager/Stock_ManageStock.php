@@ -2,7 +2,8 @@
 <html lang="en">
     <head>        
         <title>Stock Manager</title>                   
-        <link rel="stylesheet" type="text/css" id="theme" href="css/main.css"/>                        
+        <link rel="stylesheet" type="text/css" id="theme" href="css/main.css"/>  
+        <link rel="stylesheet" type="text/css"  href="manage_stock_design.css"/>                     
     </head>
     <body>
         
@@ -11,16 +12,24 @@
         ?>
 
                 <ul class="breadcrumb">
-                    <h2>Page Heading here!</li></h2>
+                    <h2>Manage Stock</li></h2>
                 </ul>
 <div class = "panel">
-        <div class="panel-heading"> Manage Stock</div>
+        
+        	<ul class="nav nav-justified" >
+    			<li><a href="#"></a></li>
+    			<li id ="nav_tab_item_effect"><a href="#">Add Item</a></li>
+   	 			<li id ="nav_tab_item_effect"><a href="#">Search Item</a></li>
+    			<li id ="nav_tab_item_effect"><a href="#">Delete Item</a></li>
+                <li id ="nav_tab_item_effect"><a href="#">Update Item</a></li>
+  			</ul>
+            <br><br>
             <div class="panel-body">
-                <div id="manage_stock_content">
+                
   
-                    <div id ="manage_stock_top_section">
-            
-                        <div id = "manage_stock_top_left_section">
+                    
+            	<div id = "upper panel">
+                        
                             <form method="post">
                                 <table border="0" >
                                     <tr></tr>
@@ -114,18 +123,12 @@
                                     
                                 </table> 
                              
-                        </div>
+                    	</div>
                         
-                        <div id="manage_stock_top_right_section">
+                      	<div id = "below_panel">
                             
                                  <input type="submit" id="button_effect" name="btnManageStockInsert" value="Insert"  /><br><br>
-                                 <input type="submit" id="button_effect" name="btnManageStockSearch" value="Search" /><br><br>
-                                 <input type="submit" id="button_effect" name="btnManageStockDelete" value="Delete" /><br><br>
-                                 
-                                 
-                                 <button type="button" id="button_effect">Update</button> <br><br>
-                                 <button type="button" id="button_effect">Clear</button> <br><br>
-                                 <button type="button" id="button_effect">Refresh</button>
+                         </div>       
                             </form>
                             
                             <?php
@@ -152,11 +155,10 @@
                             
                             ?>
                         
-                        </div>
-                    </div>
+                       
+                 
                     
-                    <div id="manage_stock_below_section">
-                        <br><br>
+                   
                         <?php
                         
                             if(isset($_POST['btnManageStockSearch'])){
@@ -169,14 +171,14 @@
                         ?>
                         
             
-                    </div>
-                </div>
-             </div>
+                 
+               
+            
     </div>
         
 
     
-    <div id="footer"></div>
+   
 </div>
         <script type="text/javascript" src="js/plugins/jquery/jquery.min.js"></script>
         <script type="text/javascript" src="js/plugins/jquery/jquery-ui.min.js"></script>

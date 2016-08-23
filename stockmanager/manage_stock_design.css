@@ -1,0 +1,22 @@
+@charset "utf-8";
+/* CSS Document */
+#nav_tab_item_effect{
+	background-color:#000;
+	color:#FFF;
+	font-size:14px;
+	
+	}
+	
+.panel-body{
+	margin-left:300px;
+	
+	}
+	
+#table_font{
+	font-size:14px;
+	font-style:normal;
+	}
+
+.below_panel{
+	margin-left:800px;
+	}
