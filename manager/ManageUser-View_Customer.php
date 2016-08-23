@@ -20,6 +20,12 @@
     <div class="row">
         <div class="col-lg-12">
             <h1 class="page-header">Customer Details</h1>
+            <td>
+                <input type="text" name="Customer" class="form-control" placeholder="Search by Customer ID">
+                <br><br>
+                <button type="button" id="button1" class="btn btn-default btn-lg active">Search</button>
+                <br><br><br>
+            </td>
         </div>
         
     </div>

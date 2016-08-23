@@ -23,6 +23,47 @@
         
     </div>
     <div class="row">
+        <?php
+        $servername = "ap-cdbr-azure-southeast-b.cloudapp.net";
+        $username = "b477c41467c518";
+        $password = "955eff62";
+        $dbname = "apperaltech";
+
+        // Create connection
+        $conn = new mysqli($servername, $username, $password, $dbname);
+        // Check connection
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+        }
+
+        $sql = "SELECT supplier_id, name, email, address FROM supplier";
+        $result = $conn->query($sql);
+
+        if ($result->num_rows > 0) {
+            echo "<table class='table' style='border: solid 2px black;'>";
+            echo"<tr>
+                <th style='border: solid 2px black;'>Supplier ID </th>
+                <th style='border: solid 2px black;'>Name </th>
+                <th style='border: solid 2px black;'>e-mail </th>
+                <th style='border: solid 2px black;'>Address </th>
+            </tr>";
+
+            while($row = $result->fetch_assoc()) {
+                echo "<tr>
+                    <td style='border: solid 2px black;'>" . $row["supplier_id"]. "</td>
+                    <td style='border: solid 2px black;'>" . $row["name"]. "</td>
+                    <td style='border: solid 2px black;'>" . $row["email"]. "</td>
+                    <td style='border: solid 2px black;'>" . $row["address"]. "</td>
+                </tr>";
+            }
+            echo "</table>";
+        } else {
+            echo "0 results";
+        }
+
+        $conn->close();
+
+        ?>
 
         <div id="content">
         <div id="top4">
