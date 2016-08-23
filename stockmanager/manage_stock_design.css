@@ -17,6 +17,42 @@
 	font-style:normal;
 	}
 
-.below_panel{
-	margin-left:800px;
+#below_panel{
+	margin-left:350px;
+	height:100px;
 	}
+#upper_panel{
+	height:400px;
+	}
+	
+
+
+#myButton {
+	-moz-box-shadow: 0px 10px 14px -7px #000000;
+	-webkit-box-shadow: 0px 10px 14px -7px #000000;
+	box-shadow: 0px 10px 14px -7px #000000;
+	background-color:#000000;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	border-radius:8px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:7px 25px;
+	text-decoration:none;
+}
+#myButton:hover {
+	background-color:#050301;
+}
+#myButton:active {
+	position:relative;
+	top:1px;
+}
+
+
+        
+
+

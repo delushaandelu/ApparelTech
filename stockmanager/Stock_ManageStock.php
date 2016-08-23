@@ -17,7 +17,7 @@
 <div class = "panel">
         
         	<ul class="nav nav-justified" >
-    			<li><a href="#"></a></li>
+    			
     			<li id ="nav_tab_item_effect"><a href="#">Add Item</a></li>
    	 			<li id ="nav_tab_item_effect"><a href="#">Search Item</a></li>
     			<li id ="nav_tab_item_effect"><a href="#">Delete Item</a></li>
@@ -72,7 +72,13 @@
                                         </td> 
                                           
                                         <td>
-                                            <input type="text" class="form-control"  name="brand"><br><br>
+                                            <select name="brandname">
+                                                <option value="juki">Juki</option>
+                                                <option value="singer">Singer</option>
+                                                <option value="brother">Brother</option>
+                                                <option value="janome">Janome</option>
+             
+                                            </select><br><br>
                                         </td>
                                     </tr>
                                     
@@ -126,8 +132,8 @@
                     	</div>
                         
                       	<div id = "below_panel">
-                            
-                                 <input type="submit" id="button_effect" name="btnManageStockInsert" value="Insert"  /><br><br>
+                            	<br><br>
+                                 <input type="submit" id="myButton" name="btnManageStockInsert" value="Add"  /><br><br>
                          </div>       
                             </form>
                             
