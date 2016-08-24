@@ -18,7 +18,22 @@
 <div id="page-wrapper">
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">Stock Details</h1>
+            <div class="1">
+                <h1 class="page-header">Stock Details</h1>
+            </div>
+            <div class="2">
+                <form action="demo_form.asp">
+                    <div class="col-xs-3">
+                        <input type="text" name="searchitem" placeholder="Search by item id" class="form-control" size="35">
+                    </div>
+                    <div>
+                        <button type="button" id="button2" class="btn btn-default">Search</button>
+                    </div>
+
+
+                    <br>
+            </div>
+            
         </div>
         
     </div>
@@ -42,24 +57,24 @@
         if ($result->num_rows > 0) {
             echo "<table class='table'>";
             echo"<tr class='info'>
-                <th style='border: solid 2px black;'>Item ID </th>
-                <th style='border: solid 2px black;'>Item Name </th>
-                <th style='border: solid 2px black;'>Buying Price</th>
-                <th style='border: solid 2px black;'>Selling Price </th>
-                <th style='border: solid 2px black;'>Brand </th>
-                <th style='border: solid 2px black;'>Category </th>
-                <th style='border: solid 2px black;'>Stock Qty </th>
+                <th>Item ID </th>
+                <th>Item Name </th>
+                <th>Buying Price</th>
+                <th>Selling Price </th>
+                <th>Brand </th>
+                <th>Category </th>
+                <th>Stock Qty </th>
             </tr>";
 
             while($row = $result->fetch_assoc()) {
                 echo "<tr class='danger'>
-                    <td style='border: solid 2px black;'>" . $row["item_id"]. "</td>
-                    <td style='border: solid 2px black;'>" . $row["itemName"]. "</td>
-                    <td style='border: solid 2px black;'>" . $row["buyingPrice"]. "</td>
-                    <td style='border: solid 2px black;'>" . $row["sellingPrice"]. "</td>
-                    <td style='border: solid 2px black;'>" . $row["brand"]. "</td>
-                    <td style='border: solid 2px black;'>" . $row["catagery"]. "</td>
-                    <td style='border: solid 2px black;'>" . $row["stockQty"]. "</td>
+                    <td>" . $row["item_id"]. "</td>
+                    <td>" . $row["itemName"]. "</td>
+                    <td>" . $row["buyingPrice"]. "</td>
+                    <td>" . $row["sellingPrice"]. "</td>
+                    <td>" . $row["brand"]. "</td>
+                    <td>" . $row["catagery"]. "</td>
+                    <td>" . $row["stockQty"]. "</td>
                 </tr>";
             }
             echo "</table>";

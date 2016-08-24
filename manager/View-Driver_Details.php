@@ -41,8 +41,8 @@
         $result = $conn->query($sql);
 
         if ($result->num_rows > 0) {
-            echo "<table class='table table-striped' style='border: solid 2px black;'>";
-            echo"<tr>
+            echo "<table class='table'>";
+            echo"<tr class='success'>
                 <th style='border: solid 2px black;'>Driver ID </th>
                 <th style='border: solid 2px black;'>Driver Name </th>
                 <th style='border: solid 2px black;'>Licence Number </th>
@@ -52,7 +52,7 @@
             </tr>";
 
             while($row = $result->fetch_assoc()) {
-                echo "<tr>
+                echo "<tr class='danger'>
                     <td style='border: solid 2px black;'>" . $row["driver_id"]. "</td>
                     <td style='border: solid 2px black;'>" . $row["driverName"]. "</td>
                     <td style='border: solid 2px black;'>" . $row["LicenceNo"]. "</td>
