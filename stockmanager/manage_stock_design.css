@@ -7,7 +7,7 @@
 	
 	}
 	
-.panel-body{
+.panel_body_add_item{
 	margin-left:300px;
 	
 	}
@@ -52,8 +52,15 @@
 	top:1px;
 }
 
+#below_panel_search_item{
+	margin-left:100px;
+	height:300px;
+	
+	}
+
 #upper_panel_search_item{
 	height:200px;
+	margin-left:250px;
 	}
         
 

@@ -24,7 +24,7 @@
                 <li id ="nav_tab_item_effect"><a href="#">Update Item</a></li>
   			</ul>
             <br><br>
-            <div class="panel-body">
+            <div class="panel_body_add_item">
                 
   
                     

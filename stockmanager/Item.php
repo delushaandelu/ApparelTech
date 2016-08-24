@@ -71,9 +71,7 @@
 
 	public function searchItem($categoryname, $itemname, $brandname){
 
-		echo "$categoryname ";
-		echo "$itemname ";
-		echo "$brandname ";
+		
 		if ($itemname == "All" && $brandname == "All"){
 			$sql = "SELECT * FROM item WHERE catagery = '$categoryname'";
 			$this->printSearch($sql);
