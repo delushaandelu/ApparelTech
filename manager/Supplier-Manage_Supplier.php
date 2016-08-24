@@ -146,7 +146,7 @@
 
 							<?php
 
-								include ('supplier.php');
+							include('../manager/supplier.php');
 
 								if(isset($_POST['addbutton'])){
 									$supplierid = $_POST['supplierid'];
@@ -158,6 +158,7 @@
 									$mysupplier = new supplier();
 									$mysupplier -> addSupplier($supplierid, $suppliername, $Email, $Address, $Telephone);
 								}
+							
 							?>
 
 
