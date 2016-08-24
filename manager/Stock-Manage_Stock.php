@@ -135,12 +135,15 @@
                     <br><br>
                     <button type="button" id="button" class="btn btn-default btn-lg active">Update</button>
                     <br><br>
-                    <button type="button" id="button" class="btn btn-default btn-lg active">Clear</button>
-                    <br><br>
-                    <button type="button" id="button" class="btn btn-default btn-lg active">Refresh</button>
+                    <button type="button" id="button" onclick="refreshAll()" class="btn btn-default btn-lg active">Refresh</button>
                     <br><br>
 
                 </form>
+                <script>
+                    function refreshAll() {
+                        location.reload();
+                    }
+                </script>
 
             </div>
         </div>

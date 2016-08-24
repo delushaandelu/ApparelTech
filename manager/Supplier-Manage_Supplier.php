@@ -35,7 +35,7 @@
                             	Supplier ID
                             </td>
                             <td>
-                            	<input type="text" name="Supplier ID" class="form-control">
+                            	<input type="text" name="supplierid" class="form-control">
 								<br><br>
                             </td>
 						</tr>
@@ -44,7 +44,7 @@
                             	Supplier name
 							</td>
                             <td>
-                            	<input type="text" name="Supplier name" class="form-control">
+                            	<input type="text" name="suppliername" class="form-control">
 								<br><br>
                             </td>
                         </tr>
@@ -70,7 +70,7 @@
 						  <tr>
                                         
 							<td id="table_font" width="60%" align="right">
-								Telephone                            
+								                    Telephone                            
 							</td> 
                                          
 							<td>
@@ -102,7 +102,7 @@
                             	e-mail address							
                             </td>
                             <td>
-                            	<input type="email" name="e-mail address" class="form-control">
+                            	<input type="email" name="Email" class="form-control">
 								<br><br>
                            </td>
                          </tr>
@@ -111,7 +111,7 @@
                             	Item type						
                             </td>
                             <td>
-                            	<input type="text" name="Item type" class="form-control">
+                            	<input type="text" name="Itemtype" class="form-control">
 								<br><br>
                            </td>
                          </tr>
@@ -128,18 +128,40 @@
 
                            			</td>
                          	      </tr>
-									<button type="button" id="button" class="btn btn-default btn-lg active">Search</button>
+									<button type="button" id="button" name="searchbutton" class="btn btn-default btn-lg active">Search</button>
 									<br><br>
-                                 	<button type="button" id="button" class="btn btn-default btn-lg active">Delete</button>
+                                 	<button type="button" id="button" name="Deletebutton" class="btn btn-default btn-lg active">Delete</button>
 									<br><br>
-                                 	<button type="button" id="button" class="btn btn-default btn-lg active">Update</button>
+                                 	<button type="button" id="button" name="Updatebutton" class="btn btn-default btn-lg active">Update</button>
 									<br><br>
-                                 	<button type="button" id="button" class="btn btn-default btn-lg active">Clear</button>
+									<button type="button" id="button" onclick="refreshAll()" class="btn btn-default btn-lg active">Refresh</button>
 									<br><br>
-									<button type="button" id="button" class="btn btn-default btn-lg active">Refresh</button>
+									<input type="submit" id="button" name="addbutton" class="btn btn-default btn-lg active" value="Add">
                             </form>
-                        
-				  </div>
+					  		<script>
+								function refreshAll() {
+									location.reload();
+								}
+							</script>
+
+							<?php
+
+								include ('supplier.php');
+
+								if(isset($_POST['addbutton'])){
+									$supplierid = $_POST['supplierid'];
+									$suppliername = $_POST['suppliername'];
+									$Email = $_POST['Email'];
+									$Address = $_POST['Address'];
+									$Telephone = $_POST['Telephone'];
+
+									$mysupplier = new supplier();
+									$mysupplier -> addSupplier($supplierid, $suppliername, $Email, $Address, $Telephone);
+								}
+							?>
+
+
+</div>
 			<p>&nbsp;</p>
 			<p>&nbsp;</p>
     </div>

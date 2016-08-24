@@ -240,3 +240,24 @@
 </body>
 
 </html>
+
+<?php
+    include ('Item.php');
+    if(isset($_POST['btnManageStockInsert'])){
+
+        $itemname = $_POST['itemname'];
+        $brand = $_POST['brand'];
+        $sellingprice = $_POST['sellingprice'];
+        $cost = $_POST['cost'];
+        $categoryname = $_POST['categoryname'];
+
+        $quantity = $_POST['quantity'];
+        $myItem = new Item();
+        $myItem -> addItem($itemname, $brand,$sellingprice,$cost, $categoryname,$quantity );
+    }
+
+    if(isset($_POST['btnManageStockDelete'])){
+        $itemname = $_POST['itemname'];
+        $myItem = new Item();
+        $myItem -> deleteItem($itemname);
+}
