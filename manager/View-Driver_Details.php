@@ -40,12 +40,13 @@
         $result = $conn->query($sql);
 
         if ($result->num_rows > 0) {
-            echo "<table class='table' style='border: solid 2px black;'>";
+            echo "<table class='table table-striped' style='border: solid 2px black;'>";
             echo"<tr>
-                <th style='border: solid 2px black;'>Customer ID </th>
-                <th style='border: solid 2px black;'>Order ID </th>
-                <th style='border: solid 2px black;'>Purchase Order Date </th>
-                <th style='border: solid 2px black;'>Status </th>
+                <th style='border: solid 2px black;'>Driver ID </th>
+                <th style='border: solid 2px black;'>Driver Name </th>
+                <th style='border: solid 2px black;'>Licence Number </th>
+                <th style='border: solid 2px black;'>Address </th>
+                <th style='border: solid 2px black;'>Vehicle ID </th>
             </tr>";
 
             while($row = $result->fetch_assoc()) {
