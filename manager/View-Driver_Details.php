@@ -37,6 +37,7 @@
         }
 
         $sql = "SELECT * FROM driver";
+        $sql = "SELECT contactNo FROM drivercontact";
         $result = $conn->query($sql);
 
         if ($result->num_rows > 0) {
@@ -47,6 +48,7 @@
                 <th style='border: solid 2px black;'>Licence Number </th>
                 <th style='border: solid 2px black;'>Address </th>
                 <th style='border: solid 2px black;'>Vehicle ID </th>
+                <th style='border: solid 2px black;'>Contact No </th>
             </tr>";
 
             while($row = $result->fetch_assoc()) {
@@ -56,6 +58,7 @@
                     <td style='border: solid 2px black;'>" . $row["LicenceNo"]. "</td>
                     <td style='border: solid 2px black;'>" . $row["driverAddress"]. "</td>
                     <td style='border: solid 2px black;'>" . $row["vehicle_id"]. "</td>
+                    <td style='border: solid 2px black;'>" . $row["contactNo"]. "</td>
                 </tr>";
             }
             echo "</table>";

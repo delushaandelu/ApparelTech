@@ -47,7 +47,7 @@ $sql = "SELECT customer_id, nic, fullname, designation, companyname, address, em
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
-    echo "<table class='table' style='border: solid 2px black;'>";
+    echo "<table class='table table-striped' style='border: solid 2px black;'>";
     echo"<tr>
             <th style='border: solid 2px black;'>Customer ID </th>
             <th style='border: solid 2px black;'>NIC </th>
