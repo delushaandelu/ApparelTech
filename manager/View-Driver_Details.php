@@ -23,6 +23,48 @@
         
     </div>
     <div class="row">
+        <?php
+
+        $servername = "ap-cdbr-azure-southeast-b.cloudapp.net";
+        $username = "b477c41467c518";
+        $password = "955eff62";
+        $dbname = "apperaltech";
+
+        $conn = new mysqli($servername, $username, $password, $dbname);
+
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+        }
+
+        $sql = "SELECT * FROM driver";
+        $result = $conn->query($sql);
+
+        if ($result->num_rows > 0) {
+            echo "<table class='table' style='border: solid 2px black;'>";
+            echo"<tr>
+                <th style='border: solid 2px black;'>Customer ID </th>
+                <th style='border: solid 2px black;'>Order ID </th>
+                <th style='border: solid 2px black;'>Purchase Order Date </th>
+                <th style='border: solid 2px black;'>Status </th>
+            </tr>";
+
+            while($row = $result->fetch_assoc()) {
+                echo "<tr>
+                    <td style='border: solid 2px black;'>" . $row["driver_id"]. "</td>
+                    <td style='border: solid 2px black;'>" . $row["driverName"]. "</td>
+                    <td style='border: solid 2px black;'>" . $row["LicenceNo"]. "</td>
+                    <td style='border: solid 2px black;'>" . $row["driverAddress"]. "</td>
+                    <td style='border: solid 2px black;'>" . $row["vehicle_id"]. "</td>
+                </tr>";
+            }
+            echo "</table>";
+        } else {
+            echo "0 results";
+        }
+
+        $conn->close();
+
+        ?>
 
 
     </div>      
