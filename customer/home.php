@@ -12,7 +12,7 @@
   <body class="nav-md">
     
   <?php
-    include("../config/customermenu.php");
+    include("../config/customermenu.php");  
   ?>
 
 <!-- page content -->
@@ -26,7 +26,11 @@
                         <table>
                             <form method="get">
                                 <tr>
-                                    <td><h3>Customer name : </h3></td>
+                                    <td><h3>Customer name :<?php 
+                                                            session_start();
+                                                            echo $username;
+                                                            ?> 
+                                    </h3></td>
                                     <td></td>
                                 </tr>
                                 <tr>
