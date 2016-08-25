@@ -23,12 +23,12 @@
                 <h1 class="page-header">Customers</h1>
             </div>
             <div class="2">
-                <form action="demo_form.asp">
+                <form>
                     <div class="col-xs-3">
-                        <input type="text" name="searchitem" placeholder="Search by id" class="form-control" size="35">
+                        <input type="text" name="customer_id" placeholder="Search by id" class="form-control" size="35">
                     </div>
                     <div>
-                        <button type="button" id="button2" class="btn btn-default">Search</button>
+                        <button type="submit" id="button2" class="btn btn-default">Search</button>
                     </div>
 
 
@@ -39,60 +39,58 @@
     </div>
     <div class="row">
         <?php
-$servername = "ap-cdbr-azure-southeast-b.cloudapp.net";
-$username = "b477c41467c518";
-$password = "955eff62";
-$dbname = "apperaltech";
+            $servername = "ap-cdbr-azure-southeast-b.cloudapp.net";
+            $username = "b477c41467c518";
+            $password = "955eff62";
+            $dbname = "apperaltech";
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+            // Create connection
+            $conn = new mysqli($servername, $username, $password, $dbname);
+            // Check connection
+            if ($conn->connect_error) {
+                die("Connection failed: " . $conn->connect_error);
+            }
 
-$sql = "SELECT customer_id, nic, fullname, designation, companyname, address, email, mobile, tele FROM customer";
-$result = $conn->query($sql);
+            $sql = "SELECT customer_id, nic, fullname, designation, companyname, address, email, mobile, tele FROM customer";
+            $result = $conn->query($sql);
 
-if ($result->num_rows > 0) {
-    echo "<table class='table table-striped' style='border: solid 2px black;'>";
-    echo"<tr>
-            <th style='border: solid 2px black;'>Customer ID </th>
-            <th style='border: solid 2px black;'>NIC </th>
-            <th style='border: solid 2px black;'>Full Name </th>
-            <th style='border: solid 2px black;'>Designation </th>
-            <th style='border: solid 2px black;'>Company Name </th>
-            <th style='border: solid 2px black;'>Address </th>
-            <th style='border: solid 2px black;'>e-mail </th>
-            <th style='border: solid 2px black;'>Mobile </th>
-            <th style='border: solid 2px black;'>Telephone </th>
-            </tr>";
+            if ($result->num_rows > 0) {
+                echo "<table class='table table-striped' style='border: solid 2px black;'>";
+                echo"<tr>
+                    <th style='border: solid 2px black;'>Customer ID </th>
+                    <th style='border: solid 2px black;'>NIC </th>
+                    <th style='border: solid 2px black;'>Full Name </th>
+                    <th style='border: solid 2px black;'>Designation </th>
+                    <th style='border: solid 2px black;'>Company Name </th>
+                    <th style='border: solid 2px black;'>Address </th>
+                    <th style='border: solid 2px black;'>e-mail </th>
+                    <th style='border: solid 2px black;'>Mobile </th>
+                    <th style='border: solid 2px black;'>Telephone </th>
+                </tr>";
 
-    // output data of each row
-    while($row = $result->fetch_assoc()) {
-        echo "<tr>
-                <td style='border: solid 2px black;'>" . $row["customer_id"]. "</td>
-                <td style='border: solid 2px black;'>" . $row["nic"]. "</td>
-                <td style='border: solid 2px black;'>" . $row["fullname"]. "</td>
-                <td style='border: solid 2px black;'>" . $row["designation"]. "</td>
-                <td style='border: solid 2px black;'>" . $row["companyname"]. "</td>
-                <td style='border: solid 2px black;'>" . $row["address"]. "</td>
-                <td style='border: solid 2px black;'>" . $row["email"]. "</td>
-                <td style='border: solid 2px black;'>" . $row["mobile"]. "</td>
-                <td style='border: solid 2px black;'>" . $row["tele"]. "</td>
-              </tr>";
-    }
-    echo "</table>";
-} else {
-    echo "0 results";
-}
+                while($row = $result->fetch_assoc()) {
+                    echo "<tr>
+                        <td style='border: solid 2px black;'>" . $row["customer_id"]. "</td>
+                        <td style='border: solid 2px black;'>" . $row["nic"]. "</td>
+                        <td style='border: solid 2px black;'>" . $row["fullname"]. "</td>
+                        <td style='border: solid 2px black;'>" . $row["designation"]. "</td>
+                        <td style='border: solid 2px black;'>" . $row["companyname"]. "</td>
+                        <td style='border: solid 2px black;'>" . $row["address"]. "</td>
+                        <td style='border: solid 2px black;'>" . $row["email"]. "</td>
+                        <td style='border: solid 2px black;'>" . $row["mobile"]. "</td>
+                        <td style='border: solid 2px black;'>" . $row["tele"]. "</td>
+                    </tr>";
+                }
+                echo "</table>";
+            } else {
+                echo "0 results";
+            }
 
-$conn->close();
+            $conn->close();
 
-?>
+        ?>
 
-
-    </div>      
+    </div>
 </div>
 
 <script src="vendor/jquery/jquery.min.js"></script>

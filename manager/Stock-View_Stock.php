@@ -27,7 +27,7 @@
                         <input type="text" name="searchitem" placeholder="Search by item id" class="form-control" size="35">
                     </div>
                     <div>
-                        <button type="button" id="button2" class="btn btn-default" onclick="function(item_id)">Search</button>
+                        <button type="button" id="button2" class="btn btn-default" name="searchbutton">Search</button>
                     </div>
 
 
@@ -86,6 +86,16 @@
 
         ?>
 
+        <?php
+            include ('stock.php');
+
+                if(isset($_POST['searchbutton'])){
+                    $itemName = $_POST['itemName'];
+                    $mystock = new stock();
+                    $mystock -> searchStock($itemName);
+                }
+
+        ?>
 
     </div>      
 </div>
