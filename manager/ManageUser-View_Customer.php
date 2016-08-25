@@ -19,13 +19,21 @@
 <div id="page-wrapper">
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">Customer Details</h1>
-            <td>
-                <input type="text" name="Customer" class="form-control" placeholder="Search by Customer ID">
-                <br><br>
-                <button type="button" id="button1" class="btn btn-default btn-lg active">Search</button>
-                <br><br><br>
-            </td>
+            <div class="1">
+                <h1 class="page-header">Customers</h1>
+            </div>
+            <div class="2">
+                <form action="demo_form.asp">
+                    <div class="col-xs-3">
+                        <input type="text" name="searchitem" placeholder="Search by id" class="form-control" size="35">
+                    </div>
+                    <div>
+                        <button type="button" id="button2" class="btn btn-default">Search</button>
+                    </div>
+
+
+                    <br>
+            </div>
         </div>
         
     </div>
@@ -47,7 +55,7 @@ $sql = "SELECT customer_id, nic, fullname, designation, companyname, address, em
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
-    echo "<table class='table' style='border: solid 2px black;'>";
+    echo "<table class='table table-striped' style='border: solid 2px black;'>";
     echo"<tr>
             <th style='border: solid 2px black;'>Customer ID </th>
             <th style='border: solid 2px black;'>NIC </th>

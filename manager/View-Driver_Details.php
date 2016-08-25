@@ -23,6 +23,52 @@
         
     </div>
     <div class="row">
+        <?php
+
+        $servername = "ap-cdbr-azure-southeast-b.cloudapp.net";
+        $username = "b477c41467c518";
+        $password = "955eff62";
+        $dbname = "apperaltech";
+
+        $conn = new mysqli($servername, $username, $password, $dbname);
+
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+        }
+
+        $sql = "SELECT * FROM driver";
+        $sql = "SELECT contactNo FROM drivercontact";
+        $result = $conn->query($sql);
+
+        if ($result->num_rows > 0) {
+            echo "<table class='table'>";
+            echo"<tr class='success'>
+                <th style='border: solid 2px black;'>Driver ID </th>
+                <th style='border: solid 2px black;'>Driver Name </th>
+                <th style='border: solid 2px black;'>Licence Number </th>
+                <th style='border: solid 2px black;'>Address </th>
+                <th style='border: solid 2px black;'>Vehicle ID </th>
+                <th style='border: solid 2px black;'>Contact No </th>
+            </tr>";
+
+            while($row = $result->fetch_assoc()) {
+                echo "<tr class='danger'>
+                    <td style='border: solid 2px black;'>" . $row["driver_id"]. "</td>
+                    <td style='border: solid 2px black;'>" . $row["driverName"]. "</td>
+                    <td style='border: solid 2px black;'>" . $row["LicenceNo"]. "</td>
+                    <td style='border: solid 2px black;'>" . $row["driverAddress"]. "</td>
+                    <td style='border: solid 2px black;'>" . $row["vehicle_id"]. "</td>
+                    <td style='border: solid 2px black;'>" . $row["contactNo"]. "</td>
+                </tr>";
+            }
+            echo "</table>";
+        } else {
+            echo "0 results";
+        }
+
+        $conn->close();
+
+        ?>
 
 
     </div>      

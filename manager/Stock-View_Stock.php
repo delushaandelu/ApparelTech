@@ -18,11 +18,73 @@
 <div id="page-wrapper">
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">Stock Details</h1>
+            <div class="1">
+                <h1 class="page-header">Stock Details</h1>
+            </div>
+            <div class="2">
+                <form action="demo_form.asp">
+                    <div class="col-xs-3">
+                        <input type="text" name="searchitem" placeholder="Search by item id" class="form-control" size="35">
+                    </div>
+                    <div>
+                        <button type="button" id="button2" class="btn btn-default" onclick="function(item_id)">Search</button>
+                    </div>
+
+
+                    <br>
+            </div>
+            
         </div>
         
     </div>
     <div class="row">
+        <?php
+
+        $servername = "ap-cdbr-azure-southeast-b.cloudapp.net";
+        $username = "b477c41467c518";
+        $password = "955eff62";
+        $dbname = "apperaltech";
+
+        $conn = new mysqli($servername, $username, $password, $dbname);
+
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+        }
+
+        $sql = "SELECT * FROM item";
+        $result = $conn->query($sql);
+
+        if ($result->num_rows > 0) {
+            echo "<table class='table'>";
+            echo"<tr class='info'>
+                <th>Item ID </th>
+                <th>Item Name </th>
+                <th>Buying Price</th>
+                <th>Selling Price </th>
+                <th>Brand </th>
+                <th>Category </th>
+                <th>Stock Qty </th>
+            </tr>";
+
+            while($row = $result->fetch_assoc()) {
+                echo "<tr class='danger'>
+                    <td>" . $row["item_id"]. "</td>
+                    <td>" . $row["itemName"]. "</td>
+                    <td>" . $row["buyingPrice"]. "</td>
+                    <td>" . $row["sellingPrice"]. "</td>
+                    <td>" . $row["brand"]. "</td>
+                    <td>" . $row["catagery"]. "</td>
+                    <td>" . $row["stockQty"]. "</td>
+                </tr>";
+            }
+            echo "</table>";
+        } else {
+            echo "0 results";
+        }
+
+        $conn->close();
+
+        ?>
 
 
     </div>      

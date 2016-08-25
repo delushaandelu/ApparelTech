@@ -31,9 +31,8 @@
 
 	}
 
-	public function searchItem($itemname){
+	public function printSearch($sql){
 		include('database_connection.php');
-		$sql = "SELECT * FROM item WHERE itemName = '$itemname'";
 			if($result = mysqli_query($dbcon, $sql)){
 				if(mysqli_num_rows($result) > 0){
 					echo "<table border = '0'>";
@@ -70,6 +69,24 @@
 		mysqli_close($dbcon);
 	}
 
+	public function searchItem($categoryname, $itemname, $brandname){
+
+		
+		if ($itemname == "All" && $brandname == "All"){
+			$sql = "SELECT * FROM item WHERE catagery = '$categoryname'";
+			$this->printSearch($sql);
+		}
+		else if($brandname == "All"){
+			$sql = "SELECT * FROM item WHERE catagery = '$categoryname' AND itemName = '$itemname'";
+			$this->printSearch($sql);
+		}else{
+			$sql = "SELECT * FROM item WHERE catagery = '$categoryname' AND itemName = '$itemname' AND brand = '$brandname'";
+			$this->printSearch($sql);
+		}
+		
+
+	}
+
 	public function deleteItem($itemname){
 		include('database_connection.php');
 		$sql = "DELETE FROM item WHERE itemName = '$itemname'";
@@ -81,6 +98,7 @@
 		}
 		mysqli_close($dbcon);
 	}
+
 }
 
 

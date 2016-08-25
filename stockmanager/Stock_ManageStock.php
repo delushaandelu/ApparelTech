@@ -18,17 +18,17 @@
         
         	<ul class="nav nav-justified" >
     			
-    			<li id ="nav_tab_item_effect"><a href="#">Add Item</a></li>
-   	 			<li id ="nav_tab_item_effect"><a href="#">Search Item</a></li>
+    			<li id ="nav_tab_item_effect"><a href="Stock_ManageStock.php">Add Item</a></li>
+   	 			<li id ="nav_tab_item_effect"><a href="manage_stock_searchItem.php">Search Item</a></li>
     			<li id ="nav_tab_item_effect"><a href="#">Delete Item</a></li>
                 <li id ="nav_tab_item_effect"><a href="#">Update Item</a></li>
   			</ul>
             <br><br>
-            <div class="panel-body">
+            <div class="panel_body_add_item">
                 
   
                     
-            	<div id = "upper panel">
+            	<div id = "upper_panel_add_item">
                         
                             <form method="post">
                                 <table border="0" >
@@ -42,9 +42,9 @@
                                         <td>
                                             
                                             <select name="categoryname">
-                                                <option value="volvo">Machine</option>
-                                                <option value="saab">Machine Spare Part</option>
-                                                <option value="saab">Tool</option>
+                                                <option value="Sewing Machines">Sewing Machines</option>
+                                                <option value="Sewing Machine Spare Parts">Sewing Machine Spare Parts</option>
+                                                <option value="Tools">Tools</option>
              
                                             </select><br><br>
               
@@ -72,11 +72,11 @@
                                         </td> 
                                           
                                         <td>
-                                            <select name="brandname">
-                                                <option value="juki">Juki</option>
-                                                <option value="singer">Singer</option>
-                                                <option value="brother">Brother</option>
-                                                <option value="janome">Janome</option>
+                                            <select name="brand">
+                                                <option value="Juki">Juki</option>
+                                                <option value="Singer">Singer</option>
+                                                <option value="Brother">Brother</option>
+                                                <option value="Janome">Janome</option>
              
                                             </select><br><br>
                                         </td>
@@ -131,7 +131,7 @@
                              
                     	</div>
                         
-                      	<div id = "below_panel">
+                      	<div id = "below_panel_add_item">
                             	<br><br>
                                  <input type="submit" id="myButton" name="btnManageStockInsert" value="Add"  /><br><br>
                          </div>       
