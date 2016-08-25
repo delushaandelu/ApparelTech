@@ -22,7 +22,7 @@
 
 <?php
 // connect to database
-include '../config/database.php';
+include 'config/database.php';
  
 // page headers
 $page_title="Products";

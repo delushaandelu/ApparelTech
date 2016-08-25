@@ -1,6 +1,6 @@
 <?php
 // connect to database
-include '../config/database.php';
+include 'config/database.php';
  
 // get the product id
 $id = isset($_GET['id']) ? $_GET['id'] : "";
