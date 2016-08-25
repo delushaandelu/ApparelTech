@@ -1,30 +1,30 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Theme</title>
+    <meta charset="utf-8">
+    <title>Manager Admin</title>
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="dist/css/sb-admin-2.css" rel="stylesheet">
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="designs/template.css" type="text/css" />
-    <link rel="stylesheet" href="../config/design/css/theme.css" type="text/css">
-    <?php
-        include ("../config/headermanager.html");
-    ?>
 </head>
+
 <body>
 
-</br></br>
-<div id="main">
-    <div id="header">
-        <img src="images/Managing.jpg">
+<?php
+    include ("../config/managermenu.php");
+?>
+            
+<div id="page-wrapper">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Manage Stock</h1>
+        </div>
+        
     </div>
+    <div class="row">
 
-    <div id="menu">
-        <h2>
-            <font color="white" size="+1" >Manage Stock</font>
-        </h2>
-
-    </div>
-
-    <div id="content">
+        <div id="content">
         <div id="top">
             <div id="top-left" style="border: solid">
                 <h3>
@@ -135,19 +135,29 @@
                     <br><br>
                     <button type="button" id="button" class="btn btn-default btn-lg active">Update</button>
                     <br><br>
-                    <button type="button" id="button" class="btn btn-default btn-lg active">Clear</button>
-                    <br><br>
-                    <button type="button" id="button" class="btn btn-default btn-lg active">Refresh</button>
+                    <button type="button" id="button" onclick="refreshAll()" class="btn btn-default btn-lg active">Refresh</button>
                     <br><br>
 
                 </form>
+                <script>
+                    function refreshAll() {
+                        location.reload();
+                    }
+                </script>
 
             </div>
         </div>
         <p>&nbsp;</p>
         <p>&nbsp;</p>
     </div>
-    <div id="footer"></div>
+    </div>      
 </div>
+
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="vendor/metisMenu/metisMenu.min.js"></script>
+<script src="dist/js/sb-admin-2.js"></script>
+
 </body>
+
 </html>

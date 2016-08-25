@@ -1,29 +1,39 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Theme</title>
-    <link rel="stylesheet" href="designs/template1.css" type="text/css" />
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="../config/design/css/theme.css" type="text/css">
-    <?php
-        include ("../config/headerstock.html");
-    ?>
+<!DOCTYPE html>
+<html lang="en">
+    <head>        
+        <title>Stock Manager</title>                   
+        <link rel="stylesheet" type="text/css" id="theme" href="css/main.css"/>                        
+    </head>
+    <body>
+        
+        <?php
+            include("../config/stockmgrmenu.php");
+        ?>
+
+                <ul class="breadcrumb">
+                    <h2>Page Heading here!</li></h2>
+                </ul>
+<style type="text/css">
+        #driverdisplaytb{
+            width: 600px;
+            height: 550px;
+        }
+    
+    </style>
 </head>
 <body>
 
 </br></br>
-<div id ="lol"></div>
-<div id="main">
-    <div id="header">
-        <img src="images/55.jpg">
-    </div>
+
+
+   
+    
 
     <div id="content">
         <div id ="top_section">
 
-            <div id = "top_left_section">
-                <form method="post" >
+            <div id = "top_left_driver">
+                <form method="post">
                     <table id="drivertb" border="0" width="500" height="500" >
 
                         <tr>
@@ -90,44 +100,81 @@
                         </tr>
                         <tr>
 
-                            <td id="table_font">Location</td>
+                            <td id="table_font">Vehicle ID</td>
 
                             <td>
-                                <input type="text" name="location"  class="form-control">
+                                <input type="text" name="vehicleid"  class="form-control">
                             </td>
                         </tr>
 
 
                     </table>
-                </form>
-            </div>
+             
 
             <div id="top_right_section">
                 <div id="button1">
-                    <button type="button" id="button_effect">Search</button> <br><br>
-                    <button type="button" id="button_effect">Refresh</button><br><br>
-                    <button type="button" id="button_effect">Delete</button> <br><br>
-                    <button type="button" id="button_effect">Update</button> <br><br>
+                    <input type="submit" id="button_effect" name="DriverInsert" value="Insert"/><br><br>
+                    <input type="submit" id="button_effect" name="DriverSearch" value="Search" /><br><br>
+                    <input type="submit" id="button_effect" name="DriverDelete" value="Delete" /><br><br>
+                    <input type="submit" id="button_effect" name="DriverUpdate" value="Update"/> <br><br>
                     <button type="button" id="button_effect">Clear</button> <br><br>
-                    <button type="button" id="button_effect">Refresh</button>
+                    <button type="reset" id="button_effect">Refresh</button>
 
                 </div>
-
-
             </div>
-        </div>
-
-    </div>
-    <div id="bottomdriver">
-        
-        
-        
-    </div>
-
-   
-    <div id="footer">
-    	
+        </form>
     </div>
 </div>
-</body>
+    </div>
+    <div id="bottomdriver">
+    
+    
+    </div>
+       
+    <div id="footer">
+        
+    </div>
+
+<?php
+
+if(isset($_POST['DriverInsert'])){
+    include('driver.php');
+    
+    $myDriver = new Driver();
+    $myDriver -> addDriver();
+}
+if(isset($_POST['DriverSearch'])){
+   include('driver.php');
+    
+    $myDriver4 = new Driver();
+    $myDriver4 -> searchDriver(); 
+    
+    
+}
+if(isset($_POST['DriverDelete'])){
+    include('driver.php');
+    $myDriver2 = new Driver();
+    $myDriver2 -> deleteDriver();
+}
+
+if(isset($_POST['DriverUpadate'])){
+    include('driver.php');
+    $myDriver3 = new Driver();
+    $myDriver3 -> updateDriver();
+    
+}
+?>
+        <script type="text/javascript" src="js/plugins/jquery/jquery.min.js"></script>
+        <script type="text/javascript" src="js/plugins/jquery/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="js/plugins/bootstrap/bootstrap.min.js"></script>        
+        <script type="text/javascript" src="js/settings.js"></script>
+        <script type="text/javascript" src="js/plugins.js"></script>        
+        <script type="text/javascript" src="js/actions.js"></script>
+    </body>
 </html>
+
+
+
+
+
+

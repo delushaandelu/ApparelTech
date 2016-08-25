@@ -1,31 +1,30 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Theme</title>
-    <link rel="stylesheet" href="designs/template.css" type="text/css" />
     <meta charset="utf-8">
+    <title>Manager Admin</title>
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="dist/css/sb-admin-2.css" rel="stylesheet">
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="designs/template.css" type="text/css" />
-    <link rel="stylesheet" href="../config/design/css/theme.css" type="text/css">
-    <?php
-        include ("../config/headermanager.html");
-    ?>
+	<link rel="stylesheet" href="../config/styles.css" type="text/css" />
 </head>
+
 <body>
-</br></br>
-<div id ="lol"</div>
-<div id="main">
-<div id="header">
-        <img src="images/Managing.jpg">
-    </div>
 
-<div id="menu">
-  			<h2>
-            	<font color="white" size="+1">Manage Supplier</font>
-            </h2>
+<?php
+    include ("../config/managermenu.php");
+?>
+            
+<div id="page-wrapper">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Manage Supplier</h1>
+        </div>
+        
     </div>
-
-    <div id="content">
+    <div class="row">
+        <div id="content">
 		<div id="top">
         	<div id="top-left">
             	<form method="post">
@@ -36,7 +35,7 @@
                             	Supplier ID
                             </td>
                             <td>
-                            	<input type="text" name="Supplier ID" class="form-control">
+                            	<input type="text" name="supplierid" class="form-control">
 								<br><br>
                             </td>
 						</tr>
@@ -45,7 +44,7 @@
                             	Supplier name
 							</td>
                             <td>
-                            	<input type="text" name="Supplier name" class="form-control">
+                            	<input type="text" name="suppliername" class="form-control">
 								<br><br>
                             </td>
                         </tr>
@@ -71,7 +70,7 @@
 						  <tr>
                                         
 							<td id="table_font" width="60%" align="right">
-								Telephone                            
+								                    Telephone                            
 							</td> 
                                          
 							<td>
@@ -103,7 +102,7 @@
                             	e-mail address							
                             </td>
                             <td>
-                            	<input type="email" name="e-mail address" class="form-control">
+                            	<input type="email" name="Email" class="form-control">
 								<br><br>
                            </td>
                          </tr>
@@ -112,7 +111,7 @@
                             	Item type						
                             </td>
                             <td>
-                            	<input type="text" name="Item type" class="form-control">
+                            	<input type="text" name="Itemtype" class="form-control">
 								<br><br>
                            </td>
                          </tr>
@@ -129,22 +128,54 @@
 
                            			</td>
                          	      </tr>
-									<button type="button" id="button" class="btn btn-default btn-lg active">Search</button>
+									<button type="button" id="button" name="searchbutton" class="btn btn-default btn-lg active">Search</button>
 									<br><br>
-                                 	<button type="button" id="button" class="btn btn-default btn-lg active">Delete</button>
+                                 	<button type="button" id="button" name="Deletebutton" class="btn btn-default btn-lg active">Delete</button>
 									<br><br>
-                                 	<button type="button" id="button" class="btn btn-default btn-lg active">Update</button>
+                                 	<button type="button" id="button" name="Updatebutton" class="btn btn-default btn-lg active">Update</button>
 									<br><br>
-                                 	<button type="button" id="button" class="btn btn-default btn-lg active">Clear</button>
+									<button type="button" id="button" onclick="refreshAll()" class="btn btn-default btn-lg active">Refresh</button>
 									<br><br>
-									<button type="button" id="button" class="btn btn-default btn-lg active">Refresh</button>
+									<input type="submit" id="button" name="addbutton" class="btn btn-default btn-lg active" value="Add">
                             </form>
-                        
-				  </div>
+					  		<script>
+								function refreshAll() {
+									location.reload();
+								}
+							</script>
+
+							<?php
+
+							include('../manager/supplier.php');
+
+								if(isset($_POST['addbutton'])){
+									$supplierid = $_POST['supplierid'];
+									$suppliername = $_POST['suppliername'];
+									$Email = $_POST['Email'];
+									$Address = $_POST['Address'];
+									$Telephone = $_POST['Telephone'];
+
+									$mysupplier = new supplier();
+									$mysupplier -> addSupplier($supplierid, $suppliername, $Email, $Address, $Telephone);
+								}
+							
+							?>
+
+
+</div>
 			<p>&nbsp;</p>
 			<p>&nbsp;</p>
     </div>
     <div id="footer"></div>
+
+    </div>      
 </div>
+
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="vendor/metisMenu/metisMenu.min.js"></script>
+<script src="dist/js/sb-admin-2.js"></script>
+
 </body>
+
 </html>
