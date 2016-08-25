@@ -1,5 +1,5 @@
 <?php
-	include("../config/database.php");
+	include '../config/database.php';
 	$id=$_GET['id'];
 	$c=$_GET['invoice'];
 	$sdsd=$_GET['dle'];

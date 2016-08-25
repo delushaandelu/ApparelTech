@@ -1,8 +1,8 @@
 <?php
-$servername = "ap-cdbr-azure-southeast-b.cloudapp.net";
-$username = "b477c41467c518";
-$password = "955eff62";
-$database = "apperaltech";
+$host = "localhost";
+$db_name = "apperaltech";
+$username = "root";
+$password = "";
 
 //$servername = "localhost";
 //$username = "root";
