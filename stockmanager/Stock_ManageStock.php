@@ -20,7 +20,7 @@
     			
     			<li id ="nav_tab_item_effect"><a href="Stock_ManageStock.php">Add Item</a></li>
    	 			<li id ="nav_tab_item_effect"><a href="manage_stock_searchItem.php">Search Item</a></li>
-    			<li id ="nav_tab_item_effect"><a href="#">Delete Item</a></li>
+    			<li id ="nav_tab_item_effect"><a href="manage_stock_deleteItem.php">Delete Item</a></li>
                 <li id ="nav_tab_item_effect"><a href="#">Update Item</a></li>
   			</ul>
             <br><br>
@@ -160,23 +160,7 @@
                                     }
                             
                             ?>
-                        
-                       
-                 
-                    
-                   
-                        <?php
-                        
-                            if(isset($_POST['btnManageStockSearch'])){
-                                    
-                                    $itemname = $_POST['itemname'];
-                                    $myItem = new Item();
-                                    $myItem -> searchItem($itemname);
-                                    }
-                            
-                        ?>
-                        
-            
+                  
                  
                
             

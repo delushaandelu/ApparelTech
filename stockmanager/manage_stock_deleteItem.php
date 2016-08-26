@@ -122,26 +122,44 @@
     					</select>
                         <br><br>
                         
-       					 <input type="submit" id="myButton" name="btnManageStockSearch" value="Search"  /><br><br>
+       					 <input type="submit" id="myButton" name="btnManageStockSearch2" value="Search"  /><br><br>
                     </form>
                 </div>
                
-                <div id="below_panel_search_item">   
+                <div id="below_panel_search_item"> 
+                	<form method="post">  
                         <?php
                         	include ('Item.php');
-                            if(isset($_POST['btnManageStockSearch'])){
+                            if(isset($_POST['btnManageStockSearch2'])){
                                     $categoryname = $_POST['categoryname'];
                                     $itemname = $_POST['itemname'];
 									$brandname = $_POST['brandname'];
 									
                                     $myItem = new Item();
-                                    $myItem -> searchItem($categoryname,$itemname,$brandname);
+                                    $myItem -> searchToDelete($categoryname,$itemname,$brandname);
                                     }
                             
-                        ?>
+                      ?>
+                     
+                      <input type="submit" id="myButton" name="btnManageStockDelete" value="Delete"  /><br><br>
+                       <?php
+                        	
+							$myItem = new Item();
+							if(isset($_POST['btnManageStockDelete'])){
+								
+
+								
+								
+							
+								
+								
+								$myItem -> deleteItem();
+								}
+						
+						?>
                         
-            
-                 
+                      
+       </form>
                
             
     </div>
