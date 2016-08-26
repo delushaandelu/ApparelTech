@@ -106,6 +106,7 @@
                 			echo "<th>Selling Price</th>";echo"<td width=5%></td>";
                 			echo "<th>Quantity</th> <td width = 5%></td>";
                 			echo "<th>Delete</th>";
+                			echo "<th></th>";
                 		echo "</tr>";
 
                 	while($row = mysqli_fetch_array($result)){
@@ -117,7 +118,9 @@
                 			echo "<td>" . $row['buyingPrice'] . "</td>";echo"<td></td>";
                 			echo "<td>" . $row['sellingPrice'] . "</td>";echo"<td></td>";
                 			echo "<td>" . $row['stockQty'] . "</td>";echo "<td></td>";
-                			echo "<td>"?><form method = "post"><input type="checkbox" name="deleteitem[]" value=<?php echo $row['item_id']; ?>> </form> <?php echo "</td>";
+                			echo "<td>"?><form method = "post"><input type="checkbox" name="deleteitem[]" value=<?php echo $row['item_id']; ?>> </form>
+
+  							<?php echo "</td>";
                 		echo "</tr>";
                 	}
                 	echo "</table>";
@@ -159,11 +162,15 @@
 			
 
 			include('database_connection.php');
+			$selectedItem = $_POST['deleteitem'];
+			echo "$selectedItem";
 			
-   			foreach ($_POST["deleteitem"] as $item_id){
-   				$sql = "DELETE FROM item WHERE item_id='$item_id'";
+   			for ($i=0;$i<count($selectedItem);$i++){
+   				$itemId = $selectedItem[$i];
+   				echo "$itemId";
+   				$sql = "DELETE FROM item WHERE item_id='$itemId'";
 			
-				$result = mysqli_query($dbcon,$sql);
+				$result = mysqli_query($dbcon,$sql);}
 
 				if(!$result){
 					echo "Error deleting record: " . $dbcon->error;
@@ -172,11 +179,9 @@
 
 			}
 		mysqli_close($dbcon);
-	}
+	
 
 	}
-}
-
-
-
+}		
+		
 ?>

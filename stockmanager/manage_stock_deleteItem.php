@@ -152,7 +152,6 @@
 								
 							
 								
-								
 								$myItem -> deleteItem();
 								}
 						
