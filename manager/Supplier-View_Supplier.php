@@ -38,20 +38,10 @@
     </div>
     <div class="row">
         <?php
-        $servername = "ap-cdbr-azure-southeast-b.cloudapp.net";
-        $username = "b477c41467c518";
-        $password = "955eff62";
-        $dbname = "apperaltech";
-
-        // Create connection
-        $conn = new mysqli($servername, $username, $password, $dbname);
-        // Check connection
-        if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
-        }
+        include('database_connection.php');
 
         $sql = "SELECT supplier_id, name, email, address FROM supplier";
-        $result = $conn->query($sql);
+        $result = $dbcon->query($sql);
 
         if ($result->num_rows > 0) {
             echo "<table class='table' style='border: solid 2px black;'>";
@@ -75,7 +65,7 @@
             echo "0 results";
         }
 
-        $conn->close();
+        $dbcon->close();
 
         ?>
 
