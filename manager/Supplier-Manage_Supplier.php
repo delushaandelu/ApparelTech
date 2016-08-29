@@ -35,7 +35,7 @@
                             	Supplier ID
                             </td>
                             <td>
-                            	<input type="text" name="supplierid" class="form-control">
+                            	<input type="text" name="supplierID" class="form-control">
 								<br><br>
                             </td>
 						</tr>
@@ -44,7 +44,7 @@
                             	Supplier name
 							</td>
                             <td>
-                            	<input type="text" name="suppliername" class="form-control">
+                            	<input type="text" name="supplierName" class="form-control">
 								<br><br>
                             </td>
                         </tr>
@@ -136,7 +136,7 @@
 									<br><br>
 									<button type="button" id="button" onclick="refreshAll()" class="btn btn-default btn-lg active">Refresh</button>
 									<br><br>
-									<input type="submit" id="button" name="addbutton" class="btn btn-default btn-lg active" value="Add">
+									<input type="submit" id="button" name="addSupplier" class="btn btn-default btn-lg active" value="Add">
                             </form>
 					  		<script>
 								function refreshAll() {
@@ -146,17 +146,17 @@
 
 							<?php
 
-							include('../manager/supplier.php');
+							include('supplier.php');
 
-								if(isset($_POST['addbutton'])){
-									$supplierid = $_POST['supplierid'];
-									$suppliername = $_POST['suppliername'];
+								if(isset($_POST['addSupplier'])){
+									$supplierID = $_POST['supplierID'];
+									$supplierName = $_POST['supplierName'];
 									$Email = $_POST['Email'];
 									$Address = $_POST['Address'];
 									$Telephone = $_POST['Telephone'];
 
 									$mysupplier = new supplier();
-									$mysupplier -> addSupplier($supplierid, $suppliername, $Email, $Address, $Telephone);
+									$mysupplier -> addSupplier($supplierID, $supplierName, $Email, $Address, $Telephone);
 								}
 							
 							?>

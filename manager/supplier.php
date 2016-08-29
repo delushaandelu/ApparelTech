@@ -1,28 +1,28 @@
 <?php
     class supplier{
-        var $supplierid="";
-        var $suppliername="";
+        var $supplierID="";
+        var $supplierName="";
         var $Email="";
         var $Address="";
         var $Telephone="";
         
-        public function addSupplier($supplierid, $suppliername, $Email, $Address, $Telephone){
-            include ('../manager/database.php');
+        public function addSupplier($supplierID, $supplierName, $Email, $Address, $Telephone){
+            include ('database.php');
             
-            $supplierid = $supplierid;
-            $suppliername = $suppliername;
+            $supplierID = $supplierID;
+            $supplierName = $supplierName;
             $Email = $Email;
             $Address = $Address;
             $Telephone = $Telephone;
             
-            $sqlInsert = "INSERT INTO supplier (supplier_id, name, email, address) VALUES ('$supplierid', '$suppliername', '$Email', '$Address')";
-            $sqlInserttel = "INSERT INTO suppliercontact(supplier_id, contactNumber) VALUES ('$supplierid','$Telephone')";
+            $sqlInsert = "INSERT INTO supplier (supplier_id, name, email, address) VALUES ('$supplierID', '$supplierName', '$Email', '$Address')";
+            $sqlInsertTel = "INSERT INTO suppliercontact(supplier_id, contactNumber) VALUES ('$supplierID','$Telephone')";
 
 
             if(!mysqli_query($conn, $sqlInsert)){
                 die('Error occurs while inserting new record');
             }
-            elseif (!mysqli_query($conn, $sqlInserttel)){
+            elseif (!mysqli_query($conn, $sqlInsertTel)){
                 die('Error occurs while inserting new record');
             }
             mysqli_close($conn);
