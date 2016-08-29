@@ -98,7 +98,7 @@ if(isset($_POST["sumbit"])){
 
     $sql = "INSERT INTO customer (fullname, designation, address, nic, mobile, tele, email, companyName, username, password) VALUES ('$fname','$desi','$address','$nic','$mob','$tele','$email','$cname','$uname','$password')";
 
-if ($conn->query($sql) === TRUE) {
+if (mysqli_query($conn, $sql) === TRUE) {
 
         echo "<script>";
         echo "alert('Your information sent for approvel! have a gud day')";
@@ -110,7 +110,7 @@ if ($conn->query($sql) === TRUE) {
         echo "</script>";
     }
 
-    $conn->close();
+    mysqli_close($conn);
     }
 
     ?>

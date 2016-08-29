@@ -7,6 +7,7 @@
     <link href="dist/css/sb-admin-2.css" rel="stylesheet">
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="designs/template.css" type="text/css" />
+	<link rel="stylesheet" href="../config/styles.css" type="text/css" />
 </head>
 
 <body>
@@ -18,7 +19,7 @@
 <div id="page-wrapper">
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">Manager Supplier</h1>
+            <h1 class="page-header">Manage Supplier</h1>
         </div>
         
     </div>
@@ -34,7 +35,7 @@
                             	Supplier ID
                             </td>
                             <td>
-                            	<input type="text" name="Supplier ID" class="form-control">
+                            	<input type="text" name="supplierID" class="form-control">
 								<br><br>
                             </td>
 						</tr>
@@ -43,7 +44,7 @@
                             	Supplier name
 							</td>
                             <td>
-                            	<input type="text" name="Supplier name" class="form-control">
+                            	<input type="text" name="supplierName" class="form-control">
 								<br><br>
                             </td>
                         </tr>
@@ -69,7 +70,7 @@
 						  <tr>
                                         
 							<td id="table_font" width="60%" align="right">
-								Telephone                            
+								                    Telephone                            
 							</td> 
                                          
 							<td>
@@ -101,7 +102,7 @@
                             	e-mail address							
                             </td>
                             <td>
-                            	<input type="email" name="e-mail address" class="form-control">
+                            	<input type="email" name="Email" class="form-control">
 								<br><br>
                            </td>
                          </tr>
@@ -110,7 +111,7 @@
                             	Item type						
                             </td>
                             <td>
-                            	<input type="text" name="Item type" class="form-control">
+                            	<input type="text" name="Itemtype" class="form-control">
 								<br><br>
                            </td>
                          </tr>
@@ -127,18 +128,41 @@
 
                            			</td>
                          	      </tr>
-									<button type="button" id="button" class="btn btn-default btn-lg active">Search</button>
+									<button type="button" id="button" name="searchbutton" class="btn btn-default btn-lg active">Search</button>
 									<br><br>
-                                 	<button type="button" id="button" class="btn btn-default btn-lg active">Delete</button>
+                                 	<button type="button" id="button" name="Deletebutton" class="btn btn-default btn-lg active">Delete</button>
 									<br><br>
-                                 	<button type="button" id="button" class="btn btn-default btn-lg active">Update</button>
+                                 	<button type="button" id="button" name="Updatebutton" class="btn btn-default btn-lg active">Update</button>
 									<br><br>
-                                 	<button type="button" id="button" class="btn btn-default btn-lg active">Clear</button>
+									<button type="button" id="button" onclick="refreshAll()" class="btn btn-default btn-lg active">Refresh</button>
 									<br><br>
-									<button type="button" id="button" class="btn btn-default btn-lg active">Refresh</button>
+									<input type="submit" id="button" name="addSupplier" class="btn btn-default btn-lg active" value="Add">
                             </form>
-                        
-				  </div>
+					  		<script>
+								function refreshAll() {
+									location.reload();
+								}
+							</script>
+
+							<?php
+
+							include('supplier.php');
+
+								if(isset($_POST['addSupplier'])){
+									$supplierID = $_POST['supplierID'];
+									$supplierName = $_POST['supplierName'];
+									$Email = $_POST['Email'];
+									$Address = $_POST['Address'];
+									$Telephone = $_POST['Telephone'];
+
+									$mysupplier = new supplier();
+									$mysupplier -> addSupplier($supplierID, $supplierName, $Email, $Address, $Telephone);
+								}
+							
+							?>
+
+
+</div>
 			<p>&nbsp;</p>
 			<p>&nbsp;</p>
     </div>

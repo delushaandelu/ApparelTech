@@ -18,25 +18,59 @@
 <div id="page-wrapper">
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">View Supplier</h1>
+            <div class="1">
+                <h1 class="page-header">Suppliers</h1>
+            </div>
+            <div class="2">
+                <form action="demo_form.asp">
+                    <div class="col-xs-3">
+                        <input type="text" name="searchitem" placeholder="Search by name" class="form-control" size="35">
+                    </div>
+                    <div>
+                        <button type="button" id="button2" class="btn btn-default">Search</button>
+                    </div>
+
+
+                    <br>
+            </div>
         </div>
         
     </div>
     <div class="row">
+        <?php
+        include('database_connection.php');
+
+        $sql = "SELECT supplier_id, name, email, address FROM supplier";
+        $result = $dbcon->query($sql);
+
+        if ($result->num_rows > 0) {
+            echo "<table class='table' style='border: solid 2px black;'>";
+            echo"<tr>
+                <th style='border: solid 2px black;'>Supplier ID </th>
+                <th style='border: solid 2px black;'>Name </th>
+                <th style='border: solid 2px black;'>e-mail </th>
+                <th style='border: solid 2px black;'>Address </th>
+            </tr>";
+
+            while($row = $result->fetch_assoc()) {
+                echo "<tr>
+                    <td style='border: solid 2px black;'>" . $row["supplier_id"]. "</td>
+                    <td style='border: solid 2px black;'>" . $row["name"]. "</td>
+                    <td style='border: solid 2px black;'>" . $row["email"]. "</td>
+                    <td style='border: solid 2px black;'>" . $row["address"]. "</td>
+                </tr>";
+            }
+            echo "</table>";
+        } else {
+            echo "0 results";
+        }
+
+        $dbcon->close();
+
+        ?>
 
         <div id="content">
-        <div id="top4">
-            <tr>
-                <td>
-                    <input type="text" name="Supplier ID" class="form-control" placeholder="Search by ID">
-                </td>
-            </tr>
 
-            <button type="button" id="button" class="btn btn-default btn-lg active">Search</button>
-
-	    </div>
-        
-        <div id="bottom4">
             <table class="table">
                 <tr>
                     <th>Supplier ID</th>
@@ -48,8 +82,6 @@
                 </tr>
             </table>
         </div>
-            
-    </div>
     
     
 			<p>&nbsp;</p>

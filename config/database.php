@@ -4,6 +4,11 @@ $username = "b477c41467c518";
 $password = "955eff62";
 $database = "apperaltech";
 
+//$servername = "localhost";
+//$username = "root";
+//$password = "";
+//$database = "appareltech";
+
 // Create connection
 $conn = new mysqli($servername, $username, $password, $database) or die ("ERROR: Database");
 /**
@@ -14,3 +19,5 @@ if ($conn->connect_error) {
 echo "Connected successfully";
  **/
 ?>
+
+

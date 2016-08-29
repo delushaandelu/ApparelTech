@@ -29,7 +29,8 @@
                   </li>
                   <li><a><i class="fa fa-edit"></i> Purchase <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="../customer/newPurchase.php">New Purchase</a></li>
+                      <li><a href="../customer/products.php">New Purchase</a></li>
+                      <li><a href="../customer/cart.php">My Cart</a></li>
                       <li><a href="../customer/cancelPurchase.php">Cancel Purchase</a></li>
                     </ul>
                   </li>

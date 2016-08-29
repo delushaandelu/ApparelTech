@@ -111,15 +111,15 @@ img
 	width:120px;
 	height:50px;
 	color:#FFFFFF;
-	background-color:#000066;
+	background-color:#df8a13;
 }
 
 #button:hover{
-    background-color: #0a0a0a;
+    background-color: #471b1b;
 }
 
 button:active {
-    background-color: #000000;
+    background-color: #471b1b;
     transform: translateY(4px);
 }
 
@@ -203,17 +203,19 @@ button:active {
     width:120px;
     height:50px;
     color:#FFFFFF;
-    background-color:#006;
+    background-color:#df8a13;
 }
 
 #button1:hover{
-    background-color: #0a0a0a;
+    background-color: #471b1b;
 }
 
 button1:active {
-    background-color: #000000;
+    background-color: #471b1b;
     transform: translateY(4px);
 }
+
+
 
 /* Manage Stock2*/
 
@@ -310,4 +312,29 @@ td{
     font-style:italic;
     font-size:8px;
     color:#0000FF;
+}
+
+/* View Stock */
+
+#2{
+    margin-left: 80%;
+    margin-right: 5%;
+    padding:80px;
+}
+
+#button2{
+    border-radius:8px;
+    width:90px;
+    height:35px;
+    color:#FFFFFF;
+    background-color:#df8a13;
+}
+
+#button2:hover{
+    background-color: #471b1b;
+}
+
+button2:active {
+    background-color: #471b1b;
+    transform: translateY(4px);
 }
