@@ -7,7 +7,7 @@
         var $Telephone="";
         
         public function addSupplier($supplierID, $supplierName, $Email, $Address, $Telephone){
-            include ('database.php');
+            include ('database_connection.php');
             
             $supplierID = $supplierID;
             $supplierName = $supplierName;
@@ -19,13 +19,13 @@
             $sqlInsertTel = "INSERT INTO suppliercontact(supplier_id, contactNumber) VALUES ('$supplierID','$Telephone')";
 
 
-            if(!mysqli_query($conn, $sqlInsert)){
+            if(!mysqli_query($dbcon, $sqlInsert)){
                 die('Error occurs while inserting new record');
             }
-            elseif (!mysqli_query($conn, $sqlInsertTel)){
+            elseif (!mysqli_query($dbcon, $sqlInsertTel)){
                 die('Error occurs while inserting new record');
             }
-            mysqli_close($conn);
+            mysqli_close($dbcon);
         }
 
     }

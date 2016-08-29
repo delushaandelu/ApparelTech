@@ -127,76 +127,41 @@ button:active {
 
 /* Manage_Customer*/
 
-#top1
-{
-    height:500px;
-    margin-top:-50px;
-    margin-left: 5%;
-    margin-right: 5%;
-    color:#000;
-    padding:80px;
+#button0{
+    border-radius:8px;
+    width:40px;
+    height:40px;
+    color:#FFFFFF;
+    background-color:green;
 }
 
-#top-left1{
-    width:500px;
-    height:500px;
-    float:left;
+#button0:hover{
+    background-color: #471b1b;
 }
 
-#top-right1{
-    height:500px;
-    width:150px;
-    float:right;
+button0:active {
+    background-color: #471b1b;
+    transform: translateY(4px);
 }
 
-#mid1
-{
-    height:500px;
-    margin-top:10px;
-    margin-left: 5%;
-    margin-right: 5%;
-    color:#000;
+#button01{
+     border-radius:8px;
+     width:40px;
+     height:40px;
+     color:#FFFFFF;
+     background-color:red;
+ }
 
-    padding:80px;
-
+#button01:hover{
+    background-color: #471b1b;
 }
 
-#mid-left1{
-    width:500px;
-    height:500px;
-    float:left;
+button01:active {
+    background-color: #471b1b;
+    transform: translateY(4px);
 }
 
-#mid-right1{
-    height:500px;
-    width:150px;
 
-    float:right;
-}
-
-#bottom1
-{
-    height:500px;
-    margin-top:80px;
-    margin-left: 5%;
-    margin-right: 5%;
-    color:#000;
-
-    padding:80px;
-
-}
-
-#bottom-left1{
-    width:500px;
-    height:500px;
-    float:left;
-}
-
-#bottom-right1{
-    height:500px;
-    width:150px;
-    float:right;
-}
 
 #button1{
     border-radius:8px;

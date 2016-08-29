@@ -20,216 +20,61 @@
         <div class="col-lg-12">
             <h1 class="page-header">Manage Customer</h1>
         </div>
-        
     </div>
-    <div class="row">
-    <div id="content">
-		<div id="top1">
-        	<div id="top-left1">
-				<form method="post">
-					<table border="0">
-						<tr></tr>
-						<tr>
-							<td id="table-font" width="60%">
-								First Name
-							</td>
-							<td>
-								<input type="text" name="First Name" class="form-control">
-								<br><br>
-							</td>
-						</tr>
+    
+    <?php
+        include('database_connection.php');
 
-						<tr>
-							<td id="table-font" width="60%">
-								Last Name
-							</td>
-							<td>
-								<input type="text" name="Last Name" class="form-control">
-								<br><br>
-							</td>
-						</tr>
+    $sql = "SELECT customer_id, nic, fullname, designation, companyname, address, email, mobile, tele FROM customer";
+    $result = $dbcon->query($sql);
 
-						<tr>
-							<td id="table-font" width="60%">
-								NIC Number
-							</td>
-							<td>
-								<input type="text" name="NIC Number" class="form-control" required>
-								<br><br>
-							</td>
-						</tr>
+    if ($result->num_rows > 0) {
+        echo "<table class='table table-striped' style='border: solid 2px black;'>";
+        echo"<tr>
+                    <th style='border: solid 2px black;'>Customer ID </th>
+                    <th style='border: solid 2px black;'>NIC </th>
+                    <th style='border: solid 2px black;'>Full Name </th>
+                    <th style='border: solid 2px black;'>Designation </th>
+                    <th style='border: solid 2px black;'>Company Name </th>
+                    <th style='border: solid 2px black;'>Address </th>
+                    <th style='border: solid 2px black;'>e-mail </th>
+                    <th style='border: solid 2px black;'>Mobile </th>
+                    <th style='border: solid 2px black;'>Telephone </th>
+                    <th style='border: solid 2px black;'>Approve/reject </th>
+                </tr>";
 
-						<tr>
-							<td id="table-font" width="60%">
-								Company
-                                <br><br>
-							</td>
-							<td>
-								<input type="text" name="Company" class="form-control" required>
-								<br><br>
-							</td>
-						</tr>
-					</table>
-				</form>
-			</div>
-
-			<div id="top-right1">
-                <form>
-                    <tr>
-                        <label>Customer ID</label>
-                        <br><br>
-                        <td>
-                            <input type="" name="Search by id" placeholder="Attach Here!!" class="form-control" size="60%" required><br><br>
-                            <br><br>
+        while($row = $result->fetch_assoc()) {
+            echo "<tr>
+                        <td style='border: solid 2px black;'>" . $row["customer_id"]. "</td>
+                        <td style='border: solid 2px black;'>" . $row["nic"]. "</td>
+                        <td style='border: solid 2px black;'>" . $row["fullname"]. "</td>
+                        <td style='border: solid 2px black;'>" . $row["designation"]. "</td>
+                        <td style='border: solid 2px black;'>" . $row["companyname"]. "</td>
+                        <td style='border: solid 2px black;'>" . $row["address"]. "</td>
+                        <td style='border: solid 2px black;'>" . $row["email"]. "</td>
+                        <td style='border: solid 2px black;'>" . $row["mobile"]. "</td>
+                        <td style='border: solid 2px black;'>" . $row["tele"]. "</td>
+                        <td style='border: solid 2px black;'>
+                        <button type=\"submit\" id=\"button0\" class=\"btn btn-default\">&#10003</button><button type=\"submit\" id=\"button01\" class=\"btn btn-default\">&#9747</button>
                         </td>
-                    </tr>
-                    <button type="button" id="button1" class="btn btn-default btn-lg active">Approve</button>
-                    <br><br>
-                    <button type="button" id="button1" class="btn btn-default btn-lg active">Reject</button>
-                    <br><br>
-                </form>
-			</div>
-		</div>
+                    </tr>";
+        }
+        echo "</table>";
+    } else {
+        echo "0 results";
+    }
 
-		<div id="mid1">
-			<div id="mid-left1">
-                <form method="post">
-                    <table border="0">
-                        <tr></tr>
-                        <tr>
-                            <td id="table-font" width="60%">
-                                First Name
-                            </td>
-                            <td>
-                                <input type="text" name="First Name" class="form-control">
-                                <br><br>
-                            </td>
-                        </tr>
+    $dbcon->close();
 
-                        <tr>
-                            <td id="table-font" width="60%">
-                                Last Name
-                            </td>
-                            <td>
-                                <input type="text" name="Last Name" class="form-control">
-                                <br><br>
-                            </td>
-                        </tr>
 
-                        <tr>
-                            <td id="table-font" width="60%">
-                                NIC Number
-                            </td>
-                            <td>
-                                <input type="text" name="NIC Number" class="form-control">
-                                <br><br>
-                            </td>
-                        </tr>
 
-                        <tr>
-                            <td id="table-font" width="60%">
-                                Company
-                                <br><br>
-                            </td>
-                            <td>
-                                <input type="text" name="Company" class="form-control">
-                                <br><br>
-                            </td>
-                        </tr>
-                    </table>
-                </form>
-			</div>
-
-			<div id="mid-right1">
-                <form>
-                    <tr>
-                        <label>Customer ID</label>
-                        <br><br>
-                        <td>
-                            <input type="" name="Search by id" placeholder="Attach Here!!" class="form-control" size="60%"><br><br>
-                            <br><br>
-                        </td>
-                    </tr>
-                    <button type="button" id="button1" class="btn btn-default btn-lg active">Approve</button>
-                    <br><br>
-                    <button type="button" id="button1" class="btn btn-default btn-lg active">Reject</button>
-                    <br><br>
-                </form>
-			</div>
-		</div>
-
-		<div id="bottom1">
-			<div id="bottom-left1">
-                <form method="post">
-                    <table border="0">
-                        <tr></tr>
-                        <tr>
-                            <td id="table-font" width="60%">
-                                First Name
-                            </td>
-                            <td>
-                                <input type="text" name="First Name" class="form-control">
-                                <br><br>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td id="table-font" width="60%">
-                                Last Name
-                            </td>
-                            <td>
-                                <input type="text" name="Last Name" class="form-control">
-                                <br><br>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td id="table-font" width="60%">
-                                NIC Number
-                            </td>
-                            <td>
-                                <input type="text" name="NIC Number" class="form-control">
-                                <br><br>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td id="table-font" width="60%">
-                                Company
-                                <br><br>
-                            </td>
-                            <td>
-                                <input type="text" name="Company" class="form-control">
-                                <br><br>
-                            </td>
-                        </tr>
-                    </table>
-                </form>
-			</div>
-
-			<div id="bottom-right1">
-                <form>
-                    <tr>
-                        <label>Customer ID</label>
-                        <br><br>
-                        <td>
-                            <input type="" name="Search by id" placeholder="Attach Here!!" class="form-control" size="60%"><br><br>
-                            <br><br>
-                        </td>
-                    </tr>
-                    <button type="button" id="button1" class="btn btn-default btn-lg active">Approve</button>
-                    <br><br>
-                    <button type="button" id="button1" class="btn btn-default btn-lg active">Reject</button>
-                    <div data-role="popup" id="myPopup1">
-                    <br><br>
-                </form>
-			</div>
-		</div>
-	</div>
+    ?>
+    
+    
+    
 			<p>&nbsp;</p>
 			<p>&nbsp;</p>
-    </div>
-    </div>      
+
 </div>
 
 <script src="vendor/jquery/jquery.min.js"></script>
@@ -240,24 +85,3 @@
 </body>
 
 </html>
-
-<?php
-    include ('Item.php');
-    if(isset($_POST['btnManageStockInsert'])){
-
-        $itemname = $_POST['itemname'];
-        $brand = $_POST['brand'];
-        $sellingprice = $_POST['sellingprice'];
-        $cost = $_POST['cost'];
-        $categoryname = $_POST['categoryname'];
-
-        $quantity = $_POST['quantity'];
-        $myItem = new Item();
-        $myItem -> addItem($itemname, $brand,$sellingprice,$cost, $categoryname,$quantity );
-    }
-
-    if(isset($_POST['btnManageStockDelete'])){
-        $itemname = $_POST['itemname'];
-        $myItem = new Item();
-        $myItem -> deleteItem($itemname);
-}
