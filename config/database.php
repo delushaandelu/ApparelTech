@@ -1,7 +1,7 @@
 <?php
-$servername = "ap-cdbr-azure-southeast-b.cloudapp.net";
-$username = "b477c41467c518";
-$password = "955eff62";
+$servername = "localhost";
+$username = "root";
+$password = "";
 $database = "apperaltech";
 
 //$servername = "localhost";
@@ -10,7 +10,7 @@ $database = "apperaltech";
 //$database = "appareltech";
 
 // Create connection
-$conn = new mysqli($servername, $username, $password, $database) or die ("ERROR: Database");
+$con = new mysqli($servername, $username, $password, $database) or die ("ERROR: Database");
 /**
 // Check connection
 if ($conn->connect_error) {
