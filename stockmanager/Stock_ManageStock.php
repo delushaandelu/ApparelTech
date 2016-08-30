@@ -133,7 +133,7 @@
                         
                       	<div id = "below_panel_add_item">
                             	<br><br>
-                                 <input type="submit" id="myButton" name="btnManageStockInsert" value="Add"  /><br><br>
+                                 <input type="submit" class="myButton" id="btnManageStockInsert"name="btnManageStockInsert" value="Add"  /><br><br>
                          </div>       
                             </form>
                             

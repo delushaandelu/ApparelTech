@@ -5,6 +5,9 @@
         <link rel="stylesheet" type="text/css" id="theme" href="css/main.css"/>  
         <link rel="stylesheet" type="text/css"  href="manage_stock_design.css"/>
         
+		<script src="jquery.js" type="text/javascript"></script>
+		<script src="js-script.js" type="text/javascript"></script>
+        
          <script>
     
   // see http://www.quirksmode.org/dom/tests/selects.html
@@ -122,11 +125,14 @@
     					</select>
                         <br><br>
                         
-       					 <input type="submit" id="myButton" name="btnManageStockSearch" value="Search"  /><br><br>
+       					 <input type="submit" class="myButton" id="btnManageStockSearch" name="btnManageStockSearch" value="Search"  /><br><br>
                     </form>
                 </div>
                
-                <div id="below_panel_search_item">   
+                <div id="below_panel_search_item">  
+                
+ 
+	
                         <?php
                         	include ('Item.php');
                             if(isset($_POST['btnManageStockSearch'])){
@@ -139,7 +145,7 @@
                                     }
                             
                         ?>
-                        
+						
             
                  
                
