@@ -52,7 +52,7 @@ if(isset($_POST['signin'])){
     $username = $_POST['username'];
     $password = $_POST['password'];
    
-    $result = mysqli_query($con, 'select * from customer where username="'.$username.'" and password="'.$password.'"');
+    $result = mysqli_query($conn, 'select * from customer where username="'.$username.'" and password="'.$password.'"');
     if (mysqli_num_rows($result)==1){
         $_SESSION['username'] = $username;
         header('location: ../customer/home.php');

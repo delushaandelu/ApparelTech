@@ -1,158 +1,184 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>ApperalTech</title>
-    <link href="vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link href="build/css/custom.min.css" rel="stylesheet">
-  </head>
-
-  <body class="nav-md">
+<?php session_start();
+class Cart {
+    protected $cart_contents = array();
     
-  <?php
-    include("../config/customermenu.php");
-  ?>
-
-<!-- page content -->
-<div class="right_col" role="main">
-<h1>My Cart</h1>  
-<?php
-// connect to database
-include 'config/database.php';
- 
-// page headers
-$page_title="Cart";
- 
-// parameters
-$action = isset($_GET['action']) ? $_GET['action'] : "";
-$name = isset($_GET['name']) ? $_GET['name'] : "";
-$brand = isset($_GET['brand']) ? $_GET['brand'] : "";
-$catagery = isset($_GET['catagery']) ? $_GET['catagery'] : "";
- 
-// display a message
-if($action=='removed'){
-    echo "<div class='alert alert-info'>";
-        echo "<strong>{$name}</strong> was removed from your cart!";
-    echo "</div>";
-}
- 
-else if($action=='quantity_updated'){
-    echo "<div class='alert alert-info'>";
-        echo "<strong>{$name}</strong> quantity was updated!";
-    echo "</div>";
-}
- 
-else if($action=='failed'){
-        echo "<div class='alert alert-info'>";
-        echo "<strong>{$name}</strong> quantity failed to updated!";
-    echo "</div>";
-}
- 
-else if($action=='invalid_value'){
-        echo "<div class='alert alert-info'>";
-        echo "<strong>{$name}</strong> quantity is invalid!";
-    echo "</div>";
-}
- 
-// select products in the cart
-$query="SELECT p.id, p.name,p.brand, p.price, p.catagery, ci.quantity, ci.quantity * p.price AS subtotal  
-            FROM cart_items ci  
-                LEFT JOIN products p 
-                    ON ci.product_id = p.id"; 
- 
-$stmt=$con->prepare( $query );
-$stmt->execute();
- 
-// count number of rows returned
-$num=$stmt->rowCount();
- 
-if($num>0){
-     
-    //start table
-    echo "<table class='table table-hover table-responsive table-bordered'>";
-     
-    // our table heading
-    echo "<tr>";
-        echo "<th class='textAlignLeft'>Product Name</th>";
-        echo "<th class='textAlignLeft'>Brand</th>";
-        echo "<th class='textAlignLeft'>Catagery</th>";
-        echo "<th>Price (LKR)</th>";
-            echo "<th style='width:15em;'>Quantity</th>";
-            echo "<th>Sub Total</th>";
-            echo "<th>Action</th>";
-    echo "</tr>";
-         
-    $total=0;
-     
-    while( $row = $stmt->fetch(PDO::FETCH_ASSOC)){
-        extract($row);
-       
-        echo "<tr>";
-            echo "<td>";
-                        echo "<div class='product-id' style='display:none;'>{$id}</div>";
-                        echo "<div class='product-name'>{$name}</div>";
-            echo "</td>";
-            echo "<td>";
-                        echo "<div class='product-name'>{$brand}</div>";
-            echo "</td>";
-            echo "<td>";
-                        echo "<div class='product-name'>{$catagery}</div>";
-            echo "</td>";
-            echo "<td>Rs. " . number_format($price, 2, '.', ',') . "</td>";
-            echo "<td>";
-                        echo "<div class='input-group'>";
-                            echo "<input type='number' name='quantity' value='{$quantity}' class='form-control'>";
-                             
-                            echo "<span class='input-group-btn'>";
-                                echo "<button class='btn btn-default update-quantity' type='button'>Update</button>";
-                            echo "</span>";
-                             
-                        echo "</div>";
-                echo "</td>";
-                echo "<td>Rs. " . number_format($subtotal, 2, '.', ',') . "</td>";
-                echo "<td>";
-            echo "<a href='remove_from_cart.php?id={$id}&name={$name}' class='btn btn-danger'>";
-                        echo "<span class='glyphicon glyphicon-remove'></span> Remove from cart";
-            echo "</a>";
-            echo "</td>";
-        echo "</tr>";
-             
-        $total += $subtotal;
+    public function __construct(){
+        // get the shopping cart array from the session
+        $this->cart_contents = $_SESSION['cart_contents'];
+		if ($this->cart_contents === NULL){
+			// set some base values
+			$this->cart_contents = array('cart_total' => 0, 'total_items' => 0);
+		}
     }
-     
-    echo "<tr>";
-    echo "<td><b>Total</b></td>";
-    echo "<td></td>";
-    echo "<td></td>";
-    echo "<td></td>";
-    echo "<td></td>";
-    echo "<td>Rs. " . number_format($total, 2, '.', ',') . "</td>";
-    echo "<td>";
-    echo "<a href='#' class='btn btn-success'>";
-            echo "<span class='glyphicon glyphicon-shopping-cart'></span> Checkout";
-            echo "</a>";
-    echo "</tr>";
-    echo "</td>";
-         
-    echo "</table>";
-}else{
-    echo "<div class='alert alert-danger'>";
-    echo "<strong>No products found</strong> in your cart!";
-    echo "</div>";
-}
- 
- 
-include 'layout_foot.php';
-?>
-</div>
-</body>
+    
+    /**
+	 * Cart Contents: Returns the entire cart array
+	 * @param	bool
+	 * @return	array
+	 */
+	public function contents(){
+		// rearrange the newest first
+		$cart = array_reverse($this->cart_contents);
 
-<!-- jQuery -->
-<script src="vendors/jquery/dist/jquery.min.js"></script>
-<!-- Bootstrap -->
-<script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
-<!-- FastClick -->
-  <!-- Custom Theme Scripts -->
-<script src="build/js/custom.min.js"></script>
-</html>
+		// remove these so they don't create a problem when showing the cart table
+		unset($cart['total_items']);
+		unset($cart['cart_total']);
+
+		return $cart;
+	}
+    
+    /**
+	 * Get cart item: Returns a specific cart item details
+	 * @param	string	$row_id
+	 * @return	array
+	 */
+	public function get_item($row_id){
+		return (in_array($row_id, array('total_items', 'cart_total'), TRUE) OR ! isset($this->cart_contents[$row_id]))
+			? FALSE
+			: $this->cart_contents[$row_id];
+	}
+    
+    /**
+	 * Total Items: Returns the total item count
+	 * @return	int
+	 */
+	public function total_items(){
+		return $this->cart_contents['total_items'];
+	}
+    
+    /**
+	 * Cart Total: Returns the total price
+	 * @return	int
+	 */
+	public function total(){
+		return $this->cart_contents['cart_total'];
+	}
+    
+    /**
+	 * Insert items into the cart and save it to the session
+	 * @param	array
+	 * @return	bool
+	 */
+	public function insert($item = array()){
+		if(!is_array($item) OR count($item) === 0){
+			return FALSE;
+		}else{
+            if(!isset($item['id'], $item['name'], $item['price'], $item['qty'])){
+                return FALSE;
+            }else{
+                /*
+                 * Insert Item
+                 */
+                // prep the quantity
+                $item['qty'] = (float) $item['qty'];
+                if($item['qty'] == 0){
+                    return FALSE;
+                }
+                // prep the price
+                $item['price'] = (float) $item['price'];
+                // create a unique identifier for the item being inserted into the cart
+                $rowid = md5($item['id']);
+                // get quantity if it's already there and add it on
+                $old_qty = isset($this->cart_contents[$rowid]['qty']) ? (int) $this->cart_contents[$rowid]['qty'] : 0;
+                // re-create the entry with unique identifier and updated quantity
+                $item['rowid'] = $rowid;
+                $item['qty'] += $old_qty;
+                $this->cart_contents[$rowid] = $item;
+                
+                // save Cart Item
+                if($this->save_cart()){
+                    return isset($rowid) ? $rowid : TRUE;
+                }else{
+                    return FALSE;
+                }
+            }
+        }
+	}
+    
+    /**
+	 * Update the cart
+	 * @param	array
+	 * @return	bool
+	 */
+	public function update($item = array()){
+		if (!is_array($item) OR count($item) === 0){
+			return FALSE;
+		}else{
+			if (!isset($item['rowid'], $this->cart_contents[$item['rowid']])){
+				return FALSE;
+			}else{
+				// prep the quantity
+				if(isset($item['qty'])){
+					$item['qty'] = (float) $item['qty'];
+					// remove the item from the cart, if quantity is zero
+					if ($item['qty'] == 0){
+						unset($this->cart_contents[$item['rowid']]);
+						return TRUE;
+					}
+				}
+				
+				// find updatable keys
+				$keys = array_intersect(array_keys($this->cart_contents[$item['rowid']]), array_keys($item));
+				// prep the price
+				if(isset($item['price'])){
+					$item['price'] = (float) $item['price'];
+				}
+				// product id & name shouldn't be changed
+				foreach(array_diff($keys, array('id', 'name')) as $key){
+					$this->cart_contents[$item['rowid']][$key] = $item[$key];
+				}
+				// save cart data
+				$this->save_cart();
+				return TRUE;
+			}
+		}
+	}
+    
+    /**
+	 * Save the cart array to the session
+	 * @return	bool
+	 */
+	protected function save_cart(){
+		$this->cart_contents['total_items'] = $this->cart_contents['cart_total'] = 0;
+		foreach ($this->cart_contents as $key => $val){
+			// make sure the array contains the proper indexes
+			if(!is_array($val) OR !isset($val['price'], $val['qty'])){
+				continue;
+			}
+	 
+			$this->cart_contents['cart_total'] += ($val['price'] * $val['qty']);
+			$this->cart_contents['total_items'] += $val['qty'];
+			$this->cart_contents[$key]['subtotal'] = ($this->cart_contents[$key]['price'] * $this->cart_contents[$key]['qty']);
+		}
+		
+		// if cart empty, delete it from the session
+		if(count($this->cart_contents) <= 2){
+			unset($_SESSION['cart_contents']);
+			return FALSE;
+		}else{
+			$_SESSION['cart_contents'] = $this->cart_contents;
+			return TRUE;
+		}
+    }
+    
+    /**
+	 * Remove Item: Removes an item from the cart
+	 * @param	int
+	 * @return	bool
+	 */
+	 public function remove($row_id){
+		// unset & save
+		unset($this->cart_contents[$row_id]);
+		$this->save_cart();
+		return TRUE;
+	 }
+     
+    /**
+	 * Destroy the cart: Empties the cart and destroy the session
+	 * @return	void
+	 */
+	public function destroy(){
+		$this->cart_contents = array('cart_total' => 0, 'total_items' => 0);
+		unset($_SESSION['cart_contents']);
+	}
+}

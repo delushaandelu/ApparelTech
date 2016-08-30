@@ -1,3 +1,8 @@
+<?php
+if(!isset($_REQUEST['id'])){
+    header("Location: products.php");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -7,6 +12,9 @@
     <link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="build/css/custom.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/purchaseReport.css" type="text/css">
+     <style>
+    p{color: #34a853;font-size: 18px;}
+    </style>
   </head>
 
   <body class="nav-md">
@@ -17,8 +25,10 @@
 
 <!-- page content -->
 <div class="right_col" role="main">
-    <h1>Your Purchase Report!</h1>
-
+    <h1>Successfully Ordered!</h1>
+<div class="container">
+    <p>Your order has submitted successfully. Order ID is #<?php echo $_GET['id']; ?></p>
+</div>
 </div>
 </body>
 
