@@ -18,9 +18,33 @@
 <!-- page content -->
 <div class="right_col" role="main">
     <h1>Cancel Your Purchase Here!</h1>
+<?php
+	$res = mysqli_query($con, "select * from orders") or die (mysql_error());
+    include("../dbConfig.php");
+?>
 
+<table border="1">
+	<tr> 
+		<th>GAL_NUM</th>
+		<th>GAL_OWNER</th>
+		<th>GAL_AREACODE</th>
+		<th>GAL_PHONE</th>
+		<th>GAL_RATE</th>
+	</tr>
 
-    
+	
+	<?php
+	while ($result=mysqli_fetch_assoc($res)){
+		echo"<tr>";
+		echo"<td>".$result["GAL_NUM"]."</td>";
+		echo"<td>".$result["GAL_OWNER"]."</td>";
+		echo"<td>".$result["GAL_AREACODE"]."</td>";
+		echo"<td>".$result["GAL_PHONE"]."</td>";
+		echo"<td>".$result["GAL_RATE"]."</td>";
+	}
+	?>
+	
+</table>    
 </div>
 </body>
 
