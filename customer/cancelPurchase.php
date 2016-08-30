@@ -18,32 +18,46 @@
 <!-- page content -->
 <div class="right_col" role="main">
     <h1>Cancel Your Purchase Here!</h1>
-<?php
-	$res = mysqli_query($con, "select * from orders") or die (mysql_error());
-    include("../dbConfig.php");
-?>
-
-<table border="1">
+    
+<table border="1" class="table table-hover">
 	<tr> 
-		<th>GAL_NUM</th>
-		<th>GAL_OWNER</th>
-		<th>GAL_AREACODE</th>
-		<th>GAL_PHONE</th>
-		<th>GAL_RATE</th>
+		<th><h2 align="center">Order ID</h2></th>
+		<th><h2 align="center">Total Price</h2></th>
+		<th><h2 align="center">Date & Time</h2></th>
+		<th><h2 align="center">Action</h2></th>
 	</tr>
 
 	
-	<?php
-	while ($result=mysqli_fetch_assoc($res)){
-		echo"<tr>";
-		echo"<td>".$result["GAL_NUM"]."</td>";
-		echo"<td>".$result["GAL_OWNER"]."</td>";
-		echo"<td>".$result["GAL_AREACODE"]."</td>";
-		echo"<td>".$result["GAL_PHONE"]."</td>";
-		echo"<td>".$result["GAL_RATE"]."</td>";
-	}
-	?>
-	
+	 <?php  
+            include("dbConfig.php");
+            $sql = "select * from orders";
+            $result = mysqli_query($db,$sql);        
+            while($row = mysqli_fetch_array($result)) {
+    
+    ?>
+        <tr class="data">
+                    <td><h5 align="center"><?php echo $row['id'] ?></h5></td>
+                    <td><h5 align="right"><?php echo $row['total_price'] ?></h5></td>
+                    <td><h5 align="center"><?php echo $row['created'] ?></h5></td>
+                    <td class="bt"><center><input type="button" class="btn btn-danger" value="Cance This Order" onclick="location.href='cancelPurchase.php?id=<?php echo $row['id'] ?>'"></center></td>
+                </tr>
+                
+                <?php
+            } ?>
+    
+    <?php
+    if(isset($_GET['id'])){
+        $id = $_GET['id'];
+        $sql= "delete * from orders where id = '$id'";
+        mysqli_query($db,$sql);
+
+        echo'<script language ="javascript">';
+        echo'alert("Job deleted succesfully")';
+        echo'</script>'; 
+
+    }
+    ?>
+    
 </table>    
 </div>
 </body>
