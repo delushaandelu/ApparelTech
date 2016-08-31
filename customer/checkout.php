@@ -64,8 +64,8 @@ $custRow = $query->fetch_assoc();
             foreach($cartItems as $item){
         ?>
         <tr>
-            <td><?php echo $item["name"]; ?></td>
-            <td><?php echo 'Rs. '.$item["price"]; ?></td>
+            <td><?php echo $item["itemName"]; ?></td>
+            <td><?php echo 'Rs. '.$item["sellingPrice"]; ?></td>
             <td><?php echo $item["qty"]; ?></td>
             <td><?php echo 'Rs. '.$item["subtotal"]; ?></td>
         </tr>

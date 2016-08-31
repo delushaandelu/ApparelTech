@@ -33,22 +33,22 @@ include 'dbConfig.php';
     <div id="products" class="row list-group">
         <?php
         //get rows query
-        $query = $db->query("SELECT * FROM products ORDER BY id DESC LIMIT 10");
+        $query = $db->query("SELECT * FROM item");
         if($query->num_rows > 0){ 
             while($row = $query->fetch_assoc()){
         ?>
         <div class="item col-lg-4">
             <div class="thumbnail">
                 <div class="caption">
-                    <h4 class="list-group-item-heading"><?php echo $row["name"]; ?></h4>
+                    <h4 class="list-group-item-heading"><?php echo $row["itemName"]; ?></h4>
                     <p class="list-group-item-text"><?php echo "<b>Brand : </b>". $row["brand"]; ?></p>
                     <p class="list-group-item-text"><?php echo "<b>Catagery : </b>". $row["catagery"]; ?></p>
                     <div class="row">
                         <div class="col-md-6">
-                            <p class="lead"><?php echo 'Rs.'.$row["price"]; ?></p>
+                            <p class="lead"><?php echo 'Rs.'.$row["sellingPrice"]; ?></p>
                         </div>
                         <div class="col-md-6">
-                            <a class="btn btn-success" href="cartAction.php?action=addToCart&id=<?php echo $row["id"]; ?>">Add to cart</a>
+                            <a class="btn btn-success" href="cartAction.php?action=addToCart&item_id=<?php echo $row["item_id"]; ?>">Add to cart</a>
                         </div>
                     </div>
                 </div>
