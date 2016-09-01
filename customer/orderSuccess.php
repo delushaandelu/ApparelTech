@@ -1,4 +1,5 @@
 <?php
+session_start();
 if(!isset($_REQUEST['id'])){
     header("Location: products.php");
 }
@@ -25,10 +26,10 @@ if(!isset($_REQUEST['id'])){
 
 <!-- page content -->
 <div class="right_col" role="main">
-    <h1>Cuccessfully Ordered!</h1>
+    <h1>Successfully Ordered!</h1>
 <div class="container">
-    <h1>Order Status</h1>
-    <p>Your order has submitted successfully. Order ID is #<?php echo $_GET['id']; ?></p>
+    </br></br></br></br></br>
+    <h3 align="center" class="bg-primary">Your order has submitted successfully. Order ID is #<?php echo $_GET['id']; ?></h3>
 </div>
 </div>
 </body>

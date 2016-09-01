@@ -51,10 +51,19 @@ if(isset($_POST['signin'])){
     require ('../config/database.php');
     $username = $_POST['username'];
     $password = $_POST['password'];
+    $_SESSION['username'] = $username;
+    
+    $res1 =  mysqli_fetch_assoc(mysqli_query($conn,"select fullname from customer where username = '$username' "));
+    $_SESSION['fname']= $res1['fullname'];
+    
+    $res2 =  mysqli_fetch_assoc(mysqli_query($conn,"select companyName from customer where username = '$username' "));
+    $_SESSION['company']= $res2['companyName'];
+    
+    $res3 =  mysqli_fetch_assoc(mysqli_query($conn,"select customer_id from customer where username = '$username' "));
+    $_SESSION['csid']= $res3['customer_id'];
    
     $result = mysqli_query($conn, 'select * from customer where username="'.$username.'" and password="'.$password.'"');
     if (mysqli_num_rows($result)==1){
-        $_SESSION['username'] = $username;
         header('location: ../customer/home.php');
     }else
         echo "<script>";
