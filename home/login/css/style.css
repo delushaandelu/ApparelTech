@@ -76,4 +76,34 @@ input[type="submit"]:hover{
 	background: #FFC600;
 	border:1px solid #FFC600;
 }
+@media (max-width:1024px){
+.login-form  {
+		margin:8% auto 0;
+		width:45%;
+	}
+}
+@media (max-width:768px){
+	.login-form  {
+		margin:12% auto 0;
+		width:57%;
+	}
+}
+@media (max-width:640px){                                  
+	.login-form  {
+		margin:13% auto 0;
+		width:70%;
+	}
+}
+@media (max-width:480px){                                  
+	.login-form  {
+		margin:20% auto 0;
+		width:90%;
+	}
+}
+@media (max-width:320px){                                  
+	.login-form  {
+		margin:20% auto 0;
+		width:100%;
+	}
 
+}
