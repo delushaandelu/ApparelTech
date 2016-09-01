@@ -19,7 +19,7 @@
 <div class="right_col" role="main">
     <h1>Cancel Your Purchase Here!</h1>
     
-<table border="1" class="table table-hover">
+<table class="table table-striped">
 	<tr> 
 		<th><h2 align="center">Order ID</h2></th>
 		<th><h2 align="center">Total Price</h2></th>
@@ -37,9 +37,9 @@
     ?>
         <tr class="data">
                     <td><h5 align="center"><?php echo $row['id'] ?></h5></td>
-                    <td><h5 align="right"><?php echo $row['total_price'] ?></h5></td>
+                    <td><h5 align="center"><?php echo $row['total_price'] ?></h5></td>
                     <td><h5 align="center"><?php echo $row['created'] ?></h5></td>
-                    <td class="bt"><center><input type="button" class="btn btn-danger" value="Cance This Order" onclick="location.href='cancelPurchase.php?id=<?php echo $row['id'] ?>'"></center></td>
+            <td class="bt"><center><button class="btn btn-danger" value="Cance This Order" onclick="location.href='cancelPurchase.php?id=<?php echo $row['id'] ?>'"><i class="glyphicon glyphicon-trash"></i> Cancel</button></center></td>
                 </tr>
                 
                 <?php
