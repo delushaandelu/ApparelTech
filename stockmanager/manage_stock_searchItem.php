@@ -88,9 +88,9 @@
         
         	<ul class="nav nav-justified" >
     			
-    			<li id ="nav_tab_item_effect"><a href="#">Add Item</a></li>
-   	 			<li id ="nav_tab_item_effect"><a href="#">Search Item</a></li>
-    			<li id ="nav_tab_item_effect"><a href="#">Delete Item</a></li>
+                <li id ="nav_tab_item_effect"><a href="Stock_ManageStock.php">Add Item</a></li>
+                <li id ="nav_tab_item_effect"><a href="manage_stock_searchItem.php">Search Item</a></li>
+                <li id ="nav_tab_item_effect"><a href="manage_stock_deleteItem.php">Delete Item</a></li>
                 <li id ="nav_tab_item_effect"><a href="#">Update Item</a></li>
   			</ul>
             <br><br>

@@ -121,6 +121,26 @@
 
            });
        </script>
+       <script type="text/javascript">
+           function check(){
+                if(document.form.categoryname.value == "Select Category Name"){
+                    alert("Please select a Category Name");
+                    document.form.categoryname.focus();
+                    return false;
+                }
+                 if(document.form.itemname.value == ""){
+                    alert("Please select a Item Name");
+                    document.form.itemname.focus();
+                    return false;
+                }
+                if(document.form.brandname.value == ""){
+                    alert("Please select a Brand Name");
+                    document.form.brandname.focus();
+                    return false;
+                }
+           }
+
+       </script>
 	
                   
     </head>
@@ -144,7 +164,7 @@
   			</ul>
             <br><br>
            
-        <form method="post">    
+        <form method="post" name="form" onSubmit="return check();">    
             <div class="upper_panel_delete_item">
             
                 <div class="col-md-4">
@@ -173,64 +193,73 @@
                 
         </form>
         
-        <div class = "lower_panel_delete_item">
+        <div class = "below_panel_delete_item">
+           
 
-        <?php
-            include('database_connection.php');
+            <?php
+                include('database_connection.php');
 
-               
-            if(isset($_POST['btnManageStockSearch2'])){
-                
-                $categoryname = $_POST['categoryname'];
-                $itemname = $_POST['itemname'];
-                $brandname = $_POST['brandname'];
-                $sql = "SELECT * FROM item WHERE catagery = '$categoryname' AND itemName = '$itemname' AND brand = '$brandname'";
-                if($result = mysqli_query($dbcon, $sql)){
-                if(mysqli_num_rows($result) > 0){
-                
-                    echo "<table border = '0'>";
-                        echo "<tr>";
-                            echo "<th class>Item ID</th>"; echo"<td width = 10%></td>";
-                            echo "<th>Item Name</th>";echo"<td width = 5%></td>";
-                            echo "<th>Category</th>";echo"<td width=5%></td>";
-                            echo "<th>Brand</th>";echo"<td width=5%></td>";
-                            echo "<th>Buying Price</th>";echo"<td width = 5%></td>";
-                            echo "<th>Selling Price</th>";echo"<td width=5%></td>";
-                            echo "<th>Quantity</th>";
-                            echo "<th>Delete</th>";
-                        echo "</tr>";
-
-                    while($row = mysqli_fetch_array($result)){
-                        echo "<tr>";
-                            echo "<td>" . $row['item_id'] . "</td>"; echo"<td ></td>";
-                            echo "<td>" . $row['itemName'] . "</td>";echo"<td></td>";
-                            echo "<td>" . $row['catagery'] . "</td>";echo"<td></td>";
-                            echo "<td>" . $row['brand'] . "</td>";echo"<td></td>";
-                            echo "<td>" . $row['buyingPrice'] . "</td>";echo"<td></td>";
-                            echo "<td>" . $row['sellingPrice'] . "</td>";echo"<td></td>";
-                            echo "<td>" . $row['stockQty'] . "</td>";
-                            echo "<td>"?><form method = "post"><input type="checkbox" name="deleteitem[]" value=<?php echo $row['item_id']; ?>> </form>
-
-                    <?php echo "</td>";
-                        echo "</tr>";
+                   
+                if(isset($_POST['btnManageStockSearch2'])){
+                    
+                    $categoryname = $_POST['categoryname'];
+                    $itemname = $_POST['itemname'];
+                    $brandname = $_POST['brandname'];
+                    if($brandname == "All"){
+                         $sql = "SELECT * FROM item WHERE catagery = '$categoryname' AND itemName = '$itemname'";
                     }
-                    echo "</table>";?>
-                    <input type="submit" class="myButton" id="btnManageStockDelete" name="btnManageStockDelete" value="Delete"  />
+                    else{
+                         $sql = "SELECT * FROM item WHERE catagery = '$categoryname' AND itemName = '$itemname' AND brand = '$brandname'";
+                    }
+                   
+                    if($result = mysqli_query($dbcon, $sql)){
+                    if(mysqli_num_rows($result) > 0){
+                    
+                        echo "<table border = '0'>";
+                            echo "<tr bgcolor='#C0C0C0' width = '10px' >";
+                            
+                                echo "<th>Item ID</th>"; echo"<td width = 10%></td>";
+                                echo "<th >Item Name</th>";echo"<td width = 2%></td>";
+                                echo "<th>Category</th>";echo"<td width=2%></td>";
+                                echo "<th>Brand</th>";echo"<td width=2%></td>";
+                                echo "<th>Buying Price</th>";echo"<td width = 2%></td>";
+                                echo "<th>Selling Price</th>";echo"<td width=2%></td>";
+                                echo "<th>Quantity</th>";echo"<td width=2%></td>";
+                                echo "<th>Delete</th>";
+                            echo "</tr>";
+                            
 
-                    <?php
-                    // Close result set
-                    mysqli_free_result($result);
-                } else{
-                    echo "No records matching your query were found.";
+                        while($row = mysqli_fetch_array($result)){
+                            echo "<tr>";
+                                echo "<td>" . $row['item_id'] . "</td>"; echo"<td ></td>";
+                                echo "<td>" . $row['itemName'] . "</td>";echo"<td></td>";
+                                echo "<td>" . $row['catagery'] . "</td>";echo"<td></td>";
+                                echo "<td>" . $row['brand'] . "</td>";echo"<td></td>";
+                                echo "<td>" . $row['buyingPrice'] . "</td>";echo"<td></td>";
+                                echo "<td>" . $row['sellingPrice'] . "</td>";echo"<td></td>";
+                                echo "<td>" . $row['stockQty'] . "</td>";echo"<td></td>";
+                                echo "<td>"?><form method = "post"><input type="checkbox" name="deleteitem[]" value=<?php echo $row['item_id']; ?>> </form>
+
+                        <?php echo "</td>";
+                            echo "</tr>";
+                        }
+                        echo "</table>";?>
+                        <input type="submit" class="myButton" id="btnManageStockDelete" name="btnManageStockDelete" value="Delete"  />
+
+                        <?php
+                        // Close result set
+                        mysqli_free_result($result);
+                    } else{
+                        echo "No records matching your query were found.";
+                }
+            } else{
+                echo "ERROR: Could not able to execute $sql. " . mysqli_error($dbcon);
             }
-        } else{
-            echo "ERROR: Could not able to execute $sql. " . mysqli_error($dbcon);
-        }
-        mysqli_close($dbcon);
-            }
+            mysqli_close($dbcon);
+                }
 
-        ?>
-
+            ?>
+            
 
 
 
