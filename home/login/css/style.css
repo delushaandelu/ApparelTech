@@ -3,8 +3,6 @@ body{
 	background-color:grey;
  	background-size: cover;
  	position:relative;
- 	
-
 }
 .login-form {
 	background: url(../images/form.png) no-repeat 100% 0%;
@@ -24,7 +22,6 @@ body{
 	left:11%;
 	margin:34px 0;
 } 
- 
 form {
 	padding:32% 3em;
 }
@@ -35,7 +32,6 @@ form li{
 	width:100%;
 	background:yellow;
 }
-
 .icon{
 	background:url(../images/icons.png)  no-repeat 0px 0px;
 	height:40px;
@@ -44,7 +40,6 @@ form li{
 	float:left;
 	margin:5px -11px 0px 0px
 }
-
 .user{
 	background: url(../images/icons.png) no-repeat 7px 1px;
 	
@@ -52,7 +47,6 @@ form li{
 .lock{
 	background: url(../images/icons.png) no-repeat -31px 2px;
 }
-
 input[type="text"], input[type="password"] {
 	font-family:arial;
 	width:60%;
@@ -63,7 +57,6 @@ input[type="text"], input[type="password"] {
 	background: none;
 	border:none;
 }
-
 input[type="submit"]{
 	float:left;
 	font-size:18px;
