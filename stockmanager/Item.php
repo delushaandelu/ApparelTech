@@ -25,6 +25,7 @@
 		$quantity = $quantity;
 
 		$sqlinsert = "INSERT INTO item (itemName,buyingPrice,sellingPrice,brand,catagery,stockQty) VALUES ('$itemName','$cost','$sellingPrice','$brand','$categoryName','$quantity')";
+		
 
 		if(!mysqli_query($dbcon, $sqlinsert)){
 			die('Error inserting new record');
@@ -34,6 +35,7 @@
 
 	public function printSearch($sql){
 		include('database_connection.php');
+			
 			if($result = mysqli_query($dbcon, $sql)){
 				if(mysqli_num_rows($result) > 0){
 					echo "<table border = '0'>";
@@ -95,23 +97,6 @@
 					
                 		
 
-        public function addItemToItemNameDropDown($categoryName){
-
-        	include('database_connection.php');
-        	$sql = "SELECT * FROM item;
-        	$result = mysqli_query($dbcon, $sql);
-        	while ($row = mysqli_fetch_array($result)){
-        		$itemName = array(
-						'itemName' => row['itemName'];
-				);
-        		}
-				
-					
-
-				return $itemName;
-
-
-				
-}
+        }
 
 ?>

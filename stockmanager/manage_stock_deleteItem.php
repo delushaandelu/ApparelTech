@@ -4,45 +4,122 @@
         <title>Stock Manager</title>                   
         <link rel="stylesheet" type="text/css" id="theme" href="css/main.css"/>  
         <link rel="stylesheet" type="text/css"  href="manage_stock_design.css"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
        <script>
-            function getItemName($categoryName){
+           
+    $(document).ready(function(){
+        $('#categoryname').change(function(){
+            /*$('#categoryname').empty();
+            $('#categoryname').append("<option> Loading </option>");
+            $('#categoryname').append("<option value = '0'> Select Category Name </option>");*/
+
+            
+            var categoryName = $(this).val();
+
+            if(categoryName){
+
                 $.ajax({
-                    alert("ihit");
-                    type: "POST",
-                    url: 'ItemController.php',
-                    contentType: 'application/json; charset=utf-8',
-                    data: {functionName : addItemToItemNameDropDown, categoryName : $categoryName },
-                    success: function(data) {
-                       $('#itemname').empty();
-                       $('#itemname').append("<option value = '0'> Select Item Name </option>");
-                       $.each(data, function(i,item)){
-                            $('#itemname').append('<option value = '+ i +' > '+data[i].itemName +'</option>');
-                       });
-                },
+                    type : 'GET',
+                    url : '/GroupProject/stockmanager/dropdown.php?categoryname='+categoryName,
+                    //data : 'categoryname=' + categoryName,
+                    dataType:'json',
+                    success : function(data){
+                        $('#itemname').empty();
+                        $('#itemname').append("<option value = '0'> Select Item Name </option>");
+                        //$('#itemname').html(html);
+                        data.forEach(function(data){
+                            $('#itemname').append('<option>'+data+'</option>');
 
-
-
+                        });
+                        
+                        
+                    }
                 });
             }
+        });
+    });
+       </script>
 
+       <script type="text/javascript">
+           
+        $(document).ready(function(){
 
+        $('#itemname').change(function(){
 
+            
+            var itemName = $(this).val();
 
+            if(itemName){
 
-
-
-
-
-	   		$document.ready(function(){
-                $(#categoryname).change(function(){
-                    alert("ok");
-                    var $categoryName = $('#categoryname').val();
-                    getItemName($categoryName);
+                $.ajax({
+                    type : 'GET',
+                    url : '/GroupProject/stockmanager/dropdown2.php?itemname='+itemName,
+                    
+                    //data : 'categoryname=' + categoryName,
+                    dataType:'json',
+                    success : function(data){
+                         $('#brandname').empty();
+                        $('#brandname').append("<option value = '0'> Select Brand Name </option>");
+                        $('#brandname').append("<option value = '1'> All </option>");
+                        //$('#itemname').html(html);
+                        data.forEach(function(data){
+                            $('#brandname').append('<option>'+data+'</option>');
+                            
+                        });
+                        
+                        
+                    }
                 });
+            }
+        });
+    });
 
+       </script>
+       <script type="text/javascript">
+           $(document).ready(function(){
 
+            $('#btnManageStockDelete').click(function(){
+                 
+                if(confirm("Are you sure you want to delete this?")){
+                    var id = [];
+                    $(':checkbox:checked').each(function(i){
+                        id[i] = $(this).val();
+                    });
+                    if(id.length === 0){
+                        //$msg = "Please select atleast one check box";
+                        alert("Please select atleast one check box");
+                        //echo '<script type = "text/javascript">alert("'.$msg.'")
+                    }else{
+                        $.ajax({
+                            url : 'DeleteItem.php',
+                            method : 'POST',
+                            data : {id:id},
+                            success : function(){
+                               
+                                for(var j=0;j<id.length;j++){
+                                    $('#tr' + id[j] + '').css('background-color','#ccc');
+                                    $('#tr'+ id[j] + '').fadeOut('slow');
+                                    
+                                    window.location.replace("manage_stock_deleteItem.php");
+
+                                }
+                                 
+
+                            }
+
+                        });
+
+                    }
+                }
+                else{
+
+                }
             });
+
+           });
        </script>
 	
                   
@@ -60,27 +137,103 @@
         
         	<ul class="nav nav-justified" >
     			
-    			<li id ="nav_tab_item_effect"><a href="#">Add Item</a></li>
-   	 			<li id ="nav_tab_item_effect"><a href="#">Search Item</a></li>
-    			<li id ="nav_tab_item_effect"><a href="#">Delete Item</a></li>
+                <li id ="nav_tab_item_effect"><a href="Stock_ManageStock.php">Add Item</a></li>
+                <li id ="nav_tab_item_effect"><a href="manage_stock_searchItem.php">Search Item</a></li>
+                <li id ="nav_tab_item_effect"><a href="manage_stock_deleteItem.php">Delete Item</a></li>
                 <li id ="nav_tab_item_effect"><a href="#">Update Item</a></li>
   			</ul>
             <br><br>
            
-        <div class="upper_panel_delete_item">
-        	<select id = "categoryname">
-            	<option value="Sewing Machines">Sewing Machines</option>
-                <option value="Sewing Machine Spare Parts">Sewing Machine Spare Parts</option>
-                <option value="Tools">Tools</option>
-            </select>
-            <br><br>
+        <form method="post">    
+            <div class="upper_panel_delete_item">
             
-            <select id = "itemname"></select>
-            <br><br>
-            
-            <select id = "brandname"></select>
-        </div>
+                <div class="col-md-4">
+
+                    
+                    <select id = "categoryname" name="categoryname" class="dropdown_effects">
+                        <option > Select Category Name</option>
+                        <option value="Sewing Machines">Sewing Machines</option>
+                        <option value="Sewing Machine Spare Parts">Sewing Machine Spare Parts</option>
+                        <option value="Tools">Tools</option>
+                    </select>
+                </div>       
+                <div class="col-md-4">       
+                    <select id = "itemname" name="itemname" class="dropdown_effects"></select>
+
+                </div>
+                <div class="col-md-4">        
+                    <select id = "brandname" name="brandname" class="dropdown_effects"></select>
+
+                </div>
+            </div>   
+            <div class="middle_panel_delete_item">
+
+                <input type="submit" class="myButton" id="btnManageStockSearch2" name="btnManageStockSearch2" value="Search"  />
+            </div>
+                
+        </form>
+        
         <div class = "lower_panel_delete_item">
+
+        <?php
+            include('database_connection.php');
+
+               
+            if(isset($_POST['btnManageStockSearch2'])){
+                
+                $categoryname = $_POST['categoryname'];
+                $itemname = $_POST['itemname'];
+                $brandname = $_POST['brandname'];
+                $sql = "SELECT * FROM item WHERE catagery = '$categoryname' AND itemName = '$itemname' AND brand = '$brandname'";
+                if($result = mysqli_query($dbcon, $sql)){
+                if(mysqli_num_rows($result) > 0){
+                
+                    echo "<table border = '0'>";
+                        echo "<tr>";
+                            echo "<th class>Item ID</th>"; echo"<td width = 10%></td>";
+                            echo "<th>Item Name</th>";echo"<td width = 5%></td>";
+                            echo "<th>Category</th>";echo"<td width=5%></td>";
+                            echo "<th>Brand</th>";echo"<td width=5%></td>";
+                            echo "<th>Buying Price</th>";echo"<td width = 5%></td>";
+                            echo "<th>Selling Price</th>";echo"<td width=5%></td>";
+                            echo "<th>Quantity</th>";
+                            echo "<th>Delete</th>";
+                        echo "</tr>";
+
+                    while($row = mysqli_fetch_array($result)){
+                        echo "<tr>";
+                            echo "<td>" . $row['item_id'] . "</td>"; echo"<td ></td>";
+                            echo "<td>" . $row['itemName'] . "</td>";echo"<td></td>";
+                            echo "<td>" . $row['catagery'] . "</td>";echo"<td></td>";
+                            echo "<td>" . $row['brand'] . "</td>";echo"<td></td>";
+                            echo "<td>" . $row['buyingPrice'] . "</td>";echo"<td></td>";
+                            echo "<td>" . $row['sellingPrice'] . "</td>";echo"<td></td>";
+                            echo "<td>" . $row['stockQty'] . "</td>";
+                            echo "<td>"?><form method = "post"><input type="checkbox" name="deleteitem[]" value=<?php echo $row['item_id']; ?>> </form>
+
+                    <?php echo "</td>";
+                        echo "</tr>";
+                    }
+                    echo "</table>";?>
+                    <input type="submit" class="myButton" id="btnManageStockDelete" name="btnManageStockDelete" value="Delete"  />
+
+                    <?php
+                    // Close result set
+                    mysqli_free_result($result);
+                } else{
+                    echo "No records matching your query were found.";
+            }
+        } else{
+            echo "ERROR: Could not able to execute $sql. " . mysqli_error($dbcon);
+        }
+        mysqli_close($dbcon);
+            }
+
+        ?>
+
+
+
+
         </div>
 
     

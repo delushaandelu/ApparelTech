@@ -64,11 +64,32 @@
 	}
         
 .upper_panel_delete_item{
-	height: 200px;
+	height: 100px;
+	margin-left: 40px;
+	
 	
 	}
+
+.middle_panel_delete_item{
+	margin-left: 450px;
+	height: 100px;
+}
 
 .below_panel_delete_item{
 	height: 200px;
 	
 	}
+.dropdown_effects{
+	background-color: gray;
+	width: 230px;
+
+
+	
+
+}
+
+
+.dropdown_container{
+	width: 100px;
+
+}
