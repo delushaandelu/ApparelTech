@@ -1,33 +1,34 @@
 <?php
-    class supplier{
-        var $supplierID="";
-        var $supplierName="";
-        var $Email="";
-        var $Address="";
-        var $Telephone="";
-        
-        public function addSupplier($supplierID, $supplierName, $Email, $Address, $Telephone){
-            include ('database_connection.php');
-            
-            $supplierID = $supplierID;
-            $supplierName = $supplierName;
-            $Email = $Email;
-            $Address = $Address;
-            $Telephone = $Telephone;
-            
-            $sqlInsert = "INSERT INTO supplier (supplier_id, name, email, address) VALUES ('$supplierID', '$supplierName', '$Email', '$Address')";
-            $sqlInsertTel = "INSERT INTO suppliercontact(supplier_id, contactNumber) VALUES ('$supplierID','$Telephone')";
 
+    class Supplier{
 
-            if(!mysqli_query($dbcon, $sqlInsert)){
-                die('Error occurs while inserting new record');
+        var $supplier_id = '';
+        var $name = '';
+        var $address = '';
+        var $email = '';
+        var $tele = '';
+
+        public function addSupplier(){
+            require("database_connection.php");
+
+            $supplier_id = $_POST["supplier_id"];
+            $name = $_POST["name"];
+            $address = $_POST["address"];
+            $email = $_POST["email"];
+            $tele = $_POST["tele"];
+
+            $sqlinsert = "INSERT INTO supplier(supplier_id, name, email, address ) VALUES('" . $supplier_id . "','" . $name . "','" . $email . "','" . $address  . "')";
+            $result = mysqli_query($dbcon, $sqlinsert);
+            if (!$result) {
+                echo "error";
             }
-            elseif (!mysqli_query($dbcon, $sqlInsertTel)){
-                die('Error occurs while inserting new record');
+            $sqlinsert1 = "INSERT INTO suppliercontact(contactNumber) VALUES('" . $tele . "')";
+            $result1 = mysqli_query($dbcon, $sqlinsert1);
+            if (!$result1) {
+                echo "error";
             }
-            mysqli_close($dbcon);
         }
-
     }
-?>
 
+?>
+         

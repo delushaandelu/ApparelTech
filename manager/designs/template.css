@@ -132,15 +132,15 @@ button:active {
     width:40px;
     height:40px;
     color:#FFFFFF;
-    background-color:green;
+    background-color:dodgerblue;
 }
 
 #button0:hover{
-    background-color: #471b1b;
+    background-color: grey;
 }
 
 button0:active {
-    background-color: #471b1b;
+    background-color: grey;
     transform: translateY(4px);
 }
 
@@ -149,15 +149,15 @@ button0:active {
      width:40px;
      height:40px;
      color:#FFFFFF;
-     background-color:red;
+     background-color:black;
  }
 
 #button01:hover{
-    background-color: #471b1b;
+    background-color: grey;
 }
 
 button01:active {
-    background-color: #471b1b;
+    background-color: grey;
     transform: translateY(4px);
 }
 
@@ -168,15 +168,15 @@ button01:active {
     width:120px;
     height:50px;
     color:#FFFFFF;
-    background-color:#df8a13;
+    background-color:black;
 }
 
 #button1:hover{
-    background-color: #471b1b;
+    background-color: grey;
 }
 
 button1:active {
-    background-color: #471b1b;
+    background-color: grey;
     transform: translateY(4px);
 }
 
@@ -292,14 +292,14 @@ td{
     width:90px;
     height:35px;
     color:#FFFFFF;
-    background-color:#df8a13;
+    background-color:black;
 }
 
 #button2:hover{
-    background-color: #471b1b;
+    background-color: grey;
 }
 
 button2:active {
-    background-color: #471b1b;
+    background-color: grey;
     transform: translateY(4px);
 }

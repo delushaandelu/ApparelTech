@@ -40,19 +40,10 @@
     <div class="row">
         <?php
 
-        $servername = "ap-cdbr-azure-southeast-b.cloudapp.net";
-        $username = "b477c41467c518";
-        $password = "955eff62";
-        $dbname = "apperaltech";
-
-        $conn = new mysqli($servername, $username, $password, $dbname);
-
-        if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
-        }
+        include('database_connection.php');
 
         $sql = "SELECT * FROM item";
-        $result = $conn->query($sql);
+        $result = $dbcon->query($sql);
 
         if ($result->num_rows > 0) {
             echo "<table class='table'>";
@@ -82,12 +73,12 @@
             echo "0 results";
         }
 
-        $conn->close();
+        $dbcon->close();
 
         ?>
 
         <?php
-            include ('stock.php');
+           
 
                 if(isset($_POST['searchbutton'])){
                     $itemName = $_POST['itemName'];
