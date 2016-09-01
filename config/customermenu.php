@@ -1,4 +1,4 @@
-    <div class="container body">
+<div class="container body">
       <div class="main_container">
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
@@ -14,7 +14,9 @@
               </div>
               <div class="profile_info">
                 <span>Welcome,</span>
-                <h2>Delu #php</h2>
+                <h2><?php
+                    echo $_SESSION['fname'];;
+                    ?></h2>
               </div>
             </div>
             <!-- /menu profile quick info -->
@@ -29,7 +31,10 @@
                   </li>
                   <li><a><i class="fa fa-edit"></i> Purchase <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="../customer/products.php">New Purchase</a></li>
+                      <li><a href="../customer/products.php">All Products</a></li>
+                        <li><a href="../customer/products1.php">Sewing Machines</a></li>
+                        <li><a href="../customer/products2.php">Machine Spare Parts</a></li>
+                        <li><a href="../customer/products3.php">Tools</a></li>
                       <li><a href="../customer/viewCart.php">My Cart</a></li>
                       <li><a href="../customer/cancelPurchase.php">Cancel Purchase</a></li>
                     </ul>
@@ -107,13 +112,16 @@
               <ul class="nav navbar-nav navbar-right">
                 <li class="">
                   <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                    <img src="images/img.jpg" alt="">Delu# php
+                    <img src="images/img.jpg" alt="">
+                    <?php
+                    echo $_SESSION['fname'];
+                    ?>
                     <span class=" fa fa-angle-down"></span>
                   </a>
                   <ul class="dropdown-menu dropdown-usermenu pull-right">
                     <li><a href="#"> Profile</a></li>
                     <li><a href="#">Help</a></li>
-                    <li><a href="#"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                    <li><a href="../customer/signout.php"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
                   </ul>
                 </li>
             </nav>
