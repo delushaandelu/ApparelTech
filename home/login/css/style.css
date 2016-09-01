@@ -1,0 +1,86 @@
+
+body{
+	background-color:grey;
+ 	background-size: cover;
+ 	position:relative;
+ 	
+
+}
+.login-form {
+	background: url(../images/form.png) no-repeat 100% 0%;
+	background-size: 100%;
+	width:37%;
+	margin:10% auto 4% auto;
+ 	position: relative;
+}
+.login-form h1{
+	text-align:left;
+	color: #fff;
+	font-size:1.8em;
+	font-weight:500;
+	font-family: arial;
+	position:absolute;
+	top:7%;
+	left:11%;
+	margin:34px 0;
+} 
+ 
+form {
+	padding:32% 3em;
+}
+form li{
+	border:1px solid #FF0600;
+	list-style:none;
+	margin-bottom:16px;
+	width:100%;
+	background:yellow;
+}
+
+.icon{
+	background:url(../images/icons.png)  no-repeat 0px 0px;
+	height:40px;
+	width:40px;
+	display: block;
+	float:left;
+	margin:5px -11px 0px 0px
+}
+
+.user{
+	background: url(../images/icons.png) no-repeat 7px 1px;
+	
+}
+.lock{
+	background: url(../images/icons.png) no-repeat -31px 2px;
+}
+
+input[type="text"], input[type="password"] {
+	font-family:arial;
+	width:60%;
+	padding: 0.5em 2em 0.5em 1em;
+	color: #fff;
+	font-size:20px;
+	outline: none;
+	background: none;
+	border:none;
+}
+
+input[type="submit"]{
+	float:left;
+	font-size:18px;
+	display: inline-block;
+	font-weight:600;
+	color: #615F5F;
+	cursor: pointer;
+	outline: none;
+	padding:15px 10px;
+	margin-top:3px;
+	font-family: arial;
+	background: yellow;
+	width:45%;
+	border:1px solid #222;
+}
+input[type="submit"]:hover{
+	background: #FFC600;
+	border:1px solid #FFC600;
+}
+
