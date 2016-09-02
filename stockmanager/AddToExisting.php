@@ -3,7 +3,82 @@
     <head>        
         <title>Stock Manager</title>                   
         <link rel="stylesheet" type="text/css" id="theme" href="css/main.css"/>  
-        <link rel="stylesheet" type="text/css"  href="manage_stock_design.css"/>                     
+        <link rel="stylesheet" type="text/css"  href="manage_stock_design.css"/>  
+           <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+       <script>
+           
+    $(document).ready(function(){
+        $('#categoryname').change(function(){
+            /*$('#categoryname').empty();
+            $('#categoryname').append("<option> Loading </option>");
+            $('#categoryname').append("<option value = '0'> Select Category Name </option>");*/
+
+            
+            var categoryName = $(this).val();
+
+            if(categoryName){
+
+                $.ajax({
+                    type : 'GET',
+                    url : '/GroupProject/stockmanager/dropdown.php?categoryname='+categoryName,
+                    //data : 'categoryname=' + categoryName,
+                    dataType:'json',
+                    success : function(data){
+                        $('#itemname').empty();
+                        $('#itemname').append("<option value = '0'> Select Item Name </option>");
+                        //$('#itemname').html(html);
+                        data.forEach(function(data){
+                            $('#itemname').append('<option>'+data+'</option>');
+
+                        });
+                        
+                        
+                    }
+                });
+            }
+        });
+    });
+       </script>
+
+       </script>
+
+       <script type="text/javascript">
+           
+        $(document).ready(function(){
+
+        $('#itemname').change(function(){
+
+            
+            var itemName = $(this).val();
+
+            if(itemName){
+
+                $.ajax({
+                    type : 'GET',
+                    url : '/GroupProject/stockmanager/dropdown2.php?itemname='+itemName,
+                    
+                    //data : 'categoryname=' + categoryName,
+                    dataType:'json',
+                    success : function(data){
+                         $('#brandname').empty();
+                        $('#brandname').append("<option value = '0'> Select Brand Name </option>");
+                    
+                        //$('#itemname').html(html);
+                        data.forEach(function(data){
+                            $('#brandname').append('<option>'+data+'</option>');
+                            
+                        });
+                        
+                        
+                    }
+                });
+            }
+        });
+    });
+
+       </script>
+
+                  
     </head>
     <body>
         
@@ -12,7 +87,7 @@
         ?>
 
                 <ul class="breadcrumb">
-                    <h2>Manage Stock</h2>
+                    <h2>Manage Stock</li></h2>
                 </ul>
 <div class = "panel">
         
@@ -25,9 +100,7 @@
   			</ul>
             <br><br>
             
-                
-    
-                 <div class="col-md-4">
+                <div class="col-md-4">
                     <button onclick="location.href = 'Stock_ManageStock.php';" id="btnManageStockAddNew" class="myButton" >Add New</button><br><br>
                      <button onclick="location.href = 'AddToExisting.php';" id="btnManageStockAddToExisting" class="myButton" >Add To Existing</button>
 
@@ -35,8 +108,8 @@
 
 
                  </div>
-
-                 <div class="col-md-8">       
+    
+                <div class = "col-md-8">  
                 	<div class = "upper_panel_add_item">
                             
                                 <form method="post">
@@ -49,14 +122,13 @@
                                             </td> 
                                             
                                             <td>
-                                                                                                
-
-                                                <select id = "categoryname" name="categoryname" class="add_drop_down_effects">
-                                                    <option > Select Category Name</option>
+                                                
+                                                <select id = "categoryname" name="categoryname" class="add_dropdown_effects">
                                                     <option value="Sewing Machines">Sewing Machines</option>
                                                     <option value="Sewing Machine Spare Parts">Sewing Machine Spare Parts</option>
                                                     <option value="Tools">Tools</option>
-                                                </select><br><br><br>
+                 
+                                                </select><br><br>
                   
                                             </td>
                                                 
@@ -70,7 +142,7 @@
                                             </td> 
                                             
                                             <td>
-                                                <input type="text" class="form-control" name="itemname"><br><br>
+                                                <select id = "itemname" name="itemname" class="add_dropdown_effects"></select><br><br><br>
                                             </td>
                                         </tr>
                                         
@@ -82,7 +154,11 @@
                                             </td> 
                                               
                                             <td>
-                                                <input type="text" class="form-control" name="brandname"><br><br>
+                                                <select id = "brandname" name="brandname" class="add_dropdown_effects"></select><br><br>
+                                            
+
+
+                                                
                                             </td>
                                         </tr>
                                         
@@ -134,13 +210,11 @@
                                     </table> 
                                  
                         	</div>
-
-                            
-                </div>
+                        </div>
+                        
                       	<div class = "below_panel_add_item">
-                            <br><br>
-                                 <input type="submit" class="myButton" id="btnManageStockInsert"  name="btnManageStockInsert" value="Add"  /><br><br>
-                            	
+                            	<br><br>
+                                 <input type="submit" class="myButton" id="btnManageStockInsert" name="btnManageStockInsert" value="Add"  /><br><br>
                          </div>       
                             </form>
                             
@@ -160,18 +234,12 @@
                                     $myItem -> addItem($itemname, $brand,$sellingprice,$cost, $categoryname,$quantity );
                                 }
                                 
-                                if(isset($_POST['btnManageStockDelete'])){
-                                    $itemname = $_POST['itemname'];
-                                    $myItem = new Item();
-                                    $myItem -> deleteItem($itemname);
-                                    }
                             
                             ?>
                   
                  
                
             
-    
         
 
     

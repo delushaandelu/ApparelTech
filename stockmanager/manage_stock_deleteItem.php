@@ -63,7 +63,7 @@
                     success : function(data){
                          $('#brandname').empty();
                         $('#brandname').append("<option value = '0'> Select Brand Name </option>");
-                        $('#brandname').append("<option value = '1'> All </option>");
+                        $('#brandname').append("<option> All </option>");
                         //$('#itemname').html(html);
                         data.forEach(function(data){
                             $('#brandname').append('<option>'+data+'</option>');
@@ -170,7 +170,7 @@
                 <div class="col-md-4">
 
                     
-                    <select id = "categoryname" name="categoryname" class="dropdown_effects">
+                    <select id = "categoryname" name="categoryname" class="delete_dropdown_effects">
                         <option > Select Category Name</option>
                         <option value="Sewing Machines">Sewing Machines</option>
                         <option value="Sewing Machine Spare Parts">Sewing Machine Spare Parts</option>
@@ -178,17 +178,17 @@
                     </select>
                 </div>       
                 <div class="col-md-4">       
-                    <select id = "itemname" name="itemname" class="dropdown_effects"></select>
+                    <select id = "itemname" name="itemname" class="delete_dropdown_effects"></select>
 
                 </div>
                 <div class="col-md-4">        
-                    <select id = "brandname" name="brandname" class="dropdown_effects"></select>
+                    <select id = "brandname" name="brandname" class="delete_dropdown_effects"></select>
 
                 </div>
             </div>   
             <div class="middle_panel_delete_item">
 
-                <input type="submit" class="myButton" id="btnManageStockSearch2" name="btnManageStockSearch2" value="Search"  />
+                <input type="submit" class="myButton" id="btnManageStockSearch2" name="btnManageStockSearch2" value="Search To Delete"  />
             </div>
                 
         </form>
@@ -207,9 +207,11 @@
                     $brandname = $_POST['brandname'];
                     if($brandname == "All"){
                          $sql = "SELECT * FROM item WHERE catagery = '$categoryname' AND itemName = '$itemname'";
+                         
                     }
                     else{
                          $sql = "SELECT * FROM item WHERE catagery = '$categoryname' AND itemName = '$itemname' AND brand = '$brandname'";
+                        
                     }
                    
                     if($result = mysqli_query($dbcon, $sql)){

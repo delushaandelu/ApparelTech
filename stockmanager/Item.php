@@ -72,26 +72,7 @@
 		mysqli_close($dbcon);
 	}
 
-	public function searchItem($categoryname, $itemname, $brandname){
-		
-		
-		if ($itemname == "All" && $brandname == "All"){
-			$sql = "SELECT * FROM item WHERE catagery = '$categoryname'";
-			echo "$sql";
-			$this->printSearch($sql);
-		}
-		else if($brandname == "All"){
-			$sql = "SELECT * FROM item WHERE catagery = '$categoryname' AND itemName = '$itemname'";
-			echo "$sql";
-			$this->printSearch($sql);
-		}else{
-			$sql = "SELECT * FROM item WHERE catagery = '$categoryname' AND itemName = '$itemname' AND brand = '$brandname'";
-			echo "$sql";
-			$this->printSearch($sql);
-		}
-		
-
-	}
+	
 
 	
 					

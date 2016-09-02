@@ -8,21 +8,25 @@
 	}
 	
 .panel_body_add_item{
-	margin-left:300px;
+	
 	
 	}
 	
 #table_font{
 	font-size:14px;
 	font-style:normal;
+	color : black;
 	}
 
-#below_panel_add_item{
-	margin-left:350px;
+.below_panel_add_item{
+	margin-top: 380px;
 	height:100px;
+	margin-left: 750px;
+	background-color: white;
 	}
-#upper_panel_add_item{
+.upper_panel_add_item{
 	height:400px;
+
 	}
 	
 
@@ -73,18 +77,14 @@
 .middle_panel_delete_item{
 	margin-left: 450px;
 	height: 100px;
-	
-
 }
 
 .below_panel_delete_item{
 	height: 200px;
-	margin-left: 50px;
-	
+	margin-left: 80px;
 	
 	}
-.dropdown_effects{
-	background-color: gray;
+.delete_dropdown_effects{
 	width: 230px;
 
 
@@ -92,8 +92,13 @@
 
 }
 
-
+/*
 .dropdown_container{
 	width: 100px;
 
+}*/
+
+
+.add_dropdown_effects{
+	width : 200px;
 }

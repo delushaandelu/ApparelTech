@@ -4,76 +4,104 @@
         <title>Stock Manager</title>                   
         <link rel="stylesheet" type="text/css" id="theme" href="css/main.css"/>  
         <link rel="stylesheet" type="text/css"  href="manage_stock_design.css"/>
-        
-		<script src="jquery.js" type="text/javascript"></script>
-		<script src="js-script.js" type="text/javascript"></script>
-        
-         <script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+       <script>
+           
+    $(document).ready(function(){
+        $('#categoryname').change(function(){
+            /*$('#categoryname').empty();
+            $('#categoryname').append("<option> Loading </option>");
+            $('#categoryname').append("<option value = '0'> Select Category Name </option>");*/
+
+            
+            var categoryName = $(this).val();
+
+            if(categoryName){
+
+                $.ajax({
+                    type : 'GET',
+                    url : '/GroupProject/stockmanager/dropdown.php?categoryname='+categoryName,
+                    //data : 'categoryname=' + categoryName,
+                    dataType:'json',
+                    success : function(data){
+                        $('#itemname').empty();
+                        $('#itemname').append("<option value = '0'> Select Item Name </option>");
+                        //$('#itemname').html(html);
+                        data.forEach(function(data){
+                            $('#itemname').append('<option>'+data+'</option>');
+
+                        });
+                        
+                        
+                    }
+                });
+            }
+        });
+    });
+       </script>
+
+       <script type="text/javascript">
+           
+        $(document).ready(function(){
+
+        $('#itemname').change(function(){
+
+            
+            var itemName = $(this).val();
+
+            if(itemName){
+
+                $.ajax({
+                    type : 'GET',
+                    url : '/GroupProject/stockmanager/dropdown2.php?itemname='+itemName,
+                    
+                    //data : 'categoryname=' + categoryName,
+                    dataType:'json',
+                    success : function(data){
+                         $('#brandname').empty();
+                        $('#brandname').append("<option value = '0'> Select Brand Name </option>");
+                        $('#brandname').append("<option> All </option>");
+                        //$('#itemname').html(html);
+                        data.forEach(function(data){
+                            $('#brandname').append('<option>'+data+'</option>');
+                            
+                        });
+                        
+                        
+                    }
+                });
+            }
+        });
+    });
+
+       </script>
+       
+       </script>
+       <script type="text/javascript">
+           function check(){
+                if(document.form.categoryname.value == "Select Category Name"){
+                    alert("Please select a Category Name");
+                    document.form.categoryname.focus();
+                    return false;
+                }
+                 if(document.form.itemname.value == ""){
+                    alert("Please select a Item Name");
+                    document.form.itemname.focus();
+                    return false;
+                }
+                if(document.form.brandname.value == ""){
+                    alert("Please select a Brand Name");
+                    document.form.brandname.focus();
+                    return false;
+                }
+           }
+
+       </script>
     
-  // see http://www.quirksmode.org/dom/tests/selects.html
-		  function addOption(selectId) 
-		  {
-			var x = document.getElementById(selectId);
-			var y = new Option('Test option W3C');
-			x.add(y,x.options[x.options.length]);
-			// for IE use   x.add(y,2);
-		  }
-		
-		
-		  // see http://www.mredkj.com/tutorials/tutorial005.html      
-		  function appendOptionLast(selectID, num)
-		  {
-			var elSel = document.getElementById(selectID);
-			
-			var elOptNew = document.createElement('option');
-			elOptNew.text = num;
-			elOptNew.value = num;
-			
-		  
-			try {
-			  elSel.add(elOptNew, null); // standards compliant; doesn't work in IE
-			}
-			catch(ex) {
-			  elSel.add(elOptNew); // IE only
-			}
-		  }
-		  
-		  function removeAllOptions(selectID)
-		  {
-			var elSel = document.getElementById(selectID);
-			elSel.options.length = 0
-			if (elSel.length > 0)
-			{
-			  elSel.remove(0);
-			}
-		  }
-		  
-		  function addAllOptions(selectID, values)
-		  {
-			var arrayLength = values.length;
-			for (var i = 0; i < arrayLength; i++) {
-				appendOptionLast(selectID,values[i]);
-			}
-		  }
-		  
-		
-		  function setOptions()
-		  {
-			var s1 = document.getElementById("categoryname");
-			//removeAllOptions('s2');
-			document.getElementById('itemname').options.length = 0
-			var selIndex = s1.selectedIndex;
-			if(selIndex == 1)
-			  addAllOptions('itemname', ["All","Electric Sewing Machines", "Automatic Sewing Machines", "Overlocker Sewing Machines"]);
-			else if(selIndex == 2){
-			  addAllOptions('itemname', ["All","Belts","Bobbins and Spools", "Bobbin Cover Slide Plate","Bobbin Holder & Hooks" ,"Bobbin Winders","Bulbs","Embrodery Hoops","Extension Tables"]);
-			}
-			else{
-			  addAllOptions('itemname', ["All","Ironing Press Parts", "Spares and Accessories","Levers Dials & Buttons","Needles","Needle Plates","Needle Threader"]);
-			}
-		  }
-      
-    </script>                     
+                  
     </head>
     <body>
         
@@ -84,74 +112,116 @@
                 <ul class="breadcrumb">
                     <h2>Manage Stock</li></h2>
                 </ul>
-		<div class = "panel">
+        <div class = "panel">
         
-        	<ul class="nav nav-justified" >
-    			
+            <ul class="nav nav-justified" >
+                
                 <li id ="nav_tab_item_effect"><a href="Stock_ManageStock.php">Add Item</a></li>
                 <li id ="nav_tab_item_effect"><a href="manage_stock_searchItem.php">Search Item</a></li>
                 <li id ="nav_tab_item_effect"><a href="manage_stock_deleteItem.php">Delete Item</a></li>
                 <li id ="nav_tab_item_effect"><a href="#">Update Item</a></li>
-  			</ul>
+            </ul>
             <br><br>
-            <div class="panel_body_search_item">
-            	<div id="upper_panel_search_item">
-                	<form method="post">
-                    	<select id = "categoryname" name = "categoryname" onchange="setOptions()">
-        					<option value="" disabled selected hidden>Search By Category Name</option>
-                            <option>Sewing Machines</option>
-        					<option>Sewing Machine Spare Parts</option>
-                            <option>Tools</option>
-    					</select>
-                        <br><br>
-                        
-                     
-                        <select id ="itemname" name="itemname">
-        					<option value="" disabled selected hidden>Search By Item Name</option>
-        					<option >All</option>
-                            <option>Electric Sewing Machines</option>
-                            <option>Automatic Sewing Machines</option>
-                            <option>Overlocker Sewing Machines</option>
-    					</select>
-                        <br><br>
-                        
-                        
-                        <select id = "brandname" name= "brandname">
-        					<option value="" disabled selected hidden>Search By Brand Name</option>
-                            <option >All</option>
-        					<option>Juki</option>
-        					<option>Singer</option>
-                            <option>Tool</option>
-    					</select>
-                        <br><br>
-                        
-       					 <input type="submit" class="myButton" id="btnManageStockSearch" name="btnManageStockSearch" value="Search"  /><br><br>
-                    </form>
+           
+        <form method="post" name="form" onSubmit="return check();">    
+            <div class="upper_panel_delete_item">
+            
+                <div class="col-md-4">
+
+                    
+                    <select id = "categoryname" name="categoryname" class="delete_dropdown_effects">
+                        <option > Select Category Name</option>
+                        <option value="Sewing Machines">Sewing Machines</option>
+                        <option value="Sewing Machine Spare Parts">Sewing Machine Spare Parts</option>
+                        <option value="Tools">Tools</option>
+                    </select>
+                </div>       
+                <div class="col-md-4">       
+                    <select id = "itemname" name="itemname" class="delete_dropdown_effects"></select>
+
                 </div>
-               
-                <div id="below_panel_search_item">  
+                <div class="col-md-4">        
+                    <select id = "brandname" name="brandname" class="delete_dropdown_effects"></select>
+
+                </div>
+            </div>   
+            <div class="middle_panel_delete_item">
+
+                <input type="submit" class="myButton" id="btnManageStockSearch2" name="btnManageStockSearch2" value="Search"  />
+            </div>
                 
- 
-	
-                        <?php
-                        	include ('Item.php');
-                            if(isset($_POST['btnManageStockSearch'])){
-                                    $categoryname = $_POST['categoryname'];
-                                    $itemname = $_POST['itemname'];
-									$brandname = $_POST['brandname'];
-									
-                                    $myItem = new Item();
-                                    $myItem -> searchItem($categoryname,$itemname,$brandname);
-                                    }
-                            
-                        ?>
-						
-            
-                 
-               
-            
-    </div>
+        </form>
         
+        <div class = "below_panel_delete_item">
+           
+
+            <?php
+                include('database_connection.php');
+
+                   
+                if(isset($_POST['btnManageStockSearch2'])){
+                    
+                    $categoryname = $_POST['categoryname'];
+                    $itemname = $_POST['itemname'];
+                    $brandname = $_POST['brandname'];
+                    if($brandname == "All"){
+                         $sql = "SELECT * FROM item WHERE catagery = '$categoryname' AND itemName = '$itemname'";
+                         
+                    }
+                    else{
+                         $sql = "SELECT * FROM item WHERE catagery = '$categoryname' AND itemName = '$itemname' AND brand = '$brandname'";
+                         
+                    }
+                   
+                    if($result = mysqli_query($dbcon, $sql)){
+                    if(mysqli_num_rows($result) > 0){
+                    
+                        echo "<table border = '0'>";
+                            echo "<tr bgcolor='#C0C0C0' width = '10px' >";
+                            
+                                echo "<th>Item ID</th>"; echo"<td width = 10%></td>";
+                                echo "<th >Item Name</th>";echo"<td width = 2%></td>";
+                                echo "<th>Category</th>";echo"<td width=2%></td>";
+                                echo "<th>Brand</th>";echo"<td width=2%></td>";
+                                echo "<th>Buying Price</th>";echo"<td width = 2%></td>";
+                                echo "<th>Selling Price</th>";echo"<td width=2%></td>";
+                                echo "<th>Quantity</th>";echo"<td width=2%></td>";
+                                
+                            echo "</tr>";
+                            
+
+                        while($row = mysqli_fetch_array($result)){
+                            echo "<tr>";
+                                echo "<td>" . $row['item_id'] . "</td>"; echo"<td ></td>";
+                                echo "<td>" . $row['itemName'] . "</td>";echo"<td></td>";
+                                echo "<td>" . $row['catagery'] . "</td>";echo"<td></td>";
+                                echo "<td>" . $row['brand'] . "</td>";echo"<td></td>";
+                                echo "<td>" . $row['buyingPrice'] . "</td>";echo"<td></td>";
+                                echo "<td>" . $row['sellingPrice'] . "</td>";echo"<td></td>";
+                                echo "<td>" . $row['stockQty'] . "</td>";echo"<td></td>";
+                                 
+
+                         echo "</td>";
+                            echo "</tr>";
+                        }
+                        echo "</table>";
+                        // Close result set
+                        mysqli_free_result($result);
+                    } else{
+                        echo "No records matching your query were found.";
+                }
+            } else{
+                echo "ERROR: Could not able to execute $sql. " . mysqli_error($dbcon);
+            }
+            mysqli_close($dbcon);
+                }
+
+            ?>
+            
+
+
+
+        </div>
 
     
    
