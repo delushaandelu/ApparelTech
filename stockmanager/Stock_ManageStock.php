@@ -160,26 +160,14 @@
                                     $myItem -> addItem($itemname, $brand,$sellingprice,$cost, $categoryname,$quantity );
                                 }
 
-                                if(isset($_POST['btnManageStockDelete'])){
-                                    $itemname = $_POST['itemname'];
-                                    $myItem = new Item();
-                                    $myItem -> deleteItem($itemname);
-                                    }
-
+                                
                             ?>
-<<<<<<< HEAD
-                  
-                 
-               
-            
-    
-=======
 
 
 
 
     </div>
->>>>>>> origin/master
+
         
 
     
