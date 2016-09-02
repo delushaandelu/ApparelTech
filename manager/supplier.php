@@ -1,34 +1,33 @@
 <?php
+//get database connection
+include('database_connection.php');
+//define variables
+if(isset($_POST["insert"])){
+    $supname=$_POST['name'];
+    $loc=$_POST['location'];
+    $address=$_POST['address'];
+    $email=$_POST['email'];
+    $tele=$_POST['tele'];
+    $mobi=$_POST['mobile'];
 
-    class Supplier{
+    //query
+    $sql = "INSERT INTO supplier(sname, email, address, location, tele, mobile) VALUES ('$supname','$email','$address','$loc','$tele','$mobi')";
 
-        var $supplier_id = '';
-        var $name = '';
-        var $address = '';
-        var $email = '';
-        var $tele = '';
-
-        public function addSupplier(){
-            require("database_connection.php");
-
-            $supplier_id = $_POST["supplier_id"];
-            $name = $_POST["name"];
-            $address = $_POST["address"];
-            $email = $_POST["email"];
-            $tele = $_POST["tele"];
-
-            $sqlinsert = "INSERT INTO supplier(supplier_id, name, email, address ) VALUES('" . $supplier_id . "','" . $name . "','" . $email . "','" . $address  . "')";
-            $result = mysqli_query($dbcon, $sqlinsert);
-            if (!$result) {
-                echo "error";
-            }
-            $sqlinsert1 = "INSERT INTO suppliercontact(contactNumber) VALUES('" . $tele . "')";
-            $result1 = mysqli_query($dbcon, $sqlinsert1);
-            if (!$result1) {
-                echo "error";
-            }
-        }
+    if (mysqli_query($dbcon, $sql) === TRUE){
+        echo "<script>";
+        echo "alert('Added supplier details successfully')";
+        echo "window.location='Supplier-Manage_Supplier.php'";
+        echo "</script>";
+    }
+    else{
+        echo "<script>";
+        echo "alert('ERROR: Check your information again!')";
+        echo "</script>";
+        header("location:Supplier-Manage_Supplier.php");
     }
 
+    mysqli_close($dbcon);
+
+}
+
 ?>
-         

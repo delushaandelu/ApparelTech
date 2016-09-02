@@ -27,18 +27,9 @@
         <div id="content">
 		<div id="top">
         	<div id="top-left">
-            	<form method="post">
+            	<form method="post" action="supplier.php">
                 	<table border="0">
                     	<tr></tr>
-                        <tr>
-                        	<td id="table-font" width="60%">
-                            	Supplier ID
-                            </td>
-                            <td>
-                            	<input type="text" name="supplier_id" class="form-control">
-								<br><br>
-                            </td>
-						</tr>
                         <tr>
                        	  <td id="table-font" width="60%">
                             	Supplier name
@@ -74,7 +65,7 @@
 							</td> 
                                          
 							<td>
-								<input type="tel" name="Tele" class="form-control">
+								<input type="tel" name="tele" class="form-control">
 								<br><br>
 							</td>
 						  </tr>
@@ -93,7 +84,7 @@
                         	<td id="table-font" width="60%">
                             	Address
 							</td>
-                            <td><textarea name="address" rows="3" class="form-control"></textarea>
+                            <td><input type="text" name="address" rows="3" class="form-control">
                               <br><br>
  						    </td>
 						  </tr>
@@ -109,45 +100,15 @@
 
                          
                         </table>
-                     </form>
+
                   </div>
                   <div id="top-right">
-                            <form method="post">
-                            	  <tr>
-                           			 <td>
+									<input type="submit" class="btn btn-default btn-lg active" value="save" name="insert">
 
-                            			<input type="text" name="Search by id" placeholder="Search by ID" class="form-control"><br><br>
-
-                           			</td>
-                         	      </tr>
-
-									<button type="button" id="button" onclick="refreshAll()" class="btn btn-default btn-lg active">Refresh</button>
-									<br><br>
-									<input type="submit" id="button" class="btn btn-default btn-lg active" name="Insert">
-                            </form>
-					  		<script>
-								function refreshAll() {
-									location.reload();
-								}
-
-								<?php
-								if(isset($_POST['Insert'])){
-									include('database_connection.php');
-									//include('Supplier.php');
-
-									mysqli_select_db($dbcon);
-
-									$sql = "INSERT INTO supplier (supplier_id, name, email, address) VALUES ('$_POST[supplier_id]','$_POST[name]','$_POST[email]','$_POST[address]')";
-
-									mysqli_query($sql, $dbcon);
-									mysqli_close($dbcon);
-								}
-								?>
-
-							</script>
 
 
 </div>
+			</form>
 			<p>&nbsp;</p>
 			<p>&nbsp;</p>
     </div>
@@ -155,6 +116,7 @@
 
     </div>      
 </div>
+
 
 
 <script src="vendor/jquery/jquery.min.js"></script>

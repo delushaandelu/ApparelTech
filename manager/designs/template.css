@@ -303,3 +303,8 @@ button2:active {
     background-color: grey;
     transform: translateY(4px);
 }
+
+input
+{
+    margin-top: 20%;
+}

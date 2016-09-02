@@ -22,25 +22,17 @@
                 <h1 class="page-header">Suppliers</h1>
             </div>
             <div class="2">
-                <form action="demo_form.asp">
-                    <div class="col-xs-3">
-                        <input type="text" name="searchitem" placeholder="Search by name" class="form-control" size="35">
-                    </div>
-                    <div>
-                        <button type="button" id="button2" class="btn btn-default">Search</button>
-                    </div>
 
 
-                    <br>
             </div>
         </div>
-        
     </div>
+    <br><br>
     <div class="row">
         <?php
         include('database_connection.php');
 
-        $sql = "SELECT supplier_id, name, email, address FROM supplier";
+        $sql = "SELECT * FROM supplier";
         $result = $dbcon->query($sql);
 
         if ($result->num_rows > 0) {
@@ -48,16 +40,22 @@
             echo"<tr>
                 <th style='border: solid 2px black;'>Supplier ID </th>
                 <th style='border: solid 2px black;'>Name </th>
-                <th style='border: solid 2px black;'>e-mail </th>
+                <th style='border: solid 2px black;'>E-mail </th>
                 <th style='border: solid 2px black;'>Address </th>
+                <th style='border: solid 2px black;'>Location </th>
+                <th style='border: solid 2px black;'>Telephone Number </th>
+                <th style='border: solid 2px black;'>Mobile Number </th>
             </tr>";
 
             while($row = $result->fetch_assoc()) {
                 echo "<tr>
-                    <td style='border: solid 2px black;'>" . $row["supplier_id"]. "</td>
-                    <td style='border: solid 2px black;'>" . $row["name"]. "</td>
-                    <td style='border: solid 2px black;'>" . $row["email"]. "</td>
-                    <td style='border: solid 2px black;'>" . $row["address"]. "</td>
+                    <td style='border: solid 2px black;'><h5 align='center'>" . $row["supplier_id"]. "</h5></td>
+                    <td style='border: solid 2px black;'><h5 align='center'>" . $row["sname"]. "</h5></td>
+                    <td style='border: solid 2px black;'><h5 align='center'>" . $row["email"]. "</h5></td>
+                    <td style='border: solid 2px black;'><h5 align='center'>" . $row["address"]. "</td>
+                    <td style='border: solid 2px black;'><h5 align='center'>" . $row["location"]. "</h5></td>
+                    <td style='border: solid 2px black;'><h5 align='center'>" . $row["tele"]. "</h5></td>
+                    <td style='border: solid 2px black;'><h5 align='center'>" . $row["mobile"]. "</h5></td>
                 </tr>";
             }
             echo "</table>";
@@ -69,21 +67,12 @@
 
         ?>
 
-        <div id="content">
-
-            <table class="table">
-                <tr>
-                    <th>Supplier ID</th>
-                    <th>Supplier Name</th>
-                    <th>Company</th>
-                    <th>TP Number</th>
-                    <th>Address</th>
-                    <th>e-mail address</th>
-                </tr>
-            </table>
-        </div>
-    
-    
+        <form action="supplierSearch.php">
+            <div class="col-xs-3">
+                <input type="text" name="email" placeholder="Search by email" class="form-control" size="35">
+                <button type="button" id="button2" class="btn btn-default" name="SearchSupplier">Search</button>
+            </div>
+        </form>
 			<p>&nbsp;</p>
 			<p>&nbsp;</p>
     </div>      
