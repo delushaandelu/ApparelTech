@@ -224,7 +224,7 @@
                                 if(isset($_POST['btnManageStockInsert'])){
                                     
                                     $itemname = $_POST['itemname'];
-                                    $brand = $_POST['brand'];
+                                    $brand = $_POST['brandname'];
                                     $sellingprice = $_POST['sellingprice'];
                                     $cost = $_POST['cost'];
                                     $categoryname = $_POST['categoryname'];
