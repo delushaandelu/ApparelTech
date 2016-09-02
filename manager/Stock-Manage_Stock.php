@@ -22,131 +22,156 @@
         </div>
         
     </div>
-    <div class="row">
+    <div class = "panel">
 
-        <div id="content">
-        <div id="top">
-            <div id="top-left" style="border: solid">
-                <h3>
-                    <font color="black" size="+1" >   </font>
-                </h3>
+        <div class="panel_body_add_item">
+
+
+
+            <div id = "upper_panel_add_item">
+
                 <form method="post">
-                    <table border="0">
+                    <table border="0" >
                         <tr></tr>
                         <tr>
-                            <td id="table-font" width="60%">
-                                   Category name
+
+                            <td id="table_font"  width="60%">
+                                Category Name
                             </td>
+
                             <td>
-                                <select class="form-control">
-                                    <option value="needle1qwertyuiopasdf">needle1qwertyuiopasdf</option>
-                                    <option value="needle2">needle2</option>
-                                    <option value="paddle">paddle</option>
-                                    <option value="motor">motor</option>
-                                </select><br>
+
+                                <select name="categoryname">
+                                    <option value="Sewing Machines">Sewing Machines</option>
+                                    <option value="Sewing Machine Spare Parts">Sewing Machine Spare Parts</option>
+                                    <option value="Tools">Tools</option>
+
+                                </select><br><br>
+
+                            </td>
+
+
+
+                        </tr>
+                        <tr>
+
+                            <td id="table_font" width="55%">
+                                Item Name
+                            </td>
+
+                            <td>
+                                <input type="text" class="form-control" name="itemname"><br><br>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+
+                            <td id="table_font"  width="55%">
+                                Brand
+                            </td>
+
+                            <td>
+                                <select name="brand">
+                                    <option value="Juki">Juki</option>
+                                    <option value="Singer">Singer</option>
+                                    <option value="Brother">Brother</option>
+                                    <option value="Janome">Janome</option>
+
+                                </select><br><br>
                             </td>
                         </tr>
 
                         <tr>
-                            <td id="table-font" width=" 60%">
-                                   Item name
+
+                            <td id="table_font" width="55%">
+                                Price
                             </td>
+
                             <td>
-                                <input type="text" name="Item name" class="form-control">
-                                <br>
+                                <br><br>
                             </td>
                         </tr>
 
                         <tr>
-                            <td id="table-font" width="60%">
-                                   Item ID
+
+                            <td id="table_font" width="55%" align="right">
+                                Cost                            
                             </td>
+
                             <td>
-                                <input type="text" name="Item ID" class="form-control">
-                                <br>
+                                <input type="text" class="form-control"  name="cost" ><br><br>
                             </td>
                         </tr>
 
                         <tr>
-                            <td id="table-font" width="60%">
-                                   Brand
+
+                            <td id="table_font" width="55%" align="right" >
+                                Selling Price                
                             </td>
+
                             <td>
-                                <input type="text" name="Brand" class="form-control">
-                                <br>
+                                <input type="text" class="form-control" name="sellingprice" ><br><br>
                             </td>
                         </tr>
 
                         <tr>
-                            <td id="table-font" width="60%">
-                                   Price
+
+                            <td id="table_font" width="55%">
+                                Quantity
+                            </td>
+
+                            <td>
+                                <input type="text" class="form-control" name="quantity" ><br><br>
                             </td>
                         </tr>
 
-                        <tr>
-                            <td id="table-font" width="60%">
-                                               Cost
-                            </td>
-                            <td>
-                                <input type="text" name="Cost" class="form-control">
-                                <br>
-                            </td>
-                        </tr>
 
-                        <tr>
-                            <td id="table-font" width="60%">
-                                               Selling price
-                            </td>
-                            <td>
-                                <input type="text" name="Selling price" class="form-control">
-                                <br>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td id="table-font" width="60%">
-                                   Quantity
-                            </td>
-                            <td>
-                                <input type="text" name="Quantity" class="form-control">
-                                <br>
-                            </td>
-                        </tr>
                     </table>
-                 </form>
-             </div>
-            <div id = "top-right">
-                <form>
-                    <h4>
-                        <font color="black" size="+1" >   </font>
-                    </h4>
-                    <tr>
-                        <td>
-                            <input type="text" name="Search item" placeholder="Search by item name" class="form-control">
-                            <br><br>
-                        </td>
-                    </tr>
-                    
-                    <button type="button" id="button" class="btn btn-default btn-lg active">Search</button>
-                    <br><br>
-                    <button type="button" id="button" class="btn btn-default btn-lg active">Insert</button>
-                    <br><br>
-                    <button type="button" id="button" class="btn btn-default btn-lg active">Delete</button>
-                    <br><br>
-                    <button type="button" id="button" class="btn btn-default btn-lg active">Update</button>
-                    <br><br>
-                    <button type="button" id="button" onclick="refreshAll()" class="btn btn-default btn-lg active">Refresh</button>
-                    <br><br>
-
-                </form>
-                <script>
-                    function refreshAll() {
-                        location.reload();
-                    }
-                </script>
 
             </div>
+
+            <div id = "below_panel_add_item">
+                <br><br>
+                <input type="submit" id="button" class="btn btn-default btn-lg active" name="btnManageStockInsert" value="Add"  />
+                <button type="button" id="button" onclick="refreshAll()" class="btn btn-default btn-lg active">Refresh</button>
+
+            </div>
+            </form>
+            <script>
+                function refreshAll() {
+                    location.reload();
+                }
+            </script>
+            <?php
+
+            include ('Item.php');
+            if(isset($_POST['btnManageStockInsert'])){
+
+                $itemname = $_POST['itemname'];
+                $brand = $_POST['brand'];
+                $sellingprice = $_POST['sellingprice'];
+                $cost = $_POST['cost'];
+                $categoryname = $_POST['categoryname'];
+
+                $quantity = $_POST['quantity'];
+                $myItem = new Item();
+                $myItem -> addItem($itemname, $brand,$sellingprice,$cost, $categoryname,$quantity );
+            }
+
+            if(isset($_POST['btnManageStockDelete'])){
+                $itemname = $_POST['itemname'];
+                $myItem = new Item();
+                $myItem -> deleteItem($itemname);
+            }
+
+            ?>
+
+
+
+
         </div>
+
         <p>&nbsp;</p>
         <p>&nbsp;</p>
     </div>

@@ -31,12 +31,12 @@ include 'dbConfig.php';
 
 <!-- page content -->
 <div class="right_col" role="main">
-    <h1>All Products</h1>
+    <h1>Sewing Machine Spare Parts</h1>
     <a href="viewCart.php" class="cart-link" title="View Cart"><i class="glyphicon glyphicon-shopping-cart"></i></a>
     <div id="products" class="row list-group">
         <?php
         //get rows query
-        $query = $db->query("SELECT * FROM item");
+        $query = $db->query("SELECT * FROM item where catagery='Sewing Machine Spare Parts'");
         if($query->num_rows > 0){ 
             while($row = $query->fetch_assoc()){
         ?>

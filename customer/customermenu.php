@@ -1,4 +1,4 @@
-<div class="container body">
+    <div class="container body">
       <div class="main_container">
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
@@ -14,9 +14,7 @@
               </div>
               <div class="profile_info">
                 <span>Welcome,</span>
-                <h2><?php
-                    echo $_SESSION['fname'];;
-                    ?></h2>
+                <h2></h2>
               </div>
             </div>
             <!-- /menu profile quick info -->
@@ -112,16 +110,13 @@
               <ul class="nav navbar-nav navbar-right">
                 <li class="">
                   <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                    <img src="images/img.jpg" alt="">
-                    <?php
-                    echo $_SESSION['fname'];
-                    ?>
+                    <img src="images/img.jpg" alt="">Delu# php
                     <span class=" fa fa-angle-down"></span>
                   </a>
                   <ul class="dropdown-menu dropdown-usermenu pull-right">
                     <li><a href="#"> Profile</a></li>
                     <li><a href="#">Help</a></li>
-                    <li><a href="../customer/signout.php"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                    <li><a href="#"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
                   </ul>
                 </li>
             </nav>

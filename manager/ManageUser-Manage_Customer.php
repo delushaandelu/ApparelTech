@@ -24,56 +24,55 @@
     
     <?php
         include('database_connection.php');
-
+    
     $sql = "SELECT customer_id, nic, fullname, designation, companyname, address, email, mobile, tele FROM customer";
     $result = $dbcon->query($sql);
 
     if ($result->num_rows > 0) {
-        echo "<table class='table table-striped' style='border: solid 2px black;'>";
+        echo "<table class='table table-striped' >";
         echo"<tr>
-                    <th style='border: solid 2px black;'>Customer ID </th>
-                    <th style='border: solid 2px black;'>NIC </th>
-                    <th style='border: solid 2px black;'>Full Name </th>
-                    <th style='border: solid 2px black;'>Designation </th>
-                    <th style='border: solid 2px black;'>Company Name </th>
-                    <th style='border: solid 2px black;'>Address </th>
-                    <th style='border: solid 2px black;'>e-mail </th>
-                    <th style='border: solid 2px black;'>Mobile </th>
-                    <th style='border: solid 2px black;'>Telephone </th>
-                    <th style='border: solid 2px black;'>Approve/reject </th>
+                    <th >Customer ID </th>
+                    <th >NIC </th>
+                    <th >Full Name </th>
+                    <th >Designation </th>
+                    <th >Company Name </th>
+                    <th >Address </th>
+                    <th >e-mail </th>
+                    <th >Mobile </th>
+                    <th >Telephone </th>
+                
                 </tr>";
 
-        while($row = $result->fetch_assoc()) {
+        while ($row = $result->fetch_assoc()) {
             echo "<tr>
-                        <td style='border: solid 2px black;'>" . $row["customer_id"]. "</td>
-                        <td style='border: solid 2px black;'>" . $row["nic"]. "</td>
-                        <td style='border: solid 2px black;'>" . $row["fullname"]. "</td>
-                        <td style='border: solid 2px black;'>" . $row["designation"]. "</td>
-                        <td style='border: solid 2px black;'>" . $row["companyname"]. "</td>
-                        <td style='border: solid 2px black;'>" . $row["address"]. "</td>
-                        <td style='border: solid 2px black;'>" . $row["email"]. "</td>
-                        <td style='border: solid 2px black;'>" . $row["mobile"]. "</td>
-                        <td style='border: solid 2px black;'>" . $row["tele"]. "</td>
-                        <td style='border: solid 2px black;'>
-                        <button type=\"submit\" id=\"button0\" class=\"btn btn-default\">&#10003</button><button type=\"submit\" id=\"button01\" class=\"btn btn-default\">&#9747</button>
-                        </td>
+                        <td>" . $row["customer_id"] . "</td>
+                        <td >" . $row["nic"] . "</td>
+                        <td >" . $row["fullname"] . "</td>
+                        <td >" . $row["designation"] . "</td>
+                        <td >" . $row["companyname"] . "</td>
+                        <td >" . $row["address"] . "</td>
+                        <td>" . $row["email"] . "</td>
+                        <td>" . $row["mobile"] . "</td>
+                        <td >" . $row["tele"] . "</td>
+                        <td><div class='btn btn-info edit-btn margin-right-1em' name='add'>
+                        <span class='glyphicon glyphicon-edit'></span>
+                    </div></td>
+                        <td> <div class='btn btn-danger delete-btn' name='delete'>
+                        <span class='glyphicon glyphicon-remove'></span> 
+                    </div> </td>
                     </tr>";
+
         }
+
         echo "</table>";
     } else {
         echo "0 results";
     }
-
-    $dbcon->close();
-
-
-
     ?>
-    
-    
-    
-			<p>&nbsp;</p>
-			<p>&nbsp;</p>
+
+
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
 
 </div>
 

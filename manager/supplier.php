@@ -1,33 +1,33 @@
 <?php
-    class supplier{
-        var $supplierID="";
-        var $supplierName="";
-        var $Email="";
-        var $Address="";
-        var $Telephone="";
-        
-        public function addSupplier($supplierID, $supplierName, $Email, $Address, $Telephone){
-            include ('database_connection.php');
-            
-            $supplierID = $supplierID;
-            $supplierName = $supplierName;
-            $Email = $Email;
-            $Address = $Address;
-            $Telephone = $Telephone;
-            
-            $sqlInsert = "INSERT INTO supplier (supplier_id, name, email, address) VALUES ('$supplierID', '$supplierName', '$Email', '$Address')";
-            $sqlInsertTel = "INSERT INTO suppliercontact(supplier_id, contactNumber) VALUES ('$supplierID','$Telephone')";
+//get database connection
+include('database_connection.php');
+//define variables
+if(isset($_POST["insert"])){
+    $supname=$_POST['name'];
+    $loc=$_POST['location'];
+    $address=$_POST['address'];
+    $email=$_POST['email'];
+    $tele=$_POST['tele'];
+    $mobi=$_POST['mobile'];
 
+    //query
+    $sql = "INSERT INTO supplier(sname, email, address, location, tele, mobile) VALUES ('$supname','$email','$address','$loc','$tele','$mobi')";
 
-            if(!mysqli_query($dbcon, $sqlInsert)){
-                die('Error occurs while inserting new record');
-            }
-            elseif (!mysqli_query($dbcon, $sqlInsertTel)){
-                die('Error occurs while inserting new record');
-            }
-            mysqli_close($dbcon);
-        }
-
+    if (mysqli_query($dbcon, $sql) === TRUE){
+        echo "<script>";
+        echo "alert('Added supplier details successfully')";
+        echo "window.location='Supplier-Manage_Supplier.php'";
+        echo "</script>";
     }
-?>
+    else{
+        echo "<script>";
+        echo "alert('ERROR: Check your information again!')";
+        echo "</script>";
+        header("location:Supplier-Manage_Supplier.php");
+    }
 
+    mysqli_close($dbcon);
+
+}
+
+?>

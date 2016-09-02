@@ -27,24 +27,15 @@
         <div id="content">
 		<div id="top">
         	<div id="top-left">
-            	<form method="post">
+            	<form method="post" action="supplier.php">
                 	<table border="0">
                     	<tr></tr>
-                        <tr>
-                        	<td id="table-font" width="60%">
-                            	Supplier ID
-                            </td>
-                            <td>
-                            	<input type="text" name="supplierID" class="form-control">
-								<br><br>
-                            </td>
-						</tr>
                         <tr>
                        	  <td id="table-font" width="60%">
                             	Supplier name
 							</td>
                             <td>
-                            	<input type="text" name="supplierName" class="form-control">
+                            	<input type="text" name="name" class="form-control">
 								<br><br>
                             </td>
                         </tr>
@@ -53,7 +44,7 @@
                             	Location							
                             </td>
                             <td>
-                            	<input type="text" name="Location" class="form-control">
+                            	<input type="text" name="location" class="form-control">
 								<br><br>
                            </td>
                          </tr>
@@ -74,7 +65,7 @@
 							</td> 
                                          
 							<td>
-								<input type="tel" name="Telephone" class="form-control">
+								<input type="tel" name="tele" class="form-control">
 								<br><br>
 							</td>
 						  </tr>
@@ -85,7 +76,7 @@
 							</td> 
                                          
 							<td>
-								<input type="tel" name="Mobile" class="form-control">
+								<input type="tel" name="mobile" class="form-control">
 								<br><br>
 							</td>
 						  </tr>
@@ -93,7 +84,7 @@
                         	<td id="table-font" width="60%">
                             	Address
 							</td>
-                            <td><textarea name="Address" rows="3" class="form-control"></textarea>
+                            <td><input type="text" name="address" rows="3" class="form-control">
                               <br><br>
  						    </td>
 						  </tr>
@@ -102,67 +93,22 @@
                             	e-mail address							
                             </td>
                             <td>
-                            	<input type="email" name="Email" class="form-control">
+                            	<input type="email" name="email" class="form-control">
 								<br><br>
                            </td>
                          </tr>
-                         <tr>
-                       	   <td id="table-font" width="60%">
-                            	Item type						
-                            </td>
-                            <td>
-                            	<input type="text" name="Itemtype" class="form-control">
-								<br><br>
-                           </td>
-                         </tr>
+
                          
                         </table>
-                     </form>
+
                   </div>
                   <div id="top-right">
-                            <form>
-                            	  <tr>
-                           			 <td>
+									<input type="submit" class="btn btn-default btn-lg active" value="save" name="insert">
 
-                            			<input type="text" name="Search by id" placeholder="Search by ID" class="form-control"><br><br>
-
-                           			</td>
-                         	      </tr>
-									<button type="button" id="button" name="searchbutton" class="btn btn-default btn-lg active">Search</button>
-									<br><br>
-                                 	<button type="button" id="button" name="Deletebutton" class="btn btn-default btn-lg active">Delete</button>
-									<br><br>
-                                 	<button type="button" id="button" name="Updatebutton" class="btn btn-default btn-lg active">Update</button>
-									<br><br>
-									<button type="button" id="button" onclick="refreshAll()" class="btn btn-default btn-lg active">Refresh</button>
-									<br><br>
-									<input type="submit" id="button" name="addSupplier" class="btn btn-default btn-lg active" value="Add">
-                            </form>
-					  		<script>
-								function refreshAll() {
-									location.reload();
-								}
-							</script>
-
-							<?php
-
-							include('supplier.php');
-
-								if(isset($_POST['addSupplier'])){
-									$supplierID = $_POST['supplierID'];
-									$supplierName = $_POST['supplierName'];
-									$Email = $_POST['Email'];
-									$Address = $_POST['Address'];
-									$Telephone = $_POST['Telephone'];
-
-									$mysupplier = new supplier();
-									$mysupplier -> addSupplier($supplierID, $supplierName, $Email, $Address, $Telephone);
-								}
-							
-							?>
 
 
 </div>
+			</form>
 			<p>&nbsp;</p>
 			<p>&nbsp;</p>
     </div>
@@ -170,6 +116,8 @@
 
     </div>      
 </div>
+
+
 
 <script src="vendor/jquery/jquery.min.js"></script>
 <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
@@ -179,3 +127,9 @@
 </body>
 
 </html>
+
+
+
+
+
+

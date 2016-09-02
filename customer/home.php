@@ -12,7 +12,9 @@
   <body class="nav-md">
     
   <?php
+    session_start();
     include("../config/customermenu.php");  
+      
   ?>
 
 <!-- page content -->
@@ -26,18 +28,26 @@
                         <table>
                             <form method="get">
                                 <tr>
-                                    <td><h3>Customer name :<?php 
-                                                            session_start();
-                                                            echo $username;
-                                                            ?> 
+                                    <td><h3>Customer name :
+                                        <?php
+                                        echo $_SESSION['fname'];
+                                        ?>
                                     </h3></td>
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td><h3>Customer ID : </h3></td>
+                                    <td><h3>Customer ID :
+                                        <?php
+                                        echo $_SESSION['csid'];
+                                        ?>
+                                        </h3></td>
                                 </tr>
                                 <tr>
-                                    <td><h3>Company name : </h3></td>
+                                    <td><h3>Company name :
+                                        <?php
+                                        echo $_SESSION['company'];
+                                        ?>
+                                        </h3></td>
                                     <td></td>
                                 </tr>
                             </form>

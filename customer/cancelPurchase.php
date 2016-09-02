@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>   
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -29,8 +32,10 @@
 
 	
 	 <?php  
+            $report = $_SESSION['csid'];        
+    
             include("dbConfig.php");
-            $sql = "select * from orders";
+            $sql = "select * from orders where customer_id='$report'";
             $result = mysqli_query($db,$sql);        
             while($row = mysqli_fetch_array($result)) {
     
@@ -39,7 +44,7 @@
                     <td><h5 align="center"><?php echo $row['id'] ?></h5></td>
                     <td><h5 align="center"><?php echo $row['total_price'] ?></h5></td>
                     <td><h5 align="center"><?php echo $row['created'] ?></h5></td>
-            <td class="bt"><center><button class="btn btn-danger" value="Cance This Order" onclick="location.href='cancelPurchase.php?id=<?php echo $row['id'] ?>'"><i class="glyphicon glyphicon-trash"></i> Cancel</button></center></td>
+                    <td class="bt"><center><button class="btn btn-danger" value="Cance This Order" onclick="location.href='cancelPurchase.php?id=<?php echo $row['id'] ?>'"><i class="glyphicon glyphicon-trash"></i> Cancel</button></center></td>
                 </tr>
                 
                 <?php
