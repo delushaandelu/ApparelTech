@@ -3,7 +3,54 @@
     <head>        
         <title>Stock Manager</title>                   
         <link rel="stylesheet" type="text/css" id="theme" href="css/main.css"/>  
-        <link rel="stylesheet" type="text/css"  href="manage_stock_design.css"/>                     
+        <link rel="stylesheet" type="text/css"  href="manage_stock_design.css"/>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>  
+
+        <script type="text/javascript">
+           function check(){
+          
+                if(document.form.categoryname.value == "0"){
+                    alert("Please select a Category Name");
+                    document.form.categoryname.focus();
+                    return false;
+                }
+                 if(document.form.itemname.value == ""){
+                    alert("Please select a Item Name");
+                    document.form.itemname.focus();
+                    return false;
+                }
+                if(document.form.brandname.value == ""){
+                    alert("Please select a Brand Name");
+                    document.form.brandname.focus();
+                    return false;
+                }
+
+                 if(document.form.cost.value == ""){
+                    alert("Please add the Buying Proce");
+                    document.form.brandname.focus();
+                    return false;
+                }
+
+                 if(document.form.sellingprice.value == ""){
+                    alert("Please add the Selling Price");
+                    document.form.brandname.focus();
+                    return false;
+                }
+
+                if(document.form.quantity.value == ""){
+                    alert("Please add the Quantity");
+                    document.form.brandname.focus();
+                    return false;
+                }
+
+
+           }
+
+       </script>                   
     </head>
     <body>
         
@@ -39,7 +86,7 @@
                  <div class="col-md-8">       
                 	<div class = "upper_panel_add_item">
                             
-                                <form method="post">
+                                <form method="post" name="form" onSubmit="return check();">
                                     <table border="0" >
                                         <tr></tr>
                                         <tr>
@@ -51,8 +98,8 @@
                                             <td>
                                                                                                 
 
-                                                <select id = "categoryname" name="categoryname" class="add_drop_down_effects">
-                                                    <option > Select Category Name</option>
+                                                <select id = "categoryname" name="categoryname" class="add_dropdown_effects">
+                                                    <option value="0"> Select Category Name</option>
                                                     <option value="Sewing Machines">Sewing Machines</option>
                                                     <option value="Sewing Machine Spare Parts">Sewing Machine Spare Parts</option>
                                                     <option value="Tools">Tools</option>
@@ -150,7 +197,7 @@
                                 if(isset($_POST['btnManageStockInsert'])){
 
                                     $itemname = $_POST['itemname'];
-                                    $brand = $_POST['brand'];
+                                    $brand = $_POST['brandname'];
                                     $sellingprice = $_POST['sellingprice'];
                                     $cost = $_POST['cost'];
                                     $categoryname = $_POST['categoryname'];

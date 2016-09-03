@@ -2,7 +2,42 @@
 <html lang="en">
     <head>        
         <title>Stock Manager</title>                   
-        <link rel="stylesheet" type="text/css" id="theme" href="css/main.css"/>                        
+        <link rel="stylesheet" type="text/css" id="theme" href="css/main.css"/> 
+         <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+       <script>
+           
+    $(document).ready(function(){
+        $("input[type='button']").click(function(){
+            /*$('#categoryname').empty();
+            $('#categoryname').append("<option> Loading </option>");
+            $('#categoryname').append("<option value = '0'> Select Category Name </option>");*/
+
+            
+            var categoryName = $("input[name='categoryname']:checked").val()
+
+            if(categoryName){
+
+                $.ajax({
+                    type : 'GET',
+                    url : '/GroupProject/stockmanager/dropdown.php?categoryname='+categoryName,
+                    //data : 'categoryname=' + categoryName,
+                    dataType:'json',
+                    success : function(data){
+                        $('#itemname').empty();
+                        $('#itemname').append("<option value = '0'> Select Item Name </option>");
+                        //$('#itemname').html(html);
+                        data.forEach(function(data){
+                            $('#itemname').append('<option>'+data+'</option>');
+
+                        });
+                        
+                        
+                    }
+                });
+            }
+        });
+    });
+       </script>            -->            
     </head>
     <body>
         
@@ -11,28 +46,100 @@
         ?>
 
                 <ul class="breadcrumb">
-                    <h2>Page Heading here!</li></h2>
+                    <h2>New Reports</li></h2>
                 </ul>
- <div id="content">
-        <div class="panel">
-            <div class="panel-heading">
-                Stock Report
-            </div>
-            
-            <div class="panel-body">
-                <div class="newreport_date_and_reportID_section">
-                    <p>Report ID : </p>
-                    <p>Date</p>
-                </div>
-                
-                <div class="newreport_report_section">
-                </div>
-                
-            </div>
-        </div>
+ <div id="upper_panel_new_report">
+       <div class="col-md-4">
+            <button>Data Report</button>
+            <button>Graphical Report</button>
+       </div>
+
+        <div class="col-md-8">
+            <form method="post">
+                <label>Select the Category Type</label>
+
+                <input type="radio" name="categorytype" value="Sewing Machines" checked> Sewing Machines<br>
+                <input type="radio" name="categorytype" value="Sewing Machine Spare Parts"> Sewing Machine Spare Parts<br>
+                <input type="radio" name="categorytype" value="Tools"> Tools
+                <br><br>
+                <input type="submit" class="myButton" id="btnNewReportGenerateReport" name="btnNewReportGenerateReport" value="Generate Report"  />
+            </form> 
+
+
+
+     
+
+       </div>
+
 
     </div>
 
+    <div class="report_table">
+        <?php
+                include('database_connection.php');
+
+                   
+                if(isset($_POST['btnNewReportGenerateReport'])){
+                   
+                    if(isset( $_POST['categorytype'])){
+                     
+                    
+                    $categoryname = $_POST['categorytype'];
+                    echo "$categoryname";
+                  
+                    $sql = "SELECT * FROM item WHERE catagery = '$categoryname'";
+                         
+                   
+                   
+                    if($result = mysqli_query($dbcon, $sql)){
+                    if(mysqli_num_rows($result) > 0){
+                    
+                        echo "<table border = '0'>";
+                            echo "<tr bgcolor='#C0C0C0' width = '10px' >";
+                            
+                                echo "<th>Item ID</th>"; echo"<td width = 10%></td>";
+                                echo "<th >Item Name</th>";echo"<td width = 2%></td>";
+                                echo "<th>Category</th>";echo"<td width=2%></td>";
+                                echo "<th>Brand</th>";echo"<td width=2%></td>";
+                                echo "<th>Buying Price</th>";echo"<td width = 2%></td>";
+                                echo "<th>Selling Price</th>";echo"<td width=2%></td>";
+                                echo "<th>Quantity</th>";echo"<td width=2%></td>";
+                                
+                            echo "</tr>";
+                            
+
+                        while($row = mysqli_fetch_array($result)){
+                            echo "<tr>";
+                                echo "<td>" . $row['item_id'] . "</td>"; echo"<td ></td>";
+                                echo "<td>" . $row['itemName'] . "</td>";echo"<td></td>";
+                                echo "<td>" . $row['catagery'] . "</td>";echo"<td></td>";
+                                echo "<td>" . $row['brand'] . "</td>";echo"<td></td>";
+                                echo "<td>" . $row['buyingPrice'] . "</td>";echo"<td></td>";
+                                echo "<td>" . $row['sellingPrice'] . "</td>";echo"<td></td>";
+                                echo "<td>" . $row['stockQty'] . "</td>";echo"<td></td>";
+                                 
+
+                         echo "</td>";
+                            echo "</tr>";
+                        }
+                        echo "</table>";
+                        // Close result set
+                        mysqli_free_result($result);
+                    } else{
+                        echo "No records matching your query were found.";
+                }
+            } else{
+                echo "ERROR: Could not able to execute $sql. " . mysqli_error($dbcon);
+            }
+            mysqli_close($dbcon);
+                    }
+                }
+
+            ?>
+            
+
+
+    </div>
     
     <div id="footer"></div>
 </div>

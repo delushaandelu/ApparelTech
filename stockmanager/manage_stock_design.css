@@ -19,7 +19,7 @@
 	}
 
 .below_panel_add_item{
-	margin-top: 380px;
+	margin-top: 400px;
 	height:100px;
 	margin-left: 750px;
 	background-color: white;
@@ -84,6 +84,23 @@
 	margin-left: 80px;
 	
 	}
+.upper_panel_search_item{
+	height: 100px;
+	margin-left: 40px;
+	
+	
+	}
+
+.middle_panel_search_item{
+	margin-left: 450px;
+	height: 100px;
+}
+
+.below_panel_search_item{
+	height: 200px;
+	margin-left: 80px;
+	
+	}
 .delete_dropdown_effects{
 	width: 230px;
 
@@ -100,5 +117,5 @@
 
 
 .add_dropdown_effects{
-	width : 200px;
+	width : 220px;
 }

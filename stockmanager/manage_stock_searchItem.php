@@ -124,7 +124,7 @@
             <br><br>
            
         <form method="post" name="form" onSubmit="return check();">    
-            <div class="upper_panel_delete_item">
+            <div class="upper_panel_search_item">
             
                 <div class="col-md-4">
 
@@ -145,14 +145,14 @@
 
                 </div>
             </div>   
-            <div class="middle_panel_delete_item">
+            <div class="middle_panel_search_item">
 
                 <input type="submit" class="myButton" id="btnManageStockSearch2" name="btnManageStockSearch2" value="Search"  />
             </div>
-                
+                    
         </form>
         
-        <div class = "below_panel_delete_item">
+        <div class = "below_panel_search_item">
            
 
             <?php
