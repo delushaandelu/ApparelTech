@@ -89,7 +89,7 @@
                   
                     $sql = "SELECT * FROM item WHERE catagery = '$categoryname'";
                          
-                   
+                   $sum = 0;
                    
                     if($result = mysqli_query($dbcon, $sql)){
                     if(mysqli_num_rows($result) > 0){
@@ -104,7 +104,8 @@
                                 echo "<th>Buying Price</th>";echo"<td width = 2%></td>";
                                 echo "<th>Selling Price</th>";echo"<td width=2%></td>";
                                 echo "<th>Quantity</th>";echo"<td width=2%></td>";
-                                
+                                echo "<th>Stock Value</th>";echo"<td width=2%></td>";
+
                             echo "</tr>";
                             
 
@@ -117,11 +118,19 @@
                                 echo "<td>" . $row['buyingPrice'] . "</td>";echo"<td></td>";
                                 echo "<td>" . $row['sellingPrice'] . "</td>";echo"<td></td>";
                                 echo "<td>" . $row['stockQty'] . "</td>";echo"<td></td>";
+                                echo "<td>" . ($row['stockQty'] *  $row['buyingPrice'] ). "</td>";echo"<td></td>";
+                                $sum = $sum + ($row['stockQty'] *  $row['buyingPrice'] );
+                                
+
                                  
 
                          echo "</td>";
                             echo "</tr>";
                         }
+                        
+                        echo "<th>Total Stock Value </th>";
+                        echo "<th> $sum </th>";
+
                         echo "</table>";
                         // Close result set
                         mysqli_free_result($result);
