@@ -90,6 +90,7 @@
                     $sql = "SELECT * FROM item WHERE catagery = '$categoryname'";
                          
                    $sum = 0;
+                   $profit = 0;
                    
                     if($result = mysqli_query($dbcon, $sql)){
                     if(mysqli_num_rows($result) > 0){
@@ -105,6 +106,8 @@
                                 echo "<th>Selling Price</th>";echo"<td width=2%></td>";
                                 echo "<th>Quantity</th>";echo"<td width=2%></td>";
                                 echo "<th>Stock Value</th>";echo"<td width=2%></td>";
+                                echo "<th>Estimated Profit</th>";echo"<td width=2%></td>";
+
 
                             echo "</tr>";
                             
@@ -119,19 +122,28 @@
                                 echo "<td>" . $row['sellingPrice'] . "</td>";echo"<td></td>";
                                 echo "<td>" . $row['stockQty'] . "</td>";echo"<td></td>";
                                 echo "<td>" . ($row['stockQty'] *  $row['buyingPrice'] ). "</td>";echo"<td></td>";
+                                echo "<td>" . ($row['stockQty'] *  ($row['sellingPrice'] - $row['buyingPrice'] )). "</td>";echo"<td></td>";
                                 $sum = $sum + ($row['stockQty'] *  $row['buyingPrice'] );
-                                
+                                $profit = $profit + ($row['stockQty'] *  ($row['sellingPrice'] - $row['buyingPrice'] ));
 
                                  
 
                          echo "</td>";
                             echo "</tr>";
                         }
+
+                        echo " <th>Total Stock Value </th>";
                         
-                        echo "<th>Total Stock Value </th>";
                         echo "<th> $sum </th>";
+                       
+
+                        echo " <th>Total Estimated Profit </th>";
+                        
+                        echo "<th> $profit </th>";
+
 
                         echo "</table>";
+                        echo "<hr>";
                         // Close result set
                         mysqli_free_result($result);
                     } else{

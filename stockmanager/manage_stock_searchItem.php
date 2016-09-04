@@ -10,11 +10,10 @@
        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
        <script>
            
+    // This function is written to get item names from the database according to the user selected category name
     $(document).ready(function(){
         $('#categoryname').change(function(){
-            /*$('#categoryname').empty();
-            $('#categoryname').append("<option> Loading </option>");
-            $('#categoryname').append("<option value = '0'> Select Category Name </option>");*/
+           
 
             
             var categoryName = $(this).val();
@@ -43,7 +42,9 @@
     });
        </script>
 
+
        <script type="text/javascript">
+       //This function is written to get brand names from the database according to the user selected item name.
            
         $(document).ready(function(){
 
@@ -81,6 +82,7 @@
        
        </script>
        <script type="text/javascript">
+       //This is the validation checking part
            function check(){
                 if(document.form.categoryname.value == "Select Category Name"){
                     alert("Please select a Category Name");
@@ -128,7 +130,7 @@
             
                 <div class="col-md-4">
 
-                    
+                    <!-- This is the interface design for search items from the stock -->
                     <select id = "categoryname" name="categoryname" class="delete_dropdown_effects">
                         <option > Select Category Name</option>
                         <option value="Sewing Machines">Sewing Machines</option>
@@ -153,7 +155,7 @@
         </form>
         
         <div class = "below_panel_search_item">
-           
+           <!-- This php code will output the data about stock items according to the user's selection-->
 
             <?php
                 include('database_connection.php');
