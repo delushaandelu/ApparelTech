@@ -5,17 +5,19 @@
         <link rel="stylesheet" type="text/css" id="theme" href="css/main.css"/>
         <link rel="stylesheet" href="designs/template1.css" type="text/css" />
     </head>
-    <body>
+<body>
         
-        <?php
-            include("../config/stockmgrmenu.php");
-        ?>
+<?php
+    include("../config/stockmgrmenu.php");
+?>
 
-                <ul class="breadcrumb">
-                    <h2>Change Password here!</li></h2>
-                </ul>
-         <div id="content">
-        <div id="changepwd">
+<ul class="breadcrumb">
+    <h2>Change Password here!</li></h2>
+</ul>
+    
+    
+<div id="content">
+    <div id="changepwd">
         <form method="post">
             <table id="pwdtb" border="0" width="400" height="400">
 
@@ -24,10 +26,8 @@
                 <td id="table_font">Old Password*</td>
 
                 <td>
-                    <input type="text" name="oldpassword"  class="form-control">
+                    <input type="password" name="oldpassword"  class="form-control">
                 </td>
-
-
 
             </tr>
             <tr>
@@ -35,43 +35,41 @@
                 <td id="table_font">New Password*</td>
 
                 <td>
-                    <input type="text" name="newpassword"  class="form-control">
+                    <input type="password" name="newpassword"  class="form-control">
                 </td>
             </tr>
 
             <tr>
 
-                <td id="table_font">Conform Password*</td>
+                <td id="table_font">Confirm Password*</td>
 
                 <td>
-                    <input type="text" name="conformpassword"  class="form-control">
+                    <input type="password" name="confirmpassword"  class="form-control">
                 </td>
             </tr>
 
-            </table>
+        </table>
        
         <div id="pwd_button_sec">
 
         <div id="pwd_button_panel">
 
-            <input type="reset" id="button_effect" value="Reset" /><br><br>
-            <input type="submit" id="button_effect" name="changepswd" value="Change"/>
+            <input type="reset" class="btn btn-info" value="Reset" /><br><br>
+            <input type="submit" class="btn btn-info" name="changepswd" value="Change"/>
 
         </div>
         </div>
-             </form>
-        </div>
+    </form>
+</div>
 </div>
 
-   
-    <div id="footer">
+<div id="footer">
     	
-    </div>
 </div>
 
 <?php
 
-if(isset($_POST["changepswd"])){
+if(isset($_POST["changepswd"])){                 //call to changepswd method in User class.
     include('user.php');
     $myUser = new User();
     $myUser -> changepswd();
@@ -81,12 +79,13 @@ if(isset($_POST["changepswd"])){
 
 ?>
 
-        <script type="text/javascript" src="js/plugins/jquery/jquery.min.js"></script>
-        <script type="text/javascript" src="js/plugins/jquery/jquery-ui.min.js"></script>
-        <script type="text/javascript" src="js/plugins/bootstrap/bootstrap.min.js"></script>        
-        <script type="text/javascript" src="js/settings.js"></script>
-        <script type="text/javascript" src="js/plugins.js"></script>        
-        <script type="text/javascript" src="js/actions.js"></script>
+<script type="text/javascript" src="js/plugins/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="js/plugins/jquery/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/plugins/bootstrap/bootstrap.min.js"></script>        
+<script type="text/javascript" src="js/settings.js"></script>
+<script type="text/javascript" src="js/plugins.js"></script>        
+<script type="text/javascript" src="js/actions.js"></script>
+    
     </body>
 </html>
 

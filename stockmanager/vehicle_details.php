@@ -1,125 +1,93 @@
+
 <!DOCTYPE html>
 <html lang="en">
     <head>        
         <title>Stock Manager</title>                   
-        <link rel="stylesheet" type="text/css" id="theme" href="css/main.css"/>                        
-    </head>
-    <body>
-        
-        <?php
-            include("../config/stockmgrmenu.php");
-        ?>
-        <style type="text/css">
-        #vehicledisplaytb{
-            width: 600px;
-            height: 550px;
-        }
+        <link rel="stylesheet" type="text/css" id="theme" href="css/main.css"/> 
+        <link rel="stylesheet" href="designs/template1.css" type="text/css" />
     
-    </style>
-
-                <ul class="breadcrumb">
-                    <h2>Page Heading here!</li></h2>
-                </ul>
- <div id="content">
-        <div id ="top_section">
-
-            <div id = "top_left_vehicle">
-                <form method="post">
-                    <table id="vehicletb" border="0" width="500" height="500" >
-
-                        <tr>
-
-                            <td id="table_font">Vehicle Type</td>
-
-                            <td>
-                                <input type="text" name="vehicletype"  class="form-control">
-                            </td>
-
-
-
-                        </tr>
-                        <tr>
-
-                            <td id="table_font">Vehicle ID</td>
-
-                            <td>
-                                <input type="text" name="vehicleid"  class="form-control">
-                            </td>
-                        </tr>
-
-                        <tr>
-
-                            <td id="table_font">Vehicle Number</td>
-
-                            <td>
-                                <input type="text" name="vehiclenumber"  class="form-control">
-                            </td>
-                        </tr>
-                         <tr>
-
-                            <td id="table_font">Capacity</td>
-
-                            <td>
-                                <input type="text" name="vehiclecapacity"  class="form-control">
-                            </td>
-                        </tr>
-                    </table>
-             
-
-            <div id="top_right_section">
-                <div id="button1">
-                    <input type="submit" id="button_effect" name="VehicleInsert" value="Insert"/><br><br>
-                    <input type="submit" id="button_effect" name="VehicleSearch" value="Search" /><br><br>
-                    <input type="submit" id="button_effect" name="VehicleDelete" value="Delete" /><br><br>
-                    <input type="submit" id="button_effect" name="VehicleUpdate" value="Update"/> <br><br>
-                    <button type="button" id="button_effect">Clear</button> <br><br>
-                    <button type="reset" id="button_effect">Refresh</button>
-
-                </div>
-            </div>
-        </form>
-    </div>
-</div>
-    </div>
-    <div id="bottomvehicle">
-    
-    
-    </div>
-       
-    <div id="footer">
-        
-    </div>
-</div>
 <?php
-
-if(isset($_POST['VehicleInsert'])){
-    include('vehicle.php');
-    
-    $myVehicle = new Vehicle();
-    $myVehicle -> addVehicle();
-}
-if(isset($_POST['VehicleSearch'])){
-   include('vehicle.php');
-    
-    $myvehicle4 = new Vehicle();
-    $myvehicle4 -> searchVehicle(); 
-    
-    
-}
-if(isset($_POST['VehicleDelete'])){
-    include('vehicle.php');
-    $myvehicle2 = new Vehicle();
-    $myvehicle2 -> deleteVehicle();
-}
-
-if(isset($_POST['VehicleUpadate'])){
-    include('vehicle.php');
-    $myvehicle3 = new Vehicle();
-    $myvehicle3 -> updateVehicle();
-    
-}
+    include("../config/stockmgrmenu.php");
+     require("database_connection.php");   //connecting to database.
 ?>
 
+<ul class="breadcrumb">
+    <h2>Vehicle Details</li></h2>
+</ul>
+<div class = "panel">
+        
+    <style type="text/css">
+        #vehicledisplaytb{
+            margin-top:10%;
+            margin-left: 30%;
+            width: 500px;
+            height: 400px;}
+    </style>
+</head>
+<body>
+
+</br></br>
+
+<div id="content">
+    <ul class="nav nav-justified" >
+        <li id ="nav_tab_item_effect"><a href="vehicle_details_addVehicle.php">Add Vehicle</a></li>
+   	</ul>
+        <table class="table table-striped">
+            <tr class="title"><th>vehicle_id</th><th>vehicleNO</th><th>capacity</th><th>vehicletype</th><th>status</th></tr>
+                <?php 
+                    $sql = "select * from vehicle";
+                    $result = mysqli_query($dbcon,$sql);        
+                        while($row = mysqli_fetch_array($result)) {
+    
+                ?>
+                            <tr class="data">
+                            <td><?php echo $row['vehicle_id'] ?></td>
+                            <td><?php echo $row['vehicleNo'] ?></td>
+                            <td><?php echo $row['capacity'] ?></td>
+                            <td><?php echo $row['vehicleType'] ?></td>
+                            <td><?php echo $row['status'] ?></td>
+                            <td class="bt"><input type="button" class="btn btn-info" value=Delete onclick="location.href='vehicle_details.php?vehicle_id=<?php echo $row['vehicle_id'] ?>'"></td>
+                            <td class="bt"><input type="button" class="btn btn-info" value=update onclick="location.href='vehicle_details_updateVehicle.php?ID=<?php echo $row['vehicle_id'] ?>'" ></td>
+                            </tr>
+                <?php } ?>
+        </table>
+    
+              <?php
+       
+                if(isset($_GET['vehicle_id'])){
+            
+                    $id = $_GET['vehicle_id'];
+                    $sql= "delete from vehicle where vehicle_id = '$id'";
+                    $result=mysqli_query($dbcon,$sql);
+            
+                    $sqlupdatedriver="UPDATE driver SET vechicle_id='XXX' WHERE vechicle_id=$id";
+                    mysqli_query($dbcon,$sqlupdatedriver);
+            
+                        if($result){
+                            echo'<script language ="javascript">';
+                                echo'alert("Vehicle deleted succesfully")';
+                            echo'</script>'; }
+                        else{
+                            echo'<script language ="javascript">';
+                                echo'alert("Error")';
+                            echo'</script>'; }
+                }
+            
+           ?>
+    
+
+</div>
+<div id="bottomvehicle">
+    
+    
+</div>
+       
+<div id="footer">
+        
+</div>
+
+
+</div>
         <script type="text/javascript" src="js/plugins/jquery/jquery.min.js"></script>
         <script type="text/javascript" src="js/plugins/jquery/jquery-ui.min.js"></script>
         <script type="text/javascript" src="js/plugins/bootstrap/bootstrap.min.js"></script>        
@@ -128,7 +96,6 @@ if(isset($_POST['VehicleUpadate'])){
         <script type="text/javascript" src="js/actions.js"></script>
     </body>
 </html>
-
 
 
 

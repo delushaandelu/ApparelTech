@@ -1,169 +1,90 @@
+
 <!DOCTYPE html>
 <html lang="en">
     <head>        
         <title>Stock Manager</title>                   
-        <link rel="stylesheet" type="text/css" id="theme" href="css/main.css"/>                        
+        <link rel="stylesheet" type="text/css" id="theme" href="css/main.css"/> 
+        <link rel="stylesheet" href="designs/template1.css" type="text/css" />
     </head>
-    <body>
-        
-        <?php
-            include("../config/stockmgrmenu.php");
-        ?>
 
-                <ul class="breadcrumb">
-                    <h2>Page Heading here!</li></h2>
-                </ul>
-<style type="text/css">
+        
+<?php
+    include("../config/stockmgrmenu.php");
+     require("database_connection.php");
+ ?>
+
+<ul class="breadcrumb">
+    <h2>Driver Details</li></h2>
+</ul>
+<div class = "panel">
+        
+        <style type="text/css">
         #driverdisplaytb{
-            width: 600px;
-            height: 550px;
-        }
-    
-    </style>
-</head>
+            margin-top:10%;
+            margin-left: 30%;
+            width: 500px;
+            height: 400px;
+        }</style>
+    </head>
 <body>
 
 </br></br>
 
-
-   
+<div id="content">
+        <ul class="nav nav-justified" >
+            <li id ="nav_tab_item_effect"><a href="driver_details_addDriver.php">Add Driver</a></li>
+   	    </ul>
+ 
+        <table class="table table-striped">
+            <tr class="title"><th>driver_id</th><th>driverName</th><th>LicenceNo</th><th>driverAddress</th><th>Mobile No</th><th>vehicle_id</th></tr>
+                <?php 
+                    $sql = "select * from driver";
+                    $result = mysqli_query($dbcon,$sql);        
+                        while($row = mysqli_fetch_array($result)) {
     
-
-    <div id="content">
-        <div id ="top_section">
-
-            <div id = "top_left_driver">
-                <form method="post">
-                    <table id="drivertb" border="0" width="500" height="500" >
-
-                        <tr>
-
-                            <td id="table_font">Driver Name</td>
-
-                            <td>
-                                <input type="text" name="drivername"  class="form-control">
-                            </td>
-
-
-
-                        </tr>
-                        <tr>
-
-                            <td id="table_font">Driver ID</td>
-
-                            <td>
-                                <input type="text" name="driverid"  class="form-control">
-                            </td>
-                        </tr>
-
-                        <tr>
-
-                            <td id="table_font">Licence Number</td>
-
-                            <td>
-                                <input type="text" name="licencenumber"  class="form-control">
-                            </td>
-                        </tr>
-
-
-                        <tr>
-
-                            <td id="table_font">Contact</td>
-
-                        </tr>
-
-                        <tr>
-
-                            <td id="table_font" align="center">Mobile 01</td>
-
-                             <td>
-                                <input type="text" name="mobile1"  class="form-control" >
-                            </td>
-                        </tr>
-
-                        <tr>
-
-                            <td id="table_font" align="center">Mobile 02</td>
-
-                            <td>
-                                <input type="text" name="mobile2"  class="form-control" >
-                            </td>
-                        </tr>
-
-                        <tr>
-
-                            <td id="table_font">Address</td>
-
-                            <td>
-                                <input type="text" name="address"  class="form-control" >
-                            </td>
-                        </tr>
-                        <tr>
-
-                            <td id="table_font">Vehicle ID</td>
-
-                            <td>
-                                <input type="text" name="vehicleid"  class="form-control">
-                            </td>
-                        </tr>
-
-
-                    </table>
-             
-
-            <div id="top_right_section">
-                <div id="button1">
-                    <input type="submit" id="button_effect" name="DriverInsert" value="Insert"/><br><br>
-                    <input type="submit" id="button_effect" name="DriverSearch" value="Search" /><br><br>
-                    <input type="submit" id="button_effect" name="DriverDelete" value="Delete" /><br><br>
-                    <input type="submit" id="button_effect" name="DriverUpdate" value="Update"/> <br><br>
-                    <button type="button" id="button_effect">Clear</button> <br><br>
-                    <button type="reset" id="button_effect">Refresh</button>
-
-                </div>
-            </div>
-        </form>
-    </div>
-</div>
-    </div>
-    <div id="bottomdriver">
-    
-    
-    </div>
+                ?>
+                            <tr class="data">
+                            <td><?php echo $row['driver_id'] ?></td>
+                            <td><?php echo $row['driverName'] ?></td>
+                            <td><?php echo $row['LicenceNo'] ?></td>
+                            <td><?php echo $row['driverAddress'] ?></td>
+                            <td><?php echo $row['mobileNo'] ?></td>
+                            <td><?php echo $row['vechicle_id'] ?></td>
+                            <td class="bt"><input type="button" class="btn btn-info" value=Delete name="Delete" onclick="location.href='driver_details.php?driver_id=<?php echo $row['driver_id']?> & vehicle_id=<?php echo $row['vechicle_id'] ?>'"></td>
+                            <td class="bt"><input type="button" class="btn btn-info" value=update onclick="location.href='driver_details_updateDriver.php?ID=<?php echo $row['driver_id'] ?>'" ></td>
+                            </tr>
+                
+                <?php } ?>
+        </table>
+                <?php
        
-    <div id="footer">
+                    if(!empty($_GET['driver_id']) && !empty($_GET['vehicle_id']) ){
+            
+                        $vehicle_id=$_GET['vehicle_id'];
+                        $id = $_GET['driver_id'];
+                        $sql= "delete from driver where driver_id = '$id'";
+                        $result=$mysqli_query($dbcon,$sql);
+                            if($result){
+                                echo'<script language ="javascript">';
+                                    echo'alert("Driver deleted succesfully")';
+                                echo'</script>'; }
+            
+                        $sqlupdate="UPDATE vehicle SET status=0 WHERE vehicle_id=$vehicle_id ";
+                        mysqli_query($dbcon,$sqlupdate);
+                    }
+    
+                ?>
+</div>
+<div id="bottomdriver">
+    
+</div>
+       
+<div id="footer">
         
-    </div>
+</div>
 
-<?php
 
-if(isset($_POST['DriverInsert'])){
-    include('driver.php');
-    
-    $myDriver = new Driver();
-    $myDriver -> addDriver();
-}
-if(isset($_POST['DriverSearch'])){
-   include('driver.php');
-    
-    $myDriver4 = new Driver();
-    $myDriver4 -> searchDriver(); 
-    
-    
-}
-if(isset($_POST['DriverDelete'])){
-    include('driver.php');
-    $myDriver2 = new Driver();
-    $myDriver2 -> deleteDriver();
-}
-
-if(isset($_POST['DriverUpadate'])){
-    include('driver.php');
-    $myDriver3 = new Driver();
-    $myDriver3 -> updateDriver();
-    
-}
-?>
+</div>
         <script type="text/javascript" src="js/plugins/jquery/jquery.min.js"></script>
         <script type="text/javascript" src="js/plugins/jquery/jquery-ui.min.js"></script>
         <script type="text/javascript" src="js/plugins/bootstrap/bootstrap.min.js"></script>        
@@ -172,7 +93,6 @@ if(isset($_POST['DriverUpadate'])){
         <script type="text/javascript" src="js/actions.js"></script>
     </body>
 </html>
-
 
 
 

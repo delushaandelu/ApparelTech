@@ -37,7 +37,7 @@
                             <li class="xn-openable">
                                 <a href="#"><span class="fa fa-arrow-right"></span> Received P/O</a>
                                 <ul>
-                                    <li><a href="#"><span class="fa fa-align-center"></span> Manage P/O</a></li>
+                                    <li><a href="Purchase Order_ManagePurchaseOrder.php"><span class="fa fa-align-center"></span> Manage P/O</a></li>
                                     <li><a href="#"><span class="fa fa-table"></span> Invoice</a></li>
                                 </ul>
                             </li>
@@ -67,15 +67,17 @@
                         <ul>                            
                             <li><a href="#"><span class="fa fa-tasks"></span> Manage Delivery</a></li>
                             <li><a href="#"><span class="fa fa-file-text-o"></span> Delivery Reports</a></li>
-                            <li><a href="#"><span class="fa fa-list-alt"></span> Delivery Details</a></li>
-                            <li><a href="#"><span class="fa fa-arrow-right"></span> Vehicle Details</a></li>
+                            <li><a href="viewdelivery.php"><span class="fa fa-list-alt"></span> Delivery Details</a></li>
+                            <li><a href="driver_details.php"><span class="fa fa-arrow-right"></span> Driver Details</a></li>
+                            <li><a href="vehicle_details.php"><span class="fa fa-arrow-right"></span> Vehicle Details</a></li>
+                            
                         </ul>
                     </li>
                     <li class="xn-openable">
                         <a href="#"><span class="fa fa-arrows-h"></span><span class="xn-text"> Setting</span></a>
                         <ul>                            
                             <li><a href="#"><span class="fa fa-align-justify"></span> Change Username</a></li>
-                            <li><a href="#"><span class="fa fa-sort-alpha-desc"></span> Change Password</a></li>
+                            <li><a href="changepassword.php"><span class="fa fa-sort-alpha-desc"></span> Change Password</a></li>
                         </ul>
                     </li>
                                        

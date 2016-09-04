@@ -24,7 +24,7 @@ class Driver{
     var $Mobile2='';
 
     public function addDriver(){
-        require("database_connection1.php");
+        require("database_connection.php");
         $DriverName = $_POST["drivername"];
         $LicenceNumber = $_POST["licencenumber"];
         $Address=$_POST["address"];
@@ -32,7 +32,7 @@ class Driver{
         $Mobile1=$_POST["mobile1"];
         //$Mobile2=$_POST["mobile2"];
 
-        $sqlinsert="INSERT INTO driver(driverName,LicenceNo,driverAddress,vehicleid) VALUES('".$DriverName."','".$LicenceNumber."','".$Address."','".$VehicleId."')";
+        $sqlinsert="INSERT INTO driver(driverName,LicenceNo,driverAddress,vechicle_id) VALUES('".$DriverName."','".$LicenceNumber."','".$Address."','".$VehicleId."')";
         $result=mysqli_query($dbcon,$sqlinsert);
         if(!$result){
         echo "error";}
@@ -58,7 +58,7 @@ class Driver{
     }
         
     public function deleteDriver(){
-        require("database_connection1.php");
+        require("database_connection.php");
         $DriverID=$_POST["driverid"];
         $sqldelete = "DELETE FROM driver WHERE driverdriver_id='$DriverID'";
          $result=mysqli_query($dbcon,$sqldelete);
@@ -73,7 +73,7 @@ class Driver{
         
     }
     public function updateDriver(){
-        require("database_connection1.php");
+        require("database_connection.php");
         $DriverID=$_POST["driverid"];
         $DriverName = $_POST["drivername"];
         /*$LicenceNumber = $_POST["licencenumber"];

@@ -1,32 +1,53 @@
 <?php
 class User{
 public function changepswd(){
-    require("database_connection1.php");
+    require("database_connection.php");                //connecting to the database.
     $OldPassword=$_POST["oldpassword"];
     $NewPassword=$_POST["newpassword"];
-    $ConformPassword=$_POST["conformpassword"];
-    $sql="SELECT password FROM user WHERE user_id=1";
-    $result=mysqli_query($dbcon,$sql);
-    if(!$result){
-        echo"error";
-    }
-    $res=mysqli_fetch_array($result);
-    if($res['password']==$OldPassword){
-     if($NewPassword==$ConformPassword){
-         $updatepswd="UPDATE user SET password='$NewPassword' WHERE user_id=1";
-         $result1=mysqli_query($dbcon,$updatepswd);
-         echo "password changed successfully";
+    $ConfirmPassword=$_POST["confirmpassword"];
+    
+    if(!empty($_POST['oldpassword']) && !empty($_POST['newpassword']) && !empty($_POST['confirmpassword']) ){  //cheking input fields are filled.
+            $sql="SELECT password FROM user WHERE user_id=1";
+            $result=mysqli_query($dbcon,$sql);
+        if(!$result){
+            echo"error";}
+        
+            $res=mysqli_fetch_array($result);
+        if($res['password']==$OldPassword){               //cheking old password match with entered old password.
+            
+            if($NewPassword==$ConfirmPassword){                  //cheking new password match with entered confirm password.
+                
+                    $updatepswd="UPDATE user SET password='$NewPassword' WHERE user_id=1";        // change the password.
+                    $result1=mysqli_query($dbcon,$updatepswd);
+                        echo'<script language ="javascript">';
+                            echo'alert("password changed succesfully")';
+                        echo'</script>'; 
          
-         
-     }
-        else{
-            echo "Not match passwords";
-        }
+            }
+                else {
+                        echo'<script language ="javascript">';
+                            echo'alert("Not match passwords")';
+                        echo'</script>'; 
+                }   
 
-}
-    else{
-        echo"Not match with the original one";
+        }
+            else{
+                        echo'<script language ="javascript">';
+                            echo'alert("Not match with original one")';
+                        echo'</script>'; 
+            }
+        
+        
     }
+    else{
+                    echo'<script language ="javascript">';
+                        echo'alert("All fields shoud be filled")';
+                    echo'</script>'; 
+    }
+   
 }
 }
 ?>
+
+
+

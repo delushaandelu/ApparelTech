@@ -2,17 +2,18 @@
 <html lang="en">
     <head>        
         <title>Stock Manager</title>                   
-        <link rel="stylesheet" type="text/css" id="theme" href="css/main.css"/>                        
+        <link rel="stylesheet" type="text/css" id="theme" href="css/main.css"/>
+        <link rel="stylesheet" href="designs/template1.css" type="text/css" />
     </head>
     <body>
         
-        <?php
-            include("../config/stockmgrmenu.php");
-        ?>
+<?php
+    include("../config/stockmgrmenu.php");
+?>
 
-                <ul class="breadcrumb">
-                    <h2>Page Heading here!</li></h2>
-                </ul>
+<ul class="breadcrumb">
+    <h2>Page Heading here!</li></h2>
+</ul>
 <div id="content">
         <div id="topdelivery">
 
