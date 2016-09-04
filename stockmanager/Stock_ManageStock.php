@@ -11,6 +11,7 @@
        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>  
 
         <script type="text/javascript">
+        //This code is the validation code
            function check(){
           
                 if(document.form.categoryname.value == "0"){
@@ -190,7 +191,7 @@
                             	
                          </div>       
                             </form>
-                            
+                            <!-- This is related to add item. The add item function is in the item class. Here I created an object called myItem and called the addItem() function-->
                             <?php
 
                                 include ('Item.php');

@@ -9,13 +9,10 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
        <script>
-           
+        // This function is used to list down item names from the database according to the user's category selection
     $(document).ready(function(){
         $('#categoryname').change(function(){
-            /*$('#categoryname').empty();
-            $('#categoryname').append("<option> Loading </option>");
-            $('#categoryname').append("<option value = '0'> Select Category Name </option>");*/
-
+            
             
             var categoryName = $(this).val();
 
@@ -44,6 +41,7 @@
        </script>
 
        <script type="text/javascript">
+       // This function is used to list down brand names from the database according to the user's item name selection
            
         $(document).ready(function(){
 
@@ -78,7 +76,9 @@
     });
 
        </script>
+
        <script type="text/javascript">
+       // This code is written to delete items when user marked check boxes
            $(document).ready(function(){
 
             $('#btnManageStockDelete').click(function(){
@@ -89,9 +89,9 @@
                         id[i] = $(this).val();
                     });
                     if(id.length === 0){
-                        //$msg = "Please select atleast one check box";
+                       
                         alert("Please select atleast one check box");
-                        //echo '<script type = "text/javascript">alert("'.$msg.'")
+                        
                     }else{
                         $.ajax({
                             url : 'DeleteItem.php',
@@ -122,6 +122,7 @@
            });
        </script>
        <script type="text/javascript">
+       //This code is wriiten to do the validation checking
            function check(){
                 if(document.form.categoryname.value == "Select Category Name"){
                     alert("Please select a Category Name");
@@ -194,7 +195,7 @@
         </form>
         
         <div class = "below_panel_delete_item">
-           
+           <!-- The below php code is used to list down search items to delete-->
 
             <?php
                 include('database_connection.php');

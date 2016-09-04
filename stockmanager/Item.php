@@ -1,4 +1,5 @@
 <?php
+//This is the Item class which has the function addItem. This function is called when adding items into the stock.
 	class Item{
 		var $itemName = "";
 		var $brand = "";
