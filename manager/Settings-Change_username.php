@@ -34,7 +34,7 @@
                     Username
                 </td>
                 <td>
-                    <input type="text" name="Username" class="form-control">
+                    <input type="text" name="Username" class="form-control" required>
                 </td>
             </tr>
             <tr>
@@ -42,7 +42,7 @@
                     New Username
                 </td>
                 <td>
-                    <input type="text" name="New Username" class="form-control">
+                    <input type="text" name="New Username" class="form-control" required>
                 </td>
             </tr>
             <br><br>

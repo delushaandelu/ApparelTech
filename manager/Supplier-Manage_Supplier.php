@@ -3,6 +3,54 @@
 <head>
     <meta charset="utf-8">
     <title>Manager Admin</title>
+
+	<script language="javascript">
+		function check()
+		{
+
+			if(document.form1.name.value=="")
+			{
+				alert("Plese Enter your name");
+				document.form1.name.focus();
+				return false;
+			}
+
+			if(document.form1.location.value=="")
+			{
+				alert("Plese Enter Your location");
+				document.form1.location.focus();
+				return false;
+			}
+			if(document.form1.address.value=="")
+			{
+				alert("Plese Enter an address");
+				document.form1.cpass.focus();
+				return false;
+			}
+
+			if(document.form1.email.value=="")
+			{
+				alert("Plese Enter your Email Address");
+				document.form1.email.focus();
+				return false;
+			}
+			e=document.form1.email.value;
+			f1=e.indexOf('@');
+			f2=e.indexOf('@',f1+1);
+			e1=e.indexOf('.');
+			e2=e.indexOf('.',e1+1);
+			n=e.length;
+
+			if(!(f1>0 && f2==-1 && e1>0 && e2==-1 && f1!=e1+1 && e1!=f1+1 && f1!=n-1 && e1!=n-1))
+			{
+				alert("Please Enter valid Email");
+				document.form1.email.focus();
+				return false;
+			}
+			return true;
+		}
+	</script>
+
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="dist/css/sb-admin-2.css" rel="stylesheet">
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -27,7 +75,7 @@
         <div id="content">
 		<div id="top">
         	<div id="top-left">
-            	<form method="post" action="supplier.php">
+            	<form name="form1" method="post" action="supplier.php" onsubmit="return check();">
                 	<table border="0">
                     	<tr></tr>
                         <tr>
@@ -35,7 +83,7 @@
                             	Supplier name
 							</td>
                             <td>
-                            	<input type="text" name="name" class="form-control">
+                            	<input type="text" name="name" class="form-control" >
 								<br><br>
                             </td>
                         </tr>

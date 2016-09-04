@@ -22,7 +22,11 @@
                 <h1 class="page-header">Suppliers</h1>
             </div>
             <div class="2">
-
+                <form action="supplierSearch.php">
+                    <div class="col-xs-3">
+                        <button type="button" id="button2" class="btn btn-default" name="SearchSupplier" onclick="location.href='TestSearch.php'">Search</button>
+                    </div>
+                </form>
 
             </div>
         </div>
@@ -66,13 +70,6 @@
         $dbcon->close();
 
         ?>
-
-        <form action="supplierSearch.php">
-            <div class="col-xs-3">
-                <input type="text" name="email" placeholder="Search by email" class="form-control" size="35">
-                <button type="button" id="button2" class="btn btn-default" name="SearchSupplier">Search</button>
-            </div>
-        </form>
 			<p>&nbsp;</p>
 			<p>&nbsp;</p>
     </div>      

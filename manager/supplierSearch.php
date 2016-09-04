@@ -1,43 +1,56 @@
-<?php
-//get database connection
-include('database_connection.php');
-//define variables
-if(isset($_POST["SearchSupplier"])){
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>Manager Admin</title>
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="dist/css/sb-admin-2.css" rel="stylesheet">
+    <!--<link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="designs/template.css" type="text/css" /> -->
+    <script src="vendor/bootstrap/js/bootstrap.js"></script>
+    <script src="vendor/jquery/jquery.js"></script>
+</head>
 
-    $email=$_POST['email'];
+<body>
 
-    //query
-    $sql = "SELECT * FROM supplier WHERE email=$email";
+    <div class="container">
+        <div class="form-group">
+            <div class="input-group">
+                <span class="input-group-addon">Search</span>
+                <input type="text" name="searchText" id="searchText" placeholder="search by name" class="form-control"/>
+            </div>
+        </div>
+        <br />
+        <div id="result"></div>
+    </div>
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="vendor/metisMenu/metisMenu.min.js"></script>
+<script src="dist/js/sb-admin-2.js"></script>
 
-    if (mysqli_query($dbcon, $sql) === TRUE){
-        echo"search result...";
-        echo "<table class='table' style='border: solid 2px black;'>";
-        echo"<tr>
-                <th style='border: solid 2px black;'>Supplier ID </th>
-                <th style='border: solid 2px black;'>Name </th>
-                <th style='border: solid 2px black;'>E-mail </th>
-                <th style='border: solid 2px black;'>Address </th>
-                <th style='border: solid 2px black;'>Location </th>
-                <th style='border: solid 2px black;'>Telephone Number </th>
-                <th style='border: solid 2px black;'>Mobile Number </th>
-            </tr>";
+</body>
+</html>
+<script>
+    $(document).ready(function () {
+        $('#searchText').keyup(function () {
+            var txt = $(this).val();
+            if(txt != ''){
 
-            echo "<tr>
-                    <td style='border: solid 2px black;'><h5 align='center'>" . $row["supplier_id"]. "</h5></td>
-                    <td style='border: solid 2px black;'><h5 align='center'>" . $row["sname"]. "</h5></td>
-                    <td style='border: solid 2px black;'><h5 align='center'>" . $row["email"]. "</h5></td>
-                    <td style='border: solid 2px black;'><h5 align='center'>" . $row["address"]. "</td>
-                    <td style='border: solid 2px black;'><h5 align='center'>" . $row["location"]. "</h5></td>
-                    <td style='border: solid 2px black;'><h5 align='center'>" . $row["tele"]. "</h5></td>
-                    <td style='border: solid 2px black;'><h5 align='center'>" . $row["mobile"]. "</h5></td>
-                </tr>";
-        echo "</table>";
-    } else {
-        echo "0 results";
-    }
+            }
+            else{
+                $('#result').html('');
+                $.ajax({
+                    url:"manager/fetch.php",
+                    method:"post",
+                    data: {search:txt},
+                    dataType:"text",
+                    success:function (data) {
+                        $('#result').html(data);
+                    }
+                });
+            }
 
-    mysqli_close($dbcon);
+        });
 
-}
-
-?>
+    });
+</script>

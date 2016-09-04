@@ -35,7 +35,7 @@
                     Password
                 </td>
                 <td>
-                    <input type="password" name="Password" class="form-control">
+                    <input type="password" name="Password" class="form-control" required>
                 </td>
             </tr>
             <tr>
@@ -43,7 +43,7 @@
                     New Password
                 </td>
                 <td>
-                    <input type="password" name="New Password" class="form-control">
+                    <input type="password" name="New Password" class="form-control" required>
                     <label class="active">atleast 6 charactors with numbers and letters</label>
                 </td>
             </tr>

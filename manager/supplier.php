@@ -14,10 +14,7 @@ if(isset($_POST["insert"])){
     $sql = "INSERT INTO supplier(sname, email, address, location, tele, mobile) VALUES ('$supname','$email','$address','$loc','$tele','$mobi')";
 
     if (mysqli_query($dbcon, $sql) === TRUE){
-        echo "<script>";
-        echo "alert('Added supplier details successfully')";
-        echo "window.location='Supplier-Manage_Supplier.php'";
-        echo "</script>";
+        header("location:Supplier-Manage_Supplier.php");
     }
     else{
         echo "<script>";
