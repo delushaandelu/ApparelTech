@@ -113,6 +113,14 @@
                             </ul>
                         </li>
                         <li>
+                            <a href="#"><i class="fa fa-cloud-upload"></i> Backup<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="../manager/backup.php">Take Backup</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
                             <a href="#"><i class="fa fa-wrench fa-fw"></i> Setting<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
