@@ -7,7 +7,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html" style="background-color: #0a0a0a; font-size: 30px; color: white; margin-left: 10%" >&#9818Manager</a>
+                <a class="navbar-brand" href="index.html" style="background-color: #0a0a0a; font-size: 30px; color: white; margin-left: 10%" >Manager</a>
             </div>
             <ul class="nav navbar-top-links navbar-right">
                 <li class="dropdown">
@@ -37,7 +37,7 @@
                             </div>
                         </li>
                         <li>
-                            <a href="../manager/template.php"><i class="fa fa-dashboard fa-fw"></i> Home</a>
+                            <a href="../manager/home.php"><i class="fa fa-dashboard fa-fw"></i> Home</a>
                         </li>
                         <li>
                             <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Supplier<span class="fa arrow" style="color: white"></span></a>
