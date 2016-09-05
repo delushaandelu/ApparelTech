@@ -53,7 +53,7 @@ session_start();
     <?php
     if(isset($_GET['id'])){
         $id = $_GET['id'];
-        $sql= "delete * from orders where id = '$id'";
+        $sql= "delete * from orders where id = $id";
         mysqli_query($db,$sql);
 
         echo'<script language ="javascript">';

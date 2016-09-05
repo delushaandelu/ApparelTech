@@ -36,7 +36,7 @@ include 'dbConfig.php';
     <div id="products" class="row list-group">
         <?php
         //get rows query
-        $query = $db->query("SELECT * FROM item where catagery='Tool'");
+        $query = $db->query("SELECT * FROM item where catagery='Tools'");
         if($query->num_rows > 0){ 
             while($row = $query->fetch_assoc()){
         ?>

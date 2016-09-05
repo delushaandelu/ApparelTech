@@ -27,11 +27,11 @@
 			<form method="POST">
 			<label for="username">Username</label>
 			<br/>
-			<input type="text" name="username">
+			<input type="text" name="username" required>
 			<br/>
 			<label for="password">Password</label>
 			<br/>
-			<input type="password" name="password">
+			<input type="password" name="password" required>
 			<br/>
 			<button type="submit" name="signin">Sign In</button>
             
