@@ -18,26 +18,33 @@
 <div id="page-wrapper">
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">Home</h1>
+
+            <!-- heading -->
+            <h1 class="page-header">Search here!</h1>
         </div>
         
     </div>
     <div class="row">
-        <div id="content">
-            <div id="top">
+        <div class="top0">
+            <!--search form of supplier-->
                 <form method="post" action="Test.php">
-                    <tr>
-                        <td id="table-font" width="60%">
-                            Supplier name
-                        </td>
-                        <td>
-                            <input type="text" name="search" class="form-control" required/>
-                            <br><br>
-                        </td>
-                    </tr>
-                    <input type="submit" value="Search" />
+                    <table border="0">
+                        <tr></tr>
+                        <tr>
+                            <td id="table-font" width="60%">
+                                Supplier name
+                            </td>
+                            <!--textbox-->
+                            <td>
+                                <input type="text" name="search" class="form-control" required/>
+                                <br><br>
+                            </td>
+                        </tr>
+                        <br><br>
+                        <!--button-->
+                        <input type="submit" value="Search" />
+                    </table>
                 </form>
-            </div>
         </div>
     </div>      
 </div>

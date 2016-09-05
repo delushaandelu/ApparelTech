@@ -22,12 +22,12 @@
                 <h1 class="page-header">Stock Details</h1>
             </div>
             <div class="2">
-                <form action="demo_form.asp">
+                <form method="post" action="searchStock.php">
                     <div class="col-xs-3">
-                        <input type="text" name="searchitem" placeholder="Search by item id" class="form-control" size="35">
+                        <input type="text" name="id" placeholder="Search by item id" class="form-control" size="35">
                     </div>
                     <div>
-                        <button type="button" id="button2" class="btn btn-default" name="searchbutton">Search</button>
+                        <button type="submit" id="button2" class="btn btn-default">Search</button>
                     </div>
 
 
@@ -59,13 +59,13 @@
 
             while($row = $result->fetch_assoc()) {
                 echo "<tr class='danger'>
-                    <td>" . $row["item_id"]. "</td>
-                    <td>" . $row["itemName"]. "</td>
-                    <td>" . $row["buyingPrice"]. "</td>
-                    <td>" . $row["sellingPrice"]. "</td>
-                    <td>" . $row["brand"]. "</td>
-                    <td>" . $row["catagery"]. "</td>
-                    <td>" . $row["stockQty"]. "</td>
+                    <td><h5 align='center'>" . $row["item_id"]. "</h5></td>
+                    <td><h5 align='center'>" . $row["itemName"]. "</h5></td>
+                    <td><h5 align='center'>" . $row["buyingPrice"]. "</h5></td>
+                    <td><h5 align='center'>" . $row["sellingPrice"]. "</h5></td>
+                    <td><h5 align='center'>" . $row["brand"]. "</h5></td>
+                    <td><h5 align='center'>" . $row["catagery"]. "</h5></td>
+                    <td><h5 align='center'>" . $row["stockQty"]. "</h5></td>
                 </tr>";
             }
             echo "</table>";

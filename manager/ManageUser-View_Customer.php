@@ -23,19 +23,20 @@
                 <h1 class="page-header">Customers</h1>
             </div>
             <div class="2">
-                <form>
+                <form method="post" action="searchCustomer.php">
                     <div class="col-xs-3">
-                        <input type="text" name="customer_id" placeholder="Search by id" class="form-control" size="35">
+                        <input type="text" placeholder="Search by id" name="id" class="form-control" size="35">
                     </div>
                     <div>
                         <button type="submit" id="button2" class="btn btn-default">Search</button>
                     </div>
+                </form>
 
 
                     <br>
             </div>
         </div>
-        
+
     </div>
     <div class="row">
         <?php

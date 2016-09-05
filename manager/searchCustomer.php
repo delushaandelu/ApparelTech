@@ -20,12 +20,12 @@ include ("../config/managermenu.php");
     <div class="row">
         <div class="col-lg-12">
             <!--page heading-->
-            <h1 class="page-header">Supplier Search Results</h1>
+            <h1 class="page-header">Customer Search Results</h1>
         </div>
 
     </div>
     <div class="row">
-    <button name="back" id="button1" value="Back" onclick="location.href='Supplier-View_Supplier.php'">&#9754 Back</button>
+    <button name="back" id="button1" value="Back" onclick="location.href='ManageUser-View_Customer.php'">&#9754 Back</button>
         <br><br>
 
         <?php
@@ -33,11 +33,11 @@ include ("../config/managermenu.php");
 include ('database_connection.php');
 $output='';
 
-if(isset($_POST["search"])) {
-    $search = $_POST['search'];
+if(isset($_POST["id"])) {
+    $id = $_POST['id'];
 
     //query
-    $sql = "SELECT * FROM supplier WHERE sname LIKE '%$search%'";
+    $sql = "SELECT * FROM customer WHERE customer_id LIKE '%$id%'";
     $result = mysqli_query($dbcon, $sql);
     if (mysqli_num_rows($result) > 0) {
 
@@ -45,24 +45,29 @@ if(isset($_POST["search"])) {
         $output .= '<div class="table-responsive">
                     <table class="table table-striped">
                         <tr> 
-                            <th>Supplier ID</th>
-                            <th>Supplier Name</th>
-                            <th>E mail</th>
+                            <th>Customer ID</th>
+                            <th>NIC</th>
+                            <th>Customer Name</th>
+                            <th>Designation</th>
+                            <th>Company Name</th>
                             <th>Address</th>
-                            <th>Location</th>
-                            <th>Telephone</th>
+                            <th>E mail</th>
                             <th>Mobile</th>
+                            <th>Telephone</th>
+                            
                         </tr>';
         while ($row = mysqli_fetch_array($result)) {
             $output .= '
                     <tr align="center">
-                        <td><h5 align="center">' . $row["supplier_id"] . '</h5></td>
-                        <td><h5 align="center">' . $row["sname"] . '</h5></td>
-                        <td><h5 align="center">' . $row["email"] . '</h5></td>
+                        <td><h5 align="center">' . $row["customer_id"] . '</h5></td>
+                        <td><h5 align="center">' . $row["nic"] . '</h5></td>
+                        <td><h5 align="center">' . $row["fullname"] . '</h5></td>
+                        <td><h5 align="center">' . $row["designation"] . '</h5></td>
+                        <td><h5 align="center">' . $row["companyName"] . '</h5></td>
                         <td><h5 align="center">' . $row["address"] . '</h5></td>
-                        <td><h5 align="center">' . $row["location"] . '</h5></td>
-                        <td><h5 align="center">' . $row["tele"] . '</h5></td>
+                        <td><h5 align="center">' . $row["email"] . '</h5></td>
                         <td><h5 align="center">' . $row["mobile"] . '</h5></td>
+                        <td><h5 align="center">' . $row["tele"] . '</h5></td>
                         </tr>';
         }
         echo $output;

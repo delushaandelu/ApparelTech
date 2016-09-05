@@ -4,32 +4,33 @@
     <meta charset="utf-8">
     <title>Manager Admin</title>
 
+	<!--handle validation-->
 	<script language="javascript">
 		function check()
 		{
-
-			if(document.form1.name.value=="")
-			{
+			<!--validation for name-->
+			if(document.form1.name.value==""){
 				alert("Plese Enter your name");
 				document.form1.name.focus();
 				return false;
 			}
 
-			if(document.form1.location.value=="")
-			{
+			<!--validation for location-->
+			if(document.form1.location.value==""){
 				alert("Plese Enter Your location");
 				document.form1.location.focus();
 				return false;
 			}
-			if(document.form1.address.value=="")
-			{
+
+			<!--validation for address-->
+			if(document.form1.address.value==""){
 				alert("Plese Enter an address");
 				document.form1.cpass.focus();
 				return false;
 			}
 
-			if(document.form1.email.value=="")
-			{
+			<!--validation for email-->
+			if(document.form1.email.value==""){
 				alert("Plese Enter your Email Address");
 				document.form1.email.focus();
 				return false;
@@ -41,8 +42,7 @@
 			e2=e.indexOf('.',e1+1);
 			n=e.length;
 
-			if(!(f1>0 && f2==-1 && e1>0 && e2==-1 && f1!=e1+1 && e1!=f1+1 && f1!=n-1 && e1!=n-1))
-			{
+			if(!(f1>0 && f2==-1 && e1>0 && e2==-1 && f1!=e1+1 && e1!=f1+1 && f1!=n-1 && e1!=n-1)){
 				alert("Please Enter valid Email");
 				document.form1.email.focus();
 				return false;
@@ -67,6 +67,7 @@
 <div id="page-wrapper">
     <div class="row">
         <div class="col-lg-12">
+			<!--page heading-->
             <h1 class="page-header">Manage Supplier</h1>
         </div>
         
@@ -75,6 +76,8 @@
         <div id="content">
 		<div id="top">
         	<div id="top-left">
+
+				<!--handle form-->
             	<form name="form1" method="post" action="supplier.php" onsubmit="return check();">
                 	<table border="0">
                     	<tr></tr>
@@ -150,13 +153,15 @@
                         </table>
 
                   </div>
+					<!--button-->
                   <div id="top-right">
-									<input type="submit" class="btn btn-default btn-lg active" value="save" name="insert">
-
-
-
-</div>
+					  <input type="submit" class="btn btn-default btn-lg active" value="save" name="insert">
+				  </div>
 			</form>
+		</div>
+		</div>
+</div>
+
 			<p>&nbsp;</p>
 			<p>&nbsp;</p>
     </div>

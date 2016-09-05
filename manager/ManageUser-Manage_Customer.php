@@ -23,11 +23,14 @@
     </div>
     
     <?php
+    //include database connection
         include('database_connection.php');
-    
+
+    //select query
     $sql = "SELECT customer_id, nic, fullname, designation, companyname, address, email, mobile, tele FROM customer";
     $result = $dbcon->query($sql);
 
+    //print results
     if ($result->num_rows > 0) {
         echo "<table class='table table-striped' >";
         echo"<tr>
@@ -54,12 +57,12 @@
                         <td>" . $row["email"] . "</td>
                         <td>" . $row["mobile"] . "</td>
                         <td >" . $row["tele"] . "</td>
-                        <td><div class='btn btn-info edit-btn margin-right-1em' name='add'>
+                        <td><button class='btn btn-info edit-btn margin-right-1em' name='add'>
                         <span class='glyphicon glyphicon-edit'></span>
-                    </div></td>
-                        <td> <div class='btn btn-danger delete-btn' name='delete'>
+                    </button></form></td>
+                        <td> <button class='btn btn-danger delete-btn' name='delete'>
                         <span class='glyphicon glyphicon-remove'></span> 
-                    </div> </td>
+                    </button> </td>
                     </tr>";
 
         }
