@@ -42,7 +42,7 @@
                         </tr>
                         <br><br>
                         <!--button-->
-                        <input type="submit" value="Search" />
+                        <input type="submit" id="button" value="Search" />
                     </table>
                 </form>
         </div>

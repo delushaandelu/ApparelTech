@@ -27,7 +27,7 @@
                         <input type="text" name="id" placeholder="Search by item id" class="form-control" size="35">
                     </div>
                     <div>
-                        <button type="submit" id="button2" class="btn btn-default">Search</button>
+                        <button type="submit" id="button" class="btn btn-default">Search</button>
                     </div>
 
 

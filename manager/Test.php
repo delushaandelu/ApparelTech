@@ -25,7 +25,7 @@ include ("../config/managermenu.php");
 
     </div>
     <div class="row">
-    <button name="back" id="button1" value="Back" onclick="location.href='Supplier-View_Supplier.php'">&#9754 Back</button>
+    <button name="back" id="button" value="Back" onclick="location.href='Supplier-View_Supplier.php'">&#9754 Back</button>
         <br><br>
 
         <?php

@@ -22,18 +22,10 @@
         </div>
     </div>
     
-    <?php
-    //include database connection
-        include('database_connection.php');
 
-    //select query
-    $sql = "SELECT customer_id, nic, fullname, designation, companyname, address, email, mobile, tele FROM customer";
-    $result = $dbcon->query($sql);
 
-    //print results
-    if ($result->num_rows > 0) {
-        echo "<table class='table table-striped' >";
-        echo"<tr>
+        <table class='table table-striped' >
+        <tr>
                     <th >Customer ID </th>
                     <th >NIC </th>
                     <th >Full Name </th>
@@ -43,36 +35,105 @@
                     <th >e-mail </th>
                     <th >Mobile </th>
                     <th >Telephone </th>
+                    <th>Action</th>
                 
-                </tr>";
+                </tr>
 
+        <?php
+        //include database connection
+        include('database_connection.php');
+
+        //select query
+        $sql = "SELECT customer_id, nic, fullname, designation, companyname, address, email, mobile, tele FROM customer";
+        $result = $dbcon->query($sql);
         while ($row = $result->fetch_assoc()) {
-            echo "<tr>
-                        <td>" . $row["customer_id"] . "</td>
-                        <td >" . $row["nic"] . "</td>
-                        <td >" . $row["fullname"] . "</td>
-                        <td >" . $row["designation"] . "</td>
-                        <td >" . $row["companyname"] . "</td>
-                        <td >" . $row["address"] . "</td>
-                        <td>" . $row["email"] . "</td>
-                        <td>" . $row["mobile"] . "</td>
-                        <td >" . $row["tele"] . "</td>
-                        <td><button class='btn btn-info edit-btn margin-right-1em' name='add'>
-                        <span class='glyphicon glyphicon-edit'></span>
-                    </button></form></td>
-                        <td> <button class='btn btn-danger delete-btn' name='delete'>
-                        <span class='glyphicon glyphicon-remove'></span> 
+        ?>
+
+
+            <tr>
+                        <td><?php echo $row['customer_id'] ?></td>
+                        <td><?php echo $row['nic'] ?></td>
+                        <td><?php echo $row['fullname'] ?></td>
+                        <td><?php echo $row['designation'] ?></td>
+                        <td><?php echo $row['companyname'] ?></td>
+                        <td><?php echo $row['address'] ?></td>
+                        <td><?php echo $row['email'] ?></td>
+                        <td><?php echo $row['mobile'] ?></td>
+                        <td><?php echo $row['tele'] ?></td>
+                <td class="bt"><input type="button" class="btn btn-info" value="Accept" onclick="location.href='ManageUser-Manage_Customer.php?cst_id=<?php echo $row['customer_id'] ?>'"></td>
+                        <td class="bt"><input type="button" class="btn btn-info" value="Reject" data-toggle="modal" data-target="#myModal"  onclick="location.href='ManageUser-Manage_Customer.php?customer_id=<?php echo $row['customer_id'] ?>'"></td>
                     </button> </td>
-                    </tr>";
 
+                <div class="modal fade" id="myModal" role="dialog">
+                    <div class="modal-dialog">
+
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                            </div>
+                            <div class="modal-body">
+                                <p>Customer Rejected</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+                    </tr>
+        <?php } ?>
+    </table>";
+
+
+
+<?php
+    if(isset($_GET['customer_id'])){
+
+    $id = $_GET['customer_id'];
+    $sql= "delete from customer where customer_id = '$id'";
+    $result=mysqli_query($dbcon,$sql);
+
+        if($result){
+            echo'<script language ="javascript">';
+            echo'alert("customer rejected succesfully")';
+            echo 'window.location ="\'ManageUser-Manage_Customer.php\'" ';
+            echo'</script>';
+            }
+        else{
+            echo'<script language ="javascript">';
+            echo'alert("Error")';
+            echo'</script>'; }
+    }
+?>
+
+    <?php
+    if(isset($_GET['cst_id'])){
+    $cid=$_GET['cst_id'];
+
+        $copy_query = "INSERT INTO user (user_id,username,password,accessLevel)
+    SELECT customer.customer_id, customer.username, customer.password,0
+    FROM customer
+    WHERE customer_id=$cid";
+        $result1=mysqli_query($dbcon,$copy_query);
+
+        if($result1){
+            echo'<script language ="javascript">';
+            echo'alert("customer rejected succesfully")';
+            echo 'window.location ="\'ManageUser-Manage_Customer.php\'" ';
+            echo'</script>';
         }
-
-        echo "</table>";
-    } else {
-        echo "0 results";
+        else{
+            echo'<script language ="javascript">';
+            echo'alert("Error")';
+            echo'</script>'; }
     }
     ?>
-
 
     <p>&nbsp;</p>
     <p>&nbsp;</p>

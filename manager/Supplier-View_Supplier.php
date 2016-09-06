@@ -24,7 +24,7 @@
             <div class="2">
                 <form action="supplierSearch.php">
                     <div class="col-xs-3">
-                        <button type="button" id="button2" class="btn btn-default" name="SearchSupplier" onclick="location.href='TestSearch.php'">Search</button>
+                        <button type="button" id="button" class="btn btn-default" name="SearchSupplier" onclick="location.href='TestSearch.php'">Search</button>
                     </div>
                 </form>
 

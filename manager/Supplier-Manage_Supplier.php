@@ -155,7 +155,7 @@
                   </div>
 					<!--button-->
                   <div id="top-right">
-					  <input type="submit" class="btn btn-default btn-lg active" value="save" name="insert">
+					  <input type="submit" id="button" class="btn btn-default btn-lg active" value="save" name="insert">
 				  </div>
 			</form>
 		</div>
