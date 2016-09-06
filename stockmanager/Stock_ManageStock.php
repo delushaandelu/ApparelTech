@@ -100,7 +100,7 @@
                                                                                                 
 
                                                 <select id = "categoryname" name="categoryname" class="add_dropdown_effects">
-                                                    <option value="0"> Select Category Name</option>
+                                                    <option value="0"> Select Category Name</option></br>
                                                     <option value="Sewing Machines">Sewing Machines</option>
                                                     <option value="Sewing Machine Spare Parts">Sewing Machine Spare Parts</option>
                                                     <option value="Tools">Tools</option>

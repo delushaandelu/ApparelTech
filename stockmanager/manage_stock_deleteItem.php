@@ -171,7 +171,7 @@
                 <div class="col-md-4">
 
                     
-                    <select id = "categoryname" name="categoryname" class="delete_dropdown_effects">
+                    <select id = "categoryname" name="categoryname" class="btn btn-primary dropdown-toggle">
                         <option > Select Category Name</option>
                         <option value="Sewing Machines">Sewing Machines</option>
                         <option value="Sewing Machine Spare Parts">Sewing Machine Spare Parts</option>
@@ -179,11 +179,11 @@
                     </select>
                 </div>       
                 <div class="col-md-4">       
-                    <select id = "itemname" name="itemname" class="delete_dropdown_effects"></select>
+                    <select id = "itemname" name="itemname" class="btn btn-success dropdown-toggle"></select>
 
                 </div>
                 <div class="col-md-4">        
-                    <select id = "brandname" name="brandname" class="delete_dropdown_effects"></select>
+                    <select id = "brandname" name="brandname" class="btn btn-info dropdown-toggle"></select>
 
                 </div>
             </div>   

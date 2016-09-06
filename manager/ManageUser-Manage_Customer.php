@@ -35,7 +35,7 @@
                     <th >e-mail </th>
                     <th >Mobile </th>
                     <th >Telephone </th>
-                    <th>Action</th>
+                    <th colspan="2">Action</th>
                 
                 </tr>
 
@@ -130,7 +130,7 @@
         }
         else{
             echo'<script language ="javascript">';
-            echo'alert("Error")';
+            echo'alert("This is your exsisting customer!")';
             echo'</script>'; }
     }
     ?>

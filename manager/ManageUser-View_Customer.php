@@ -46,30 +46,30 @@
             $result = $dbcon->query($sql);
 
             if ($result->num_rows > 0) {
-                echo "<table class='table table-striped' style='border: solid 2px black;'>";
+                echo "<table class='table table-striped'>";
                 echo"<tr>
-                    <th style='border: solid 2px black;'>Customer ID </th>
-                    <th style='border: solid 2px black;'>NIC </th>
-                    <th style='border: solid 2px black;'>Full Name </th>
-                    <th style='border: solid 2px black;'>Designation </th>
-                    <th style='border: solid 2px black;'>Company Name </th>
-                    <th style='border: solid 2px black;'>Address </th>
-                    <th style='border: solid 2px black;'>e-mail </th>
-                    <th style='border: solid 2px black;'>Mobile </th>
-                    <th style='border: solid 2px black;'>Telephone </th>
+                    <th>Customer ID </th>
+                    <th>NIC </th>
+                    <th>Full Name </th>
+                    <th>Designation </th>
+                    <th>Company Name </th>
+                    <th>Address </th>
+                    <th>e-mail </th>
+                    <th>Mobile </th>
+                    <th>Telephone </th>
                 </tr>";
 
                 while($row = $result->fetch_assoc()) {
                     echo "<tr>
-                        <td style='border: solid 2px black;'>" . $row["customer_id"]. "</td>
-                        <td style='border: solid 2px black;'>" . $row["nic"]. "</td>
-                        <td style='border: solid 2px black;'>" . $row["fullname"]. "</td>
-                        <td style='border: solid 2px black;'>" . $row["designation"]. "</td>
-                        <td style='border: solid 2px black;'>" . $row["companyname"]. "</td>
-                        <td style='border: solid 2px black;'>" . $row["address"]. "</td>
-                        <td style='border: solid 2px black;'>" . $row["email"]. "</td>
-                        <td style='border: solid 2px black;'>" . $row["mobile"]. "</td>
-                        <td style='border: solid 2px black;'>" . $row["tele"]. "</td>
+                        <td>" . $row["customer_id"]. "</td>
+                        <td>" . $row["nic"]. "</td>
+                        <td>" . $row["fullname"]. "</td>
+                        <td>" . $row["designation"]. "</td>
+                        <td>" . $row["companyname"]. "</td>
+                        <td>" . $row["address"]. "</td>
+                        <td>" . $row["email"]. "</td>
+                        <td>" . $row["mobile"]. "</td>
+                        <td>" . $row["tele"]. "</td>
                     </tr>";
                 }
                 echo "</table>";

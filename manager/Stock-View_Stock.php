@@ -46,7 +46,7 @@
         $result = $dbcon->query($sql);
 
         if ($result->num_rows > 0) {
-            echo "<table class='table'>";
+            echo "<table class='table table-hover'>";
             echo"<tr class='info'>
                 <th>Item ID </th>
                 <th>Item Name </th>
@@ -58,7 +58,7 @@
             </tr>";
 
             while($row = $result->fetch_assoc()) {
-                echo "<tr class='danger'>
+                echo "<tr>
                     <td><h5 align='center'>" . $row["item_id"]. "</h5></td>
                     <td><h5 align='center'>" . $row["itemName"]. "</h5></td>
                     <td><h5 align='center'>" . $row["buyingPrice"]. "</h5></td>
