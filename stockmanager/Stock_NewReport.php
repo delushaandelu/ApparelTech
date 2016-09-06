@@ -62,7 +62,7 @@
                 <input type="radio" name="categorytype" value="Sewing Machine Spare Parts"> Sewing Machine Spare Parts<br>
                 <input type="radio" name="categorytype" value="Tools"> Tools
                 <br><br>
-                <input type="submit" class="myButton" id="btnNewReportGenerateReport" name="btnNewReportGenerateReport" value="Generate Report"  />
+                <input type="submit" class="btn btn-success" id="btnNewReportGenerateReport" name="btnNewReportGenerateReport" value="Generate Report"  />
             </form> 
 
 
@@ -95,7 +95,7 @@
                     if($result = mysqli_query($dbcon, $sql)){
                     if(mysqli_num_rows($result) > 0){
                     
-                        echo "<table border = '0'>";
+                        echo "<table border = '0' class='table table-striped'>";
                             echo "<tr bgcolor='#C0C0C0' width = '10px' >";
                             
                                 echo "<th>Item ID</th>"; echo"<td width = 10%></td>";

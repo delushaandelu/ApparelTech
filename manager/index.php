@@ -11,7 +11,7 @@ if(isset($_POST['login'])){
     $username = $_POST['username'];
     $password = $_POST['password'];
    
-    $result = mysqli_query($conn, 'select * from user where username="'.$username.'" and password="'.$password.'"');
+    $result = mysqli_query($conn, 'select * from user where username="'.$username.'" and password="'.$password.'" and accessLevel="1" ');
     if (mysqli_num_rows($result)==1){
         header('location: home.php');
     }else
