@@ -54,9 +54,6 @@
                             <a href="#"><i class="fa fa-edit fa-fw"></i> Stock<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="../manager/Stock-Manage_Stock.php">Manage stock</a>
-                                </li>
-                                <li>
                                     <a href="../manager/Stock-View_Stock.php">View Stock</a>
                                 </li>
                                 <li>
