@@ -21,7 +21,7 @@
                     </li>
                     <li class="xn-title">Controls</li>                    
                     <li>
-                        <a href="#"><span class="fa fa-desktop"></span> <span class="xn-text"> Home</span></a>
+                        <a href="HomePage.php"><span class="fa fa-desktop"></span> <span class="xn-text"> Home</span></a>
                     </li>
                     <li class="xn-openable">
                         <a href="#"><span class="fa fa-columns"></span> <span class="xn-text"> Stock</span></a>

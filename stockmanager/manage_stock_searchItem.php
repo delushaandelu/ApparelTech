@@ -59,7 +59,7 @@
                     type : 'GET',
                     url : '/GroupProject/stockmanager/dropdown2.php?itemname='+itemName,
                     
-                    //data : 'categoryname=' + categoryName,
+                   
                     dataType:'json',
                     success : function(data){
                          $('#brandname').empty();
@@ -139,11 +139,11 @@
                     </select>
                 </div>       
                 <div class="col-md-4">       
-                    <select id = "itemname" name="itemname" class="btn btn-success dropdown-toggle"></select>
+                    <select id = "itemname" name="itemname" class="btn btn-info dropdown-toggle"></select>
 
                 </div>
                 <div class="col-md-4">        
-                    <select id = "brandname" name="brandname" class="btn btn-info dropdown-toggle"></select>
+                    <select id = "brandname" name="brandname" class="btn btn-primary dropdown-toggle"></select>
 
                 </div>
             </div>   
@@ -178,7 +178,7 @@
                     if($result = mysqli_query($dbcon, $sql)){
                     if(mysqli_num_rows($result) > 0){
                     
-                        echo "<table border = '0'>";
+                        echo "<table border = '0' class='table table-hover'>";
                             echo "<tr bgcolor='#C0C0C0' width = '10px' >";
                             
                                 echo "<th>Item ID</th>"; echo"<td width = 10%></td>";

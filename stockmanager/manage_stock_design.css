@@ -57,26 +57,26 @@
 }
 
 #below_panel_search_item{
-	margin-left:100px;
+	
 	height:300px;
 	
 	}
 
 #upper_panel_search_item{
 	height:200px;
-	margin-left:250px;
+
 	}
         
 .upper_panel_delete_item{
 	height: 100px;
-	margin-left: 40px;
+	
 	
 	
 	}
 
 .middle_panel_delete_item{
-	margin-left: 450px;
 	height: 100px;
+}
 }
 
 .below_panel_delete_item{
@@ -86,19 +86,18 @@
 	}
 .upper_panel_search_item{
 	height: 100px;
-	margin-left: 40px;
 	
 	
 	}
 
 .middle_panel_search_item{
-	margin-left: 450px;
+	
 	height: 100px;
 }
 
 .below_panel_search_item{
 	height: 200px;
-	margin-left: 80px;
+	
 	
 	}
 .delete_dropdown_effects{

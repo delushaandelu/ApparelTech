@@ -179,11 +179,11 @@
                     </select>
                 </div>       
                 <div class="col-md-4">       
-                    <select id = "itemname" name="itemname" class="btn btn-success dropdown-toggle"></select>
+                    <select id = "itemname" name="itemname" class="btn btn-info dropdown-toggle"></select>
 
                 </div>
                 <div class="col-md-4">        
-                    <select id = "brandname" name="brandname" class="btn btn-info dropdown-toggle"></select>
+                    <select id = "brandname" name="brandname" class="btn btn-primary dropdown-toggle"></select>
 
                 </div>
             </div>   

@@ -1,0 +1,38 @@
+.myButton {
+	background-color:#1b9474;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	border-radius:8px;
+	border:1px solid #566963;
+	display:inline-block;
+	cursor:pointer;
+	color:#120e12;
+	font-family:Arial;
+	font-size:17px;
+	padding:11px 66px;
+	text-decoration:none;
+	width: 300px;
+	height: 100px;
+
+	text-shadow:0px 0px 0px #2b665e;
+}
+.myButton:hover {
+	background-color:#6c7c7c;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+.section1{
+	height: 280px;
+}
+
+.section2{
+	height: 130px;
+}
+
+.section3{
+	height: 130px;
+}
+
