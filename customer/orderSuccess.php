@@ -29,7 +29,13 @@ if(!isset($_REQUEST['id'])){
     <h1>Successfully Ordered!</h1>
 <div class="container">
     </br></br></br></br></br>
-    <h3 align="center" class="bg-primary">Your order has submitted successfully. Order ID is #<?php echo $_GET['id']; ?></h3>
+<div class="panel panel-primary">
+                    <div class="panel-heading" align="center">Success!</div>
+                    <div class="panel-body">
+                     <h3 align="center" >Your order has submitted successfully. Order ID is #<?php echo $_GET['id']; ?></h3>
+                    </div>
+                </div>
+   
 </div>
 </div>
 </body>

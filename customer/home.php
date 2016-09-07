@@ -19,8 +19,7 @@
 
 <!-- page content -->
 <div class="right_col" role="main">
-    <h1 align="center">Welcome to online service side in Priyantha Enterprices</h1>
-    
+    <h1 align="center">Welcome to Online Shop!</h1>
     <div id = info>
                 <div class="panel panel-primary">
                     <div class="panel-heading" align="center">Here you are!</div>
