@@ -21,13 +21,13 @@
 
                 <div class="section1">
                     <div class="col-md-4">
-                        <button type="button" class="myButton">Manage Stock</button>
+                        <button type="button" class="myButton"><i class="fa fa-cogs fa-2x" aria-hidden="true"></i> Manage Stock</button>
                     </div>
                     <div class="col-md-4">
-                        <button type="button" class="myButton">New Report</button>
+                        <button type="button" class="myButton"><i class="fa fa-file-pdf-o fa-2x" aria-hidden="true"></i> New Report</button>
                     </div>
                     <div class="col-md-4">
-                        <button type="button" class="myButton">Previous Reports</button>
+                        <button type="button" class="myButton"><i class="fa fa-file-archive-o fa-2x" aria-hidden="true"></i> Previous Reports</button>
                     </div>
                 </div>
 
@@ -35,13 +35,13 @@
                     
 
                     <div class="col-md-4">
-                        <button type="button" class="myButton">Received Purshase Orders</button>
+                        <button type="button" class="myButton"><i class="fa fa-file-powerpoint-o fa-2x" aria-hidden="true"></i> Received Purshase Orders</button>
                     </div>
                     <div class="col-md-4">
-                        <button type="button" class="myButton">Create Purchase Orders</button>
+                        <button type="button" class="myButton"><i class="fa fa-hdd-o fa-2x" aria-hidden="true"></i> Create Purchase Orders</button>
                     </div>
                     <div class="col-md-4">
-                        <button type="button" class="myButton">Manage Rent</button>
+                        <button type="button" class="myButton"><i class="fa fa-folder-open-o  fa-2x" aria-hidden="true"></i> Manage Rent</button>
                     </div>
                     
                     
@@ -53,13 +53,13 @@
                     
 
                     <div class="col-md-4">
-                        <button type="button" class="myButton">View Rent Reports</button>
+                        <button type="button" class="myButton"><i class="fa fa-folder-o fa-2x" aria-hidden="true"></i> View Rent Reports</button>
                     </div>
                     <div class="col-md-4">
-                        <button type="button" class="myButton">Manage Delivery</button>
+                        <button type="button" class="myButton"><i class="fa fa-cubes fa-2x" aria-hidden="true"></i> Manage Delivery</button>
                     </div>
                     <div class="col-md-4">
-                        <button type="button" class="myButton">Delivery Reports</button>
+                        <button type="button" class="myButton"><i class="fa fa-building-o fa-2x" aria-hidden="true"></i> Delivery Reports</button>
                     </div>
                     
                     
@@ -72,13 +72,13 @@
                     
 
                     <div class="col-md-4">
-                        <button type="button" class="myButton">Delivery Details</button>
+                        <button type="button" class="myButton"><i class="fa fa-deviantart fa-2x" aria-hidden="true"></i>Delivery Details</button>
                     </div>
                     <div class="col-md-4">
-                        <button type="button" class="myButton">Change Username</button>
+                        <button type="button" class="myButton"><i class="fa fa-user fa-2x" aria-hidden="true"></i> Change Username</button>
                     </div>
                     <div class="col-md-4">
-                        <button type="button" class="myButton">Change Password</button>
+                        <button type="button" class="myButton"><i class="fa fa-unlock-alt fa-2x" aria-hidden="true"></i> Change Password</button>
                     </div>
                     
                     
