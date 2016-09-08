@@ -8,6 +8,8 @@
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="designs/test123.css" type="text/css" />
     <link rel="stylesheet" href="designs/template.css" type="text/css" />
+    <script src="js/sweetalert-dev.js"></script>
+    <link rel="stylesheet" href="js/sweetalert.css">
 
 </head>
 
@@ -62,30 +64,30 @@
                     <td><h5 align='center'><?php echo $row['tele'] ?></h5></td>
                     <td><h5 align='center'><?php echo $row['mobile'] ?></h5></td>
 
-                    <td class="bt"><input type="button" id="button" class="btn btn-info" value="Delete"onclick="location.href='Supplier-View_Supplier.php?supplier_id=<?php echo $row['supplier_id'] ?>'"></td>
+                    <td class="bt"><input type="button" id="button" class="btn btn-info" value="Delete" onclick="location.href='Supplier-View_Supplier.php?supplier_id=<?php echo $row['supplier_id'] ?>'"></td>
                 </tr>
-            <?php }
-                $dbcon->close();
-                ?>
+            <?php } ?>
+
 
             </table>
         <?php
             if(isset($_GET['supplier_id'])){
 
                 $id = $_GET['supplier_id'];
+                
                 $sql= "DELETE FROM supplier WHERE supplier_id = '$id'";
                 $result=mysqli_query($dbcon,$sql);
         
                 if($result){
                     echo'<script language ="javascript">';
-                    echo'alert("supplier deleted succesfully")';
-                    echo 'window.location ="\'supplier-View_Supplier.php\'" ';
+                    echo "swal({  title: 'Supplier deleted successfully!', text: '', type: 'success', confirmButtonText: 'Done!'}, function(){window.location.href='Supplier-View_Supplier.php'});";
                     echo'</script>';
                 }
                 else{
                     echo'<script language ="javascript">';
-                    echo'alert("Error")';
-                    echo'</script>'; }
+                    echo "swal({  title: 'Error occurs while deleting!', text: '', type: 'error', confirmButtonText: 'Done!'}, function(){window.location.href='Supplier-View_Supplier.php'});";
+                    echo'</script>';
+                }
             }
         ?>
 
