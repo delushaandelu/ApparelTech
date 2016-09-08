@@ -21,10 +21,17 @@
 
                 <div class="section1">
                     <div class="col-md-4">
+<<<<<<< HEAD
                         <button onclick="location.href = 'Stock_ManageStock.php';" type="button" class="myButton">Manage Stock</button>
                     </div>
                     <div class="col-md-4">
                         <button onclick="location.href = 'Stock_NewReport.php';" type="button" class="myButton"><a hrefNew Report</button>
+=======
+                        <button type="button" class="myButton">Manage Stock</button>
+                    </div>
+                    <div class="col-md-4">
+                        <button type="button" class="myButton">New Report</button>
+>>>>>>> origin/master
                     </div>
                     <div class="col-md-4">
                         <button type="button" class="myButton">Previous Reports</button>

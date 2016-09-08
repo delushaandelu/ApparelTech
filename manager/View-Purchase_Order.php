@@ -7,6 +7,7 @@
     <link href="dist/css/sb-admin-2.css" rel="stylesheet">
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="designs/template.css" type="text/css" />
+    <link rel="stylesheet" href="designs/test123.css" type="text/css" />
 </head>
 
 <body>
@@ -20,6 +21,9 @@
         <div class="col-lg-12">
             <h1 class="page-header">Purchase Order Details</h1>
         </div>
+        <div class="2">
+            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="&#x26B2   Search by order id..." style="width: 300px">
+        </div>
         
     </div>
     <div class="row">
@@ -27,24 +31,26 @@
 
         include('database_connection.php');
 
-        $sql = "SELECT customer_id, order_id, po_date, status FROM purchaseorder";
+        $sql = "SELECT p_id, customer_id, totalprice, created, status FROM purchasereport";
         $result = $dbcon->query($sql);
 
         if ($result->num_rows > 0) {
-            echo "<table class='table' style='border: solid 2px black;'>";
+            echo "<table class='table' id='myTable' >";
             echo"<tr>
-                <th style='border: solid 2px black;'>Customer ID </th>
-                <th style='border: solid 2px black;'>Order ID </th>
-                <th style='border: solid 2px black;'>Purchase Order Date </th>
-                <th style='border: solid 2px black;'>Status </th>
+                <th><h5 align='center'> Purchase Order ID </h5></th>
+                <th><h5 align='center'>Customer ID </h5></th>
+                <th><h5 align='center'>Total Price </h5></th>
+                <th><h5 align='center'>Purchase Order Date </h5></th>
+                <th><h5 align='center'>Status </h5></th>
             </tr>";
 
             while($row = $result->fetch_assoc()) {
                 echo "<tr>
-                    <td style='border: solid 2px black;'>" . $row["customer_id"]. "</td>
-                    <td style='border: solid 2px black;'>" . $row["order_id"]. "</td>
-                    <td style='border: solid 2px black;'>" . $row["po_date"]. "</td>
-                    <td style='border: solid 2px black;'>" . $row["status"]. "</td>
+                    <td><h5 align='center'>" . $row["p_id"]. "</h5></td>
+                    <td><h5 align='center'>" . $row["customer_id"]. "</h5></td>
+                    <td><h5 align='center'>" . $row["totalprice"]. "</h5></td>
+                    <td><h5 align='center'>" . $row["created"]. "</h5></td>
+                    <td><h5 align='center'>" . $row["status"]. "</h5></td>
                 </tr>";
             }
             echo "</table>";
@@ -55,6 +61,26 @@
         $dbcon->close();
 
         ?>
+
+        <script>
+            function myFunction() {
+                var input, filter, table, tr, td, i;
+                input = document.getElementById("myInput");
+                filter = input.value.toUpperCase();
+                table = document.getElementById("myTable");
+                tr = table.getElementsByTagName("tr");
+                for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[0];
+                    if (td) {
+                        if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].style.display = "";
+                        } else {
+                            tr[i].style.display = "none";
+                        }
+                    }
+                }
+            }
+        </script>
 
 
     </div>      

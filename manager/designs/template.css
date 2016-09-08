@@ -109,9 +109,9 @@ img
 #button{
 	border-radius:5px;
 	width:80px;
-	height:30px;
+	height:35px;
 	color:#FFFFFF;
-	background-color:#008B8B;
+	background-color:#00aa88;
 }
 
 #button:hover{

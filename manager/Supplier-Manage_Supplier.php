@@ -10,14 +10,14 @@
 		{
 			<!--validation for name-->
 			if(document.form1.name.value==""){
-				alert("Plese Enter your name");
+				window.alert("Plese Enter your name");
 				document.form1.name.focus();
 				return false;
 			}
 
 			<!--validation for location-->
 			if(document.form1.location.value==""){
-				alert("Plese Enter Your location");
+				window.alert("Plese Enter Your location");
 				document.form1.location.focus();
 				return false;
 			}
@@ -135,7 +135,7 @@
                         	<td id="table-font" width="60%">
                             	Address
 							</td>
-                            <td><input type="text" name="address" rows="3" class="form-control">
+                            <td><input type="text" name="address" class="form-control">
                               <br><br>
  						    </td>
 						  </tr>
