@@ -68,7 +68,7 @@
                         $result=mysqli_query($dbcon,$sql);
                             if($result){
                                 echo'<script language ="javascript">';
-                                    echo'swal({  title: 'Item Inserted!', text: '', type: 'success', confirmButtonText: 'Done!'}, function(){ window.location.href='../../admin/item.jsp'; });';
+                                echo"swal({  title: 'Driver Deleted!', text: '', type: 'success', confirmButtonText: 'Done!'}, function(){window.location.href='driver_details.php'});";
                                 echo'</script>'; }
             
                         $sqlupdate="UPDATE vehicle SET status=0 WHERE vehicle_id=$vehicle_id ";

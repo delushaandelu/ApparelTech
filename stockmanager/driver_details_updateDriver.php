@@ -2,7 +2,9 @@
 <html lang="en">
     <head>        
         <title>Stock Manager</title>                   
-        <link rel="stylesheet" type="text/css" id="theme" href="css/main.css"/>                        
+        <link rel="stylesheet" type="text/css" id="theme" href="css/main.css"/> 
+         <script src="js/sweetalert-dev.js"></script>
+        <link rel="stylesheet" href="js/sweetalert.css">
     </head>
 <body>
         
@@ -30,13 +32,13 @@
         $sql= "UPDATE driver SET driverName = '$driverName',LicenceNo='$LicenceNo',driverAddress='$driverAddress',mobileNo='$mobileNo',vechicle_id='$vehicleid' WHERE driver_id = $driver_id";
         
             if(!mysqli_query($dbcon,$sql)){
-                echo'<script language ="javascript">';
-                    echo'alert("Error")';
-                echo'</script>'; 
+               echo'<script language ="javascript">';
+                    echo "swal({  title: 'Error!', text: '', type: 'error', confirmButtonText: 'Done!'}, function(){window.location.href='driver_details.php'});";
+                echo'</script>';
             }
             else{
-                echo'<script language ="javascript">';
-                    echo'alert("Driver Updated succesfully")';
+                 echo'<script language ="javascript">';
+                    echo "swal({  title: 'Driver Deleted!', text: '', type: 'success', confirmButtonText: 'Done!'}, function(){window.location.href='driver_details.php'});";
                 echo'</script>';
             }
         

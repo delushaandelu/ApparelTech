@@ -2,7 +2,9 @@
 <html lang="en">
     <head>        
         <title>Stock Manager</title>                   
-        <link rel="stylesheet" type="text/css" id="theme" href="css/main.css"/>                        
+        <link rel="stylesheet" type="text/css" id="theme" href="css/main.css"/>
+        <script src="js/sweetalert-dev.js"></script>
+        <link rel="stylesheet" href="js/sweetalert.css">
     </head>
     <body>
         
@@ -32,7 +34,7 @@
                             <td><?php echo $row['created'] ?></td>
                             <td class="bt"><input type="button" class="btn btn-info" value=Reject onclick="location.href='Purchase Order_ManagePurchaseOrder.php?id=<?php echo $row['id'] ?>'"></td>
                             <td class="bt"><input type="button" class="btn btn-info" value=Accept onclick="location.href='Purchase Order_ManagePurchaseOrder.php?ID=<?php echo $row['id'] ?>'" ></td>
-                            <td class="bt"><input type="button" class="btn btn-info" value=view onclick="location.href='Purchase Order_ManagePurchaseOrder.php?vi=<?php echo $row['id'] ?>'" ></td>
+                            <td class="bt"><input type="button" class="btn btn-info" value=view onclick="location.href='PurchaseOrder_viewPurchaseOrder.php?vi=<?php echo $row['id'] ?>'" ></td>
                             </tr>
                 
                         <?php } ?>
@@ -43,32 +45,6 @@
                         <?php
        
       
-            
-                        if(isset($_GET['vi'])){
-            
-            
-                            $id = $_GET['vi'];
-                            $sql= "select quantity from order_items where order_id=$id";
-                            $result=mysqli_query($dbcon,$sql);
-           
-                            while( $res=mysqli_fetch_assoc($result)){
-                                echo $res['quantity'];}
-                                    if(!$result){
-                                        echo"query error";
-                                    }
-                                $sql1="select stockQty from item,order_items where item.item_id=order_items.product_id and order_id=$id ";
-                                $result1=mysqli_query($dbcon,$sql1);
-                                    while( $res1=mysqli_fetch_assoc($result1)){
-                                        echo $res1['stockQty'];}
-            
-                                    if(!$result1){
-                                        echo"query error2";
-                                    }
-            
-            
-            
-            
-                        }
                         if(isset($_GET['ID'])){
                             $id=$_GET['ID'];
                             
@@ -81,10 +57,12 @@
            
                                 if($resultinsert){
                                     echo'<script language ="javascript">';
-                                        echo'alert("Purchase order accepted succesfully")';
+                                    echo "swal({  title: 'Purchase order Accepted!', text: '', type: 'success', confirmButtonText: 'Done!'}, function(){window.location.href='Purchase Order_ManagePurchaseOrder.php'});";
                                     echo'</script>'; 
                                 }else{
-                                    echo"error";
+                                    echo'<script language ="javascript">';
+                                        echo "swal({  title: 'Error!', text: '', type: 'error', confirmButtonText: 'Done!'}, function(){window.location.href='Purchase Order_ManagePurchaseOrder.php'});";
+                                    echo'</script>';
                                 }
             
             
@@ -100,10 +78,12 @@
            
                                 if($result && $result1){
                                     echo'<script language ="javascript">';
-                                        echo'alert("Purchase order deleted succesfully")';
-                                    echo'</script>'; 
+                                        echo "swal({  title: 'Purchase order Deleted!', text: '', type: 'success', confirmButtonText: 'Done!'}, function(){window.location.href='Purchase Order_ManagePurchaseOrder.php'});";
+                                    echo'</script>';
                                 }else{
-                                    echo"error";
+                                    echo'<script language ="javascript">';
+                                        echo "swal({  title: 'Error!', text: '', type: 'error', confirmButtonText: 'Done!'}, function(){window.location.href='Purchase Order_ManagePurchaseOrder.php'});";
+                                    echo'</script>';
                                 }
             
             

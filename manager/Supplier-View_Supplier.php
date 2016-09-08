@@ -7,6 +7,10 @@
     <link href="dist/css/sb-admin-2.css" rel="stylesheet">
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="designs/test123.css" type="text/css" />
+    <link rel="stylesheet" href="designs/template.css" type="text/css" />
+    <script src="js/sweetalert-dev.js"></script>
+    <link rel="stylesheet" href="js/sweetalert.css">
+
 </head>
 
 <body>
@@ -29,15 +33,9 @@
     </div>
     <br><br>
     <div class="row">
-        <?php
-        include('database_connection.php');
 
-        $sql = "SELECT * FROM supplier";
-        $result = $dbcon->query($sql);
-
-        if ($result->num_rows > 0) {
-            echo "<table class='table' style='border: 0;' id='myTable'>";
-            echo"<tr>
+            <table class='table' style='border: 0;' id='myTable'>
+                <tr>
                 <th><h4 align='center'>Supplier ID </h4></th>
                 <th><h4 align='center'>Name </h4></th>
                 <th><h4 align='center'>E-mail </h4></th>
@@ -46,26 +44,51 @@
                 <th><h4 align='center'>Telephone Number </h4></th>
                 <th><h4 align='center'>Mobile Number </h4></th>
                 <th><h4 align='center'>Action </h4></th>
-            </tr>";
+            </tr>
 
-            while($row = $result->fetch_assoc()) {
-                echo "<tr>
-                    <td><h5 align='center'>" . $row["supplier_id"]. "</h5></td>
-                    <td><h5 align='center'>" . $row["sname"]. "</h5></td>
-                    <td><h5 align='center'>" . $row["email"]. "</h5></td>
-                    <td><h5 align='center'>" . $row["address"]. "</td>
-                    <td><h5 align='center'>" . $row["location"]. "</h5></td>
-                    <td><h5 align='center'>" . $row["tele"]. "</h5></td>
-                    <td><h5 align='center'>" . $row["mobile"]. "</h5></td>
-                </tr>";
+                <?php
+                include('database_connection.php');
+
+                $sql = "SELECT * FROM supplier";
+                $result = $dbcon->query($sql);
+
+                while($row = $result->fetch_assoc()) {
+                ?>
+
+                <tr>
+                    <td><h5 align='center'><?php echo $row['supplier_id'] ?></h5></td>
+                    <td><h5 align='center'><?php echo $row['sname'] ?></h5></td>
+                    <td><h5 align='center'><?php echo $row['email'] ?></h5></td>
+                    <td><h5 align='center'><?php echo $row['address'] ?></h5></td>
+                    <td><h5 align='center'><?php echo $row['location'] ?></h5></td>
+                    <td><h5 align='center'><?php echo $row['tele'] ?></h5></td>
+                    <td><h5 align='center'><?php echo $row['mobile'] ?></h5></td>
+
+                    <td class="bt"><input type="button" id="button" class="btn btn-info" value="Delete" onclick="location.href='Supplier-View_Supplier.php?supplier_id=<?php echo $row['supplier_id'] ?>'"></td>
+                </tr>
+            <?php } ?>
+
+
+            </table>
+        <?php
+            if(isset($_GET['supplier_id'])){
+
+                $id = $_GET['supplier_id'];
+                
+                $sql= "DELETE FROM supplier WHERE supplier_id = '$id'";
+                $result=mysqli_query($dbcon,$sql);
+        
+                if($result){
+                    echo'<script language ="javascript">';
+                    echo "swal({  title: 'Supplier deleted successfully!', text: '', type: 'success', confirmButtonText: 'Done!'}, function(){window.location.href='Supplier-View_Supplier.php'});";
+                    echo'</script>';
+                }
+                else{
+                    echo'<script language ="javascript">';
+                    echo "swal({  title: 'Error occurs while deleting!', text: '', type: 'error', confirmButtonText: 'Done!'}, function(){window.location.href='Supplier-View_Supplier.php'});";
+                    echo'</script>';
+                }
             }
-            echo "</table>";
-        } else {
-            echo "0 results";
-        }
-
-        $dbcon->close();
-
         ?>
 
         <script>
