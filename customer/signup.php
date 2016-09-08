@@ -4,6 +4,8 @@
 <head>
 	<meta charset="utf-8">
 	<title>ApperalTech</title>
+    <script src="js/sweetalert-dev.js"></script>
+    <link rel="stylesheet" href="js/sweetalert.css">
     <?php
         include ("../config/database.php");
     ?>

@@ -10,6 +10,8 @@ session_start();
     <link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="build/css/custom.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/cancelPurchase.css" type="text/css">
+    <script src="js/sweetalert-dev.js"></script>
+    <link rel="stylesheet" href="js/sweetalert.css">
   </head>
 
   <body class="nav-md">
@@ -57,8 +59,8 @@ session_start();
         mysqli_query($db,$sql);
 
         echo'<script language ="javascript">';
-        echo'alert("Job deleted succesfully")';
-        echo'</script>'; 
+        echo"swal({  title: 'Your purchase has cancelled!', text: '', type: 'success', confirmButtonText: 'Done!'}, function(){window.location.href='cancelPurchase.php'});";
+        echo'</script>';
 
     }
     ?>

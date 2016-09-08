@@ -1,3 +1,6 @@
+<script src="js/sweetalert-dev.js"></script>
+<link rel="stylesheet" href="js/sweetalert.css">
+
 <?php
 include('dbConfig.php');
 if(isset($_POST["sumbit"])){
@@ -18,15 +21,14 @@ if(isset($_POST["sumbit"])){
 
 if (mysqli_query($db, $sql) === TRUE) {
     
-        header("location:index.php");
-        echo "<script>";
-        echo "alert('Your information sent for approvel! have a good day')";
-        echo "</script>";
+        echo'<script language ="javascript">';
+        echo"swal({  title: 'Your request sent for the approvel. Have a good day!', text: '', type: 'success', confirmButtonText: 'Done!'}, function(){window.location.href='index.php'});";
+        echo'</script>';
     } else {
 
-        echo "<script>";
-        echo "alert('ERROR: Check your information again!')";
-        echo "</script>";
+        echo'<script language ="javascript">';
+        echo"swal({  title: 'Re-check your submition.', text: '', type: 'error', confirmButtonText: 'Done!'}, function(){window.location.href='signup.php'});";
+        echo'</script>';
     }
 
     mysqli_close($db);

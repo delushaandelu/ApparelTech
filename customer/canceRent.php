@@ -10,6 +10,8 @@ session_start();
     <link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="build/css/custom.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/cancelRent.css" type="text/css">
+    <script src="js/sweetalert-dev.js"></script>
+    <link rel="stylesheet" href="js/sweetalert.css">
   </head>
 
   <body class="nav-md">
