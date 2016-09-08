@@ -7,6 +7,7 @@
     <link href="dist/css/sb-admin-2.css" rel="stylesheet">
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="designs/template.css" type="text/css" />
+    <link rel="stylesheet" href="designs/test123.css" type="text/css" />
 </head>
 
 <body>
@@ -28,27 +29,27 @@
         include('database_connection.php');
 
         $sql = "SELECT * FROM driver";
-        //$sql = "SELECT contactNo FROM drivercontact";
         $result = $dbcon->query($sql);
 
         if ($result->num_rows > 0) {
-            echo "<table class='table'>";
+            echo "<table class='table' id='myTable' >";
             echo"<tr class='success'>
-                <th style='border: solid 2px black;'>Driver ID </th>
-                <th style='border: solid 2px black;'>Driver Name </th>
-                <th style='border: solid 2px black;'>Licence Number </th>
-                <th style='border: solid 2px black;'>Address </th>
-                <th style='border: solid 2px black;'>Vehicle ID </th>
-                <th style='border: solid 2px black;'>Contact No </th>
+                <th>Driver ID </th>
+                <th>Driver Name </th>
+                <th>Licence Number </th>
+                <th>Address </th>
+                <th>Vehicle ID </th>
+                <th>Contact No </th>
             </tr>";
 
             while($row = $result->fetch_assoc()) {
-                echo "<tr class='danger'>
-                    <td style='border: solid 2px black;'>" . $row["driver_id"]. "</td>
-                    <td style='border: solid 2px black;'>" . $row["driverName"]. "</td>
-                    <td style='border: solid 2px black;'>" . $row["LicenceNo"]. "</td>
-                    <td style='border: solid 2px black;'>" . $row["driverAddress"]. "</td>
-                    <td style='border: solid 2px black;'>" . $row["vechicle_id"]. "</td>
+                echo "<tr>
+                    <td><h5 align='center'> " . $row["driver_id"]. "</h5></td>
+                    <td><h5 align='center'>" . $row["driverName"]. "</h5></td>
+                    <td><h5 align='center'>" . $row["LicenceNo"]. "</h5></td>
+                    <td><h5 align='center'>" . $row["driverAddress"]. "</h5></td>
+                    <td><h5 align='center'>" . $row["vechicle_id"]. "</h5></td>
+                    <td><h5 align='center'>" . $row["mobileNo"]. "</h5></td>
                     
                 </tr>";
             }

@@ -64,7 +64,9 @@
 
                     <td class="bt"><input type="button" id="button" class="btn btn-info" value="Delete"onclick="location.href='Supplier-View_Supplier.php?supplier_id=<?php echo $row['supplier_id'] ?>'"></td>
                 </tr>
-            <?php } ?>
+            <?php }
+                $dbcon->close();
+                ?>
 
             </table>
         <?php
