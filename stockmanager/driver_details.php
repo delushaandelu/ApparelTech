@@ -5,6 +5,8 @@
         <title>Stock Manager</title>                   
         <link rel="stylesheet" type="text/css" id="theme" href="css/main.css"/> 
         <link rel="stylesheet" href="designs/template1.css" type="text/css" />
+        <script src="js/sweetalert-dev.js"></script>
+        <link rel="stylesheet" href="js/sweetalert.css">
     </head>
 
         
@@ -66,7 +68,7 @@
                         $result=mysqli_query($dbcon,$sql);
                             if($result){
                                 echo'<script language ="javascript">';
-                                    echo'alert("Driver deleted succesfully")';
+                                    echo'swal({  title: 'Item Inserted!', text: '', type: 'success', confirmButtonText: 'Done!'}, function(){ window.location.href='../../admin/item.jsp'; });';
                                 echo'</script>'; }
             
                         $sqlupdate="UPDATE vehicle SET status=0 WHERE vehicle_id=$vehicle_id ";

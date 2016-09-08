@@ -60,8 +60,8 @@
                         <td><?php echo $row['email'] ?></td>
                         <td><?php echo $row['mobile'] ?></td>
                         <td><?php echo $row['tele'] ?></td>
-                <td class="bt"><input type="button" class="btn btn-info" value="Accept" onclick="location.href='ManageUser-Manage_Customer.php?cst_id=<?php echo $row['customer_id'] ?>'"></td>
-                        <td class="bt"><input type="button" class="btn btn-info" value="Reject" data-toggle="modal" data-target="#myModal"  onclick="location.href='ManageUser-Manage_Customer.php?customer_id=<?php echo $row['customer_id'] ?>'"></td>
+                <td class="bt"><input type="button" id="button" class="btn btn-info" value="Accept" onclick="location.href='ManageUser-Manage_Customer.php?cst_id=<?php echo $row['customer_id'] ?>'"></td>
+                        <td class="bt"><input type="button" id="button" class="btn btn-info" value="Reject" data-toggle="modal" data-target="#myModal"  onclick="location.href='ManageUser-Manage_Customer.php?customer_id=<?php echo $row['customer_id'] ?>'"></td>
                     </button> </td>
 
                 <div class="modal fade" id="myModal" role="dialog">

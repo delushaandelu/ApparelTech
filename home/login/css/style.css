@@ -1,6 +1,6 @@
 
 body{
-	background-color:grey;
+	background:url(../images/1.jpg)  no-repeat center fixed;
  	background-size: cover;
  	position:relative;
 }
@@ -30,7 +30,7 @@ form li{
 	list-style:none;
 	margin-bottom:16px;
 	width:100%;
-	background:yellow;
+	background:#008B8B;
 }
 .icon{
 	background:url(../images/icons.png)  no-repeat 0px 0px;
@@ -62,18 +62,18 @@ input[type="submit"]{
 	font-size:18px;
 	display: inline-block;
 	font-weight:600;
-	color: #615F5F;
+	color: white;
 	cursor: pointer;
 	outline: none;
 	padding:15px 10px;
 	margin-top:3px;
 	font-family: arial;
-	background: yellow;
+	background: #008B8B;
 	width:45%;
 	border:1px solid #222;
 }
 input[type="submit"]:hover{
-	background: #FFC600;
+	background: #000000;
 	border:1px solid #FFC600;
 }
 @media (max-width:1024px){
