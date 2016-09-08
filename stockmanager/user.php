@@ -1,7 +1,4 @@
-
-
 <?php
-
 class User{
 public function changepswd(){
     require("database_connection.php");

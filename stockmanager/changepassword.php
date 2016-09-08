@@ -10,13 +10,10 @@
 <body>
      
 <?php
-    session_start();
+   
     include("../config/stockmgrmenu.php");
-<<<<<<< HEAD
-    
-=======
+
     include('user.php');
->>>>>>> origin/master
 ?>
 
 <ul class="breadcrumb">
@@ -62,7 +59,7 @@
 
         <div id="pwd_button_panel">
 
-            <input type="reset" class="btn btn-info" value="Reset" /><?php echo $_SESSION['uid']?><br><br>
+            <input type="reset" class="btn btn-info" value="Reset" /><br><br>
             <input type="submit" class="btn btn-info" name="changepswd" value="Change"/>
 
         </div>
@@ -77,13 +74,7 @@
 
 <?php
 
-<<<<<<< HEAD
-if(isset($_POST["changepswd"])){  //call to changepswd method in User class.
-    include('user.php');
-=======
 if(isset($_POST["changepswd"])){                 //call to changepswd method in User class.
-    
->>>>>>> origin/master
     $myUser = new User();
     $myUser -> changepswd();
     
