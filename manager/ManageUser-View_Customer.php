@@ -23,17 +23,8 @@
                 <h1 class="page-header">Customers</h1>
             </div>
             <div class="2">
-                <form method="post" action="searchCustomer.php">
-                    <div class="col-xs-3">
-                        <input type="text" placeholder="Search by id" name="id" class="form-control" size="35">
-                    </div>
-                    <div>
-                        <button type="submit" id="button" class="btn btn-default">Search</button>
-                    </div>
-                </form>
-
-
-                    <br>
+                <input type="text" id="myInput" onkeyup="myFunction()" placeholder="&#x26B2   Search for customers by name..." style="width:300px"">
+                    <br><br><br>
             </div>
         </div>
 
@@ -46,7 +37,7 @@
             $result = $dbcon->query($sql);
 
             if ($result->num_rows > 0) {
-                echo "<table class='table table-striped'>";
+                echo "<table class='table table-striped' id='myTable'>";
                 echo"<tr>
                     <th>Customer ID </th>
                     <th>NIC </th>
@@ -80,6 +71,26 @@
             $dbcon->close();
 
         ?>
+
+        <script>
+            function myFunction() {
+                var input, filter, table, tr, td, i;
+                input = document.getElementById("myInput");
+                filter = input.value.toUpperCase();
+                table = document.getElementById("myTable");
+                tr = table.getElementsByTagName("tr");
+                for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[2];
+                    if (td) {
+                        if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].style.display = "";
+                        } else {
+                            tr[i].style.display = "none";
+                        }
+                    }
+                }
+            }
+        </script>
 
     </div>
 </div>
