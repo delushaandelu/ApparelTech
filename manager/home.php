@@ -23,9 +23,21 @@
     </div>
     <div class="row">
         <div class="first_section">
-            <img src="images/fb.png" alt="Mountain View">
+            <br><br>
+            <button type="button" id="button1"><i class="fa fa-user-plus" aria-hidden="true"></i> Manage Customer</button>     
+            <button type="button" id="button1"><i class="fa fa-user-plus" aria-hidden="true"></i> View Stock</button>
+            <br><br>
         </div>
-    </div>      
+        <div>
+            <button type="button" id="button1"><i class="fa fa-user-plus" aria-hidden="true"></i> Manage Suppliers</button>     
+            <button type="button" id="button1"><i class="fa fa-user" aria-hidden="true"></i> View Suppliers</button>
+            <br><br>
+        </div>
+        <div>
+            <button type="button" id="button1"><i class="fa fa-cloud-download" aria-hidden="true"></i> Backup</button>     
+            <button type="button" id="button1"><i class="fa fa-cogs" aria-hidden="true"></i> Setting</button>
+        </div>
+    </div>
 </div>
 
 <script src="vendor/jquery/jquery.min.js"></script>
