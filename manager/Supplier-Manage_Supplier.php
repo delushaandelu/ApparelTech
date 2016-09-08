@@ -135,7 +135,7 @@
                         	<td id="table-font" width="60%">
                             	Address
 							</td>
-                            <td><input type="text" name="address" rows="3" class="form-control">
+                            <td><input type="text" name="address" class="form-control">
                               <br><br>
  						    </td>
 						  </tr>
