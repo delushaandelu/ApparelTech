@@ -66,7 +66,7 @@
                 </tr>
             <?php } ?>
 
-            </table>;
+            </table>
         <?php
             if(isset($_GET['supplier_id'])){
 
