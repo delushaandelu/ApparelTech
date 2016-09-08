@@ -5,6 +5,8 @@
         <title>Stock Manager</title>                   
         <link rel="stylesheet" type="text/css" id="theme" href="css/main.css"/> 
         <link rel="stylesheet" href="designs/template1.css" type="text/css" />
+        <script src="js/sweetalert-dev.js"></script>
+        <link rel="stylesheet" href="js/sweetalert.css">
         
 <?php
     include("../config/stockmgrmenu.php");
@@ -80,11 +82,13 @@ if(isset($_POST['DriverInsert'])){
         VALUES('".$DriverName."','".$LicenceNumber."','".$Address."','".$VehicleId."','".$MobileNo."')";
         $result=mysqli_query($dbcon,$sqlinsert);
             if($result){
-                echo'<script language ="javascript">';
-                    echo'alert("driver inserted successfully")';
+                 echo'<script language ="javascript">';
+                    echo "swal({  title: 'Driver Inserted successfully!', text: '', type: 'success', confirmButtonText: 'Done!'}, function(){window.location.href='driver_details.php'});";
                 echo'</script>'; }
             else{
-                echo"error";
+                 echo'<script language ="javascript">';
+                    echo "swal({  title: 'Error!', text: '', type: 'error', confirmButtonText: 'Done!'}, function(){window.location.href='driver_details.php'});";
+                echo'</script>';
             }
     
         $sqlupdate="UPDATE vehicle SET status=1 WHERE vehicle_id=$VehicleId"; 
