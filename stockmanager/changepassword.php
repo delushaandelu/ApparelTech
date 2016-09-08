@@ -1,3 +1,5 @@
+<?php session_start();?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>        
@@ -6,9 +8,10 @@
         <link rel="stylesheet" href="designs/template1.css" type="text/css" />
     </head>
 <body>
-        
+     
 <?php
     include("../config/stockmgrmenu.php");
+    include('user.php');
 ?>
 
 <ul class="breadcrumb">
@@ -70,7 +73,7 @@
 <?php
 
 if(isset($_POST["changepswd"])){                 //call to changepswd method in User class.
-    include('user.php');
+    
     $myUser = new User();
     $myUser -> changepswd();
     
