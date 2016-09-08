@@ -21,7 +21,7 @@
 
                 <div class="section1">
                     <div class="col-md-4">
-                        <button type="button" class="myButton">Manage Stock</button>
+                        <button type="button" class="myButton"><i class="fa fa-cog fa-3x" aria-hidden="true"></i> Manage Stock</button>
                     </div>
                     <div class="col-md-4">
                         <button type="button" class="myButton">New Report</button>
