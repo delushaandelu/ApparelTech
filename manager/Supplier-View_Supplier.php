@@ -22,7 +22,7 @@
                 <h1 class="page-header">Suppliers</h1>
             </div>
             <div class="2">
-                <input type="text" id="myInput" onkeyup="myFunction()" placeholder="&#x26B2   Search for suppliers by id..." style="width: 300px " >
+                <input type="text" id="myInput" onkeyup="myFunction()" placeholder="&#x26B2   Search for suppliers by name..." style="width: 300px">
 
             </div>
         </div>
@@ -76,7 +76,7 @@
                 table = document.getElementById("myTable");
                 tr = table.getElementsByTagName("tr");
                 for (i = 0; i < tr.length; i++) {
-                    td = tr[i].getElementsByTagName("td")[0];
+                    td = tr[i].getElementsByTagName("td")[1];
                     if (td) {
                         if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
                             tr[i].style.display = "";
