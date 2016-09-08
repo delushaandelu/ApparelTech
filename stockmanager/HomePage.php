@@ -12,7 +12,6 @@
     <body>
         
         <?php
-        session_start();
             include("../config/stockmgrmenu.php");
         ?>
 
@@ -22,7 +21,7 @@
 
                 <div class="section1">
                     <div class="col-md-4">
-                        <button type="button" class="myButton"> Manage Stock</button>
+                        <button type="button" class="myButton">Manage Stock</button>
                     </div>
                     <div class="col-md-4">
                         <button type="button" class="myButton">New Report</button>
