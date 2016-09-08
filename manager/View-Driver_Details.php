@@ -28,7 +28,7 @@
         include('database_connection.php');
 
         $sql = "SELECT * FROM driver";
-        $sql = "SELECT contactNo FROM drivercontact";
+        //$sql = "SELECT contactNo FROM drivercontact";
         $result = $dbcon->query($sql);
 
         if ($result->num_rows > 0) {
@@ -48,8 +48,8 @@
                     <td style='border: solid 2px black;'>" . $row["driverName"]. "</td>
                     <td style='border: solid 2px black;'>" . $row["LicenceNo"]. "</td>
                     <td style='border: solid 2px black;'>" . $row["driverAddress"]. "</td>
-                    <td style='border: solid 2px black;'>" . $row["vehicle_id"]. "</td>
-                    <td style='border: solid 2px black;'>" . $row["contactNo"]. "</td>
+                    <td style='border: solid 2px black;'>" . $row["vechicle_id"]. "</td>
+                    
                 </tr>";
             }
             echo "</table>";

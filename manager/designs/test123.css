@@ -1,0 +1,28 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* Common */
+
+* {
+    box-sizing: border-box;
+}
+
+#myInput {
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+}
+
+#myTable {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#myTable th, #myTable td {
+    padding: 12px;
+}
+
+#myTable tr.header, #myTable tr:hover {
+    background-color: #f1f1f1;
+}

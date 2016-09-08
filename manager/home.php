@@ -6,7 +6,7 @@
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="dist/css/sb-admin-2.css" rel="stylesheet">
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="designs/template.css" type="text/css" />
+    <link rel="stylesheet" href="designs/home.css" type="text/css" />
 </head>
 
 <body>
@@ -18,13 +18,13 @@
 <div id="page-wrapper">
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">Home</h1>
+            <h1 class="page-header" style="color: #008B8B">Priyantha Enterprises</h1>
         </div>
-        
     </div>
     <div class="row">
-
-
+        <div class="first_section">
+            <img src="images/fb.png" alt="Mountain View">
+        </div>
     </div>      
 </div>
 
