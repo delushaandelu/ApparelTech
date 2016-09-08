@@ -63,7 +63,7 @@
                         $vehicle_id=$_GET['vehicle_id'];
                         $id = $_GET['driver_id'];
                         $sql= "delete from driver where driver_id = '$id'";
-                        $result=$mysqli_query($dbcon,$sql);
+                        $result=mysqli_query($dbcon,$sql);
                             if($result){
                                 echo'<script language ="javascript">';
                                     echo'alert("Driver deleted succesfully")';

@@ -69,6 +69,27 @@
             
             
                         }
+                        if(isset($_GET['ID'])){
+                            $id=$_GET['ID'];
+                            
+                            $sqlinsert="INSERT INTO purchasereport(p_id,customer_id,totalprice,created,status) SELECT orders.id,orders.customer_id,orders.total_price,orders.created,'approved' FROM orders WHERE id=$id";
+                            $resultinsert=mysqli_query($dbcon,$sqlinsert);
+            
+                           $sqldelete="DELETE FROM orders WHERE id=$id";
+                            $result=mysqli_query($dbcon,$sqldelete);
+
+           
+                                if($resultinsert){
+                                    echo'<script language ="javascript">';
+                                        echo'alert("Purchase order accepted succesfully")';
+                                    echo'</script>'; 
+                                }else{
+                                    echo"error";
+                                }
+            
+            
+            
+                        }
                         if(isset($_GET['id'])){
                             $id=$_GET['id'];
             

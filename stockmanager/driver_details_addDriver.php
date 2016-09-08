@@ -81,7 +81,7 @@ if(isset($_POST['DriverInsert'])){
         $result=mysqli_query($dbcon,$sqlinsert);
             if($result){
                 echo'<script language ="javascript">';
-                    echo'alert("Error")';
+                    echo'alert("driver inserted successfully")';
                 echo'</script>'; }
             else{
                 echo"error";
