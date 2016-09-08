@@ -1,7 +1,3 @@
-<html>
-    <head><script src="js/sweetalert-dev.js"></script>
-        <link rel="stylesheet" href="js/sweetalert.css"></head>
-    <body>
 <?php
 class User{
 public function changepswd(){
@@ -57,6 +53,6 @@ public function changepswd(){
 }
 }
 ?>
-    </body>
-</html>
+
+
 
