@@ -8,6 +8,8 @@
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="designs/template.css" type="text/css" />
     <link rel="stylesheet" href="designs/test123.css" type="text/css" />
+    <script src="js/sweetalert-dev.js"></script>
+    <link rel="stylesheet" href="js/sweetalert.css">
 </head>
 
 <body>
@@ -27,40 +29,59 @@
         
     </div>
     <div class="row">
-        <?php
 
-        include('database_connection.php');
-
-        $sql = "SELECT p_id, customer_id, totalprice, created, status FROM purchasereport";
-        $result = $dbcon->query($sql);
-
-        if ($result->num_rows > 0) {
-            echo "<table class='table' id='myTable' >";
-            echo"<tr>
+            <table class='table' id='myTable' >
+            <tr>
                 <th><h5 align='center'> Purchase Order ID </h5></th>
                 <th><h5 align='center'>Customer ID </h5></th>
                 <th><h5 align='center'>Total Price </h5></th>
                 <th><h5 align='center'>Purchase Order Date </h5></th>
                 <th><h5 align='center'>Status </h5></th>
-            </tr>";
+                <th><h5 align='center'>Action </h5></th>
+            </tr>
+
+            <?php
+
+            include('database_connection.php');
+
+            $sql = "SELECT p_id, customer_id, totalprice, created, status FROM purchasereport";
+            $result = $dbcon->query($sql);
 
             while($row = $result->fetch_assoc()) {
-                echo "<tr>
-                    <td><h5 align='center'>" . $row["p_id"]. "</h5></td>
-                    <td><h5 align='center'>" . $row["customer_id"]. "</h5></td>
-                    <td><h5 align='center'>" . $row["totalprice"]. "</h5></td>
-                    <td><h5 align='center'>" . $row["created"]. "</h5></td>
-                    <td><h5 align='center'>" . $row["status"]. "</h5></td>
-                </tr>";
+                ?>
+                <tr>
+                    <td><?php echo $row['p_id'] ?></td>
+                    <td><?php echo $row['customer_id'] ?></td>
+                    <td><?php echo $row['totalprice'] ?></td>
+                    <td><?php echo $row['created'] ?></td>
+                    <td><?php echo $row['status'] ?></td>
+                    <td class="bt"><input type="button" id="button" class="btn btn-info" value="Delete" onclick="location.href='View-Purchase_Order.php?p_id=<?php echo $row['p_id'] ?>'"></td>
+                </tr>
+                <?php } ?>
+            </table>
+
+        <?php
+        if(isset($_GET['p_id'])){
+
+            $id = $_GET['p_id'];
+
+            $sql= "DELETE FROM purchasereport WHERE p_id = '$id'";
+            $result=mysqli_query($dbcon,$sql);
+
+            if($result){
+                echo'<script language ="javascript">';
+                echo "swal({  title: 'Purchase order deleted successfully!', text: '', type: 'success', confirmButtonText: 'Done!'}, function(){window.location.href='View-Purchase_Order.php'});";
+                echo'</script>';
             }
-            echo "</table>";
-        } else {
-            echo "0 results";
+            else{
+                echo'<script language ="javascript">';
+                echo "swal({  title: 'Error occurs while deleting!', text: '', type: 'error', confirmButtonText: 'Done!'}, function(){window.location.href='View-Purchase_Order.php'});";
+                echo'</script>';
+            }
         }
 
-        $dbcon->close();
-
         ?>
+
 
         <script>
             function myFunction() {

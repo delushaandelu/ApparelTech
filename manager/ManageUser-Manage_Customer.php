@@ -62,7 +62,7 @@
                         <td><?php echo $row['email'] ?></td>
                         <td><?php echo $row['mobile'] ?></td>
                         <td><?php echo $row['tele'] ?></td>
-                <td class="bt"><input type="button" id="button" class="btn btn-info" value="Accept" onclick="location.href='ManageUser-Manage_Customer.php?cst_id=<?php echo $row['customer_id'] ?>'"></td>
+                        <td class="bt"><input type="button" id="button" class="btn btn-info" value="Accept" onclick="location.href='ManageUser-Manage_Customer.php?cst_id=<?php echo $row['customer_id'] ?>'"></td>
                         <td class="bt"><input type="button" id="button" class="btn btn-info" value="Reject" onclick="location.href='ManageUser-Manage_Customer.php?customer_id=<?php echo $row['customer_id'] ?>'"></td>
             </tr>
         <?php } ?>
