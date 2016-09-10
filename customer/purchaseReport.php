@@ -48,7 +48,15 @@ session_start();
                     <td><center><?php echo $row['totalprice'].'.00' ?></center></td>
                     <td><center><?php echo $row['created'] ?></center></td>
                     <td><center><p class="bg-primary"><?php echo $row['status'] ?></p></center></td>
-                    <td class="bt"><center><input type="button" id="button" class="btn btn-info" value="View Items" onclick="location.href='View-Purchase_Order.php?p_id=<?php echo $row['p_id'] ?>'"></center></td>
+                    <td class="bt"><center>
+                        
+                        <button type="button" id="view" class="btn btn-success" onclick="location.href='purchaseitem.php?p_id=<?php echo $row['p_id'] ?>'"><i class="fa fa-check-square-o" aria-hidden="true"></i> View</button>
+                        
+                        <button type="button" id="delivery"  class="btn btn-primary" onclick="location.href='View-Purchase_Order.php?p_id=<?php echo $row['p_id'] ?>'"><i class="fa fa-truck" aria-hidden="true"></i> Delivery</button>
+                        
+                        <button type="button" id="invoice"  class="btn btn-primary" onclick="location.href='View-Purchase_Order.php?p_id=<?php echo $row['p_id'] ?>'"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> Invoice</button>
+                        
+                        </center></td>
                 </tr>
                 <?php } ?>
             </table>
