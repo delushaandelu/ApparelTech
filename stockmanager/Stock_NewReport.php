@@ -3,6 +3,8 @@
     <head>        
         <title>Stock Manager</title>                   
         <link rel="stylesheet" type="text/css" id="theme" href="css/main.css"/> 
+        <link rel="stylesheet" type="text/css"  href="Stock_NewReport_Design.css"/>
+        
          <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
        <script>
            
@@ -63,11 +65,43 @@
                 <input type="radio" name="categorytype" value="Tools"> Tools
                 <br><br>
                 <input type="submit" class="btn btn-success" id="btnNewReportGenerateReport" name="btnNewReportGenerateReport" value="Generate Report"  />
+
+                
+
             </form> 
 
 
+     <div class="drop_down">       
+    
+    
+  <ul class="drop_down_ul">
+  <li>
+    <input type="radio" id="f-option" name="selector">
+    <label for="f-option">Pizza</label>
+    
+    <div class="check"></div>
+  </li>
+  
+  <li>
+    <input type="radio" id="s-option" name="selector">
+    <label for="s-option">Boyfriend</label>
+    
+    <div class="check"><div class="inside"></div></div>
+  </li>
+  
+  <li>
+    <input type="radio" id="t-option" name="selector">
+    <label for="t-option">Cats</label>
+    
+    <div class="check"><div class="inside"></div></div>
+  </li>
+</ul>
+</div>
 
-     
+<!-- <div class="signature">
+    <p>Made with <i class="much-heart"></i> by <a href="http://codepen.io/AngelaVelasquez">Angela Velasquez</a></p>
+</div>
+      -->
 
        </div>
 
