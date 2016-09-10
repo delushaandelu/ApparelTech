@@ -35,14 +35,14 @@
         <li id ="nav_tab_item_effect"><a href="vehicle_details_addVehicle.php">Add Vehicle</a></li>
    	</ul>
         <table class="table table-striped">
-            <tr class="title"><th>vehicle_id</th><th>vehicleNO</th><th>capacity</th><th>vehicletype</th><th>status</th></tr>
+            <tr class="title"><th>vehicle_id</th><th>vehicleNO</th><th>capacity</th><th>vehicletype</th><th>status</th><th>Action</th></tr>
                 <?php 
                     $sql = "select * from vehicle";
                     $result = mysqli_query($dbcon,$sql);        
                         while($row = mysqli_fetch_array($result)) {
     
                 ?>
-                            <tr class="data">
+                            <tr class="active">
                             <td><?php echo $row['vehicle_id'] ?></td>
                             <td><?php echo $row['vehicleNo'] ?></td>
                             <td><?php echo $row['capacity'] ?></td>

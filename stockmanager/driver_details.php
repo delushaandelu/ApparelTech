@@ -45,7 +45,7 @@
                         while($row = mysqli_fetch_array($result)) {
     
                 ?>
-                            <tr class="data">
+                            <tr class="active">
                             <td><?php echo $row['driver_id'] ?></td>
                             <td><?php echo $row['driverName'] ?></td>
                             <td><?php echo $row['LicenceNo'] ?></td>

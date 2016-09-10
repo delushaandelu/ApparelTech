@@ -1171,7 +1171,7 @@ body.page-container-boxed .page-container {
 .breadcrumb {
   float: left;
   width: 100%;
-  background: #e8e8e8;
+  background: #C0C0C0;
   margin-bottom: 10px;
   padding: 6px 15px 7px;
   -moz-border-radius: 0px;
@@ -1180,8 +1180,8 @@ body.page-container-boxed .page-container {
 }
 .breadcrumb li,
 .breadcrumb li a {
-  font-size: 11px;
-  line-height: 12px;
+  font-size: 25px;
+  line-height:20px;
   color: #4d5669;
   text-decoration: none;
 }

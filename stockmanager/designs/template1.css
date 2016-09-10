@@ -168,37 +168,6 @@ img
 	background-color:#00F;
 	}
 	
-#button_effect {
-	background:  	#FF4500;
-	background-image: -webkit-linear-gradient(top,  	#FF4500,  	 	#FF4500);
-	background-image: -moz-linear-gradient(top,  	#FF4500,  	 	#FF4500);
-	background-image: -ms-linear-gradient(top,  	#FF4500,  	 	#FF4500);
-	background-image: -o-linear-gradient(top,  	#FF4500,  	 	#FF4500);
-	background-image: linear-gradient(to bottom,  	#FF4500,  	 	#FF4500);
-	-webkit-border-radius: 0;
-	-moz-border-radius: 0;
-	border-radius: 0px;
-	text-shadow: 1px 1px 3px #666666;
-	-webkit-box-shadow: 0px 3px 6px #666666;
-	-moz-box-shadow: 0px 3px 6px #666666;
-	box-shadow: 0px 3px 6px #666666;
-	font-family: Arial;
-	color: #ffffff;
-	font-size: 14px;
-	padding: 3px 40px 2px 40px;
-	border: solid #ff4400 0px;
-	text-decoration: none;
-
-}
-#button_effect:hover {
-	background: #ffffff;
-	background-image: -webkit-linear-gradient(top, #ffffff, #ff6f00);
-	background-image: -moz-linear-gradient(top, #ffffff, #ff6f00);
-	background-image: -ms-linear-gradient(top, #ffffff, #ff6f00);
-	background-image: -o-linear-gradient(top, #ffffff, #ff6f00);
-	background-image: linear-gradient(to bottom, #ffffff, #ff6f00);
-	text-decoration: none;
-}
 #button_effect:hover {
 	background-color:#0c1e33;
 >>>>>>> origin/master

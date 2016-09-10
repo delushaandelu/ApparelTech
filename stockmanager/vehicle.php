@@ -1,7 +1,9 @@
 <html>
 <head>
+    <script src="js/sweetalert-dev.js"></script>
+    <link rel="stylesheet" href="js/sweetalert.css">
    
-    </head>
+</head>
 
 <body>
 
@@ -38,15 +40,16 @@ class Vehicle{
             echo'<script language ="javascript">';
                 echo "swal({  title: 'Vehicle inserted successfully!', text: '', type: 'success', confirmButtonText: 'Done!'}, function(){window.location.href='vehicle_details.php'});";
             echo'</script>';
-        }
+        }else{
         
         echo'<script language ="javascript">';
             echo "swal({  title: 'Error!', text: '', type: 'error', confirmButtonText: 'Done!'}, function(){window.location.href='vehicle_details.php'});";
         echo'</script>'; }
+        }
         
         else{
             echo'<script language ="javascript">';
-                echo "swal({  title: 'All fields should be filled!', text: '', type: 'warning', confirmButtonText: 'Done!'}, function(){window.location.href='vehicle_details.php'});";
+                echo "swal({  title: 'All fields should be filled!', text: '', type: 'warning', confirmButtonText: 'Done!'}, function(){window.location.href='vehicle_details_addVehicle.php'});";
             echo'</script>'; 
         }
   

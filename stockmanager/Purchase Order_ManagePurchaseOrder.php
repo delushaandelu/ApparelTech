@@ -14,7 +14,7 @@
  ?>
 
 <ul class="breadcrumb">
-    <h2>Page Heading here!</li></h2>
+    <h2><li>Manage purchase orders</li></h2>
 </ul>
 <div id="content">
         <div class="panel">
@@ -27,7 +27,7 @@
                             while($row = mysqli_fetch_array($result)) {
     
                         ?>
-                            <tr class="data">
+                            <tr  class="active">
                             <td><?php echo $row['id'] ?></td>
                             <td><?php echo $row['customer_id'] ?></td>
                             <td><?php echo $row['total_price'] ?></td>
@@ -96,11 +96,11 @@
             
     <div class="panel-body">
         <div class="previous_report_history_table">
-            <p>history po table</p>
+           
         </div>
                 
     <div class="previous_report_stock_report">
-        <p> po structure</p>
+    
     </div>
                 
     </div>
