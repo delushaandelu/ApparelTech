@@ -77,21 +77,21 @@
   <ul class="drop_down_ul">
   <li>
     <input type="radio" id="f-option" name="selector">
-    <label for="f-option">Pizza</label>
+    <label for="f-option">Sewing Machines</label>
     
     <div class="check"></div>
   </li>
   
   <li>
     <input type="radio" id="s-option" name="selector">
-    <label for="s-option">Boyfriend</label>
+    <label for="s-option">Sewing Machine Spare Parts</label>
     
     <div class="check"><div class="inside"></div></div>
   </li>
   
   <li>
     <input type="radio" id="t-option" name="selector">
-    <label for="t-option">Cats</label>
+    <label for="t-option">Tools</label>
     
     <div class="check"><div class="inside"></div></div>
   </li>

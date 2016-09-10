@@ -58,7 +58,7 @@ body, html{
 }
 
 .drop_down_ul li:hover label{
-	color: #FFFFFF;
+	color: #282424;
 }
 
 .drop_down_ul li .check{
@@ -76,7 +76,7 @@ body, html{
 }
 
 .drop_down_ul li:hover .check {
-  border: 5px solid #FFFFFF;
+  border: 5px solid #282424;
 }
 
 .drop_down_ul li .check::before {
@@ -94,15 +94,15 @@ body, html{
 }
 
 input[type=radio]:checked ~ .check {
-  border: 3px solid #0DFF92;
+  border: 3px solid #ED1B16;
 }
 
 input[type=radio]:checked ~ .check::before{
-  background: #0DFF92;
+  background: #ED1B16;
 }
 
 input[type=radio]:checked ~ label{
-  color: #0DFF92;
+  color: #ED1B16;
 }
 
 /*.signature {
