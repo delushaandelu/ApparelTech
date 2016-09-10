@@ -30,7 +30,7 @@
         </div>
         <div>
             <button type="button" id="button1" class="btn btn-default btn-lg active" onclick="location.href='Supplier-Manage_Supplier.php'"><i class="fa fa-user-plus" aria-hidden="true"></i> Manage Suppliers</button>     
-            <button type="button" id="button1" class="btn btn-default btn-lg active" onclick="location.href='Supplier-View_Supplier.php'"><i class="fa fa-user" aria-hidden="true"></i> View Suppliers</button>
+            <button type="button" id="button1" class="btn btn-default btn-lg active" onclick="location.href='Supplier-View_Supplier.php'"><i class="fa fa-user fa-2x" aria-hidden="true"></i> View Suppliers</button>
             <br><br>
         </div>
         <div>

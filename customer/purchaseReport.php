@@ -23,6 +23,35 @@ session_start();
 <!-- page content -->
 <div class="right_col" role="main">
     <h1>Your Purchase Report!</h1>
+ <div class="row">
+
+            <table class='table table-hover'  >
+            <tr>
+                <th><b><h5 align='center'> Purchase Order ID </h5></b></th>
+                <th><b><h5 align='center'>Total Price </h5></b></th>
+                <th><b><h5 align='center'>Purchase Order Date </h5></b></th>
+                <th><b><h5 align='center'>Status </h5></b></th>
+                <th><b><h5 align='center'>Action </h5></b></th>
+            </tr>
+
+            <?php
+
+            include('dbConfig.php');
+            $c_id = $_SESSION['csid'];
+            $sql = "SELECT p_id, customer_id, totalprice, created, status FROM purchasereport where customer_id=$c_id ";
+            $result = $db->query($sql);
+
+            while($row = $result->fetch_assoc()) {
+                ?>
+                <tr>
+                    <td><center><?php echo $row['p_id'] ?></center></td>
+                    <td><center><?php echo $row['totalprice'].'.00' ?></center></td>
+                    <td><center><?php echo $row['created'] ?></center></td>
+                    <td><center><p class="bg-primary"><?php echo $row['status'] ?></p></center></td>
+                    <td class="bt"><center><input type="button" id="button" class="btn btn-info" value="View Items" onclick="location.href='View-Purchase_Order.php?p_id=<?php echo $row['p_id'] ?>'"></center></td>
+                </tr>
+                <?php } ?>
+            </table>
 
 </div>
 </body>

@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/home.css" type="text/css">
     <script src="js/sweetalert-dev.js"></script>
     <link rel="stylesheet" href="js/sweetalert.css">
+	<script type="text/javascript" src="js/load.js"></script> 
   </head>
 
   <body class="nav-md">
@@ -21,7 +22,7 @@
 
 <!-- page content -->
 <div class="right_col" role="main">
-    <h1 align="center">Welcome to Online Shop!</h1>
+    <H1>Welcome to Priyantha Enterprices</H1>
     <div id = info>
                 <div class="panel panel-primary">
                     <div class="panel-heading" align="center">Here you are!</div>
@@ -56,13 +57,14 @@
                     </div>
                 </div>
         </div>
-
     <div id="dashbutton">
          <a href="#" class="myButton">Make a Purchase</a>
          <a href="#" class="myButton">Order Rent Item</a>
          <a href="#" class="myButton">Request Delivery</a>
     </div>
 </div>
+
+      
 </body>
 
 <!-- jQuery -->
