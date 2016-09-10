@@ -20,11 +20,11 @@
 <body>
 	<div class="container">
 		<div class="top">
-			<h1 id="title" class="hidden"><span id="logo">ApperalTech</span></h1>
+			<h1 id="title" class="hidden"><span id="logo">Apperal<span style="color:#FF4500">Tech</span></h1>
 		</div>
 		<div class="login-box animated fadeInUp">
 			<div class="box-header">
-				<h2>Log In</h2>
+                <h2><span style="color:#ffffff">Log In</span></h2>
 			</div>
 			<form method="POST">
 			<label for="username">Username</label>

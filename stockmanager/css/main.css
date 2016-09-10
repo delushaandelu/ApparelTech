@@ -297,7 +297,7 @@ body.page-container-boxed .page-container {
   float: left;
   width: 100%;
   line-height: 19px;
-  color: #8b91a0;
+  color: #ffffff;
   font-size: 13px;
   font-weight: 400;
   padding: 15px 10px 15px 15px;
@@ -320,7 +320,7 @@ body.page-container-boxed .page-container {
   transition: color 200ms ease;
 }
 .x-navigation li > a:hover {
-  background: #262a33;
+  background: #FF4500;
   color:#fff;
   -webkit-transition: all 200ms ease;
   -moz-transition: all 200ms ease;
@@ -350,7 +350,7 @@ body.page-container-boxed .page-container {
   border-bottom-color: #121418;
 }
 .x-navigation li > ul li > a:hover {
-  background: #121418;
+  background: #708090;
   color: #ffffff;
 }
 .x-navigation li > ul li.active > a {
@@ -373,7 +373,7 @@ body.page-container-boxed .page-container {
   content: "\f147";
 }
 .x-navigation li.active > a {
-  background: #1caf9a;
+  background: #FF4500;
   color:#fff;
   -webkit-transition: all 200ms ease;
   -moz-transition: all 200ms ease;
@@ -460,11 +460,11 @@ body.page-container-boxed .page-container {
   text-shadow: none;
 }
 .x-navigation.x-navigation-horizontal > li > a:hover {
-  background: #282d36;
+  background:#FF4500;
 }
 .x-navigation.x-navigation-horizontal > li > a:hover .fa,
 .x-navigation.x-navigation-horizontal > li > a:hover .glyphicon {
-  color: #697b92;
+  color: #ffffff;
 }
 .x-navigation.x-navigation-horizontal > li > a .fa,
 .x-navigation.x-navigation-horizontal > li > a .glyphicon {
@@ -908,11 +908,11 @@ body.page-container-boxed .page-container {
  color: #FFF;
  height: 50px;
  text-align: center;
- background: #1caf9a;
+ background: #000000;
 }
-.x-navigation > li.xn-logo > a:first-child:hover {
-  background-color: #1caf9a;
-}
+/*.x-navigation > li.xn-logo > a:first-child:hover {
+  background-color: #708090;
+}*/
 .x-navigation > li.xn-profile {
   padding: 0px;
   border-bottom: 1px solid #14171b;

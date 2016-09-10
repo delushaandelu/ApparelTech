@@ -26,14 +26,14 @@
             
             $sql= "UPDATE vehicle SET vehicleNo = '$vehicleNo',capacity='$capacity',vehicleType='$vehicleType' WHERE vehicle_id = $vehicle_id";
                 if(!mysqli_query($dbcon,$sql)){
-                    echo'<script language ="javascript">';
-                        echo'alert("Error")';
-                    echo'</script>'; 
+                   echo'<script language ="javascript">';
+                        echo"swal({  title: 'Error!', text: '', type: 'error', confirmButtonText: 'Done!'}, function(){window.location.href='driver_details.php'});";
+                                echo'</script>';
             }
             else{
-                    echo'<script language ="javascript">';
-                        echo'alert("vehicle Updated succesfully")';
-                    echo'</script>';
+                echo'<script language ="javascript">';
+                    echo"swal({  title: 'DrVehicle updated!', text: '', type: 'success', confirmButtonText: 'Done!'}, function(){window.location.href='vehicle_details.php'});";
+                echo'</script>';
             }
             
             /*$sqlupdatedriver="UPDATE driver SET vechicle_id='111' WHERE vechicle_id=$vehicle_id and $status=0";

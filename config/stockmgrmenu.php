@@ -2,7 +2,7 @@
             <div class="page-sidebar">
                 <ul class="x-navigation">
                     <li class="xn-logo">
-                        <a href="#">Stock Manager</a>
+                        <a href="#">Stock <span style="color:#FF4500">Manager</span></a>
                         <a href="#" class="x-navigation-control"></a>
                     </li>
                     <li class="xn-profile">
@@ -15,7 +15,7 @@
                             </div>
                             <div class="profile-data">
                                 <div class="profile-data-name">#Name</div>
-                                <div class="profile-data-title">ApperalTech</div>
+                                <div class="profile-data-title"><span style="color:#FF4500">ApperalTech</span></div>
                             </div>
                         </div>                                                                        
                     </li>
