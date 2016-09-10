@@ -2,7 +2,7 @@
 
 body {
 	font-family: Helvetica;
-	background: #eee;
+	background: url("../assets/images/users/black_wall.jpg") no-repeat center center fixed;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -13,15 +13,15 @@ hgroup {
 
 h1, h3 { font-weight: 300; }
 
-h1 { color: #636363; }
+h1 { color: #ffffff; }
 
-h3 { color: #4a89dc; }
+h3 { color:#ffffff; }
 
 form {
 	width: 380px;
 	margin: 4em auto;
 	padding: 3em 2em 2em 2em;
-	background: #fafafa;
+	background:#C0C0C0;
 	border: 1px solid #ebebeb;
 	box-shadow: rgba(0,0,0,0.14902) 0px 1px 1px 0px,rgba(0,0,0,0.09804) 0px 1px 2px 0px;
 }
@@ -69,7 +69,7 @@ input:focus ~ label, input.used ~ label {
   -webkit-transform: scale(.75);
           transform: scale(.75); left: -2px;
 	/* font-size: 14px; */
-	color: #4a89dc;
+	color:#FF4500;
 }
 
 
@@ -126,12 +126,12 @@ input:focus ~ .highlight {
 /* Animations */
 
 @-webkit-keyframes inputHighlighter {
-	from { background: #4a89dc; }
+	from { background:#1caf9a; }
 	to 	{ width: 0; background: transparent; }
 }
 
 @keyframes inputHighlighter {
-	from { background: #4a89dc; }
+	from { background:#1caf9a; }
 	to 	{ width: 0; background: transparent; }
 }
 
@@ -153,7 +153,7 @@ input:focus ~ .highlight {
   letter-spacing: 1px;
   background: transparent;
   border: 0;
-  border-bottom: 2px solid #3160B6;
+  border-bottom: 2px solid #1caf9a;
   cursor: pointer;
   -webkit-transition:all 0.15s ease;
   transition: all 0.15s ease;
@@ -164,11 +164,11 @@ input:focus ~ .highlight {
 /* Button modifiers */
 
 .buttonBlue {
-  background: #4a89dc;
+  background:#1caf9a;
   text-shadow: 1px 1px 0 rgba(39, 110, 204, .5);
 }
 
-.buttonBlue:hover { background: #357bd8; }
+.buttonBlue:hover { background:#3CB371; }
 
 
 /* Ripples container */

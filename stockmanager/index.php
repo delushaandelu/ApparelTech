@@ -26,7 +26,7 @@ if(isset($_POST['login'])){
 ?>
   <body>
     <hgroup>
-  <h1>ApparelTech</h1>
+        <h1>Apparel<span style="color:#FF4500">Tech</span></h1>
   <h3>Operational Level Login</h3>
 </hgroup>
 <form method="POST">

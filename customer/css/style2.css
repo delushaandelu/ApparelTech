@@ -1,5 +1,5 @@
 body {
-	background: url("../images/photo_bg.jpg") no-repeat center center fixed;
+	background: url("../images/black_wall.jpg") no-repeat center center fixed;
 	background-size: cover;
 	font-size: 16px;
 	font-family: 'Lato', sans-serif;
@@ -43,7 +43,7 @@ a {
 }
 
 a:hover {
-	color: #aeaeae;
+	color:#FF4500;
 }
 
 p.small {
@@ -68,7 +68,7 @@ p.small {
 }
 
 .login-box {
-	background-color: white;
+	background-color:#C0C0C0;
 	max-width: 640px;
 	margin: 0 auto;
 	position: relative;
@@ -80,7 +80,7 @@ p.small {
 }
 
 .login-box .box-header {
-	background-color: #665851;
+	background-color:#1caf9a;
 	margin-top: 0;
 	border-radius: 5px 5px 0 0;
 }
@@ -88,7 +88,7 @@ p.small {
 .login-box label {
 	font-weight: 700;
 	font-size: .8em;
-	color: #888;
+	color:#696969;
 	letter-spacing: 1px;
 	text-transform: uppercase;
 	line-height: 2em;
@@ -120,7 +120,7 @@ p.small {
 	font-weight: 400;
 	font-size: 0.7em;
 	letter-spacing: 1px;
-	background-color: #665851;
+	background-color:#1caf9a;
 	cursor:pointer;
 	outline: none;
 }
