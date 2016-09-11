@@ -18,83 +18,31 @@
                 <ul class="breadcrumb">
                     <h2>Home Page</li></h2>
                 </ul>
-
-                <div class="section1">
-                    <div class="col-md-4">
-<<<<<<< HEAD
-                        <button type="button" class="myButton"><i class="fa fa-cog fa-3x" aria-hidden="true"></i> Manage Stock</button>
-=======
-<<<<<<< HEAD
-                        <button onclick="location.href = 'Stock_ManageStock.php';" type="button" class="myButton">Manage Stock</button>
-                    </div>
-                    <div class="col-md-4">
-                        <button onclick="location.href = 'Stock_NewReport.php';" type="button" class="myButton"><a hrefNew Report</button>
-=======
-                        <button type="button" class="myButton">Manage Stock</button>
->>>>>>> origin/master
-                    </div>
-                    <div class="col-md-4">
-                        <button type="button" class="myButton">New Report</button>
->>>>>>> origin/master
-                    </div>
-                    <div class="col-md-4">
-                        <button type="button" class="myButton">Previous Reports</button>
-                    </div>
-                </div>
-
-                <div class="section2">
-                    
-
-                    <div class="col-md-4">
-                        <button type="button" class="myButton">Received Purshase Orders</button>
-                    </div>
-                    <div class="col-md-4">
-                        <button type="button" class="myButton">Create Purchase Orders</button>
-                    </div>
-                    <div class="col-md-4">
-                        <button type="button" class="myButton">Manage Rent</button>
-                    </div>
-                    
-                    
-                    
-                </div>
-
-
-                 <div class="section3">
-                    
-
-                    <div class="col-md-4">
-                        <button type="button" class="myButton">View Rent Reports</button>
-                    </div>
-                    <div class="col-md-4">
-                        <button type="button" class="myButton">Manage Delivery</button>
-                    </div>
-                    <div class="col-md-4">
-                        <button type="button" class="myButton">Delivery Reports</button>
-                    </div>
-                    
-                    
-                    
-                </div>
-
-
-
-                 <div class="section4">
-                    
-
-                    <div class="col-md-4">
-                        <button type="button" class="myButton">Delivery Details</button>
-                    </div>
-                    <div class="col-md-4">
-                        <button type="button" class="myButton">Change Username</button>
-                    </div>
-                    <div class="col-md-4">
-                        <button type="button" class="myButton">Change Password</button>
-                    </div>
-                    
-                    
-                    
-                </div>
+<div id="hbtn">
+    <table border="0">
+        <tr>
+            <td>
+                <button type="button" class="btn btn-primary btn-lg btn-block"><i class="fa fa-barcode" aria-hidden="true"></i><h4> Manage  Stock </h4></button>
+            </td>
+            <td></td>
+            <td>
+                <button type="button" class="btn btn-primary btn-lg btn-block"><i class="fa fa-file-powerpoint-o" aria-hidden="true"></i><h4> Stock  Report </h4></button>
+            </td>
+            <td>
+                <button type="button" class="btn btn-primary btn-lg btn-block"><i class="fa fa-cog fa-5x" aria-hidden="true"></i><h4> Manage  P / O </h4></button>
+            </td>
+            <td>
+                <button type="button" class="btn btn-primary btn-lg btn-block"><i class="fa fa-renren" aria-hidden="true"></i><h4>Manage  Rent</h4></button>
+            </td>
+            <td>
+                <button type="button" class="btn btn-primary btn-lg btn-block"><i class="fa fa-truck" aria-hidden="true"></i><h4>Delivery</h4></button>
+            </td>
+            <td>
+                <button type="button" class="btn btn-primary btn-lg btn-block"><i class="fa fa-unlock" aria-hidden="true"></i><h4>Password</h4></button>
+            </td>
+        </tr>
+    </table>
+</div>              
 
         <script type="text/javascript" src="js/plugins/jquery/jquery.min.js"></script>
         <script type="text/javascript" src="js/plugins/jquery/jquery-ui.min.js"></script>

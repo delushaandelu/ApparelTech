@@ -36,3 +36,21 @@
 	height: 100px;
 }
 
+#hbtn
+{
+    margin-left: 2%;
+}
+
+table {
+    background: gray;
+}
+td {    
+    display: block;
+    float: left;
+    padding: 10px 0;
+    margin-right:50px;
+    background: white;
+}
+td:last-child {
+    margin-right: 0;
+}
