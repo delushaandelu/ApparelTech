@@ -24,18 +24,18 @@
     <div class="row">
         <div class="first_section">
             <br><br>
-            <button type="button" id="button1" class="btn btn-default btn-lg active" onclick="location.href='ManageUser-Manage_Customer.php'"><i class="fa fa-user-plus" aria-hidden="true"></i> Manage Customer</button>     
-            <button type="button" id="button1" class="btn btn-default btn-lg active" onclick="location.href='Stock-View_Stock.php'"><i class="fa fa-caret-square-o-down" aria-hidden="true"></i> View Stock</button>
+            <button type="button" id="button1" class="btn btn-default btn-lg active" onclick="location.href='ManageUser-Manage_Customer.php'"><i class="fa fa-user-plus fa-2x" aria-hidden="true"></i> Manage Customer</button>     
+            <button type="button" id="button1" class="btn btn-default btn-lg active" onclick="location.href='Stock-View_Stock.php'"><i class="fa fa-caret-square-o-down fa-2x" aria-hidden="true"></i> View Stock</button>
             <br><br>
         </div>
         <div>
-            <button type="button" id="button1" class="btn btn-default btn-lg active" onclick="location.href='Supplier-Manage_Supplier.php'"><i class="fa fa-user-plus" aria-hidden="true"></i> Manage Suppliers</button>     
+            <button type="button" id="button1" class="btn btn-default btn-lg active" onclick="location.href='Supplier-Manage_Supplier.php'"><i class="fa fa-user-plus fa-2x" aria-hidden="true"></i> Manage Suppliers</button>     
             <button type="button" id="button1" class="btn btn-default btn-lg active" onclick="location.href='Supplier-View_Supplier.php'"><i class="fa fa-user fa-2x" aria-hidden="true"></i> View Suppliers</button>
             <br><br>
         </div>
         <div>
-            <button type="button" id="button1" class="btn btn-default btn-lg active" onclick="location.href='backup.php'"><i class="fa fa-cloud-download" aria-hidden="true"></i> Backup</button>     
-            <button type="button" id="button1" class="btn btn-default btn-lg active" onclick="location.href='Settings-Change_username.php'"><i class="fa fa-cogs" aria-hidden="true"></i> Setting</button>
+            <button type="button" id="button1" class="btn btn-default btn-lg active" onclick="location.href='backup.php'"><i class="fa fa-cloud-download fa-2x" aria-hidden="true"></i> Backup</button>     
+            <button type="button" id="button1" class="btn btn-default btn-lg active" onclick="location.href='Settings-Change_username.php'"><i class="fa fa-cogs fa-2x" aria-hidden="true"></i> Setting</button>
         </div>
         <div id="second_section">
             <img class="Slides" src="images/manager.jpg" style="width:100%">

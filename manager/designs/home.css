@@ -2,7 +2,7 @@
 /* CSS Document */
 
 #button1{
-    width: 200px;
+    width: 220px;
     height: 100px;
     border-radius: 15px;
     color:black;
@@ -20,5 +20,6 @@ button1:active {
 
 #second_section{
     margin-top: -32%;
-    margin-left: 50%;
+    margin-left: 48%;
+    margin-right: 4%;
 }

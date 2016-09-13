@@ -46,7 +46,7 @@
         include('database_connection.php');
 
         //select query
-        $sql = "SELECT customer_id, nic, fullname, designation, companyname, address, email, mobile, tele FROM customer";
+        $sql = "SELECT customer_id, nic, fullname, designation, companyname, address, email, mobile, tele FROM customer where status ='false'";
         $result = $dbcon->query($sql);
         while ($row = $result->fetch_assoc()) {
         ?>

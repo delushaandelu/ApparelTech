@@ -34,7 +34,7 @@
         <?php
             include('database_connection.php');
 
-            $sql = "SELECT customer_id, nic, fullname, designation, companyname, address, email, mobile, tele FROM customer";
+            $sql = "SELECT customer_id, nic, fullname, designation, companyname, address, email, mobile, tele FROM customer where status = 'true'";
             $result = $dbcon->query($sql);
 
             if ($result->num_rows > 0) {
