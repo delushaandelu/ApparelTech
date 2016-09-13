@@ -16,7 +16,7 @@ if(isset($_POST["sumbit"])){
     $password = $_POST['pword'];
     
     
-    $sql="INSERT INTO customer (nic,fullname,designation,companyName,address,email,mobile,tele,username,password) VALUES ('$nic','$fname','$desi','$cname','$address','$email','$mob','$tele','$uname','$password')";
+    $sql="INSERT INTO customer (nic,fullname,designation,companyName,address,email,mobile,tele,username,password,status) VALUES ('$nic','$fname','$desi','$cname','$address','$email','$mob','$tele','$uname','$password','false')";
     
 
 if (mysqli_query($db, $sql) === TRUE) {

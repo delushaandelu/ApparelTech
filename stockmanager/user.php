@@ -1,3 +1,4 @@
+
 <?php
 class User{
 public function changepswd(){
@@ -7,8 +8,8 @@ public function changepswd(){
     $NewPassword=$_POST["newpassword"];
     $ConfirmPassword=$_POST["confirmpassword"];
     
-    $uid = $_SESSION['uid'];
-    
+    $uid = intval($_SESSION['uid']);
+    //echo $uid;
     
     if(!empty($_POST['oldpassword']) && !empty($_POST['newpassword']) && !empty($_POST['confirmpassword'] ) ){  //cheking input fields are filled.
             $sql="SELECT password FROM user WHERE user_id=$uid";
@@ -16,7 +17,7 @@ public function changepswd(){
         if(!$result){
             echo"error";}
         
-            $res=mysqli_fetch_array($result);
+            $res=mysqli_fetch_array($result,MYSQLI_ASSOC);
             echo $res['password'];
         if($res['password']==$OldPassword){               //cheking old password match with entered old password.
             
