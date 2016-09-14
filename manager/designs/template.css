@@ -241,3 +241,20 @@ td{
     margin-left: 40%;
     margin-top: 5%;
 }
+
+#button1{
+    border-radius:5px;
+    width:160px;
+    height:50px;
+    color:#FFFFFF;
+    background-color:#00aa88;
+}
+
+#button1:hover{
+    background-color: #00a8e0;
+}
+
+button1:active {
+    background-color: #00a8e0;
+    transform: translateY(4px);
+}

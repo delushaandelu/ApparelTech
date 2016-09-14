@@ -26,12 +26,12 @@
 <div id="content">
         <div id="top">
             <h5>
-                <font color="#a52a2a" size="+2">Change Username?</font>
+                <font color="#a52a2a" size="+2">Change Username!</font>
             </h5>
             <br><br>
             <tr>
                 <td id="table-font" width="30" >
-                    Username
+                    Username*
                 </td>
                 <td>
                     <input type="text" name="Username" class="form-control" required>
@@ -39,23 +39,31 @@
             </tr>
             <tr>
                 <td id="table-font" width="30" >
-                    New Username
+                    New Username*
+                </td>
+                <td>
+                    <input type="text" name="New Username" class="form-control" required>
+                </td>
+            </tr>
+            <tr>
+                <td id="table-font" width="30" >
+                    Confirm new Username*
                 </td>
                 <td>
                     <input type="text" name="New Username" class="form-control" required>
                 </td>
             </tr>
             <br><br>
-            <button type="button" id="button" class="btn btn-default btn-lg active">Change</button>
+            <button type="button" style="font-size:15px" id="button1" class="btn btn-default btn-lg active">Change</button>
             <br><br>
 
             <h5>
-                <font color="#a52a2a" size="+2">Change Password?</font>
+                <font color="#a52a2a" size="+2">Change Password!</font>
             </h5>
             
             <br><br>
             
-            <button type="button" id="button" class="btn btn-default btn-lg active" onclick="location.href='Settings-Change_password.php' ">Change</button>
+            <button type="button" id="button1" style="font-size:15px" class="btn btn-default btn-lg active" onclick="location.href='Settings-Change_password.php' ">Change Password</button>
         </div>
         
         <p>&nbsp;</p>

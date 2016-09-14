@@ -27,12 +27,12 @@
         <div id="content">
         <div id="top">
             <h5>
-                <font color="#a52a2a" size="+2">Change Password?</font>
+                <font color="#a52a2a" size="+2">Change Password!</font>
             </h5>
             <br><br>
             <tr>
                 <td id="table-font" width="30" >
-                    Password
+                    Password*
                 </td>
                 <td>
                     <input type="password" name="Password" class="form-control" required>
@@ -40,16 +40,24 @@
             </tr>
             <tr>
                 <td id="table-font" width="30" >
-                    New Password
+                    New Password*
                 </td>
                 <td>
                     <input type="password" name="New Password" class="form-control" required>
-                    <label class="active">atleast 6 charactors with numbers and letters</label>
+                    <!--<label class="active">atleast 6 charactors with numbers and letters</label>-->
+                </td>
+            </tr>
+            <tr>
+                <td id="table-font" width="30" >
+                    Confirm new Password*
+                </td>
+                <td>
+                    <input type="password" name="New Password" class="form-control" required>
                 </td>
             </tr>
             <br><br>
-            <button type="button" id="button" class="btn btn-default btn-lg active">Change</button>
-            <button type="button" id="button" class="btn btn-default btn-lg active" onclick="location.href='Settings-Change_username.php'">Back</button>
+            <button type="button" id="button1" class="btn btn-default btn-lg active">Change</button>
+            <button type="button" id="button1" class="btn btn-default btn-lg active" onclick="location.href='Settings-Change_username.php'">Back</button>
             <br><br>
         </div>
         
