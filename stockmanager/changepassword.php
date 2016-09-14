@@ -24,8 +24,8 @@
 <div id="content">
     <div id="changepwd">
     <div class="panel panel-success">
-        <div class="panel-heading" align="center">More Protection!</div>
-           <div class="panel-body">
+        <div class="panel-heading" align="center">Account Password</div>
+          
                 <form method="post">
                     <table id="pwdtb" border="0" width="400" height="200">
                     <tr>
@@ -41,8 +41,8 @@
                         <td><input type="password" name="confirmpassword"  class="form-control"></td>
                     </tr>
                     <tr>
-                        <td><input type="reset" class="btn btn-info" value="Reset" /></td>    
-                        <td><input type="submit" class="btn btn-info" name="changepswd" value="Change"/></td>    
+                        <td colspan="2"><center><input type="reset" class="btn btn-info" value="Reset" />    
+                        <input type="submit" class="btn btn-info" name="changepswd" value="Change"/></center></td>    
                     </tr>
                 </table>
                </form>

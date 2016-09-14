@@ -38,7 +38,7 @@
 
 #hbtn
 {
-    margin-left: 2%;
+    margin-left: 6%;
 }
 
 table {
@@ -48,9 +48,19 @@ td {
     display: block;
     float: left;
     padding: 10px 0;
-    margin-right:50px;
+    margin-right:20px;
     background: white;
 }
 td:last-child {
     margin-right: 0;
+}
+
+.button
+{
+    width: 150px;
+}
+
+.button:hover
+{
+    background-color: darkgray;
 }
