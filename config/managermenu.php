@@ -7,7 +7,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html" style="background-color: #0a0a0a; font-size: 30px; color: white; margin-left: 10%" >Manager</a>
+                <a class="navbar-brand" href="index.html" style="background-color: #0a0a0a; font-size: 30px; color:#FF4500; margin-left: 10%" >Manager</a>
             </div>
             <ul class="nav navbar-top-links navbar-right">
                 <li class="dropdown">

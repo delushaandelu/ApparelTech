@@ -4,7 +4,7 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
  */
 body {
-  background-color: #f8f8f8;
+  background-color:#000000;
 }
 #wrapper {
   width: 100%;
@@ -12,7 +12,7 @@ body {
 #page-wrapper {
   padding: 0 15px;
   min-height: 568px;
-  background-color: white;
+  background-color:white;
 }
 @media (min-width: 768px) {
   #page-wrapper {
@@ -75,10 +75,23 @@ body {
   padding: 15px;
 }
 .sidebar ul li {
-  border-bottom: 1px solid #e7e7e7;
+  border-bottom: 1px solid #121418;
+    background-color:  #17191e;
 }
-.sidebar ul li a.active {
-  background-color: #eeeeee;
+.sidebar li > ul li.active > a {
+  background: #121418;
+}
+.sidebar ul li > a:hover{
+    background-color:#708090 ;
+}
+.sidebar ul li > a.active {
+  background-color:#FF4500;
+}
+ .sidebar li.active > a {
+     background: #708090;}
+
+.sidebar ul li a{
+    color: white;
 }
 .sidebar .arrow {
   float: right;
@@ -147,7 +160,7 @@ body {
 .chat li {
   margin-bottom: 10px;
   padding-bottom: 5px;
-  border-bottom: 1px dotted #999999;
+  border-bottom: 1px dotted ;
 }
 .chat li.left .chat-body {
   margin-left: 60px;

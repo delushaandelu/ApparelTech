@@ -32,7 +32,7 @@
                             <td><?php echo $row['customer_id'] ?></td>
                             <td><?php echo $row['total_price'] ?></td>
                             <td><?php echo $row['created'] ?></td>
-                            <td class="bt"><input type="button" class="btn btn-info" value=Reject onclick="location.href='Purchase Order_ManagePurchaseOrder.php?id=<?php echo $row['id'] ?>'"></td>
+                            <td class="bt"><input type="button" class="btn btn-danger" value=Reject onclick="location.href='Purchase Order_ManagePurchaseOrder.php?id=<?php echo $row['id'] ?>'"></td>
                             <td class="bt"><input type="button" class="btn btn-info" value=Accept onclick="location.href='Purchase Order_ManagePurchaseOrder.php?ID=<?php echo $row['id'] ?>'" ></td>
                             <td class="bt"><input type="button" class="btn btn-info" value=view onclick="location.href='PurchaseOrder_viewPurchaseOrder.php?vi=<?php echo $row['id'] ?>'" ></td>
                             </tr>

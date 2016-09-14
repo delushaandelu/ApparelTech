@@ -25,23 +25,23 @@
     <table border="0">
         <tr>
             <td>
-                <button type="button" class="btn btn-primary btn-lg btn-block"><i class="fa fa-barcode" aria-hidden="true"></i><h4> Manage  Stock </h4></button>
+                <button type="button" class=""><i class="fa fa-barcode fa-5x" aria-hidden="true"></i><h4> Manage  Stock </h4></button>
             </td>
             <td></td>
             <td>
-                <button type="button" class="btn btn-primary btn-lg btn-block"><i class="fa fa-file-powerpoint-o" aria-hidden="true"></i><h4> Stock  Report </h4></button>
+                <button type="button" class=""><i class="fa fa-file-powerpoint-o fa-5x" aria-hidden="true"></i><h4> Stock  Report </h4></button>
             </td>
             <td>
-                <button type="button" class="btn btn-primary btn-lg btn-block"><i class="fa fa-cog fa-5x" aria-hidden="true"></i><h4> Manage  P / O </h4></button>
+                <button type="button" class=""><i class="fa fa-cog fa-5x" aria-hidden="true"></i><h4> Manage  P / O </h4></button>
             </td>
             <td>
-                <button type="button" class="btn btn-primary btn-lg btn-block"><i class="fa fa-renren" aria-hidden="true"></i><h4>Manage  Rent</h4></button>
+                <button type="button" class=""><i class="fa fa-renren fa-5x" aria-hidden="true"></i><h4>Manage  Rent</h4></button>
             </td>
             <td>
-                <button type="button" class="btn btn-primary btn-lg btn-block"><i class="fa fa-truck" aria-hidden="true"></i><h4>Delivery</h4></button>
+                <button type="button" class=""><i class="fa fa-truck fa-5x" aria-hidden="true"></i><h4>Delivery</h4></button>
             </td>
             <td>
-                <button type="button" class="btn btn-primary btn-lg btn-block"><i class="fa fa-unlock" aria-hidden="true"></i><h4>Password</h4></button>
+                <button type="button" class=""><i class="fa fa-unlock fa-5x" aria-hidden="true"></i><h4>Password</h4></button>
             </td>
         </tr>
     </table>

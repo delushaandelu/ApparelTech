@@ -38,7 +38,7 @@
             }
             else{
                  echo'<script language ="javascript">';
-                    echo "swal({  title: 'Driver Deleted!', text: '', type: 'success', confirmButtonText: 'Done!'}, function(){window.location.href='driver_details.php'});";
+                    echo "swal({  title: 'Driver Updated!', text: '', type: 'success', confirmButtonText: 'Done!'}, function(){window.location.href='driver_details.php'});";
                 echo'</script>';
             }
         
