@@ -8,6 +8,8 @@
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="designs/template.css" type="text/css" />
     <link rel="stylesheet" href="designs/test123.css" type="text/css" />
+    <script src="js/sweetalert-dev.js"></script>
+    <link rel="stylesheet" href="js/sweetalert.css">
 </head>
 
 <body>
@@ -33,15 +35,9 @@
     <div class="row">
 
         <!-- table for view accepted customers -->
-        <?php
-            include('database_connection.php');
 
-            $sql = "SELECT customer_id, nic, fullname, designation, companyname, address, email, mobile, tele FROM customer where status = 'true'";
-            $result = $dbcon->query($sql);
-
-            if ($result->num_rows > 0) {
-                echo "<table class='table table-striped' id='myTable'>";
-                echo"<tr>
+                <table class='table table-striped' id='myTable'>
+                <tr>
                     <th>Customer ID </th>
                     <th>NIC </th>
                     <th>Full Name </th>
@@ -51,29 +47,59 @@
                     <th>e-mail </th>
                     <th>Mobile </th>
                     <th>Telephone </th>
-                </tr>";
+                    <th>Action </th>
+                </tr>
 
-                while($row = $result->fetch_assoc()) {
-                    echo "<tr>
-                        <td>" . $row["customer_id"]. "</td>
-                        <td>" . $row["nic"]. "</td>
-                        <td>" . $row["fullname"]. "</td>
-                        <td>" . $row["designation"]. "</td>
-                        <td>" . $row["companyname"]. "</td>
-                        <td>" . $row["address"]. "</td>
-                        <td>" . $row["email"]. "</td>
-                        <td>" . $row["mobile"]. "</td>
-                        <td>" . $row["tele"]. "</td>
-                    </tr>";
-                }
-                echo "</table>";
-            } else {
-                echo "0 results";
+                    <?php
+                    include('database_connection.php');
+
+                    $sql = "SELECT customer_id, nic, fullname, designation, companyname, address, email, mobile, tele FROM customer where status = 'true'";
+                    $result = $dbcon->query($sql);
+
+                    while($row = $result->fetch_assoc()) {
+                        ?>
+
+
+
+                    <tr>
+                        <td><?php echo $row['customer_id'] ?></td>
+                        <td><?php echo $row['nic'] ?></td>
+                        <td><?php echo $row['fullname'] ?></td>
+                        <td><?php echo $row['designation'] ?></td>
+                        <td><?php echo $row['companyname'] ?></td>
+                        <td><?php echo $row['address'] ?></td>
+                        <td><?php echo $row['email'] ?></td>
+                        <td><?php echo $row['mobile'] ?></td>
+                        <td><?php echo $row['tele'] ?></td>
+
+                        <td class="bt"><input type="button" id="button" class="btn btn-info" value="Delete" onclick="location.href='ManageUser-View_Customer.php?customer_id=<?php echo $row['customer_id'] ?>'"></td>
+                    </tr>
+                    <?php } ?>
+                </table>
+
+        <?php
+        if(isset($_GET['customer_id'])){
+
+            $id = $_GET['customer_id'];
+            $sql1= "DELETE FROM customer WHERE customer_id = '$id'";
+            $sql2= "DELETE FROM user WHERE user_id = '$id'";
+            $result1=mysqli_query($dbcon,$sql1);
+            $result2=mysqli_query($dbcon,$sql2);
+
+            if($result1 && $result2){
+                echo'<script language ="javascript">';
+                echo "swal({  title: 'Customer deleted successfully!', text: '', type: 'success', confirmButtonText: 'Done!'}, function(){window.location.href='ManageUser-View_Customer.php'});";
+                echo'</script>';
             }
-
-            $dbcon->close();
-
+            else{
+                echo'<script language ="javascript">';
+                echo "swal({  title: 'Error occurs while deleting!', text: '', type: 'error', confirmButtonText: 'Done!'}, function(){window.location.href='ManageUser-View_Customer.php'});";
+                echo'</script>';
+            }
+        }
         ?>
+           
+
 
         <!-- display live search -->
         <script>
