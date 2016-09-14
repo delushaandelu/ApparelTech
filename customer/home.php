@@ -25,31 +25,31 @@
     <H1>Welcome to Priyantha Enterprices</H1>
     <div id = info>
                 <div class="panel panel-primary">
-                    <div class="panel-heading" align="center">Here you are!</div>
+                    <div class="panel-heading" align="center"><h2>Here you are!</h2></div>
                     <div class="panel-body">
                         <table>
                             <form method="get">
                                 <tr>
-                                    <td><h3>Customer name :
+                                    <td><h4>Customer name :
                                         <?php
                                         echo $_SESSION['fname'];
                                         ?>
-                                    </h3></td>
+                                    </h4></td>
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td><h3>Customer ID :
+                                    <td><h4>Customer ID :
                                         <?php
                                         echo $_SESSION['csid'];
                                         ?>
-                                        </h3></td>
+                                        </h4></td>
                                 </tr>
                                 <tr>
-                                    <td><h3>Company name :
+                                    <td><h4>Company name :
                                         <?php
                                         echo $_SESSION['company'];
                                         ?>
-                                        </h3></td>
+                                        </h4></td>
                                     <td></td>
                                 </tr>
                             </form>
