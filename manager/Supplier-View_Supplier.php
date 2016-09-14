@@ -34,6 +34,7 @@
     <br><br>
     <div class="row">
 
+            <!-- view supplier-->
             <table class='table' style='border: 0;' id='myTable'>
                 <tr>
                 <th><h4 align='center'>Supplier ID </h4></th>
@@ -67,9 +68,9 @@
                     <td class="bt"><input type="button" id="button" class="btn btn-info" value="Delete" onclick="location.href='Supplier-View_Supplier.php?supplier_id=<?php echo $row['supplier_id'] ?>'"></td>
                 </tr>
             <?php } ?>
-
-
             </table>
+
+        <!-- delete customer -->
         <?php
             if(isset($_GET['supplier_id'])){
 
@@ -91,6 +92,7 @@
             }
         ?>
 
+        <!-- live search function -->
         <script>
             function myFunction() {
                 var input, filter, table, tr, td, i;

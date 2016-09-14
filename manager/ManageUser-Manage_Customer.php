@@ -25,7 +25,7 @@
     </div>
     
 
-
+        <!-- display new customers in a table-->
         <table class='table table-striped' >
         <tr>
                     <th >Customer ID </th>
@@ -45,7 +45,7 @@
         //include database connection
         include('database_connection.php');
 
-        //select query
+        //select query for display
         $sql = "SELECT customer_id, nic, fullname, designation, companyname, address, email, mobile, tele FROM customer where status ='false'";
         $result = $dbcon->query($sql);
         while ($row = $result->fetch_assoc()) {
@@ -69,7 +69,7 @@
     </table>
 
 
-
+<!-- code for delete customer from customer table-->
 <?php
     if(isset($_GET['customer_id'])){
 
@@ -90,6 +90,7 @@
     }
 ?>
 
+<!-- code for insert customer to user table and update status-->
     <?php
     if(isset($_GET['cst_id'])){
     $cid=$_GET['cst_id'];

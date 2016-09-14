@@ -24,13 +24,15 @@
                 <h1 class="page-header">Customers</h1>
             </div>
             <div class="2">
+                <!-- search box -->
                 <input type="text" id="myInput" onkeyup="myFunction()" placeholder="&#x26B2   Search for customers by name..." style="width:300px"">
                     <br><br><br>
             </div>
         </div>
-
     </div>
     <div class="row">
+
+        <!-- table for view accepted customers -->
         <?php
             include('database_connection.php');
 
@@ -73,6 +75,7 @@
 
         ?>
 
+        <!-- display live search -->
         <script>
             function myFunction() {
                 var input, filter, table, tr, td, i;

@@ -23,6 +23,7 @@
             </div>
             <div class="2">
                 <div class="2">
+                    <!-- search box -->
                     <input type="text" id="myInput" onkeyup="myFunction()" placeholder="&#x26B2   Search for items by id..." style="width: 300px " >
 
                 </div>
@@ -32,6 +33,7 @@
         
     </div>
     <div class="row">
+        <!-- display stock -->
         <?php
 
         include('database_connection.php');
@@ -71,6 +73,7 @@
 
         ?>
 
+        <!-- live search -->
         <script>
             function myFunction() {
                 var input, filter, table, tr, td, i;

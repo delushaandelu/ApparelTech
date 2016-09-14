@@ -22,6 +22,7 @@
         </div>
     </div>
     <div class="row">
+        <!-- buttons -->
         <div class="first_section">
             <br><br>
             <button type="button" id="button1" class="btn btn-default btn-lg active" onclick="location.href='ManageUser-Manage_Customer.php'"><i class="fa fa-user-plus fa-2x" aria-hidden="true"></i> Manage Customer</button>     
@@ -37,6 +38,8 @@
             <button type="button" id="button1" class="btn btn-default btn-lg active" onclick="location.href='backup.php'"><i class="fa fa-cloud-download fa-2x" aria-hidden="true"></i> Backup</button>     
             <button type="button" id="button1" class="btn btn-default btn-lg active" onclick="location.href='Settings-Change_username.php'"><i class="fa fa-cogs fa-2x" aria-hidden="true"></i> Setting</button>
         </div>
+
+        <!-- images of slide show -->
         <div id="second_section">
             <img class="Slides" src="images/manager.jpg" style="width:100%">
             <img class="Slides" src="images/2.jpg" style="width:100%">
@@ -46,11 +49,12 @@
             <img class="Slides" src="images/singer.jpg" style="width:100%">
         </div>
 
+        <!-- function for image slide show -->
         <script>
             var Index = 0;
-            carousel();
+            changeImage();
 
-            function carousel() {
+            function changeImage() {
                 var i;
                 var x = document.getElementsByClassName("Slides");
                 for (i = 0; i < x.length; i++) {
@@ -59,7 +63,7 @@
                 Index++;
                 if (Index > x.length) {Index = 1}
                 x[Index-1].style.display = "block";
-                setTimeout(carousel, 3000); // Change image every 2 seconds
+                setTimeout(changeImage, 3000); // Change image every 2 seconds
             }
         </script>
 
