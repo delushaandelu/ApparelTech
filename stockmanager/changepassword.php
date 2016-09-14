@@ -76,7 +76,7 @@
 
 if(isset($_POST["changepswd"])){                 //call to changepswd method in User class.
     $myUser = new User();
-    $myUser->changepswd();
+    $myUser -> changepswd();
     
 }
 
