@@ -57,11 +57,24 @@
                     </div>
                 </div>
         </div>
-    
     <div id="dashbutton">
-         <a href="#" class="myButton">Make a Purchase</a>
-         <a href="#" class="myButton">Order Rent Item</a>
-         <a href="#" class="myButton">Request Delivery</a>
+    <div class="row">
+        <!-- buttons -->
+        <div class="first_section">
+            <br><br>
+            <button type="button" id="button1" class="btn btn-default btn-lg active" onclick="location.href='products.php'"><i class="fa fa-file-archive-o fa-2x" aria-hidden="true"></i> Create P/O</button>     
+            <button type="button" id="button1" class="btn btn-default btn-lg active" onclick="location.href='cancelPurchase.php'"><i class="fa fa-ban fa-2x" aria-hidden="true"></i> Cancel P/O</button>
+            <br><br>
+        </div>
+        <div>
+            <button type="button" id="button1" class="btn btn-default btn-lg active" onclick="location.href='newRent.php'"><i class="fa fa-retweet fa-2x" aria-hidden="true"></i> Rent Item</button>     
+            <button type="button" id="button1" class="btn btn-default btn-lg active" onclick="location.href='canceRent.php'"><i class="fa fa-trash-o fa-2x" aria-hidden="true"></i> Cancel Rent</button>
+            <br><br>
+        </div>
+        <div>
+            <button type="button" id="button1" class="btn btn-default btn-lg active" onclick="location.href='changeUsername.php'"><i class="fa fa-user-plus fa-2x" aria-hidden="true"></i> Change Username</button>     
+            <button type="button" id="button1" class="btn btn-default btn-lg active" onclick="location.href='changePassword.php'"><i class="fa fa-unlock-alt fa-2x" aria-hidden="true"></i> Change Password</button>
+        </div>
     </div>
 </div>
 

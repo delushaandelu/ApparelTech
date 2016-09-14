@@ -1,7 +1,7 @@
 #info
 {
-    width: 80%;
-    margin-left: 10%;
+    width: 40%;
+    margin-left: 55%;
     margin-top: 5%;
 }
 
@@ -34,9 +34,23 @@
 
 #dashbutton
 {
-    margin-left: 12%;
-    margin-top: 8%;
+    margin-left: 5%;
+    margin-top: -25%;
 }
 
+#button1{
+    width: 220px;
+    height: 60px;
+    border-radius: 15px;
+    color:black;
+   
+    font-size: large;
+}
+#button1:hover{
+    background-color: #00a8e0;
+}
 
-
+button1:active {
+    background-color: #00a8e0;
+    transform: translateY(4px);
+}
