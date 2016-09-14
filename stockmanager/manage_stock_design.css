@@ -18,11 +18,18 @@
 }
 
 #nav_tab_item_effect{
-	background-color:#000;
-	color:#FFF;
+	background-color:black;
 	font-size:14px;
-	
 	}
+#nav_tab_item_effect a:hover{
+    background-color: orangered;
+    
+}
+#nav_tab_item_effect a{
+    color: white;
+}
+
+
 	
 .panel_body_add_item{
 	
@@ -39,7 +46,7 @@
 	margin-top: 400px;
 	height:100px;
 	margin-left: 750px;
-	background-color: white;
+	background-color:white;
 	}
 .upper_panel_add_item{
 	height:400px;
@@ -52,13 +59,9 @@ tr.spaceUnder > td
 }
 
 .myButton {
-	-moz-box-shadow: 0px 10px 14px -7px #000000;
-	-webkit-box-shadow: 0px 10px 14px -7px #000000;
-	box-shadow: 0px 10px 14px -7px #000000;
-	background-color:#000000;
-	-moz-border-radius:8px;
-	-webkit-border-radius:8px;
-	border-radius:8px;
+	
+	background-color:#1caf9a;
+	border-radius: 8px;
 	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
@@ -69,11 +72,7 @@ tr.spaceUnder > td
 	text-decoration:none;
 }
 .myButton:hover {
-	background-color:#050301;
-}
-.myButton:active {
-	position:relative;
-	top:1px;
+	background-color:darkcyan;
 }
 
 #below_panel_search_item{
