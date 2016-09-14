@@ -98,9 +98,13 @@
     SELECT customer.customer_id, customer.username, customer.password,0
     FROM customer
     WHERE customer_id=$cid";
-        $result1=mysqli_query($dbcon,$copy_query);
 
-        if($result1){
+        $update_query = "UPDATE customer SET status = 'true' WHERE customer_id=$cid";
+
+        $result1=mysqli_query($dbcon,$copy_query);
+        $result2=mysqli_query($dbcon,$update_query);
+
+        if($result1 && $result2){
             echo'<script language ="javascript">';
             echo "swal({  title: 'Details of customer saved successfully!', text: '', type: 'success', confirmButtonText: 'Done!'}, function(){window.location.href='ManageUser-Manage_Customer.php'});";
             echo'</script>';
