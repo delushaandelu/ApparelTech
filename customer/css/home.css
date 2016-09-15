@@ -1,8 +1,8 @@
 #info
 {
-    width: 40%;
-    margin-left: 55%;
-    margin-top: 5%;
+    width: 45%;
+    margin-left: 51%;
+    margin-top: 2%;
 }
 
 .myButton {
@@ -34,8 +34,8 @@
 
 #dashbutton
 {
-    margin-left: 5%;
-    margin-top: -25%;
+    margin-left: 2%;
+    margin-top: -19%;
 }
 
 #button1{
@@ -53,4 +53,11 @@
 button1:active {
     background-color: #00a8e0;
     transform: translateY(4px);
+}
+
+#quick_btn
+{
+    width: 45%;
+    margin-top: 18.5%;
+    
 }
