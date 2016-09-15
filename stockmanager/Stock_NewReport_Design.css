@@ -24,10 +24,47 @@ body, html{
   margin: 0;
   padding: 0;
 }*/
-.drop_down{
-	height: 100px;	
-	margin-left: 100px;
+
+.upper_panel_new_report{
+	height: 300px;
+	
+
 }
+
+#drop_down{
+	height: 100px;	
+
+	/*background-color: red;*/
+}
+
+#button_effect{
+	margin-top: 50px;
+	/*background-color: black;*/
+}
+
+#btnNewReportGenerateReport {
+	background-color:#050505;
+	-moz-border-radius:28px;
+	-webkit-border-radius:28px;
+	border-radius:28px;
+	border:1px solid #242424;
+	display:inline-block;
+	cursor:pointer;
+	color:#f02400;
+	font-family:Arial;
+	font-size:17px;
+	padding:5px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #121411;
+}
+#btnNewReportGenerateReport:hover {
+	background-color:#424142;
+}
+#btnNewReportGenerateReport:active {
+	position:relative;
+	top:1px;
+}
+
 
 
 .drop_down_ul li{

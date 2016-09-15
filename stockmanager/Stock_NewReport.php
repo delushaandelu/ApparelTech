@@ -50,68 +50,50 @@
                 <ul class="breadcrumb">
                     <h2>New Reports</li></h2>
                 </ul>
- <div id="upper_panel_new_report">
+
+<form method="post">
+    <div class="upper_panel_new_report">
       
 
-        <div class="col-md-8">
-            <form method="post">
-                <!-- <label>Select the Category Type</label>
-
-                <input type="radio" name="categorytype" value="Sewing Machines" checked> Sewing Machines<br>
-                <input type="radio" name="categorytype" value="Sewing Machine Spare Parts"> Sewing Machine Spare Parts<br>
-                <input type="radio" name="categorytype" value="Tools"> Tools
-                <br><br> -->
-               
-
-
-     <div class="drop_down">       
+       <div class="col-md-2"></div>
+    
+        <div class="col-md-5" id="drop_down" >       
     
     
-  <ul class="drop_down_ul">
-  <li>
-    <input type="radio" id="f-option" name="selector" value="Sewing Machines">
-    <label for="f-option">Sewing Machines</label>
-    
-    <div class="check"></div>
-  </li>
-  
-  <li>
-    <input type="radio" id="s-option" name="selector" value="Sewing Machine Spare Parts">
-    <label for="s-option">Sewing Machine Spare Parts</label>
-    
-    <div class="check"><div class="inside"></div></div>
-  </li>
-  
-  <li>
-    <input type="radio" id="t-option" name="selector" value="Tools">
-    <label for="t-option">Tools</label>
-    
-    <div class="check"><div class="inside"></div></div>
-  </li>
-<!-- 
-   <li>
-    <input type="radio" id="f-option" name="selector">
-    <label for="f-option">All</label>
-    
-    <div class="check"><div class="inside"></div></div>
-  </li> -->
-</ul>
-</div>
- <input type="submit" class="btn btn-success" id="btnNewReportGenerateReport" name="btnNewReportGenerateReport" value="Generate Report"  />
+            <ul class="drop_down_ul">
+                  <li>
+                    <input type="radio" id="f-option" name="selector" value="Sewing Machines">
+                    <label for="f-option">Sewing Machines</label>
+                    
+                    <div class="check"></div>
+                  </li>
+                  
+                  <li>
+                    <input type="radio" id="s-option" name="selector" value="Sewing Machine Spare Parts">
+                    <label for="s-option">Sewing Machine Spare Parts</label>
+                    
+                    <div class="check"><div class="inside"></div></div>
+                  </li>
+                  
+                  <li>
+                    <input type="radio" id="t-option" name="selector" value="Tools">
+                    <label for="t-option">Tools</label>
+                    
+                    <div class="check"><div class="inside"></div></div>
+                  </li>
+            </ul>
+        </div>
 
-                
-
-            </form> 
-
-<!-- <div class="signature">
-    <p>Made with <i class="much-heart"></i> by <a href="http://codepen.io/AngelaVelasquez">Angela Velasquez</a></p>
-</div>
-      -->
-
-       </div>
-
-
+        <div class="col-md-5" id="button_effect">
+            <input type="submit" id="btnNewReportGenerateReport" name="btnNewReportGenerateReport" value="Generate Report"  />
+        </div>
+        
     </div>
+</form>
+
+
+
+    
 
     <div class="report_table">
         <?php
@@ -124,7 +106,7 @@
                      
                     
                     $categoryname = $_POST['selector'];
-                    echo "$categoryname";
+                    
                   
                     $sql = "SELECT * FROM item WHERE catagery = '$categoryname'";
                          
