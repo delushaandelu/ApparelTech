@@ -12,7 +12,7 @@ if(isset($_POST['login'])){
     $username = $_POST['username'];
     $password = $_POST['password'];
    
-    $res = mysqli_fetch_assoc(mysqli_query($dbcon,"select user_id from user where username='$username'"));
+    $res = mysqli_fetch_assoc(mysqli_query($conn,"select user_id from user where username='$username'"));
     $_SESSION['uid'] = $res['user_id'];
     
     $result = mysqli_query($conn, 'select * from user where username="'.$username.'" and password="'.$password.'" and accessLevel="2" ');

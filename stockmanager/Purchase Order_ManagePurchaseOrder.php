@@ -20,7 +20,13 @@
         <div class="panel">
             <div class="panel-heading">
                 <table class="table table-striped">
-                    <tr class="title"><th>id</th><th>customerid</th><th>totalprice</th><th>created</th><th>Action</th></tr>
+                    <tr class="title">
+                        <th><center>id</center></th>
+                        <th><center>customerid</center></th>
+                        <th><center>totalprice</center></th>
+                        <th><center>created</center></th>
+                        <th colspan="3"><center>Action</center></th>
+                    </tr>
                         <?php 
                             $sql = "select * from orders";    //display orders table.
                             $result = mysqli_query($dbcon,$sql);        
@@ -28,13 +34,16 @@
     
                         ?>
                             <tr  class="active">
-                            <td><?php echo $row['id'] ?></td>
-                            <td><?php echo $row['customer_id'] ?></td>
-                            <td><?php echo $row['total_price'] ?></td>
-                            <td><?php echo $row['created'] ?></td>
-                            <td class="bt"><input type="button" class="btn btn-danger" value=Reject onclick="location.href='Purchase Order_ManagePurchaseOrder.php?id=<?php echo $row['id'] ?>'"></td>
-                            <td class="bt"><input type="button" class="btn btn-info" value=Accept onclick="location.href='Purchase Order_ManagePurchaseOrder.php?ID=<?php echo $row['id'] ?>'" ></td>
-                            <td class="bt"><input type="button" class="btn btn-info" value=view onclick="location.href='PurchaseOrder_viewPurchaseOrder.php?vi=<?php echo $row['id'] ?>'" ></td>
+                            <td><center><?php echo $row['id'] ?></center></td>
+                            <td><center><?php echo $row['customer_id'] ?></center></td>
+                            <td><center><?php echo $row['total_price'] ?></center></td>
+                            <td><center><?php echo $row['created'] ?></center></td>
+                                
+                                <td class="bt"><center><button type="button" class="btn btn-danger" onclick="location.href='Purchase Order_ManagePurchaseOrder.php?id=<?php echo $row['id'] ?>'"><i class="fa fa-trash-o"></i>Reject</button></center></td>
+                                
+                                <td class="bt"><center><button type="button" class="btn btn-info"  onclick="location.href='Purchase Order_ManagePurchaseOrder.php?ID=<?php echo $row['id'] ?>'" ><i class="fa fa-check" aria-hidden="true"></i>Accept</button></center></td>
+                                
+                                <td class="bt"><center><button type="button" class="btn btn-info" onclick="location.href='PurchaseOrder_viewPurchaseOrder.php?vi=<?php echo $row['id'] ?>'" ><i class="fa fa-eye" aria-hidden="true"></i>view</center></button></td>
                             </tr>
                 
                         <?php } ?>

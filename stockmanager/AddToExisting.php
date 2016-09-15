@@ -146,124 +146,57 @@
                 <li id ="nav_tab_item_effect"><a href="#">Update Item</a></li>
   			</ul>
             <br><br>
-            
-                <div class="col-md-4">
-                    <button onclick="location.href = 'Stock_ManageStock.php';" id="btnManageStockAddNew" class="myButton" >Add New</button><br><br>
-                     <button onclick="location.href = 'AddToExisting.php';" id="btnManageStockAddToExisting" class="myButton" >Add To Existing</button>
-
-
-
-
-                 </div>
-    
-                <div class = "col-md-8">  
-                	<div class = "upper_panel_add_item">
+                
+                	<div class = "upper_panel_add_item" id="add">
                             
                                 <form method="post" name="form" onSubmit="return check();">
                                     <table border="0" >
-                                        <tr></tr>
-                                        <tr>
-                                            
-                                            <td id="table_font"  width="60%"> 
-                                                Category Name   
-                                            </td> 
-                                            
+                                        <tr class="spaceUnder">
+                                            <td id="table_font" width="20%" >Category Name</td> 
                                             <td>
-                                                
-                                                <select id = "categoryname" name="categoryname" class="add_dropdown_effects">
+                                                <select id = "categoryname" name="categoryname" class="btn btn-default dropdown-toggle">
                                                     <option value="0" > Select Category Name</option>
                                                     <option value="Sewing Machines">Sewing Machines</option>
                                                     <option value="Sewing Machine Spare Parts">Sewing Machine Spare Parts</option>
                                                     <option value="Tools">Tools</option>
                                                 </select><br><br>
-                  
+                                            </td> 
+                                        </tr>
+                                        <tr class="spaceUnder">
+                                            <td id="table_font" width="10%" >Item Name</td> 
+                                            <td><select id = "itemname" name="itemname" class="btn btn-default dropdown-toggle"></select></td>
+                                        </tr>
+                                       <tr class="spaceUnder">
+                                            <td id="table_font" width="10%"  >Brand</td>   
+                                            <td><select id = "brandname" name="brandname" class="btn btn-default dropdown-toggle"></select>  
                                             </td>
-                                                
-                                                
-                                             
                                         </tr>
                                         <tr>
-                                            
-                                            <td id="table_font" width="55%">
-                                                Item Name
-                                            </td> 
-                                            
+                                            <td id="table_font" width="10%" >Price</td> 
                                             <td>
-                                                <select id = "itemname" name="itemname" class="add_dropdown_effects"></select><br><br><br>
-                                            </td>
-                                        </tr>
-                                        
-                                       
-                                       <tr>
-                                            
-                                            <td id="table_font"  width="55%">
-                                                Brand
-                                            </td> 
-                                              
-                                            <td>
-                                                <select id = "brandname" name="brandname" class="add_dropdown_effects"></select><br><br>
-                                            
-
-
                                                 
                                             </td>
                                         </tr>
-                                        
-                                        <tr>
-                                            
-                                            <td id="table_font" width="55%">
-                                                Price
-                                            </td> 
-                                             
-                                            <td>
-                                                <br><br>
-                                            </td>
+                                         <tr class="spaceUnder">
+                                            <td id="table_font" width="10%" ></td> 
+                                            <td><input type="text" class="form-control"  name="cost" placeholder="Cost"></td>
                                         </tr>
-                                        
-                                         <tr>
-                                            
-                                            <td id="table_font" width="55%" align="right">
-                                                Cost                            
-                                            </td> 
-                                             
-                                            <td>
-                                                <input type="text" class="form-control"  name="cost" ><br><br>
-                                            </td>
+                                        <tr class="spaceUnder">
+                                            <td id="table_font" width="10%" > </td> 
+                                            <td><input type="text" class="form-control" name="sellingprice" placeholder="Selling Price" ></td>
                                         </tr>
-                                        
-                                        <tr>
-                                            
-                                            <td id="table_font" width="55%" align="right" >
-                                                Selling Price                
-                                            </td> 
-                                             
-                                            <td>
-                                                <input type="text" class="form-control" name="sellingprice" ><br><br>
-                                            </td>
+                                        <tr class="spaceUnder">
+                                            <td id="table_font" width="10%" > Quantity</td> 
+                                            <td><input type="text" class="form-control" name="quantity" ></td>
                                         </tr>
-                                        
-                                        <tr>
-                                            
-                                            <td id="table_font" width="55%">
-                                                Quantity
-                                            </td> 
-                                             
-                                            <td>
-                                                <input type="text" class="form-control" name="quantity" ><br><br>
-                                            </td>
-                                        </tr>
-                                        
-                                        
-                                    </table> 
-                                 
+                                    </table>     
                         	</div>
-                        </div>
-                        
-                      	<div class = "below_panel_add_item">
-                            	<br><br>
-                                 <input type="submit" class="myButton" id="btnManageStockInsert" name="btnManageStockInsert" value="Add"  /><br><br>
-                         </div>       
                             </form>
+                                    <div id ="btn">
+                                         <button onclick="location.href = 'Stock_ManageStock.php';" id="btnManageStockAddNew" class="myButton" >Add New</button>
+                                        <button onclick="location.href = 'AddToExisting.php';" id="btnManageStockAddToExisting" class="myButton" >Add To Existing</button>
+                                        <input type="submit" class="myButton" id="btnManageStockInsert" name="btnManageStockInsert" value="Add"  />
+                                    </div>
                             
                             <?php
                                 

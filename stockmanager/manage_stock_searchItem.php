@@ -147,8 +147,7 @@
 
                 </div>
             </div>   
-            <div class="middle_panel_search_item">
-
+            <div  id="scrh">
                 <input type="submit" class="myButton" id="btnManageStockSearch2" name="btnManageStockSearch2" value="Search"  />
             </div>
                     

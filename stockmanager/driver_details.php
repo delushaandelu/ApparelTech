@@ -38,7 +38,15 @@
    	    </ul>
  
         <table class="table table-striped">
-            <tr class="title"><th>driver_id</th><th>driverName</th><th>LicenceNo</th><th>driverAddress</th><th>Mobile No</th><th>vehicle_id</th></tr>
+            
+            <tr class="title">
+                <th><center>driver_id</center></th>
+                <th><center>driverName</center></th>
+                <th><center>LicenceNo</center></th>
+                <th><center>driverAddress</center></th>
+                <th><center>Mobile No</center></th>
+                <th><center>vehicle_id</center></th>
+                <th colspan="2"><center>Action</center></th></tr>
                 <?php 
                     $sql = "select * from driver";
                     $result = mysqli_query($dbcon,$sql);        
@@ -46,14 +54,14 @@
     
                 ?>
                             <tr class="active">
-                            <td><?php echo $row['driver_id'] ?></td>
-                            <td><?php echo $row['driverName'] ?></td>
-                            <td><?php echo $row['LicenceNo'] ?></td>
-                            <td><?php echo $row['driverAddress'] ?></td>
-                            <td><?php echo $row['mobileNo'] ?></td>
-                            <td><?php echo $row['vechicle_id'] ?></td>
-                            <td class="bt"><input type="button" class="btn btn-info" value=Delete name="Delete" onclick="location.href='driver_details.php?driver_id=<?php echo $row['driver_id']?> & vehicle_id=<?php echo $row['vechicle_id'] ?>'"></td>
-                            <td class="bt"><input type="button" class="btn btn-info" value=update onclick="location.href='driver_details_updateDriver.php?ID=<?php echo $row['driver_id'] ?>'" ></td>
+                            <td><center><?php echo $row['driver_id'] ?></center></td>
+                            <td><center><?php echo $row['driverName'] ?></center></td>
+                            <td><center><?php echo $row['LicenceNo'] ?></center></td>
+                            <td><center><?php echo $row['driverAddress'] ?></center></td>
+                            <td><center><?php echo $row['mobileNo'] ?></center></td>
+                            <td><center><?php echo $row['vechicle_id'] ?></center></td>
+                                <td class="bt"><center><button type="button" class="btn btn-danger" name="Delete" onclick="location.href='driver_details.php?driver_id=<?php echo $row['driver_id']?> & vehicle_id=<?php echo $row['vechicle_id'] ?>'"><i class="fa fa-trash" ></i> Delete</button></center></td>
+                                <td class="bt"><center><button type="button" class="btn btn-info" name="Update" onclick="location.href='driver_details_updateDriver.php?ID=<?php echo $row['driver_id'] ?>'" ><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Update</button></center></td>
                             </tr>
                 
                 <?php } ?>
