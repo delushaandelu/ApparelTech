@@ -119,15 +119,15 @@
                         echo "<table border = '0' class='table table-striped'>";
                             echo "<tr bgcolor='#C0C0C0' width = '10px' >";
                             
-                                echo "<th>Item ID</th>"; echo"<td width = 10%></td>";
-                                echo "<th >Item Name</th>";echo"<td width = 2%></td>";
-                                echo "<th>Category</th>";echo"<td width=2%></td>";
-                                echo "<th>Brand</th>";echo"<td width=2%></td>";
-                                echo "<th>Buying Price</th>";echo"<td width = 2%></td>";
-                                echo "<th>Selling Price</th>";echo"<td width=2%></td>";
-                                echo "<th>Quantity</th>";echo"<td width=2%></td>";
-                                echo "<th>Stock Value</th>";echo"<td width=2%></td>";
-                                echo "<th>Estimated Profit</th>";echo"<td width=2%></td>";
+                                echo "<th><h4><b>Item ID</b></h4></th>"; echo"<td width = 10%></td>";
+                                echo "<th><h4><b>Item Name</h4></b></th>";echo"<td width = 2%></td>";
+                                echo "<th><h4><b>Category</h4></b></th>";echo"<td width=2%></td>";
+                                echo "<th><h4><b>Brand</h4></b></th>";echo"<td width=2%></td>";
+                                echo "<th><h4><b>Buying Price</h4></b></th>";echo"<td width = 2%></td>";
+                                echo "<th><h4><b>Selling Price</h4></b></th>";echo"<td width=2%></td>";
+                                echo "<th><h4><b>Quantity</h4></b></th>";echo"<td width=2%></td>";
+                                echo "<th><h4><b>Stock Value</h4></b></th>";echo"<td width=2%></td>";
+                                echo "<th><h4><b>Estimated Profit</h4></b></th>";echo"<td width=2%></td>";
 
 
                             echo "</tr>";
@@ -153,7 +153,7 @@
                             echo "</tr>";
                         }
 
-                        echo " <th>Total Stock Value </th>";
+                        echo " <th><b>Total Stock Value</b></th>";
                         
                         echo "<th> $sum </th>";
                        
