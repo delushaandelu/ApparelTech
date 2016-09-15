@@ -91,31 +91,26 @@
                             <table class="table table-bordered">
                               <thead>
                                 <tr>
-                                  <th>#</th>
-                                  <th>First Name</th>
-                                  <th>Last Name</th>
-                                  <th>Username</th>
+                                  <th>P/O ID</th>
+                                  <th>Total Price</th>
+                                  <th>Created Date</th>
                                 </tr>
                               </thead>
                               <tbody>
+                                  <?php
+
+                                include('dbConfig.php');
+                                $c_id = $_SESSION['csid'];
+                                $sql = "SELECT p_id, customer_id, totalprice, created, status FROM purchasereport where customer_id=$c_id ";
+                                $result = $db->query($sql);
+                                while($row = $result->fetch_assoc()) {
+                                    ?>
                                 <tr>
-                                  <th scope="row">1</th>
-                                  <td>Mark</td>
-                                  <td>Otto</td>
-                                  <td>@mdo</td>
+                                  <td><?php echo $row['p_id'] ?></td>
+                                  <td><?php echo $row['totalprice'].'.00' ?></td>
+                                  <td><?php echo $row['created'] ?></td>
                                 </tr>
-                                <tr>
-                                  <th scope="row">2</th>
-                                  <td>Jacob</td>
-                                  <td>Thornton</td>
-                                  <td>@fat</td>
-                                </tr>
-                                <tr>
-                                  <th scope="row">3</th>
-                                  <td>Larry</td>
-                                  <td>the Bird</td>
-                                  <td>@twitter</td>
-                                </tr>
+                                    <?php } ?>
                               </tbody>
                             </table>
                           </div>
@@ -127,9 +122,7 @@
                         </a>
                         <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                           <div class="panel-body">
-                            <p><strong>Collapsible Item 2 data</strong>
-                            </p>
-                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+                              Rent
                           </div>
                         </div>
                       </div>
@@ -139,9 +132,7 @@
                         </a>
                         <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
                           <div class="panel-body">
-                            <p><strong>Collapsible Item 3 data</strong>
-                            </p>
-                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor
+                            Delivery
                           </div>
                         </div>
                       </div>
