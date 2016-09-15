@@ -30,27 +30,25 @@
                         <table>
                             <form method="get">
                                 <tr>
-                                    <td><h4>Customer name :
+                                    <td><h4>Customer name </h4></td>
+                                        <td>:
                                         <?php
                                         echo $_SESSION['fname'];
-                                        ?>
-                                    </h4></td>
-                                    <td></td>
+                                        ?></td>
                                 </tr>
                                 <tr>
-                                    <td><h4>Customer ID :
+                                    <td><h4>Customer ID  </h4></td>
+                                        <td>:
                                         <?php
                                         echo $_SESSION['csid'];
-                                        ?>
-                                        </h4></td>
+                                        ?></td>
                                 </tr>
                                 <tr>
-                                    <td><h4>Company name :
+                                    <td><h4>Company name </h4></td>
+                                        <td>: 
                                         <?php
                                         echo $_SESSION['company'];
-                                        ?>
-                                        </h4></td>
-                                    <td></td>
+                                        ?></td>
                                 </tr>
                             </form>
                         </table>

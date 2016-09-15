@@ -22,12 +22,12 @@ if(isset($_POST["sumbit"])){
 if (mysqli_query($db, $sql) === TRUE) {
     
         echo'<script language ="javascript">';
-        echo"swal({  title: 'Your request sent for the approvel. Have a good day!', text: '', type: 'success', confirmButtonText: 'Done!'}, function(){window.location.href='index.php'});";
+        echo"aleart('We will give your account authentication soon! Thank you')";
         echo'</script>';
     } else {
 
         echo'<script language ="javascript">';
-        echo"swal({  title: 'Re-check your submition.', text: '', type: 'error', confirmButtonText: 'Done!'}, function(){window.location.href='signup.php'});";
+        echo"aleart('Error in Submition')";
         echo'</script>';
     }
 

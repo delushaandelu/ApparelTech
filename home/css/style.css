@@ -398,3 +398,11 @@ transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
     box-shadow: 0 0 0 50px #00a8e0 inset;
     color: #fff;
 }
+
+#slider
+{
+    background-color: black;
+}
+#collapse navbar-collapse li a{
+    color: white;
+}
