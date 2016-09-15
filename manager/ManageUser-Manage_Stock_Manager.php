@@ -24,7 +24,42 @@ include ("../config/managermenu.php");
     </div>
     <div class="row">
 
-
+        <form name="form1" action="addUser.php" method="post" onsubmit="return check();">
+            <table border="0">
+                <tr></tr>
+                <tr>
+                    <td id="table-font" width="60%">
+                        User name*
+                    </td>
+                    <td>
+                        <input id="input1" type="text" name="username" class="form-control" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="table-font" width="60%">
+                        password*
+                    </td>
+                    <td>
+                        <input id="input1" type="password" name="password" class="form-control" required>
+                    </td>
+                </tr>
+                <br><br>
+                <tr>
+                    <td id="table-font" width="60%">
+                        Access level
+                    </td>
+                    <td>
+                        <select name="acclevel" class="form-control">
+                            <option value="Manager">Manager</option>
+                            <option value="StockManager">Stock Manager</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+            <br><br><br>
+            <input type="submit" id="button1" class="btn btn-default btn-lg active" value="Add" name="insert" style="font-size: 16px">
+            <input id="button1" class="btn btn-default btn-lg active" value="Send emal" name="send" style="font-size: 16px">
+        </form>
     </div>
 </div>
 

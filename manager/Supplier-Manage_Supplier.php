@@ -24,14 +24,14 @@
 
 			<!--validation for address-->
 			if(document.form1.address.value==""){
-				alert("Plese Enter an address");
-				document.form1.cpass.focus();
+				window.alert("Plese Enter an address");
+				document.form1.address.focus();
 				return false;
 			}
 
 			<!--validation for email-->
 			if(document.form1.email.value==""){
-				alert("Plese Enter your Email Address");
+				window.alert("Plese Enter your Email Address");
 				document.form1.email.focus();
 				return false;
 			}
@@ -43,7 +43,7 @@
 			n=e.length;
 
 			if(!(f1>0 && f2==-1 && e1>0 && e2==-1 && f1!=e1+1 && e1!=f1+1 && f1!=n-1 && e1!=n-1)){
-				alert("Please Enter valid Email");
+				window.alert("Please Enter valid Email");
 				document.form1.email.focus();
 				return false;
 			}
@@ -86,7 +86,7 @@
                             	Supplier name
 							</td>
                             <td>
-                            	<input type="text" name="name" class="form-control" >
+                            	<input type="text" name="name" class="form-control" required>
 								<br><br>
                             </td>
                         </tr>
@@ -95,7 +95,7 @@
                             	Location							
                             </td>
                             <td>
-                            	<input type="text" name="location" class="form-control">
+                            	<input type="text" name="location" class="form-control" required>
 								<br><br>
                            </td>
                          </tr>
@@ -116,7 +116,7 @@
 							</td> 
                                          
 							<td>
-								<input type="tel" name="tele" class="form-control">
+								<input type="tel" name="tele" class="form-control" required>
 								<br><br>
 							</td>
 						  </tr>
@@ -127,7 +127,7 @@
 							</td> 
                                          
 							<td>
-								<input type="tel" name="mobile" class="form-control">
+								<input type="tel" name="mobile" class="form-control" required>
 								<br><br>
 							</td>
 						  </tr>
@@ -135,7 +135,7 @@
                         	<td id="table-font" width="60%">
                             	Address
 							</td>
-                            <td><input type="text" name="address" class="form-control">
+                            <td><input type="text" name="address" class="form-control" required>
                               <br><br>
  						    </td>
 						  </tr>
@@ -144,7 +144,7 @@
                             	e-mail address							
                             </td>
                             <td>
-                            	<input type="email" name="email" class="form-control">
+                            	<input type="email" name="email" class="form-control" required>
 								<br><br>
                            </td>
                          </tr>
@@ -155,7 +155,7 @@
                   </div>
 					<!--button-->
                   <div id="top-right">
-					  <input type="submit" id="button" class="btn btn-default btn-lg active" value="save" name="insert">
+					  <input type="submit" id="button" class="btn btn-default btn-lg active" value="save" name="insert" style="font-size: 16px">
 				  </div>
 			</form>
 		</div>

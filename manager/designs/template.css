@@ -236,6 +236,8 @@ td{
 
 }
 
+/* Backup */
+
 #backup
 {
     margin-left: 40%;
@@ -257,4 +259,10 @@ td{
 button1:active {
     background-color: #00a8e0;
     transform: translateY(4px);
+}
+
+/* manage manager & smanager */
+
+#input1{
+    margin-top: 5%;
 }
