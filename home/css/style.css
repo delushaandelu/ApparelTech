@@ -137,6 +137,7 @@ margin-top: 3.8em;
 .skill-btn button {
 border-radius: 0.3em;
 color: #fff;
+background-color: orangered;
 font-size: 15px;
 font-weight: 400;
 letter-spacing: 1px;
@@ -154,7 +155,7 @@ transition-property: color;
 vertical-align: middle;
 }
 .hvr-bounce-to-right::before {
-background: none repeat scroll 0 0 #0277B5;
+background: none repeat scroll 0 0 #000000;
 bottom: 0;
 color: #fff;
 content: "";
@@ -170,7 +171,7 @@ transition-timing-function: ease-out;
 z-index: -1;
 }
 .hvr-bounce-to-right:hover, .hvr-bounce-to-right:focus, .hvr-bounce-to-right:active {
-color: white;
+color: orangered;
 }
 .hvr-bounce-to-right:hover::before, .hvr-bounce-to-right:focus::before, .hvr-bounce-to-right:active::before {
 transform: scaleX(1);border-radius: 0.3em;border: 1px solid #0277B5;
@@ -403,6 +404,16 @@ transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
 {
     background-color: black;
 }
-#collapse navbar-collapse li a{
-    color: white;
+.lii a:hover{
+    color: orangered;
+    
+}
+.collapse navbar-collapse ul li.active{
+  background: #121418;
+  color: #ffffff;
+}
+
+.copyright
+{
+    background-color: black;
 }
