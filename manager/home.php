@@ -6,7 +6,14 @@
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="dist/css/sb-admin-2.css" rel="stylesheet">
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="designs/home.css" type="text/css" />
+    <link rel="stylesheet" href="designs/template.css" type="text/css" />
+    
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/plugins/Font-Awesome/css/font-awesome.css" />
+    <link href="assets/plugins/dataTables/dataTables.bootstrap.css" rel="stylesheet" />
+    <link href="assets/css/layout2.css" rel="stylesheet" />
+      
+    
 </head>
 
 <body>
@@ -17,63 +24,180 @@
             
 <div id="page-wrapper">
     <div class="row">
-        <div class="col-lg-12">
-            <h1 class="page-header" style="color: #008B8B">Priyantha Enterprises</h1>
+       
+                    <div class="col-lg-12">
+                        <div style="text-align: center;">
+                           
+                            <a class="quick-btn" href="#">
+                                <i class="fa-truck icon-2x"></i>
+                                <span> Supplier</span>
+                            </a>
+
+                            <a class="quick-btn" href="#">
+                                <i class="fa-stack-overflow icon-2x"></i>
+                                <span>Order Stock</span>
+                            </a>
+                            <a class="quick-btn" href="#">
+                                <i class="fa-user-secret icon-2x"></i>
+                                <span>Aliens</span>
+                            </a>
+                            <a class="quick-btn" href="#">
+                                <i class="fa-user icon-2x"></i>
+                                <span>Users</span>
+                            </a>
+                            <a class="quick-btn" href="#">
+                                <i class="fa-yoast icon-2x"></i>
+                                <span>Quotations</span>
+                            </a>
+                            <a class="quick-btn" href="#">
+                                <i class="fa-cloud-upload icon-2x"></i>
+                                <span>Backup</span>
+                            </a>
+                            <a class="quick-btn" href="#">
+                                <i class="fa-users icon-2x"></i>
+                                <span>Username</span>
+                            </a>
+                            <a class="quick-btn" href="#">
+                                <i class="fa-unlock-alt icon-2x"></i>
+                                <span>Password</span>
+                            </a>
+                            <a class="quick-btn" href="#">
+                                <i class="fa-sign-out icon-2x"></i>
+                                <span>Logout</span>
+                            </a>
+                            
+
+                            
+                            
+                        </div>
+
+                    </div>
+
+                </div>
+        <div class="row" id="request">
+                    <div class="col-lg-6">
+                        <div class="box">
+                            <header>
+                                <h5>New User Requests</h5>
+                                <div class="toolbar">
+                                    <div class="btn-group">
+                                        <a href="#sortableTable"  >
+                                           
+                                        </a>
+                                    </div>
+                                </div>
+                            </header>
+                            
+                                <table class="table table-bordered ">
+                                    <thead>
+                                        <tr>
+                                            
+                                            <th>Full Name</th>
+                                            <th>Designation
+                                            <th>Company</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                <?php
+
+                                include('database_connection.php');
+                                $sql = "SELECT * FROM customer where status ='false'";
+                                $result = $dbcon->query($sql);
+                                while($row = $result->fetch_assoc()) {
+                                    ?>
+                                        <tr>
+                                            <td><?php echo $row['fullname'] ?></td>
+                                            <td><?php echo $row['designation'] ?></td>
+                                            <td><?php echo $row['companyName'] ?></td>
+                                        </tr>
+                                    <?php }?>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div id="report">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="box">
+                            <header>
+                                <h5>Report Quick Access</h5>
+                                <div class="toolbar">
+                                    <div class="btn-group">
+                                        <a href="#sortableTable"  >
+                                           
+                                        </a>
+                                    </div>
+                                </div>
+                            </header>
+       
+                    <div class="col-lg-12">
+                        <div style="text-align: center;">
+                           
+                            <a class="quick-btn" href="#">
+                                <i class="fa-file icon-2x"></i>
+                                <span> Stock</span>
+                            </a>
+
+                            <a class="quick-btn" href="#">
+                                <i class="fa-file-code-o icon-2x"></i>
+                                <span>Rent</span>
+                            </a>
+                            <a class="quick-btn" href="#">
+                                <i class="fa-file-archive-o icon-2x"></i>
+                                <span>Purchase /O</span>
+                            </a>
+                            <a class="quick-btn" href="#">
+                                <i class="fa-file-powerpoint-o icon-2x"></i>
+                                <span>Delivery</span>
+                            </a>
+                            <a class="quick-btn" href="#">
+                                <i class="fa-file-excel-o icon-2x"></i>
+                                <span>Vehicle</span>
+                            </a>
+                            <a class="quick-btn" href="#">
+                                <i class="fa-file-o icon-2x"></i>
+                                <span>Driver</span>
+                            </a>
+                            <a class="quick-btn" href="#">
+                                <i class="fa-files-o icon-2x"></i>
+                                <span>Delivery</span>
+                            </a>
+                            <a class="quick-btn" href="#">
+                                <i class="fa-file-pdf-o icon-2x"></i>
+                                <span>Supplier</span>
+                            </a>
+                            <a class="quick-btn" href="#">
+                                <i class="fa-folder-open-o icon-2x"></i>
+                                <span>Quotations</span>
+                            </a>
+                            
+
+                            
+                            
+                        </div>
+
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
+                        
     <div class="row">
-        <!-- buttons -->
-        <div class="first_section">
-            <br><br>
-            <button type="button" id="button1" class="btn btn-default btn-lg active" onclick="location.href='ManageUser-Manage_Customer.php'"><i class="fa fa-user-plus fa-2x" aria-hidden="true"></i> Manage Customer</button>     
-            <button type="button" id="button1" class="btn btn-default btn-lg active" onclick="location.href='Stock-View_Stock.php'"><i class="fa fa-caret-square-o-down fa-2x" aria-hidden="true"></i> View Stock</button>
-            <br><br>
-        </div>
-        <div>
-            <button type="button" id="button1" class="btn btn-default btn-lg active" onclick="location.href='Supplier-Manage_Supplier.php'"><i class="fa fa-user-plus fa-2x" aria-hidden="true"></i> Manage Suppliers</button>     
-            <button type="button" id="button1" class="btn btn-default btn-lg active" onclick="location.href='Supplier-View_Supplier.php'"><i class="fa fa-user fa-2x" aria-hidden="true"></i> View Suppliers</button>
-            <br><br>
-        </div>
-        <div>
-            <button type="button" id="button1" class="btn btn-default btn-lg active" onclick="location.href='backup.php'"><i class="fa fa-cloud-download fa-2x" aria-hidden="true"></i> Backup</button>     
-            <button type="button" id="button1" class="btn btn-default btn-lg active" onclick="location.href='Settings-Change_username.php'"><i class="fa fa-cogs fa-2x" aria-hidden="true"></i> Setting</button>
-        </div>
 
-        <!-- images of slide show -->
-        <div id="second_section">
-            <img class="Slides" src="images/manager.jpg" style="width:100%">
-            <img class="Slides" src="images/2.jpg" style="width:100%">
-            <img class="Slides" src="images/maxresdefault.jpg" style="width:100%">
-            <img class="Slides" src="images/download.jpg" style="width:100%">
-            <img class="Slides" src="images/juki.jpg" style="width:100%">
-            <img class="Slides" src="images/singer.jpg" style="width:100%">
-        </div>
 
-        <!-- function for image slide show -->
-        <script>
-            var Index = 0;
-            changeImage();
-
-            function changeImage() {
-                var i;
-                var x = document.getElementsByClassName("Slides");
-                for (i = 0; i < x.length; i++) {
-                    x[i].style.display = "none";
-                }
-                Index++;
-                if (Index > x.length) {Index = 1}
-                x[Index-1].style.display = "block";
-                setTimeout(changeImage, 3000); // Change image every 2 seconds
-            }
-        </script>
-
-    </div>
+    </div>      
 </div>
 
 <script src="vendor/jquery/jquery.min.js"></script>
 <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 <script src="vendor/metisMenu/metisMenu.min.js"></script>
 <script src="dist/js/sb-admin-2.js"></script>
+    
+                        
+    
 
 </body>
 

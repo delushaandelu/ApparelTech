@@ -266,3 +266,17 @@ button1:active {
 #input1{
     margin-top: 5%;
 }
+
+#report
+{
+    width: 60%;
+    margin-left: 65%;
+    margin-top: -36%;
+  
+}
+
+#request
+{
+    margin-left: 5%;
+    margin-top: 2%;
+}

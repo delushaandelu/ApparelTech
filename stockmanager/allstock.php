@@ -66,14 +66,7 @@
     
     
 
-        <script type="text/javascript" src="jss/plugins/jquery/jquery.min.js"></script>
-        <script type="text/javascript" src="jss/plugins/jquery/jquery-ui.min.js"></script>
-        <script type="text/javascript" src="jss/plugins/bootstrap/bootstrap.min.js"></script>        
-        <script type="text/javascript" src="jss/plugins.js"></script>        
-        <script type="text/javascript" src="jss/actions.js"></script>
-        <script type="text/javascript" src="jss/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js"></script>
-        <script type="text/javascript" src="jss/plugins/datatables/jquery.dataTables.min.js"></script>
-        <script type="text/javascript" src="jss/plugins/tableexport/tableExport.js"></script>
+        
               
 	<script type="text/javascript" src="jss/plugins/tableexport/jquery.base64.js"></script>
 	<script type="text/javascript" src="jss/plugins/tableexport/html2canvas.js"></script>
