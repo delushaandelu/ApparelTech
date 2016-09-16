@@ -23,6 +23,9 @@
 ?>
             
 <div id="page-wrapper">
+<div id="head">
+    
+</div>
     <div class="row">
        
                     <div class="col-lg-12">
@@ -167,10 +170,6 @@
                                 <span>Delivery</span>
                             </a>
                             <a class="quick-btn" href="#">
-                                <i class="fa-file-pdf-o icon-2x"></i>
-                                <span>Supplier</span>
-                            </a>
-                            <a class="quick-btn" href="#">
                                 <i class="fa-folder-open-o icon-2x"></i>
                                 <span>Quotations</span>
                             </a>
@@ -183,6 +182,7 @@
                     </div>
                 </div>
             </div>
+           
         </div>
                         
     <div class="row">

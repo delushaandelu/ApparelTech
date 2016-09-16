@@ -1,5 +1,4 @@
-<script src="js/sweetalert-dev.js"></script>
-<link rel="stylesheet" href="js/sweetalert.css">
+
 
 <?php
 include('dbConfig.php');
@@ -20,15 +19,16 @@ if(isset($_POST["sumbit"])){
     
 
 if (mysqli_query($db, $sql) === TRUE) {
-    
-        echo'<script language ="javascript">';
-        echo"aleart('We will give your account authentication soon! Thank you')";
+        echo'<script>';
+        echo"alert('We will give your account authentication soon! Thank you')";
         echo'</script>';
+        header('location:index.php');
     } else {
 
-        echo'<script language ="javascript">';
-        echo"aleart('Error in Submition')";
+        echo'<script>';
+        echo"alert('Error in Submition')";
         echo'</script>';
+        
     }
 
     mysqli_close($db);
