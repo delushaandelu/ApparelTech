@@ -36,9 +36,12 @@
                                 <p>priyantha@apparel.com</p>
 								<p><i class="fa fa-twitter">PriyanthaEnt</i></p>
                                 <h6>
-                                    <span><i class="icon_clock_alt"></i>11:05 AM</span>
-                                    <span><i class="icon_calendar"></i>25.10.13</span>
-                                    <span><i class="icon_pin_alt"></i>NY</span>
+                                    <span><i class="icon_calendar"></i>
+                                    <script language="javascript">
+                                     var today = new Date();
+                                     document.write(today);
+                                     </script></span>
+                                    <span><i class="icon_pin_alt"></i></span>
                                 </h6>
                             </div>
                             <div class="col-lg-2 col-sm-6 follow-info weather-category">
@@ -80,8 +83,6 @@
               </div>
     
     
-    
-
         <script type="text/javascript" src="js/plugins/jquery/jquery.min.js"></script>
         <script type="text/javascript" src="js/plugins/jquery/jquery-ui.min.js"></script>
         <script type="text/javascript" src="js/plugins/bootstrap/bootstrap.min.js"></script>        
