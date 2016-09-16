@@ -14,7 +14,7 @@
 #btn
 {
     margin-left: 35%;
-    margin-top: -5%;
+    margin-top: -8%;
 }
 
 #nav_tab_item_effect{
@@ -59,25 +59,31 @@ tr.spaceUnder > td
 }
 
 .myButton {
-	
-	background-color:#1caf9a;
-	border-radius: 8px;
+	background-color:#050505;
+	-moz-border-radius:28px;
+	-webkit-border-radius:28px;
+	border-radius:28px;
+	border:1px solid #242424;
 	display:inline-block;
 	cursor:pointer;
-	color:#ffffff;
+	color:#f02400;
 	font-family:Arial;
 	font-size:15px;
-	font-weight:bold;
-	padding:7px 25px;
+	padding:5px 31px;
 	text-decoration:none;
+	text-shadow:0px 1px 0px #121411;
 }
 .myButton:hover {
-	background-color:darkcyan;
+	background-color:#424142;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
 }
 
 #below_panel_search_item{
 	
-	height:300px;
+	height:500px;
 	
 	}
 
@@ -95,6 +101,7 @@ tr.spaceUnder > td
 
 .middle_panel_delete_item{
 	height: 100px;
+	margin-left: 300px;
 }
 }
 
@@ -140,6 +147,10 @@ tr.spaceUnder > td
 
 #scrh
 {
-    margin-left: 90%;
-    margin-top: -12%
+    margin-left: 710px;
+    margin-top: -95px;
+}
+
+.upper_panel_manage_stock{
+	margin-top: 100px;
 }

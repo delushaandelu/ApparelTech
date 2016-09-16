@@ -128,26 +128,26 @@
         <form method="post" name="form" onSubmit="return check();">    
             <div class="upper_panel_search_item">
             
-                <div class="col-md-4">
+                <div class="col-sm-3">
 
                     <!-- This is the interface design for search items from the stock -->
                     <select id = "categoryname" name="categoryname" class="btn btn-primary dropdown-toggle">
-                        <option > Select Category Name</option>
+                        <option value = "0"> Select Category Name</option>
                         <option value="Sewing Machines">Sewing Machines</option>
                         <option value="Sewing Machine Spare Parts">Sewing Machine Spare Parts</option>
                         <option value="Tools">Tools</option>
                     </select>
                 </div>       
-                <div class="col-md-4">       
+                <div class="col-sm-3">       
                     <select id = "itemname" name="itemname" class="btn btn-info dropdown-toggle"></select>
 
                 </div>
-                <div class="col-md-4">        
+                <div class="col-sm-3">        
                     <select id = "brandname" name="brandname" class="btn btn-primary dropdown-toggle"></select>
 
                 </div>
             </div>   
-            <div  id="scrh">
+            <div  id="scrh" class="col-sm-3">
                 <input type="submit" class="myButton" id="btnManageStockSearch2" name="btnManageStockSearch2" value="Search"  />
             </div>
                     
