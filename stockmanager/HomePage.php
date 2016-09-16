@@ -10,42 +10,75 @@
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link id="bootstrap-style" href="css/bootstrap.min.css" rel="stylesheet">
 	
-
+   
     </head>
     <body>
         
         <?php
             include("../config/stockmgrmenu.php");
         ?>
-
-                <ul class="breadcrumb">
-                    <h2>Home Page</li></h2>
-                </ul>
-<div id="hbtn">
-    <table border="0">
-        <tr>
-            <td>
-                <button type="button" class="button primary"><i class="fa fa-barcode fa-5x" aria-hidden="true"></i><h4> Manage  Stock </h4></button>
-            </td>
-            <td></td>
-            <td>
-                <button type="button" class="button"><i class="fa fa-file-powerpoint-o fa-5x" aria-hidden="true"></i><h4> Stock  Report </h4></button>
-            </td>
-            <td>
-                <button type="button" class="button"><i class="fa fa-cog fa-5x"></i> <h4> Manage  P / O </h4></button>
-            </td>
-            <td>
-                <button type="button" class="button"><i class="fa fa-renren fa-5x" aria-hidden="true"></i><h4>Manage  Rent</h4></button>
-            </td>
-            <td>
-                <button type="button" class="button"><i class="fa fa-truck fa-5x" aria-hidden="true"></i><h4>Delivery</h4></button>
-            </td>
-            <td>
-                <button type="button" class="button"><i class="fa fa-unlock fa-5x" aria-hidden="true"></i><h4>Password</h4></button>
-            </td>
-        </tr>
-    </table>
-</div>   
+        
+    <div class="row" id="info">
+                <!-- profile-widget -->
+                <div class="col-lg-12">
+                    <div class="profile-widget profile-widget-info">
+                          <div class="panel-body">
+                            <div class="col-lg-2 col-sm-2">
+                              <h4>#Name</h4>               
+                              <div class="follow-ava">
+                                  <img src="img/profile-widget-avatar.jpg" alt="">
+                              </div>
+                                </br>
+                              <h6>StockManager</h6>
+                            </div>
+                            <div class="col-lg-4 col-sm-4 follow-info">
+                                <p>The system where stock details are manging and recording information about that.</p>
+                                <p>priyantha@apparel.com</p>
+								<p><i class="fa fa-twitter">PriyanthaEnt</i></p>
+                                <h6>
+                                    <span><i class="icon_clock_alt"></i>11:05 AM</span>
+                                    <span><i class="icon_calendar"></i>25.10.13</span>
+                                    <span><i class="icon_pin_alt"></i>NY</span>
+                                </h6>
+                            </div>
+                            <div class="col-lg-2 col-sm-6 follow-info weather-category">
+                                      <ul>
+                                          <li class="active">
+                                              
+                                              <i class="fa fa-comments fa-2x"> </i><br>
+											  
+											  Contrary to popular belief, Lorem Ipsum is not simply
+                                          </li>
+										   
+                                      </ul>
+                            </div>
+							<div class="col-lg-2 col-sm-6 follow-info weather-category">
+                                      <ul>
+                                          <li class="active">
+                                              
+                                              <i class="fa fa-bell fa-2x"> </i><br>
+											  
+											  Contrary to popular belief, Lorem Ipsum is not simply 
+                                          </li>
+										   
+                                      </ul>
+                            </div>
+							<div class="col-lg-2 col-sm-6 follow-info weather-category">
+                                      <ul>
+                                          <li class="active">
+                                              
+                                              <i class="fa fa-tachometer fa-2x"> </i><br>
+											  
+											  Contrary to popular belief, Lorem Ipsum is not simply
+                                          </li>
+										   
+                                      </ul>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+              </div>
+    
     
     
 
