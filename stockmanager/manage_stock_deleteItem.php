@@ -218,7 +218,7 @@
                     if($result = mysqli_query($dbcon, $sql)){
                     if(mysqli_num_rows($result) > 0){
                     
-                        echo "<table border = '0'>";
+                        echo "<table border = '0' class='table table-striped'>";
                             echo "<tr bgcolor='#C0C0C0' width = '10px' >";
                             
                                 echo "<th>Item ID</th>"; echo"<td width = 10%></td>";
@@ -247,7 +247,9 @@
                             echo "</tr>";
                         }
                         echo "</table>";?>
+                        <div id="delete_btn">
                         <input type="submit" class="myButton" id="btnManageStockDelete" name="btnManageStockDelete" value="Delete"  />
+                        </div>
 
                         <?php
                         // Close result set
