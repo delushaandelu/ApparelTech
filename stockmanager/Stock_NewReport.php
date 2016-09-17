@@ -119,15 +119,15 @@
                         echo "<table border = '0' class='table table-striped'>";
                             echo "<tr bgcolor='#C0C0C0' width = '10px' >";
                             
-                                echo "<th><h4><b>Item ID</b></h4></th>"; echo"<td width = 10%></td>";
-                                echo "<th><h4><b>Item Name</h4></b></th>";echo"<td width = 2%></td>";
-                                echo "<th><h4><b>Category</h4></b></th>";echo"<td width=2%></td>";
-                                echo "<th><h4><b>Brand</h4></b></th>";echo"<td width=2%></td>";
-                                echo "<th><h4><b>Buying Price</h4></b></th>";echo"<td width = 2%></td>";
-                                echo "<th><h4><b>Selling Price</h4></b></th>";echo"<td width=2%></td>";
-                                echo "<th><h4><b>Quantity</h4></b></th>";echo"<td width=2%></td>";
-                                echo "<th><h4><b>Stock Value</h4></b></th>";echo"<td width=2%></td>";
-                                echo "<th><h4><b>Estimated Profit</h4></b></th>";echo"<td width=2%></td>";
+                                echo "<th><h4 align='center'><b>Item ID</b></h4></th>"; echo"<td width = 10%></td>";
+                                echo "<th><h4 align='center'><b>Item Name</h4></b></th>";echo"<td width = 2%></td>";
+                                echo "<th><h4 align='center'><b>Category</h4></b></th>";echo"<td width=2%></td>";
+                                echo "<th><h4 align='center'><b>Brand</h4></b></th>";echo"<td width=2%></td>";
+                                echo "<th><h4 align='center'><b>Buying Price</h4></b></th>";echo"<td width = 2%></td>";
+                                echo "<th><h4 align='center'><b>Selling Price</h4></b></th>";echo"<td width=2%></td>";
+                                echo "<th><h4 align='center'><b>Quantity</h4></b></th>";echo"<td width=2%></td>";
+                                echo "<th ><h4 align='center'><b>Stock Value</h4></b></th>";echo"<td width=2%></td>";
+                                echo "<th><h4 align='center'><b>Estimated Profit</h4></b></th>";echo"<td width=2%></td>";
 
 
                             echo "</tr>";
@@ -135,15 +135,15 @@
 
                         while($row = mysqli_fetch_array($result)){
                             echo "<tr>";
-                                echo "<td>" . $row['item_id'] . "</td>"; echo"<td ></td>";
-                                echo "<td>" . $row['itemName'] . "</td>";echo"<td></td>";
-                                echo "<td>" . $row['catagery'] . "</td>";echo"<td></td>";
-                                echo "<td>" . $row['brand'] . "</td>";echo"<td></td>";
-                                echo "<td>" . $row['buyingPrice'] . "</td>";echo"<td></td>";
-                                echo "<td>" . $row['sellingPrice'] . "</td>";echo"<td></td>";
-                                echo "<td>" . $row['stockQty'] . "</td>";echo"<td></td>";
-                                echo "<td>" . ($row['stockQty'] *  $row['buyingPrice'] ). "</td>";echo"<td></td>";
-                                echo "<td>" . ($row['stockQty'] *  ($row['sellingPrice'] - $row['buyingPrice'] )). "</td>";echo"<td></td>";
+                                echo "<td align='center'>" . $row['item_id'] . "</td>"; echo"<td ></td>";
+                                echo "<td align='center'>" . $row['itemName'] . "</td>";echo"<td></td>";
+                                echo "<td align='center'>" . $row['catagery'] . "</td>";echo"<td></td>";
+                                echo "<td align='center'>" . $row['brand'] . "</td>";echo"<td></td>";
+                                echo "<td align='right'>" . $row['buyingPrice'] . ".00</td>";echo"<td></td>";
+                                echo "<td align='right'>" . $row['sellingPrice'] . ".00</td>";echo"<td></td>";
+                                echo "<td align='center'>" . $row['stockQty'] . "</td>";echo"<td></td>";
+                                echo "<td align='right'>" . ($row['stockQty'] *  $row['buyingPrice'] ). ".00</td>";echo"<td></td>";
+                                echo "<td align='right'>" . ($row['stockQty'] *  ($row['sellingPrice'] - $row['buyingPrice'] )). ".00</td>";echo"<td></td>";
                                 $sum = $sum + ($row['stockQty'] *  $row['buyingPrice'] );
                                 $profit = $profit + ($row['stockQty'] *  ($row['sellingPrice'] - $row['buyingPrice'] ));
 
@@ -152,17 +152,19 @@
                          echo "</td>";
                             echo "</tr>";
                         }
+                        echo "<tr>";
 
-                        echo " <th><b>Total Stock Value</b></th>";
+                        echo " <th><td colspan='2'><b><font size = '3'>Total Stock Value</font></b></td></th>";
                         
-                        echo "<th> $sum </th>";
-                       
-
-                        echo " <th>Total Estimated Profit </th>";
+                        echo "<th><td colspan='2'><b> <font size = '3'>$sum </font></b></td></th>";
                         
-                        echo "<th> $profit </th>";
+                        
 
+                        echo " <th><td colspan='4'><b><font size = '3'>Total Estimated Profit</font></b></td></th>";
+                        
+                         echo "<th><td colspan='2'><b> <font size = '3'>$profit</font></b></td></th>";
 
+                        echo "</tr>";
                         echo "</table>";
                         echo "<hr>";
                         // Close result set

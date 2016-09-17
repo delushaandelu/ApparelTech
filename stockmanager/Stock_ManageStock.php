@@ -73,49 +73,17 @@
   			</ul>
             <br><br>
                  
-                	<div class = "upper_panel_add_item" id="add">
-                                <form method="post" name="form" onSubmit="return check();">
-                                    <table border="0" >
-                                        
-                                        <tr class="spaceUnder">
-                                            <td id="table_font"  width="20%"> Category Name</td> 
-                                            <td><select id = "categoryname" name="categoryname" class="add_dropdown_effects">
-                                                    <option value="0"> Select Category Name</option>
-                                                    <option value="Sewing Machines">Sewing Machines</option>
-                                                    <option value="Sewing Machine Spare Parts">Sewing Machine Spare Parts</option>
-                                                    <option value="Tools">Tools</option>
-                                                </select>
-                                            </td>
-                                        </tr>
-                                        <tr class="spaceUnder">
-                                            <td id="table_font" width="10%">Item Name</td> 
-                                            <td><input type="text"  name="itemname" class="form-control"></td>
-                                        </tr>
-                                       <tr class="spaceUnder">
-                                            <td id="table_font"  width="10%"> Brand</td>
-                                            <td><input type="text"  name="brandname" class="form-control"></td>
-                                        </tr>
-                                        <tr>
-                                            <td id="table_font" width="10%"> Price</td> 
-                                        </tr>
-                                         <tr class="spaceUnder">
-                                             <td id="table_font" width="10%" align="right"></td> 
-                                             <td><input type="text"  placeholder="Cost"  name="cost" class="form-control" id="exampleInputAmount"  ></td>
-                                        </tr>
-                                        <tr class="spaceUnder">
-                                            <td id="table_font" width="10%" align="right" ></td> 
-                                            <td><input type="text"  placeholder="Selling Price" name="sellingprice" class="form-control"></td>
-                                        </tr>
-                                        <tr class="spaceUnder">
-                                            <td id="table_font" width="10%"> Quantity</td> 
-                                            <td> <input type="text"  name="quantity" class="form-control"s></td>
-                                        </tr>  
-                                    </table> 
-                            	</div>
+                	<div class="upper_panel_manage_stock">
                         <div id="btn">
-                            <input type="submit" class="myButton" id="btnManageStockInsert"  name="btnManageStockInsert" value="Add"  />
-                            <button onclick="location.href = 'Stock_ManageStock.php';" id="btnManageStockAddNew" class="myButton" >Add New</button>
+                            
+                            <div class="col-md-6">                           
+                            <button onclick="location.href = 'Stock_addItem.php';" id="btnManageStockAddNew" class="myButton" >Add New</button>
+                            </div>
+                            <div class="col-md-6">
                             <button onclick="location.href = 'AddToExisting.php';" id="btnManageStockAddToExisting" class="myButton" >Add To Existing</button>
+                            </div>
+                            
+                            
                         </div>
                
                       	<div id="button">
@@ -124,26 +92,11 @@
 
                             	
                          </div>       
-                            </form>
+                            
                             <!-- This is related to add item. The add item function is in the item class. Here I created an object called myItem and called the addItem() function-->
-                            <?php
-
-                                include ('Item.php');
-                                if(isset($_POST['btnManageStockInsert'])){
-
-                                    $itemname = $_POST['itemname'];
-                                    $brand = $_POST['brandname'];
-                                    $sellingprice = $_POST['sellingprice'];
-                                    $cost = $_POST['cost'];
-                                    $categoryname = $_POST['categoryname'];
-
-                                    $quantity = $_POST['quantity'];
-                                    $myItem = new Item();
-                                    $myItem -> addItem($itemname, $brand,$sellingprice,$cost, $categoryname,$quantity );
-                                }
-                            ?>
+                          
     </div>
-</div>
+
         <script type="text/javascript" src="js/plugins/jquery/jquery.min.js"></script>
         <script type="text/javascript" src="js/plugins/jquery/jquery-ui.min.js"></script>
         <script type="text/javascript" src="js/plugins/bootstrap/bootstrap.min.js"></script>        
