@@ -139,11 +139,11 @@
                                 echo "<td>" . $row['itemName'] . "</td>";echo"<td></td>";
                                 echo "<td>" . $row['catagery'] . "</td>";echo"<td></td>";
                                 echo "<td>" . $row['brand'] . "</td>";echo"<td></td>";
-                                echo "<td>" . $row['buyingPrice'] . "</td>";echo"<td></td>";
-                                echo "<td>" . $row['sellingPrice'] . "</td>";echo"<td></td>";
+                                echo "<td align='right'>" . $row['buyingPrice'] . ".00</td>";echo"<td></td>";
+                                echo "<td align='right'>" . $row['sellingPrice'] . ".00</td>";echo"<td></td>";
                                 echo "<td>" . $row['stockQty'] . "</td>";echo"<td></td>";
-                                echo "<td>" . ($row['stockQty'] *  $row['buyingPrice'] ). "</td>";echo"<td></td>";
-                                echo "<td>" . ($row['stockQty'] *  ($row['sellingPrice'] - $row['buyingPrice'] )). "</td>";echo"<td></td>";
+                                echo "<td align='right'>" . ($row['stockQty'] *  $row['buyingPrice'] ). ".00</td>";echo"<td></td>";
+                                echo "<td align='right'>" . ($row['stockQty'] *  ($row['sellingPrice'] - $row['buyingPrice'] )). ".00</td>";echo"<td></td>";
                                 $sum = $sum + ($row['stockQty'] *  $row['buyingPrice'] );
                                 $profit = $profit + ($row['stockQty'] *  ($row['sellingPrice'] - $row['buyingPrice'] ));
 
@@ -153,12 +153,12 @@
                             echo "</tr>";
                         }
 
-                        echo " <th><b>Total Stock Value</b></th>";
+                        echo " <th><td colspan='2'><b>Total Stock Value</b></td></th>";
                         
                         echo "<th> $sum </th>";
                        
 
-                        echo " <th>Total Estimated Profit </th>";
+                        echo " <th><td colspan='2'>Total Estimated Profit </td></th>";
                         
                         echo "<th> $profit </th>";
 
