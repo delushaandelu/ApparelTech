@@ -119,14 +119,14 @@
                         echo "<table border = '0' class='table table-striped'>";
                             echo "<tr bgcolor='#C0C0C0' width = '10px' >";
                             
-                                echo "<th><h4><b>Item ID</b></h4></th>"; echo"<td width = 10%></td>";
+                                echo "<th><h4><b  align='center'>Item ID</b></h4></th>"; echo"<td width = 10%></td>";
                                 echo "<th><h4><b>Item Name</h4></b></th>";echo"<td width = 2%></td>";
                                 echo "<th><h4><b>Category</h4></b></th>";echo"<td width=2%></td>";
                                 echo "<th><h4><b>Brand</h4></b></th>";echo"<td width=2%></td>";
                                 echo "<th><h4><b>Buying Price</h4></b></th>";echo"<td width = 2%></td>";
                                 echo "<th><h4><b>Selling Price</h4></b></th>";echo"<td width=2%></td>";
                                 echo "<th><h4><b>Quantity</h4></b></th>";echo"<td width=2%></td>";
-                                echo "<th><h4><b>Stock Value</h4></b></th>";echo"<td width=2%></td>";
+                                echo "<th ><h4><b>Stock Value</h4></b></th>";echo"<td width=2%></td>";
                                 echo "<th><h4><b>Estimated Profit</h4></b></th>";echo"<td width=2%></td>";
 
 
@@ -153,12 +153,12 @@
                             echo "</tr>";
                         }
 
-                        echo " <th><td colspan='2'><b>Total Stock Value</b></td></th>";
+                        echo " <th><td colspan='3'><b><font size = '4'>Total Stock Value</font></b></td></th>";
                         
-                        echo "<th> $sum </th>";
+                        echo "<th> <font size = '4'>$sum </font></th>";
                        
 
-                        echo " <th><td colspan='2'>Total Estimated Profit </td></th>";
+                        echo " <th><td colspan='3'><b>Total Estimated Profit</b> </td></th>";
                         
                         echo "<th> $profit </th>";
 

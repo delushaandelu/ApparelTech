@@ -42,27 +42,27 @@ body, html{
 	/*background-color: black;*/
 }
 
-.myButton {
-	background-color:#050505;
-	-moz-border-radius:28px;
-	-webkit-border-radius:28px;
-	border-radius:28px;
-	border:1px solid #242424;
-	display:inline-block;
-	cursor:pointer;
-	color:#f02400;
-	font-family:Arial;
-	font-size:17px;
-	padding:5px 31px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #121411;
+#btnNewReportGenerateReport {
+  background-color:#050505;
+  -moz-border-radius:28px;
+  -webkit-border-radius:28px;
+  border-radius:28px;
+  border:1px solid #242424;
+  display:inline-block;
+  cursor:pointer;
+  color:#f02400;
+  font-family:Arial;
+  font-size:15px;
+  padding:5px 31px;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #121411;
 }
-.myButton:hover {
-	background-color:#424142;
+#btnNewReportGenerateReport:hover {
+  background-color:#424142;
 }
-.myButton:active {
-	position:relative;
-	top:1px;
+#btnNewReportGenerateReport:active {
+  position:relative;
+  top:1px;
 }
 
 

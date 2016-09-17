@@ -191,31 +191,36 @@
                                         </tr>
                                     </table>     
                         	</div>
-                            </form>
-                                    <div id ="btn">
-                                        
-                                        <input type="submit" class="myButton" id="btnManageStockInsert" name="btnManageStockInsert" value="Add"  />
-                                    </div>
                             
-                            <?php
+                        <div id="btn">
+                            <input type="submit" class="myButton" id="btnManageStockInsert"  name="btnManageStockInsert" value="Add"  />
+                           
+                        </div>
+               
+                        <div id="button">
+                            <!-- Dont remove this tag. its refer the margin space  -->
+                        </div>
+
                                 
+                         </div>       
+                            </form>
+                            <!-- This is related to add item. The add item function is in the item class. Here I created an object called myItem and called the addItem() function-->
+                            <?php
+
                                 include ('Item.php');
                                 if(isset($_POST['btnManageStockInsert'])){
-                                    
+
                                     $itemname = $_POST['itemname'];
                                     $brand = $_POST['brandname'];
                                     $sellingprice = $_POST['sellingprice'];
                                     $cost = $_POST['cost'];
                                     $categoryname = $_POST['categoryname'];
-                                
+
                                     $quantity = $_POST['quantity'];
                                     $myItem = new Item();
                                     $myItem -> addItem($itemname, $brand,$sellingprice,$cost, $categoryname,$quantity );
                                 }
-                                
-                            
                             ?>
-                  
                  
                
             
