@@ -23,7 +23,7 @@
     <div class="row">
         <div class="col-lg-12">
             <div class="1">
-                <h1 class="page-header">Suppliers</h1>
+                <h2 class="page-header">Suppliers</h2>
             </div>
             <div class="2">
                 <input type="text" id="myInput" onkeyup="myFunction()" placeholder="&#x26B2   Search for suppliers by name..." style="width: 300px">

@@ -21,7 +21,7 @@
 <div id="page-wrapper">
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">Purchase Order Details</h1>
+            <h2 class="page-header">Purchase Order Details</h2>
         </div>
         <div class="2">
             <input type="text" id="myInput" onkeyup="myFunction()" placeholder="&#x26B2   Search by order id..." style="width: 300px">

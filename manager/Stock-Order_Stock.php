@@ -18,7 +18,7 @@
 <div id="page-wrapper">
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">Order Stock</h1>
+            <h2 class="page-header">Order Stock</h2>
         </div>
         
     </div>

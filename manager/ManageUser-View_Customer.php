@@ -23,7 +23,7 @@
     <div class="row">
         <div class="col-lg-12">
             <div class="1">
-                <h1 class="page-header">Customers</h1>
+                <h2 class="page-header">Customers</h2>
             </div>
             <div class="2">
                 <!-- search box -->
