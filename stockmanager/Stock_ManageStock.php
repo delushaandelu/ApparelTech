@@ -59,10 +59,10 @@
             include("../config/stockmgrmenu.php");
         ?>
 
-                <ul class="breadcrumb">
-                    <h2>Manage Stock</h2>
-                </ul>
-<div >
+<ul class="breadcrumb">
+     <h2>Manage Stock</h2>
+</ul>
+<div class="panel" >
         
         	<ul class="nav nav-justified" >
     			
@@ -71,17 +71,17 @@
     			<li id ="nav_tab_item_effect"><a href="manage_stock_deleteItem.php">Delete Item</a></li>
                 <li id ="nav_tab_item_effect"><a href="#">Update Item</a></li>
   			</ul>
-            <br><br>
+           </br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
                  
                 	<div class="upper_panel_manage_stock">
                         <div id="btn" class="btn-lg">
                             
                             <div class="col-md-6">                           
-                            <button onclick="location.href = 'Stock_addItem.php';" id="btnManageStockAddNew" class="btn btn-success btn-lg btn-block" ><h4>Add New Item</h4></button>
+                            <button onclick="location.href = 'Stock_addItem.php';" id="btnManageStockAddNew" class="btn-lg btn-block" ><h4>Add New Item</h4></button>
                            
                             </br>
                             
-                            <button onclick="location.href = 'AddToExisting.php';" id="btnManageStockAddToExisting" class="btn-success btn-lg btn-block" ><h4>Add Existing Item</h4></button>
+                            <button onclick="location.href = 'AddToExisting.php';" id="btnManageStockAddToExisting" class=" btn-lg btn-block" ><h4>Add Existing Item</h4></button>
                             </div>
                             
                             

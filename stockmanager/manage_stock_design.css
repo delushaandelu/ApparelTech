@@ -26,9 +26,13 @@
     margin-top: 0%;
 }
 #nav_tab_item_effect{
-	background-color:black;
+	background-color:#22262e;
 	font-size:14px;
 	}
+#nav_tab_item_effect a:active{
+    background-color:orangered;
+}
+
 #nav_tab_item_effect a:hover{
     background-color: orangered;
     
@@ -36,15 +40,13 @@
 #nav_tab_item_effect a{
     color: white;
 }
-
-
 	
 .panel{
 margin-top: -2%;
 height: 79%;
 	
 	}
-	
+
 #table_font{
 	font-size:14px;
 	font-style:normal;
@@ -68,6 +70,8 @@ tr.spaceUnder > td
 }
 
 .myButton {
+    margin-top:0%;
+    margin-left:30%;
     background:#1caf9a; 
 	cursor:pointer;
 	color:#fff;
@@ -75,7 +79,7 @@ tr.spaceUnder > td
 	font-size:12px;
 	padding:5px;
 	text-decoration:none;
-    width:110px;
+    width:120px;
 
 	
 }
@@ -86,6 +90,14 @@ tr.spaceUnder > td
 	position:relative;
 	top:1px;
 }
+#btnManageStockAddToExisting{
+    background-color:#1caf9a; 
+}
+    
+#btnManageStockAddNew{
+    background-color:#1caf9a;  
+}
+
 
 #below_panel_search_item{
 	

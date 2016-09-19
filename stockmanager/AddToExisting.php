@@ -192,7 +192,7 @@
                                     </table>     
                         	</div>
                             
-                        <div id="btn">
+                        <div id="">
                             <input type="submit" class="myButton" id="btnManageStockInsert"  name="btnManageStockInsert" value="Add"  />
                            
                         </div>
