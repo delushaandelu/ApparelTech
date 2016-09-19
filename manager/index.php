@@ -6,10 +6,13 @@
         <link rel="stylesheet" href="css/style.css">
   </head>
     <?php
+    session_start();
 if(isset($_POST['login'])){
     require ('../config/database.php');
     $username = $_POST['username'];
     $password = $_POST['password'];
+    
+    $_SESSION['manager'] = $username;
    
     $result = mysqli_query($conn, 'select * from user where username="'.$username.'" and password="'.$password.'" and accessLevel="1" ');
     if (mysqli_num_rows($result)==1){

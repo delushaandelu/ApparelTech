@@ -28,7 +28,7 @@
     
 </div>
     <div id="label">
-        <img src="images/mentor-Icon1.png">
+            <img src="images/mentor-Icon1.png">
      <div id ="text">
         <div class="col-lg-4 col-sm-4 follow-info" id="font">
                                 <p>" Our attitude towards others determines their attitude towards us " </p>

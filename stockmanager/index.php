@@ -12,6 +12,8 @@ if(isset($_POST['login'])){
     $username = $_POST['username'];
     $password = $_POST['password'];
    
+    $_SESSION['sname'] = $username;
+    
     $res = mysqli_fetch_assoc(mysqli_query($conn,"select user_id from user where username='$username'"));
     $_SESSION['uid'] = $res['user_id'];
     

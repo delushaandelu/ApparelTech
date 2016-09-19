@@ -14,7 +14,12 @@
                                 <img src="assets/images/users/avatar.jpg"/>
                             </div>
                             <div class="profile-data">
-                                <div class="profile-data-name">#Name</div>
+                                <div class="profile-data-name">
+                                    <?php
+                                        session_start();
+                                        echo $_SESSION['sname'];
+                                    ?>
+                                </div>
                                 <div class="profile-data-title"><span style="color:#FF4500">ApperalTech</span></div>
                             </div>
                         </div>                                                                        
