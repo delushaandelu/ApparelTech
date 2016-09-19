@@ -20,7 +20,7 @@ session_start();
 
 <!-- page content -->
 <div class="right_col" role="main">
-    <h1>Update Your Profile Here!</h1>
+    <h1 class="hfont">Update Your Profile Here!</h1>
 
 </div>
 </body>

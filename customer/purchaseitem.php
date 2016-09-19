@@ -23,7 +23,7 @@ session_start();
 
 <!-- page content -->
 <div class="right_col" role="main">
-    <h1>Purchased Items</h1>
+    <h1 class="hfont">Purchased Items</h1>
     <center>
         <h3>Invoice No. 
             <?php 

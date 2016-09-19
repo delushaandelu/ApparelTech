@@ -22,7 +22,7 @@ session_start();
 
 <!-- page content -->
 <div class="right_col" role="main">
-    <h1>Cancel Your Purchase Here!</h1>
+    <h1 class="hfont">Cancel Your Purchase Here!</h1>
     
 <table class="table table-striped">
 	<tr> 

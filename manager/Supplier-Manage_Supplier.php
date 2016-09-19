@@ -80,73 +80,33 @@
 				<!--handle form-->
             	<form name="form1" method="post" action="supplier.php" onsubmit="return check();">
                 	<table border="0">
-                    	<tr></tr>
                         <tr>
-                       	  <td id="table-font" width="60%">
-                            	Supplier name
-							</td>
-                            <td>
-                            	<input type="text" name="name" class="form-control" required>
-								<br><br>
-                            </td>
+                       	  <td id="table-font" width="60%">Supplier name</td>
+                            <td><input type="text" name="name" class="form-control" required></td>
+                            <td
                         </tr>
                          <tr>
-                       	   <td id="table-font" width="60%">
-                            	Location							
-                            </td>
-                            <td>
-                            	<input type="text" name="location" class="form-control" required>
-								<br><br>
-                           </td>
+                       	   <td id="table-font" width="60%">Location</td>
+                            <td><input type="text" name="location" class="form-control" required></td>
                          </tr>
                          <tr>
-                         	<td id="table_font" width="60%">
-								Contact
-							</td> 
-                                         
-							<td>
-								<br><br>
-							</td>
-                        </tr>
-                                    
-						  <tr>
-                                        
-							<td id="table_font" width="60%" align="right">
-								                    Telephone                            
-							</td> 
-                                         
-							<td>
-								<input type="tel" name="tele" class="form-control" required>
-								<br><br>
-							</td>
+                         	<td id="table_font" width="60%">Contact</td>           
+                        </tr>       
+						  <tr>         
+							<td id="table_font" width="60%" align="right"></td>             
+							<td><input type="tel" name="tele" class="form-control" required placeholder="Telephone"></td>
 						  </tr>
-                          <tr>
-                                        
-							<td id="table_font" width="60%" align="left">
-								                     Mobile                           
-							</td> 
-                                         
-							<td>
-								<input type="tel" name="mobile" class="form-control" required>
-								<br><br>
-							</td>
+                          <tr>        
+							<td id="table_font" width="60%" align="left"> </td>             
+							<td><input type="tel" name="mobile" class="form-control" required placeholder="Mobile"></td>
 						  </tr>
 						  <tr>
-                        	<td id="table-font" width="60%">
-                            	Address
-							</td>
-                            <td><input type="text" name="address" class="form-control" required>
-                              <br><br>
- 						    </td>
+                        	<td id="table-font" width="60%">Address</td>
+                            <td><input type="text" name="address" class="form-control" required></td>
 						  </tr>
                           <tr>
-                       	   <td id="table-font" width="60%">
-                            	e-mail address							
-                            </td>
-                            <td>
-                            	<input type="email" name="email" class="form-control" required>
-								<br><br>
-                           </td>
+                       	   <td id="table-font" width="60%">e-mail address</td>
+                            <td><input type="email" name="email" class="form-control" required></td>
                          </tr>
 
                          
@@ -154,8 +114,8 @@
 
                   </div>
 					<!--button-->
-                  <div id="top-right">
-					  <input type="submit" id="button" class="btn btn-default btn-lg active" value="save" name="insert" style="font-size: 16px">
+                  <div id="">
+                      <button type="submit" id="button"  name="insert" ><i class="fa fa-plus-circle" aria-hidden="true"></i></button>
 				  </div>
 			</form>
 		</div>

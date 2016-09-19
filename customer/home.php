@@ -22,7 +22,7 @@
 
 <!-- page content -->
 <div class="right_col" role="main">
-    <H1>Welcome to Priyantha Enterprices</H1>
+    <H1 class="hfont">Welcome to Priyantha Enterprises</H1>
     <div id = info>
                 <div class="x_panel">
                   <div class="x_title">

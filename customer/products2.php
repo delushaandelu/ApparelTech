@@ -15,6 +15,7 @@ include 'dbConfig.php';
     <link href="vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="build/css/custom.min.css" rel="stylesheet">
+      <link href="css/product.css" type="text/css" rel="stylesheet">
        <meta charset="utf-8">
    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -33,7 +34,7 @@ include 'dbConfig.php';
 
 <!-- page content -->
 <div class="right_col" role="main">
-    <h1>Sewing Machine Spare Parts</h1>
+    <h1 class="hfont">Sewing Machine Spare Parts</h1>
     <a href="viewCart.php" class="cart-link" title="View Cart"><i class="glyphicon glyphicon-shopping-cart"></i></a>
     <div id="products" class="row list-group">
         <?php

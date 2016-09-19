@@ -22,7 +22,7 @@ session_start();
 
 <!-- page content -->
 <div class="right_col" role="main">
-    <h1>Your Delivery Request Status!</h1>
+    <h1 class="hfont">Your Delivery Request Status!</h1>
 
 
     

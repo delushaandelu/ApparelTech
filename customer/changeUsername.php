@@ -22,7 +22,7 @@ session_start();
 
 <!-- page content -->
 <div class="right_col" role="main">
-    <h1>Change Your Username Here!</h1>
+    <h1 class="hfont">Change Your Username Here!</h1>
 
 </div>
 </body>

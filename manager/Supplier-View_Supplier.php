@@ -65,7 +65,7 @@
                     <td><h5 align='center'><?php echo $row['tele'] ?></h5></td>
                     <td><h5 align='center'><?php echo $row['mobile'] ?></h5></td>
 
-                    <td class="bt"><input type="button" id="button" class="btn btn-info" value="Delete" onclick="location.href='Supplier-View_Supplier.php?supplier_id=<?php echo $row['supplier_id'] ?>'"></td>
+                    <td class="bt"><button type="button" id="button" class="btn btn-info" onclick="location.href='Supplier-View_Supplier.php?supplier_id=<?php echo $row['supplier_id'] ?>'"><i class="fa fa-trash-o"></i></button></td>
                 </tr>
             <?php } ?>
             </table>

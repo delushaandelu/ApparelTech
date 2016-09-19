@@ -55,13 +55,13 @@
 
             while($row = $result->fetch_assoc()) {
                 echo "<tr>
-                    <td><h5 align='center'>" . $row["item_id"]. "</h5></td>
-                    <td><h5 align='center'>" . $row["itemName"]. "</h5></td>
-                    <td><h5 align='center'>" . $row["buyingPrice"]. "</h5></td>
-                    <td><h5 align='center'>" . $row["sellingPrice"]. "</h5></td>
-                    <td><h5 align='center'>" . $row["brand"]. "</h5></td>
-                    <td><h5 align='center'>" . $row["catagery"]. "</h5></td>
-                    <td><h5 align='center'>" . $row["stockQty"]. "</h5></td>
+                    <td><h6 align='center'>" . $row["item_id"]. "</h6></td>
+                    <td><h6 align='center'>" . $row["itemName"]. "</h6></td>
+                    <td><h6 align='center'>" . $row["buyingPrice"]. "</h6></td>
+                    <td><h6 align='center'>" . $row["sellingPrice"]. "</h6></td>
+                    <td><h6 align='center'>" . $row["brand"]. "</h6></td>
+                    <td><h6 align='center'>" . $row["catagery"]. "</h6></td>
+                    <td><h6 align='center'>" . $row["stockQty"]. "</h6></td>
                 </tr>";
             }
             echo "</table>";

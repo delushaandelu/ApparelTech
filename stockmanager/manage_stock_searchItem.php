@@ -131,7 +131,7 @@
                 <div class="col-sm-3">
 
                     <!-- This is the interface design for search items from the stock -->
-                    <select id = "categoryname" name="categoryname" class="btn btn-primary dropdown-toggle">
+                    <select id = "categoryname" name="categoryname" class="btn btn-default dropdown-toggle">
                         <option value = "0"> Select Category Name</option>
                         <option value="Sewing Machines">Sewing Machines</option>
                         <option value="Sewing Machine Spare Parts">Sewing Machine Spare Parts</option>
@@ -139,11 +139,11 @@
                     </select>
                 </div>       
                 <div class="col-sm-3">       
-                    <select id = "itemname" name="itemname" class="btn btn-info dropdown-toggle"></select>
+                    <select id = "itemname" name="itemname" class="btn btn-default dropdown-toggle"></select>
 
                 </div>
                 <div class="col-sm-3">        
-                    <select id = "brandname" name="brandname" class="btn btn-primary dropdown-toggle"></select>
+                    <select id = "brandname" name="brandname" class="btn btn-default dropdown-toggle"></select>
 
                 </div>
             </div>   

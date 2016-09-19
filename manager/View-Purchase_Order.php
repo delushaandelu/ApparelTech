@@ -55,7 +55,7 @@
                     <td><?php echo $row['totalprice'] ?></td>
                     <td><?php echo $row['created'] ?></td>
                     <td><?php echo $row['status'] ?></td>
-                    <td class="bt"><input type="button" id="button" class="btn btn-info" value="Delete" onclick="location.href='View-Purchase_Order.php?p_id=<?php echo $row['p_id'] ?>'"></td>
+                    <td class="bt"><button type="button" id="button" class="btn btn-info" value="Delete" onclick="location.href='View-Purchase_Order.php?p_id=<?php echo $row['p_id'] ?>'"><i class="fa fa-trash-o"></i></button></td>
                 </tr>
                 <?php } ?>
             </table>

@@ -19,7 +19,7 @@
 
 <!-- page content -->
 <div class="right_col" role="main">
-    <h1>Purchase Your Goods Here!</h1>
+    <h1 class="hfont">Purchase Your Goods Here!</h1>
 
 
 <?php

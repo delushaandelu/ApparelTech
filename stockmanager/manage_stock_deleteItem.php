@@ -167,11 +167,8 @@
            
         <form method="post" name="form" onSubmit="return check();">    
             <div class="upper_panel_delete_item">
-            
                 <div class="col-md-4">
-
-                    
-                    <select id = "categoryname" name="categoryname" class="btn btn-primary dropdown-toggle">
+                    <select id = "categoryname" name="categoryname" class="btn btn-default dropdown-toggle">
                         <option > Select Category Name</option>
                         <option value="Sewing Machines">Sewing Machines</option>
                         <option value="Sewing Machine Spare Parts">Sewing Machine Spare Parts</option>
@@ -179,20 +176,17 @@
                     </select>
                 </div>       
                 <div class="col-md-4">       
-                    <select id = "itemname" name="itemname" class="btn btn-info dropdown-toggle"></select>
-
+                    <select id = "itemname" name="itemname" class="btn btn-default dropdown-toggle"></select>
                 </div>
                 <div class="col-md-4">        
-                    <select id = "brandname" name="brandname" class="btn btn-primary dropdown-toggle"></select>
-
+                    <select id = "brandname" name="brandname" class="btn btn-default dropdown-toggle"></select>
                 </div>
-            </div>   
-            <div class="middle_panel_delete_item">
-
-                <input type="submit" class="myButton" id="btnManageStockSearch2" name="btnManageStockSearch2" value="Search To Delete"  />
             </div>
-                
+            <div class="middle_panel_delete_item">
+                    <input type="submit" class="myButton" id="btnManageStockSearch2" name="btnManageStockSearch2" value="Search To Delete"  />
+                </div>
         </form>
+            </br>
         
         <div class = "below_panel_delete_item">
            <!-- The below php code is used to list down search items to delete-->
@@ -262,13 +256,13 @@
             }
             mysqli_close($dbcon);
                 }
-
             ?>
             
 
 
 
         </div>
+
 
     
    

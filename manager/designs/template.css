@@ -108,15 +108,12 @@ img
 
 #button{
 	border-radius:5px;
-	width:80px;
+	width:50px;
 	height:35px;
 	color:#FFFFFF;
 	background-color:#00aa88;
 }
 
-#button:hover{
-    background-color: #00a8e0;
-}
 
 button:active {
     background-color: #00a8e0;

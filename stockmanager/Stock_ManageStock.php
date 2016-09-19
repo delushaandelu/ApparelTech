@@ -62,7 +62,7 @@
                 <ul class="breadcrumb">
                     <h2>Manage Stock</h2>
                 </ul>
-<div class = "panel">
+<div >
         
         	<ul class="nav nav-justified" >
     			
@@ -74,13 +74,14 @@
             <br><br>
                  
                 	<div class="upper_panel_manage_stock">
-                        <div id="btn">
+                        <div id="btn" class="btn-lg">
                             
                             <div class="col-md-6">                           
-                            <button onclick="location.href = 'Stock_addItem.php';" id="btnManageStockAddNew" class="myButton" >Add New</button>
-                            </div>
-                            <div class="col-md-6">
-                            <button onclick="location.href = 'AddToExisting.php';" id="btnManageStockAddToExisting" class="myButton" >Add To Existing</button>
+                            <button onclick="location.href = 'Stock_addItem.php';" id="btnManageStockAddNew" class="btn btn-success btn-lg btn-block" ><h4>Add New Item</h4></button>
+                           
+                            </br>
+                            
+                            <button onclick="location.href = 'AddToExisting.php';" id="btnManageStockAddToExisting" class="btn-success btn-lg btn-block" ><h4>Add Existing Item</h4></button>
                             </div>
                             
                             
