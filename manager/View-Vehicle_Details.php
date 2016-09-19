@@ -33,10 +33,10 @@
         if ($result->num_rows > 0) {
             echo "<table class='table table-striped'>";
             echo"<tr>
-                <th><h5 align='center'>Vehicle ID </h5></th>
-                <th><h5 align='center'>Vehicle No </h5></th>
-                <th><h5 align='center'>Capacity</h5></th>
-                <th><h5 align='center'>Vehicle Type </h5></th>
+                <th><h5 align='center'><b>Vehicle ID</b></h5></th>
+                <th><h5 align='center'><b>Vehicle No</b> </h5></th>
+                <th><h5 align='center'><b>Capacity</b></h5></th>
+                <th><h5 align='center'><b>Vehicle Type</b></h5></th>
             </tr>";
 
             while($row = $result->fetch_assoc()) {

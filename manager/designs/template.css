@@ -106,17 +106,18 @@ img
 	float:right;
 	}
 
+
 #button{
-	border-radius:5px;
+ 
 	width:50px;
 	height:35px;
 	color:#FFFFFF;
-	background-color:#00aa88;
+	background-color: #1caf9a;
 }
 
 
 button:active {
-    background-color: #00a8e0;
+    background-color:cadetblue;
     transform: translateY(4px);
 }
 
@@ -243,19 +244,29 @@ td{
 
 #button1{
     border-radius:5px;
-    width:160px;
-    height:50px;
+    width:114px;
+    height:35px;
     color:#FFFFFF;
-    background-color:#00aa88;
+    background-color:#1caf9a;
+    
 }
 
 #button1:hover{
-    background-color: #00a8e0;
+    background-color:cadetblue;
 }
 
 button1:active {
-    background-color: #00a8e0;
+    background-color:#1caf9a;
     transform: translateY(4px);
+}
+#button2{
+    margin-top:35%;
+    margin-left:-63%;
+    border-radius:5px;
+    width:100px;
+    height:35px;
+    color:#FFFFFF;
+    background-color:#1caf9a;
 }
 
 /* manage manager & smanager */

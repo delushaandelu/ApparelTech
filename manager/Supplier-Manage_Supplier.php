@@ -68,7 +68,7 @@
     <div class="row">
         <div class="col-lg-12">
 			<!--page heading-->
-            <h1 class="page-header">Manage Supplier</h1>
+            <h2 class="">Manage Supplier</h2>
         </div>
         
     </div>
@@ -90,13 +90,11 @@
                             <td><input type="text" name="location" class="form-control" required></td>
                          </tr>
                          <tr>
-                         	<td id="table_font" width="60%">Contact</td>           
-                        </tr>       
-						  <tr>         
-							<td id="table_font" width="60%" align="right"></td>             
+                         	<td id="table_font" width="60%">Contact</td> 
+                                      
 							<td><input type="tel" name="tele" class="form-control" required placeholder="Telephone"></td>
-						  </tr>
-                          <tr>        
+                        </tr>       
+                        <tr>        
 							<td id="table_font" width="60%" align="left"> </td>             
 							<td><input type="tel" name="mobile" class="form-control" required placeholder="Mobile"></td>
 						  </tr>
@@ -115,7 +113,7 @@
                   </div>
 					<!--button-->
                   <div id="">
-                      <button type="submit" id="button"  name="insert" ><i class="fa fa-plus-circle" aria-hidden="true"></i></button>
+                      <button type="submit" id="button2"  name="insert" >Add  <i class="fa fa-plus-circle" aria-hidden="true"></i></button>
 				  </div>
 			</form>
 		</div>
