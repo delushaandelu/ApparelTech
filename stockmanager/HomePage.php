@@ -24,15 +24,10 @@
                     <div class="profile-widget profile-widget-info">
                           <div class="panel-body">
                             <div class="col-lg-2 col-sm-2">
-                              <h4>#Name</h4>               
-                              <div class="follow-ava">
-                                  <img src="img/profile-widget-avatar.jpg" alt="">
-                              </div>
-                                </br>
-                              <h6>StockManager</h6>
+                              
                             </div>
                             <div class="col-lg-4 col-sm-4 follow-info">
-                                <p>The system where stock details are manging and recording information about that.</p>
+                                <p>" Our attitude towards others determines their attitude towards us "</p>
                                 <p>priyantha@apparel.com</p>
 								<p><i class="fa fa-twitter">PriyanthaEnt</i></p>
                                 <h6>
