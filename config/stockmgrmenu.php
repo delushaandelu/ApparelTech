@@ -15,10 +15,7 @@
                             </div>
                             <div class="profile-data">
                                 <div class="profile-data-name">
-                                    <?php
-                                        session_start();
-                                        echo $_SESSION['sname'];
-                                    ?>
+                                    Stock_Manager
                                 </div>
                                 <div class="profile-data-title"><span style="color:#FF4500">ApperalTech</span></div>
                             </div>
