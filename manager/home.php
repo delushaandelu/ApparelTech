@@ -32,7 +32,7 @@
      <div id ="text">
         <div class="col-lg-4 col-sm-4 follow-info" id="font">
                                 <p>" Our attitude towards others determines their attitude towards us " </p>
-                                <p>priyantha@apparel.com</p>
+                                <p>priyantha@gmail.com</p>
 								<p><i class="fa fa-twitter">PriyanthaEnt</i></p>
                                 <h6>
                                     <span><i class="icon_calendar"></i>
@@ -49,7 +49,7 @@
                                               
                                               <i class="fa fa-comments fa-2x"> </i><br>
 											  
-											  Contrary to popular belief, Lorem Ipsum is not simply
+											 One painful duty fulfilled makes the next plainer and easier.
                                           </li>
 										   
                                       </ul>
@@ -60,7 +60,7 @@
                                               
                                               <i class="fa fa-bell fa-2x"> </i><br>
 											  
-											  Contrary to popular belief, Lorem Ipsum is not simply 
+											  Human happiness and moral duty are inseparably connected.
                                           </li>
 										   
                                       </ul>
@@ -71,7 +71,7 @@
                                               
                                               <i class="fa fa-tachometer fa-2x"> </i><br>
 											  
-											  Contrary to popular belief, Lorem Ipsum is not simply
+											  It is the first responsibility of every citizen to question authority.
                                           </li>
 										   
                                       </ul>
@@ -86,14 +86,14 @@
                         <div class="panel-heading">
                             <div class="row">
                                 <div class="col-xs-3">
-                                    <i class="fa fa-building-o fa-5x"></i>
+                                    <i class="fa fa-university fa-5x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div>Manage Stock!</div>
+                                    <div>Manage Supplier!</div>
                                 </div>
                             </div>
                         </div>
-                        <a href="#">
+                        <a href="supplier-manage_supplier.php">
                             <div class="panel-footer">
                                 <span class="pull-left">View Details</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -107,14 +107,14 @@
                         <div class="panel-heading">
                             <div class="row">
                                 <div class="col-xs-3">
-                                    <i class="fa fa-tasks fa-5x"></i>
+                                    <i class="fa fa-stack-overflow fa-5x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div>Stock Report!</div>
+                                    <div>View Stock!</div>
                                 </div>
                             </div>
                         </div>
-                        <a href="#">
+                        <a href="Stock-View_Stock.php">
                             <div class="panel-footer">
                                 <span class="pull-left">View Details</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -128,14 +128,14 @@
                         <div class="panel-heading">
                             <div class="row">
                                 <div class="col-xs-3">
-                                    <i class="fa fa-shopping-cart fa-5x"></i>
+                                    <i class="fa fa-user fa-5x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div>Purchase Orders!</div>
+                                    <div>Manage Customer!</div>
                                 </div>
                             </div>
                         </div>
-                        <a href="#">
+                        <a href="ManageUser-Manage_Customer.php">
                             <div class="panel-footer">
                                 <span class="pull-left">View Details</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -149,14 +149,14 @@
                         <div class="panel-heading">
                             <div class="row">
                                 <div class="col-xs-3">
-                                    <i class="fa fa-support fa-5x"></i>
+                                    <i class="fa fa-users fa-5x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div>Rent Orders!</div>
+                                    <div>View Customer!</div>
                                 </div>
                             </div>
                         </div>
-                        <a href="#">
+                        <a href="ManageUser-View_Customer.php">
                             <div class="panel-footer">
                                 <span class="pull-left">View Details</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -171,14 +171,14 @@
                         <div class="panel-heading">
                             <div class="row">
                                 <div class="col-xs-3">
-                                    <i class="fa fa-building-o fa-5x"></i>
+                                    <i class="fa fa-user-plus fa-5x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div>Manage Delivery!</div>
+                                    <div>Add User!</div>
                                 </div>
                             </div>
                         </div>
-                        <a href="#">
+                        <a href="ManageUser-Manage_Stock_Manager.php">
                             <div class="panel-footer">
                                 <span class="pull-left">View Details</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -192,14 +192,14 @@
                         <div class="panel-heading">
                             <div class="row">
                                 <div class="col-xs-3">
-                                    <i class="fa fa-tasks fa-5x"></i>
+                                    <i class="fa fa-quote-left fa-5x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div>Driver Details!</div>
+                                    <div>Manage Quotation!</div>
                                 </div>
                             </div>
                         </div>
-                        <a href="#">
+                        <a href="Quotation-Manage_Quotation.php">
                             <div class="panel-footer">
                                 <span class="pull-left">View Details</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -213,14 +213,14 @@
                         <div class="panel-heading">
                             <div class="row">
                                 <div class="col-xs-3">
-                                    <i class="fa fa-shopping-cart fa-5x"></i>
+                                    <i class="fa fa-cloud-upload fa-5x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div>Vechile Details!</div>
+                                    <div>Backup!</div>
                                 </div>
                             </div>
                         </div>
-                        <a href="#">
+                        <a href="backup.php">
                             <div class="panel-footer">
                                 <span class="pull-left">View Details</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -234,14 +234,14 @@
                         <div class="panel-heading">
                             <div class="row">
                                 <div class="col-xs-3">
-                                    <i class="fa fa-support fa-5x"></i>
+                                    <i class="fa fa-unlock-alt fa-5x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
                                     <div>Change Password!</div>
                                 </div>
                             </div>
                         </div>
-                        <a href="#">
+                        <a href="Settings-Change_password.php">
                             <div class="panel-footer">
                                 <span class="pull-left">View Details</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>

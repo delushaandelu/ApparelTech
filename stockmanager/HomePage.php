@@ -28,7 +28,7 @@
                             </div>
                             <div class="col-lg-4 col-sm-4 follow-info">
                                 <p>" Our attitude towards others determines their attitude towards us "</p>
-                                <p>priyantha@apparel.com</p>
+                                <p>priyantha@gmail.com</p>
 								<p><i class="fa fa-twitter">PriyanthaEnt</i></p>
                                 <h6>
                                     <span><i class="icon_calendar"></i>
@@ -45,7 +45,7 @@
                                               
                                               <i class="fa fa-comments fa-2x"> </i><br>
 											  
-											  Contrary to popular belief, Lorem Ipsum is not simply
+											  One painful duty fulfilled makes the next plainer and easier.
                                           </li>
 										   
                                       </ul>
@@ -56,7 +56,7 @@
                                               
                                               <i class="fa fa-bell fa-2x"> </i><br>
 											  
-											  Contrary to popular belief, Lorem Ipsum is not simply 
+											  Human happiness and moral duty are inseparably connected.
                                           </li>
 										   
                                       </ul>
@@ -67,7 +67,7 @@
                                               
                                               <i class="fa fa-tachometer fa-2x"> </i><br>
 											  
-											  Contrary to popular belief, Lorem Ipsum is not simply
+											  It is the first responsibility of every citizen to question authority.
                                           </li>
 										   
                                       </ul>
@@ -91,7 +91,7 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="#">
+                        <a href="Stock_ManageStock.php">
                             <div class="panel-footer">
                                 <span class="pull-left">View Details</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -112,7 +112,7 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="#">
+                        <a href="Stock_NewReport.php">
                             <div class="panel-footer">
                                 <span class="pull-left">View Details</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -133,7 +133,7 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="#">
+                        <a href="Purchase%20Order_ManagePurchaseOrder.php">
                             <div class="panel-footer">
                                 <span class="pull-left">View Details</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -169,7 +169,7 @@
                         <div class="panel-heading">
                             <div class="row">
                                 <div class="col-xs-3">
-                                    <i class="fa fa-building-o fa-5x"></i>
+                                    <i class="fa fa-user fa-5x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
                                     <div>Manage Delivery!</div>
@@ -190,14 +190,14 @@
                         <div class="panel-heading">
                             <div class="row">
                                 <div class="col-xs-3">
-                                    <i class="fa fa-tasks fa-5x"></i>
+                                    <i class="fa fa-hdd-o fa-5x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
                                     <div>Driver Details!</div>
                                 </div>
                             </div>
                         </div>
-                        <a href="#">
+                        <a href="driver_details.php">
                             <div class="panel-footer">
                                 <span class="pull-left">View Details</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -211,14 +211,14 @@
                         <div class="panel-heading">
                             <div class="row">
                                 <div class="col-xs-3">
-                                    <i class="fa fa-shopping-cart fa-5x"></i>
+                                    <i class="fa fa-truck fa-5x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
                                     <div>Vechile Details!</div>
                                 </div>
                             </div>
                         </div>
-                        <a href="#">
+                        <a href="vehicle_details.php">
                             <div class="panel-footer">
                                 <span class="pull-left">View Details</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -232,14 +232,14 @@
                         <div class="panel-heading">
                             <div class="row">
                                 <div class="col-xs-3">
-                                    <i class="fa fa-support fa-5x"></i>
+                                    <i class="fa fa-unlock-alt fa-5x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
                                     <div>Change Password!</div>
                                 </div>
                             </div>
                         </div>
-                        <a href="#">
+                        <a href="changepassword.php">
                             <div class="panel-footer">
                                 <span class="pull-left">View Details</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
