@@ -25,11 +25,11 @@
 				<h2 align="center">Sign up Here! </h2>
 			</div>
 
-        <form method="POST" name="sign" action="classSignup.php">
+        <form method="POST" name="sign" action="classSignup.php" novalidate>
             <table>
                 <tr>
                     <td><label for="text">Full Name</label></td>
-                    <td><input type="text" name="fullname"></td>
+                    <td><input type="text" name="fullname" required data-validation-required-message="Please enter your full name."></td>
 
                     <td><label for="text">Designation</label></td>
                     <td><input type="text" name="desi"></td>
