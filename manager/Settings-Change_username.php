@@ -54,7 +54,7 @@
                 </td>
             </tr>
             <br><br>
-            <button type="button" style="font-size:15px" id="button1" class="btn btn-default btn-lg active">Change</button>
+            <button type="button" style="font-size:14px" id="button1" class="">Change</button>
             <br><br>
 
             <h5>
@@ -63,7 +63,7 @@
             
             <br><br>
             
-            <button type="button" id="button1" style="font-size:15px" class="btn btn-default btn-lg active" onclick="location.href='Settings-Change_password.php' ">Change Password</button>
+            <button type="button" id="button1" style="font-size:14px" class="" onclick="location.href='Settings-Change_password.php' ">Change</button>
         </div>
         
         <p>&nbsp;</p>

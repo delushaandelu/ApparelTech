@@ -183,7 +183,7 @@
                 </div>
             </div>
             <div class="middle_panel_delete_item">
-                    <input type="submit" class="myButton" id="btnManageStockSearch2" name="btnManageStockSearch2" value="Search To Delete"  />
+                    <input type="submit" class="myButtonsearch" id="btnManageStockSearch2" name="btnManageStockSearch2" value="Search To Delete"  />
                 </div>
         </form>
             </br>
@@ -241,8 +241,8 @@
                             echo "</tr>";
                         }
                         echo "</table>";?>
-                        <div id="delete_btn">
-                        <input type="submit" class="myButton" id="btnManageStockDelete" name="btnManageStockDelete" value="Delete"  />
+                        <div id="">
+                        <input type="submit" class="myButton" id="" name="btnManageStockDelete" value="Delete"  />
                         </div>
 
                         <?php
