@@ -31,7 +31,7 @@
     </br>
     <div id="backup">
         <form method="post" action="getbackup.php"
-        <center><button name="backup" class="btn btn-primary btn-lg" id="button1"><i class="fa fa-cloud-upload" aria-hidden="true"></i> Take Backup </button></center>
+        <center><button name="backup" id="buttonbackup"><i class="fa fa-cloud-upload" aria-hidden="true"></i> Take Backup </button></center>
         </form> 
     </div>
     
