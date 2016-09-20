@@ -15,6 +15,79 @@
 	<link rel="stylesheet" href="css/style2.css">
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+
+    <script type="text/javascript">
+           function check(){
+          
+                if(document.form.fullname.value == ""){
+                    alert("Please enter the full name");
+                    document.form.fullname.focus();
+                    return false;
+                }
+                 if(document.form.desi.value == ""){
+                    alert("Please enter the address");
+                    document.form.desi.focus();
+                    return false;
+                }
+                if(document.form.nic.value == ""){
+                    alert("Please enter the identity card number");
+                    document.form.nic.focus();
+                    return false;
+                }
+
+                 if(document.form.mob.value == ""){
+                    alert("Please enter the mobile number");
+                    document.form.mob.focus();
+                    return false;
+                }
+
+                 if(document.form.tele.value == ""){
+                    alert("Please enter the telephone number");
+                    document.form.tele.focus();
+                    return false;
+                }
+
+              
+    
+
+                if(document.form.email.value == ""){
+                    alert("Please enter the email address");
+                    document.form.email.focus();
+                    return false;
+                }else{
+                    var x = document.forms["form"]["email"].value;
+                    var atpos = x.indexOf("@");
+                    var dotpos = x.lastIndexOf(".");
+                    if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length) {
+                        alert("Not a valid e-mail address");
+                        return false;}
+
+                }
+
+                if(document.form.cname.value == ""){
+                    alert("Please enter the company name");
+                    document.form.cname.focus();
+                    return false;
+                }
+
+                if(document.form.uname.value == ""){
+                    alert("Please enter the user name");
+                    document.form.uname.focus();
+                    return false;
+                }
+
+                if(document.form.pword.value == ""){
+                    alert("Please enter the password");
+                    document.form.pword.focus();
+                    return false;
+                }
+
+
+           }
+
+       </script> 
+
 </head>
 
 <body>
@@ -25,11 +98,11 @@
 				<h2 align="center">Sign up Here! </h2>
 			</div>
 
-        <form method="POST" name="sign" action="classSignup.php" novalidate>
+        <form method="POST" name="form" onSubmit="return check();">
             <table>
                 <tr>
                     <td><label for="text">Full Name</label></td>
-                    <td><input type="text" name="fullname" required data-validation-required-message="Please enter your full name."></td>
+                    <td><input type="text" name="fullname" ></td>
 
                     <td><label for="text">Designation</label></td>
                     <td><input type="text" name="desi"></td>
