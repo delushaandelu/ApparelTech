@@ -22,7 +22,7 @@ session_start();
 
 <!-- page content -->
 <div class="right_col" role="main">
-    <h1 class="hfont">Your Purchase Report!</h1>
+    <h2 class="hfont">Your Purchase Report!</h2>
  <div class="row">
 
             <table class='table table-hover'  >

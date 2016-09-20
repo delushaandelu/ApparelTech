@@ -23,7 +23,7 @@
         
     </div>
     <div class="row">
-        <h2 align="center">You can take your database as a backup by clicking this button.</h2>
+        <h3 align="center">You can take your database as a backup by clicking this button.</h3>
     </div>  
     </br>
     </br>

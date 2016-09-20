@@ -22,7 +22,7 @@ session_start();
 
 <!-- page content -->
 <div class="right_col" role="main">
-    <h1 class="hfont">Cancel Your Rent Here!</h1>
+    <h2 class="hfont">Cancel Your Rent Here!</h2>
 
 
     

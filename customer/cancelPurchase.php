@@ -22,14 +22,14 @@ session_start();
 
 <!-- page content -->
 <div class="right_col" role="main">
-    <h1 class="hfont">Cancel Your Purchase Here!</h1>
+    <h2 class="hfont">Cancel Your Purchase Here!</h2>
     
 <table class="table table-striped">
 	<tr> 
-		<th><h2 align="center">Order ID</h2></th>
-		<th><h2 align="center">Total Price</h2></th>
-		<th><h2 align="center">Date & Time</h2></th>
-		<th><h2 align="center">Action</h2></th>
+		<th><h4 align="center">Order ID</h4></th>
+		<th><h4 align="center">Total Price</h4></th>
+		<th><h4 align="center">Date & Time</h4></th>
+		<th><h4 align="center">Action</h4></th>
 	</tr>
 
 	
