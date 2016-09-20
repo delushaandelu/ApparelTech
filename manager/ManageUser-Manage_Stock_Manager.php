@@ -47,8 +47,8 @@ include ("../config/managermenu.php");
                 </tr>
             </table>
             <br><br><br>
-            <input type="submit" id="button1" class="btn btn-default btn-lg active" value="Add" name="insert" style="font-size: 16px">
-            <input id="button1" class="btn btn-default btn-lg active" value="Send email" name="send" style="font-size: 16px">
+            <input type="submit" id="button1" class="" value="Add" name="insert" style="font-size: 16px">
+            <input id="button1" class="" value="Send email" name="send" style="font-size: 16px">
         </form>
     </div>
 </div>
