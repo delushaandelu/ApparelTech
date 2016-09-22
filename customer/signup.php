@@ -29,7 +29,7 @@
             <table>
                 <tr>
                     <td><label for="text">Full Name</label></td>
-                    <td><input type="text" name="fullname" required data-validation-required-message="Please enter your full name."></td>
+                    <td><input type="text" name="fullname"></td>
 
                     <td><label for="text">Designation</label></td>
                     <td><input type="text" name="desi"></td>

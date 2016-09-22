@@ -52,7 +52,7 @@ include 'dbConfig.php';
                     <p class="list-group-item-text"><?php echo "<b>Catagery : </b>". $row["catagery"]; ?></p>
                     <div class="row">
                         <div class="col-md-6">
-                            <p class="lead"><?php echo 'Rs.'.$row["sellingPrice"]; ?></p>
+                            <p class="lead"><?php echo 'Rs.'.$row["sellingPrice"].'.00';?></p>
                         </div>
                         <div class="col-md-6">
                             <a class="btn btn-success" href="cartAction.php?action=addToCart&item_id=<?php echo $row["item_id"]; ?>">Add to cart</a>
