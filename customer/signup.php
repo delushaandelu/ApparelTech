@@ -102,11 +102,7 @@
             <table>
                 <tr>
                     <td><label for="text">Full Name</label></td>
-<<<<<<< HEAD
                     <td><input type="text" name="fullname"></td>
-=======
-                    <td><input type="text" name="fullname" ></td>
->>>>>>> origin/master
 
                     <td><label for="text">Designation</label></td>
                     <td><input type="text" name="desi"></td>
