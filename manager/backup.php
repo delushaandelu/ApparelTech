@@ -18,12 +18,12 @@
 <div id="page-wrapper">
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">Backup</h1>
+            <h2 class="page-header">Backup</h2>
         </div>
         
     </div>
     <div class="row">
-        <h2 align="center">You can take your database as a backup by clicking this button.</h2>
+        <h3 align="center">You can take your database as a backup by clicking this button.</h3>
     </div>  
     </br>
     </br>
@@ -31,7 +31,7 @@
     </br>
     <div id="backup">
         <form method="post" action="getbackup.php"
-        <center><button name="backup" class="btn btn-primary btn-lg" id="button1"><i class="fa fa-cloud-upload" aria-hidden="true"></i> Take Backup </button></center>
+        <center><button name="backup" id="buttonbackup"><i class="fa fa-cloud-upload" aria-hidden="true"></i> Take Backup </button></center>
         </form> 
     </div>
     

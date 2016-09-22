@@ -76,7 +76,7 @@ tr.spaceUnder > td
 	cursor:pointer;
 	color:#fff;
 	font-family:Arial;
-	font-size:12px;
+	font-size:14px;
 	padding:5px;
 	text-decoration:none;
     width:120px;
@@ -90,6 +90,19 @@ tr.spaceUnder > td
 	position:relative;
 	top:1px;
 }
+.myButtonsearch{
+     margin-top:0%;
+    margin-left:-4%;
+    background:#1caf9a; 
+	cursor:pointer;
+	color:#fff;
+	font-family:Arial;
+	font-size:14px;
+	padding:5px;
+	text-decoration:none;
+    width:125px;
+}
+
 #btnManageStockAddToExisting{
     background-color:#1caf9a; 
 }

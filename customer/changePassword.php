@@ -22,7 +22,7 @@ session_start();
 
 <!-- page content -->
 <div class="right_col" role="main">
-    <h1 class="hfont">Change Your Password Here!</h1>
+    <h2 class="hfont">Change Your Password Here!</h2>
 
 </div>
 </body>

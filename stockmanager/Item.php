@@ -31,7 +31,10 @@
 		if(!mysqli_query($dbcon, $sqlinsert)){
 			die('Error inserting new record');
 		}else{
-			echo "<script type='text/javascript'>alert('Item successfully added to the stock!')</script>";
+			echo'<script language ="javascript">';
+                    echo "swal({  title: 'Item successfully added to the stock!', text: '', type: 'success', confirmButtonText: 'Done!'}, function(){window.location.href='Stock_ManageStock.php'});";
+                echo'</script>';
+			
 		}
 
 	}
