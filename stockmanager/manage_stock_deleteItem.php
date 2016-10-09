@@ -242,7 +242,7 @@
                         }
                         echo "</table>";?>
                         <div id="">
-                        <input type="submit" class="myButton" id="" name="btnManageStockDelete" value="Delete"  />
+                        <input type="submit" class="myButton" id="btnManageStockDelete" name="btnManageStockDelete" value="Delete"  />
                         </div>
 
                         <?php

@@ -41,7 +41,10 @@
                                 <a href="#"><span class="fa fa-arrow-right"></span> Received P/O</a>
                                 <ul>
                                     <li><a href="Purchase Order_ManagePurchaseOrder.php"><span class="fa fa-align-center"></span> Manage P/O</a></li>
-                                    <li><a href="#"><span class="fa fa-table"></span> Invoice</a></li>
+                                    <li><a href="AddInvoice.php"><span class="fa fa-table"></span> Manage Invoice</a></li>
+                                </ul>
+                                <ul>
+                                    <li><a href="AddInvoice.php"><span class="fa fa-table"></span> View Invoice</a></li>
                                 </ul>
                             </li>
                             
