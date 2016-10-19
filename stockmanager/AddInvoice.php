@@ -27,16 +27,16 @@
     <td><input type="text" name="id"></td></br>
     <td>Customer</td>
     <td><input type="text" name="customer"></td>
-    <td>onvoice date</td>
-    <td><input type="text" name="customer"></td></br>
+    <td>invoice date</td>
+    <td><input type="date" name="date"></td></br>
     <td>Due date</td>
-    <td><input class="datepicker" type="text" name="date"></td>
+    <td><input type="date" name="Ddate"></td>
     </tr></br></br>
     </table>    
     </form>
     </div>
     <div id="itemdiv">
-    <form>
+    <form method="post" action="invoicepdf.php">
     <table class="table table-bordered table-hover">
     <tr>
     <th>item</th>
@@ -47,10 +47,13 @@
     </tr>
     <div id="items"> 
     <tr>
-   <td><input type="text" name="item_1" >
-        </input> <input type="button" id="add_item()" onclick="addItem()" value="+"/></td><td><input type="text" name="quantity"></td><td><input type="text" name="discount"></td><td><input type="text" name="rate"></td><td><input type="text" name="amount"/></td> </tr> </div>
+   <td><input type="text" name="itemname" >
+        </input> <input type="button" id="add_item()" onclick="addItem()" value="+"/></td><td><input type="text" name="quantity" id="a"></td><td><input type="text" name="discount" id="d" onkeyup="add()"></td><td><input type="text" name="rate" id="b"></td><td><input type="text" name="amount" id="c"/></td> </tr> </div>
         
-    
+    <tr>
+        <td> <input type="submit" value="pdf" name="submit"></td>
+        <td><input type="submit" value="Send email"/></td>
+    </tr>
         
     </table>    
     </form>
@@ -67,7 +70,7 @@ var i=1;
 function addItem(){
         i++;
         var div=document.createElement('div');
-        div.innerHTML='<tr>'+'<td><input type="text" name="item_'+i+'"><input type="button" id="add_item()" onClick="addItem()" value="+"/>   <input type="button" value="-" onClick="removeItem(this)"></td>'+'<td><input type="text" name="quantity"></td>'+'<td><input type="text" name="discount"></td>'+'<td><input type="text" name="rate"></td>'+'<td> <input type="text" name="amount"/></td>'+'</tr>';
+        div.innerHTML='<tr>'+'<td><input type="text" name="itemname"><input type="button" id="add_item()" onClick="addItem()" value="+"/>   <input type="button" value="-" onClick="removeItem(this)"></td>'+'<td><input type="text" name="quantity" id="a"></td>'+'<td><input type="text" name="discount" id="d" onkeyup="add()"></td>'+'<td><input type="text" name="rate" id="b"></td>'+'<td> <input type="text" name="amount" id="c"/></td>'+'</tr>';
         document.getElementById('items').appendChild(div);
     }
 
@@ -78,8 +81,24 @@ function addItem(){
  
 </script>
 
-    
-    
+<script>
+function add() {
+  var x = parseInt(document.getElementById("a").value);
+  var y = parseInt(document.getElementById("b").value);
+    var z = parseInt(document.getElementById("d").value);
+  document.getElementById("c").value = x * y - z;
+}
+</script>   
+Enter 1st Number :
+<input type="text" id="a">
+<br>
+<br>Enter 2nd Number :
+<input type="text" id="b" >
+<br>
+Enter 1st Number :
+<input type="text" id="d" onkeyup="add()">
+<br>Result :
+<input type="text" id="c">    
     
     
     
