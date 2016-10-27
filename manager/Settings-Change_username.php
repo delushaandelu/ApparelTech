@@ -29,6 +29,7 @@
                 <font color="#a52a2a" size="+2">Change Username!</font>
             </h5>
             <br><br>
+            <form method="post" action="username.php">
             <tr>
                 <td id="table-font" width="30" >
                     Username*
@@ -42,7 +43,7 @@
                     New Username*
                 </td>
                 <td>
-                    <input type="text" name="New Username" class="form-control" required>
+                    <input type="text" name="NewUsername1" class="form-control" required>
                 </td>
             </tr>
             <tr>
@@ -50,12 +51,13 @@
                     Confirm new Username*
                 </td>
                 <td>
-                    <input type="text" name="New Username" class="form-control" required>
+                    <input type="text" name="NewUsername2" class="form-control" required>
                 </td>
             </tr>
             <br><br>
-            <button type="button" style="font-size:14px" id="button1" class="">Change</button>
+            <button type="submit" style="font-size:14px" id="button1" class="" name="uname">Change</button>
             <br><br>
+            </form>
 
             <h5>
                 <font color="#a52a2a" size="+2">Change Password!</font>
