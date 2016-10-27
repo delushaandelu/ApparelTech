@@ -58,7 +58,6 @@
             <br><br>
             <button type="button" id="button1" class="">Change</button>
             <button type="button" id="button1" class="" onclick="location.href='Settings-Change_username.php'">Back</button>
-            <button type="button" id="button1" class="" onclick="pdf-test.php'">pdf</button>
             <br><br>
         </div>
         

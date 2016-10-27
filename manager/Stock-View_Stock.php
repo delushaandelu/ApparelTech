@@ -24,7 +24,11 @@
             <div class="2">
                 <div class="2">
                     <!-- search box -->
-                    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="&#x26B2   Search for items by id..." style="width: 300px " >
+                    <input type="text" id="myInput1" onkeyup="myFunction1()" placeholder="&#x26B2    id..." style="width: 200px " >
+                    <input type="text" id="myInput2" onkeyup="myFunction2()" placeholder="&#x26B2    category..." style="width: 200px " >
+                    <input type="text" id="myInput3" onkeyup="myFunction3()" placeholder="&#x26B2    name..." style="width: 200px " >
+                    <input type="text" id="myInput4" onkeyup="myFunction4()" placeholder="&#x26B2    brand..." style="width: 200px " >
+
 
                 </div>
             </div>
@@ -75,14 +79,69 @@
 
         <!-- live search -->
         <script>
-            function myFunction() {
+            function myFunction1() {
                 var input, filter, table, tr, td, i;
-                input = document.getElementById("myInput");
+                input = document.getElementById("myInput1");
                 filter = input.value.toUpperCase();
                 table = document.getElementById("myTable");
                 tr = table.getElementsByTagName("tr");
                 for (i = 0; i < tr.length; i++) {
                     td = tr[i].getElementsByTagName("td")[0];
+                    if (td) {
+                        if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].style.display = "";
+                        } else {
+                            tr[i].style.display = "none";
+                        }
+                    }
+                }
+            }
+            
+            function myFunction2() {
+                var input, filter, table, tr, td, i;
+                input = document.getElementById("myInput2");
+                filter = input.value.toUpperCase();
+                table = document.getElementById("myTable");
+                tr = table.getElementsByTagName("tr");
+                for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[5];
+                    if (td) {
+                        if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].style.display = "";
+                        } 
+                        else {
+                            tr[i].style.display = "none";
+                        }
+                    }
+                }
+            }
+            
+            function myFunction3() {
+                var input, filter, table, tr, td, i;
+                input = document.getElementById("myInput3");
+                filter = input.value.toUpperCase();
+                table = document.getElementById("myTable");
+                tr = table.getElementsByTagName("tr");
+                for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[1];
+                    if (td) {
+                        if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].style.display = "";
+                        } else {
+                            tr[i].style.display = "none";
+                        }
+                    }
+                }
+            }
+            
+            function myFunction4() {
+                var input, filter, table, tr, td, i;
+                input = document.getElementById("myInput4");
+                filter = input.value.toUpperCase();
+                table = document.getElementById("myTable");
+                tr = table.getElementsByTagName("tr");
+                for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[4];
                     if (td) {
                         if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
                             tr[i].style.display = "";
