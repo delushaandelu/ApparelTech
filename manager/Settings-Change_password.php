@@ -30,12 +30,13 @@
                 <font color="#a52a2a" size="+2">Change Password!</font>
             </h5>
             <br><br>
+            <form method="post" action="password.php">
             <tr>
                 <td id="table-font" width="30" >
                     Password*
                 </td>
                 <td>
-                    <input type="password" name="Password" class="form-control" required>
+                    <input type="password" name="pwd" class="form-control" required>
                 </td>
             </tr>
             <tr>
@@ -43,7 +44,7 @@
                     New Password*
                 </td>
                 <td>
-                    <input type="password" name="New Password" class="form-control" required>
+                    <input type="password" name="Newpwd" class="form-control" required>
                     <!--<label class="active">atleast 6 charactors with numbers and letters</label>-->
                 </td>
             </tr>
@@ -52,14 +53,15 @@
                     Confirm new Password*
                 </td>
                 <td>
-                    <input type="password" name="New Password" class="form-control" required>
+                    <input type="password" name="Newpwd" class="form-control" required>
                 </td>
             </tr>
             <br><br>
-            <button type="button" id="button1" class="">Change</button>
+            <button type="submit" id="button1" class="" name="pwd">Change</button>
             <button type="button" id="button1" class="" onclick="location.href='Settings-Change_username.php'">Back</button>
             <button type="button" id="button1" class="" onclick="pdf-test.php'">pdf</button>
             <br><br>
+            </form>
         </div>
         
         <p>&nbsp;</p>
