@@ -98,9 +98,25 @@
                         <form role="form">
                             <input type="text" name="search" placeholder="Search..."/>
                         </form>
-                    </li>   
+                    </li>
+                    <li class="pend">
+                    <img src="../stockmanager/img/po.png" width="23px" height="23px"/>
+                    <div id="pend" style="color:white ;background-color:red" width="3px">
+                    <?php
+                        require("database_connection.php"); 
+
+                            $sql= "select count(customer_id) as total from customer where status='false'";
+                        //$result=mysqli_query($dbcon,$sql);
+                        $result = mysqli_query($dbcon,$sql);
+                        $row = mysqli_fetch_assoc($result);
+                                echo  $row["total"];
+                        ?>    
+                    </div>
+                    
+                    </li>
                     <li class="xn-icon-button pull-right">
                         <a href="#" class="mb-control" data-box="#mb-signout"><span class="fa fa-sign-out"></span></a>                        
                     </li> 
+                    
                 </ul>
                 
