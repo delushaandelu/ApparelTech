@@ -33,7 +33,7 @@
     </div>
     <br><br>
     <div class="row">
-
+            <form name="getcvs" action="example_001.php" method="POST">
             <!-- view supplier-->
             <table class='table' style='border: 0;' id='myTable'>
                 <tr>
@@ -69,6 +69,8 @@
                 </tr>
             <?php } ?>
             </table>
+            <input type="submit" name="submitpdf" value="download pdf"/><br><br>
+        </form>
 
         <!-- delete customer -->
         <?php
