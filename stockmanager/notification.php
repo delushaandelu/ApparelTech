@@ -1,12 +1,4 @@
-<?php
-require("database_connection.php"); 
 
-$sql= "select count(customer_id) as total from customer where status='false'";
-//$result=mysqli_query($dbcon,$sql);
-$result = mysqli_query($dbcon,$sql);
-$row = mysqli_fetch_assoc($result);
-echo "Number is: ", $row["total"];
-?>
 
 <html>
 <head>
@@ -33,11 +25,11 @@ echo "Number is: ", $row["total"];
 </script>
 <input type="button" id="btnShow" value="Send Email" />
 <div id="dialog" style="display: none" align = "center">
-    <form method="post" action="#">
+    <form method="post" action="?">
         <table width="350px" height="300px">
         <tr>
             <td>To:</td>
-            <td><input type="text" name="to"/></td>
+            <td><input type="text" name="name"/></td>
         </tr>
          <tr>
             <td>Subject:</td>

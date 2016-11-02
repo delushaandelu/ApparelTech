@@ -91,6 +91,7 @@
             </div>
             <div class="page-content">
                 <ul class="x-navigation x-navigation-horizontal x-navigation-panel">
+                   
                     <li class="xn-icon-button">
                         <a href="#" class="x-navigation-minimize"><span class="fa fa-dedent"></span></a>
                     </li>
@@ -102,7 +103,7 @@
                     <li class="pend">
                     <img src="../stockmanager/img/po.png" width="23px" height="23px"/>
                     <div id="pend" style="color:white ;background-color:red" width="3px">
-                    <?php
+                      <?php
                         require("database_connection.php"); 
 
                             $sql= "select count(customer_id) as total from customer where status='false'";
@@ -110,7 +111,7 @@
                         $result = mysqli_query($dbcon,$sql);
                         $row = mysqli_fetch_assoc($result);
                                 echo  $row["total"];
-                        ?>    
+                        ?>  
                     </div>
                     
                     </li>
