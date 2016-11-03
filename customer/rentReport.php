@@ -23,7 +23,7 @@ session_start();
 <!-- page content -->
 <div class="right_col" role="main">
     <h1>Your Rent Report!</h1>
-
+Delushaan
 </div>
 </body>
 
