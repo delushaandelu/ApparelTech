@@ -39,7 +39,6 @@
                                             </tr>
                                         </thead>
                 <?php
-                   include ('database_connection.php');
                     $sql = "SELECT * FROM item ";
                     $result = $dbcon->query($sql);
                     while($row = $result->fetch_assoc()) {

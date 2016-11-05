@@ -97,7 +97,7 @@
 
     <div class="report_table">
         <?php
-                include('database_connection.php');
+                // include('database_connection.php');
 
                    
                 if(isset($_POST['btnNewReportGenerateReport'])){

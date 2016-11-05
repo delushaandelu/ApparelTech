@@ -7,8 +7,7 @@
     <body>
         
 <?php
-    include("../config/stockmgrmenu.php");
-    require("database_connection.php");    
+    include("../config/stockmgrmenu.php");  
 ?>
 
 <ul class="breadcrumb">

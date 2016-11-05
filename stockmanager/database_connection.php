@@ -10,6 +10,4 @@ if (!$dbcon) {
 	die("Error connecting to database");
 }
 
-
-
 ?>
