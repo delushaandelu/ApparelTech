@@ -192,8 +192,6 @@
            <!-- The below php code is used to list down search items to delete-->
 
             <?php
-                include('database_connection.php');
-
                    
                 if(isset($_POST['btnManageStockSearch2'])){
                     

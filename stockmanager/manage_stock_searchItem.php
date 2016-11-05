@@ -157,7 +157,7 @@
            <!-- This php code will output the data about stock items according to the user's selection-->
 
             <?php
-                include('database_connection.php');
+                
 
                    
                 if(isset($_POST['btnManageStockSearch2'])){
