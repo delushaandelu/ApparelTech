@@ -26,7 +26,7 @@
         <div id="frame">
         <div id="invoice"><h4>INVOICE</h4></div>
         
-       <form action="invoicepdf.php" method="post">  
+       <form action="?" method="post">  
                     <div class="box box-primary">  
                          
                         <div class="box-body">  
@@ -107,7 +107,10 @@
             <td>Message:</td>
             <td><textarea name="message" placeholder="write here !" ></textarea></td>
         </tr>
-            
+        <tr>
+            <td>file:</td>
+            <td><input type="file" name="invoice/>"</td>
+        </tr>  
         <tr>
             
             <td><input type="submit" value="Send"/></td>
@@ -117,10 +120,17 @@
         </table>
     </form>
 </div>
-        
-        
-        </div>
- 
+</div>
+<?php
+  if(isset($_POST["submit"]))  
+  {
+  include_once("tcpdf/tcpdf.php");
+        $obj_pdf=new TCPDF('P',PDF_UNIT,PDF_PAGE_FORMAT,true,'UTF-8',false);
+        $obj_pdf->SetCreator(PDF_CREATOR);
+       //$obj_pdf->AddPage();
+        $obj_pdf->Output("smaple.pdf","E");
+  }
+?>
 
     
         <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>  

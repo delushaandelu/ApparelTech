@@ -1,3 +1,18 @@
+<?php
+ require("database_connection.php");
+
+$result = mysqli_query($dbcon, "SELECT stockQty FROM item WHERE itemName= 'Bulbs'");
+$result = mysqli_fetch_all($result,MYSQLI_ASSOC);
+$no_of_bulbs = $result[0] ["stockQty"];
+
+$result = mysqli_query($dbcon,"SELECT stockQty FROM item WHERE itemName = 'Belts'");
+$result = mysqli_fetch_all($result,MYSQLI_ASSOC);
+$no_of_belts = $result[0] ["stockQty"];
+
+
+
+?>
+
 <html>
 <head>
 <script src="./code/highcharts.js" ></script>  
@@ -11,24 +26,22 @@
 <script type="text/javascript" src="js/plugins.js"></script>        
 <script type="text/javascript" src="js/actions.js"></script>
 </head>
+<body>
+    
+<div style="position: fixed; width: 700px; height: 500px; margin-top: 40px;margin-left: 120px">
+    <div>
+        <div style="text-align: center" id="mychart1"></div>
+    </div>
+</div>    
+</body>
 </html>
-<?php
- require("database_connection.php");
 
-$result = mysqli_query($dbcon, "SELECT stockQty FROM `item` WHERE `itemName` = 'Bulbs'");
-$result = mysqli_fetch_all($result,MYSQLI_ASSOC);
-$no_of_bulbs = $result[0] ["stockQty"];
-
-$result = mysqli_query($dbcon,"SELECT stockQty FROM `item` WHERE `itemName` = 'Belts'");
-$result = mysqli_fetch_all($result,MYSQLI_ASSOC);
-$no_of_belts = $result[0] ["stockQty"];
-
-
-
-?>
 <script type="text/javascript">
     
+
+    
     function createGraph(no_of_bulbs,no_of_belts){
+        
         $('#mychart1').highcharts({
             chart: {
                 type: 'column'
@@ -76,8 +89,8 @@ $no_of_belts = $result[0] ["stockQty"];
 
     }
 
-    var no_of_bulbs = parseInt('<?php echo $no_of_bulbs; ?>');
-    var no_of_belts = parseInt('<?php echo $no_of_belts; ?>');
-    createGraph(no_of_bulbs,no_of_belts);
+var no_of_bulbs = parseInt('<?php echo $no_of_bulbs; ?>');
+var no_of_belts = parseInt('<?php echo $no_of_belts; ?>');
+createGraph(no_of_bulbs,no_of_belts);  
 
 </script>
