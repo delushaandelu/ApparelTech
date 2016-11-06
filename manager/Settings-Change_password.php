@@ -11,9 +11,7 @@
 
 <body>
 
-<?php
-    include ("../config/managermenu.php");
-?>
+
             
 <div id="page-wrapper">
     <div class="row">
@@ -36,7 +34,7 @@
                     Password*
                 </td>
                 <td>
-                    <input type="password" name="pwd" class="form-control" required>
+                    <input type="password" name="oldpwd" class="form-control" required>
                 </td>
             </tr>
             <tr>
@@ -44,7 +42,7 @@
                     New Password*
                 </td>
                 <td>
-                    <input type="password" name="Newpwd" class="form-control" required>
+                    <input type="password" name="Newpwd1" class="form-control" required>
                     <!--<label class="active">atleast 6 charactors with numbers and letters</label>-->
                 </td>
             </tr>
@@ -53,7 +51,7 @@
                     Confirm new Password*
                 </td>
                 <td>
-                    <input type="password" name="Newpwd" class="form-control" required>
+                    <input type="password" name="Newpwd2" class="form-control" required>
                 </td>
             </tr>
             <br><br>
@@ -79,3 +77,43 @@
 </body>
 
 </html>
+<?php
+//get database connection
+include('database_connection.php');
+//define variables
+if(isset($_POST["pwd"])){
+    $newpwd1=$_POST['Newpwd1'];
+    $oldpwd=$_POST['pwd'];
+    $newpwd2=$_POST['Newpwd2'];
+    //query
+    $sql = "UPDATE user SET password='$newpwd1' WHERE accessLevel=1";
+    $sql1 = "SELECT password FROM user WHERE EXISTS('$oldpwd')";
+    //if(mysqli_query($dbcon, $sql1) === TRUE){
+        if($newpwd1==$newpwd2){
+            if (mysqli_query($dbcon, $sql) === TRUE){
+                header("location:Settings-Change_password.php");
+            }
+            else{
+                echo "<script>";
+                echo "alert('ERROR: Check your information again!')";
+                echo "</script>";
+                header("location:Settings-Change_password.php");
+            }
+        }else{
+            echo "<script>";
+            echo "alert('ERROR: Check your information again!')";
+            echo "</script>";
+            header("location:Settings-Change_password.php");
+        }
+    //}else{
+      //  echo "<script>";
+        //    echo "alert('ERROR: Check your information again!')";
+          //  echo "</script>";
+            //header("location:Settings-Change_username.php");
+    //}
+
+    mysqli_close($dbcon);
+
+}
+
+?>
