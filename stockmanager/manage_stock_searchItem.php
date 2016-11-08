@@ -21,6 +21,7 @@
             if(categoryName){
 
                 $.ajax({
+                    
                     type : 'GET',
                     url : '/GroupProject/stockmanager/dropdown.php?categoryname='+categoryName,
                     //data : 'categoryname=' + categoryName,

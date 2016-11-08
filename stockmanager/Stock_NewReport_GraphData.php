@@ -1,17 +1,31 @@
-<?php
-include ('database_connection.php');
 
-$query = "SELECT itemName, stockQty,buyingPrice FROM item WHERE catagery = 'Sewing Machines' ORDER BY itemName";
+        <?php
+                include('database_connection.php');
+            
+                    if(isset($categoryname =  $_POST['categoryname'])){
+                     
+                    echo $categoryname;
 
-$result = mysqli_query($dbcon,$query);
+                    $query = "SELECT itemName, stockQty,buyingPrice FROM item WHERE catagery = '$categoryname'
+                     ORDER BY itemName";
+                     echo "$categoryname";
+					$result = mysqli_query($dbcon,$query);
 
-$data = array();
+					$data = array();
 
-foreach($result as $row){
-	$data[] = $row;
-}
+					foreach($result as $row){
+						$data[] = $row;
+					}
 
-$result->close();
+					$result->close();
 
-print json_encode($data);
-?>
+					print json_encode($data);
+				
+                       
+                   }
+
+            ?>
+            
+
+
+    

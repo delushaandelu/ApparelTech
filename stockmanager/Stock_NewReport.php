@@ -34,7 +34,7 @@
                            
                             </br>
                             
-                            <button onclick="location.href = 'Stock_NewReport_GraphReport.php';" id="btnManageStockAddToExisting" class=" btn-lg btn-block" ><h4>Graph Report</h4></button>
+                            <button onclick="location.href = 'Stock_NewReport_GraphReport.php';" id="btnManageStockAddToExisting" class=" btn-lg btn-block" ><h4>Graphical Report</h4></button>
                             </div>
                             
                             
