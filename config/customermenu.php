@@ -60,7 +60,6 @@
                   </li>
                   <li><a><i class="fa fa-clone"></i> Setting <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="../customer/changeUsername.php">Change Username</a></li>
                       <li><a href="../customer/changePassword.php">Change Password</a></li>
                       <li><a href="../customer/updateProfile.php">Update Profile</a></li>
                     </ul>

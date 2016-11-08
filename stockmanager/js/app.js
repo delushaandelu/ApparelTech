@@ -1,8 +1,6 @@
-  
-
 $(document).ready(function () {
  $.ajax({
-   url: "http://localhost/groupproject/stockmanager/data.php",
+   url: "data.php",
     method: "GET",
     success:function(data){
         console.log(data);

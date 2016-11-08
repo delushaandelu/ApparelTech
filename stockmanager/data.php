@@ -5,21 +5,14 @@
         <link rel="stylesheet" type="text/css" id="theme" href="css/main.css"/>                        
     </head>
     <body>
-        
         <?php
-           
              require("database_connection.php"); 
         ?>
-
                 <ul class="breadcrumb">
                     <h2>Page Heading here!</li></h2>
                 </ul>
-
-    
-    
 <?php
-    
-$query=sprintf("SELECT item_id,stockQty FROM item ORDER BY item_id");
+$query=sprintf("SELECT item_id, stockQty FROM item ORDER BY item_id");
 $result=mysqli_query($dbcon,$query);
 if(!$result){
     echo"error";
@@ -28,9 +21,12 @@ $data=array();
 foreach($result as $row){
     $data[]=$row;
 }
+
+$result -> close();
+
+$dbcon -> close();
+
 print json_encode($data);
-    
-    
 ?>
     
     
