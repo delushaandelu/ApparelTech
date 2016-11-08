@@ -11,7 +11,7 @@
 
         
 <?php
-    include("../config/stockmgrmenu.php");
+     include("../config/stockmgrmenu.php");
  ?>
 
 <ul class="breadcrumb">

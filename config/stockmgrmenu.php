@@ -101,7 +101,9 @@
                         </form>
                     </li>
                     <li class="pend">
-                    <img src="../stockmanager/img/po.png" width="23px" height="23px"/>
+                     <i class="fa fa-file-powerpoint-o fa-2x" aria-hidden="true"></i>
+
+
                     <div id="pend" style="color:white ;background-color:red" width="3px">
                       <?php
                         require("database_connection.php"); 
