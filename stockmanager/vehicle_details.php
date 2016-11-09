@@ -23,6 +23,17 @@
             margin-left: 30%;
             width: 500px;
             height: 400px;}
+        #btnvehicle{
+                color: white;
+                width:200px;
+                height:40px;
+            }    
+            #btn{
+                position: relative;
+                margin-top:-30%;
+                margin-left:40%;
+            }  
+        
     </style>
 </head>
 <body>
@@ -30,9 +41,6 @@
 </br></br>
 
 <div id="content">
-    <ul class="nav nav-justified" >
-        <li id ="nav_tab_item_effect"><a href="vehicle_details_addVehicle.php">Add Vehicle</a></li>
-   	</ul>
         <table class="table table-striped">
             <tr class="title"><th>vehicle_id</th><th>vehicleNO</th><th>capacity</th><th>vehicletype</th><th>status</th><th>Action</th></tr>
                 <?php 
@@ -47,7 +55,7 @@
                             <td><?php echo $row['capacity'] ?></td>
                             <td><?php echo $row['vehicleType'] ?></td>
                             <td><?php echo $row['status'] ?></td>
-                            <td class="bt"><input type="button" class="btn btn-info" value=Delete onclick="location.href='vehicle_details.php?vehicle_id=<?php echo $row['vehicle_id'] ?>'"></td>
+                            <td class="bt"><input type="button" class="btn btn-danger" value=Delete onclick="location.href='vehicle_details.php?vehicle_id=<?php echo $row['vehicle_id'] ?>'"/></td>
                             <td class="bt"><input type="button" class="btn btn-info" value=update onclick="location.href='vehicle_details_updateVehicle.php?ID=<?php echo $row['vehicle_id'] ?>'" ></td>
                             </tr>
                 <?php } ?>
@@ -84,7 +92,9 @@
 </div>
        
 <div id="footer">
-        
+     <div id="btn">
+    <a href="vehicle_details_addVehicle.php"><button id="btnvehicle" class="btn btn-info">Add Vehicle</button></a>  
+    </div>   
 </div>
 
 

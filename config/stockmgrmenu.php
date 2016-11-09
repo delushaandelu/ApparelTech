@@ -108,7 +108,7 @@
                       <?php
                         require("database_connection.php"); 
 
-                            $sql= "select count(customer_id) as total from customer where status='false'";
+                            $sql= "select count(id) as total from orders where status='1'";
                         //$result=mysqli_query($dbcon,$sql);
                         $result = mysqli_query($dbcon,$sql);
                         $row = mysqli_fetch_assoc($result);

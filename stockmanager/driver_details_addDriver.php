@@ -10,7 +10,7 @@
         
 <?php
     include("../config/stockmgrmenu.php");
-    require("database_connection.php");
+   // require("database_connection.php");
 ?>
 
 <ul class="breadcrumb">

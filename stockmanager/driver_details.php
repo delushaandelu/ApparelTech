@@ -25,16 +25,24 @@
             margin-left: 30%;
             width: 500px;
             height: 400px;
-        }</style>
+        }
+            #btndriver{
+                color: white;
+                width:200px;
+                height:40px;
+            }    
+            #btn{
+                position: relative;
+                margin-top:-30%;
+                margin-left:40%;
+            }  
+    </style>
     </head>
 <body>
 
 </br></br>
 
 <div id="content">
-        <ul class="nav nav-justified" >
-            <li id ="nav_tab_item_effect"><a href="driver_details_addDriver.php">Add Driver</a></li>
-   	    </ul>
  
         <table class="table table-striped">
             
@@ -45,7 +53,7 @@
                 <th><center>driverAddress</center></th>
                 <th><center>Mobile No</center></th>
                 <th><center>vehicle_id</center></th>
-                <th colspan="2"><center>Action</center></th></tr>
+                <center><th colspan="2">Action</th></center></tr>
                 <?php 
                     $sql = "select * from driver";
                     $result = mysqli_query($dbcon,$sql);        
@@ -89,7 +97,9 @@
 </div>
        
 <div id="footer">
-        
+    <div id="btn">
+    <a href="driver_details_addDriver.php"><button id="btndriver" class="btn btn-info">Add Driver</button></a>  
+    </div>
 </div>
 
 

@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>        
-        <title>Stock Manager</title>                   
-        <link rel="stylesheet" type="text/css" id="theme" href="css/main.css"/>                        
+        <title>Stock Manager</title>   
+        <link rel="stylesheet" type="text/css" href="VehicleUpdate.css"/>
+        <link rel="stylesheet" type="text/css" id="theme" href="css/main.css"/>  
+        
     </head>
     <body>
         
@@ -11,7 +13,7 @@
 ?>
 
 <ul class="breadcrumb">
-    <h2>Page Heading here!</li></h2>
+    <h2>Update Vehicle</li></h2>
 </ul>
     
     
@@ -45,18 +47,19 @@
     
 <div class="about">
     <div class="centre">
-        <form action="<?php htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="post">
-            <table class="joblist">
+        <div class="panel-heading" align="center">Update Vehicle</div>
+        <form id="vhicle-container" action="<?php htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="post">
+            <table id="joblist">
                 <?php 
                     $sql = "select * from vehicle where vehicle_id='$vehicle_id'";
                     $result = mysqli_query($dbcon,$sql);        
                     while($row = mysqli_fetch_array($result)) {
                 ?>
     
-                    <tr><td>VehicleNo</td><td><input class="in" type=text name=vehicleNo value="<?php echo $row['vehicleNo'] ?>"></td></tr>
-                    <tr><td>Capacity</td><td><input class="in" type=text name=capacity value="<?php echo $row['capacity'] ?>"></td></tr>
-                    <tr><td>VehicleType</td><td><input class="in" type=text name=vehicleType value="<?php echo $row['vehicleType'] ?>"></td></tr>
-                    <tr><td colspan="2"><input class="btn btn-info"type=submit name=update value=Update></td></tr>
+                    <tr><td>VehicleNo</td><td><input class="form-control" type=text name=vehicleNo value="<?php echo $row['vehicleNo'] ?>"></td></tr>
+                    <tr><td>Capacity</td><td><input class="form-control" type=text name=capacity value="<?php echo $row['capacity'] ?>"></td></tr>
+                    <tr><td>VehicleType</td><td><input class="form-control" type=text name=vehicleType value="<?php echo $row['vehicleType'] ?>"></td></tr>
+                    <tr><td colspan="2"><center><input class="btn btn-info"type=submit name=update value=Update></center></td></tr>
                 <?php } ?>
             </table>
         </form>

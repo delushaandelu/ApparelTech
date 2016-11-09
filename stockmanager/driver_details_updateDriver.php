@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>        
-        <title>Stock Manager</title>                   
+        <title>Stock Manager</title> 
+        <link rel="stylesheet" type="text/css" href="DriverUpdate.css"/>
         <link rel="stylesheet" type="text/css" id="theme" href="css/main.css"/> 
          <script src="js/sweetalert-dev.js"></script>
         <link rel="stylesheet" href="js/sweetalert.css">
@@ -52,8 +53,9 @@
     
 <div class="about">
     <div class="centre">
+         <div class="panel-heading" align="center">Update Driver</div>
         <form action="<?php htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="post">
-            <table class="joblist">
+            <table id="joblist">
                 <?php 
                     $sql = "select * from driver where driver_id='$driver_id'";
                     $result = mysqli_query($dbcon,$sql);        
@@ -76,7 +78,7 @@
                                 
                     </select></td></tr>
                   
-                    <tr><td colspan="2"><input class="btn btn-info" type=submit name=update value=Update></td></tr>
+                    <tr><td colspan="2"><center><input class="btn btn-info" type=submit name=update value=Update></center></td></tr>
                     <?php } ?>
             </table>
         </form>
