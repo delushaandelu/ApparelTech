@@ -27,6 +27,7 @@
 
             <div id = "top_left_vehicle">
                 <form method="post" action="vehicle_details_addVehicle.php">
+                     <div class="panel-heading-vehicle" align="center">Add Driver</div>
                     <table id="vehicletb" border="0" width="500" height="500" >
 
                         <tr>
@@ -50,7 +51,7 @@
                             <td id="table_font">Vehicle Type</td>
 
                             <td>
-                                <select name="vehicletype">
+                                <select name="vehicletype" class="form-control">
                                 <option>van</option>
                                 <option>lorry</option>
                                 </select>
@@ -62,24 +63,19 @@
                             <td id="table_font">status</td>
 
                             <td>
-                                <select name="status">
+                                <select name="status" class="form-control">
                                 <option>0</option>
                                 <option>1</option>
                                 </select>
                             </td>
                         </tr>
+                        <tr>
+                        <td colspan="2"><center><input type="submit" class="btn btn-info" name="VehicleInsert" value="Insert"/>
+                    <button type="button" class="btn btn-info">Clear</button>
+                    <button type="reset" class="btn btn-info">Refresh</button></center></td>
+                        </tr>
                     </table>
-             
-
-            <div id="top_right_section">
-                <div id="button1">
-                    <input type="submit" class="btn btn-info" name="VehicleInsert" value="Insert"/><br><br>
-                    <button type="button" class="btn btn-info">Clear</button> <br><br>
-                    <button type="reset" class="btn btn-info">Refresh</button>
-
-                </div>
-            </div>
-        </form>
+             </form>
     </div>
 </div>
 </div>

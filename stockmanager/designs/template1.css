@@ -49,20 +49,27 @@ body
 }
 
 #top_left_driver{
+    margin-left:18%;
 	width:600px;
 	height:550px;
-	background-color:#D3D3D3;
-	border-radius:15px;
+	background-color:white;
 	float:left;
-
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
 
 
 	}
 #drivertb{
 	margin-left: 10%;
+    position:relative;
 
 }
-
+.panel-heading-driver{
+    background-color:#333;
+  color:#FFF;
+  font-size:18px;
+}
 	
 #top_right_section{
 
@@ -323,14 +330,22 @@ margin-left: 10%;
 	border-radius: 15px;
 }
 #top_left_vehicle{
+    margin-left:18%;
     width:600px;
 	height:550px;
-	background-color:#D3D3D3;
-	border-radius:15px;
+	background-color:white;
+	border-style: solid;
+    border-color: black;
+    border-width:1px;
 	float:left;
 }
 #vehicletb{
     margin-left: 10%;
+}
+.panel-heading-vehicle{
+    background-color:#333;
+  color:#FFF;
+  font-size:18px;
 }
 .btnall {
   -webkit-border-radius: 0;

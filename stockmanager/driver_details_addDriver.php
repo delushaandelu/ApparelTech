@@ -109,6 +109,7 @@ if(isset($_POST['DriverInsert'])){
         <div id ="top_section">
 
             <div id = "top_left_driver">
+                <div class="panel-heading-driver" align="center">Add Driver</div>
                 <form method="post" action="<?php htmlspecialchars($_SERVER['PHP_SELF']) ?>">
                     <table id="drivertb" border="0" width="500" height="500" >
 
@@ -129,10 +130,8 @@ if(isset($_POST['DriverInsert'])){
                             </td>
                         </tr>
                         <tr>
-
                             <td id="table_font" align="center">MobileNo<span class="error"><?php echo $Mobileerr;?></span></td>
-
-                             <td>
+                            <td>
                                 <input type="text" name="mobileNo"  class="form-control" >
                             </td>
                         </tr>
@@ -162,17 +161,17 @@ if(isset($_POST['DriverInsert'])){
                                 </select>
                             </td>
                         </tr>
+                        <tr>
+                        <td colspan="2"><center><input type="submit" class="btn btn-info" name="DriverInsert" value="ADD"/>
+                        <button type="button" class="btn btn-info">Clear</button>
+                        <button type="reset" class="btn btn-info">Refresh</button></center></td>
+                        
+                        </tr>
 
 
                     </table>
              
-                <div id="top_right_section">
-                    <div id="button1">
-                        <input type="submit" class="btn btn-info" name="DriverInsert" value="ADD"/><br><br>
-                        <button type="button" class="btn btn-info">Clear</button> <br><br>
-                        <button type="reset" class="btn btn-info">Refresh</button>
-                    </div>
-                </div>
+                
             </form>
         </div>
     </div>
