@@ -10,6 +10,7 @@ session_start();
     <link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="build/css/custom.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/updateProfile.css" type="text/css">
+      <script src="js/sweetalert-dev.js"></script>
       <link rel="stylesheet" href="js/sweetalert.css">
   </head>
 
@@ -45,11 +46,11 @@ session_start();
 
         if ($db->query($sql) === TRUE) {
             echo'<script language ="javascript">';
-                    echo "swal({  title: 'Error!', text: '', type: 'error', confirmButtonText: 'Done!'}, function(){window.location.href='driver_details.php'});";
+                    echo "swal({  title: 'Your profile update successfully!', text: '', type: 'success', confirmButtonText: 'Done!'}, function(){window.location.href='updateProfile.php'});";
                 echo'</script>';
         } else {
              echo'<script language ="javascript">';
-                    echo "swal({  title: 'Driver Updated!', text: '', type: 'success', confirmButtonText: 'Done!'}, function(){window.location.href='driver_details.php'});";
+                    echo "swal({  title: 'Error!', text: '', type: 'error', confirmButtonText: 'Done!'}, function(){window.location.href='updateProfile.php'});";
                 echo'</script>';
         }
 
