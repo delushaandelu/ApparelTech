@@ -184,3 +184,26 @@ tr.spaceUnder > td
 .upper_panel_manage_stock{
 	margin-top: 100px;
 }
+
+#update
+{
+    margin-left: 300px;
+    margin-top: -10px;
+}
+
+.upper_panel_update_item{
+	height: 100px;
+	
+	
+	}
+
+.middle_panel_update_item{
+	
+	height: 100px;
+}
+
+.below_panel_update_item{
+	margin-top: 50px;
+	height: 200px;
+	margin-left:10px;
+	margin-right: 10px;
