@@ -33,7 +33,7 @@
     </div>
     <br><br>
     <div class="row">
-            <form name="getcvs" action="example_001.php" method="POST">
+            <form name="getcvs" action="" method="POST">
             <!-- view supplier-->
             <table class='table' style='border: 0;' id='myTable'>
                 <tr>
@@ -69,7 +69,7 @@
                 </tr>
             <?php } ?>
             </table>
-            <input type="submit" name="submitpdf" value="download pdf"/><br><br>
+            <input type="button" name="submitpdf" value="download pdf" onclick="location.href='../manager/tcpdf/project/supplierdetails.php'"/><br><br>
         </form>
 
         <!-- delete customer -->

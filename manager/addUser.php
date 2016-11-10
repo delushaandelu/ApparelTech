@@ -2,21 +2,19 @@
 //get database connection
 include('database_connection.php');
 //define variables
- $acc = 0;
-if(isset($_POST["insert"])){
-    $username=$_POST['username'];
-    $password=$_POST['password'];
-    $acc=$_POST['acclevel'];
-
-    if('acclevel'=='Manager'){
-        $acc=1;
+if(isset($_POST["add"])){
+    $usern=$_POST['username'];
+    $pwd=$_POST['password'];
+    $al=$_POST['acclevel'];
+    if($al == 'Manager'){
+        $acc = 1;
     }
-    elseif ('acclevel'=='Stock Manager'){
-        $acc=2;
+    else{
+        $acc = 2;
     }
 
     //query
-    $sql = "INSERT INTO user(username, password, accessLevel) VALUES ($username','$password','$acc')";
+    $sql = "INSERT INTO user(username,password,accessLevel) VALUES ('$usern', '$pwd', '$acc')";
 
     if (mysqli_query($dbcon, $sql) === TRUE){
         header("location:ManageUser-Manage_Stock_Manager.php");

@@ -110,7 +110,6 @@
                          
                         </table>
 
-                  </div>
 					<!--button-->
                   <div id="">
                       <button type="submit" id="button2"  name="insert" >Add  <i class="fa fa-plus-circle" aria-hidden="true"></i></button>

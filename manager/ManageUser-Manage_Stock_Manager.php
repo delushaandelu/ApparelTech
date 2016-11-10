@@ -18,13 +18,13 @@ include ("../config/managermenu.php");
 <div id="page-wrapper">
     <div class="row">
         <div class="col-lg-12">
-            <h2 class="page-header">Manage Stock Manager</h2>
+            <h2 class="page-header">Manage Admin</h2>
         </div>
 
     </div>
     <div class="row">
 
-        <form name="form1" action="addUser.php" method="post" onsubmit="return check();">
+        <form name="form1"  method="post" action="addUser.php">
             <table border="0">
                 <tr></tr>
                 <tr>
@@ -39,16 +39,19 @@ include ("../config/managermenu.php");
                 <tr>
                     <td id="table-font" width="60%">Access level</td>
                     <td>
-                        <select name="acclevel" class="form-control">
-                            <option value="Manager">Manager</option>
-                            <option value="StockManager">Stock Manager</option>
+                        <select class="form-control">
+                            <option type="text" name="acclevel">Manager</option>
+                            <option type="text" name="acclevel">Stock Manager</option>
                         </select>
+                    
                     </td>
                 </tr>
             </table>
             <br><br><br>
-            <input type="submit" id="button1" class="" value="Add" name="insert" style="font-size: 16px">
-            <input id="button1" class="" value="Send email" name="send" style="font-size: 16px">
+            
+                      <button type="submit" id="button1"  name="add" >Add</button>
+			
+            
         </form>
     </div>
 </div>
