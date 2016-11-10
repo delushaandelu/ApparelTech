@@ -8,14 +8,17 @@ if(isset($_POST["pwd"])){
     $newpwd2=$_POST["Newpwd2"];
     //query
     
-    
     $sql = "UPDATE user SET password='$newpwd1' WHERE accessLevel=1";
-    $sql1 = "SELECT * FROM user WHERE `user_id`=1 and password='$oldpwd';";
-    //if(mysqli_query($dbcon, $sql1) === TRUE){
+    $sql_1 = "select password from user where accessLevel=1;";
+    
+    $result = mysqli_query($dbcon, $sql_1);
+    $row = mysqli_fetch_assoc($result);
+    $old_password = $row["password"];
+    if ($old_password == $oldpwd){
         if($newpwd1==$newpwd2){
             if (mysqli_query($dbcon, $sql) === TRUE){
                 echo "<script>";
-                echo "sweetAlert('Done...', 'Passowrd changed!!', 'success');";
+                echo "sweetAlert('Done...', 'Passowrd changed!', 'success')";
                 echo "</script>";
                 header("location:Settings-Change_password.php");
             }
@@ -31,12 +34,12 @@ if(isset($_POST["pwd"])){
             echo "</script>";
             header("location:Settings-Change_password.php");
         }
-   /* }else{
+   }else{
         echo "<script>";
-            echo "alert('ERROR: Check your information again!')";
+            echo "sweetAlert('Oops...', 'Old password incorrect!', 'error');";
             echo "</script>";
             header("location:Settings-Change_password.php");
-    }*/
+        }
 
     mysqli_close($dbcon);
    
