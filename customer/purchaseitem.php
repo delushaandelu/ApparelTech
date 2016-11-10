@@ -41,15 +41,15 @@ session_start();
         
 <?php
     $id = $_GET['p_id'];
-    $sql= "select * from order_items where order_id = '$id'";
+    $sql= "select product_id,itemName,brand,quantity from item,order_items where item.item_id=order_items.product_id && order_id=$id";
     $result = $db->query($sql);
         
     while($row = $result->fetch_assoc()) {
                 ?>
                 <tr>
                     <td><center><?php echo $row['product_id'] ?></center></td>
-                    <td><center><?php echo 'name' ?></center></td>
-                    <td><center><?php echo 'brand' ?></center></td>
+                    <td><center><?php echo $row['itemName'] ?></center></td>
+                    <td><center><?php echo $row['brand'] ?></center></td>
                     <td><center><?php echo $row['quantity'] ?></center></td>
                 </tr>
                 <?php } ?>

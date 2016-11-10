@@ -91,7 +91,6 @@ include('dbConfig.php');
 
 //define variables
 if(isset($_POST["pwd"])){
-    echo "hello";
     $newpwd1=$_POST['Newpwd1'];
     $oldpwd=$_POST['oldpwd'];
     $newpwd2=$_POST['Newpwd2'];
@@ -100,18 +99,18 @@ if(isset($_POST["pwd"])){
     //query
     $sql = "UPDATE user SET password='$newpwd1' WHERE accesslevel=0 && username = '$user' ";
     $sql1 = "SELECT password FROM user WHERE EXISTS('$oldpwd')";
-    
+    //if(mysqli_query($dbcon, $sql1) === TRUE){
         if($newpwd1==$newpwd2){
             if (mysqli_query($db, $sql) === TRUE){
                  echo "<script>";
-            echo "sweetAlert('Done...', 'Passowrd changed!!', 'success');";
-            echo "</script>";
+                echo "sweetAlert('Done...', 'Passowrd changed!!', 'success');";
+                echo "</script>";
                 header("location:changePassword.php");
             }
             else{
                 echo "<script>";
                 echo "</script>";
-                    
+                echo "sweetAlert('Oops...', 'Password update failed!', 'error');";    
                 header("location:changePassword.php");
             }
         }else{
@@ -120,6 +119,12 @@ if(isset($_POST["pwd"])){
             echo "</script>";
             header("location:changePassword.php");
         }
+    /* }else{
+            echo "<script>";
+            echo "alert('ERROR: Check your information again!')";
+            echo "</script>";
+            header("location:changePassword.php");
+    }*/
     
     mysqli_close($db);
 
