@@ -78,7 +78,7 @@
                                 
                     </select></td></tr>
                   
-                    <tr><td colspan="2"><center><input class="btn btn-info" type=submit name=update value=Update></center></td></tr>
+                    <tr><td colspan="2"><center><input class="btn" type=submit name=update value=Update></center></td></tr>
                     <?php } ?>
             </table>
         </form>

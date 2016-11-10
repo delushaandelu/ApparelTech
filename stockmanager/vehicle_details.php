@@ -56,7 +56,7 @@
                             <td><?php echo $row['vehicleType'] ?></td>
                             <td><?php echo $row['status'] ?></td>
                             <td class="bt"><input type="button" class="btn btn-danger" value=Delete onclick="location.href='vehicle_details.php?vehicle_id=<?php echo $row['vehicle_id'] ?>'"/></td>
-                            <td class="bt"><input type="button" class="btn btn-info" value=update onclick="location.href='vehicle_details_updateVehicle.php?ID=<?php echo $row['vehicle_id'] ?>'" ></td>
+                            <td class="bt"><input type="button" class="btn" value=update onclick="location.href='vehicle_details_updateVehicle.php?ID=<?php echo $row['vehicle_id'] ?>'" ></td>
                             </tr>
                 <?php } ?>
         </table>
@@ -93,7 +93,7 @@
        
 <div id="footer">
      <div id="btn">
-    <a href="vehicle_details_addVehicle.php"><button id="btnvehicle" class="btn btn-info">Add Vehicle</button></a>  
+    <a href="vehicle_details_addVehicle.php"><button id="btnvehicle" class="btn">Add Vehicle</button></a>  
     </div>   
 </div>
 

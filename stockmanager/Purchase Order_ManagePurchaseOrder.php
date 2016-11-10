@@ -5,6 +5,16 @@
         <link rel="stylesheet" type="text/css" id="theme" href="css/main.css"/>
         <script src="js/sweetalert-dev.js"></script>
         <link rel="stylesheet" href="js/sweetalert.css">
+        <style type="text/css">
+        
+            .btn{
+                color: white;
+                background-color: #1caf9a;
+            }
+        
+        </style>
+        
+        
     </head>
     <body>
         
@@ -40,9 +50,9 @@
                                 
                                 <td class="bt"><center><button type="button" class="btn btn-danger" onclick="location.href='Purchase Order_ManagePurchaseOrder.php?id=<?php echo $row['id'] ?>'"><i class="fa fa-trash-o"></i>Reject</button></center></td>
                                 
-                                <td class="bt"><center><button type="button" class="btn btn-info"  onclick="location.href='Purchase Order_ManagePurchaseOrder.php?ID=<?php echo $row['id'] ?>'" ><i class="fa fa-check" aria-hidden="true"></i>Accept</button></center></td>
+                                <td class="bt"><center><button type="button" class="btn"  onclick="location.href='Purchase Order_ManagePurchaseOrder.php?ID=<?php echo $row['id'] ?>'" ><i class="fa fa-check" aria-hidden="true"></i>Accept</button></center></td>
                                 
-                                <td class="bt"><center><button type="button" class="btn btn-info" onclick="location.href='PurchaseOrder_viewPurchaseOrder.php?vi=<?php echo $row['id'] ?>'" ><i class="fa fa-eye" aria-hidden="true"></i>view</center></button></td>
+                                <td class="bt"><center><button type="button" class="btn" onclick="location.href='PurchaseOrder_viewPurchaseOrder.php?vi=<?php echo $row['id'] ?>'" ><i class="fa fa-eye" aria-hidden="true"></i>view</center></button></td>
                             </tr>
                 
                         <?php } ?>

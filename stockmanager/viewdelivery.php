@@ -4,6 +4,7 @@
         <title>Stock Manager</title>                   
         <link rel="stylesheet" type="text/css" id="theme" href="css/main.css"/>
         <link rel="stylesheet" href="designs/template1.css" type="text/css" />
+        
     </head>
     <body>
         
@@ -18,63 +19,63 @@
         <div id="topdelivery">
 
         </div>
-        <div id="bottomdelivery">
-            <form method="post">
-                <table id="deliverytb" border="0">
-                    <caption id="delivery_cap">Delivery Note</caption>
-                    <tr>
-                        <td id="table_font">Note ID</td>
-                        <td><input type="text" name="noteid" class="form-control"> </td>
+            <div id="bottom-delivery">
+                <form method="post">
+                    <table id="deliverytb" border="0">
+                        <caption id="delivery_cap">Delivery Note</caption>
+                        <tr>
+                            <td id="table_font">Note ID</td>
+                            <td><input type="text" name="noteid" class="form-control"> </td>
 
-                        <td id="table_font">Address</td>
-
-
-
-                    </tr>
-                    <tr>
-                        <td id="table_font">P/O ID</td>
-                        <td><input type="text" name="poid" class="form-control"> </td>
-
-                        <td id="table_font">Line1</td>
-                        <td><input type="text" name="line1" class="form-control" ></td>
-                    </tr>
-                    <tr>
-                        <td id="table_font">Date</td>
-                        <td><input type="text" name="deliverydate" class="form-control"></td>
-
-                        <td id="table_font">Line2</td>
-                        <td><input type="text" name="line2" class="form-control" ></td>
-                    </tr>
-                    <tr>
-                        <td id="table_font" >Note</td>
-                        <td><textarea>comment here</textarea></td>
+                            <td id="table_font">Address</td>
 
 
-                        <td id="table_font">District</td>
-                        <td><input type="text" name="district" class="form-control" ></td>
 
-                    </tr>
+                        </tr>
+                        <tr>
+                            <td id="table_font">P/O ID</td>
+                            <td><input type="text" name="poid" class="form-control"> </td>
+
+                            <td id="table_font">Line1</td>
+                            <td><input type="text" name="line1" class="form-control" ></td>
+                        </tr>
+                        <tr>
+                            <td id="table_font">Date</td>
+                            <td><input type="text" name="deliverydate" class="form-control"></td>
+
+                            <td id="table_font">Line2</td>
+                            <td><input type="text" name="line2" class="form-control" ></td>
+                        </tr>
+                        <tr>
+                            <td id="table_font" >Note</td>
+                            <td><textarea>comment here</textarea></td>
 
 
-                    <tr>
-                        <td id="table_font">Driver</td>
-                        <td><input type="text" name="driver" class="form-control" ></td>
-                        <td id="table_font">Vehicle</td>
-                        <td><input type="text" name="Vehicle" class="form-control" ></td>
-                    </tr>
-                    <tr>
-                        <td id="table_font">Vehicle</td>
-                        <td><input type="text" name="Vehicle" class="form-control" ></td>
+                            <td id="table_font">District</td>
+                            <td><input type="text" name="district" class="form-control" ></td>
 
-                    </tr>
+                        </tr>
 
 
-                </table>
+                        <tr>
+                            <td id="table_font">Driver</td>
+                            <td><input type="text" name="driver" class="form-control" ></td>
+                            <td id="table_font">Vehicle</td>
+                            <td><input type="text" name="Vehicle" class="form-control" ></td>
+                        </tr>
+                        <tr>
+                            <td id="table_font">Vehicle</td>
+                            <td><input type="text" name="Vehicle" class="form-control" ></td>
+
+                        </tr>
 
 
-            </form>
+                    </table>
 
-        </div>
+
+                </form>
+
+            </div>
     </div>
 
     <div id="footer"></div>

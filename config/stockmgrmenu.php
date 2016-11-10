@@ -1,4 +1,9 @@
-        <div class="page-container"> 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>       
+
+
+<div class="page-container"> 
             <div class="page-sidebar">
                 <ul class="x-navigation">
                     <li class="xn-logo">
@@ -101,8 +106,8 @@
                         </form>
                     </li>
                     <li class="pend">
-                     <i class="fa fa-file-powerpoint-o fa-2x" aria-hidden="true"></i>
-
+                   
+                       <i class="fa fa-cloud" style="font-size:23px;color:lightblue;text-shadow:2px 2px 4px #000000;"></i>
 
                     <div id="pend" style="color:white ;background-color:red" width="3px">
                       <?php

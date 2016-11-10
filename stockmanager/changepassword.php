@@ -41,8 +41,8 @@
                         <td><input type="password" name="confirmpassword"  class="form-control"></td>
                     </tr>
                     <tr>
-                        <td colspan="2"><center><input type="reset" class="btn btn-info" value="Reset" />    
-                        <input type="submit" class="btn btn-info" name="changepswd" value="Change"/></center></td>    
+                        <td colspan="2"><center><input type="reset" class="btn" value="Reset" />    
+                        <input type="submit" class="btn" name="changepswd" value="Change"/></center></td>    
                     </tr>
                 </table>
                </form>

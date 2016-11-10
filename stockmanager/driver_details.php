@@ -35,7 +35,8 @@
                 position: relative;
                 margin-top:-30%;
                 margin-left:40%;
-            }  
+            }
+            
     </style>
     </head>
 <body>
@@ -68,7 +69,7 @@
                             <td><center><?php echo $row['mobileNo'] ?></center></td>
                             <td><center><?php echo $row['vechicle_id'] ?></center></td>
                                 <td class="bt"><center><button type="button" class="btn btn-danger" name="Delete" onclick="location.href='driver_details.php?driver_id=<?php echo $row['driver_id']?> & vehicle_id=<?php echo $row['vechicle_id'] ?>'"><i class="fa fa-trash" ></i> Delete</button></center></td>
-                                <td class="bt"><center><button type="button" class="btn btn-info" name="Update" onclick="location.href='driver_details_updateDriver.php?ID=<?php echo $row['driver_id'] ?>'" ><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Update</button></center></td>
+                                <td class="bt"><center><button type="button" class="btn" name="Update" onclick="location.href='driver_details_updateDriver.php?ID=<?php echo $row['driver_id'] ?>'" ><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Update</button></center></td>
                             </tr>
                 
                 <?php } ?>
@@ -98,7 +99,7 @@
        
 <div id="footer">
     <div id="btn">
-    <a href="driver_details_addDriver.php"><button id="btndriver" class="btn btn-info">Add Driver</button></a>  
+    <a href="driver_details_addDriver.php"><button id="btndriver" class="btn">Add Driver</button></a>  
     </div>
 </div>
 

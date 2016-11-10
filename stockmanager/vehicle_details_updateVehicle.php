@@ -59,7 +59,7 @@
                     <tr><td>VehicleNo</td><td><input class="form-control" type=text name=vehicleNo value="<?php echo $row['vehicleNo'] ?>"></td></tr>
                     <tr><td>Capacity</td><td><input class="form-control" type=text name=capacity value="<?php echo $row['capacity'] ?>"></td></tr>
                     <tr><td>VehicleType</td><td><input class="form-control" type=text name=vehicleType value="<?php echo $row['vehicleType'] ?>"></td></tr>
-                    <tr><td colspan="2"><center><input class="btn btn-info"type=submit name=update value=Update></center></td></tr>
+                    <tr><td colspan="2"><center><input class="btn"type=submit name=update value=Update></center></td></tr>
                 <?php } ?>
             </table>
         </form>

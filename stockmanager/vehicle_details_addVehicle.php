@@ -70,9 +70,9 @@
                             </td>
                         </tr>
                         <tr>
-                        <td colspan="2"><center><input type="submit" class="btn btn-info" name="VehicleInsert" value="Insert"/>
-                    <button type="button" class="btn btn-info">Clear</button>
-                    <button type="reset" class="btn btn-info">Refresh</button></center></td>
+                        <td colspan="2"><center><input type="submit" class="btn" name="VehicleInsert" value="Insert"/>
+                    <button type="button" class="btn">Clear</button>
+                    <button type="reset" class="btn">Refresh</button></center></td>
                         </tr>
                     </table>
              </form>
