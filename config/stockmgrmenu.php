@@ -1,6 +1,13 @@
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>       
+<html>
+<head>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ 
+</head>
+</html>
+<body>
 
 
 <div class="page-container"> 
@@ -105,12 +112,10 @@
                             <input type="text" name="search" placeholder="Search..."/>
                         </form>
                     </li>
-                    <li class="pend">
+                    <li class="dropdown head-dpdn">
                    
-                       <i class="fa fa-cloud" style="font-size:23px;color:lightblue;text-shadow:2px 2px 4px #000000;"></i>
-
-                    <div id="pend" style="color:white ;background-color:red" width="3px">
-                      <?php
+                       <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope"></i><span class="badge">
+                           <?php
                         require("database_connection.php"); 
 
                             $sql= "select count(id) as total from orders where status='1'";
@@ -119,7 +124,9 @@
                         $row = mysqli_fetch_assoc($result);
                                 echo  $row["total"];
                         ?>  
-                    </div>
+                        </span></a>
+                        
+                   
                     
                     </li>
                     <li class="xn-icon-button pull-right">
@@ -127,4 +134,4 @@
                     </li> 
                     
                 </ul>
-                
+           </body>     

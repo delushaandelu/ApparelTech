@@ -12,16 +12,7 @@
     include("../config/stockmgrmenu.php");
    // require("database_connection.php");
 ?>
-
-<ul class="breadcrumb">
-    <h2>ADD Driver here!</li></h2>
-</ul>
- <div class = "panel">
-    <ul class="nav nav-justified" >
-    <li id ="nav_tab_item_effect"><a href="driver_details.php">Back</a></li>
-   	</ul>
-</div>
-    
+   
 <style type="text/css">
     #driverdisplaytb{
         width: 600px;
@@ -149,7 +140,7 @@ if(isset($_POST['DriverInsert'])){
                             <td id="table_font">Vehicle ID<span class="error"><?php echo $Vehicleerr;?></span></td>
 
                             <td>
-                                <select name="vehicleID">
+                                <select name="vehicleID" class="form-control">
                                     <?php
                                         $sql="SELECT vehicle_id FROM vehicle WHERE status=0 ";
                                         $result=mysqli_query($dbcon,$sql);
@@ -162,9 +153,9 @@ if(isset($_POST['DriverInsert'])){
                             </td>
                         </tr>
                         <tr>
-                        <td colspan="2"><center><input type="submit" class="btn btn-info" name="DriverInsert" value="ADD"/>
-                        <button type="button" class="btn btn-info">Clear</button>
-                        <button type="reset" class="btn btn-info">Refresh</button></center></td>
+                        <td colspan="2"><center><input type="submit" class="btn" name="DriverInsert" value="ADD"/>
+                        <button type="button" class="btn">Clear</button>
+                        <button type="reset" class="btn">Refresh</button></center></td>
                         
                         </tr>
 

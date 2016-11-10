@@ -43,15 +43,15 @@ body
     margin-left: 5%;
     margin-right: 5%;
 	color:#000;
-	
 	padding:80px;
 	
 }
 
 #top_left_driver{
-    margin-left:18%;
+    margin-left:15%;
+    margin-top:-3%;
 	width:600px;
-	height:550px;
+	height:530px;
 	background-color:white;
 	float:left;
     border-style: solid;
@@ -61,7 +61,7 @@ body
 
 	}
 #drivertb{
-	margin-left: 10%;
+	margin-left: 9%;
     position:relative;
 
 }
@@ -330,9 +330,9 @@ margin-left: 10%;
 	border-radius: 15px;
 }
 #top_left_vehicle{
-    margin-left:18%;
+    margin-left:14%;
     width:600px;
-	height:550px;
+	height:530px;
 	background-color:white;
 	border-style: solid;
     border-color: black;
@@ -340,7 +340,7 @@ margin-left: 10%;
 	float:left;
 }
 #vehicletb{
-    margin-left: 10%;
+    margin-left: 9%;
 }
 .panel-heading-vehicle{
     background-color:#333;

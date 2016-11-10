@@ -16,18 +16,13 @@
         height: 550px;
         }
 </style>
-
-<ul class="breadcrumb">
-    <h2>ADD Vehicle here!</li></h2>
-</ul>
-    
- <div id="content">
+<div id="content">
         
         <div id ="top_section">
 
             <div id = "top_left_vehicle">
                 <form method="post" action="vehicle_details_addVehicle.php">
-                     <div class="panel-heading-vehicle" align="center">Add Driver</div>
+                     <div class="panel-heading-vehicle" align="center">Add Vehicle</div>
                     <table id="vehicletb" border="0" width="500" height="500" >
 
                         <tr>
