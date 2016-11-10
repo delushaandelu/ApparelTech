@@ -97,10 +97,10 @@ if(isset($_POST["pwd"])){
     $user = $_SESSION['username'];
         
     //query
-    $sql = "UPDATE user SET password='$newpwd1' WHERE accessLevel=0 && username = '$user' ";
-    $sql_1 = "select password from user where accessLevel=0 && username = '$user' ;";
+     $sql = "UPDATE user SET password='$newpwd1' WHERE accessLevel=0 && username='$user'";
+    $sql_1 = "select password from user where accessLevel=0 and username='$user';";
     
-    $result = mysqli_query($dbcon, $sql_1);
+    $result = mysqli_query($db, $sql_1);
     $row = mysqli_fetch_assoc($result);
     $old_password = $row["password"];
     if ($old_password == $oldpwd){
