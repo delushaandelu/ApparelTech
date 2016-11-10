@@ -69,7 +69,7 @@ define ('K_PATH_IMAGES', dirname(__FILE__).'/../images/');
  * Deafult image logo used be the default Header() method.
  * Please set here your own logo or an empty string to disable it.
  */
-define ('PDF_HEADER_LOGO', 'tcpdf_logo.jpg');
+define ('PDF_HEADER_LOGO', 'logo.png');
 
 /**
  * Header logo image width in user units.
@@ -159,7 +159,7 @@ define ('PDF_FONT_NAME_MAIN', 'helvetica');
 /**
  * Default main font size.
  */
-define ('PDF_FONT_SIZE_MAIN', 10);
+define ('PDF_FONT_SIZE_MAIN', 17);
 
 /**
  * Default data font name.
@@ -169,7 +169,7 @@ define ('PDF_FONT_NAME_DATA', 'helvetica');
 /**
  * Default data font size.
  */
-define ('PDF_FONT_SIZE_DATA', 8);
+define ('PDF_FONT_SIZE_DATA', 12);
 
 /**
  * Default monospaced font name.

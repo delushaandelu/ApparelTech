@@ -16,10 +16,12 @@ class MYPDF extends TCPDF {
 		//}
 		return $data;
 	}
-
+    
 	// Colored table
+    
 
 		}
+ 
 
 // create new PDF document
 $pdf = new MYPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
@@ -32,7 +34,7 @@ $pdf->SetCreator(PDF_CREATOR);
 //$pdf->SetKeywords('TCPDF, PDF, example, test, guide');
 
 // set default header data
-$pdf->SetHeaderData(false, false, false.' PRIYANTHA ENTERPRISES');
+$pdf->SetHeaderData(PDF_HEADER_LOGO, PDF_HEADER_LOGO_WIDTH, false.' PRIYANTHA ENTERPRISES');
 
 // set header and footer fonts
 $pdf->setHeaderFont(Array(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN));
@@ -79,7 +81,3 @@ $data = $pdf->LoadData('data/table_data_demo.txt');
 
 // close and output PDF document
 $pdf->Output('supplierdetails.pdf', 'I');
-
-//============================================================+
-// END OF FILE
-//============================================================+
