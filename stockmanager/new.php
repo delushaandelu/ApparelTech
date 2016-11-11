@@ -167,9 +167,10 @@
                     
                    
                     $sql = "SELECT * FROM item WHERE catagery = '$categoryname' AND itemName = '$itemname' AND brand = '$brandname'";
-                         
+                    
+                    //
                     $count = 1;
-                      
+                   
                     $id = array();
                    
                     if($result = mysqli_query($dbcon, $sql)){
@@ -189,7 +190,8 @@
                             echo "</tr>";
                        
                         while($row = mysqli_fetch_array($result)){
-                            echo '<form action = "UpdateItem.php" method="post">';
+                            //echo '<form action = "UpdateItem.php" method="post">';
+                            echo '<form action="UpdateItem.php?count='. $count.'" method="post">';
                             echo "<tr>";
                                   
                                 echo "<td>" . $row['item_id'] . "</td>"; echo"<td ></td>";
@@ -216,8 +218,8 @@
                         </div>
 
                         <?php
-
-                       echo "</form>";
+                         
+                        
                         // Close result set
                         mysqli_free_result($result);
                     } else{
@@ -229,9 +231,11 @@
             mysqli_close($dbcon);
                 }
 
-           echo $count;
-                
-    
+           // echo $count;
+                echo $count;
+               // echo $val;
+
+    echo "</form>";
      //if(isset($_POST['btnManageStockUpdate'])){
              //echo $count;
             //for($x=1;$x<=$count;$x++){
