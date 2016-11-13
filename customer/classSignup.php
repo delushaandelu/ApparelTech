@@ -12,9 +12,9 @@ if(isset($_POST["sumbit"])){
     $email = $_POST['email'];
     $cname = $_POST['cname'];
     $uname = $_POST['uname'];
-    $password = $_POST['pword'];
-    
-    
+    $pass = $_POST['pword'];
+    $password = md5($pass);
+  
     $sql="INSERT INTO customer (nic,fullname,designation,companyName,address,email,mobile,tele,username,password, status) VALUES ('$nic','$fname','$desi','$cname','$address','$email','$mob','$tele','$uname','$password', 'false')";
     
 
