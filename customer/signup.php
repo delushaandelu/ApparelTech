@@ -69,7 +69,7 @@
 
                 <tr>
                     <td><label for="text">Your id Photo </label></td>
-                    <td colspan="2"><input type="file" name="file"></td>
+                    <td colspan="2"><input type="file" name="fileToUpload" id="fileToUpload"></td>
                 </tr>
 			<br/>
             </table>
