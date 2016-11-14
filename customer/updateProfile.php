@@ -31,22 +31,21 @@ session_start();
         $fname = $_POST['fullname'];
         $desi = $_POST['desi'];
         $address = $_POST['address'];
-        $nic = $_POST['nic'];
         $mob = $_POST['mob'];
         $tele = $_POST['tele'];
         $email = $_POST['Email'];
-        $cname = $_POST['cname'];
+        
 
         // Check connection
         if ($db->connect_error) {
             die("Connection failed: " . $db->connect_error);
         } 
 
-        $sql = "UPDATE customer SET fullname='$fname',designation='$desi',address='$address',nic='$nic',mobile='$mob',tele='$tele',email='$email',companyName='$cname' WHERE customer_id=$c_id";
+        $sql = "UPDATE customer SET fullname='$fname',designation='$desi',address='$address',mobile='$mob',tele='$tele',email='$email' WHERE customer_id=$c_id";
 
         if ($db->query($sql) === TRUE) {
             echo'<script language ="javascript">';
-                    echo "swal({  title: 'Your profile update successfully!', text: '', type: 'success', confirmButtonText: 'Done!'}, function(){window.location.href='updateProfile.php'});";
+                    echo "swal({  title: 'Your profile update successfully!', text: 'Loagin Again to See the Changes.', type: 'success', confirmButtonText: 'Done!'}, function(){window.location.href='updateProfile.php'});";
                 echo'</script>';
         } else {
              echo'<script language ="javascript">';
@@ -68,18 +67,44 @@ session_start();
                                  ?>            
 <form method="POST">
     <legend>Personal information:</legend>
-    <fieldset >
-        <h3>Full name: </h3><br><input type="text" name="fullname" style="font-size:12pt;width:800px;" autocomplete="off" value=<?php echo $row['fullname'] ?> > <br>
-        <h3>Address  : </h3><br><input type="text" name="address" max="40" style="font-size:12pt;width:800px;" autocomplete="off" value=<?php echo $row['address'] ?>><br>
-        <h3>Telephone : </h3><br><input type="number" name="tele"  style="font-size:12pt;width:200px;" autocomplete="off" value=<?php echo $row['tele'] ?>><br>
-        <h3>Mobile : </h3><br><input type="number" name="mob"  style="font-size:12pt;width:200px;" autocomplete="off" value=<?php echo $row['mobile'] ?>><br>
-        <h3>NIC : </h3><br><input type="text" name="nic"  style="font-size:12pt;width:200px;" autocomplete="off" value=<?php echo $row['nic'] ?>><br>
-        <h3>Designation : </h3><br><input type="text" name="desi"  style="font-size:12pt;width:800px;" autocomplete="off" value=<?php echo $row['designation'] ?>><br>
-        <h3>Email : </h3><br><input type="Email" name="Email"  style="font-size:12pt;width:400px;" autocomplete="off" value=<?php echo $row['email'] ?>><br>
-        <h3>company name : </h3><br><input type="text" name="cname"  style="font-size:12pt;width:400px;" value=<?php echo $row['companyName'] ?>><br> <br>
-        
-        <h4><input type="submit" name="update"></h4>
-    </fieldset>
+    <table class="table table-hover">
+        <tr>
+            <td><h2>Full name </h2></td>
+            <td><input type="text" name="fullname" class="form-control" style="font-size:12pt;width:800px;" autocomplete="off" value=<?php echo $row['fullname'] ?> ></td>
+        </tr>
+        <tr>
+            <td><h2>Address   </h2></td>
+            <td><input type="text" name="address" class="form-control" max="40" style="font-size:12pt;width:800px;" autocomplete="off" value=<?php echo $row['address'] ?>></td>
+        </tr>
+        <tr>
+            <td><h2>Telephone  </h2></td>
+            <td><input type="number" name="tele" class="form-control" style="font-size:12pt;width:200px;" autocomplete="off" value=<?php echo $row['tele'] ?>></td>
+        </tr>
+        <tr>
+            <td><h2>Mobile  </h2></td>
+            <td><input type="number" name="mob" class="form-control" style="font-size:12pt;width:200px;" autocomplete="off" value=<?php echo $row['mobile'] ?>></td>
+        </tr>
+        <tr>
+            <td><h2>NIC  </h2></td>
+            <td><input type="text" name="nic" disabled class="form-control" style="font-size:12pt;width:200px;" autocomplete="off" value=<?php echo $row['nic'] ?>></td>
+        </tr>
+        <tr>
+            <td><h2>Designation  </h2></td>
+            <td><input type="text" name="desi" class="form-control" style="font-size:12pt;width:800px;" autocomplete="off" value=<?php echo $row['designation'] ?>></td>
+        </tr>
+        <tr>
+            <td><h2>Email  </h2></td>
+            <td><input type="Email" name="Email" class="form-control" style="font-size:12pt;width:400px;" autocomplete="off" value=<?php echo $row['email'] ?>></td>
+        </tr>
+        <tr>
+            <td><h2>company name  </h2></td>
+            <td><input type="text" class="form-control" name="cname" disabled style="font-size:12pt;width:400px;" value=<?php echo $row['companyName'] ?>></td>
+        </tr>
+        <tr>
+            <td colspan="2"><center><input type="submit" class="btn btn-success" name="update" value="Update Profile"></center></td>
+        </tr>
+    </table>
+    
 </form>
 <?php } ?>
 

@@ -13,6 +13,7 @@ if(isset($_POST["sumbit"])){
     $pass = $_POST['pword'];
     $password = md5($pass);
     
+    // customer image uploading process
     $target_dir = "uploads/";
     $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
     $uploadOk = 1;
