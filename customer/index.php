@@ -64,6 +64,13 @@ if(isset($_POST['signin'])){
     
     $res3 =  mysqli_fetch_assoc(mysqli_query($conn,"select customer_id from customer where username = '$username' "));
     $_SESSION['csid']= $res3['customer_id'];
+    
+    $res4 =  mysqli_fetch_assoc(mysqli_query($conn,"select address from customer where username = '$username' "));
+    $_SESSION['add']= $res4['address'];
+    
+    $res5 =  mysqli_fetch_assoc(mysqli_query($conn,"select email from customer where username = '$username' "));
+    $_SESSION['email']= $res5['email'];
+    
    
     $result = mysqli_query($conn, 'select * from user where username="'.$username.'" and password="'.$password.'" and accessLevel=0 ');
     if (mysqli_num_rows($result)==1){
