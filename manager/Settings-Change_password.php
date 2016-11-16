@@ -15,6 +15,7 @@
 
 <?php
     include ("../config/managermenu.php");
+    include('database_connection.php');
 ?>
             
 <div id="page-wrapper">
@@ -24,6 +25,11 @@
         </div>
         
     </div>
+    <div class="right_col" role="main">
+    <h2 class="hfont">Change Your Password Here!</h2>
+
+
+
     <div class="row">
 
         <div id="content">
@@ -32,7 +38,7 @@
                 <font color="#a52a2a" size="+2">Change Password!</font>
             </h5>
             <br><br>
-            <form method="post" action="password.php">
+            <form method="post" action="Settings-Change_password.php">
             <tr>
                 <td id="table-font" width="30" >
                     Password*
@@ -60,9 +66,6 @@
             </tr>
             <br><br>
             <button type="submit" id="button1" class="" name="pwd">Change</button>
-            <button type="button" id="button1" class="" onclick="location.href='Settings-Change_username.php'">Back</button>
-            
-            <br><br>
             </form>
         </div>
         
@@ -70,7 +73,50 @@
         <p>&nbsp;</p>
     </div>
             
-    </div>      
+    </div>
+    <?php    
+    if(isset($_POST["pwd"])){
+    $newpwd1=$_POST["Newpwd1"];
+    $oldpwd=$_POST["oldpwd"];
+    $newpwd2=$_POST["Newpwd2"];
+    //query
+    
+    $sql = "UPDATE user SET password='$newpwd1' WHERE accessLevel=1";
+    $sql_1 = "select password from user where accessLevel=1;";
+    
+    $result = mysqli_query($dbcon, $sql_1);
+    $row = mysqli_fetch_assoc($result);
+    $old_password = $row["password"];
+    if ($old_password == $oldpwd){
+        if($newpwd1==$newpwd2){
+            if (mysqli_query($dbcon, $sql) === TRUE){
+                echo'<script language ="javascript">';
+                    echo "swal({  title: 'Change Password Successful!', text: '', type: 'success', confirmButtonText: 'Done!'}, function(){window.location.href='Settings-Change_password.php'});";
+                echo'</script>';
+                
+            }
+            else{
+                echo'<script language ="javascript">';
+                    echo "swal({  title: 'New Password Did Not Matching!', text: '', type: 'error', confirmButtonText: 'Done!'}, function(){window.location.href='Settings-Change_password.php'});";
+                echo'</script>';
+                
+            }
+        }else{
+            echo'<script language ="javascript">';
+                echo "swal({  title: 'New Password Did Not Matching!', text: '', type: 'error', confirmButtonText: 'Done!'}, function(){window.location.href='Settings-Change_password.php'});";
+            echo'</script>';
+            
+        }
+    }else{
+        echo'<script language ="javascript">';
+            echo "swal({  title: 'Old Password Did Not Matching!', text: '', type: 'error', confirmButtonText: 'Done!'}, function()
+            {window.location.href='Settings-Change_password.php'});";
+        echo'</script>';
+    }
+
+    mysqli_close($dbcon);
+}
+?>
 </div>
 
 <script src="vendor/jquery/jquery.min.js"></script>

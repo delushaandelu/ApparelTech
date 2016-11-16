@@ -303,21 +303,21 @@
                         <div class="row">
                             <div class="col-sm-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Your Name *" id="name" required data-validation-required-message="Please enter your name.">
+                                    <input type="text" name="user_name" class="form-control" placeholder="Your Name *" id="name" required data-validation-required-message="Please enter your name.">
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" class="form-control" placeholder="Your Email *" id="email" required data-validation-required-message="Please enter your email address.">
+                                    <input type="email" name="user_email" class="form-control" placeholder="Your Email *" id="email" required data-validation-required-message="Please enter your email address.">
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="form-group">
-                                    <input type="tel" class="form-control" placeholder="Your Phone *" id="phone" required data-validation-required-message="Please enter your phone number.">
+                                    <input type="tel" name="phone_number" class="form-control" placeholder="Your Phone *" id="phone" required data-validation-required-message="Please enter your phone number.">
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-group">
-                                    <textarea class="form-control" placeholder="Your Message *" id="message" required data-validation-required-message="Please enter a message."></textarea>
+                                    <textarea name="message" class="form-control" placeholder="Your Message *" id="message" required data-validation-required-message="Please enter a message."></textarea>
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
@@ -325,7 +325,7 @@
                             <div class="col-sm-12 text-center">
                                 <div id="success"></div>
 						<div class="skill-btn">
-						<button type="submit" class="hvr-bounce-to-right scroll btn btn-xl"> Submit </button>
+						<button type="submit" name="submit" class="hvr-bounce-to-right scroll btn btn-xl"> Submit </button>
 						</div>
                             </div>
                         </div>
@@ -333,6 +333,17 @@
                 </div>
             </div>
         </div>
+        <?php
+            //get database connection
+            include('dbConfig.php');
+
+            //define variables
+            if(isset($_POST["submit"])){
+            $user_name=$_POST['user_name'];
+            $user_email=$_POST['user_email'];
+            $phone_number=$_POST['phone_number'];
+            $message = $_post['message'];
+        ?>
     </section>
 
     <footer class="copyright">
