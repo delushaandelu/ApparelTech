@@ -53,7 +53,6 @@
                   </li>
                   <li><a><i class="fa fa-bar-chart-o"></i> Delivery <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href=../customer/requestDelivery.php>Request Delivery</a></li>
                       <li><a href="../customer/viewStatus.php">View Status</a></li>
                       <li><a href="../customer/cancelDelivery.php">Cancel Delivery</a></li>
                     </ul>

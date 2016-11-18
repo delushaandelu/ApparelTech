@@ -26,7 +26,7 @@ session_start();
     <h1 class="hfont">Update Your Profile Here!</h1>
     <?php
      include('dbConfig.php');
-                                $c_id = $_SESSION['csid'];
+        $c_id = $_SESSION['csid'];
         if(isset($_POST['update'])){
         $fname = $_POST['fullname'];
         $desi = $_POST['desi'];

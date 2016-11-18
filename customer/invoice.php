@@ -1,6 +1,6 @@
 <?php
 session_start();
-?>   
+?> 
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -24,7 +24,7 @@ session_start();
 <!-- page content -->
 <div class="right_col" role="main">
     <h4>Your Purchase Invoice!</h4>
-<?php
+  <?php
     include("dbConfig.php");
     
   ?>
