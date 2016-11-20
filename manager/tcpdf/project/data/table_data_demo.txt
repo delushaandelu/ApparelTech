@@ -1,7 +1,0 @@
-361;Shanthi Thilakarathna;A20,Kegalle;Kegalle
-381;Kamal Fernando;Reid avenue, colombo 7;Colombo
-391;Sunil Perera;Galle;Galle
-401;John Pole;Perth, Australia;Australia
-411;Sako Tanaka;Perth, Australia;Japan
-431;Chamrith Jayasinghe;Colombo;Gampaha
-441;DelushaanDelu;Hatton srilanka.;hatton
