@@ -53,7 +53,7 @@ if(isset($_POST['signin'])){
     require ('../config/database.php');
     $username = $_POST['username'];
     $password = $_POST['password'];
-    // $password = md5($pass);
+    $password = md5($password);
     $_SESSION['username'] = $username;
     
     $res1 =  mysqli_fetch_assoc(mysqli_query($conn,"select fullname from customer where username = '$username' "));
