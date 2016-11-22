@@ -1,0 +1,36 @@
+#label
+{
+    height: 30%;
+    width: 81.65%;
+    background-color:#324c57;
+    position: absolute;
+    margin-left: -2.3%;
+}
+
+#dash
+{
+    margin-top:-27%;
+    margin-left: 19.3%;
+    width: 80%;
+}
+
+img
+{
+    width: 10%;
+    height: 60%;
+    margin-left: 4%;
+    margin-top: 3%;
+    position: absolute;
+}
+
+#font
+{
+    color: white;
+}
+
+#text
+{
+    margin-left: 17%;
+    margin-top: 2%;
+    margin-right: -16%;
+}

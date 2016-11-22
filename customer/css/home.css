@@ -1,0 +1,68 @@
+#info
+{
+    width: 45%;
+    margin-left: 51%;
+    margin-top: 2%;
+}
+
+.myButton {
+	-moz-box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+	box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+	background-color:blueviolet
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #84bbf3;
+	display:inline-block;
+	cursor:pointer;
+	color:black;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:19px 76px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #528ecc;
+}
+.myButton:hover {
+	background-color:#378de5;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+#dashbutton
+{
+    margin-left: 2%;
+    margin-top: -19%;
+}
+
+#button1{
+    width: 220px;
+    height: 60px;
+    border-radius: 15px;
+    color:black;
+   
+    font-size: large;
+}
+#button1:hover{
+    background-color: #00a8e0;
+}
+
+button1:active {
+    background-color: #00a8e0;
+    transform: translateY(4px);
+}
+
+#quick_btn
+{
+    width: 45%;
+    margin-top: 18.5%;
+    
+}
+
+.hfont
+{
+    font-size: 25px;
+}

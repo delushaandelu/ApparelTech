@@ -1,0 +1,29 @@
+#frame{
+    margin-top: 6%;
+    margin-left: 3%;
+    width:1080px;
+    border-style: solid ;
+    border-width:1px;
+}
+
+
+#invoice{
+    position:relative;
+    margin-top: -10px;
+    text-align: center;
+    background-color: black;
+    color: aliceblue;
+    
+    
+}
+#top-table{
+position: relative;
+margin-left:20px;
+width: 1000px;
+height: 160px;
+    
+}
+#td1{
+   
+ text-align: center;
+}
