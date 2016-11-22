@@ -1,6 +1,5 @@
 <?php
 include('dbConfig.php');
-if(isset($_POST["sumbit"])){
     $fname = $_POST['fullname'];
     $desi = $_POST['desi'];
     $address = $_POST['address'];
@@ -74,6 +73,4 @@ if (mysqli_query($db, $sql) === TRUE) {
     }
 
     mysqli_close($db);
-    }
-
     ?>
