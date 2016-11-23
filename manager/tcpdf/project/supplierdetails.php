@@ -15,38 +15,7 @@ class MYPDF extends TCPDF {
 		return $data;
 	}
 
-	// Colored table
-	public function ColoredTable($header,$data) {
-		// Colors, line width and bold font
-		$this->SetFillColor(255, 0, 0);
-		$this->SetTextColor(255);
-		$this->SetDrawColor(128, 0, 0);
-		$this->SetLineWidth(0.3);
-		$this->SetFont('', 'B');
-		// Header
-		$w = array(30, 45, 50, 45);
-		$num_headers = count($header);
-		for($i = 0; $i < $num_headers; ++$i) {
-			$this->Cell($w[$i], 7, $header[$i], 1, 0, 'C', 1);
-		}
-		$this->Ln();
-		// Color and font restoration
-		$this->SetFillColor(224, 235, 255);
-		$this->SetTextColor(0);
-		$this->SetFont('');
-		// Data
-		$fill = 0;
-		foreach($data as $row) {
-			$this->Cell($w[0], 6,($row[0]), 'LR', 0, 'L', $fill);
-			$this->Cell($w[1], 6, $row[1], 'LR', 0, 'L', $fill);
-			$this->Cell($w[2], 6, $row[2], 'LR', 0, 'L', $fill);
-			$this->Cell($w[3], 6, $row[3], 'LR', 0, 'L', $fill);
-			$this->Ln();
-			$fill=!$fill;
-		}
-		$this->Cell(array_sum($w), 0, '', 'T');
-	}
-
+	
     
 	// Load table data from file
 	//public function LoadData($file) {
@@ -114,13 +83,38 @@ $pdf->AddPage();
 
 
 // column titles
-$header = array('Supplier ID', 'Name', 'Address', 'Location');
+$header = array('Supplier ID', 'Name', 'Email', 'Address', 'Location', 'tele', 'Mobile');
 
 //data loading
-$data = $pdf->LoadData('data/table_data_demo.txt');
+//$data = $pdf->LoadData('data/table_data_demo.txt');
 
 //print colored table
-$pdf->ColoredTable($header, $data);
+//$pdf->ColoredTable($header, $data);
+
+// Set some content to print
+$tbl_header = '<table border="1">';
+$tbl_footer = '</table>';
+$tbl ='';
+$con=mysqli_connect("ap-cdbr-azure-east-c.cloudapp.net","bbff2134fa7f9a","68d089ed","appareltech");
+// Check connection
+if (mysqli_connect_errno())
+  {
+  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+  }
+$result = mysqli_query($con,"SELECT * FROM supplier");
+while($row = mysqli_fetch_array($result))
+  {
+  $id = $row['supplier_id'];
+  $name = $row['sname'];
+  $mail = $row['email'];
+  $add = $row['address'];
+  $loc = $row['location'];
+  $tele = $row['tele'];
+  $mobi = $row['mobile'];
+$tbl .= '<tr><td>'.$id.'</td><td>'.$name.'</td><td>'.$mail.'</td><td>'.$add.'</td><td>'.$loc.'</td><td>'.$tele.'</td><td>'.$mobi.'</td></tr>';
+}
+// Print text using writeHTMLCell()
+$pdf->writeHTML($tbl_header . $tbl . $tbl_footer, true, false, false, false, '');
 
 // ---------------------------------------------------------
 
