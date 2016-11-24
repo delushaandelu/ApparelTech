@@ -24,11 +24,10 @@
             <div class="2">
                 <div class="2">
                     <!-- search box -->
-                    <input type="text" id="myInput1" onkeyup="myFunction1()" placeholder="&#x26B2    id..." style="width: 200px " >
-                    <input type="text" id="myInput2" onkeyup="myFunction2()" placeholder="&#x26B2    category..." style="width: 200px " >
-                    <input type="text" id="myInput3" onkeyup="myFunction3()" placeholder="&#x26B2    name..." style="width: 200px " >
-                    <input type="text" id="myInput4" onkeyup="myFunction4()" placeholder="&#x26B2    brand..." style="width: 200px " >
-
+                    <input type="text" id="myInput1" onkeyup="myFunction1()" class="form-control" placeholder="&#x26B2    id..." style="width: 170px " >
+                    <input type="text" id="myInput2" onkeyup="myFunction2()" class="form-control" placeholder="&#x26B2    category..." style="width: 170px " >
+                    <input type="text" id="myInput3" onkeyup="myFunction3()" class="form-control" placeholder="&#x26B2    name..." style="width: 170px " >
+                    <input type="text" id="myInput4" onkeyup="myFunction4()" class="form-control" placeholder="&#x26B2    brand..." style="width: 170px " >
 
                 </div>
             </div>
@@ -69,6 +68,7 @@
                 </tr>";
             }
             echo "</table>";
+            
         } else {
             echo "0 results";
         }
@@ -76,6 +76,8 @@
         $dbcon->close();
 
         ?>
+        <input type="button" id="button2" name="submitpdf" value="download pdf" onclick="location.href='../manager/tcpdf/project/stockdetails.php'"/><br><br>
+        
 
         <!-- live search -->
         <script>

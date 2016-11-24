@@ -15,35 +15,15 @@ class MYPDF extends TCPDF {
 		return $data;
 	}
 
-	
+}
     
-	// Load table data from file
-	//public function LoadData($file) {
-		
-		//$data = array();
-		//foreach($lines as $line) {
-			//$data[] = explode(';', chop($line));
-		//}
-		//return $data;
-	}
-    
-	// Colored table
-    
-
-		//}
- 
-
 // create new PDF document
 $pdf = new MYPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
 
-
-
 // set document information
 $pdf->SetCreator(PDF_CREATOR);
-//$pdf->SetAuthor('PRIYANTHA ENTERPRISES');
-//$pdf->SetTitle('Supplier details');
-//$pdf->SetSubject('Supplier Details');
-//$pdf->SetKeywords('TCPDF, PDF, example, test, guide');
+
+$pdf->SetKeywords('TCPDF, PDF, example, test, guide');
 
 // set default header data
 $pdf->SetHeaderData(PDF_HEADER_LOGO, PDF_HEADER_LOGO_WIDTH, false.'               PRIYANTHA ENTERPRISES');
@@ -75,7 +55,7 @@ if (@file_exists(dirname(__FILE__).'/lang/eng.php')) {
 // ---------------------------------------------------------
 
 // set font
-$pdf->SetFont('helvetica', '', 10);
+$pdf->SetFont('helvetica', '', 14);
 
 // add a page
 $pdf->AddPage();
@@ -95,33 +75,33 @@ $header = array('Supplier ID', 'Name', 'Email', 'Address', 'Location', 'tele', '
 $tbl_header = '<table border="1">';
 $tbl_footer = '</table>';
 $tbl ='';
-$sid = 'ID';
-$sname = 'Name';
-$smail = 'Email';
-$sadd = 'Address';
-$sloc = 'Location';
-$stel = 'telephone';
-$smob = 'Mobile';
-$tbl .= '<tr><th center>'.$sid.'</th><th>'.$sname.'</th><th>'.$smail.'</th><th>'.$sadd.'</th><th>'.$sloc.'</th><th>'.$stel.'</th><th>'.$smob.'</th></tr>';
+$iid = 'ID';
+$iname = 'Name';
+$bprice = 'Buying price';
+$sprice = 'Selling price';
+$brnd = 'Brand';
+$cat = 'Category';
+$sqty = 'Stock Qty';
+$tbl .= '<tr><th><h6 align="center">'.$iid.'</h6></th><th><h6 align="center">'.$iname.'</h6></th><th><h6 align="center">'.$bprice.'</h6></th><th><h6 align="center">'.$sprice.'</h6></th><th><h6 align="center">'.$brnd.'</h6></th><th><h6 align="center">'.$cat.'</h6></th><th><h6 align="center">'.$sqty.'</h6></th></tr>';
 $con=mysqli_connect("ap-cdbr-azure-east-c.cloudapp.net","bbff2134fa7f9a","68d089ed","appareltech");
 // Check connection
 if (mysqli_connect_errno())
   {
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
   }
-$result = mysqli_query($con,"SELECT * FROM supplier");
+$result = mysqli_query($con,"SELECT * FROM item");
 
 while($row = mysqli_fetch_array($result))
   {
-  $id = $row['supplier_id'];
-  $name = $row['sname'];
-  $mail = $row['email'];
-  $add = $row['address'];
-  $loc = $row['location'];
-  $tele = $row['tele'];
-  $mobi = $row['mobile'];
+  $id = $row['item_id'];
+  $name = $row['itemName'];
+  $bprc = $row['buyingPrice'];
+  $sprc = $row['sellingPrice'];
+  $brand = $row['brand'];
+  $catagery = $row['catagery'];
+  $qty = $row['stockQty'];
   
-$tbl .= '<tr><td>'.$id.'</td><td>'.$name.'</td><td>'.$mail.'</td><td>'.$add.'</td><td>'.$loc.'</td><td>'.$tele.'</td><td>'.$mobi.'</td></tr>';
+$tbl .= '<tr><td><h6 align="center">'.$id.'</h6></td><td><h6 align="center">'.$name.'</h6></td><td><h6 align="center">'.$bprc.'</h6></td><td><h6 align="center">'.$sprc.'</h6></td><td><h6 align="center">'.$brand.'</h6></td><td><h6 align="center">'.$catagery.'</h6></td><td><h6 align="center">'.$qty.'</h6></td></tr>';
 }
 // Print text using writeHTMLCell()
 $pdf->writeHTML($tbl_header . $tbl . $tbl_footer, true, false, false, false, '');
@@ -129,4 +109,4 @@ $pdf->writeHTML($tbl_header . $tbl . $tbl_footer, true, false, false, false, '')
 // ---------------------------------------------------------
 
 // close and output PDF document
-$pdf->Output('supplierdetails.pdf', 'I');
+$pdf->Output('stockdetails.pdf', 'I');

@@ -26,7 +26,7 @@
                 <h2 class="page-header">Suppliers</h2>
             </div>
             <div class="2">
-                <input type="text" id="myInput" onkeyup="myFunction()" placeholder="&#x26B2   Search for suppliers by name..." style="width: 300px">
+                <input type="text" id="myInput" onkeyup="myFunction()" class="form-control" placeholder="&#x26B2   Search for suppliers by name..." style="width: 300px">
 
             </div>
         </div>
