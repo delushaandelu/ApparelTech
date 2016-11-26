@@ -1,7 +1,9 @@
 <?php
 session_start();
-require ('../config/database.php');
-?>   
+if(!isset($_REQUEST['id'])){
+    header("Location: rent.php");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -24,7 +26,10 @@ require ('../config/database.php');
 <!-- page content -->
 <div class="right_col" role="main">
     <h1 class="hfont">Your Purchase Report!</h1>
-
+<div class="container">
+    <h1>Order Status</h1>
+    <p>Your order has submitted successfully. Order ID is #<?php echo $_GET['id']; ?></p>
+</div>
 </div>
 </body>
 

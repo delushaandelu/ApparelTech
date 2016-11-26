@@ -41,7 +41,7 @@
                   </li>
                   <li><a><i class="fa fa-desktop"></i> Rent <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="../customer/newRent.php">New Rent</a></li>
+                      <li><a href="../customer/rent.php">New Rent</a></li>
                       <li><a href="../customer/canceRent.php">Cancel Rent</a></li>
                     </ul>
                   </li>
