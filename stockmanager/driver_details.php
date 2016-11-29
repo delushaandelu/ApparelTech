@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="designs/template1.css" type="text/css" />
         <script src="js/sweetalert-dev.js"></script>
         <link rel="stylesheet" href="js/sweetalert.css">
+         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.min.css"/>
     </head>
 
         

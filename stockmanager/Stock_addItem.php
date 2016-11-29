@@ -69,7 +69,9 @@
         	<ul class="nav nav-justified" >
     			
     			<li id ="nav_tab_item_effect"><a href="Stock_ManageStock.php">Add Item</a></li>
-                <li id ="nav_tab_item_effect"><a href="Stock_ManageItem.php">Manage Item</a></li>
+   	 			<li id ="nav_tab_item_effect"><a href="manage_stock_searchItem.php">Search Item</a></li>
+    			<li id ="nav_tab_item_effect"><a href="manage_stock_deleteItem.php">Delete Item</a></li>
+                <li id ="nav_tab_item_effect"><a href="#">Update Item</a></li>
   			</ul>
             <br><br>
                  
@@ -109,11 +111,6 @@
                                         <tr class="spaceUnder">
                                             <td id="table_font" width="10%"> Quantity</td> 
                                             <td> <input type="text"  name="quantity" class="form-control"s></td>
-                                        </tr>
-
-                                        <tr class="spaceUnder">
-                                            <td id="table_font" width="10%"> Re Order Level</td> 
-                                            <td> <input type="text"  name="reorderLevel" class="form-control"s></td>
                                         </tr>  
                                     </table> 
                             	</div>

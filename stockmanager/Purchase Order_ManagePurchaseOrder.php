@@ -11,6 +11,9 @@
                 color: white;
                 background-color: #1caf9a;
             }
+            #potb{
+                margin-top: 4px;
+            }
         
         </style>
         
@@ -22,13 +25,10 @@
     include("../config/stockmgrmenu.php");
  ?>
 
-<ul class="breadcrumb">
-    <h2><li>Manage purchase orders</li></h2>
-</ul>
 <div id="content">
         <div class="panel">
             <div class="panel-heading">
-                <table class="table table-striped">
+                <table class="table table-striped" id="potb">
                     <tr class="title">
                         <th><center>id</center></th>
                         <th><center>customerid</center></th>
@@ -50,7 +50,7 @@
                                 
                                 <td class="bt"><center><button type="button" class="btn btn-danger" onclick="location.href='Purchase Order_ManagePurchaseOrder.php?id=<?php echo $row['id'] ?>'"><i class="fa fa-trash-o"></i>Reject</button></center></td>
                                 
-                                <td class="bt"><center><button type="button" class="btn"  onclick="location.href='Purchase Order_ManagePurchaseOrder.php?ID=<?php echo $row['id'] ?>'" ><i class="fa fa-check" aria-hidden="true"></i>Accept</button></center></td>
+                                <td class="bt"><center><button type="button" class="btn"  onclick="location.href='Purchase Order_ManagePurchaseOrder.php?ID=<?php echo $row['id'] ?> & customer_id=<?php echo $row['customer_id'] ?>'" ><i class="fa fa-check" aria-hidden="true"></i>Accept</button></center></td>
                                 
                                 <td class="bt"><center><button type="button" class="btn" onclick="location.href='PurchaseOrder_viewPurchaseOrder.php?vi=<?php echo $row['id'] ?>'" ><i class="fa fa-eye" aria-hidden="true"></i>view</center></button></td>
                             </tr>
@@ -63,13 +63,43 @@
                         <?php
        
       
-                        if(isset($_GET['ID'])){
+                         if(!empty($_GET['ID']) && !empty($_GET['customer_id']) ){
                             $id=$_GET['ID'];
-                            
+                            $cusid=$_GET['customer_id'];
+                             
+                            $username = 'chamrithjay@gmail.com';
+    	                    $hash = '1993Minuwangoda';
+    	
+    	                   // Message details
+                            $sqlsms="SELECT mobile FROM customer WHERE customer_id=$cusid";
+                            $sqlsms=mysqli_query($dbcon,$sqlsms);
+                            $row=mysqli_fetch_assoc($sqlsms);
+                            //echo $row['mobile'];
+                            $numbers = $row['mobile'];
+        
+    	                   $sender = urlencode('Appreltech');
+    	                   $message = rawurlencode('Your purchase order no '.$id.'is accepted.');
+     
+    	                   //$numbers = implode(',', $numbers);
+     
+    	                   // Prepare data for POST request
+    	                   $data = array('username' => $username, 'hash' => $hash, 'numbers' => $numbers, "sender" => $sender, "message" => $message);
+     
+    	// Send the POST request with cURL
+    	                   $ch = curl_init('http://api.txtlocal.com/send/');
+    	                   curl_setopt($ch, CURLOPT_POST, true);
+    	                   curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+    	                   curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    	                   $response = curl_exec($ch);
+    	                   curl_close($ch);
+    	
+    	                   // Process your response here
+    	                   echo $response;
+                             
                             $sqlinsert="INSERT INTO purchasereport(p_id,customer_id,totalprice,created,status) SELECT orders.id,orders.customer_id,orders.total_price,orders.created,'approved' FROM orders WHERE id=$id";
                             $resultinsert=mysqli_query($dbcon,$sqlinsert);
             
-                           $sqldelete="DELETE FROM orders WHERE id=$id";
+                            $sqldelete="DELETE FROM orders WHERE id=$id";
                             $result=mysqli_query($dbcon,$sqldelete);
 
            
