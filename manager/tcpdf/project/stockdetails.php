@@ -65,12 +65,6 @@ $pdf->AddPage();
 // column titles
 $header = array('Supplier ID', 'Name', 'Email', 'Address', 'Location', 'tele', 'Mobile');
 
-//data loading
-//$data = $pdf->LoadData('data/table_data_demo.txt');
-
-//print colored table
-//$pdf->ColoredTable($header, $data);
-
 // Set some content to print
 $tbl_header = '<table border="1">';
 $tbl_footer = '</table>';
@@ -89,6 +83,7 @@ if (mysqli_connect_errno())
   {
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
   }
+  //query
 $result = mysqli_query($con,"SELECT * FROM item");
 
 while($row = mysqli_fetch_array($result))

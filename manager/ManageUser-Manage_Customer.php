@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
+    <!-- header -->
     <title>Manager Admin</title>
+    <!-- link css,bootstrap -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="dist/css/sb-admin-2.css" rel="stylesheet">
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -15,6 +17,7 @@
 
 <body>
 
+<!-- get manager's menu -->
 <?php
     include ("../config/managermenu.php");
 ?>

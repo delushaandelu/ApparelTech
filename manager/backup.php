@@ -12,6 +12,7 @@
 <body>
 
 <?php
+    //manager menu
     include ("../config/managermenu.php");
 ?>
             
@@ -29,6 +30,7 @@
     </br>
     </br>
     </br>
+    <!-- button -->
     <div id="backup">
         <form method="post" action="getbackup.php"
         <center><button name="backup" id="buttonbackup"><i class="fa fa-cloud-upload" aria-hidden="true"></i> Take Backup </button></center>

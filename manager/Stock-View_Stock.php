@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>Manager Admin</title>
+    <!-- css and sweet alert files -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="dist/css/sb-admin-2.css" rel="stylesheet">
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -23,7 +24,7 @@
             </div>
             <div class="2">
                 <div class="2">
-                    <!-- search box -->
+                    <!-- live search box -->
                     <input type="text" id="myInput1" onkeyup="myFunction1()" class="form-control" placeholder="&#x26B2    id..." style="width: 170px " >
                     <input type="text" id="myInput2" onkeyup="myFunction2()" class="form-control" placeholder="&#x26B2    category..." style="width: 170px " >
                     <input type="text" id="myInput3" onkeyup="myFunction3()" class="form-control" placeholder="&#x26B2    name..." style="width: 170px " >
@@ -79,7 +80,7 @@
         <input type="button" id="button2" name="submitpdf" value="download pdf" onclick="location.href='../manager/tcpdf/project/stockdetails.php'"/><br><br>
         
 
-        <!-- live search -->
+        <!-- live search functions -->
         <script>
             function myFunction1() {
                 var input, filter, table, tr, td, i;
@@ -158,7 +159,7 @@
 
     </div>      
 </div>
-
+<!-- js files -->
 <script src="vendor/jquery/jquery.min.js"></script>
 <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 <script src="vendor/metisMenu/metisMenu.min.js"></script>

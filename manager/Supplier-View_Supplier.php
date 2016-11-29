@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>Manager Admin</title>
+    <!-- css , sweetalert files -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="dist/css/sb-admin-2.css" rel="stylesheet">
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -16,6 +17,7 @@
 <body>
 
 <?php
+    //manager's menu
     include ("../config/managermenu.php");
 ?>
             
@@ -78,6 +80,7 @@
 
                 $id = $_GET['supplier_id'];
                 
+                //query
                 $sql= "DELETE FROM supplier WHERE supplier_id = '$id'";
                 $result=mysqli_query($dbcon,$sql);
         
@@ -118,7 +121,7 @@
 			<p>&nbsp;</p>
     </div>      
 </div>
-
+<!-- js files -->
 <script src="vendor/jquery/jquery.min.js"></script>
 <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 <script src="vendor/metisMenu/metisMenu.min.js"></script>

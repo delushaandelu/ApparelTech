@@ -8,28 +8,28 @@
 	<script language="javascript">
 		function check()
 		{
-			<!--validation for name-->
+			//validation for name
 			if(document.form1.name.value==""){
 				window.alert("Plese Enter your name");
 				document.form1.name.focus();
 				return false;
 			}
 
-			<!--validation for location-->
+			//validation for location
 			if(document.form1.location.value==""){
 				window.alert("Plese Enter Your location");
 				document.form1.location.focus();
 				return false;
 			}
 
-			<!--validation for address-->
+			//validation for address
 			if(document.form1.address.value==""){
 				window.alert("Plese Enter an address");
 				document.form1.address.focus();
 				return false;
 			}
 
-			<!--validation for email-->
+			//validation for email
 			if(document.form1.email.value==""){
 				window.alert("Plese Enter your Email Address");
 				document.form1.email.focus();
@@ -50,7 +50,7 @@
 			return true;
 		}
 	</script>
-
+	<!-- css , sweetalert files -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="dist/css/sb-admin-2.css" rel="stylesheet">
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -61,6 +61,7 @@
 <body>
 
 <?php
+	//manager's menu
     include ("../config/managermenu.php");
 ?>
             
@@ -128,7 +129,7 @@
 </div>
 
 
-
+<!-- js files -->
 <script src="vendor/jquery/jquery.min.js"></script>
 <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 <script src="vendor/metisMenu/metisMenu.min.js"></script>

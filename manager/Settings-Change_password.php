@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>Manager Admin</title>
+    <!-- link css, alert files -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="dist/css/sb-admin-2.css" rel="stylesheet">
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -13,6 +14,7 @@
 
 <body>
 
+<!-- get database connection and manager's menu -->
 <?php
     include ("../config/managermenu.php");
     include('database_connection.php');
@@ -34,9 +36,7 @@
 
         <div id="content">
         <div id="top">
-            <h5>
-                <font color="#a52a2a" size="+2">Change Password!</font>
-            </h5>
+           
             <br><br>
             <form method="post" action="Settings-Change_password.php">
             <tr>
@@ -74,13 +74,14 @@
     </div>
             
     </div>
-    <?php    
+    <?php  
+    //get inputs  
     if(isset($_POST["pwd"])){
     $newpwd1=$_POST["Newpwd1"];
     $oldpwd=$_POST["oldpwd"];
     $newpwd2=$_POST["Newpwd2"];
-    //query
     
+    //query
     $sql = "UPDATE user SET password='$newpwd1' WHERE accessLevel=1";
     $sql_1 = "select password from user where accessLevel=1;";
     
@@ -118,7 +119,7 @@
 }
 ?>
 </div>
-
+<!-- js files -->
 <script src="vendor/jquery/jquery.min.js"></script>
 <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 <script src="vendor/metisMenu/metisMenu.min.js"></script>

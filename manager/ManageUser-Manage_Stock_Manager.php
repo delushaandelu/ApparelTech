@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>Manager Admin</title>
+    <!-- css files -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="dist/css/sb-admin-2.css" rel="stylesheet">
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -23,7 +24,7 @@ include ("../config/managermenu.php");
 
     </div>
     <div class="row">
-
+        <!-- form -->
         <form name="form1"  method="post" action="addUser.php">
             <table border="0">
                 <tr></tr>
@@ -33,6 +34,10 @@ include ("../config/managermenu.php");
                 </tr>
                 <tr>
                     <td id="table-font" width="60%">password*</td>
+                    <td><input id="input1" type="password" name="password" class="form-control" required></td>
+                </tr>
+                <tr>
+                    <td id="table-font" width="60%">Confirm password*</td>
                     <td><input id="input1" type="password" name="password" class="form-control" required></td>
                 </tr>
                 <br><br>
@@ -56,6 +61,7 @@ include ("../config/managermenu.php");
     </div>
 </div>
 
+<!-- include js files -->
 <script src="vendor/jquery/jquery.min.js"></script>
 <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 <script src="vendor/metisMenu/metisMenu.min.js"></script>

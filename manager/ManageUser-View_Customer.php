@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>Manager Admin</title>
+    <!-- link css , alert files-->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="dist/css/sb-admin-2.css" rel="stylesheet">
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -124,7 +125,7 @@
 
     </div>
 </div>
-
+<!-- link js files -->
 <script src="vendor/jquery/jquery.min.js"></script>
 <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 <script src="vendor/metisMenu/metisMenu.min.js"></script>
