@@ -299,7 +299,7 @@
 				<div class="col-sm-4 contact-icon">
 					<span style="color:white"><i class="fa fa-envelope  wow animated zoomIn animation-delay-5"> priyantha@gmail.com</span></i>
 				</div>
-                    <form name="sentMessage" id="contactForm" novalidate>
+                    <form name="sentMessage" id="contactForm" novalidate method="post" action="inq.php">
                         <div class="row">
                             <div class="col-sm-6">
                                 <div class="form-group">
@@ -325,72 +325,17 @@
                             <div class="col-sm-12 text-center">
                                 <div id="success"></div>
 						<div class="skill-btn">
-						<button type="submit" name="submit" class="hvr-bounce-to-right scroll btn btn-xl"> Submit </button>
+						<button type="button" id="submit">Click Me!</button>
 						</div>
                             </div>
                         </div>
+  
                     </form>
                 </div>
             </div>
         </div>
     </section>
-    <?php
-            //get database connection
-            include('database_connection.php'); 
-        ?>
-<?php
-$error=FALSE;
-$user_name_err=$user_email_err=$phone_number_err=$message_err="";
     
-if(isset($_POST['submit'])){
-    
-    if(empty($_POST['user_name'])){
-        $user_name_err="<br>username is reqired.";
-        $error=TRUE;
-    }else{
-         $user_name = $_POST["user_name"];
-    }
-    
-    if(empty($_POST['user_email'])){
-        $user_email_err="<br>useremail is reqired.";
-        $error=TRUE;
-    }else{
-         $user_email = $_POST["user_email"];
-    }
-    
-    if(empty($_POST['phone_number'])){
-        $phone_number_err="<br>phonenumber is reqired.";
-        $error=TRUE;
-    }else{
-         $phone_number=$_POST["phone_number"];
-    }
-    
-     if(empty($_POST['message'])){
-        $message_err="<br>message is required.";
-        $error=TRUE;
-        
-       }else{
-         $message=$_POST["message"]; 
-     }  
-        
-        
-    if($error==FALSE){
-        $sqlinsert="INSERT INTO inquiry(name,email,phone,message)
-        VALUES('".$user_name."','".$user_email."','".$phone_number."','".$message."')";
-        $result=mysqli_query($dbcon,$sqlinsert);
-            if($result){
-                echo'<script language ="javascript">';
-                    echo "swal({  title: 'Inquiry Inserted successfully!', text: '', type: 'success', confirmButtonText: 'Done!'}, function(){window.location.href='index.php'});";
-                echo'</script>';}
-            else{
-                echo'<script language ="javascript">';
-                    echo "swal({  title: 'Error!', text: '', type: 'error', confirmButtonText: 'Done!'}, function(){window.location.href='index.php'});";
-                echo'</script>';
-            }
-    }
-}
-
-?>
 
     <footer class="copyright">
         <div class="container">

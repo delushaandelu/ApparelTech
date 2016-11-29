@@ -115,7 +115,19 @@ CREATE TABLE `drivercontact` (
   `driver_id` int(5) NOT NULL,
   `contactNo` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+-- --------------------------------------------------------
 
+--
+-- Table structure for table `inquiry`
+--
+
+CREATE TABLE `inquiry` (
+  `inq_id` int(5) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `phone` varchar(10) NOT NULL,
+  `message` varchar(250) NOT NULL,
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 -- --------------------------------------------------------
 
 --
@@ -309,6 +321,12 @@ ALTER TABLE `drivercontact`
   ADD PRIMARY KEY (`driver_id`,`contactNo`);
 
 --
+-- Indexes for table `inquiry`
+--
+ALTER TABLE `inquiry`
+  ADD PRIMARY KEY (`inq_id`);
+
+--
 -- Indexes for table `item`
 --
 ALTER TABLE `item`
@@ -398,6 +416,11 @@ ALTER TABLE `delivery`
 --
 ALTER TABLE `driver`
   MODIFY `driver_id` int(5) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `inquiry`
+--
+ALTER TABLE `inquiry`
+  MODIFY `inq_id` int(5) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `item`
 --
