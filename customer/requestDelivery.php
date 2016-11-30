@@ -92,11 +92,11 @@ if ($db->query($sql) === TRUE) {
                 </tr>
                 <tr>
                     <td>Deposit Voucher ID</td>
-                    <td><input type="number" class="form-control" name="vid"></td>
+                    <td><input type="text" class="form-control" name="vid"></td>
                 </tr>
                 <tr>
                     <td>Amount</td>
-                    <td><input type="number" class="form-control" name="amount"></td>
+                    <td><input type="text" class="form-control" name="amount"></td>
                 </tr>
                 <tr>
                     <td colspan="2"><center><input type="submit" class="btn btn-success" name="btn" value="Request Delivery"></center></td>
