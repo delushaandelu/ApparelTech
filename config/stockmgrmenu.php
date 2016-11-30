@@ -83,7 +83,7 @@
                     <li class="xn-openable">
                         <a href="#"><span class="fa fa-pencil"></span> <span class="xn-text">Delivery</span>
                         <ul>                            
-                            <li><a href="managedelivery.php"><span class="fa fa-tasks"></span> Manage Delivery</a></li>
+                            <li><a href="ma/nagedelivery.php/*-"><span class="fa fa-tasks"></span> Manage Delivery</a></li>	`1123
                             <li><a href="#"><span class="fa fa-file-text-o"></span> Delivery Reports</a></li>
                             <li><a href="viewdelivery.php"><span class="fa fa-list-alt"></span> Delivery Details</a></li>
                             <li><a href="driver_details.php"><span class="fa fa-arrow-right"></span> Driver Details</a></li>
@@ -107,7 +107,7 @@
                     <li class="xn-icon-button">
                         <a href="#" class="x-navigation-minimize"><span class="fa fa-dedent"></span></a>
                     </li>
-                    <li class="xn-search">
+                    <li class="xn-search">*
                         <form role="form">
                             <input type="text" name="search" placeholder="Search..."/>
                         </form>

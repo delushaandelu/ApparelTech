@@ -13,8 +13,9 @@ session_start();
     <link href="build/css/custom.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/purchaseReport.css" type="text/css">
     <link rel="stylesheet" href="css/invoice.css" type="text/css"> 
+
     <script>
-function printPageArea(areaID){
+    function printPageArea(areaID){
 	var printContent = document.getElementById(areaID);
 	var WinPrint = window.open('', '', 'width=900,height=650');
 	WinPrint.document.write(printContent.innerHTML);
@@ -24,6 +25,7 @@ function printPageArea(areaID){
 	WinPrint.close();
 }
 </script>
+
   </head>
     
   <body class="nav-md">
