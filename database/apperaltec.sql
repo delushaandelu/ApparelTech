@@ -126,7 +126,7 @@ CREATE TABLE `inquiry` (
   `name` varchar(100) NOT NULL,
   `email` varchar(50) NOT NULL,
   `phone` varchar(10) NOT NULL,
-  `message` varchar(250) NOT NULL,
+  `message` varchar(250) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 -- --------------------------------------------------------
 

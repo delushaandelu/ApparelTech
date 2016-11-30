@@ -1,7 +1,7 @@
-                      <?php
-            //get database connection
-            include('database_connection1.php'); 
-        ?>
+ <?php
+    //get database connection
+    include('database_connection1.php'); 
+?>
 <?php
 $error=FALSE;
 $user_name_err=$user_email_err=$phone_number_err=$message_err="";
@@ -43,9 +43,9 @@ if(isset($_POST['submit'])){
         
         
     if($error==FALSE){
+        echo 'ook';
         $sqlinsert="INSERT INTO inquiry(name,email,phone,message) VALUES('".$user_name."','".$user_email."','".$phone_number."','".$message."')";
-        $result=mysqli_query($dbcon,$sqlinsert);
-            if($result){
+        if (mysqli_query($dbcon, $sqlinsert) === TRUE) {
                 
                 echo 'OK';
             }else{

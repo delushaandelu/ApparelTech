@@ -4,9 +4,9 @@
     define('DB_HOST', 'ap-cdbr-azure-east-c.cloudapp.net');
     define('DB_NAME', 'appareltech');
 
-    $dbcon = mysqli_connect(DB_HOST,DB_USER,DB_PSWD,DB_NAME);
+    $dbconn = mysqli_connect(DB_HOST,DB_USER,DB_PSWD,DB_NAME);
 
-    if (!$dbcon) {
+    if (!$dbconn) {
         die("Error connecting to database");
     }
 ?>
