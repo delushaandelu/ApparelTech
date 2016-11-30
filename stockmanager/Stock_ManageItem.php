@@ -83,48 +83,33 @@
 
        <script type="text/javascript">
        // This code is written to delete items when user marked check boxes
-           $(document).ready(function(){
-                alert('dfwf');
-            $('#manageItemDeleteBtn').click(function(){
-                alert('dsf');
-                 
-                /*if(confirm("Are you sure you want to delete this?")){
-                   // var id = [];
-                    $(':checkbox:checked').each(function(i){
-                        id[i] = $(this).val();
-                    });
-                    if(id.length === 0){
-                       
-                        alert("Please select atleast one check box");
-                        
-                    }else{*/
-                        $.ajax({
+      
+            function delete_item(item_id){
+                var item = item_id;
+                var temp = "#"+item_id;
+                var temp1 = "'"+temp+"'";
+                alert(temp);
+                 $.ajax({
+
+
                             url : 'DeleteItem.php',
                             method : 'POST',
-                            data : {Item_id:item_id},
-                            success : function(){
-                               
-                                
-                                    $('#tr' + item_id + '').css('background-color','#ccc');
-                                    $('#tr'+ item_id + '').fadeOut('slow');
+                            data : {item:item},
+                            success : function($result){
+                                alert($result);
+                                    $(temp).html(result);
+                                    //$('#tr' + item_id + '').css('background-color','#ccc');
+                                    //$('#tr'+ item_id + '').fadeOut('slow');
                                     
-                                    window.location.replace("Stock_ManageItem.php");
+                                    //window.location.replace("manage_stock_deleteItem.php");
 
                                 
-                                 
-
                             }
 
                         });
-
-                    //}
-               // }
-               // else{
-
-              //  }
-           });
-
-         });
+               
+            }
+      
        </script>
     
        
@@ -223,7 +208,7 @@
                    
                     if($result = mysqli_query($dbcon, $sql)){
                     if(mysqli_num_rows($result) > 0){
-                    
+                        
                         echo "<table border = '0' class='table table-hover'>";
                             echo "<tr bgcolor='#C0C0C0' width = '10px' >";
                             
@@ -240,29 +225,40 @@
                                 
                             echo "</tr>";
                             
-
+                         
                         while($row = mysqli_fetch_array($result)){
+                            echo "<div id='".$row['item_id']."'>";
                             echo "<tr>";
+                                
                                 echo "<td>" . $row['item_id'] . "</td>"; echo"<td ></td>";
                                 echo "<td>" . $row['itemName'] . "</td>";echo"<td></td>";
                                 echo "<td>" . $row['catagery'] . "</td>";echo"<td></td>";
                                 echo "<td>" . $row['brand'] . "</td>";echo"<td></td>";
                                 echo "<td>" . $row['buyingPrice'] . "</td>";echo"<td></td>";
                                 $sellingPrice = $row['sellingPrice'];
-                                echo "<td>" . "<input type='text' value='$sellingPrice' name='sellingPrice'> ". "</td>";echo"<td></td>";
+                                echo "<td>" . "<input type='text' value='$sellingPrice' name='sellingPrice'> ". "</td>";
+                                echo"<td></td>";
                                 $stockQty = $row['stockQty'];
-                                echo "<td>" . "<input type='text' value='$stockQty' name='stockQty'> ". "</td>";echo"<td></td>";
+                                echo "<td>" . "<input type='text' value='$stockQty' name='stockQty'> ". "</td>";
+                                echo"<td></td>";
 
                                /* echo "<td>"."<input type ='text' name = \"sellingPrice".$count."\" value ='".$sellingPrice."'>"."</td>";*/
                                 
                                 echo "<td>"."<button type='submit' name='manageItemUpdateBtn' class='myButton'>Update</button>"."</td>";echo"<td></td>";
-                                echo "<td>"."<input type='submit' name='manageItemDeleteBtn' class='btn btn-danger' value='Delete'>"."</td>";
+                                //$item_id = $row['item_id'];
+                                echo "<td>"."<input type='submit' onclick=\"delete_item('" . $row['item_id'] . "')\"name='manageItemDeleteBtn' class='btn btn-danger' value='Delete'>"."</td>";
+                                echo "<td></td>";
                                 
 
-                         echo "</td>";
+                                
+                           
                             echo "</tr>";
+                            echo "</div>";
+                           
                         }
+                         
                         echo "</table>";
+                        
                         // Close result set
                         mysqli_free_result($result);
                     } else{
