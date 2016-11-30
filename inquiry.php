@@ -7,7 +7,7 @@ include('database_connection1.php');
 
 
 if(isset($_POST['submit'])){
-    $sql="INSERT INTO inquiry (name,email,phone,message) VALUES ('$user_name','$user_email','$phone_number','$message')";
+    $sql="INSERT INTO inquiry(name,email,phone,message) VALUES('$user_name','$user_email','$phone_number','$message')";
         if (mysqli_query($dbcon, $sql) === TRUE) {
         echo'<script>';
         echo"alert('We will give your account authentication soon! Thank you')";

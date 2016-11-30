@@ -36,12 +36,13 @@ session_start();
             <th><center>Product ID</center></th>
             <th><center>Product Name</center></th>
             <th><center>Product Brand</center></th>
+            <th><center>Price</center></th>
             <th><center>Quantity</center></th>
         </tr>
         
 <?php
     $id = $_GET['p_id'];
-    $sql= "select product_id,itemName,brand,quantity from item,order_items where item.item_id=order_items.product_id && order_id=$id";
+    $sql= "select product_id,itemName,brand,quantity,sellingPrice from item,order_items where item.item_id=order_items.product_id && order_id=$id";
     $result = $db->query($sql);
         
     while($row = $result->fetch_assoc()) {
@@ -50,6 +51,7 @@ session_start();
                     <td><center><?php echo $row['product_id'] ?></center></td>
                     <td><center><?php echo $row['itemName'] ?></center></td>
                     <td><center><?php echo $row['brand'] ?></center></td>
+                    <td><center><?php echo $row['sellingPrice'] ?></center></td>
                     <td><center><?php echo $row['quantity'] ?></center></td>
                 </tr>
                 <?php } ?>

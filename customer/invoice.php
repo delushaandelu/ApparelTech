@@ -38,6 +38,27 @@ session_start();
 <div class="right_col" role="main">
 <div id ="invoice">
         <h4> Invoice!</h4>
+<style>
+    #amount
+{
+    margin-left: 85%;
+}
+
+#note
+{
+    margin-top: -25%;
+}
+
+#action
+{
+    margin-top: 20%;
+    margin-left: 60%;
+}   
+.hfont
+{
+    font-size: 25px;
+}
+</style>
       <?php
         include("dbConfig.php");
 
