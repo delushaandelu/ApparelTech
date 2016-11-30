@@ -53,7 +53,7 @@ if(isset($_POST['signin'])){
     require ('../config/database.php');
     $username = $_POST['username'];
     $password = $_POST['password'];
-    $password = md5($password);
+   // $password = md5($password);
     $_SESSION['username'] = $username;
     
     $res1 =  mysqli_fetch_assoc(mysqli_query($conn,"select fullname from customer where username = '$username' "));
@@ -75,19 +75,19 @@ if(isset($_POST['signin'])){
     $result = mysqli_query($conn, 'select * from user where username="'.$username.'" and password="'.$password.'" and accessLevel=0 ');
     if (mysqli_num_rows($result)==1){
 
-		$cst_id = $_SESSION['csid'];
-		$cst_name = $_SESSION['fname'];
+		//$cst_id = $_SESSION['csid'];
+		//$cst_name = $_SESSION['fname'];
 		
-		$log = "INSERT INTO log(id, name, logtime) VALUES('$cst_id','$cst_name', 'sda')";
+		//$log = "INSERT INTO log(id, name, logtime) VALUES('$cst_id','$cst_name', 'sda')";
 
-		if (mysqli_query($con,$log) === TRUE) {
+		//if (mysqli_query($con,$log) === TRUE) {
 			header('location: ../customer/home.php');
 
-			}else{
-			echo "<script>";
-			echo "alert('ERROR| Log Time ERROR! Login Again!')";
-			echo "</script>";
-			}
+			//}else{
+			//echo "<script>";
+			//echo "alert('ERROR| Log Time ERROR! Login Again!')";
+			//echo "</script>";
+			//}
     }else
         echo "<script>";
         echo "alert('ERROR| Your are not an authoriezed user! Cheack your information again')";
