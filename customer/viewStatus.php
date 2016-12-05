@@ -57,7 +57,7 @@ session_start();
                     
                     <td class="bt"><center>
                         
-                        <button type="button" id="delete" class="btn btn-success" onclick="location.href='viewStatus.php'"><i class="fa fa-check-square-o" aria-hidden="true"></i> Delete</button>
+                        <button type="button" id="delete" class="btn btn-success" onclick="location.href='viewStatus.php?poid=<?php echo $row['poid'] ?>'"><i class="fa fa-check-square-o" aria-hidden="true"></i> Delete</button>
                         
                         </center></td>
                 </tr>
@@ -65,6 +65,28 @@ session_start();
 
         
     </table>
+    
+        <?php
+            if(isset($_GET['poid'])){
+
+                $id = $_GET['poid'];
+                
+                //query
+                $sql= "DELETE FROM deliveryrequest WHERE poid = '$id'";
+                $result = $db->query($sql);
+        
+                if($result){
+                    echo'<script language ="javascript">';
+                    echo "swal({  title: 'Status deleted successfully!', text: '', type: 'success', confirmButtonText: 'Done!'}, function(){window.location.href='viewStatus.php'});";
+                    echo'</script>';
+                }
+                else{
+                    echo'<script language ="javascript">';
+                    echo "swal({  title: 'Error occurs while deleting!', text: '', type: 'error', confirmButtonText: 'Done!'}, function(){window.location.href='viewStatus.php'});";
+                    echo'</script>';
+                }
+            }
+        ?>
 </div>
 </body>
 
