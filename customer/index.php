@@ -90,7 +90,7 @@ if(isset($_POST['signin'])){
 			//}
     }else
         echo "<script>";
-        echo "alert('ERROR| Your are not an authoriezed user! Cheack your information again')";
+        echo "alert('ERROR| Your are not an authoriezed user! Check your information again')";
         echo "</script>";
 }
 ?>

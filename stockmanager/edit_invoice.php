@@ -15,6 +15,7 @@
 </head>
 
 <body>
+    
     <?php
     require("database_connection.php");
     ?>

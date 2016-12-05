@@ -22,7 +22,7 @@ if(isset($_POST['login'])){
         header('location: HomePage.php');
     }else
         echo "<script>";
-        echo "alert('ERROR| Your are not an authoriezed user! Cheack your information again')";
+        echo "alert('ERROR| Your are not an authoriezed user! Check your information again')";
         echo "</script>";
 }
 ?>
