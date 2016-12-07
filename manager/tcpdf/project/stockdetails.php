@@ -15,6 +15,13 @@ class MYPDF extends TCPDF {
 		return $data;
 	}
 
+  public function Footer() {
+        $this->SetY(-15);
+        $this->SetFont('helvetica', 'I', 8);
+        // Setting Date ( I have set the date here )
+        $tDate = date("F j, Y, g:i a");
+        $this->Cell(0, 10, 'Date : '.$tDate, 0, false, 'C', 0, '', 0, false, 'T', 'M');
+    }
 }
     
 // create new PDF document
@@ -52,15 +59,18 @@ if (@file_exists(dirname(__FILE__).'/lang/eng.php')) {
 	$pdf->setLanguageArray($l);
 }
 
-// ---------------------------------------------------------
-
 // set font
-$pdf->SetFont('helvetica', '', 14);
+$pdf->SetFont('freesans', '', 14);
 
 // add a page
 $pdf->AddPage();
 
+$html = <<<EOF
+<h5> Stock Details <\h5>
 
+EOF;
+
+$pdf->writeHTML($html, true, false, true, false, '');
 
 // column titles
 $header = array('Supplier ID', 'Name', 'Email', 'Address', 'Location', 'tele', 'Mobile');
@@ -100,8 +110,6 @@ $tbl .= '<tr><td><h6 align="center">'.$id.'</h6></td><td><h6 align="center">'.$n
 }
 // Print text using writeHTMLCell()
 $pdf->writeHTML($tbl_header . $tbl . $tbl_footer, true, false, false, false, '');
-
-// ---------------------------------------------------------
 
 // close and output PDF document
 $pdf->Output('stockdetails.pdf', 'I');
