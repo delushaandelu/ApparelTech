@@ -2,7 +2,11 @@
 <html lang="en">
     <head>        
         <title>Stock Manager</title>                   
-        <link rel="stylesheet" type="text/css" id="theme" href="css/main.css"/>                        
+        <link rel="stylesheet" type="text/css" id="theme" href="css/main.css"/> 
+        <link rel="stylesheet" href="designs/template1.css" type="text/css" />
+        <script src="js/sweetalert-dev.js"></script>
+        <link rel="stylesheet" href="js/sweetalert.css">
+         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.min.css"/>                     
     </head>
     <body>
         
@@ -11,7 +15,7 @@
         ?>
 
                 <ul class="breadcrumb">
-                    <h2>Page Heading here!</li></h2>
+                    <h2>Delivery Details</li></h2>
                 </ul>
 <div id="content">
  
