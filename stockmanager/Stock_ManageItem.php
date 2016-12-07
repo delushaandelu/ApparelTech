@@ -109,6 +109,40 @@
                         });
                
             }
+    </script>
+    <script type="text/javascript">
+
+             function update_item(item_id, sellingPrice,stockQty){
+                
+                var item = item_id;
+                var sellingPrice = sellingPrice;
+                var stockQty = stockQty;
+                
+                //var temp = "#"+item_id;
+                //var temp1 = "'"+temp+"'";
+                alert ("hii");
+
+                 $.ajax({
+
+
+                            url : 'UpdateItem2.php',
+                            method : 'POST',
+                            data : "item=" + item + "sellingPrice=" + sellingPrice + "stockQty=" + stockQty,
+
+                            success : function($result){
+                                alert("Stock upated successfully");
+                                    //$(temp).html(result);
+                                    //$('#tr' + item_id + '').css('background-color','#ccc');
+                                    //$('#tr'+ item_id + '').fadeOut('slow');
+                                    
+                                    //window.location.replace("manage_stock_deleteItem.php");
+
+                                
+                            }
+
+                        });
+               
+            }
       
        </script>
     
@@ -244,7 +278,7 @@
 
                                /* echo "<td>"."<input type ='text' name = \"sellingPrice".$count."\" value ='".$sellingPrice."'>"."</td>";*/
                                 
-                                echo "<td>"."<button type='submit' name='manageItemUpdateBtn' class='myButton'>Update</button>"."</td>";echo"<td></td>";
+                                echo "<td>"."<button type='submit' onclick =\"update_item('".$row['item_id']."','".$row['sellingPrice']."','".$row['stockQty']."')\"name='manageItemUpdateBtn' class='myButton'>Update</button>"."</td>";echo"<td></td>";
                                 //$item_id = $row['item_id'];
                                 echo "<td>"."<input type='submit' onclick=\"delete_item('" . $row['item_id'] . "')\"name='manageItemDeleteBtn' class='btn btn-danger' value='Delete'>"."</td>";
                                 echo "<td></td>";
