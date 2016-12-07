@@ -26,7 +26,7 @@
 
         <?php
 
-        include('database_connection.php');
+        //include('database_connection.php');
 
         $sql = "SELECT rent_id, item_id, startDate, endDate, rentedQty, rentedOrderAmount FROM renteditem";
         $result = $dbcon->query($sql);

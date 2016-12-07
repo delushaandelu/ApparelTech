@@ -48,7 +48,7 @@
 
         <?php
         //include database connection
-        include('database_connection.php');
+        //include('database_connection.php');
 
         //select query for display
         $sql = "SELECT customer_id, nic, fullname, designation, companyname, address, email, mobile, tele FROM customer where status ='false'";

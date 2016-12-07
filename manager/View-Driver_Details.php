@@ -26,7 +26,7 @@
     <div class="row">
         <?php
 
-        include('database_connection.php');
+        //include('database_connection.php');
 
         $sql = "SELECT * FROM driver";
         $result = $dbcon->query($sql);

@@ -42,7 +42,7 @@
 
             <?php
 
-            include('database_connection.php');
+            //include('database_connection.php');
 
             $sql = "SELECT p_id, customer_id, totalprice, created, status FROM purchasereport";
             $result = $dbcon->query($sql);

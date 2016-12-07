@@ -17,7 +17,7 @@
 <!-- get database connection and manager's menu -->
 <?php
     include ("../config/managermenu.php");
-    include('database_connection.php');
+    //include('database_connection.php');
 ?>
             
 <div id="page-wrapper">

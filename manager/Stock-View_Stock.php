@@ -40,7 +40,7 @@
         <!-- display stock -->
         <?php
 
-        include('database_connection.php');
+        //include('database_connection.php');
 
         $sql = "SELECT * FROM item";
         $result = $dbcon->query($sql);

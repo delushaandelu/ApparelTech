@@ -10,6 +10,23 @@
                 <a class="navbar-brand" href="index.html" style="background-color: #0a0a0a; font-size: 30px; color:#FF4500; margin-left: 10%" >Manager</a>
             </div>
             <ul class="nav navbar-top-links navbar-right">
+                <li class="dropdown head-dpdn">
+                   
+                       <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user-plus" style="color: white"></i><span class="badge">
+                           <?php
+                        require("database_connection.php"); 
+
+                            $sql= "select count(customer_id) as total from customer where status='false'";
+                        //$result=mysqli_query($dbcon,$sql);
+                        $result = mysqli_query($dbcon,$sql);
+                        $row = mysqli_fetch_assoc($result);
+                                echo  $row["total"];
+                        ?>  
+                        </span></a>
+                        
+                   
+                    
+                    </li>
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="color: white">
                         <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down" style="color: white"></i>
@@ -98,7 +115,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li>
+                        <!-- <li>
                             <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Quotation<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
@@ -108,7 +125,7 @@
                                     <a href="../manager/Quotation-View_Quotation.php">View</a>
                                 </li>
                             </ul>
-                        </li>
+                        </li> -->
                         <li>
                             <a href="#"><i class="fa fa-cloud-upload"></i> Backup<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">

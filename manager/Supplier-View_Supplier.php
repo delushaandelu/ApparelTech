@@ -50,7 +50,7 @@
             </tr>
 
                 <?php
-                include('database_connection.php');
+                //include('database_connection.php');
 
                 $sql = "SELECT * FROM supplier";
                 $result = $dbcon->query($sql);

@@ -25,7 +25,7 @@
     <div class="row">
         <?php
 
-        include('database_connection.php');
+        //include('database_connection.php');
 
         $sql = "SELECT * FROM vehicle";
         $result = $dbcon->query($sql);
