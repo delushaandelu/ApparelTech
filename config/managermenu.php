@@ -91,7 +91,7 @@
                                     <a href="../manager/ManageUser-View_Customer.php">View customer</a>
                                 </li>
                                 <li>
-                                    <a href="../manager/ManageUser-Manage_Stock_Manager.php">Manage Stock Manager</a>
+                                    <a href="../manager/ManageUser-Manage_Stock_Manager.php">Manage Admin Panel</a>
                                 </li>
                             </ul>
                         </li>

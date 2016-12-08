@@ -77,7 +77,6 @@
         <div id="content">
 		<div id="top">
         	<div id="top-left">
-
 				<!--handle form-->
             	<form name="form1" method="post" action="supplier.php" onsubmit="return check();">
                 	<table border="0">
@@ -110,10 +109,11 @@
 
                          
                         </table>
+                        <br><br><br><br>
 
 					<!--button-->
                   <div id="">
-                      <button type="submit" id="button2"  name="insert" >Add  <i class="fa fa-plus-circle" aria-hidden="true"></i></button>
+                      <button type="submit" id="button1"  name="insert" >Add  <i class="fa fa-plus-circle" aria-hidden="true"></i></button>
 				  </div>
 			</form>
 		</div>
