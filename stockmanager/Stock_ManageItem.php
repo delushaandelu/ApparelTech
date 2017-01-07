@@ -248,11 +248,11 @@
                             
                                 echo "<th>Item ID</th>"; echo"<td width = 2%></td>";
                                 echo "<th >Item Name</th>";echo"<td width = 2%></td>";
-                                echo "<th>Category</th>";echo"<td width=2%></td>";
+                                echo "<th>Category</th>";echo"<td width=6%></td>";
                                 echo "<th>Brand</th>";echo"<td width=2%></td>";
                                 echo "<th>Buying Price</th>";echo"<td width = 2%></td>";
-                                echo "<th>Selling Price</th>";echo"<td width=2%></td>";
-                                echo "<th>Quantity</th>";echo"<td width=2%></td>";
+                                echo "<th>Selling Price</th>";echo"<td width=1%></td>";
+                                echo "<th>Quantity</th>";echo"<td width=1%></td>";
                                 echo "<th></th>";echo"<td width=4%></td>";
 
                                 echo "<th></th>";echo"<td width=2%></td>";
