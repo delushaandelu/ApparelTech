@@ -11,7 +11,7 @@
         ?>
 
                 <ul class="breadcrumb">
-                    <h2>All Stock</li></h2>
+                    <h4>All Stock</li></h4>
                 </ul>
 
     <div id="exp">

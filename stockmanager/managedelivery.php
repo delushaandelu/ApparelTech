@@ -15,11 +15,11 @@
         ?>
 
                 <ul class="breadcrumb">
-                    <h2>Delivery Details</li></h2>
+                    <h4>Delivery Details</li></h4>
                 </ul>
 <div id="content">
  
-        <table class="table table-striped">
+        <table  class="table datatable">
             
             <tr class="title">
                 <th><center>Request Id</center></th>
@@ -32,7 +32,7 @@
                 <th><center>Branch</center></th>
                 <th><center>Voucher</center></th>
                 <th><center>Amount</center></th>
-                <center><th colspan="2">Action</th></center></tr>
+                <center><th colspan="2"><center>Action</center></th></center></tr>
             <?php 
                     $sql = "select * from deliveryrequest";
                     $result = mysqli_query($dbcon,$sql);        
@@ -52,7 +52,7 @@
                             <td><center><?php echo $row['amount'] ?></center></td>
                                 <td class="bt"><center><button type="button" class="btn" name="Update" ><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Accept</button></center></td>
                                 <td class="bt"><center><button type="button" class="btn btn-danger" name="Delete" ><i class="fa fa-trash" ></i> Reject</button></center></td>
-                                <td class="bt"><center><button type="button" class="btn" name="Update" ><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Print invoice</button></center></td>
+                                
                             </tr>
                 
                  <?php } ?>

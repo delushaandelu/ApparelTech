@@ -16,14 +16,14 @@
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <style type="text/css">
-        .signin{
+       .signin{
             width: 200px;
-           
+           height: 25px;
         }
         .signup{
             color: aliceblue;
             width: 200px;
-            
+            height: 25px;
         }
         .signup a{
             color: aliceblue;
@@ -53,6 +53,7 @@
             
 			<br/>
             </form></br>
+        
            <button class="signup"><a href="signup.php"> Sign up </a></button>   
             </br>
 			<a href="#"><p class="small">Forgot your password?</p></a>

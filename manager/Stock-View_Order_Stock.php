@@ -26,7 +26,7 @@
          <div id="content">
 
         <div id="top2">
-            <table style width="100%" class="table table-striped">
+            <table style width="100%" class="table datatable">
                 <tr>
                     <th>Report ID</th>
                     <th>Date</th>

@@ -62,7 +62,7 @@
         ?>
 
                 <ul class="breadcrumb">
-                    <h2>Manage Stock</h2>
+                    <h4>Manage Stock</h4>
                 </ul>
 <div class = "panel">
         
@@ -79,7 +79,7 @@
                                         
                                         <tr class="spaceUnder">
                                             <td id="table_font"  width="20%"> Category Name</td> 
-                                            <td><select id = "categoryname" name="categoryname" class="add_dropdown_effects">
+                                            <td><select id = "categoryname" name="categoryname" class="add_dropdown_effects" class="form-control">
                                                     <option value="0"> Select Category Name</option>
                                                     <option value="Sewing Machines">Sewing Machines</option>
                                                     <option value="Sewing Machine Spare Parts">Sewing Machine Spare Parts</option>

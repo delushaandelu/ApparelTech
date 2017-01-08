@@ -82,7 +82,7 @@
                     <li class="xn-openable">
                         <a href="#"><span class="fa fa-pencil"></span> <span class="xn-text">Delivery</span>
                         <ul>                            
-                            <li><a href="managedelivery.php"><span class="fa fa-tasks"></span> Manage Delivery</a></li>	`1123
+                            <li><a href="managedelivery.php"><span class="fa fa-tasks"></span> Manage Delivery</a></li>
                             <li><a href="#"><span class="fa fa-file-text-o"></span> Delivery Reports</a></li>
                             <li><a href="driver_details.php"><span class="fa fa-arrow-right"></span> Driver Details</a></li>
                             <li><a href="vehicle_details.php"><span class="fa fa-arrow-right"></span> Vehicle Details</a></li>

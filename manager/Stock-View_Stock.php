@@ -8,6 +8,13 @@
     <link href="dist/css/sb-admin-2.css" rel="stylesheet">
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="designs/test123.css" type="text/css" />
+    <style type="text/css">
+        .stocktb{
+            width: 50%;
+            height: 20%;
+        }
+    
+    </style>
 </head>
 
 <body>
@@ -20,21 +27,25 @@
     <div class="row">
         <div class="col-lg-12">
             <div class="1">
-                <h2 class="page-header">Stock Details</h2>
+                <h4 class="page-header">Stock Details</h4>
             </div>
-            <div class="2">
-                <div class="2">
+            <div class="">
+                <div class="">
                     <!-- live search box -->
-                    <input type="text" id="myInput1" onkeyup="myFunction1()" class="form-control" placeholder="&#x26B2    id..." style="width: 170px " >
-                    <input type="text" id="myInput2" onkeyup="myFunction2()" class="form-control" placeholder="&#x26B2    category..." style="width: 170px " >
-                    <input type="text" id="myInput3" onkeyup="myFunction3()" class="form-control" placeholder="&#x26B2    name..." style="width: 170px " >
-                    <input type="text" id="myInput4" onkeyup="myFunction4()" class="form-control" placeholder="&#x26B2    brand..." style="width: 170px " >
-
+                    <table class="table datatable" width="500px;">
+                    <tr>
+                    <td><input type="text" id="myInput1" onkeyup="myFunction1()" class="form-control" placeholder="&#x26B2    id..." style="width: 170px " ></td>   
+                    <td> <input type="text" id="myInput2" onkeyup="myFunction2()" class="form-control" placeholder="&#x26B2    category..." style="width: 170px " ></td>
+                    <td> <input type="text" id="myInput3" onkeyup="myFunction3()" class="form-control" placeholder="&#x26B2    name..." style="width: 170px " ></td> 
+                    <td> <input type="text" id="myInput4" onkeyup="myFunction4()" class="form-control" placeholder="&#x26B2    brand..." style="width: 170px " ></td> 
+                    </tr>
+                    </table>
                 </div>
             </div>
             
         </div>
-        
+        <br>
+        <br>
     </div>
     <div class="row">
         <!-- display stock -->
@@ -46,7 +57,7 @@
         $result = $dbcon->query($sql);
 
         if ($result->num_rows > 0) {
-            echo "<table class='table table-hover' id='myTable'>";
+            echo "<table class='table datatable' id='myTable'>";
             echo"<tr class='info'>
                 <th>Item ID </th>
                 <th>Item Name </th>

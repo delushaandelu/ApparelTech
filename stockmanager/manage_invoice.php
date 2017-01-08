@@ -27,7 +27,7 @@
     
     <div id="invoice_content">
     
-    <table class="table table-striped" id="intb">
+    <table class="table datatable" id="intb">
                     <tr class="title">
                         <th><center>id</center></th>
                         <th><center>customerid</center></th>

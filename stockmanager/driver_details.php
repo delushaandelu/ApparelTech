@@ -46,7 +46,7 @@
 
 <div id="content">
  
-        <table class="table table-striped">
+        <table class="table datatable">
             
             <tr class="title">
                 <th><center>driver_id</center></th>

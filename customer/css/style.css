@@ -68,7 +68,7 @@ p.small {
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#99000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
 }
 
-.--box {
+.login-box {
 	background-color:#C0C0C0;
 	max-width: 340px;
 	margin: 0 auto;

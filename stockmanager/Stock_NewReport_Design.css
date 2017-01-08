@@ -51,10 +51,11 @@ body, html{
   font-size:15px;
   padding:5px 31px;
   text-decoration:none;
+    border: none;
   
 }
 #btnNewReportGenerateReport:hover {
-  background-color:cadetblue;
+  background-color:#1caf9a;
 }
 #btnNewReportGenerateReport:active {
   position:relative;

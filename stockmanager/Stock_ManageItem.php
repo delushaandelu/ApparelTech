@@ -179,7 +179,7 @@
         ?>
 
                 <ul class="breadcrumb">
-                    <h2>Manage Stock</li></h2>
+                    <h4>Manage Stock</li></h4>
                 </ul>
         <div class = "panel">
         

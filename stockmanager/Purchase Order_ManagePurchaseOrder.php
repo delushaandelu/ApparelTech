@@ -28,7 +28,7 @@
 <div id="content">
         <div class="panel">
             <div class="panel-heading">
-                <table class="table table-striped" id="potb">
+                <table class="table datatable" id="potb">
                     <tr class="title">
                         <th><center>id</center></th>
                         <th><center>customerid</center></th>

@@ -69,7 +69,7 @@
     <div class="row">
         <div class="col-lg-12">
 			<!--page heading-->
-            <h2 class="">Manage Supplier</h2>
+            <h4 class="">Manage Supplier</h4>
         </div>
         
     </div>
@@ -113,7 +113,7 @@
 
 					<!--button-->
                   <div id="">
-                      <button type="submit" id="button1"  name="insert" >Add  <i class="fa fa-plus-circle" aria-hidden="true"></i></button>
+                      <button type="submit" id="button1"  name="insert" >Add</button>
 				  </div>
 			</form>
 		</div>

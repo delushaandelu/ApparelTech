@@ -41,7 +41,7 @@
 </br></br>
 
 <div id="content">
-        <table class="table table-striped">
+        <table class="table datatable">
             <tr class="title"><th>vehicle_id</th><th>vehicleNO</th><th>capacity</th><th>vehicletype</th><th>status</th><th colspan="2"><center>Action</center></th></tr>
                 <?php 
                     $sql = "select * from vehicle";

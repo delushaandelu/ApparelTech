@@ -25,7 +25,7 @@
     <div class="row">
         <div class="col-lg-12">
             <div class="1">
-                <h2 class="page-header">Suppliers</h2>
+                <h4 class="page-header">Suppliers</h4>
             </div>
             <div class="2">
                 <input type="text" id="myInput" onkeyup="myFunction()" class="form-control" placeholder="&#x26B2   Search for suppliers by name..." style="width: 300px">
@@ -37,7 +37,7 @@
     <div class="row">
             <form name="getcvs" action="" method="POST">
             <!-- view supplier-->
-            <table class='table' style='border: 0;' id='myTable'>
+            <table class="table datatable" style='border: 0;' id='myTable'>
                 <tr>
                 <th><h4 align='center'>Supplier ID </h4></th>
                 <th><h4 align='center'>Name </h4></th>

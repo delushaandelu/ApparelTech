@@ -48,7 +48,7 @@
         ?>
 
                 <ul class="breadcrumb">
-                    <h2>New Reports</li></h2>
+                    <h4>New Reports</li></h4>
                 </ul>
 
 <form method="post">

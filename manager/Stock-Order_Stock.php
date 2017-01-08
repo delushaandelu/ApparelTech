@@ -18,7 +18,7 @@
 <div id="page-wrapper">
     <div class="row">
         <div class="col-lg-12">
-            <h2 class="page-header">Order Stock</h2>
+            <h4 class="page-header">Order Stock</h4>
         </div>
         
     </div>
@@ -31,38 +31,38 @@
             </h4>
             <br><br>
             
-            <table class="table">
+            <table class="table datatable">
                 <tr>
                     <th>Item ID</th>
                     <th>Item Name</th>
                     <th>Model Name</th>
                     <th>Unit Price</th>
                 </tr>
-                <tr class="success">
+                <tr class="">
                     <td>dfdef</td>
                     <td>dv</td>
                     <td>dvgdfb</td>
                     <td>fgrdh</td>
                 </tr>
-                <tr class="danger">
+                <tr class="">
                     <td>dfdef</td>
                     <td>dfdef</td>
                     <td>dfdef</td>
                     <td>dfdef</td>
                 </tr>
-                <tr class="info">
+                <tr class="">
                     <td>dfdef</td>
                     <td>dfdef</td>
                     <td>dfdef</td>
                     <td>dfdef</td>
                 </tr>
-                <tr class="success">
+                <tr class="">
                     <td>dfdef</td>
                     <td>dfdef</td>
                     <td>dfdef</td>
                     <td>dfdef</td>
                 </tr>
-                <tr class="danger">
+                <tr class="">
                     <td>dfdef</td>
                     <td>dfdef</td>
                     <td>dfdef</td>

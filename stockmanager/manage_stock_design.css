@@ -80,11 +80,12 @@ tr.spaceUnder > td
 	padding:5px;
 	text-decoration:none;
     width:120px;
+    border: none;
 
 	
 }
 .myButton:hover {
-	background-color:cadetblue;
+	background-color:#1caf9a;
 }
 .myButton:active {
 	position:relative;
@@ -101,6 +102,7 @@ tr.spaceUnder > td
 	padding:5px;
 	text-decoration:none;
     width:125px;
+    border: none;
 }
 
 #btnManageStockAddToExisting{

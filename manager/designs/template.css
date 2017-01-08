@@ -248,7 +248,7 @@ td{
     height:35px;
     color:#FFFFFF;
     background-color:#1caf9a;
-    
+    border: none;
 }
 #buttonbackup{
     border-radius:5px;
@@ -261,7 +261,7 @@ td{
 }
 
 #button1:hover{
-    background-color:cadetblue;
+    background-color:#1caf9a;
 }
 
 button1:active {
