@@ -56,7 +56,6 @@
                                     <li><a href="manage_invoice.php"><span class="fa fa-table"></span> Manage Invoice</a></li>
                                 </ul>
                                 <ul>
-                                    <li><a href="AddInvoice.php"><span class="fa fa-table"></span> View Invoice</a></li>
                                 </ul>
                             </li>
                             
@@ -66,7 +65,7 @@
                                 <a href="#"><span class="fa fa-pencil"></span> Create Purchase Orders</a>
                                 <ul>
                                     <li><a href="#"><span class="fa fa-align-center"></span> Purchase Order</a></li>
-                                    <li><a href="#"><span class="fa fa-table"></span> View Purchase Order</a></li>
+                                    
                                 </ul>
                             </li>
                             
@@ -85,7 +84,6 @@
                         <ul>                            
                             <li><a href="managedelivery.php"><span class="fa fa-tasks"></span> Manage Delivery</a></li>	`1123
                             <li><a href="#"><span class="fa fa-file-text-o"></span> Delivery Reports</a></li>
-                            <li><a href="viewdelivery.php"><span class="fa fa-list-alt"></span> Delivery Details</a></li>
                             <li><a href="driver_details.php"><span class="fa fa-arrow-right"></span> Driver Details</a></li>
                             <li><a href="vehicle_details.php"><span class="fa fa-arrow-right"></span> Vehicle Details</a></li>
                             
@@ -94,7 +92,6 @@
                     <li class="xn-openable">
                         <a href="#"><span class="fa fa-arrows-h"></span><span class="xn-text"> Setting</span></a>
                         <ul>                            
-                            <li><a href="#"><span class="fa fa-align-justify"></span> Change Username</a></li>
                             <li><a href="changepassword.php"><span class="fa fa-sort-alpha-desc"></span> Change Password</a></li>
                         </ul>
                     </li>
@@ -114,7 +111,7 @@
                     </li>
                     <li class="dropdown head-dpdn">
                    
-                       <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope"></i><span class="badge">
+                       <a href="Purchase%20Order_ManagePurchaseOrder.php" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope"></i><span class="badge">
                            <?php
                         require("database_connection.php"); 
 

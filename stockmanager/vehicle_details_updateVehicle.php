@@ -12,9 +12,9 @@
     include("../config/stockmgrmenu.php");  
 ?>
 
-<ul class="breadcrumb">
+<!--<ul class="breadcrumb">
     <h2>Update Vehicle</li></h2>
-</ul>
+</ul>-->
     
     
 <?php

@@ -48,7 +48,7 @@
                             <td><center><?php echo $row['total_price'] ?></center></td>
                             <td><center><?php echo $row['created'] ?></center></td>
                                 
-                                <td class="bt"><center><button type="button" class="btn btn-danger" onclick="location.href='Purchase Order_ManagePurchaseOrder.php?id=<?php echo $row['id'] ?>'"><i class="fa fa-trash-o"></i>Reject</button></center></td>
+                                <td class="bt"><center><button type="button" class="btn btn-danger" onclick="location.href='Purchase Order_ManagePurchaseOrder.php?id=<?php echo $row['id'] ?> & customerid=<?php echo $row['customer_id'] ?>'"><i class="fa fa-trash-o"></i>Reject</button></center></td>
                                 
                                 <td class="bt"><center><button type="button" class="btn"  onclick="location.href='Purchase Order_ManagePurchaseOrder.php?ID=<?php echo $row['id'] ?> & customer_id=<?php echo $row['customer_id'] ?>'" ><i class="fa fa-check" aria-hidden="true"></i>Accept</button></center></td>
                                 
@@ -114,11 +114,41 @@
                                 }
             
             
-            
+             
                         }
-                        if(isset($_GET['id'])){
+                        if(!empty($_GET['id']) && !empty($_GET['customerid'])){
                             $id=$_GET['id'];
-            
+                            $cusid=$_GET['customerid'];
+                            
+                            $username = 'chamrithjay@gmail.com';
+    	                    $hash = '1993Minuwangoda';
+    	
+    	                   // Message details
+                            $sqlsms="SELECT mobile FROM customer WHERE customer_id=$cusid";
+                            $sqlsms=mysqli_query($dbcon,$sqlsms);
+                            $row=mysqli_fetch_assoc($sqlsms);
+                            //echo $row['mobile'];
+                            $numbers = $row['mobile'];
+        
+    	                   $sender = urlencode('Appreltech');
+    	                   $message = rawurlencode('Your purchase order no '.$id.'is rejected.');
+     
+    	                   //$numbers = implode(',', $numbers);
+     
+    	                   // Prepare data for POST request
+    	                   $data = array('username' => $username, 'hash' => $hash, 'numbers' => $numbers, "sender" => $sender, "message" => $message);
+     
+    	// Send the POST request with cURL
+    	                   $ch = curl_init('http://api.txtlocal.com/send/');
+    	                   curl_setopt($ch, CURLOPT_POST, true);
+    	                   curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+    	                   curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    	                   $response = curl_exec($ch);
+    	                   curl_close($ch);
+    	
+    	                   // Process your response here
+    	                   echo $response;
+                            
                             $sqldelete="DELETE FROM orders WHERE id=$id";
                             $result=mysqli_query($dbcon,$sqldelete);
                             $sqldelete1="DELETE FROM order_items WHERE order_id=$id";

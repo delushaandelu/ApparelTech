@@ -17,7 +17,7 @@
 ?>
 
 <ul class="breadcrumb">
-    <h2>Change Password here!</li></h2>
+    <h4>Change Password </li></h4>
 </ul>
     
     
@@ -40,6 +40,7 @@
                         <td id="table_font">Confirm Password*</td>
                         <td><input type="password" name="confirmpassword"  class="form-control"></td>
                     </tr>
+                   
                     <tr>
                         <td colspan="2"><center><input type="reset" class="btn" value="Reset" />    
                         <input type="submit" class="btn" name="changepswd" value="Change"/></center></td>    

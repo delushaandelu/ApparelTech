@@ -15,6 +15,20 @@
 	<link rel="stylesheet" href="css/style.css">
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <style type="text/css">
+        .signin{
+            width: 200px;
+           
+        }
+        .signup{
+            color: aliceblue;
+            width: 200px;
+            
+        }
+        .signup a{
+            color: aliceblue;
+        }
+    </style>
 </head>
 
 <body>
@@ -26,24 +40,25 @@
 			<div class="box-header">
                 <h2><span style="color:#ffffff">Log In</span></h2>
 			</div>
-			<form method="POST">
+			<form name="login" action="<?php htmlspecialchars($_SERVER['PHP_SELF']) ?>" onsubmit="return validateForm()" method="POST">
 			<label for="username">Username</label>
 			<br/>
-			<input type="text" name="username" required>
+			<input type="text" name="username">
 			<br/>
 			<label for="password">Password</label>
 			<br/>
-			<input type="password" name="password" required>
+			<input type="password" name="password">
 			<br/>
-			<button type="submit" name="signin">Sign In</button>
+			<button type="submit" name="signin" class="signin">Sign In</button>
             
 			<br/>
-			</form>
-            Dont't have an account!<a href="signup.php"> Signup </a> Now    
+            </form></br>
+           <button class="signup"><a href="signup.php"> Sign up </a></button>   
             </br>
 			<a href="#"><p class="small">Forgot your password?</p></a>
 		</div>
 	</div>
+    
 </body>
 
 
@@ -51,8 +66,10 @@
 session_start();
 if(isset($_POST['signin'])){
     require ('../config/database.php');
-    $username = $_POST['username'];
-    $password = $_POST['password'];
+    $username = mysqli_real_escape_string($conn, $_POST['username']);
+    $password = mysqli_real_escape_string($conn, $_POST['password']);
+    $username = htmlspecialchars($username);
+    $password = htmlspecialchars($password);
    // $password = md5($password);
     $_SESSION['username'] = $username;
     
@@ -94,4 +111,19 @@ if(isset($_POST['signin'])){
         echo "</script>";
 }
 ?>
+<script>
+function validateForm() {
+    var username = document.forms["login"]["username"].value;
+    var password = document.forms["login"]["password"].value;
+    
+    if (username == "") {
+        alert("Name must be filled out");
+        return false;
+    }
+    if (password == "") {
+        alert("password must be filled out");
+        return false;
+    }
+}
+</script>
 </html>

@@ -15,6 +15,9 @@
         width: 600px;
         height: 550px;
         }
+    .btn{
+        width: 200px;
+    }
 </style>
 <div id="content">
         
@@ -23,7 +26,7 @@
             <div id = "top_left_vehicle">
                 <form method="post" action="vehicle_details_addVehicle.php">
                      <div class="panel-heading-vehicle" align="center">Add Vehicle</div>
-                    <table id="vehicletb" border="0" width="500" height="500" >
+                    <table id="vehicletb" border="0" width="800" height="400" >
 
                         <tr>
                             <td id="table_font">Vehicle Number</td>
@@ -66,8 +69,7 @@
                         </tr>
                         <tr>
                         <td colspan="2"><center><input type="submit" class="btn" name="VehicleInsert" value="Insert"/>
-                    <button type="button" class="btn">Clear</button>
-                    <button type="reset" class="btn">Refresh</button></center></td>
+                    
                         </tr>
                     </table>
              </form>

@@ -1,9 +1,9 @@
 .centre{
     color:beige;
-    margin-top: 15%;
-    margin-left: 32%;
-    width: 420px;
-    height: 360px;
+    margin-top: 10%;
+    margin-left: 0%;
+    width: 100%;
+    height: 30%;
     border-style: solid;
     border-color: black;
     border-width: 1px;
@@ -12,14 +12,15 @@
 }
 #joblist{
     margin-top:4%;
-    margin-left:13%;
-    width: 300px;
+    margin-left:20%;
+    width: 70%;
     height: 300px;
     position: relative;
     
 }
 #joblist td{
     color: black;
+    
 }
 .panel-heading{
     background-color:#333;
@@ -29,4 +30,5 @@
   .btn{
     color: white;
     background-color: #1caf9a;
+    width: 200px;
 }

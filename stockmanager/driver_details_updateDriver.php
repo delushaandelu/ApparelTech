@@ -13,10 +13,7 @@
     include("../config/stockmgrmenu.php");
 ?>
 
-<ul class="breadcrumb">
-    <h2>Page Heading here!</li></h2>
-</ul>
-    
+
     
 <?php
     $driver_id= $_GET['ID'];
@@ -63,11 +60,11 @@
     
                 ?>
     
-                    <tr><td>DriverName</td><td><input class="in" type=text name=driverName value="<?php echo $row['driverName'] ?>"></td></tr>
-                    <tr><td>LicenceNo</td><td><input class="in" type=text name=LicenceNo value="<?php echo $row['LicenceNo'] ?>"></td></tr>
-                    <tr><td>DriverAddress</td><td><input class="in" type=text name=driverAddress value="<?php echo $row['driverAddress'] ?>"></td></tr>
-                    <tr><td>MobileNo</td><td><input class="in" type=text name=mobileNo value="<?php echo $row['mobileNo'] ?>"></td></tr>
-                    <tr><td>Vehicleid</td><td><select name="vehicleID">
+                    <tr><td>Driver Name</td><td><input class="form-control" type=text name=driverName value="<?php echo $row['driverName'] ?>"></td></tr>
+                    <tr><td>Licence No</td><td><input class="form-control" type=text name=LicenceNo value="<?php echo $row['LicenceNo'] ?>"></td></tr>
+                    <tr><td>Driver Address</td><td><input class="form-control" type=text name=driverAddress value="<?php echo $row['driverAddress'] ?>"></td></tr>
+                    <tr><td>Mobile No</td><td><input class="form-control" type=text name=mobileNo value="<?php echo $row['mobileNo'] ?>"></td></tr>
+                    <tr><td>Vehicle id</td><td><select name="vehicleID">
                     <?php
                         $sql="SELECT vehicle_id FROM vehicle";
                         $result=mysqli_query($dbcon,$sql);

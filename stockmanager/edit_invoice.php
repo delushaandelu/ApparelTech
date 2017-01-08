@@ -5,7 +5,7 @@
 	<meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
 	
 	<title>Editable Invoice</title>
-	
+<div id="page-wrap">	
 	<link rel='stylesheet' type='text/css' href='css/invoice_css/style.css' />
 	<link rel='stylesheet' type='text/css' href='css/invoice_css/print.css' media="print" />
 	<script type='text/javascript' src='js/jquery-1.3.2.min.js'></script>
@@ -15,12 +15,21 @@
 </head>
 
 <body>
-    
+    <script>
+    function printPageArea(areaID){
+	var printContent = document.getElementById(areaID);
+	var WinPrint = window.open('', '', 'width=2000,height=850');
+	WinPrint.document.write(printContent.innerHTML);
+	WinPrint.document.close();
+	WinPrint.focus();
+	WinPrint.print();
+	WinPrint.close();
+}
+</script>
     <?php
     require("database_connection.php");
     ?>
-
-	<div id="page-wrap">
+	
     
 
 		<textarea id="header">INVOICE</textarea>
@@ -111,9 +120,6 @@ c/o Steve Widget</textarea>
 		  <?php	}}?>
 		  
 		  
-		  <tr id="hiderow">
-		    <td colspan="5"><a id="addrow" href="javascript:;" title="Add a row">Add a row</a></td>
-		  </tr>
 		  
 		  <tr>
 		      <td colspan="2" class="blank"> </td>
@@ -146,7 +152,7 @@ c/o Steve Widget</textarea>
 		</div>
 	
 	</div>
-	
+	 <a href="javascript:void(0);" id="print_button2" style="width: 130px; padding: 5px 8px 5px 8px;text-align: center;float: right;background-color:#1caf9a;color: #fff;text-decoration: none; margin: 10px;" onclick="printPageArea('page-wrap')">Print Invoice</a>
 </body>
 
 </html>

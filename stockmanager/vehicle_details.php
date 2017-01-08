@@ -13,7 +13,7 @@
 ?>
 
 <ul class="breadcrumb">
-    <h2>Vehicle Details</li></h2>
+    <h4>Vehicle Details</li></h4>
 </ul>
 <div class = "panel">
         
@@ -42,7 +42,7 @@
 
 <div id="content">
         <table class="table table-striped">
-            <tr class="title"><th>vehicle_id</th><th>vehicleNO</th><th>capacity</th><th>vehicletype</th><th>status</th><th>Action</th></tr>
+            <tr class="title"><th>vehicle_id</th><th>vehicleNO</th><th>capacity</th><th>vehicletype</th><th>status</th><th colspan="2"><center>Action</center></th></tr>
                 <?php 
                     $sql = "select * from vehicle";
                     $result = mysqli_query($dbcon,$sql);        

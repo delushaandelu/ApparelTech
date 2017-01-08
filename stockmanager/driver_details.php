@@ -16,7 +16,7 @@
  ?>
 
 <ul class="breadcrumb">
-    <h2>Driver Details</li></h2>
+    <h4>Driver Details</li></h4>
 </ul>
 <div class = "panel">
         
@@ -55,7 +55,7 @@
                 <th><center>driverAddress</center></th>
                 <th><center>Mobile No</center></th>
                 <th><center>vehicle_id</center></th>
-                <center><th colspan="2">Action</th></center></tr>
+                <center><th colspan="2"><center>Action</center></th></center></tr>
                 <?php 
                     $sql = "select * from driver";
                     $result = mysqli_query($dbcon,$sql);        

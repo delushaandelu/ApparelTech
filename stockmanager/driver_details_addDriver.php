@@ -22,6 +22,9 @@
         font-size:10px;
         font-style: oblique;
         }
+    .btn{
+        width: 200px;
+    }
 </style>
 </head>
 
@@ -102,7 +105,7 @@ if(isset($_POST['DriverInsert'])){
             <div id = "top_left_driver">
                 <div class="panel-heading-driver" align="center">Add Driver</div>
                 <form method="post" action="<?php htmlspecialchars($_SERVER['PHP_SELF']) ?>">
-                    <table id="drivertb" border="0" width="500" height="500" >
+                    <table id="drivertb" border="0" width="800" height="400" >
 
                         <tr>
 
@@ -121,12 +124,11 @@ if(isset($_POST['DriverInsert'])){
                             </td>
                         </tr>
                         <tr>
-                            <td id="table_font" align="center">MobileNo<span class="error"><?php echo $Mobileerr;?></span></td>
-                            <td>
-                                <input type="text" name="mobileNo"  class="form-control" >
-                            </td>
+                        <td id="table_font" align="center">MobileNo<span class="error"><?php echo $Mobileerr;?></span></td>
+                        <td>
+                            <input type="text" name="mobileNo"  class="form-control" >
+                        </td>
                         </tr>
-
                         <tr>
 
                             <td id="table_font">Address<span class="error"><?php echo $Addresserr;?></span></td>
@@ -154,8 +156,6 @@ if(isset($_POST['DriverInsert'])){
                         </tr>
                         <tr>
                         <td colspan="2"><center><input type="submit" class="btn" name="DriverInsert" value="ADD"/>
-                        <button type="button" class="btn">Clear</button>
-                        <button type="reset" class="btn">Refresh</button></center></td>
                         
                         </tr>
 

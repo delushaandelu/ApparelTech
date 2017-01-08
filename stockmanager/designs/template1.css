@@ -48,10 +48,10 @@ body
 }
 
 #top_left_driver{
-    margin-left:15%;
+    margin-left:-16%;
     margin-top:-3%;
-	width:600px;
-	height:530px;
+	width:150%;
+	height:130%;
 	background-color:white;
 	float:left;
     border-style: solid;
@@ -330,9 +330,10 @@ margin-left: 10%;
 	border-radius: 15px;
 }
 #top_left_vehicle{
-    margin-left:14%;
-    width:600px;
-	height:530px;
+    margin-top: 1%;
+    margin-left:-16%;
+    width:150%;
+	height:130%;
 	background-color:white;
 	border-style: solid;
     border-color: black;
@@ -340,7 +341,7 @@ margin-left: 10%;
 	float:left;
 }
 #vehicletb{
-    margin-left: 9%;
+    margin-left: 10%;
 }
 .panel-heading-vehicle{
     background-color:#333;
@@ -366,4 +367,5 @@ margin-left: 10%;
   .btn{
     color: white;
     background-color: #1caf9a;
+    width: 90px;
 }

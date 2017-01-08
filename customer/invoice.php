@@ -165,8 +165,8 @@ session_start();
         </div>
     </div>
     <div id="action" class="av">
-        <a href="javascript:void(0);" id="print_button2" style="width: 130px; padding: 5px 8px 5px 8px;text-align: center;float: right;background-color: #02A6D8;color: #fff;text-decoration: none; margin: 10px;" onclick="printPageArea('invoice')">Print Invoice</a>
-        <button type="button" class="btn btn-success">Reply vai Email</button>
+        <a href="javascript:void(0);" id="print_button2" style="width: 130px; padding: 5px 8px 5px 8px;text-align: center;float: right;background-color: #1caf9a;color: #fff;text-decoration: none; margin: 10px;" onclick="printPageArea('invoice')">Print Invoice</a>
+        <button type="button" class="btn btn-success">Reply via Email</button>
     </div>
 </div>
 </body>

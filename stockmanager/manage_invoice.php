@@ -21,7 +21,7 @@
         ?>
 
                 <ul class="breadcrumb">
-                    <h2>Page Heading here!</li></h2>
+                    <h4>Manage Invoice</li></h4>
                 </ul>
     
     
