@@ -113,22 +113,23 @@
     <script type="text/javascript">
 
              function update_item(item_id, sellingPrice,stockQty){
-                
-                var item = item_id;
+
+               // alert (sellingPrice);
+                var item_id = item_id;
                 var sellingPrice = sellingPrice;
                 var stockQty = stockQty;
-                
+               
                 //var temp = "#"+item_id;
                 //var temp1 = "'"+temp+"'";
-                alert ("hii");
+                //alert ("hii");
 
                  $.ajax({
 
 
                             url : 'UpdateItem2.php',
                             method : 'POST',
-                            data : "item=" + item + "sellingPrice=" + sellingPrice + "stockQty=" + stockQty,
-
+                            data : {"item_id" : item_id , "sellingPrice" : sellingPrice , "stockQty" : stockQty},
+                           //alert (item);
                             success : function($result){
                                 alert("Stock upated successfully");
                                     //$(temp).html(result);
@@ -246,42 +247,43 @@
                         echo "<table border = '0' class='table table-hover'>";
                             echo "<tr bgcolor='#C0C0C0' width = '10px' >";
                             
-                                echo "<th>Item ID</th>"; echo"<td width = 2%></td>";
-                                echo "<th >Item Name</th>";echo"<td width = 2%></td>";
-                                echo "<th>Category</th>";echo"<td width=6%></td>";
-                                echo "<th>Brand</th>";echo"<td width=2%></td>";
-                                echo "<th>Buying Price</th>";echo"<td width = 2%></td>";
-                                echo "<th>Selling Price</th>";echo"<td width=1%></td>";
-                                echo "<th>Quantity</th>";echo"<td width=1%></td>";
-                                echo "<th></th>";echo"<td width=4%></td>";
+                                echo "<th width='10px' style='text-align:center'>Item ID</th>";
+                                echo "<th width='10px' style='text-align:center'>Item Name</th>";
+                                echo "<th width='150px' style='text-align:center'>Category</th>";
+                                echo "<th width='10px' style='text-align:center'>Brand</th>";
+                                echo "<th width='10px' style='text-align:center'>Buying Price</th>";
+                                echo "<th width='70px' style='text-align:center'>Selling Price</th>";
+                                echo "<th width='60px' style='text-align:center'>Quantity</th>";
+                                echo "<th width='2px'></th>";
 
-                                echo "<th></th>";echo"<td width=2%></td>";
+                                echo "<th width='2px'></th>";
                                 
                             echo "</tr>";
                             
                          
                         while($row = mysqli_fetch_array($result)){
+                            //echo '<form action = "UpdateItem.php" method="post">';
                             echo "<div id='".$row['item_id']."'>";
                             echo "<tr>";
                                 
-                                echo "<td>" . $row['item_id'] . "</td>"; echo"<td ></td>";
-                                echo "<td>" . $row['itemName'] . "</td>";echo"<td></td>";
-                                echo "<td>" . $row['catagery'] . "</td>";echo"<td></td>";
-                                echo "<td>" . $row['brand'] . "</td>";echo"<td></td>";
-                                echo "<td>" . $row['buyingPrice'] . "</td>";echo"<td></td>";
+                                echo "<td width='10px' style='text-align:center'>" . $row['item_id'] . "</td>"; 
+                                echo "<td width = '10px' style='text-align:center'>" . $row['itemName'] . "</td>";
+                                echo "<td width='150px' style='text-align:center'>" . $row['catagery'] . "</td>";
+                                echo "<td width='10px' style='text-align:center'>" . $row['brand'] . "</td>";
+                                echo "<td width='10px' style='text-align:center'>" . $row['buyingPrice'] . "</td>";
                                 $sellingPrice = $row['sellingPrice'];
-                                echo "<td>" . "<input type='text' value='$sellingPrice' name='sellingPrice'> ". "</td>";
-                                echo"<td></td>";
+                                echo "<td style='text-align:center'>" . "<input type='text' style='width:80px' value='$sellingPrice' name='sellingPrice' id='sellingPrice'> ". "</td>";
+                                
                                 $stockQty = $row['stockQty'];
-                                echo "<td>" . "<input type='text' value='$stockQty' name='stockQty'> ". "</td>";
-                                echo"<td></td>";
+                                echo "<td style='text-align:center'>" . "<input type='text' style='width:60px' value='$stockQty' name='stockQty' id='stockQty'> ". "</td>";
+                                
 
                                /* echo "<td>"."<input type ='text' name = \"sellingPrice".$count."\" value ='".$sellingPrice."'>"."</td>";*/
                                 
-                                echo "<td>"."<button type='submit' onclick =\"update_item('".$row['item_id']."','".$row['sellingPrice']."','".$row['stockQty']."')\"name='manageItemUpdateBtn' class='myButton'>Update</button>"."</td>";echo"<td></td>";
+                                echo "<td style='text-align:center'>"."<button type='submit' onclick =\"update_item('".$row['item_id']."',document.getElementById('sellingPrice').value,document.getElementById('stockQty').value)\"name='manageItemUpdateBtn' class='myButton'>Update</button>"."</td>";
                                 //$item_id = $row['item_id'];
-                                echo "<td>"."<input type='submit' onclick=\"delete_item('" . $row['item_id'] . "')\"name='manageItemDeleteBtn' class='btn btn-danger' value='Delete'>"."</td>";
-                                echo "<td></td>";
+                                echo "<td style='text-align:center'>"."<input type='submit' onclick=\"delete_item('" . $row['item_id'] . "')\"name='manageItemDeleteBtn' class='btn btn-danger' value='Delete'>"."</td>";
+                                
                                 
 
                                 
