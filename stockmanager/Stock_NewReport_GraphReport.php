@@ -31,7 +31,8 @@
             
             $("#btnNewReportGenerateReport").click(function(){
                 //alert("correct");
-                var value = $('input[name="type"]:checked').val();
+                $value = $('input[name="type"]:checked').val();
+                alert ($value);
 
                // alert ("caf");
              if(value){
@@ -40,10 +41,11 @@
                     url: 'Stock_NewReport_GraphData.php',
                     
                     type : 'POST',
-                    data: 'categoryname=' + value,
+                    data: "categoryname" : value,
+                    //alert ($value);
 
                 
-                success : function(data){
+               /* success : function(data){
                     alert(data);
                     console.log(data);
                     var Name = [];
@@ -80,88 +82,19 @@
                         type : 'bar',
                         data : chartdata
                     });
-                },
+                },*/
 
-                error : function(data){
+                /*error : function(data){
                     console.log(data);
-                }
+                }*/
             
 
             });
-              /*  $.ajax({
-                    alert(value);
-                    type : 'GET',
-                    url : 'Stock_NewReport_GraphData.php?categoryname='+value,
-                    //data : 'categoryname=' + categoryName,
-                    dataType:'json',
-                    success : function(data){
-                        
-                        alert("adffd");
-                        
-                        
-                    }
-                });*/
+              
             }
                 });
         });
-            //alert $selector;
-            //var data = 'categoryname=' + categoryname;
-            //alert(categoryname);
-
-         /*   if(selector){
-                alert("sfefef");
-                $.ajax({
-                method : 'GET',
-                dataType:'json',
-                url : 'Stock_NewReport_GraphData.php',
-
-                
-                success : function(data){
-                    console.log(data);
-                    var Name = [];
-                    var qty = [];
-                    var itemList = jQuery.parseJSON(data);
-
-                    for(var i in itemList){
-
-                        Name.push(itemList[i].itemName + "(" + itemList[i].buyingPrice + ")");
-                        //alert(data[i]);
-                    //alert(itemList[i].itemName);
-                        qty.push(itemList[i].stockQty);
-                        
-                    }
-
-
-                    var chartdata = {
-                        labels : Name,
-                        datasets : [
-                            {
-                                label : 'Quantity',
-                                backgroundColor : 'rgba(200,200,200,0.75)',
-                                borderColor : 'rgba(200,200,200,0.75)',
-                                hoverBackgroundColor : 'rgba(200,200,200,1)',
-                                hoverBorderColor : 'rgba(200,200,200,1)',
-                                data : qty
-
-                            }
-                        ]
-                    };
-
-                    var ctx = $ ('#mycanvas');
-                    var barGraph = new Chart(ctx, {
-                        type : 'bar',
-                        data : chartdata
-                    });
-                },
-
-                error : function(data){
-                    console.log(data);
-                }
             
-
-            });
-        }
-*/
     
 
        </script>

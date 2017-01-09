@@ -79,36 +79,30 @@
         });
     });
 
-       </script>
+    </script>
 
-       <script type="text/javascript">
-       // This code is written to delete items when user marked check boxes
-      
-            function delete_item(item_id){
-                var item = item_id;
-                var temp = "#"+item_id;
-                var temp1 = "'"+temp+"'";
-                alert(temp);
-                 $.ajax({
-
-
-                            url : 'DeleteItem.php',
-                            method : 'POST',
-                            data : {item:item},
-                            success : function($result){
-                                alert($result);
-                                    $(temp).html(result);
-                                    //$('#tr' + item_id + '').css('background-color','#ccc');
-                                    //$('#tr'+ item_id + '').fadeOut('slow');
-                                    
-                                    //window.location.replace("manage_stock_deleteItem.php");
-
-                                
-                            }
-
-                        });
-               
+    <script type="text/javascript">
+        function delete_item(item_id){
+            var item = item_id;
+            var temp = "#"+item_id;
+            var temp1 = "'"+temp+"'";
+            alert(temp);
+            if(confirm("Sure you want to delete this update? There is NO undo!")){
+                $.ajax({
+                    url : 'DeleteItem.php',
+                    method : 'POST',
+                    data : {item:item},
+                    success : function(){
+                        $(temp).html(result);
+                        $(temp).animate({ backgroundColor: "#003" }, "slow").animate({ opacity: "hide" }, "slow");
+}
+                           
+                });
+                   
             }
+           
+               
+        }
     </script>
     <script type="text/javascript">
 
@@ -132,12 +126,7 @@
                            //alert (item);
                             success : function($result){
                                 alert("Stock upated successfully");
-                                    //$(temp).html(result);
-                                    //$('#tr' + item_id + '').css('background-color','#ccc');
-                                    //$('#tr'+ item_id + '').fadeOut('slow');
                                     
-                                    //window.location.replace("manage_stock_deleteItem.php");
-
                                 
                             }
 
