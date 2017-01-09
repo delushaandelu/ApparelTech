@@ -25,14 +25,14 @@
 <div id="page-wrapper">
     <div class="row">
         <div class="col-lg-12">
-            <h2 class="page-header">Manage Customer</h2>
+            <h4 class="page-header">Manage Customer</h4>
         </div>
     </div>
     
 
         <!-- display new customers in a table-->
         <table class='table table-striped' >
-        <tr>
+        <tr  class='success'>
                     <th >Customer ID </th>
                     <th >NIC </th>
                     <th >Full Name </th>

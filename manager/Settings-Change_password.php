@@ -23,13 +23,12 @@
 <div id="page-wrapper">
     <div class="row">
         <div class="col-lg-12">
-            <h2 class="page-header">Change-Password</h2>
+            <h4 class="page-header">Change Password</h4>
         </div>
         
     </div>
     <div class="right_col" role="main">
-    <h2 class="hfont">Change Your Password Here!</h2>
-
+    
 
 
     <div class="row">

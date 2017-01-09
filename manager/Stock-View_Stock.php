@@ -14,6 +14,15 @@
             height: 20%;
         }
     
+        .pdfbtn{
+            background-color: #1caf9a;
+            color: aliceblue;
+            border: none;
+            width:200px;
+            height: 40px;
+            margin-left: 40%;
+            
+        }
     </style>
 </head>
 
@@ -88,7 +97,7 @@
         $dbcon->close();
 
         ?>
-        <input type="button" id="button2" name="submitpdf" value="download pdf" onclick="location.href='../manager/tcpdf/project/stockdetails.php'"/><br><br>
+        <input type="button" id="button2" class="pdfbtn" name="submitpdf" value="download pdf" onclick="location.href='../manager/tcpdf/project/stockdetails.php'"/><br><br>
         
 
         <!-- live search functions -->

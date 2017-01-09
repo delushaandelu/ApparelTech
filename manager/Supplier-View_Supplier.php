@@ -12,6 +12,18 @@
     <script src="js/sweetalert-dev.js"></script>
     <link rel="stylesheet" href="js/sweetalert.css">
 
+    <style type="text/css">
+        .pdfbtn{
+            background-color: #1caf9a;
+            color: aliceblue;
+            border: none;
+            width:200px;
+            height: 40px;
+            margin-left: 40%;
+            
+        }
+    
+    </style>
 </head>
 
 <body>
@@ -28,7 +40,7 @@
                 <h4 class="page-header">Suppliers</h4>
             </div>
             <div class="2">
-                <input type="text" id="myInput" onkeyup="myFunction()" class="form-control" placeholder="&#x26B2   Search for suppliers by name..." style="width: 300px">
+                <input type="text" id="myInput" onkeyup="myFunction()" class="form-control" placeholder="&#x26B2   Search for suppliers by name..." style="width: 320px; height: 50px">
 
             </div>
         </div>
@@ -39,14 +51,14 @@
             <!-- view supplier-->
             <table class="table datatable" style='border: 0;' id='myTable'>
                 <tr>
-                <th><h4 align='center'>Supplier ID </h4></th>
-                <th><h4 align='center'>Name </h4></th>
-                <th><h4 align='center'>E-mail </h4></th>
-                <th><h4 align='center'>Address </h4></th>
-                <th><h4 align='center'>Location </h4></th>
-                <th><h4 align='center'>Telephone Number </h4></th>
-                <th><h4 align='center'>Mobile Number </h4></th>
-                <th><h4 align='center'>Action </h4></th>
+                <th><h4 align='center'><b>Supplier ID</b> </h4></th>
+                <th><h4 align='center'><b>Name</b> </h4></th>
+                <th><h4 align='center'><b>E-mail</b> </h4></th>
+                <th><h4 align='center'><b>Address</b> </h4></th>
+                <th><h4 align='center'><b>Location</b> </h4></th>
+                <th><h4 align='center'><b>Telephone Number</b> </h4></th>
+                <th><h4 align='center'><b>Mobile Number</b> </h4></th>
+                <th><h4 align='center'><b>Action</b> </h4></th>
             </tr>
 
                 <?php
@@ -71,7 +83,7 @@
                 </tr>
             <?php } ?>
             </table>
-            <input type="button" name="submitpdf" value="download pdf" onclick="location.href='../manager/tcpdf/project/supplierdetails.php'"/><br><br>
+            <input type="button" name="submitpdf" class="pdfbtn" value="download pdf" onclick="location.href='../manager/tcpdf/project/supplierdetails.php'"/><br><br>
         </form>
 
         <!-- delete customer -->

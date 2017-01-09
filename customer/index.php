@@ -53,7 +53,7 @@
             
 			<br/>
             </form></br>
-        
+            
            <button class="signup"><a href="signup.php"> Sign up </a></button>   
             </br>
 			<a href="#"><p class="small">Forgot your password?</p></a>

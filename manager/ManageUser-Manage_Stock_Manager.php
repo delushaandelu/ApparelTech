@@ -19,14 +19,14 @@ include ("../config/managermenu.php");
 <div id="page-wrapper">
     <div class="row">
         <div class="col-lg-12">
-            <h2 class="page-header">Manage Admin</h2>
+            <h4 class="page-header">Manage Admin</h4>
         </div>
 
     </div>
-    <div class="row">
+    <div class="row1">
         <!-- form -->
         <form name="form1"  method="post" action="addUser.php">
-            <table border="0">
+            <table border="0" class="tb1">
                 <tr></tr>
                 <tr>
                     <td id="table-font" width="60%">User name*</td>
@@ -56,7 +56,7 @@ include ("../config/managermenu.php");
             
                       <button type="submit" id="button1"  name="add" >Add</button>
 			
-            
+             <br><br><br>
         </form>
     </div>
 </div>

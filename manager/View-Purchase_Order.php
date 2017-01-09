@@ -21,7 +21,7 @@
 <div id="page-wrapper">
     <div class="row">
         <div class="col-lg-12">
-            <h2 class="page-header">Purchase Order Details</h2>
+            <h4 class="page-header">Purchase Order Details</h4>
         </div>
         <div class="2">
             <input type="text" id="myInput" onkeyup="myFunction()" placeholder="&#x26B2   Search by order id..." style="width: 300px">
@@ -31,13 +31,13 @@
     <div class="row">
 
             <table class='table' id='myTable' >
-            <tr>
-                <th><h5 align='center'> Purchase Order ID </h5></th>
-                <th><h5 align='center'>Customer ID </h5></th>
-                <th><h5 align='center'>Total Price </h5></th>
-                <th><h5 align='center'>Purchase Order Date </h5></th>
-                <th><h5 align='center'>Status </h5></th>
-                <th><h5 align='center'>Action </h5></th>
+            <tr  class='success'>
+                <th><h5 align='center'><b> Purchase Order ID</b> </h5></th>
+                <th><h5 align='center'><b>Customer ID</b> </h5></th>
+                <th><h5 align='center'><b>Total Price</b> </h5></th>
+                <th><h5 align='center'><b>Purchase Order Date</b> </h5></th>
+                <th><h5 align='center'><b>Status</b> </h5></th>
+                <th><h5 align='center'><b>Action</b> </h5></th>
             </tr>
 
             <?php

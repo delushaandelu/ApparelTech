@@ -7,6 +7,7 @@
     <link href="dist/css/sb-admin-2.css" rel="stylesheet">
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="designs/template.css" type="text/css" />
+     
 </head>
 
 <body>
@@ -18,7 +19,7 @@
 <div id="page-wrapper">
     <div class="row">
         <div class="col-lg-12">
-            <h2 class="page-header">Vehicle Details</h2>
+            <h4 class="page-header">Vehicle Details</h4>
         </div>
         
     </div>
@@ -31,8 +32,8 @@
         $result = $dbcon->query($sql);
 
         if ($result->num_rows > 0) {
-            echo "<table class='table table-striped'>";
-            echo"<tr>
+            echo "<table class='table table-striped' id='myTable'>";
+            echo"<tr  class='success'>
                 <th><h5 align='center'><b>Vehicle ID</b></h5></th>
                 <th><h5 align='center'><b>Vehicle No</b> </h5></th>
                 <th><h5 align='center'><b>Capacity</b></h5></th>

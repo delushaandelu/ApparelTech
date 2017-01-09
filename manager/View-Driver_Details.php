@@ -19,7 +19,7 @@
 <div id="page-wrapper">
     <div class="row">
         <div class="col-lg-12">
-            <h2 class="page-header">Driver Details</h2>
+            <h4 class="page-header">Driver Details</h4>
         </div>
         
     </div>

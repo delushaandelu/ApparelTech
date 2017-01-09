@@ -24,7 +24,7 @@
     <div class="row">
         <div class="col-lg-12">
             <div class="1">
-                <h2 class="page-header">Customers</h2>
+                <h4 class="page-header">Customers</h4>
             </div>
             <div class="2">
                 <!-- search box -->
@@ -38,7 +38,7 @@
         <!-- table for view accepted customers -->
 
                 <table class='table table-striped' id='myTable'>
-                <tr>
+                <tr  class='success'>
                     <th>Customer ID </th>
                     <th>NIC </th>
                     <th>Full Name </th>
