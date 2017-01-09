@@ -122,7 +122,7 @@
             <legend>Your Account</legend>
             <div class="form-group">
             <label for="CompanyName">Username</label>
-            <input name="uname" type="text" class="form-control" />
+            <input name="uname" type="text" class="form-control"  />
             </div>
             <div class="form-group">
             <label for="CompanyName">Password</label>
@@ -150,27 +150,15 @@ function validateform(){
     var cname = document.InputForm.cname;
     var  desi = document.InputForm. desi;
     var nic = document.InputForm.nic;
+    var addr =document.InputForm.address;
     var email= document.InputForm.email;
     var uname= document.InputForm.uname;
     var pword= document.InputForm.pword;
-    var imgpath =document.InputForm.word;
+   
+   
     
     // code to get File Extension..
-    var file= /\.(jpe?g|gif|bmp)$/;
-    if(imgpath.value == "")
-    {
-    alert("upload your imagefile");
-    word.focus();
-    return false;
-    }
-   else if(!file.test($("#word").val()))  
-        {  
-        window.alert("wrong file extension");  
-        return false;   
-        }  
-    else{
-          return true;
-      }
+   
     
     
     if (fullname.value == "")
@@ -179,18 +167,7 @@ function validateform(){
 		   		fullname.focus();
 		    	return false;
 			}
-     if ( uname.value == "")
-			{
-		    	window.alert("Please enter your user Name.");
-		          uname.focus();
-		    	return false;
-			}
-     if ( pword.value == "")
-			{
-		    	window.alert("Please enter your password.");
-		          pword.focus();
-		    	return false;
-			}
+     
     if ( cname.value == "")
 			{
 		    	window.alert("Please enter your Company Name.");
@@ -215,10 +192,9 @@ function validateform(){
                 nic.focus();
 		    	return false;
             }
-    
     var phone=document.InputForm.mob;
     var phoneno =/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
-     if (phone.value == "")
+    if (phone.value == "")
 			{
 		    	window.alert("Please enter your mobile No.");
 		         phone.focus();
@@ -232,6 +208,15 @@ function validateform(){
       else{
           return true;
       }
+    
+    if ( address.value == "")
+			{
+		    	window.alert("Please enter your Address.");
+		          address.focus();
+		    	return false;
+			} 
+    
+    
    
     var phone1=document.InputForm.tele;
     var phoneno1 =/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
@@ -246,9 +231,7 @@ function validateform(){
         window.alert("wrong tele phone no");  
         return false;   
         }  
-      else{
-          return true;
-      }
+     
     
       
     var atpos = email.indexOf("@");
@@ -264,6 +247,38 @@ function validateform(){
         return false;
     }
     
+    var imgpath =document.InputForm.word;
+    var file= /\.(jpe?g|gif|bmp)$/;
+    if(imgpath.value == "")
+    {
+    alert("upload your imagefile");
+    word.focus();
+    return false;
+    }
+   else if(!file.test($("#word").val()))  
+        {  
+        window.alert("wrong file extension");  
+        return false;   
+        }  
+    
+    
+   
+    if ( uname.value == "")
+			{
+		    	window.alert("Please enter your user Name.");
+		          uname.focus();
+		    	return false;
+			}
+   
+     if ( pword.value == "")
+			{
+		    	window.alert("Please enter your password.");
+		          pword.focus();
+		    	return false;
+			}
+    
+    
+   
     
 }
 

@@ -15,6 +15,7 @@ if(isset($_REQUEST['action']) && !empty($_REQUEST['action'])){
             'item_id' => $row['item_id'],
             'itemName' => $row['itemName'],
             'sellingPrice' => $row['sellingPrice'],
+            'stockQty' => $row['stockQty'],
             'catagery' => $row['catagery'],
             'qty' => 1
         );

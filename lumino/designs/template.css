@@ -1,0 +1,312 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* Common */
+
+
+#main
+{
+    width:980px;
+    height:2000px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:21px;
+    margin-bottom:21px;
+    background-color:#ffffff;
+    border-radius:4%;
+    opacity:1;
+}
+
+#header
+{
+    margin-top:40px;
+    height: 750px;
+    margin-bottom:-470px;
+}
+
+#panel-heading
+{
+	background-color:#000
+	
+}
+
+#menu
+{
+	height: 20px;
+	margin-top:-70px;
+	background-color:#000;
+	font-style:normal;
+	font-size:12px;
+    color:#FFF;
+	
+}
+#h2
+{
+	font-style:normal;
+	font-size:5px;
+	color:#FFF;
+}
+
+#content
+{
+    height:600px;
+}
+
+#footer
+{
+    height:100px;
+}
+
+#mnu
+{
+    margin-top: 1%;
+    margin-right: 2%;
+    margin-left: 2%;
+}
+
+img
+{
+    border-top-left-radius: 4%;
+    border-top-right-radius: 4%;
+    height:40%;
+    width:100%;
+}
+
+#md
+{
+    position: fixed;
+    margin-top: 0%;
+    width: 100%;
+}
+
+/* Manage_Supplier & Manage_Stock*/
+
+#top
+{
+    height:500px;
+	margin-top:-50px;
+    margin-left: 5%;
+    margin-right: 5%;
+	color:#000;
+	padding:80px;
+	
+}
+
+#top-left{
+	width:500px;
+	height:500px;
+	float:left;
+	}
+
+
+	
+#top-right{
+	height:500px;
+	width:150px;
+	float:right;
+	}
+
+
+#button{
+ 
+	width:50px;
+	height:35px;
+	color:#FFFFFF;
+	background-color: #1caf9a;
+}
+
+
+button:active {
+    background-color:cadetblue;
+    transform: translateY(4px);
+}
+
+
+/* Manage Stock2*/
+
+#top2 {
+    height: 500px;
+    margin-top: -50px;
+    margin-left: 5%;
+    margin-right: 5%;
+    color: #000;
+    padding: 80px;
+}
+
+#bottom2{
+    height:500px;
+    margin-top:10px;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding:80px;
+}
+
+#table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th{
+    text-align: center;
+    height: 40px;
+
+}
+
+td{
+    text-align: left;
+    height: 40px;
+}
+
+#h3{
+    font-size: 30px;
+    margin-left: 70%;
+}
+
+/* Order_Stock*/
+
+#top3{
+    height: 500px;
+    margin-top: -50px;
+    margin-left: 5%;
+    margin-right: 5%;
+    color: #000;
+    padding: 80px;
+}
+
+#bottom3{
+    height:500px;
+    margin-top:10px;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding:80px;
+}
+
+#bottom-left3{
+    width:500px;
+    height:500px;
+    float:left;
+}
+
+#bottom-right3{
+    height:500px;
+    width:150px;
+    float:right;
+}
+
+#h4{
+    font-size: 20px;
+}
+
+/*View Supplier*/
+
+#top4{
+    height: 200px;
+    margin-top: -50px;
+    margin-left: 5%;
+    margin-right: 5%;
+    color: #000;
+    padding: 80px;
+}
+#bottom4{
+    margin-left: 5%;
+    margin-right: 5%;
+    padding:80px;
+}
+
+#h5{
+    font-style:italic;
+    font-size:8px;
+    color:#0000FF;
+}
+
+/* View Stock */
+
+#2{
+    margin-left: 80%;
+    margin-right: 5%;
+    padding:80px;
+}
+
+
+/* Test_Search*/
+#top0{
+    margin-top: -20%;
+
+}
+
+/* Backup */
+
+#backup
+{
+    margin-left: 40%;
+    margin-top: 5%;
+}
+
+#button1{
+    border-radius:5px;
+    width:114px;
+    height:35px;
+    color:#FFFFFF;
+    background-color:#1caf9a;
+    border: none;
+}
+#buttonbackup{
+    border-radius:5px;
+    width:200px;
+    height:50px;
+    font-size:20px;
+    color:#FFFFFF;
+    background-color:#1caf9a;
+    
+}
+
+#button1:hover{
+    background-color:#1caf9a;
+}
+
+button1:active {
+    background-color:#1caf9a;
+    transform: translateY(4px);
+}
+#button2{
+    margin-top:35%;
+    margin-left:-63%;
+    border-radius:5px;
+    width:100px;
+    height:35px;
+    color:#FFFFFF;
+    background-color:#1caf9a;
+}
+
+/* manage manager & smanager */
+
+#input1{
+    margin-top: 5%;
+}
+
+#report
+{
+    width: 80%;
+    margin-left: 60%;
+    margin-top: -35.5%;
+  
+}
+
+#request
+{
+    margin-left: 0%;
+    margin-top: 0%;
+}
+
+#head
+{
+    color: aliceblue;
+    padding: 0;
+    background-color:darkslategray;
+    height: 20%;
+     width: 100%;
+}
+
+#second_section{
+   height: 
+}

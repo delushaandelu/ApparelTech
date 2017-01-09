@@ -16,6 +16,7 @@
         padding-top: 15%;
         width: 230px;
         height: 150px;
+        border-radius:100px;
        
        
     }  
@@ -31,11 +32,11 @@
             text-decoration: none;
         }
         #dash{
-            margin-top:12%;
+            margin-top:6%;
             margin-left: 5%;
         }
         #dash1{
-            margin-top: 30%;
+            margin-top: 23%;
             margin-left: 5%;
             width: 1040px;
         }
@@ -43,6 +44,14 @@
             margin-top: 15% 
           margin-left:60%;
         }
+        
+        #company{
+        font-family: 'Tangerine', serif;
+        font-size: 60px;
+        margin-top: 10%;
+        }
+        
+     
 </style>
    
     </head>
@@ -51,8 +60,12 @@
         <?php
             include("../config/stockmgrmenu.php");
         ?>
+        
+        <div id="company">
+            <p align="center">PRIYANTHA ENTERPRISES</p>
+        </div>
 
-
+       
             <div id="dash">
                 <div class="col-lg-3 col-md-6">
                     <div class="bt" style="background-color:#6495ED"><a href="">Manage Stock</a><i class="fa fa-arrow-circle-right"></i> <i class="fa fa-building-o fa-5x"></i></div>
@@ -89,6 +102,7 @@
                                     
                 </div>
             </div>
+       
     
         <script type="text/javascript" src="js/plugins/jquery/jquery.min.js"></script>
         <script type="text/javascript" src="js/plugins/jquery/jquery-ui.min.js"></script>

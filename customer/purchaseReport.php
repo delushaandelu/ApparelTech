@@ -54,7 +54,7 @@ session_start();
                         
                         <button type="button" id="delivery"  class="btn btn-primary" onclick="location.href='requestdelivery.php?p_id=<?php echo $row['p_id'] ?>'"><i class="fa fa-truck" aria-hidden="true"></i> Delivery</button>
                         
-                        <button type="button" id="invoice"  class="btn btn-danger" onclick="location.href='invoice.php?p_id=<?php echo $row['p_id'] ?>'"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> Invoice</button>
+                        <button type="button" id="invoice"  class="btn btn-danger" onclick="location.href='invoice.php?p_id=<?php echo $row['p_id'] ?>'"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> P/O</button>
                         
                         </center></td>
                 </tr>

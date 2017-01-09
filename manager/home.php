@@ -19,11 +19,12 @@
         padding-top: 15%;
         width: 230px;
         height: 150px;
+        border-radius: 100px;
        
        
     }  
     #dash{
-            margin-top:-38%;
+            margin-top:2%;
             margin-left:20%;
         }
     #dash1{
@@ -44,7 +45,13 @@
         }
         .bt i{
             margin-top: 15% 
-          margin-left:60%;
+            margin-left:60%;
+        }
+         #company{
+        font-family: 'Tangerine', serif;
+        font-size: 60px;
+        margin-top: -40%;
+        margin-left: 15%;
         }
 </style>
     
@@ -63,7 +70,9 @@
 </div>
     
     </div>
-    
+    <div id="company">
+            <p align="center">PRIYANTHA ENTERPRISES</p>
+        </div>
     <!-- links -->
     <div id="dash">
                 <div class="col-lg-3 col-md-6">

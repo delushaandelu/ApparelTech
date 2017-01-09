@@ -37,7 +37,7 @@ session_start();
 <!-- page content -->
 <div class="right_col" role="main">
 <div id ="invoice">
-        <h4> Invoice!</h4>
+        <h4> Purchase Order</h4>
 <style>
     #amount
 {
@@ -51,7 +51,7 @@ session_start();
 
 #action
 {
-    margin-top: 20%;
+    margin-top: 0%;
     margin-left: 60%;
 }   
 .hfont
@@ -84,7 +84,7 @@ session_start();
     <!-- page content -->
     <div class="center_col" role="main">
         <center>
-            <h5>Invoice No. 
+            <h5>Purchase Order No. 
                 <?php 
                     $id = $_GET['p_id'];
                     echo $id;
@@ -119,20 +119,17 @@ session_start();
         <div id="amount">
             <table>
             <tr>
-                <td><p><b>Sub Total </b></p></td>
-                <td><p align="right"><?php echo '10000.00'?></p></td>
-            </tr>
-            <tr>
-                <td><p><b>Discount </b></p></td>
-                <td><p align="right"><?php echo '1000.00'?></p></td>
-            </tr>
-            <tr>
-                <td><p><b>Vat(%5) </b></p></td>
-                <td><p align="right"><?php echo '450.00'?></p></td>
-            </tr>
-            <tr>
-                <td><p><b>Grand Total </b></p></td>
-                <td><p align="right"><?php echo '9450.00'?></p></td>
+                <td><p><b>Grand Total :-</b></p></td>
+                <td><p align="right"><?php
+                $id = $_GET['p_id'];
+                $sql = "select totalprice from purchasereport where p_id=$id";
+                $res1 = $db->query($sql);
+                
+                while ($row1 = $res1->fetch_assoc()){
+                echo $row1['totalprice'];
+                }
+                
+                ?></p></td>
             </tr>
         </table>
         </div>
@@ -140,7 +137,7 @@ session_start();
         <div id="contect">
             <table>
             <tr>
-                <td colspan="2"><p><b><center>Contect Details </center></b></p></td>
+                <td colspan="2"><p><b><center>Contact Details </center></b></p></td>
             </tr>
             <tr>
                 <td><p><b>PO Box </b></p></td>
@@ -160,11 +157,12 @@ session_start();
             </tr>
         </table>
         </div>
-        <div id="note">
-            <p><b><h5>NOTE :- </h5></b>option lets you add additional contextual notes to the invoices, for better clarity. Invoice Notes specific to each customer or subscription can be ... </p>
-        </div>
+        
     </div>
     <div id="action" class="av">
+        
+            <p><b><h5>NOTE :- </h5></b>option lets you add additional contextual notes to the invoices, for better clarity. Invoice Notes specific to each customer or subscription can be ... </p>
+        
         <a href="javascript:void(0);" id="print_button2" style="width: 130px; padding: 5px 8px 5px 8px;text-align: center;float: right;background-color: #1caf9a;color: #fff;text-decoration: none; margin: 10px;" onclick="printPageArea('invoice')">Print Invoice</a>
         <button type="button" class="btn btn-success">Reply via Email</button>
     </div>

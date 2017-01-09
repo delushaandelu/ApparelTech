@@ -49,6 +49,7 @@ $cart = new Cart;
             <th>Product</th>
             <th>Price</th>
             <th>Quantity</th>
+            <th>Available Qty</th>
             <th>Subtotal</th>
             <th>&nbsp;</th>
         </tr>
@@ -64,6 +65,7 @@ $cart = new Cart;
             <td><?php echo $item["itemName"]; ?></td>
             <td><?php echo 'Rs.'.$item["sellingPrice"]; ?></td>
             <td><input type="number" class="form-control text-center" value="<?php echo $item["qty"]; ?>" onchange="updateCartItem(this, '<?php echo $item["rowid"]; ?>')"></td>
+            <td><?php echo $item["stockQty"]; ?></td>
             <td><?php echo 'RS. '.$item["subtotal"]; ?></td>
             <td>
                 <!--<a href="cartAction.php?action=updateCartItem&id=" class="btn btn-info"><i class="glyphicon glyphicon-refresh"></i></a>-->
