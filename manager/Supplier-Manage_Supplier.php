@@ -56,6 +56,19 @@
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="designs/template.css" type="text/css" />
 	<link rel="stylesheet" href="../config/styles.css" type="text/css" />
+    <style type="text/css">
+        #top-left{
+            border: solid 1px;
+            width: 100%;
+            height: 115%;
+        }
+        .suptb{
+            margin-top: 3%;
+            margin-left: 15%;
+            width: 70%;
+        }
+    
+    </style>
 </head>
 
 <body>
@@ -79,15 +92,15 @@
         	<div id="top-left">
 				<!--handle form-->
             	<form name="form1" method="post" action="supplier.php" onsubmit="return check();">
-                	<table border="0">
+                	<table border="0" class="suptb">
                         <tr>
                        	  <td id="table-font" width="60%">Supplier name</td>
-                            <td><input type="text" name="name" class="form-control" required></td>
+                            <td><input type="text" name="name" class="form-control" required placeholder="supplier name"></td>
                             <td
                         </tr>
                          <tr>
                        	   <td id="table-font" width="60%">Location</td>
-                            <td><input type="text" name="location" class="form-control" required></td>
+                            <td><input type="text" name="location" class="form-control" required placeholder="Location"></td>
                          </tr>
                          <tr>
                          	<td id="table_font" width="60%">Contact</td> 
@@ -100,11 +113,11 @@
 						  </tr>
 						  <tr>
                         	<td id="table-font" width="60%">Address</td>
-                            <td><input type="text" name="address" class="form-control" required></td>
+                            <td><input type="text" name="address" class="form-control" required placeholder="Address"></td>
 						  </tr>
                           <tr>
-                       	   <td id="table-font" width="60%">e-mail address</td>
-                            <td><input type="email" name="email" class="form-control" required></td>
+                       	   <td id="table-font" width="60%">E-mail address</td>
+                            <td><input type="email" name="email" class="form-control" required placeholder="E-mail"></td>
                          </tr>
 
                          

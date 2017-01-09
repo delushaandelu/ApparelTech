@@ -50,15 +50,15 @@
             <form name="getcvs" action="" method="POST">
             <!-- view supplier-->
             <table class="table datatable" style='border: 0;' id='myTable'>
-                <tr>
-                <th><h4 align='center'><b>Supplier ID</b> </h4></th>
-                <th><h4 align='center'><b>Name</b> </h4></th>
-                <th><h4 align='center'><b>E-mail</b> </h4></th>
-                <th><h4 align='center'><b>Address</b> </h4></th>
-                <th><h4 align='center'><b>Location</b> </h4></th>
-                <th><h4 align='center'><b>Telephone Number</b> </h4></th>
-                <th><h4 align='center'><b>Mobile Number</b> </h4></th>
-                <th><h4 align='center'><b>Action</b> </h4></th>
+                <tr  class='success'>
+                <th><h5 align='center'><b>Supplier ID</b> </h5></th>
+                <th><h5 align='center'><b>Name</b> </h5></th>
+                <th><h5 align='center'><b>E-mail</b> </h5></th>
+                <th><h5 align='center'><b>Address</b> </h5></th>
+                <th><h5 align='center'><b>Location</b> </h5></th>
+                <th><h5 align='center'><b>Telephone Number</b> </h5></th>
+                <th><h5 align='center'><b>Mobile Number</b> </h5></th>
+                <th><h5 align='center'><b>Action</b> </h5></th>
             </tr>
 
                 <?php
