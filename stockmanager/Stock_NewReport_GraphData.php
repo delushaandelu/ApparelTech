@@ -2,13 +2,13 @@
         <?php
                 include('database_connection.php');
             
-                    if(isset($categoryname =  $_POST['categoryname'])){
+                    if(isset($_POST['categoryname'])){
                      
-                    echo $categoryname;
+                    //echo $categoryname;
 
-                    $query = "SELECT itemName, stockQty,buyingPrice FROM item WHERE catagery = '$categoryname'
+                    $query = "SELECT itemName, stockQty,buyingPrice FROM item WHERE catagery = '".$_POST['categoryname']."' 
                      ORDER BY itemName";
-                     echo "$categoryname";
+                    // echo "$categoryname";
 					$result = mysqli_query($dbcon,$query);
 
 					$data = array();

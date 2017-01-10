@@ -92,10 +92,21 @@
                     url : 'DeleteItem.php',
                     method : 'POST',
                     data : {item:item},
-                    success : function(){
-                        $(temp).html(result);
-                        $(temp).animate({ backgroundColor: "#003" }, "slow").animate({ opacity: "hide" }, "slow");
-}
+                      success : function(){
+                    $(temp).fadeOut('fast', function(){
+                           // function called after fadeout completes
+                           // fadeOut does the animation you want.
+                           // you can obtain ID before saving it as a variable
+                    }),
+                statusCode: {
+                    200: function(){
+                         // you can put the fadeOut code in here, as this guarantees that when the server responds accordingly you will then run your code, you can also set functions for other response codes.
+                       }
+
+                 }
+            }
+                    
+                        
                            
                 });
                    

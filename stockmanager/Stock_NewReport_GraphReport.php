@@ -11,93 +11,9 @@
       
         
        <script src="js/sweetalert-dev.js"></script>
- <!--       <script type="text/javascript">
-    $(document).ready(function(){
-        $("input[type='button']").click(function(){
-            var radioValue = $("input[name='gender']:checked").val();
-            if(radioValue){
-                alert("Your are a - " + radioValue);
-            }
-        });
-        
-    });
-</script> -->
-      <!--  <script type="text/javascript" src = "js/chart.js"></script> -->
+
        <script type="text/javascript" src = "js/Chart.min.js"></script>
-       <script type="text/javascript">
-
-           $(document).ready(function(){
-
-            
-            $("#btnNewReportGenerateReport").click(function(){
-                //alert("correct");
-                $value = $('input[name="type"]:checked').val();
-                alert ($value);
-
-               // alert ("caf");
-             if(value){
-                alert(value);
-                $.ajax({
-                    url: 'Stock_NewReport_GraphData.php',
-                    
-                    type : 'POST',
-                    data: "categoryname" : value,
-                    //alert ($value);
-
-                
-               /* success : function(data){
-                    alert(data);
-                    console.log(data);
-                    var Name = [];
-                    var qty = [];
-                    var itemList = jQuery.parseJSON(data);
-
-                    for(var i in itemList){
-
-                        Name.push(itemList[i].itemName + "(" + itemList[i].buyingPrice + ")");
-                        //alert(data[i]);
-                    //alert(itemList[i].itemName);
-                        qty.push(itemList[i].stockQty);
-                        
-                    }
-
-
-                    var chartdata = {
-                        labels : Name,
-                        datasets : [
-                            {
-                                label : 'Quantity',
-                                backgroundColor : 'rgba(200,200,200,0.75)',
-                                borderColor : 'rgba(200,200,200,0.75)',
-                                hoverBackgroundColor : 'rgba(200,200,200,1)',
-                                hoverBorderColor : 'rgba(200,200,200,1)',
-                                data : qty
-
-                            }
-                        ]
-                    };
-
-                    var ctx = $ ('#mycanvas');
-                    var barGraph = new Chart(ctx, {
-                        type : 'bar',
-                        data : chartdata
-                    });
-                },*/
-
-                /*error : function(data){
-                    console.log(data);
-                }*/
-            
-
-            });
-              
-            }
-                });
-        });
-            
-    
-
-       </script>
+      
  <link rel="stylesheet" href="js/sweetalert.css">
 
                   
@@ -113,7 +29,7 @@
                 </ul>
 
                 
-    <form method="get">
+    <form method="post" action="Stock_NewReport_GraphReportDisplay.php">
     <div class="upper_panel_new_report">
       
 
@@ -143,12 +59,6 @@
                     
                     <div class="check"><div class="inside"></div></div>
 
-                   <!--  <h4>Please select your gender.</h4> -->
-     <!-- <p> 
-        <label><input type="radio" name="gender" value="male">Male</label> 
-        <label><input type="radio" name="gender" value="female">Female</label>
-    </p>
-    <p><input type="button" value="Get Value"></p>  -->
                   </li>
             </ul>
         </div>
@@ -160,11 +70,8 @@
     </div>
 </form>
 
-    <div id="chart-container">
-            <canvas id = "mycanvas"></canvas>
-        </div>
 
-
+    
 
 
 
