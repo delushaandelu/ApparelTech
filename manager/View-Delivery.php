@@ -30,26 +30,30 @@
         //include('database_connection.php');
 
         // query
-        $sql = "SELECT * FROM delivery";
+        $sql = "SELECT * FROM deliveryrequest WHERE status=1";
         $result = $dbcon->query($sql);
 
         if ($result->num_rows > 0) {
-            echo "<table class='table' style='border: solid 2px black;'>";
-            echo"<tr>
-                <th style='border: solid 2px black;'>Note ID </th>
-                <th style='border: solid 2px black;'>Item ID </th>
-                <th style='border: solid 2px black;'>Quantity </th>
-                <th style='border: solid 2px black;'>Address </th>
-                <th style='border: solid 2px black;'>Delivery Date </th>
+            echo "<table class='table table-striped'>";
+            echo"<tr class='success'>
+                <th>Rent ID </th>
+                <th>Purchase ID </th>
+                <th>Company </th>
+                <th>Address </th>
+                <th>Delivery Date </th>
+                <th>Voucher No</th>
+                <th>Amount </th>
             </tr>";
 
             while($row = $result->fetch_assoc()) {
                 echo "<tr>
-                    <td style='border: solid 2px black;'>" . $row["note_id"]. "</td>
-                    <td style='border: solid 2px black;'>" . $row["item_id"]. "</td>
-                    <td style='border: solid 2px black;'>" . $row["deliveryQty"]. "</td>
-                    <td style='border: solid 2px black;'>" . $row["deliveryAddress"]. "</td>
-                    <td style='border: solid 2px black;'>" . $row["deliveryDate"]. "</td>
+                    <td>" . $row["rid"]. "</td>
+                    <td>" . $row["poid"]. "</td>
+                    <td>" . $row["company"]. "</td>
+                    <td>" . $row["address"]. "</td>
+                    <td>" . $row["date"]. "</td>
+                    <td>" . $row["voucher"]. "</td>
+                    <td>" . $row["amount"]. "</td>
                 </tr>";
             }
             echo "</table>";

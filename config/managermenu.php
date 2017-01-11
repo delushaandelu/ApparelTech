@@ -76,9 +76,6 @@
                                 <li>
                                     <a href="../manager/Stock-Order_Stock.php">Order Stock</a>
                                 </li>
-                                <li>
-                                    <a href="../manager/Stock-View_Order_Stock.php">View Order Stock</a>
-                                </li>
                             </ul>
                         </li>
                         <li>
