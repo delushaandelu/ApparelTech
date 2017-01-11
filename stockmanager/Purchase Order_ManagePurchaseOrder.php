@@ -29,7 +29,7 @@
         <div class="panel">
             <div class="panel-heading">
                 <table class="table datatable" id="potb">
-                    <tr class="title">
+                    <tr class='success'>
                         <th><center>id</center></th>
                         <th><center>customerid</center></th>
                         <th><center>totalprice</center></th>

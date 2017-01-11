@@ -48,7 +48,7 @@
  
         <table class="table datatable">
             
-            <tr class="title">
+            <tr class='success'>
                 <th><center>driver_id</center></th>
                 <th><center>driverName</center></th>
                 <th><center>LicenceNo</center></th>

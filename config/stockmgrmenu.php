@@ -4,6 +4,21 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style type="text/css">
+    .notification_header{
+        color: white;
+       /* background-color:black;*/
+   
+    }   
+    .notification_desc{
+       /* background-color:black;*/
+        color: white;
+       
+    }
+    .notification_bottom a{
+        text-decoration: none;
+    }
+</style>
  
 </head>
 </html>
@@ -60,16 +75,7 @@
                             </li>
                             
                         </ul>
-                        <ul>
-                            <li class="xn-openable">
-                                <a href="#"><span class="fa fa-pencil"></span> Create Purchase Orders</a>
-                                <ul>
-                                    <li><a href="#"><span class="fa fa-align-center"></span> Purchase Order</a></li>
-                                    
-                                </ul>
-                            </li>
-                            
-                        </ul>
+                        
                     </li>       
                                        
                     <li class="xn-openable">
@@ -90,7 +96,7 @@
                         </ul>
                     </li>
                     <li class="xn-openable">
-                        <a href="#"><span class="fa fa-arrows-h"></span><span class="xn-text"> Setting</span></a>
+                        <a href="#"><span class="fa fa-arrows-h"></span><span class="xn-text"> Settings</span></a>
                         <ul>                            
                             <li><a href="changepassword.php"><span class="fa fa-sort-alpha-desc"></span> Change Password</a></li>
                         </ul>
@@ -100,35 +106,104 @@
             </div>
             <div class="page-content">
                 <ul class="x-navigation x-navigation-horizontal x-navigation-panel">
-                   
-                    <li class="xn-icon-button">
-                        <a href="#" class="x-navigation-minimize"><span class="fa fa-dedent"></span></a>
-                    </li>
-                    <li class="xn-search">
-                        <form role="form">
-                            <input type="text" name="search" placeholder="Search..."/>
-                        </form>
-                    </li>
-                    <li class="dropdown head-dpdn">
-                   
-                       <a href="Purchase%20Order_ManagePurchaseOrder.php" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope"></i><span class="badge">
-                           <?php
+                   <div class="header-right header-right-grid">
+					<div class="profile_details_left"><!--notifications of menu start -->
+						<ul class="nofitications-dropdown">
+							<li class="dropdown head-dpdn">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope"></i><span class="badge"><?php
                         require("database_connection.php"); 
 
-                            $sql= "select count(id) as total from orders where status='1'";
+                        $sql= "select count(id) as total from orders where status='1'";
                         //$result=mysqli_query($dbcon,$sql);
                         $result = mysqli_query($dbcon,$sql);
                         $row = mysqli_fetch_assoc($result);
                                 echo  $row["total"];
-                        ?>  
-                        </span></a>
+                        ?></span></a>
+								<ul class="dropdown-menu anti-dropdown-menu">
+									<li>
+										<div class="notification_header">
+											<h6>new purchase orders</h6>
+										</div>
+									</li>
+									<li><a href="#">
+									   <div class="user_img"><img src="images/1.png" alt=""></div>
+									   <div class="notification_desc">
+										<p>Total amounts</p>
+										<p><span><?php
+                        //require("database_connection.php"); 
+
+                        $sql= "SELECT * FROM orders,customer WHERE orders.customer_id = customer.customer_id ORDER BY created DESC ";
+                        //$result=mysqli_query($dbcon,$sql);
+                        $result = mysqli_query($dbcon,$sql);
                         
-                   
-                    
-                    </li>
-                    <li class="xn-icon-button pull-right">
-                        <a href="#" class="mb-control" data-box="#mb-signout"><span class="fa fa-sign-out"></span></a>                        
-                    </li> 
-                    
+                        while($row = mysqli_fetch_assoc($result)){
+                            echo  $row["fullname"];
+                            echo " :- ";
+                            echo  $row["total_price"];
+                            echo "</br>";
+                        }
+                                
+                        ?></span></p>
+										</div>
+									  
+									</a></li>
+									
+									<li>
+										<div class="notification_bottom">
+                                            <h6><a href="Purchase%20Order_ManagePurchaseOrder.php">See new p/o</a></h6>
+										</div> 
+									</li>
+								</ul>
+							</li>
+							<li class="dropdown head-dpdn">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-bell"></i><span class="badge blue">  </span></a>
+								<ul class="dropdown-menu anti-dropdown-menu">
+									<li>
+										<div class="notification_header">
+											<h6>You have 3 new notification</h6>
+										</div>
+									</li>
+									<li><a href="#">
+										<div class="user_img"><img src="images/2.png" alt=""></div>
+									   <div class="notification_desc">
+										<p>Lorem ipsum dolor amet</p>
+										<p><span> </span></p>
+										</div>
+									  <div class="clearfix"></div>	
+									 </a></li>
+									 <li class="odd"><a href="#">
+										<div class="user_img"><img src="images/1.png" alt=""></div>
+									   <div class="notification_desc">
+										<p>Lorem ipsum dolor amet </p>
+										<p><span></span></p>
+										</div>
+									   <div class="clearfix"></div>	
+									 </a></li>
+									 <li><a href="#">
+										<div class="user_img"><img src="images/3.png" alt=""></div>
+									   <div class="notification_desc">
+										<p>Lorem ipsum dolor amet </p>
+										<p><span></span></p>
+										</div>
+									   <div class="clearfix"></div>	
+									 </a></li>
+									 <li>
+										<div class="notification_bottom">
+											<a href="#">See all notifications</a>
+										</div> 
+									</li>
+								</ul>
+							</li>	
+							
+						</ul>
+						<div class="clearfix"> </div>
+                       </div>
+                    </div>
                 </ul>
+    					
+                  
+               
+                
+   
+    
            </body>     
