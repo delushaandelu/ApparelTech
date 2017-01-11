@@ -6,24 +6,7 @@ body, html{
 	font-family: 'Lato', sans-serif;
 }
 
-/*.container{
-  display: block;
-  position: absolute;
-  margin: auto;
-  height: 200px;
-  width: 200px;
-  bottom: 0; left:0; right: 0; top:0;
-  padding: 0;
-}*/
 
-/*
-.container ul{
-  list-style: none;
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}*/
 
 .upper_panel_new_report{
 	height: 300px;
@@ -63,6 +46,8 @@ body, html{
   position:relative;
   top:1px;
 }
+
+
 
 
 
@@ -142,56 +127,4 @@ input[type=radio]:checked ~ label{
   color: #ED1B16;
 }
 
-/*.signature {
-	position: fixed;
-	margin: auto;
-	bottom: 0;
-	top: auto;
-	width: 100%;
-}
 
-.signature p{
-	text-align: center;
-	font-family: Helvetica, Arial, Sans-Serif;
-	font-size: 0.85em;
-	color: #AAAAAA;
-}
-
-.signature .much-heart{
-	display: inline-block;
-	position: relative;
-	margin: 0 4px;
-	height: 10px;
-	width: 10px;
-	background: #AC1D3F;
-	border-radius: 4px;
-	-ms-transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
-}*/
-
-/*.signature .much-heart::before, 
-.signature .much-heart::after {
-	  display: block;
-  content: '';
-  position: absolute;
-  margin: auto;
-  height: 10px;
-  width: 10px;
-  border-radius: 5px;
-  background: #AC1D3F;
-  top: -4px;
-}
-
-.signature .much-heart::after {
-	bottom: 0;
-	top: auto;
-	left: -4px;
-}
-
-.signature a {
-	color: #AAAAAA;
-	text-decoration: none;
-	font-weight: bold;
-}
-*/
