@@ -12,9 +12,7 @@
  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.min.css"/>
 <link href='http://fonts.googleapis.com/css?family=Didact+Gothic' rel='stylesheet' type='text/css'>
 	<style type="text/css">
-        body{
-            background-color: dimgray;
-        }
+       
        
 
     .box a {
