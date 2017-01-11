@@ -93,6 +93,17 @@
                             </ul>
                         </li>
                         <li>
+                            <a href="#"><i class="fa fa-files-o fa-fw"></i> Reports<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="Stock_NewReport.php">New Report</a>
+                                </li>
+                                <li>
+                                    <a href="../manager/View-Purchase_Order.php">Previous Report</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
                             <a href="#"><i class="fa fa-files-o fa-fw"></i> View<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
