@@ -14,7 +14,7 @@ session_start();
     <link rel="stylesheet" href="css/purchaseReport.css" type="text/css">
     <link rel="stylesheet" href="css/invoice.css" type="text/css"> 
 
-    <script>
+<script>
     function printPageArea(areaID){
 	var printContent = document.getElementById(areaID);
 	var WinPrint = window.open('', '', 'width=900,height=650');

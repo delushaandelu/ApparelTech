@@ -1,33 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+        
     <head>        
-        <title>Stock Manager</title>                   
+        <title>Stock Manager</title> 
+        <script>
+            function printPageArea(areaID){
+            var printContent = document.getElementById(areaID);
+            var WinPrint = window.open('', '', 'width=900,height=650');
+            WinPrint.document.write(printContent.innerHTML);
+            WinPrint.document.close();
+            WinPrint.focus();
+            WinPrint.print();
+            WinPrint.close();
+            }
+        </script>
+        <?php
+            include("../config/stockmgrmenu.php");
+            ?>
         <link rel="stylesheet" type="text/css" id="theme" href="css/main.css"/>                        
     </head>
     <body>
         
-        <?php
-            include("../config/stockmgrmenu.php");
-        ?>
-
+       <div id ="all">
+            
                 <ul class="breadcrumb">
-                    <h4>All Stock</li></h4>
+                    <h3>All stock on - </li></h3>
                 </ul>
-
-    <div id="exp">
-          <div class="page-content-wrap">
-        <div class="row">
-                        <div class="col-md-12">
-                            
-                            <!-- START DATATABLE EXPORT -->
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h3 class="panel-title">Current Stock</h3>
-                                                         
-                                    
-                                </div>
-                                <div class="panel-body">
-                                    <table id="customers2" class="table datatable">
+    
+    <div id="btnn">
+        <a href="javascript:void(0);" id="print_button2" style="width: 130px; padding: 5px 8px 5px 8px;text-align: center;float: right;background-color: #1caf9a;color: #fff;text-decoration: none; margin: 10px;" onclick="printPageArea('all')">Print All Stock</a>
+    </div>
+    
+        <div id="stock">
+            <table class="table table-striped">
                                         <thead>
                                             <tr>
                                                 <th>Item Id</th>
@@ -57,22 +62,15 @@
                                         </tbody>
                                     </table>                                    
                                     
-                                </div>
-                            </div>
-          </div>    
-    </div>
-    
-    
-    
+        </div>
 
-        
-              
-	<script type="text/javascript" src="jss/plugins/tableexport/jquery.base64.js"></script>
-	<script type="text/javascript" src="jss/plugins/tableexport/html2canvas.js"></script>
-	<script type="text/javascript" src="jss/plugins/tableexport/jspdf/libs/sprintf.js"></script>
-	<script type="text/javascript" src="jss/plugins/tableexport/jspdf/jspdf.js"></script>
-	<script type="text/javascript" src="jss/plugins/tableexport/jspdf/libs/base64.js"></script>       
-    
+        <script type="text/javascript" src="js/plugins/jquery/jquery.min.js"></script>
+        <script type="text/javascript" src="js/plugins/jquery/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="js/plugins/bootstrap/bootstrap.min.js"></script>        
+        <script type="text/javascript" src="js/settings.js"></script>
+        <script type="text/javascript" src="js/plugins.js"></script>        
+        <script type="text/javascript" src="js/actions.js"></script>
+        </div>
     </body>
 </html>
 
