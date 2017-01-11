@@ -91,7 +91,7 @@
                 </div> 
                 <div class="col-lg-3 col-md-6">
                     
-                     <button class="box effect1" style="background-color:#fff"><a href="driver_details.php">Manage Driver</a><i class="fa fa-arrow-circle-right"></i> <!--<i class="fa fa-hdd-o fa-5x"></i>--><img class="h1" src="img/man.png"/></button>
+                     <button class="box effect1" style="background-color:#fff"  onclick="window.location.href='driver_details.php'"><a href="driver_details.php">Manage Driver</a><i class="fa fa-arrow-circle-right"></i> <!--<i class="fa fa-hdd-o fa-5x"></i>--><img class="h1" src="img/man.png"/></button>
                     
                 </div>
                 <div class="col-lg-3 col-md-6">

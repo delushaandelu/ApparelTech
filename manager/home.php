@@ -84,33 +84,33 @@
     <div id="dash">
                 <div class="col-lg-3 col-md-6">
                     
-                    <button class="bt" style="background-color:#fff"><a href="supplier-manage_supplier.php">Manage Supplier</a><i class="fa fa-arrow-circle-right"></i> <!--<i class="fa fa-university fa-5x"></i>--><img class="h1" src="images/sup.png"/></button>
+                    <button class="bt" style="background-color:#fff" onclick="window.location.href='supplier-manage_supplier.php'"><a href="">Manage Supplier</a><i class="fa fa-arrow-circle-right"></i> <!--<i class="fa fa-university fa-5x"></i>--><img class="h1" src="images/sup.png"/></button>
                     
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <button class="bt" style="background-color:#fff"><a href="Stock-View_Stock.php">View Stock</a><i class="fa fa-arrow-circle-right"></i>  <!--<i class="fa fa-stack-overflow fa-5x"></i>--><img class="h1" src="images/stock.png"/></button>
+                    <button class="bt" style="background-color:#fff" onclick="window.location.href='Stock-View_Stock.php'"><a href="">View Stock</a><i class="fa fa-arrow-circle-right"></i>  <!--<i class="fa fa-stack-overflow fa-5x"></i>--><img class="h1" src="images/stock.png"/></button>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <button class="bt" style="background-color:#fff"><a href="ManageUser-Manage_Customer.php">Manage Customer</a><i class="fa fa-arrow-circle-right"></i> <!-- <i class="fa fa-user fa-5x"></i>--><img class="h1" src="images/cus.png"/></button>
+                    <button class="bt" style="background-color:#fff" onclick="window.location.href='ManageUser-Manage_Customer.php'"><a href="">Manage Customer</a><i class="fa fa-arrow-circle-right"></i> <!-- <i class="fa fa-user fa-5x"></i>--><img class="h1" src="images/cus.png"/></button>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <button class="bt" style="background-color:#fff"><a href="ManageUser-View_Customer.php">View Customer</a><i class="fa fa-arrow-circle-right"></i>  <!--<i class="fa fa-users fa-5x"></i>--><img class="h1" src="images/cus2.png"/></button>
+                    <button class="bt" style="background-color:#fff" onclick="window.location.href='ManageUser-View_Customer.php'"><a href="">View Customer</a><i class="fa fa-arrow-circle-right"></i>  <!--<i class="fa fa-users fa-5x"></i>--><img class="h1" src="images/cus2.png"/></button>
                 </div>
     </div>
     </br></br></br>
 
                 <div id="dash1">
                 <div class="col-lg-3 col-md-6">
-                     <button class="bt" style="background-color:#fff"><a href="ManageUser-Manage_Stock_Manager.php">Add user</a><i class="fa fa-arrow-circle-right"></i><!--<i class="fa fa-user-plus fa-5x"></i>--><img class="h1" src="images/cus1.png"/></button>
+                     <button class="bt" style="background-color:#fff" onclick="window.location.href='ManageUser-Manage_Stock_Manager.php'"><a href="">Add user</a><i class="fa fa-arrow-circle-right"></i><!--<i class="fa fa-user-plus fa-5x"></i>--><img class="h1" src="images/cus1.png"/></button>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <button class="bt" style="background-color:#fff"><a href="Quotation-Manage_Quotation.php">Manage Quotation</a><i class="fa fa-arrow-circle-right"></i><!--<i class="fa fa-quote-left fa-5x"></i>--><img class="h1" src="images/q.png"/></button>
+                    <button class="bt" style="background-color:#fff" onclick="window.location.href='Quotation-Manage_Quotation.php'"><a href="">Manage Quotation</a><i class="fa fa-arrow-circle-right"></i><!--<i class="fa fa-quote-left fa-5x"></i>--><img class="h1" src="images/q.png"/></button>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <button class="bt" style="background-color:#fff"><a href="backup.php">Backup</a><i class="fa fa-arrow-circle-right"></i><!--<i class="fa fa-cloud-upload fa-5x"></i>--><img class="h1" src="images/back.png"/></button>
+                    <button class="bt" style="background-color:#fff" onclick="window.location.href='backup.php'"><a href="">Backup</a><i class="fa fa-arrow-circle-right"></i><!--<i class="fa fa-cloud-upload fa-5x"></i>--><img class="h1" src="images/back.png"/></button>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <button class="bt" style="background-color:#fff"><a href="Settings-Change_password.php">Change Password</a><i class="fa fa-arrow-circle-right"></i> <!--<i class="fa fa-unlock-alt fa-5x"></i>--><img class="h1" src="images/lock.png"/></button>
+                    <button class="bt" style="background-color:#fff" onclick="window.location.href='Settings-Change_password.php'"><a href="">Change Password</a><i class="fa fa-arrow-circle-right"></i> <!--<i class="fa fa-unlock-alt fa-5x"></i>--><img class="h1" src="images/lock.png"/></button>
                 </div>
             </div>
         
