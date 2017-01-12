@@ -1,0 +1,158 @@
+@charset "utf-8";
+/* CSS Document */
+
+#button
+{
+    margin-top: 8%;
+}
+
+
+
+#btn1
+{
+    margin-left: 32%;
+    margin-top: 0%;
+}
+#nav_tab_item_effect{
+	background-color:#22262e;
+	font-size:14px;
+	}
+#nav_tab_item_effect a:active{
+    background-color:orangered;
+}
+
+#nav_tab_item_effect a:hover{
+    background-color: orangered;
+    
+}
+#nav_tab_item_effect a{
+    color: white;
+}
+	
+.panel{
+margin-top: -2%;
+height: 79%;
+	
+	}
+
+#table_font{
+	font-size:14px;
+	font-style:normal;
+	color : black;
+	}
+
+
+tr.spaceUnder > td
+{
+  padding-bottom: 1em;
+}
+
+.myButton {
+    margin-top:0%;
+    margin-left:30%;
+    background:#1caf9a; 
+	cursor:pointer;
+	color:#fff;
+	font-family:Arial;
+	font-size:14px;
+	padding:5px;
+	text-decoration:none;
+    width:120px;
+    border: none;
+
+	
+}
+.myButton:hover {
+	background-color:#1caf9a;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+.myButtonsearch{
+     margin-top:0%;
+    margin-left:-4%;
+    background:#1caf9a; 
+	cursor:pointer;
+	color:#fff;
+	font-family:Arial;
+	font-size:14px;
+	padding:5px;
+	text-decoration:none;
+    width:125px;
+    border: none;
+}
+
+
+#below_panel_search_item{
+	
+	height:500px;
+	
+	}
+
+#upper_panel_search_item{
+	height:200px;
+
+	}
+        
+
+.upper_panel_search_item{
+	height: 100px;
+	
+	
+	}
+
+.middle_panel_search_item{
+	
+	height: 100px;
+}
+
+.below_panel_search_item{
+	height: 200px;
+	
+	
+	}
+
+/*
+.dropdown_container{
+	width: 50px;
+
+}*/
+
+
+.add_dropdown_effects{
+	width : 150px;
+}
+
+#scrh
+{
+    margin-left: 700px;
+    margin-top: -95px;
+}
+
+#btnManageStockSearch2{
+	margin-left: 50%;
+}
+
+
+.upper_panel_update_item{
+	height: 100px;
+	
+	
+	}
+
+.middle_panel_update_item{
+	
+	height: 100px;
+}
+
+.below_panel_update_item{
+	margin-top: 50px;
+	height: 200px;
+	margin-left:10px;
+	margin-right: 10px;
+}
+
+#scrh{
+	margin-left: 50%;
+}
