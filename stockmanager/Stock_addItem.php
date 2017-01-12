@@ -110,6 +110,10 @@
                                             <td id="table_font" width="10%"> Quantity</td> 
                                             <td> <input type="text"  name="quantity" class="form-control"s></td>
                                         </tr>  
+                                        <tr class="spaceUnder">
+                                            <td id="table_font" width="10%"> Re-Order Level</td> 
+                                            <td> <input type="text"  name="reorderlevel" class="form-control"s></td>
+                                        </tr>  
                                     </table> 
                             	</div>
                         <div id="">
@@ -127,7 +131,7 @@
                             <!-- This is related to add item. The add item function is in the item class. Here I created an object called myItem and called the addItem() function-->
                             <?php
 
-                                include ('Item.php');
+                                
                                 if(isset($_POST['btnManageStockInsert'])){
 
                                     $itemname = $_POST['itemname'];
@@ -135,10 +139,20 @@
                                     $sellingprice = $_POST['sellingprice'];
                                     $cost = $_POST['cost'];
                                     $categoryname = $_POST['categoryname'];
-
+                                    $reorderlevel = $_POST['reorderlevel'];
                                     $quantity = $_POST['quantity'];
-                                    $myItem = new Item();
-                                    $myItem -> addItem($itemname, $brand,$sellingprice,$cost, $categoryname,$quantity );
+
+                                    $query = "INSERT INTO item(itemName,buyingPrice,sellingPrice,brand,catagery,stockQty,reOrderLevel) VALUES ('$itemname','$cost','$sellingprice','$brand','$categoryname','$quantity','$reorderlevel')";
+                                    //mysqli_query($dbcon,$query) or die(mysqli_error($dbcon));
+                                    if(!mysqli_query($dbcon, $query)){
+                                        die('Error inserting new record');
+                                    }else{
+                                        echo'<script language ="javascript">';
+                                            echo "swal({  title: 'Item successfully added to the stock!', text: '', type: 'success', confirmButtonText: 'Done!'}, function(){window.location.href='Stock_ManageStock.php'});";
+                                        echo'</script>';
+            
+        }
+
                                 }
                             ?>
     </div>

@@ -7,6 +7,7 @@
 		var $cost ="";
 		var $categoryName = "";
 		var $quantity = "";
+		var $reorderlevel
 	
 
 	public function addItem($itemname,$brand,$sellingprice,$cost,$categoryname,$quantity){

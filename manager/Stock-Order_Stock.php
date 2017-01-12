@@ -26,49 +26,51 @@
 
         <div id="content">
         <div id="top3">
-            <h4 style="color: #000000">
-                Please Select the item if you want to add to the cart.
-            </h4>
-            <br><br>
+              <?php
+                $query = "SELECT * FROM item";
+                //echo ($query);
+                $res = mysqli_query($dbcon,$query);
+                 if(mysqli_num_rows($res) > 0){
+                    
+                        echo "<table border = '0' class='table table-hover'>";
+                            echo "<tr bgcolor='#C0C0C0' width = '10px' >";
+                            
+                                echo "<th>Item ID</th>"; echo"<td width = 10%></td>";
+                                echo "<th >Item Name</th>";echo"<td width = 2%></td>";
+                                echo "<th>Category</th>";echo"<td width=2%></td>";
+                                echo "<th>Brand</th>";echo"<td width=2%></td>";
+                                echo "<th>Buying Price</th>";echo"<td width = 2%></td>";
+                                echo "<th>Selling Price</th>";echo"<td width=2%></td>";
+                                echo "<th>Quantity</th>";echo"<td width=2%></td>";
+                                
+                            echo "</tr>";
+                            
+
+                        while($row = mysqli_fetch_array($res)){
+                            if($row['stockQty'] <= $row['reOrderLevel']){
+                            echo "<tr>";
+                                echo "<td>" . $row['item_id'] . "</td>"; echo"<td ></td>";
+                                echo "<td>" . $row['itemName'] . "</td>";echo"<td></td>";
+                                echo "<td>" . $row['catagery'] . "</td>";echo"<td></td>";
+                                echo "<td>" . $row['brand'] . "</td>";echo"<td></td>";
+                                echo "<td>" . $row['buyingPrice'] . "</td>";echo"<td></td>";
+                                echo "<td>" . $row['sellingPrice'] . "</td>";echo"<td></td>";
+                                echo "<td>" . $row['stockQty'] . "</td>";echo"<td></td>";
+                                 
+
+                         echo "</td>";
+                            echo "</tr>";}
+                        }
+                        echo "</table>";
+                        // Close result set
+                        mysqli_free_result($result);
+                    }
+                
+
+
+            ?>
             
-            <table class="table datatable">
-                <tr>
-                    <th>Item ID</th>
-                    <th>Item Name</th>
-                    <th>Model Name</th>
-                    <th>Unit Price</th>
-                </tr>
-                <tr class="">
-                    <td>dfdef</td>
-                    <td>dv</td>
-                    <td>dvgdfb</td>
-                    <td>fgrdh</td>
-                </tr>
-                <tr class="">
-                    <td>dfdef</td>
-                    <td>dfdef</td>
-                    <td>dfdef</td>
-                    <td>dfdef</td>
-                </tr>
-                <tr class="">
-                    <td>dfdef</td>
-                    <td>dfdef</td>
-                    <td>dfdef</td>
-                    <td>dfdef</td>
-                </tr>
-                <tr class="">
-                    <td>dfdef</td>
-                    <td>dfdef</td>
-                    <td>dfdef</td>
-                    <td>dfdef</td>
-                </tr>
-                <tr class="">
-                    <td>dfdef</td>
-                    <td>dfdef</td>
-                    <td>dfdef</td>
-                    <td>dfdef</td>
-                </tr>
-            </table>
+            
         </div>
 
         <div id="bottom3">
