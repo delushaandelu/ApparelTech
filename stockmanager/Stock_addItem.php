@@ -110,19 +110,18 @@
                                         <tr class="spaceUnder">
                                             <td id="table_font" width="10%"> Quantity</td> 
                                             <td> <input type="text"  name="quantity" class="form-control"s></td>
-                                        </tr>  
-<<<<<<< HEAD
-                                        <tr>
-                                        <td>
-                                          <input type="submit" class="myButton" id="btnManageStockInsert"  name="btnManageStockInsert" value="Add"  />  
-                                        </td>
-                                        </tr>
-=======
+                   
+
                                         <tr class="spaceUnder">
                                             <td id="table_font" width="10%"> Re-Order Level</td> 
                                             <td> <input type="text"  name="reorderlevel" class="form-control"s></td>
-                                        </tr>  
->>>>>>> origin/master
+                                        </tr>
+                                        <tr>
+                                        <td colspan="2">
+                                          <input type="submit" class="myButton" id="btnManageStockInsert"  name="btnManageStockInsert" value="Add"  />  
+                                        </td>
+                                        </tr>
+
                                     </table> 
                             	</div>
                        

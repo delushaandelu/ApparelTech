@@ -25,7 +25,7 @@
         ?>
 
                 <ul class="breadcrumb">
-                    <h2>Graphical Reports</h2>
+                    <h4>Graphical Reports</h4>
                 </ul>
 
                 
