@@ -60,7 +60,7 @@
         ?>
 
 <ul class="breadcrumb">
-     <h2>Manage Stock</h2>
+     <h4>Manage Stock</h4>
 </ul>
 <div class="panel" >
         

@@ -18,12 +18,15 @@
     .notification_bottom a{
         text-decoration: none;
     }
+  
 </style>
  
 </head>
 </html>
 <body>
-
+<?php
+    require("database_connection.php");
+?>
 
 <div class="page-container"> 
             <div class="page-sidebar">
@@ -111,7 +114,6 @@
 						<ul class="nofitications-dropdown">
 							<li class="dropdown head-dpdn">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope"></i><span class="badge"><?php
-                        require("database_connection.php"); 
 
                         $sql= "select count(id) as total from orders where status='1'";
                         //$result=mysqli_query($dbcon,$sql);
@@ -122,11 +124,11 @@
 								<ul class="dropdown-menu anti-dropdown-menu">
 									<li>
 										<div class="notification_header">
-											<h6>new purchase orders</h6>
+											<h6>New purchase orders</h6>
 										</div>
 									</li>
 									<li><a href="#">
-									   <div class="user_img"><img src="images/1.png" alt=""></div>
+									   
 									   <div class="notification_desc">
 										<p>Total amounts</p>
 										<p><span><?php
@@ -156,47 +158,52 @@
 								</ul>
 							</li>
 							<li class="dropdown head-dpdn">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-bell"></i><span class="badge blue">  </span></a>
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-bell"></i><span class="badge blue"><?php
+                        $sql= "select count(rid) as total from deliveryrequest";
+                        //$result=mysqli_query($dbcon,$sql);
+                        $result = mysqli_query($dbcon,$sql);
+                        $row = mysqli_fetch_assoc($result);
+                                echo  $row["total"];
+                        ?>  </span></a>
 								<ul class="dropdown-menu anti-dropdown-menu">
 									<li>
 										<div class="notification_header">
-											<h6>You have 3 new notification</h6>
+											<h6> New delivery requests</h6>
 										</div>
 									</li>
 									<li><a href="#">
-										<div class="user_img"><img src="images/2.png" alt=""></div>
+										
 									   <div class="notification_desc">
-										<p>Lorem ipsum dolor amet</p>
-										<p><span> </span></p>
+										<p>Requests</p>
+										<p><span><?php
+                        //require("database_connection.php"); 
+
+                        $sql1= "SELECT * FROM deliveryrequest ";
+                        //$result=mysqli_query($dbcon,$sql);
+                        $result1 = mysqli_query($dbcon,$sql1);
+                        
+                        while($row = mysqli_fetch_assoc($result1)){
+                            echo  $row["company"];
+                            echo " :- ";
+                            echo  $row["amount"];
+                            echo "</br>";
+                        }
+                                
+                        ?> </span></p>
 										</div>
 									  <div class="clearfix"></div>	
 									 </a></li>
-									 <li class="odd"><a href="#">
-										<div class="user_img"><img src="images/1.png" alt=""></div>
-									   <div class="notification_desc">
-										<p>Lorem ipsum dolor amet </p>
-										<p><span></span></p>
-										</div>
-									   <div class="clearfix"></div>	
-									 </a></li>
-									 <li><a href="#">
-										<div class="user_img"><img src="images/3.png" alt=""></div>
-									   <div class="notification_desc">
-										<p>Lorem ipsum dolor amet </p>
-										<p><span></span></p>
-										</div>
-									   <div class="clearfix"></div>	
-									 </a></li>
+									 
 									 <li>
 										<div class="notification_bottom">
-											<a href="#">See all notifications</a>
+											<h6><a href="managedelivery.php">See all requests</a></h6>
 										</div> 
 									</li>
 								</ul>
 							</li>	
 							
 						</ul>
-						<div class="clearfix"> </div>
+						<!--<div class="clearfix"> </div>-->
                        </div>
                     </div>
                 </ul>

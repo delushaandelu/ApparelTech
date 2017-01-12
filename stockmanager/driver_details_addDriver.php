@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="designs/template1.css" type="text/css" />
         <script src="js/sweetalert-dev.js"></script>
         <link rel="stylesheet" href="js/sweetalert.css">
+         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.min.css"/>
         
 <?php
     include("../config/stockmgrmenu.php");
@@ -104,8 +105,8 @@ if(isset($_POST['DriverInsert'])){
 
             <div id = "top_left_driver">
                 <div class="panel-heading-driver" align="center">Add Driver</div>
-                <form method="post" action="<?php htmlspecialchars($_SERVER['PHP_SELF']) ?>">
-                    <table id="drivertb" border="0" width="800" height="400" >
+                <form class="ui form" method="post" action="<?php htmlspecialchars($_SERVER['PHP_SELF']) ?>">
+                    <table class="ui definition table" id="drivertb" border="0" width="800" height="400" >
 
                         <tr>
 

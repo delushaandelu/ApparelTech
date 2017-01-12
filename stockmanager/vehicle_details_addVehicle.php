@@ -4,6 +4,7 @@
         <title>Stock Manager</title>                   
         <link rel="stylesheet" type="text/css" id="theme" href="css/main.css"/> 
         <link rel="stylesheet" href="designs/template1.css" type="text/css" />
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.min.css"/>
     </head>
 <body>
         
@@ -26,7 +27,7 @@
             <div id = "top_left_vehicle">
                 <form method="post" action="vehicle_details_addVehicle.php">
                      <div class="panel-heading-vehicle" align="center">Add Vehicle</div>
-                    <table id="vehicletb" border="0" width="800" height="400" >
+                    <table class="ui definition table"  id="vehicletb" border="0" width="800" height="400" >
 
                         <tr>
                             <td id="table_font">Vehicle Number</td>

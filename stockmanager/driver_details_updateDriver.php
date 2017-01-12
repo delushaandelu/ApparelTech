@@ -6,6 +6,7 @@
         <link rel="stylesheet" type="text/css" id="theme" href="css/main.css"/> 
          <script src="js/sweetalert-dev.js"></script>
         <link rel="stylesheet" href="js/sweetalert.css">
+         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.min.css"/>
     </head>
 <body>
         
@@ -52,7 +53,7 @@
     <div class="centre">
          <div class="panel-heading" align="center">Update Driver</div>
         <form action="<?php htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="post">
-            <table id="joblist">
+            <table  class="ui definition table" id="joblist">
                 <?php 
                     $sql = "select * from driver where driver_id='$driver_id'";
                     $result = mysqli_query($dbcon,$sql);        

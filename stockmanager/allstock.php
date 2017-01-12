@@ -24,7 +24,7 @@
        <div id ="all">
             
                 <ul class="breadcrumb">
-                    <h3>All stock on - </li></h3>
+                    <h3>All stock on  </li></h3>
                 </ul>
     
     <div id="btnn">
@@ -32,9 +32,9 @@
     </div>
     
         <div id="stock">
-            <table class="table table-striped">
+            <table class="table datatable">
                                         <thead>
-                                            <tr>
+                                            <tr class='success'>
                                                 <th>Item Id</th>
                                                 <th>Item Name</th>
                                                 <th>Cost</th>

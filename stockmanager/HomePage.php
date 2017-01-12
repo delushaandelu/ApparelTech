@@ -95,7 +95,7 @@
                     
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <button class="box effect1" style="background-color:#fff" onclick="window.location.href='managedelivery.php'"><a href="">Manage Vehicle</a><i class="fa fa-arrow-circle-right"></i> <!--<i class="fa fa-truck fa-5x"></i>--><img class="h1" src="img/vehicle.png"/></button>
+                    <button class="box effect1" style="background-color:#fff" onclick="window.location.href='vehicle_details.php'"><a href="">Manage Vehicle</a><i class="fa fa-arrow-circle-right"></i> <!--<i class="fa fa-truck fa-5x"></i>--><img class="h1" src="img/vehicle.png"/></button>
                 </div>               
                 <div class="col-lg-3 col-md-6">
                     <button class="box effect1" style="background-color:#fff" onclick="window.location.href='changepassword.php'"><a href="">Change Password</a><i class="fa fa-arrow-circle-right"></i> <!-- <i class="fa fa-unlock-alt fa-5x"></i>--><img class="h1" src="img/lock.png"/></button>

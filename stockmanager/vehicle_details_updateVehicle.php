@@ -4,6 +4,7 @@
         <title>Stock Manager</title>   
         <link rel="stylesheet" type="text/css" href="VehicleUpdate.css"/>
         <link rel="stylesheet" type="text/css" id="theme" href="css/main.css"/>  
+         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.min.css"/>
         
     </head>
     <body>
@@ -49,7 +50,7 @@
     <div class="centre">
         <div class="panel-heading" align="center">Update Vehicle</div>
         <form id="vhicle-container" action="<?php htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="post">
-            <table id="joblist">
+            <table  class="ui definition table" id="joblist">
                 <?php 
                     $sql = "select * from vehicle where vehicle_id='$vehicle_id'";
                     $result = mysqli_query($dbcon,$sql);        
