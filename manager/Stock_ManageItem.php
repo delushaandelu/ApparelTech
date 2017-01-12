@@ -195,14 +195,14 @@
         </div>
         
     </div>
-    <div class="row">
+
         <div id="container">
             <div id="top">
                 
                 <form method="post" name="form" onSubmit="return check();">    
             <div class="upper_panel_search_item">
             
-                <div class="col-sm-3">
+                <div class="col-sm-4">
 
                     <!-- This is the interface design for search items from the stock -->
                     <select id = "categoryname" name="categoryname" class="btn btn-default dropdown-toggle">
@@ -212,19 +212,19 @@
                         <option value="Tools">Tools</option>
                     </select>
                 </div>       
-                <div class="col-sm-3">       
+                <div class="col-sm-4">       
                     <select id = "itemname" name="itemname" class="btn btn-default dropdown-toggle"></select>
 
                 </div>
-                <div class="col-sm-3">        
+                <div class="col-sm-4">        
                     <select id = "brandname" name="brandname" class="btn btn-default dropdown-toggle"></select>
 
                 </div>
-            </div>   
-            <div  id="scrh" class="col-sm-3">
+            </div>
+            <div  id="scrh">
                 <input type="submit" class="myButton" id="btnManageStockSearch2" name="btnManageStockSearch2" value="Search"  />
             </div>
-                    
+            <br><br><br>
         </form>
         
         <div class = "below_panel_search_item">

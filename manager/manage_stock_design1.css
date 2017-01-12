@@ -126,8 +126,9 @@ tr.spaceUnder > td
 
 #scrh
 {
-    margin-left: 700px;
+    margin-left: 650px;
     margin-top: -95px;
+	margin-right: 10px;
 }
 
 #btnManageStockSearch2{
