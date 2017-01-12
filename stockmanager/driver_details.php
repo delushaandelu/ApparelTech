@@ -32,12 +32,12 @@
                 width:200px;
                 height:40px;
             }    
-            #btn{
+            /*#btn{
                 position: relative;
                 margin-top:-30%;
                 margin-left:40%;
             }
-            
+            */
     </style>
     </head>
 <body>
@@ -74,6 +74,9 @@
                             </tr>
                 
                 <?php } ?>
+            <tr>
+            <td colspan="7"><center><a href="driver_details_addDriver.php"><button id="btndriver" class="btn">Add Driver</button></a></center>  </td>
+            </tr>
         </table>
                 <?php
        
@@ -99,9 +102,9 @@
 </div>
        
 <div id="footer">
-    <div id="btn">
+    <!--<div id="btn">
     <a href="driver_details_addDriver.php"><button id="btndriver" class="btn">Add Driver</button></a>  
-    </div>
+    </div>-->
 </div>
 
 

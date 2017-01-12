@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
     <head>        
@@ -245,7 +246,7 @@
                     if(mysqli_num_rows($result) > 0){
                         
                         echo "<table border = '0' class='table table-hover'>";
-                            echo "<tr bgcolor='#C0C0C0' width = '10px' >";
+                            echo "<tr class='success' width = '10px' >";
                             
                                 echo "<th width='10px' style='text-align:center'>Item ID</th>";
                                 echo "<th width='10px' style='text-align:center'>Item Name</th>";

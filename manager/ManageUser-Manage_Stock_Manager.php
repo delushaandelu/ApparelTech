@@ -2,12 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.min.css"/>
     <title>Manager Admin</title>
     <!-- css files -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="dist/css/sb-admin-2.css" rel="stylesheet">
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="designs/template.css" type="text/css" />
+    
 </head>
 
 <body>
@@ -26,7 +28,7 @@ include ("../config/managermenu.php");
     <div class="row1">
         <!-- form -->
         <form name="form1"  method="post" action="addUser.php">
-            <table border="0" class="tb1">
+            <table  class="ui definition table"  border="0" class="tb1">
                 <tr></tr>
                 <tr>
                     <td id="table-font" width="60%">User name*</td>

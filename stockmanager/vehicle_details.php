@@ -28,11 +28,11 @@
                 width:200px;
                 height:40px;
             }    
-            #btn{
+            /*#btn{
                 position: relative;
                 margin-top:-30%;
                 margin-left:40%;
-            }  
+            }  */
         
     </style>
 </head>
@@ -59,6 +59,9 @@
                             <td class="bt"><input type="button" class="btn" value=update onclick="location.href='vehicle_details_updateVehicle.php?ID=<?php echo $row['vehicle_id'] ?>'" ></td>
                             </tr>
                 <?php } ?>
+            <tr>
+            <td colspan="6"><center><a href="vehicle_details_addVehicle.php"><button id="btnvehicle" class="btn">Add Vehicle</button></a></center>  </td>
+            </tr>
         </table>
     
               <?php
@@ -92,9 +95,9 @@
 </div>
        
 <div id="footer">
-     <div id="btn">
+    <!-- <div id="btn">
     <a href="vehicle_details_addVehicle.php"><button id="btnvehicle" class="btn">Add Vehicle</button></a>  
-    </div>   
+    </div> -->  
 </div>
 
 

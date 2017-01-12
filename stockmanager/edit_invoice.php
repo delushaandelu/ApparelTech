@@ -69,8 +69,7 @@
 		
 		<div id="customer">
 
-            <textarea id="customer-title">Widget Corp.
-c/o Steve Widget</textarea>
+            <textarea id="customer-title">Priyantha Enterprice</textarea>
 
             <table id="meta">
                 <tr>

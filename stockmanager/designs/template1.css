@@ -258,9 +258,9 @@ ul.dropdown-menu{
 	
 	}
 #changepwd{
-	width: 500px;
-	margin-left: 25%;
-	margin-top: 19%;
+	width: 80%;
+	margin-left: 10%;
+	margin-top: 15%;
 	border-radius: 15px;
 
 }
@@ -280,7 +280,7 @@ ul.dropdown-menu{
 	border-radius:15px;
 }
 #pwdtb{
-margin-left: 10%;
+margin-left: 0%;
 
 }
 

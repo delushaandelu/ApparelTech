@@ -6,6 +6,15 @@
         <link rel="stylesheet" type="text/css" id="theme" href="css/main.css"/>
         <script src="js/sweetalert-dev.js"></script>
         <link rel="stylesheet" href="js/sweetalert.css">
+        <style type="text/css">
+            .btnb{
+                background-color: #1caf9a;
+                color: aliceblue;
+                width: 200px;
+                height: 30px;
+                border: none;
+            }
+        </style>
     </head>
     <body>
         
@@ -17,7 +26,7 @@
 
 <div class = "panel">
     <ul class="nav nav-justified" >
-        <li id ="nav_tab_item_effect"><a href="Purchase Order_ManagePurchaseOrder.php">Back</a></li>
+        <li id ="nav_tab_item_effect"><a href="Purchase Order_ManagePurchaseOrder.php"><button class="btnb">Back</button></a></li>
    	</ul>
 </div>
     
@@ -39,7 +48,7 @@
     ?>
 <form>
 <table class="table table-striped">
-    <tr>
+    <tr class="success">
          
         <th>ProductID</th>
         <th>Product Name</th>

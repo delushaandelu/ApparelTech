@@ -2,7 +2,8 @@
 
 <!DOCTYPE html>
 <html lang="en">
-    <head>        
+    <head>     
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.min.css"/>
         <title>Stock Manager</title>                   
         <link rel="stylesheet" type="text/css" id="theme" href="css/main.css"/>
         <link rel="stylesheet" href="designs/template1.css" type="text/css" />
@@ -27,7 +28,7 @@
         <div class="panel-heading" align="center">Account Password</div>
           
                 <form method="post">
-                    <table id="pwdtb" border="0" width="400" height="200">
+                    <table class="ui definition table"  id="pwdtb" border="0" width="400" height="200">
                     <tr>
                         <td id="table_font">Old Password*</td>
                         <td><input type="password" name="oldpassword"  class="form-control"></td>
