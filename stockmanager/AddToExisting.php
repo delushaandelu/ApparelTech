@@ -141,7 +141,7 @@
                 }
 
                  if(document.form.cost.value == ""){
-                    alert("Please add the Buying Proce");
+                    alert("Please add the Buying Price");
                     document.form.brandname.focus();
                     return false;
                 }
@@ -183,9 +183,9 @@
   			</ul>
             <br><br>
                 
-                	<div class = "upper_panel_add_item" id="add">
+                <div class = "upper_panel_add_item" id="add">
                             
-                                <form method="post" name="form" action="Stock_addExistingItem.php" onSubmit="return check();">
+                    <form method="post" name="form"  onSubmit="return check();">
                                     <table border="0" >
                                         <tr class="spaceUnder">
                                             <td id="table_font" width="20%" >Category Name</td> 
@@ -240,7 +240,31 @@
                                 
                          </div>       
                             </form>
-                            <!-- This is related to add item. The add item function is in the item class. Here I created an object called myItem and called the addItem() function-->
+                            
+                            <?php
+                            //include('database_connection.php');
+
+                            if(isset($_POST['btnManageStockInsert'])){
+                                $itemname = $_POST['itemname'];
+                                $brand = $_POST['brandname'];
+                                $sellingprice = $_POST['sellingprice'];
+                                $cost = $_POST['cost'];
+                                //$categoryname = $_POST['categoryname'];
+                                $quantity = $_POST['quantity'];
+                                                               
+                                $query = "UPDATE item SET sellingPrice = '$sellingprice', buyingPrice = '$cost',stockQty = stockQty + '$quantity' WHERE itemName = '$itemname' AND brand = '$brand'";
+                                
+                                if($res = mysqli_query($dbcon,$query)){
+                                    echo'<script language ="javascript">';
+                    echo "swal({  title: 'Item successfully added to the stock!', text: '', type: 'success', confirmButtonText: 'Done!'}, function(){window.location.href='Stock_ManageStock.php'});";
+                echo'</script>';
+                                } else{
+                                    die(mysqli_error($dbcon));}
+                                 }
+                         
+                            ?>
+
+
                            
                  
                
