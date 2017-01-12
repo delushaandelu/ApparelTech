@@ -25,52 +25,44 @@
     <div class="row">
          <div id="content">
 
-        <div id="top2">
-            <table style width="100%" class="table datatable">
-                <tr>
-                    <th>Report ID</th>
-                    <th>Date</th>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>2016.01.02</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>2016.01.03</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>2016.01.04</td>
-                </tr>
-            </table>
+        <div id="top">
+            <h4 style="center">Order Stock</h4>
+        <?php
 
-        </div>
+        //include('database_connection.php');
 
-        <div id ="bottom2" style="border: thin">
-            <h3 style="color: #0000FF">
-                                                   Stock Report
-            </h3>
-            <br><br>
+        $sql = "SELECT * FROM item WHERE 'stockQty'<='reOrderLevel' ";
+        $result = $dbcon->query($sql);
 
-            <tr>
-                <td id="table-font" width="30" >
-                    Report ID
-                </td>
-                <td>
-                    <input type="text" name="Report ID" class="form-control" style="width: 30%">
-                </td>
-            </tr>
+        if ($result->num_rows > 0) {
+            echo "<table class='table' id='myTable' >";
+            echo"<tr class='success'>
+                <th>Item ID </th>
+                <th>Item Name </th>
+                <th>Brand </th>
+                <th>Category </th>
+                <th>Stock Qty </th>
+            </tr>";
 
-            <tr>
-                <td id="table-font" width="60%">
-                    Date
-                </td>
-                <td>
-                    <input type="text" name="Date" class="form-control" style="width: 30%">
-                    <br><br>
-                </td>
-            </tr>
+            while($row = $result->fetch_assoc()) {
+                echo "<tr>
+                    <td><h5 align='center'> " . $row["item_id"]. "</h5></td>
+                    <td><h5 align='center'>" . $row["itemName"]. "</h5></td>
+                    <td><h5 align='center'>" . $row["brand"]. "</h5></td>
+                    <td><h5 align='center'>" . $row["catagery"]. "</h5></td>
+                    <td><h5 align='center'>" . $row["vechicle_id"]. "</h5></td>
+                    <td><h5 align='center'>" . $row["stockQty"]. "</h5></td>
+                    
+                </tr>";
+            }
+            echo "</table>";
+        } else {
+            echo "0 results";
+        }
+
+        $dbcon->close();
+
+        ?>
 
         </div>
 
@@ -79,7 +71,6 @@
         <p>&nbsp;</p>
     </div>
     <div id="footer"></div>
-
     </div>      
 </div>
 
