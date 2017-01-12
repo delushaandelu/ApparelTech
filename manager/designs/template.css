@@ -324,3 +324,9 @@ button1:active {
     height: 90%;
     border: solid 1px;
 }
+
+#graph{
+	margin-top: 30%;
+	margin-left: 50%;
+}
+

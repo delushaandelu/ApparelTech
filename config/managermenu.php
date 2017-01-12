@@ -104,7 +104,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-files-o fa-fw"></i> View<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-eye"></i> View<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
                                     <a href="../manager/View-Rent.php">Rent</a>
@@ -145,9 +145,9 @@
                         <li>
                             <a href="#"><i class="fa fa-wrench fa-fw"></i> Setting<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
-                                <li>
+                                <!-- <li>
                                     <a href="../manager/Settings-Change_username.php">Change Username</a>
-                                </li>
+                                </li> -->
                                 <li>
                                     <a href="../manager/Settings-Change_password.php">Change Password</a>
                                 </li>
