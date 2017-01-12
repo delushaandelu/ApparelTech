@@ -83,7 +83,42 @@
         });
     });
 
-       </script>
+    </script>
+
+     <script type="text/javascript">
+           
+        $(document).ready(function(){
+
+        $('#brandname').change(function(){
+
+            var itemName = $('#itemname').val();
+            var brandName = $(this).val();
+          
+            if(brandName){
+
+                $.ajax({
+                    type : 'GET',
+                    url : '/GroupProject/stockmanager/dropdown3.php',
+                    
+                    data :{ 'itemname' : itemName, 'brandname' : brandName},
+                    dataType:'json',
+                    success : function(data){
+                        $('#cost').empty();
+                        $('#sellingprice').empty();
+                       
+                        $('#cost').val(data[0]);
+                        $('#sellingprice').val(data[1]);
+
+                        
+                        
+                    }
+                });
+            }
+        });
+    });
+
+    </script>
+
 
 
     <script type="text/javascript">
@@ -150,7 +185,7 @@
                 
                 	<div class = "upper_panel_add_item" id="add">
                             
-                                <form method="post" name="form" onSubmit="return check();">
+                                <form method="post" name="form" action="Stock_addExistingItem.php" onSubmit="return check();">
                                     <table border="0" >
                                         <tr class="spaceUnder">
                                             <td id="table_font" width="20%" >Category Name</td> 
@@ -180,11 +215,11 @@
                                         </tr>
                                          <tr class="spaceUnder">
                                             <td id="table_font" width="10%" ></td> 
-                                            <td><input type="text" class="form-control"  name="cost" placeholder="Cost"></td>
+                                            <td><input type="text" class="form-control" id="cost" name="cost" placeholder="Cost"></td>
                                         </tr>
                                         <tr class="spaceUnder">
                                             <td id="table_font" width="10%" > </td> 
-                                            <td><input type="text" class="form-control" name="sellingprice" placeholder="Selling Price" ></td>
+                                            <td><input type="text" class="form-control" id="sellingprice" name="sellingprice" placeholder="Selling Price" ></td>
                                         </tr>
                                         <tr class="spaceUnder">
                                             <td id="table_font" width="10%" > Quantity</td> 
@@ -206,22 +241,7 @@
                          </div>       
                             </form>
                             <!-- This is related to add item. The add item function is in the item class. Here I created an object called myItem and called the addItem() function-->
-                            <?php
-
-                                include ('Item.php');
-                                if(isset($_POST['btnManageStockInsert'])){
-
-                                    $itemname = $_POST['itemname'];
-                                    $brand = $_POST['brandname'];
-                                    $sellingprice = $_POST['sellingprice'];
-                                    $cost = $_POST['cost'];
-                                    $categoryname = $_POST['categoryname'];
-
-                                    $quantity = $_POST['quantity'];
-                                    $myItem = new Item();
-                                    $myItem -> addItem($itemname, $brand,$sellingprice,$cost, $categoryname,$quantity );
-                                }
-                            ?>
+                           
                  
                
             
