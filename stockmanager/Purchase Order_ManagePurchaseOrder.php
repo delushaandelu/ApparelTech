@@ -40,6 +40,7 @@
                             $sql = "select * from orders";    //display orders table.
                             $result = mysqli_query($dbcon,$sql);        
                             while($row = mysqli_fetch_array($result)) {
+                                $id = $row['id'];
     
                         ?>
                             <tr  class="active">
@@ -50,7 +51,7 @@
                                 
                                 <td class="bt"><center><button type="button" class="btn btn-danger" onclick="location.href='Purchase Order_ManagePurchaseOrder.php?id=<?php echo $row['id'] ?> & customerid=<?php echo $row['customer_id'] ?>'"><i class="fa fa-trash-o"></i>Reject</button></center></td>
                                 
-                                <td class="bt"><center><button type="button" class="btn"  onclick="location.href='Purchase Order_ManagePurchaseOrder.php?ID=<?php echo $row['id'] ?> & customer_id=<?php echo $row['customer_id'] ?>'" ><i class="fa fa-check" aria-hidden="true"></i>Accept</button></center></td>
+                                <td class="bt"><center><button type="button" class="btn" onclick="location.href='Purchase Order_ManagePurchaseOrder.php?ID=<?php echo $row['id'] ?> & customer_id=<?php echo $row['customer_id'] ?>'" ><i class="fa fa-check" aria-hidden="true"></i>Accept</button></center></td>
                                 
                                 <td class="bt"><center><button type="button" class="btn" onclick="location.href='PurchaseOrder_viewPurchaseOrder.php?vi=<?php echo $row['id'] ?>'" ><i class="fa fa-eye" aria-hidden="true"></i>view</center></button></td>
                             </tr>
@@ -59,6 +60,25 @@
             
                 </table>
                 
+                        <?php
+                            
+                            if(!empty($_GET['ID']) && !empty($_GET['customer_id'])){
+                                $query = "SELECT * FROM order_items WHERE order_id = '$id' ";
+                                echo($query);
+                                $res = mysqli_query($dbcon,$query);
+
+                                while ($row = mysqli_fetch_assoc($res)) {
+                                    $product_id = $row['product_id'];
+                                    $sql = "UPDATE item SET stockQty = stockQty - (SELECT quantity FROM order_items WHERE order_id = '$id' AND product_id = '$product_id') WHERE item_id = '$product_id'";
+                                    echo($sql);
+                                    $result = mysqli_query($dbcon,$sql) or die(mysqli_error($dbcon));
+
+                                }
+                            }
+
+
+                        ?>
+
                 
                         <?php
        
