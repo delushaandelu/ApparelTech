@@ -25,7 +25,7 @@
 				<h2 align="center">Sign up Here! </h2>
 			</div>
 
-        <form method="POST" name="form" action="classSignup.php">
+        <form method="POST" name="form" action="classSignup.php" enctype="multipart/form-data">
             <table>
                 <tr>
                     <td><label for="text">Full Name</label></td>
@@ -69,7 +69,7 @@
 
                 <tr>
                     <td><label for="text">Your id Photo </label></td>
-                    <td colspan="2"><input type="file" name="fileToUpload" id="fileToUpload"></td>
+                    <td colspan="2"><input type="file" name="fileToUpload" id="fileToUpload" ></td>
                 </tr>
 			<br/>
             </table>

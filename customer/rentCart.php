@@ -1,4 +1,4 @@
-<?php 
+<?php session_start();
 class Cart {
     protected $cart_contents = array();
     
@@ -75,7 +75,7 @@ class Cart {
                     return FALSE;
                 }
                 // prep the price
-                $item['rentPrice'] = (float) $item['rentPrice'];
+                $item['price'] = (float) $item['rentPrice'];
                 // create a unique identifier for the item being inserted into the cart
                 $rowid = md5($item['item_id']);
                 // get quantity if it's already there and add it on
@@ -124,7 +124,7 @@ class Cart {
 					$item['rentPrice'] = (float) $item['rentPrice'];
 				}
 				// product id & name shouldn't be changed
-				foreach(array_diff($keys, array('id', 'name')) as $key){
+				foreach(array_diff($keys, array('item_id', 'itemName')) as $key){
 					$this->cart_contents[$item['rowid']][$key] = $item[$key];
 				}
 				// save cart data

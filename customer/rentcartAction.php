@@ -1,5 +1,4 @@
 <?php
-session_start();
 // initialize shopping cart class
 include 'rentCart.php';
 $cart = new Cart;
@@ -7,8 +6,8 @@ $cart = new Cart;
 // include database configuration file
 include 'dbConfig.php';
 if(isset($_REQUEST['action']) && !empty($_REQUEST['action'])){
-    if($_REQUEST['action'] == 'addToCart' && !empty($_REQUEST['id'])){
-        $productID = $_REQUEST['id'];
+    if($_REQUEST['action'] == 'addToCart' && !empty($_REQUEST['item_id'])){
+        $productID = $_REQUEST['item_id'];
         // get product details
         $query = $db->query("SELECT * FROM item WHERE item_id = ".$productID);
         $row = $query->fetch_assoc();
@@ -20,18 +19,18 @@ if(isset($_REQUEST['action']) && !empty($_REQUEST['action'])){
         );
         
         $insertItem = $cart->insert($itemData);
-        $redirectLoc = $insertItem?'rentviewCart.php':'rent.php';
+        $redirectLoc = $insertItem?'rentviewCart.php':'rentitem.php';
         header("Location: ".$redirectLoc);
-    }elseif($_REQUEST['action'] == 'updateCartItem' && !empty($_REQUEST['id'])){
+    }elseif($_REQUEST['action'] == 'updateCartItem' && !empty($_REQUEST['item_id'])){
         $itemData = array(
-            'rowid' => $_REQUEST['id'],
+            'rowid' => $_REQUEST['item_id'],
             'qty' => $_REQUEST['qty']
         );
         $updateItem = $cart->update($itemData);
         echo $updateItem?'ok':'err';die;
-    }elseif($_REQUEST['action'] == 'removeCartItem' && !empty($_REQUEST['id'])){
-        $deleteItem = $cart->remove($_REQUEST['id']);
-        header("Location: viewCart.php");
+    }elseif($_REQUEST['action'] == 'removeCartItem' && !empty($_REQUEST['item_id'])){
+        $deleteItem = $cart->remove($_REQUEST['item_id']);
+        header("Location: rentviewCart.php");
     }elseif($_REQUEST['action'] == 'placeOrder' && $cart->total_items() > 0 && !empty($_SESSION['sessCustomerID'])){
         // insert order details into database
         $insertOrder = $db->query("INSERT INTO rentorders (customer_id, total_price, created, modified) VALUES ('".$_SESSION['sessCustomerID']."', '".$cart->total()."', '".date("Y-m-d H:i:s")."', '".date("Y-m-d H:i:s")."')");
@@ -42,7 +41,7 @@ if(isset($_REQUEST['action']) && !empty($_REQUEST['action'])){
             // get cart items
             $cartItems = $cart->contents();
             foreach($cartItems as $item){
-                $sql .= "INSERT INTO rentorder_items (order_id, product_id, quantity) VALUES ('".$orderID."', '".$item['item_id']."', '".$item['qty']."');";
+                $sql .= "INSERT INTO rent_order_items (order_id, product_id, quantity) VALUES ('".$orderID."', '".$item['item_id']."', '".$item['qty']."');";
             }
             // insert order items into database
             $insertOrderItems = $db->multi_query($sql);
@@ -57,8 +56,8 @@ if(isset($_REQUEST['action']) && !empty($_REQUEST['action'])){
             header("Location: rentcheckout.php");
         }
     }else{
-        header("Location: rent.php");
+        header("Location: rentitem.php");
     }
 }else{
-    header("Location: rent.php");
+    header("Location: rentitem.php");
 }
