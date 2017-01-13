@@ -28,6 +28,7 @@
 <div id="content">
         <div class="panel">
             <div class="panel-heading">
+                <div class="panel-body">
                 <table class="table datatable" id="potb">
                     <tr class='success'>
                         <th><center>id</center></th>
@@ -192,17 +193,13 @@
          
             </div>
             
-    <div class="panel-body">
-        <div class="previous_report_history_table">
-           
-        </div>
-                
-    <div class="previous_report_stock_report">
-    
     </div>
                 
     </div>
+            
 </div>
+        </div>
+        
     
         <script type="text/javascript" src="js/plugins/jquery/jquery.min.js"></script>
         <script type="text/javascript" src="js/plugins/jquery/jquery-ui.min.js"></script>
