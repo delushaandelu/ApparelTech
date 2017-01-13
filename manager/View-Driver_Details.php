@@ -49,8 +49,8 @@
         $result = $dbcon->query($sql);
 
         if ($result->num_rows > 0) {
-            echo "<table class='table' id='myTable' >";
-            echo"<tr class='success'>
+            echo "<table class='table table-hover' id='myTable' >";
+            echo"<tr bgcolor='#C0C0C0' width = '10px'>
                 <th>Driver ID </th>
                 <th>Driver Name </th>
                 <th>Licence Number </th>

@@ -37,8 +37,8 @@
 
         <!-- table for view accepted customers -->
 
-                <table class='table table-striped' id='myTable'>
-                <tr  class='success'>
+                <table class='table table-hover' id='myTable'>
+                <tr bgcolor='#C0C0C0' width = '10px'>
                     <th>Customer ID </th>
                     <th>NIC </th>
                     <th>Full Name </th>
