@@ -7,6 +7,19 @@
     <link href="dist/css/sb-admin-2.css" rel="stylesheet">
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="designs/template.css" type="text/css" />
+    
+    <script>
+    function printPageArea(areaID){
+	var printContent = document.getElementById(areaID);
+	var WinPrint = window.open('', '', 'width=900,height=650');
+	WinPrint.document.write(printContent.innerHTML);
+	WinPrint.document.close();
+	WinPrint.focus();
+	WinPrint.print();
+	WinPrint.close();
+    }
+    </script>
+    
 </head>
 
 <body>
@@ -20,14 +33,16 @@
         <div class="col-lg-12">
             <h4 class="page-header">Order Stock</h4>
         </div>
+        <a href="javascript:void(0);" id="print_button2" style="width: 130px; padding: 5px 8px 5px 8px;text-align: center;float: right;background-color: #1caf9a;color: #fff;text-decoration: none; margin: 10px;" onclick="printPageArea('top3')">Print</a>
         
     </div>
     <div class="row">
 
         <div id="content">
         <div id="top3">
+                
               <?php
-                $query = "SELECT * FROM item";
+                $query = "SELECT item_id,itemName,catagery,brand,stockQty,reOrderLevel FROM item";
                 //echo ($query);
                 $res = mysqli_query($dbcon,$query);
                  if(mysqli_num_rows($res) > 0){
@@ -39,8 +54,6 @@
                                 echo "<th >Item Name</th>";echo"<td width = 2%></td>";
                                 echo "<th>Category</th>";echo"<td width=2%></td>";
                                 echo "<th>Brand</th>";echo"<td width=2%></td>";
-                                echo "<th>Buying Price</th>";echo"<td width = 2%></td>";
-                                echo "<th>Selling Price</th>";echo"<td width=2%></td>";
                                 echo "<th>Quantity</th>";echo"<td width=2%></td>";
                                 
                             echo "</tr>";
@@ -53,9 +66,8 @@
                                 echo "<td>" . $row['itemName'] . "</td>";echo"<td></td>";
                                 echo "<td>" . $row['catagery'] . "</td>";echo"<td></td>";
                                 echo "<td>" . $row['brand'] . "</td>";echo"<td></td>";
-                                echo "<td>" . $row['buyingPrice'] . "</td>";echo"<td></td>";
-                                echo "<td>" . $row['sellingPrice'] . "</td>";echo"<td></td>";
-                                echo "<td>" . $row['stockQty'] . "</td>";echo"<td></td>";
+                               $stockQty = $row['stockQty'];
+                                echo "<td style='text-align:center'>" . "<input type='text' style='width:60px; border:0px' value='$stockQty' name='stockQty' id='stockQty'> ". "</td>";
                                  
 
                          echo "</td>";
@@ -70,10 +82,9 @@
 
             ?>
             
-            
         </div>
 
-        <div id="bottom3">
+        <!--<div id="bottom3">
             <div id="bottom-left3">
                 <div data-role="main" class="ui-content">
                     <a href="#myPopupDialog" data-rel="popup" data-position-to="window" data-transition="fade" class="ui-btn ui-corner-all ui-shadow ui-btn-inline">Confirm Item</a>
@@ -138,15 +149,14 @@
                 <br><br>
                 <button type="button" id="button1" class="btn btn-default btn-lg active">Send</button>
 
-            </div>
+            </div>-->
         </div>
         
         <p>&nbsp;</p>
         <p>&nbsp;</p>
     </div>
     <div id="footer"></div>
-    </div>      
-</div>
+    </div> 
 
 <script src="vendor/jquery/jquery.min.js"></script>
 <script src="vendor/bootstrap/js/bootstrap.min.js"></script>

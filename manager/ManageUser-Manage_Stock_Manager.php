@@ -40,13 +40,13 @@ include ("../config/managermenu.php");
                 </tr>
                 <tr>
                     <td id="table-font" width="60%">Confirm password*</td>
-                    <td><input id="input1" type="password" name="password" class="form-control" required></td>
+                    <td><input id="input1" type="password" name="cpassword" class="form-control" required></td>
                 </tr>
                 <br><br>
                 <tr>
                     <td id="table-font" width="60%">Access level</td>
                     <td>
-                        <select class="form-control">
+                        <select class="form-control" name="acclevel" id="acclevel">
                             <option type="text" name="acclevel">Manager</option>
                             <option type="text" name="acclevel">Stock Manager</option>
                         </select>
