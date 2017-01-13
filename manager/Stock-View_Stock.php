@@ -42,12 +42,12 @@
                 <div class="">
                     <!-- live search box -->
                     <table class="table datatable" width="500px;">
-                    <tr>
+                    <!--<tr>
                     <td><input type="text" id="myInput1" onkeyup="myFunction1()" class="form-control" placeholder="&#x26B2    id..." style="width: 170px " ></td>   
                     <td> <input type="text" id="myInput2" onkeyup="myFunction2()" class="form-control" placeholder="&#x26B2    category..." style="width: 170px " ></td>
                     <td> <input type="text" id="myInput3" onkeyup="myFunction3()" class="form-control" placeholder="&#x26B2    name..." style="width: 170px " ></td> 
                     <td> <input type="text" id="myInput4" onkeyup="myFunction4()" class="form-control" placeholder="&#x26B2    brand..." style="width: 170px " ></td> 
-                    </tr>
+                    </tr>-->
                     </table>
                 </div>
             </div>
@@ -101,7 +101,7 @@
         
 
         <!-- live search functions -->
-        <script>
+        <!--<script>
             function myFunction1() {
                 var input, filter, table, tr, td, i;
                 input = document.getElementById("myInput1");
@@ -174,7 +174,7 @@
                     }
                 }
             }
-        </script>
+        </script> -->
 
 
     </div>      

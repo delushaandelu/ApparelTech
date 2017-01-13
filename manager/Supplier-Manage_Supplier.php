@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>Manager Admin</title>
+     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.min.css"/>
 
 	<!--handle validation-->
 	<script language="javascript">
@@ -56,11 +57,12 @@
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="designs/template.css" type="text/css" />
 	<link rel="stylesheet" href="../config/styles.css" type="text/css" />
+   
     <style type="text/css">
         #top-left{
-            border: solid 1px;
+           /* border: solid 1px;*/
             width: 100%;
-            height: 115%;
+            height: 110%;
         }
         .suptb{
             margin-top: 3%;
@@ -92,7 +94,7 @@
         	<div id="top-left">
 				<!--handle form-->
             	<form name="form1" method="post" action="supplier.php" onsubmit="return check();">
-                	<table border="0" class="suptb">
+                	<table  class="ui definition table" border="0" class="suptb">
                         <tr>
                        	  <td id="table-font" width="60%">Supplier name</td>
                             <td><input type="text" name="name" class="form-control" required placeholder="supplier name"></td>
@@ -108,7 +110,7 @@
 							<td><input type="tel" name="tele" class="form-control" required placeholder="Telephone"></td>
                         </tr>       
                         <tr>        
-							<td id="table_font" width="60%" align="left"> </td>             
+							<td id="table_font" width="60%" align="left">mobile </td>             
 							<td><input type="tel" name="mobile" class="form-control" required placeholder="Mobile"></td>
 						  </tr>
 						  <tr>
@@ -119,16 +121,15 @@
                        	   <td id="table-font" width="60%">E-mail address</td>
                             <td><input type="email" name="email" class="form-control" required placeholder="E-mail"></td>
                          </tr>
+                        <tr>
+                        <td>
+                            <button type="submit" id="button1"  name="insert" >Add</button> 
+                        </td>
+                        </tr>
 
                          
                         </table>
-                        <br><br><br><br>
-
-					<!--button-->
-                  <div id="">
-                      <button type="submit" id="button1"  name="insert" >Add</button>
-				  </div>
-			</form>
+                      </form>
 		</div>
 		</div>
 </div>

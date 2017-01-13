@@ -221,7 +221,8 @@
 
                 </div>
             </div>
-            <div  id="scrh">
+                   
+            <div  id="scrh" class="col-sm-10">
                 <input type="submit" class="myButton" id="btnManageStockSearch2" name="btnManageStockSearch2" value="Search"  />
             </div>
             <br><br><br>

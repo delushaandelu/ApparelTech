@@ -105,7 +105,7 @@ if(isset($_POST['DriverInsert'])){
 
             <div id = "top_left_driver">
                 <div class="panel-heading-driver" align="center">Add Driver</div>
-                <form class="ui form" method="post" action="<?php htmlspecialchars($_SERVER['PHP_SELF']) ?>">
+                <form class="ui form" name = "InputForm" onSubmit = "return validateform();" method="post" action="<?php htmlspecialchars($_SERVER['PHP_SELF']) ?> ">
                     <table class="ui definition table" id="drivertb" border="0" width="800" height="400" >
 
                         <tr>
@@ -121,13 +121,13 @@ if(isset($_POST['DriverInsert'])){
                             <td id="table_font">Licence Number<span class="error"><?php echo $Licenceerr;?></span></td>
 
                             <td>
-                                <input type="text" name="licencenumber"  class="form-control">
+                                <input type="text" id="nic" name="licencenumber"  class="form-control">
                             </td>
                         </tr>
                         <tr>
                         <td id="table_font" align="center">MobileNo<span class="error"><?php echo $Mobileerr;?></span></td>
                         <td>
-                            <input type="text" name="mobileNo"  class="form-control" >
+                            <input type="text" id="mob" name="mobileNO"  class="form-control" >
                         </td>
                         </tr>
                         <tr>
@@ -156,7 +156,7 @@ if(isset($_POST['DriverInsert'])){
                             </td>
                         </tr>
                         <tr>
-                        <td colspan="2"><center><input type="submit" class="btn" name="DriverInsert" value="ADD"/>
+                        <td colspan="2"><center><input type="submit"  class="btn" name="DriverInsert" value="ADD"/>
                         
                         </tr>
 
@@ -168,7 +168,31 @@ if(isset($_POST['DriverInsert'])){
         </div>
     </div>
 </div>
-
+<script type="text/javascript">
+function validateform(){
+  
+    var RegEx =/^[0-9]{9}[VX]$/;
+     
+    if(!RegEx.test($("#nic").val())){
+                window.alert("Please enter valid NIC No.");
+                nic.focus();
+		    	return false;
+            }
+    
+    var phoneno =/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+    
+     if(!phoneno.test($("#mob").val()))  
+        {  
+        window.alert("wrong mobile phone no");  
+        return false;   
+        }  
+      else{
+          return true;
+      }
+    
+    
+}
+</script>
 <div id="bottomdriver">
     
 </div>

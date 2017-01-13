@@ -87,8 +87,8 @@
                             $id=$_GET['ID'];
                             $cusid=$_GET['customer_id'];
                              
-                            $username = 'chamrithjay@gmail.com';
-    	                    $hash = '1993Minuwangoda';
+                            $username = 'appareltech123@gmail.com';
+    	                    $hash = 'Priyantha1';
     	
     	                   // Message details
                             $sqlsms="SELECT mobile FROM customer WHERE customer_id=$cusid";
@@ -97,7 +97,7 @@
                             //echo $row['mobile'];
                             $numbers = $row['mobile'];
         
-    	                   $sender = urlencode('Appreltech');
+    	                   $sender = urlencode('Appareltech');
     	                   $message = rawurlencode('Your purchase order no '.$id.'is accepted.');
      
     	                   //$numbers = implode(',', $numbers);

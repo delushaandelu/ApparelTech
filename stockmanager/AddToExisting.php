@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>        
+    <head>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.min.css"/>
         <title>Stock Manager</title>                   
         <link rel="stylesheet" type="text/css" id="theme" href="css/main.css"/>  
         <link rel="stylesheet" type="text/css"  href="manage_stock_design.css"/>  
@@ -186,7 +187,7 @@
                 <div class = "upper_panel_add_item" id="add">
                             
                     <form method="post" name="form"  onSubmit="return check();">
-                                    <table border="0" >
+                                    <table class="ui definition table"  border="0" >
                                         <tr class="spaceUnder">
                                             <td id="table_font" width="20%" >Category Name</td> 
                                             <td>
@@ -225,13 +226,18 @@
                                             <td id="table_font" width="10%" > Quantity</td> 
                                             <td><input type="text" class="form-control" name="quantity" ></td>
                                         </tr>
+                                        <tr>
+                                        <td colspan="2">
+                                          <center><input type="submit" class="myButton" id="btnManageStockInsert"  name="btnManageStockInsert" value="Add"  /></center>
+                                        </td>
+                                        </tr>
                                     </table>     
                         	</div>
                             
-                        <div id="">
+                       <!-- <div id="">
                             <input type="submit" class="myButton" id="btnManageStockInsert"  name="btnManageStockInsert" value="Add"  />
                            
-                        </div>
+                        </div>-->
                
                         <div id="button">
                             <!-- Dont remove this tag. its refer the margin space  -->

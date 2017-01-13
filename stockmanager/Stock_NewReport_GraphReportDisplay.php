@@ -109,7 +109,11 @@
       
 
                 <ul class="breadcrumb">
+<<<<<<< HEAD
                     <h3>Graphical Reports</h3>
+=======
+                    <h4>Graphical Reports</h4>
+>>>>>>> e1433cfe5e357cd2e155aba12ccac0cb71eb1a05
                 </ul>
 
                 <h4 align="center"> Stock Quantity Report</h4>

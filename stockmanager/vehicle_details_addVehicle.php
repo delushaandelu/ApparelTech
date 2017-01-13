@@ -20,12 +20,13 @@
         width: 200px;
     }
 </style>
+
 <div id="content">
         
         <div id ="top_section">
 
             <div id = "top_left_vehicle">
-                <form method="post" action="vehicle_details_addVehicle.php">
+                <form method="post" name = "InputForm" onSubmit = "return validateform();" action="vehicle_details_addVehicle.php">
                      <div class="panel-heading-vehicle" align="center">Add Vehicle</div>
                     <table class="ui definition table"  id="vehicletb" border="0" width="800" height="400" >
 
@@ -33,7 +34,7 @@
                             <td id="table_font">Vehicle Number</td>
 
                             <td>
-                                <input type="text" name="vehiclenumber"  class="form-control">
+                                <input type="text" id="vid" name="vehiclenumber"  class="form-control">
                             </td>
 
                         </tr>
@@ -96,7 +97,6 @@ if(isset($_POST["VehicleInsert"])){                //call to addVehicle method i
 }
 
 ?>
-  
 
         <script type="text/javascript" src="js/plugins/jquery/jquery.min.js"></script>
         <script type="text/javascript" src="js/plugins/jquery/jquery-ui.min.js"></script>
