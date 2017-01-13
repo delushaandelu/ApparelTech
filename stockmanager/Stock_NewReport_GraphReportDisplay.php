@@ -18,12 +18,7 @@
           
                
         function display_graph(value){
-                //alert("correct");
-                //alert ("hiii");
-                //var value = $('input[name="type"]:checked').val();
-                alert(value);
-
-               // alert ("caf");
+                
              if(value){
                
                 $.ajax({
@@ -31,12 +26,12 @@
                     
                     type : 'POST',
                     data: {"categoryname" : value},
-                    //alert ($value);
+                   
 
                 
                success : function(data){
                      
-                    alert(data);
+                    //alert(data);
                     console.log(data);
                     var Name = [];
                     var qty = [];
@@ -53,7 +48,8 @@
 
 
                     var chartdata = {
-                         labels : Name,
+
+                        labels : Name,
                         datasets : [
                             {
                                 label : 'Quantity',
@@ -113,8 +109,10 @@
       
 
                 <ul class="breadcrumb">
-                    <h2>Graphical Reports</h2>
+                    <h3>Graphical Reports</h3>
                 </ul>
+
+                <h4 align="center"> Stock Quantity Report</h4>
 
 
 

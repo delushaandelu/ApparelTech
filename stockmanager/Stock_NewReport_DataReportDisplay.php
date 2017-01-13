@@ -4,6 +4,18 @@
         <title>Stock Manager</title>                   
         <link rel="stylesheet" type="text/css" id="theme" href="css/main.css"/> 
         <link rel="stylesheet" type="text/css"  href="Stock_NewReport_Design.css"/>
+
+        <script>
+    function printPageArea(areaID){
+    var printContent = document.getElementById(areaID);
+    var WinPrint = window.open('', '', 'width=900,height=650');
+    WinPrint.document.write(printContent.innerHTML);
+    WinPrint.document.close();
+    WinPrint.focus();
+    WinPrint.print();
+    WinPrint.close();
+    }
+    </script>
                  
     </head>
     <body>
@@ -16,7 +28,29 @@
                   
                 </ul>
 
+<div id ="invoice">
+        <h4> Purchase Order</h4>
+<style>
+    #amount
+{
+    margin-left: 85%;
+}
 
+#note
+{
+    margin-top: -25%;
+}
+
+#action
+{
+    margin-top: 0%;
+    margin-left: 60%;
+}   
+.hfont
+{
+    font-size: 25px;
+}
+</style>
 
  <div class="report_table">
         <?php
@@ -35,12 +69,14 @@
                          
                    $sum = 0;
                    $profit = 0;?>
-                   <div class='col-md-4'></div>
+                   <div class='col-md-4'>
+                       <h5>Date <?php date("Y.m.d");?></h5>
+                   </div>
                    <div class='col-md-4'>
                         <h3 align='center'>Stock Report</h3>
                     </div>
                     <div class = 'col-md-4'>
-                        <input type="submit" id="btnNewReportGenerateReport"  name="pdfBtn" align="center" value="Download PDF" onclick="location.href='../stockmanager/tcpdf/project/stockdetails.php'"/>
+                        <a href="javascript:void(0);" id="print_button2" style="width: 130px; padding: 5px 8px 5px 8px;text-align: center;float: right;background-color: #1caf9a;color: #fff;text-decoration: none; margin: 10px;" onclick="printPageArea('invoice')">Print Invoice</a>
                           
                     </div>
                     <?php
@@ -113,7 +149,7 @@
 
             ?>
             
-
+</div>
 
     </div>
     
