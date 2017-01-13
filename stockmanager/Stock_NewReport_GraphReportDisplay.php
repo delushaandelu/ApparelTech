@@ -53,10 +53,10 @@
                         datasets : [
                             {
                                 label : 'Quantity',
-                                backgroundColor : 'rgba(200,200,200,0.75)',
-                                borderColor : 'rgba(200,200,200,0.75)',
-                                hoverBackgroundColor : 'rgba(200,200,200,1)',
-                                hoverBorderColor : 'rgba(200,200,200,1)',
+                                backgroundColor : 'rgba(0,128,128,0.8)',
+                                borderColor : 'rgba(0,128,128,0.8)',
+                                hoverBackgroundColor : 'rgba(0,128,128,0.8)',
+                                hoverBorderColor : 'rgba(0,128,128,0.8)',
                                 data : qty
 
                             }
