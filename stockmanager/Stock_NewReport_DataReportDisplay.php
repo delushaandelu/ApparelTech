@@ -27,9 +27,14 @@
                 <ul class="breadcrumb">
                   
                 </ul>
+                
+                <a href="javascript:void(0);" id="print_button2" style="width: 130px; padding: 5px 8px 5px 8px;text-align: center;float: right;background-color: #1caf9a;color: #fff;text-decoration: none; margin: 10px;" onclick="printPageArea('invoice')">Print Report</a>
+                          
+                
+                
 
 <div id ="invoice">
-        <h4> Purchase Order</h4>
+        
 <style>
     #amount
 {
@@ -53,6 +58,20 @@
 </style>
 
  <div class="report_table">
+
+        
+        <div class='col-md-4'>
+                        <br>
+                       <h5><?php echo "Date ".date("d.m.Y");?></h5>
+                   </div>
+                   <div class='col-md-4'>
+                        <h3 align='center'>Stock Report</h3><br>
+                        <h4 align='center'><?php echo $_POST['selector'];?></h4>
+
+                    </div>
+                <div class = 'col-md-4'>
+                        
+                </div>
         <?php
                 // include('database_connection.php');
 
@@ -69,16 +88,7 @@
                          
                    $sum = 0;
                    $profit = 0;?>
-                   <div class='col-md-4'>
-                       <h5>Date <?php date("Y.m.d");?></h5>
-                   </div>
-                   <div class='col-md-4'>
-                        <h3 align='center'>Stock Report</h3>
-                    </div>
-                    <div class = 'col-md-4'>
-                        <a href="javascript:void(0);" id="print_button2" style="width: 130px; padding: 5px 8px 5px 8px;text-align: center;float: right;background-color: #1caf9a;color: #fff;text-decoration: none; margin: 10px;" onclick="printPageArea('invoice')">Print Invoice</a>
-                          
-                    </div>
+                   
                     <?php
                     if($result = mysqli_query($dbcon, $sql)){
                     if(mysqli_num_rows($result) > 0){

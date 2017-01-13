@@ -71,7 +71,10 @@
                             <a href="#"><i class="fa fa-edit fa-fw"></i> Stock<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="../manager/Stock_ManageItem.php">View Stock</a>
+                                    <a href="../manager/Stock_ManageItem.php">Search item</a>
+                                </li>
+                                <li>
+                                    <a href="../manager/Stock-View_Stock.php">View Stock</a>
                                 </li>
                                 <li>
                                     <a href="../manager/Stock-Order_Stock.php">Order Stock</a>

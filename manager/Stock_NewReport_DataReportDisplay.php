@@ -32,8 +32,7 @@
     include ("../config/managermenu.php");
     //include('database_connection.php');
 ?>
-<div id ="invoice">
-        <h4> Purchase Order</h4>
+<div id ="pdf">
 <style>
     #amount
 {
@@ -59,7 +58,7 @@
 <div id="page-wrapper">
     <div class="row">
         <div class="col-lg-12">
-            <h4 class="page-header">Stock Reports</h4>
+            <!--<h4 class="page-header">Stock Reports</h4>-->
         </div>
       
         
@@ -166,7 +165,7 @@
                 }
 
             ?>
-              <a href="javascript:void(0);" id="print_button2" style="width: 130px; padding: 5px 8px 5px 8px;text-align: center;float: right;background-color: #1caf9a;color: #fff;text-decoration: none; margin: 10px;" onclick="printPageArea('invoice')">Print Invoice</a>
+              <a href="javascript:void(0);" id="print_button2" style="width: 130px; padding: 5px 8px 5px 8px;text-align: center;float: right;background-color: #1caf9a;color: #fff;text-decoration: none; margin: 10px;" onclick="printPageArea('pdf')">Print</a>
             
         <p>&nbsp;</p>
         <p>&nbsp;</p>

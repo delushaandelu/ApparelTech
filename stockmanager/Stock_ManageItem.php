@@ -32,6 +32,7 @@
                         $('#itemname').append("<option value = '0'> Select Item Name </option>");
                         //$('#itemname').html(html);
                         data.forEach(function(data){
+
                             $('#itemname').append('<option>'+data+'</option>');
 
                         });
@@ -69,6 +70,7 @@
                         $('#brandname').append("<option> All </option>");
                         //$('#itemname').html(html);
                         data.forEach(function(data){
+                            
                             $('#brandname').append('<option>'+data+'</option>');
                             
                         });

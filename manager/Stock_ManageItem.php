@@ -50,6 +50,8 @@
        </script>
 
 
+
+
        <script type="text/javascript">
        //This function is written to get brand names from the database according to the user selected item name.
            
@@ -74,6 +76,7 @@
                         $('#brandname').append("<option> All </option>");
                         //$('#itemname').html(html);
                         data.forEach(function(data){
+                            alert(data);
                             $('#brandname').append('<option>'+data+'</option>');
                             
                         });
