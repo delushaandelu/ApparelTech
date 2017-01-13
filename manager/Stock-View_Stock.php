@@ -66,15 +66,15 @@
         $result = $dbcon->query($sql);
 
         if ($result->num_rows > 0) {
-            echo "<table class='table datatable' id='myTable'>";
-            echo"<tr class='info'>
-                <th>Item ID </th>
-                <th>Item Name </th>
-                <th>Buying Price</th>
-                <th>Selling Price </th>
-                <th>Brand </th>
-                <th>Category </th>
-                <th>Stock Qty </th>
+            echo "<table border='0' class='table table-hover' id='myTable'>";
+            echo"<tr bgcolor='#C0C0C0' width = '10px'>
+                <th align='center'>Item ID </th>
+                <th align='center'>Item Name</th>
+                <th align='center'>Buying Price</th>
+                <th align='center'>Selling Price</th>
+                <th align='center'>Brand</th>
+                <th align='center'>Category</th>
+                <th align='center'>Stock Qty</th>
             </tr>";
 
             while($row = $result->fetch_assoc()) {

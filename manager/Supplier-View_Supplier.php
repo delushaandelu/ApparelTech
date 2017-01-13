@@ -49,8 +49,8 @@
     <div class="row">
             <form name="getcvs" action="" method="POST">
             <!-- view supplier-->
-            <table class="table datatable" style='border: 0;' id='myTable'>
-                <tr  class='success'>
+            <table class='table table-hover' style='border: 0;' id='myTable'>
+                <tr bgcolor='#C0C0C0' width = '10px'>
                 <th><h5 align='center'><b>Supplier ID</b> </h5></th>
                 <th><h5 align='center'><b>Name</b> </h5></th>
                 <th><h5 align='center'><b>E-mail</b> </h5></th>

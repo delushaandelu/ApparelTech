@@ -31,8 +31,8 @@
     
 
         <!-- display new customers in a table-->
-        <table class='table table-striped' >
-        <tr  class='success'>
+        <table class='table table-hover' >
+            <tr bgcolor='#C0C0C0' width = '10px'>
                     <th >Customer ID </th>
                     <th >NIC </th>
                     <th >Full Name </th>
@@ -58,15 +58,15 @@
 
 
             <tr>
-                        <td><?php echo $row['customer_id'] ?></td>
-                        <td><?php echo $row['nic'] ?></td>
-                        <td><?php echo $row['fullname'] ?></td>
-                        <td><?php echo $row['designation'] ?></td>
-                        <td><?php echo $row['companyname'] ?></td>
-                        <td><?php echo $row['address'] ?></td>
-                        <td><?php echo $row['email'] ?></td>
-                        <td><?php echo $row['mobile'] ?></td>
-                        <td><?php echo $row['tele'] ?></td>
+                        <td><h6 align='center'><?php echo $row['customer_id'] ?></h6></td>
+                        <td><h6 align='center'><?php echo $row['nic'] ?></h6></td>
+                        <td><h6 align='center'><?php echo $row['fullname'] ?></h6></td>
+                        <td><h6 align='center'><?php echo $row['designation'] ?></h6></td>
+                        <td><h6 align='center'><?php echo $row['companyname'] ?></h6></td>
+                        <td><h6 align='center'><?php echo $row['address'] ?></h6></td>
+                        <td><h6 align='center'><?php echo $row['email'] ?></h6></td>
+                        <td><h6 align='center'><?php echo $row['mobile'] ?></h6></td>
+                        <td><h6 align='center'><?php echo $row['tele'] ?></h6></td>
                         <td class="bt"><button type="button" id="button" class="btn btn-info" onclick="location.href='ManageUser-Manage_Customer.php?cst_id=<?php echo $row['customer_id'] ?>'"><i class="fa fa-check" aria-hidden="true"></i></button></td>
                 
                         <td class="bt"><button type="button" id="button" class="btn btn-success" value="Reject" onclick="location.href='ManageUser-Manage_Customer.php?customer_id=<?php echo $row['customer_id'] ?>'"><i class="fa fa-user-times" aria-hidden="true"></i></button></td>
