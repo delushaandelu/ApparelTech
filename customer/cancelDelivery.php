@@ -40,7 +40,7 @@ session_start();
         
 <?php
     
-        $sql= "select * from deliveryrequest ";
+        $sql= "select * from deliveryrequest where status ='Not approved' ";
         $result = $db->query($sql);
         
         while($row = $result->fetch_assoc()) {
