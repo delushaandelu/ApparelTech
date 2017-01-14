@@ -35,15 +35,14 @@ session_start();
             <th><center>BRANCH</center></th>
             <th><center>AMOUNT</center></th>
             <th><center>STATUS</center></th>
-            <th><center>ACTION</center></th>
         </tr>
         
 <?php
     
-    $sql= "select * from deliveryrequest ";
-    $result = $db->query($sql);
+        $sql= "select * from deliveryrequest ";
+        $result = $db->query($sql);
         
-    while($row = $result->fetch_assoc()) {
+        while($row = $result->fetch_assoc()) {
                 ?>
                 <tr>
                     <td><center><?php echo $row['poid'] ?></center></td>
@@ -53,40 +52,14 @@ session_start();
                     <td><center><?php echo $row['bank'] ?></center></td>
                     <td><center><?php echo $row['branch'] ?></center></td>
                     <td><center><?php echo $row['amount'] ?></center></td>
-                    <td><center>Not Approved</center></td>
-                    
-                    <td class="bt"><center>
-                        
-                        <button type="button" id="delete" class="btn btn-success" onclick="location.href='viewStatus.php?poid=<?php echo $row['poid'] ?>'"><i class="fa fa-check-square-o" aria-hidden="true"></i> Delete</button>
-                        
-                        </center></td>
+                    <td><center><?php echo $row['status'] ?></center></td>            
                 </tr>
                 <?php } ?>
 
         
     </table>
     
-        <?php
-            if(isset($_GET['poid'])){
-
-                $id = $_GET['poid'];
-                
-                //query
-                $sql= "DELETE FROM deliveryrequest WHERE poid = '$id'";
-                $result = $db->query($sql);
         
-                if($result){
-                    echo'<script language ="javascript">';
-                    echo "swal({  title: 'Status deleted successfully!', text: '', type: 'success', confirmButtonText: 'Done!'}, function(){window.location.href='viewStatus.php'});";
-                    echo'</script>';
-                }
-                else{
-                    echo'<script language ="javascript">';
-                    echo "swal({  title: 'Error occurs while deleting!', text: '', type: 'error', confirmButtonText: 'Done!'}, function(){window.location.href='viewStatus.php'});";
-                    echo'</script>';
-                }
-            }
-        ?>
 </div>
 </body>
 
