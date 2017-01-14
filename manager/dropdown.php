@@ -16,24 +16,6 @@ if (isset($_GET['categoryname'])) {
     echo json_encode($results);
 }
 
-/*else if (isset($_GET['itemname'])){
-    echo "$_GET['itemname']";
-    $query = "SELECT brand FROM item WHERE itemName = '".$_GET['itemname']."'";
-    
-    $res = mysqli_query($dbcon,$query);
-
-    $result = null;
-    $result = array();
-
-    while ($row = mysqli_fetch_assoc($res)) {
-        array_push($result,$row['brand']);
-    }
-
-    echo json_encode($result);
-}
-
-*/
-   
 
 
 

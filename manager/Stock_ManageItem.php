@@ -13,6 +13,12 @@
     
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <style type="text/css">
+
+        tab2 { padding-left: 6em; }
+        tab3 { padding-left: 12em; }
+        tab4 { padding-left: 20em; }
+    </style>
     
      <script>
            
@@ -90,71 +96,6 @@
 
     </script>
 
-    <!--<script type="text/javascript">
-        function delete_item(item_id){
-            var item = item_id;
-            var temp = "#"+item_id;
-            var temp1 = "'"+temp+"'";
-            alert(temp);
-            if(confirm("Sure you want to delete this update? There is NO undo!")){
-                $.ajax({
-                    url : 'DeleteItem.php',
-                    method : 'POST',
-                    data : {item:item},
-                      success : function(){
-                    $(temp).fadeOut('fast', function(){
-                           // function called after fadeout completes
-                           // fadeOut does the animation you want.
-                           // you can obtain ID before saving it as a variable
-                    }),
-                statusCode: {
-                    200: function(){
-                         // you can put the fadeOut code in here, as this guarantees that when the server responds accordingly you will then run your code, you can also set functions for other response codes.
-                       }
-
-                 }
-            }
-                    
-                        
-                           
-                });
-                   
-            }
-           
-               
-        }
-    </script>
-    <script type="text/javascript">
-
-             function update_item(item_id, sellingPrice,stockQty){
-
-               // alert (sellingPrice);
-                var item_id = item_id;
-                var sellingPrice = sellingPrice;
-                var stockQty = stockQty;
-               
-                //var temp = "#"+item_id;
-                //var temp1 = "'"+temp+"'";
-                //alert ("hii");
-
-                 $.ajax({
-
-
-                            url : 'UpdateItem2.php',
-                            method : 'POST',
-                            data : {"item_id" : item_id , "sellingPrice" : sellingPrice , "stockQty" : stockQty},
-                           //alert (item);
-                            success : function($result){
-                                alert("Stock upated successfully");
-                                    
-                                
-                            }
-
-                        });
-               
-            }
-      
-       </script> -->
     
        
        <script type="text/javascript">
@@ -208,25 +149,26 @@
                 <div class="col-sm-4">
 
                     <!-- This is the interface design for search items from the stock -->
-                    <select id = "categoryname" name="categoryname" class="btn btn-default dropdown-toggle">
+                    <tab1><select id = "categoryname" name="categoryname" class="btn btn-default dropdown-toggle" width="200px">
                         <option value = "0"> Select Category Name</option><br><br><br><br>
                         <option value="Sewing Machines">Sewing Machines</option>
                         <option value="Sewing Machine Spare Parts">Sewing Machine Spare Parts</option>
                         <option value="Tools">Tools</option>
-                    </select>
-                </div>       
-                <div class="col-sm-4">       
-                    <select id = "itemname" name="itemname" class="btn btn-default dropdown-toggle"></select>
-
+                    </select></tab1>
                 </div>
+                <div class="col-sm-4">       
+                    <tab2><select id = "itemname" name="itemname" class="btn btn-default dropdown-toggle" width="200px"></select>
+                    </tab2>
+                </div>
+      
                 <div class="col-sm-4">        
-                    <select id = "brandname" name="brandname" class="btn btn-default dropdown-toggle"></select>
-
+                    <tab3><select id = "brandname" name="brandname" class="btn btn-default dropdown-toggle" width="200px"></select>
+                    </tab3>
                 </div>
             </div>
                    
             <div  id="scrh" class="col-sm-10">
-                <input type="submit" class="myButton" id="btnManageStockSearch2" name="btnManageStockSearch2" value="Search"  />
+                <tab4><input type="submit" class="myButton" id="btnManageStockSearch2" name="btnManageStockSearch2" value="Search"  /></tab4>
             </div>
             <br><br><br>
         </form>
@@ -311,15 +253,11 @@
                 }
 
             ?>
-            
-
-
 
                 </div>
             </div>
         </div>    
     </div>      
-</div>
 
 <script src="vendor/jquery/jquery.min.js"></script>
 <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
