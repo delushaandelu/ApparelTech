@@ -64,7 +64,7 @@
                 </td>
             </tr>
             <br><br>
-            <button type="submit" id="button1" class="" name="pwd">Change</button>
+            <button type="submit" id="button3" class="" name="pwd">Change</button>
             </form>
         </div>
         

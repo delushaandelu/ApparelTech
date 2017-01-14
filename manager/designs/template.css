@@ -330,3 +330,24 @@ button1:active {
 	margin-left: 50%;
 }
 
+#button3{
+    margin-top: -3%;
+    margin-left: 0%;
+    border-radius:5px;
+    width:120px;
+    height:35px;
+    color:#FFFFFF;
+    background-color:#1caf9a;
+    border: none;
+}
+
+#top
+{
+    height:500px;
+	margin-top:-50px;
+    margin-left: 5%;
+    margin-right: 30%;
+	color:#000;
+	padding:80px;
+	
+}
