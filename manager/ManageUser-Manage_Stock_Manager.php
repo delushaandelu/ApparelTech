@@ -95,13 +95,13 @@ if(isset($_POST["add"])){
         }
         else{
            echo'<script language ="javascript">';
-            echo "swal({  title: 'Error occurs while inserting data!', text: '', type: 'error', confirmButtonText: 'Done!'}, function(){window.location.href='ManageUser-Manage_Customer.php'});";
+            echo "swal({  title: 'Error occurs while inserting data!', text: '', type: 'error', confirmButtonText: 'Done!'}, function(){window.location.href='ManageUser-Manage_Stock_Manager.php'});";
             echo'</script>';
         }
     }
     else{
        echo'<script language ="javascript">';
-        echo "swal({  title: 'Password not matching!', text: '', type: 'error', confirmButtonText: 'Done!'}, function(){window.location.href='ManageUser-Manage_Customer.php'});";
+        echo "swal({  title: 'Password not matching!', text: '', type: 'error', confirmButtonText: 'Done!'}, function(){window.location.href='ManageUser-Manage_Stock_Manager.php'});";
         echo'</script>';
     }
     
