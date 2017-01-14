@@ -39,7 +39,7 @@
         <div class="panel">
             <div class="panel-heading">
                   <div class="2">
-                <input type="text" id="myInput" onkeyup="myFunction()" class="form-control" placeholder="&#x26B2   Search for suppliers by name..." style="width: 320px; height: 50px">
+                <input type="text" id="myInput" onkeyup="myFunction()" class="form-control" placeholder="&#x26B2   Search by Date..." style="width: 320px; height: 50px">
 
                 </div>
                 <br>
