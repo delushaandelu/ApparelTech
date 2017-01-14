@@ -163,7 +163,7 @@
                            
 
                              
-                            /*$username = 'appareltech123@gmail.com';
+                            $username = 'appareltech123@gmail.com';
     	                    $hash = 'Priyantha1';
     	
     	                   // Message details
@@ -191,7 +191,7 @@
     	
     	                   // Process your response here
     	                   echo $response;
-                             */
+                             
                             $sqlinsert="INSERT INTO purchasereport(p_id,customer_id,totalprice,created,status) SELECT orders.id,orders.customer_id,orders.total_price,orders.created,'approved' FROM orders WHERE id=$id";
                             $resultinsert=mysqli_query($dbcon,$sqlinsert);
             
@@ -220,7 +220,7 @@
 
                             
                             
-                         /*   $username = 'chamrithjay@gmail.com';
+                            $username = 'chamrithjay@gmail.com';
     	                    $hash = '1993Minuwangoda';
     	
     	                   // Message details
@@ -249,11 +249,11 @@
     	                   // Process your response here
     	                   echo $response;*/
                             
-                           /* $sqldelete="DELETE FROM orders WHERE id=$id";
+                           /$sqldelete="DELETE FROM orders WHERE id=$id";
                             $result=mysqli_query($dbcon,$sqldelete);
                             $sqldelete1="DELETE FROM order_items WHERE order_id=$id";
                             $result1=mysqli_query($dbcon,$sqldelete1);*/
-           /*
+           
                                 if($result && $result1){
                                     echo'<script language ="javascript">';
                                         echo "swal({  title: 'Purchase order Deleted!', text: '', type: 'success', confirmButtonText: 'Done!'}, function(){window.location.href='Purchase Order_ManagePurchaseOrder.php'});";
@@ -262,11 +262,11 @@
                                     echo'<script language ="javascript">';
                                         echo "swal({  title: 'Error!', text: '', type: 'error', confirmButtonText: 'Done!'}, function(){window.location.href='Purchase Order_ManagePurchaseOrder.php'});";
                                     echo'</script>';
-                                }*/
+                                }
             
             
             
-                        //}
+                        }
                             }
     
                     ?>
