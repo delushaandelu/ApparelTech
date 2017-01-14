@@ -9,7 +9,7 @@
         <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="//code.jquery.com/jquery-1.12.0.min.js"></script> 
-
+<!-- 
         <script type="text/javascript">
                 $(function () {
 
@@ -26,7 +26,7 @@
                         $('#dialog').dialog('open');
                     });
                 });
-            </script>
+            </script> -->
         <style type="text/css">
 
         
@@ -39,6 +39,31 @@
             }
         
         </style>
+    <div id="dialog" style="display: none" align = "center">
+    <form method="post" action="?">
+        <table width="350px" height="300px">
+        <tr>
+            <td>To:</td>
+            <td><input type="text" name="name"/></td>
+        </tr>
+         <tr>
+            <td>Subject:</td>
+            <td><input type="text" name="subject"/></td>
+        </tr>
+        <tr>
+            <td>Message:</td>
+            <td><textarea name="message" placeholder="write message here !" ></textarea></td>
+        </tr>
+            
+        <tr>
+            
+            <td><input type="submit" value="Send" name="mailBtn"/></td>
+        </tr>
+            
+        
+        </table>
+    </form>
+</div>
         
 
         
@@ -59,7 +84,8 @@
                         <th><center>Customer Id</center></th>
                         <th><center>Total Price</center></th>
                         <th><center>Created</center></th>
-                        <th colspan="3"><center>Action</center></th>
+                        <th colspan="2"><center>Action</center></th>
+                        <th><button id='btnShow'><center>Send Mail</center></button></th>
                         
                     </tr>
                         <?php 
@@ -69,11 +95,27 @@
                                 $id = $row['id'];
     
                         ?>
+
+                        <?php
+                        if(isset($_POST['mailBtn'])){
+                            $to = $_POST['name'];
+                            $subject = $_POST['subject'];
+                            $message = $_POST['message'];
+                             $headers = 'From: Appareltech@priyantha.com' . "\r\n" .
+                            'Reply-To: Appareltech@priyantha.com' . "\r\n" .
+                            'X-Mailer: PHP/' . phpversion();
+
+                            mail($to, $subject, $message, $headers);
+                        }
+
+                        ?>
+
                             <tr  class="active">
                             <td><center><?php echo $row['id'] ?></center></td>
                             <td><center><?php echo $row['customer_id'] ?></center></td>
                             <td><center><?php echo $row['total_price'] ?></center></td>
                             <td><center><?php echo $row['created'] ?></center></td>
+
                                 
                                 <td class="bt"><center><button type="button" id ="btnShow" class="btn btn-danger" onclick="location.href='Purchase Order_ManagePurchaseOrder.php?id=<?php echo $row['id'] ?> & customerid=<?php echo $row['customer_id'] ?>'"><i class="fa fa-trash-o"></i>Reject</button></center></td>
                                 
@@ -83,6 +125,8 @@
                             </tr>
                 
                         <?php } ?>
+
+
             
                 </table>
                 
@@ -106,32 +150,7 @@
                         ?>
 
                     
-                           <div id="dialog" style="display: none" align = "center">
-                                <form>
-                                    <table width="350px" height="300px">
-                                    <tr>
-                                        <td>To:</td>
-                                        <td><input type="text" name="name"/></td>
-                                    </tr>
-                                     <tr>
-                                        <td>Subject:</td>
-                                        <td><input type="text" name="subject"/></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Message:</td>
-                                        <td><textarea name="message" placeholder="write here !" ></textarea></td>
-                                    </tr>
-                                        
-                                    <tr>
-                                        
-                                        <td><input type="submit" value="Send"/></td>
-                                    </tr>
-                                        
-                                    
-                                    </table>
-                                </form>
-                            </div>                      
-                       
+                          
 
                 
                         <?php
@@ -141,7 +160,10 @@
                             $id=$_GET['ID'];
                             $cusid=$_GET['customer_id'];
                              
-                            /*$username = 'appareltech123@gmail.com';
+                           
+
+                             
+                            $username = 'appareltech123@gmail.com';
     	                    $hash = 'Priyantha1';
     	
         // Message details
@@ -169,7 +191,7 @@
     	
         // Process your response here
     	                   echo $response;
-                             */
+                             
                             $sqlinsert="INSERT INTO purchasereport(p_id,customer_id,totalprice,created,status) SELECT orders.id,orders.customer_id,orders.total_price,orders.created,'approved' FROM orders WHERE id=$id";
                             $resultinsert=mysqli_query($dbcon,$sqlinsert);
             
@@ -190,11 +212,15 @@
             
              
                         }
-                        /*if(!empty($_GET['id']) && !empty($_GET['customerid'])){
+                        if(!empty($_GET['id']) && !empty($_GET['customerid'])){
                             $id=$_GET['id'];
-                            $cusid=$_GET['customerid'];*/
+                            $cusid=$_GET['customerid'];
+
+                            //Email notificaion code
+
                             
-                         /*   $username = 'chamrithjay@gmail.com';
+                            
+                            $username = 'chamrithjay@gmail.com';
     	                    $hash = '1993Minuwangoda';
     	
     	   // Message details
@@ -228,11 +254,11 @@
     	                   echo $response;*/
 >>>>>>> origin/master
                             
-                           /* $sqldelete="DELETE FROM orders WHERE id=$id";
+                           /$sqldelete="DELETE FROM orders WHERE id=$id";
                             $result=mysqli_query($dbcon,$sqldelete);
                             $sqldelete1="DELETE FROM order_items WHERE order_id=$id";
                             $result1=mysqli_query($dbcon,$sqldelete1);*/
-           /*
+           
                                 if($result && $result1){
                                     echo'<script language ="javascript">';
                                         echo "swal({  title: 'Purchase order Deleted!', text: '', type: 'success', confirmButtonText: 'Done!'}, function(){window.location.href='Purchase Order_ManagePurchaseOrder.php'});";
@@ -241,11 +267,12 @@
                                     echo'<script language ="javascript">';
                                         echo "swal({  title: 'Error!', text: '', type: 'error', confirmButtonText: 'Done!'}, function(){window.location.href='Purchase Order_ManagePurchaseOrder.php'});";
                                     echo'</script>';
-                                }*/
+                                }
             
             
             
-                        //}
+                        }
+                            }
     
                     ?>
          
@@ -287,7 +314,7 @@
                                 $('#dialog').dialog('open');
                             });
                         });
-        </script>
+        </script> 
     </body>
 </html>
 

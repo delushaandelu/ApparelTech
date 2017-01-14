@@ -52,6 +52,13 @@
                 }
 
 
+                if(document.form.reorderlevel.value == ""){
+                    alert("Please add the Re-Order Level");
+                    document.form.brandname.focus();
+                    return false;
+                }
+
+
            }
 
        </script>                   
@@ -65,7 +72,9 @@
                 <ul class="breadcrumb">
                     <h4>Manage Stock</h4>
                 </ul>
-<div class = "panel">
+
+        <!--This code is the interface to add new items into the stock-->
+        <div class = "panel">
         
         	<ul class="nav nav-justified" >
     			
@@ -101,20 +110,20 @@
                                         </tr>
                                          <tr class="spaceUnder">
                                              <td id="table_font" width="10%" align="right"></td> 
-                                             <td><input type="text"  placeholder="Cost"  name="cost" class="form-control" id="exampleInputAmount"  ></td>
+                                             <td><input type="number"  placeholder="Cost"  name="cost" class="form-control" id="exampleInputAmount"  ></td>
                                         </tr>
                                         <tr class="spaceUnder">
                                             <td id="table_font" width="10%" align="right" ></td> 
-                                            <td><input type="text"  placeholder="Selling Price" name="sellingprice" class="form-control"></td>
+                                            <td><input type="number"  placeholder="Selling Price" name="sellingprice" class="form-control"></td>
                                         </tr>
                                         <tr class="spaceUnder">
                                             <td id="table_font" width="10%"> Quantity</td> 
-                                            <td> <input type="text"  name="quantity" class="form-control"s></td>
+                                            <td> <input type="number"  name="quantity" class="form-control"s></td>
                    
 
                                         <tr class="spaceUnder">
                                             <td id="table_font" width="10%"> Re-Order Level</td> 
-                                            <td> <input type="text"  name="reorderlevel" class="form-control"s></td>
+                                            <td> <input type="number"  name="reorderlevel" class="form-control"s></td>
                                         </tr>
                                         <tr>
                                         <td colspan="2">
@@ -133,10 +142,10 @@
                             	
                          </div>       
                             </form>
-                            <!-- This is related to add item. The add item function is in the item class. Here I created an object called myItem and called the addItem() function-->
+                            
                             <?php
 
-                                
+                                //This code is to add new items into the stock
                                 if(isset($_POST['btnManageStockInsert'])){
 
                                     $itemname = $_POST['itemname'];

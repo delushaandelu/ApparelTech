@@ -2,7 +2,9 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>        
-        <title>Stock Manager</title>                   
+        <title>Stock Manager</title>  
+        <script src="js/sweetalert-dev.js"></script>
+        <link rel="stylesheet" href="js/sweetalert.css">                 
         <link rel="stylesheet" type="text/css" id="theme" href="css/main.css"/>  
         <link rel="stylesheet" type="text/css"  href="manage_stock_design.css"/>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -10,7 +12,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
        <script>
-           
+     
     // This function is written to get item names from the database according to the user selected category name
     $(document).ready(function(){
         $('#categoryname').change(function(){
@@ -25,7 +27,7 @@
                     
                     type : 'GET',
                     url : '/GroupProject/stockmanager/dropdown.php?categoryname='+categoryName,
-                    //data : 'categoryname=' + categoryName,
+                
                     dataType:'json',
                     success : function(data){
                         $('#itemname').empty();
@@ -86,46 +88,55 @@
 
     <script type="text/javascript">
         function delete_item(item_id){
+            
             var item = item_id;
             var temp = "#"+item_id;
             var temp1 = "'"+temp+"'";
-            alert(temp);
-            if(confirm("Sure you want to delete this update? There is NO undo!")){
+
+            swal({
+                  title: "Are you sure?",
+                  text: "The item will be permanently deleted from the stock!!",
+                  type: "warning",
+                  showCancelButton: true,
+                  confirmButtonColor: "#DD6B55",
+                  confirmButtonText: "Yes, delete it!",
+                  cancelButtonText: "No, cancel it!",
+                  closeOnConfirm: false,
+                  closeOnCancel: false
+                },
+            function(isConfirm){
+            if (isConfirm) {
+                swal("Deleted!", "The item successfully deleted from the stock.", "success");
                 $.ajax({
                     url : 'DeleteItem.php',
                     method : 'POST',
                     data : {item:item},
-                      success : function(){
-                    $(temp).fadeOut('fast', function(){
-                           // function called after fadeout completes
-                           // fadeOut does the animation you want.
-                           // you can obtain ID before saving it as a variable
-                    }),
-                statusCode: {
-                    200: function(){
-                         // you can put the fadeOut code in here, as this guarantees that when the server responds accordingly you will then run your code, you can also set functions for other response codes.
-                       }
+                    success : function(){
+                       
+            }
 
-                 }
+           });
+            } else {
+                swal("Cancelled", "The item is not deleted from the stock:)", "error");
+            
             }
-                    
-                        
-                           
-                });
-                   
-            }
-           
-               
-        }
+        });
+    }
+
     </script>
     <script type="text/javascript">
 
-             function update_item(item_id, sellingPrice,stockQty){
-
+             function update_item(item_id, sellingPrice,stockQty,preQty,preSP){
+            
                 var item_id = item_id;
                 var sellingPrice = sellingPrice;
                 var stockQty = stockQty;
                
+
+                if (stockQty == preQty){
+                        swal({  title: 'Please enter the new quantity you want to change!!!', text: '', type: 'success', confirmButtonText: 'Okay!'}, function(){window.location.href='Stock_ManageItem.php'});
+                       
+                }else{
 
                  $.ajax({
 
@@ -137,13 +148,16 @@
                             success : function($result){
                                         swal({  title: 'Stock item successfully updated!', text: '', type: 'success', confirmButtonText: 'Done!'}, function(){window.location.href='Stock_ManageItem.php'});
                                 
-                                    
+                                    //alert("stock updated successfully");
                                 
                             }
 
                         });
+                    }
+
+                }
                
-            }
+            
       
        </script>
     
@@ -152,7 +166,8 @@
        <script type="text/javascript">
        //This is the validation checking part
            function check(){
-                if(document.form.categoryname.value == "Select Category Name"){
+                
+                if(document.form.categoryname.value == 0){
                     alert("Please select a Category Name");
                     document.form.categoryname.focus();
                     return false;
@@ -167,6 +182,8 @@
                     document.form.brandname.focus();
                     return false;
                 }
+
+              
            }
 
        </script>
@@ -280,9 +297,10 @@
 
                                /* echo "<td>"."<input type ='text' name = \"sellingPrice".$count."\" value ='".$sellingPrice."'>"."</td>";*/
                                 
-                                echo "<td style='text-align:center'>"."<button type='submit' onclick =\"update_item('".$row['item_id']."',document.getElementById('sellingPrice').value,document.getElementById('stockQty').value)\"name='manageItemUpdateBtn' class='myButton'>Update</button>"."</td>";
-                                //$item_id = $row['item_id'];
-                                echo "<td style='text-align:center'>"."<input type='submit' onclick=\"delete_item('" . $row['item_id'] . "')\"name='manageItemDeleteBtn' class='btn btn-danger' value='Delete'>"."</td>";
+                                echo "<td style='text-align:center'>"."<button type='submit' onclick =\"update_item('".$row['item_id']."',document.getElementById('sellingPrice').value,document.getElementById('stockQty').value,$stockQty,$sellingPrice)\"name='manageItemUpdateBtn' class='myButton'>Update</button>"."</td>";
+                                $item_id = $row['item_id'];
+                                echo("$item_id");
+                                echo "<td style='text-align:center'>"."<button type='button' onclick=\"delete_item($item_id)\" name='manageItemDeleteBtn' class='btn btn-danger'>Delete</button>"."</td>";
                                 
                                 
 
