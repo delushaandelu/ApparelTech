@@ -9,18 +9,14 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-       <script src="js/sweetalert-dev.js"></script>
- <link rel="stylesheet" href="js/sweetalert.css">
-       <script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="js/sweetalert-dev.js"></script>
+        <link rel="stylesheet" href="js/sweetalert.css">
+        <script>
            
-
+    //This code is to list down item names according to the category name selection
     $(document).ready(function(){
         $('#categoryname').change(function(){
-            /*$('#categoryname').empty();
-            $('#categoryname').append("<option> Loading </option>");
-            $('#categoryname').append("<option value = '0'> Select Category Name </option>");*/
-
             
             var categoryName = $(this).val();
 
@@ -29,7 +25,7 @@
                 $.ajax({
                     type : 'GET',
                     url : '/GroupProject/stockmanager/dropdown.php?categoryname='+categoryName,
-                    //data : 'categoryname=' + categoryName,
+                    
                     dataType:'json',
                     success : function(data){
                         $('#itemname').empty();
@@ -51,7 +47,8 @@
        </script>
 
        <script type="text/javascript">
-           
+
+       //This code is to list down brand names according to the item name selection  
         $(document).ready(function(){
 
         $('#itemname').change(function(){
@@ -87,7 +84,7 @@
     </script>
 
      <script type="text/javascript">
-           
+        //This code is to list down the cost and the selling price according to the category ,item and brand selection
         $(document).ready(function(){
 
         $('#brandname').change(function(){
@@ -121,8 +118,8 @@
     </script>
 
 
-
     <script type="text/javascript">
+    //This code is to  validate the form
            function check(){
           
                 if(document.form.categoryname.value == "0"){
@@ -175,7 +172,9 @@
                 <ul class="breadcrumb">
                     <h4>Manage Stock</li></h4>
                 </ul>
-<div class = "panel">
+
+    <!--This is the interface code to add existing items into the stock  -->
+    <div class = "panel">
         
         	<ul class="nav nav-justified" >
     			
@@ -234,10 +233,7 @@
                                     </table>     
                         	</div>
                             
-                       <!-- <div id="">
-                            <input type="submit" class="myButton" id="btnManageStockInsert"  name="btnManageStockInsert" value="Add"  />
-                           
-                        </div>-->
+                       
                
                         <div id="button">
                             <!-- Dont remove this tag. its refer the margin space  -->
@@ -248,14 +244,14 @@
                             </form>
                             
                             <?php
-                            //include('database_connection.php');
+                           //This is the database code to add existing items into the stock
 
                             if(isset($_POST['btnManageStockInsert'])){
                                 $itemname = $_POST['itemname'];
                                 $brand = $_POST['brandname'];
                                 $sellingprice = $_POST['sellingprice'];
                                 $cost = $_POST['cost'];
-                                //$categoryname = $_POST['categoryname'];
+                            
                                 $quantity = $_POST['quantity'];
                                                                
                                 $query = "UPDATE item SET sellingPrice = '$sellingprice', buyingPrice = '$cost',stockQty = stockQty + '$quantity' WHERE itemName = '$itemname' AND brand = '$brand'";

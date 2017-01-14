@@ -9,7 +9,7 @@
         <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="//code.jquery.com/jquery-1.12.0.min.js"></script> 
-
+<!-- 
         <script type="text/javascript">
                 $(function () {
 
@@ -26,7 +26,7 @@
                         $('#dialog').dialog('open');
                     });
                 });
-            </script>
+            </script> -->
         <style type="text/css">
 
         
@@ -39,6 +39,31 @@
             }
         
         </style>
+    <div id="dialog" style="display: none" align = "center">
+    <form method="post" action="?">
+        <table width="350px" height="300px">
+        <tr>
+            <td>To:</td>
+            <td><input type="text" name="name"/></td>
+        </tr>
+         <tr>
+            <td>Subject:</td>
+            <td><input type="text" name="subject"/></td>
+        </tr>
+        <tr>
+            <td>Message:</td>
+            <td><textarea name="message" placeholder="write message here !" ></textarea></td>
+        </tr>
+            
+        <tr>
+            
+            <td><input type="submit" value="Send" name="mailBtn"/></td>
+        </tr>
+            
+        
+        </table>
+    </form>
+</div>
         
 
         
@@ -59,7 +84,8 @@
                         <th><center>Customer Id</center></th>
                         <th><center>Total Price</center></th>
                         <th><center>Created</center></th>
-                        <th colspan="3"><center>Action</center></th>
+                        <th colspan="2"><center>Action</center></th>
+                        <th><button id='btnShow'><center>Send Mail</center></button></th>
                         
                     </tr>
                         <?php 
@@ -69,11 +95,27 @@
                                 $id = $row['id'];
     
                         ?>
+
+                        <?php
+                        if(isset($_POST['mailBtn'])){
+                            $to = $_POST['name'];
+                            $subject = $_POST['subject'];
+                            $message = $_POST['message'];
+                             $headers = 'From: Appareltech@priyantha.com' . "\r\n" .
+                            'Reply-To: Appareltech@priyantha.com' . "\r\n" .
+                            'X-Mailer: PHP/' . phpversion();
+
+                            mail($to, $subject, $message, $headers);
+                        }
+
+                        ?>
+
                             <tr  class="active">
                             <td><center><?php echo $row['id'] ?></center></td>
                             <td><center><?php echo $row['customer_id'] ?></center></td>
                             <td><center><?php echo $row['total_price'] ?></center></td>
                             <td><center><?php echo $row['created'] ?></center></td>
+
                                 
                                 <td class="bt"><center><button type="button" id ="btnShow" class="btn btn-danger" onclick="location.href='Purchase Order_ManagePurchaseOrder.php?id=<?php echo $row['id'] ?> & customerid=<?php echo $row['customer_id'] ?>'"><i class="fa fa-trash-o"></i>Reject</button></center></td>
                                 
@@ -83,6 +125,8 @@
                             </tr>
                 
                         <?php } ?>
+
+
             
                 </table>
                 
@@ -106,32 +150,7 @@
                         ?>
 
                     
-                           <div id="dialog" style="display: none" align = "center">
-                                <form>
-                                    <table width="350px" height="300px">
-                                    <tr>
-                                        <td>To:</td>
-                                        <td><input type="text" name="name"/></td>
-                                    </tr>
-                                     <tr>
-                                        <td>Subject:</td>
-                                        <td><input type="text" name="subject"/></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Message:</td>
-                                        <td><textarea name="message" placeholder="write here !" ></textarea></td>
-                                    </tr>
-                                        
-                                    <tr>
-                                        
-                                        <td><input type="submit" value="Send"/></td>
-                                    </tr>
-                                        
-                                    
-                                    </table>
-                                </form>
-                            </div>                      
-                       
+                          
 
                 
                         <?php
@@ -140,6 +159,9 @@
                          if(!empty($_GET['ID']) && !empty($_GET['customer_id']) ){
                             $id=$_GET['ID'];
                             $cusid=$_GET['customer_id'];
+                             
+                           
+
                              
                             /*$username = 'appareltech123@gmail.com';
     	                    $hash = 'Priyantha1';
@@ -190,9 +212,13 @@
             
              
                         }
-                        /*if(!empty($_GET['id']) && !empty($_GET['customerid'])){
+                        if(!empty($_GET['id']) && !empty($_GET['customerid'])){
                             $id=$_GET['id'];
-                            $cusid=$_GET['customerid'];*/
+                            $cusid=$_GET['customerid'];
+
+                            //Email notificaion code
+
+                            
                             
                          /*   $username = 'chamrithjay@gmail.com';
     	                    $hash = '1993Minuwangoda';
@@ -241,6 +267,7 @@
             
             
                         //}
+                            }
     
                     ?>
          
@@ -282,7 +309,7 @@
                                 $('#dialog').dialog('open');
                             });
                         });
-        </script>
+        </script> 
     </body>
 </html>
 
