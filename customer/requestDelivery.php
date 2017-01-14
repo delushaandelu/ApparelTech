@@ -45,7 +45,7 @@ if ($db->query($sql) === TRUE) {
                 echo'</script>';
         } else {
              echo'<script language ="javascript">';
-                    echo "swal({  title: 'Error!', text: '', type: 'error', confirmButtonText: 'Done!'}, function(){window.location.href='purchaseReport.php'});";
+                    echo "swal({  title: 'Error!', text: 'You have already requested a delivery for order No. $id ', type: 'error', confirmButtonText: 'Done!'}, function(){window.location.href='purchaseReport.php'});";
                 echo'</script>';
         }
 

@@ -1,6 +1,6 @@
 <?php
 session_start();
-require ('dbConfig.php');
+include 'dbConfig.php';
 ?>   
 <!DOCTYPE html>
 <html lang="en">
@@ -30,7 +30,7 @@ require ('dbConfig.php');
     <div id="products" class="row list-group">
         <?php
         //get rows query
-        $query = $db->query("SELECT * FROM item  where catagery='Sewing Machines'");
+        $query = $db->query("SELECT * FROM rent_item ORDER BY item_id DESC LIMIT 10");
         if($query->num_rows > 0){ 
             while($row = $query->fetch_assoc()){
         ?>
@@ -41,7 +41,8 @@ require ('dbConfig.php');
                     <p class="list-group-item-text"><?php echo $row["brand"]; ?></p>
                     <div class="row">
                         <div class="col-md-6">
-                            <p class="lead"><?php echo '$'.$row["rentPrice"].' USD'; ?></p>
+                            <p class="list-group-item-text"><h4>Per Month - <?php echo 'Rs.'.$row["rentPrice"]; ?></h4></p>
+                            <p class="list-group-item-text">Value - <?php echo 'Rs.'.$row["value"]; ?></p>
                         </div>
                         <div class="col-md-6">
                             <a class="btn btn-success" href="rentcartAction.php?action=addToCart&item_id=<?php echo $row["item_id"]; ?>">Add to cart</a>
