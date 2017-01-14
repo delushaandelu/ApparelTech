@@ -57,7 +57,7 @@ session_start();
                     
                     <td class="bt"><center>
                         
-                        <button type="button" id="delete" class="btn btn-success" onclick="location.href='cancelDelivery.php?poid=<?php echo $row['poid'] ?>'"><i class="fa fa-check-square-o" aria-hidden="true"></i> Delete</button>
+                        <button type="button" id="delete" class="btn btn-success" onclick="location.href='cancelDelivery.php?poid=<?php echo $row['poid'] ?>'"><i class="fa fa-check-square-o" aria-hidden="true"></i> Cancel</button>
                         
                         </center></td>
                 </tr>

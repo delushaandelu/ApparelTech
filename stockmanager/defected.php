@@ -70,7 +70,7 @@ if ($dbcon->query($sql) === TRUE) {
                 </tr> 
                 
                 <tr>
-                    <td colspan="2"><center><input type="submit" class="btn btn-success" name="btn"></center></td>
+                    <td colspan="2"><center><input type="submit" name="btn"></center></td>
                 </tr>
             </table>
         </form>

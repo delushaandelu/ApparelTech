@@ -32,8 +32,7 @@
                 <th><center>Branch</center></th>
                 <th><center>Voucher</center></th>
                 <th><center>Amount</center></th>
-                <th><center>Status</center></th>
-                <center><th colspan="2"><center>Action</center></th></center></tr>
+                <center><th colspan="3"><center>Action</center></th></center></tr>
             <?php 
                     $sql = "select * from deliveryrequest where status ='Not approved' ";
                     $result = mysqli_query($dbcon,$sql);        
@@ -66,7 +65,7 @@
                 $id = $_GET['poid'];
                 
                 //query
-                $sql= "DELETE FROM deliveryrequest WHERE poid = '$id'";
+                $sql= "UPDATE deliveryrequest SET status='Rejected' WHERE poid = '$id'";
                 $result = $dbcon->query($sql);
         
                 if($result){
@@ -86,7 +85,7 @@
                 $id = $_GET['pid'];
                 
                 //query
-                $sql= "UPDATE deliveryrequest SET status='Approve' WHERE poid = '$id'";
+                $sql= "UPDATE deliveryrequest SET status='Approved' WHERE poid = '$id'";
                 $result = $dbcon->query($sql);
         
                 if($result){
