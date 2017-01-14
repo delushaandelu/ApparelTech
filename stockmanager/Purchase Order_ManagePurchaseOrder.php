@@ -247,12 +247,12 @@
     	                   curl_close($ch);
     	
     	                   // Process your response here
-    	                   echo $response;*/
+    	                   echo $response;
                             
-                           /$sqldelete="DELETE FROM orders WHERE id=$id";
+                            $sqldelete="DELETE FROM orders WHERE id=$id";
                             $result=mysqli_query($dbcon,$sqldelete);
                             $sqldelete1="DELETE FROM order_items WHERE order_id=$id";
-                            $result1=mysqli_query($dbcon,$sqldelete1);*/
+                            $result1=mysqli_query($dbcon,$sqldelete1);
            
                                 if($result && $result1){
                                     echo'<script language ="javascript">';
@@ -266,7 +266,7 @@
             
             
             
-                        }
+                        
                             }
     
                     ?>
