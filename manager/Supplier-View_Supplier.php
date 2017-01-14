@@ -19,7 +19,7 @@
             border: none;
             width:200px;
             height: 40px;
-            margin-left: 40%;
+            margin-left: 80%;
             
         }
     
@@ -41,12 +41,14 @@
             </div>
             <div class="2">
                 <input type="text" id="myInput" onkeyup="myFunction()" class="form-control" placeholder="&#x26B2   Search for suppliers by name..." style="width: 320px; height: 50px">
-
+                
             </div>
+            <input type="button" name="submitpdf" class="pdfbtn" align="right" value="download pdf" onclick="location.href='../manager/tcpdf/project/supplierdetails.php'"/>
         </div>
     </div>
     <br><br>
     <div class="row">
+            
             <form name="getcvs" action="" method="POST">
             <!-- view supplier-->
             <table class='table table-hover' style='border: 0;' id='myTable'>
@@ -83,7 +85,7 @@
                 </tr>
             <?php } ?>
             </table>
-            <input type="button" name="submitpdf" class="pdfbtn" value="download pdf" onclick="location.href='../manager/tcpdf/project/supplierdetails.php'"/><br><br>
+            
         </form>
 
         <!-- delete customer -->

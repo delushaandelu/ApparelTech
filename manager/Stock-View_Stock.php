@@ -19,7 +19,7 @@
             border: none;
             width:200px;
             height: 40px;
-            margin-left: 40%;
+            margin-left: 80%;
             
         }
     
@@ -37,10 +37,10 @@
     <div class="row">
         <div class="col-lg-12">
             <div class="1">
-                <h4 class="page-header">Suppliers</h4>
+                <h4 class="page-header">All stock</h4>
             </div>
             <div class="2">
-
+                <input type="button" name="submitpdf" class="pdfbtn" align="right" value="download pdf" onclick="location.href='../manager/tcpdf/project/stockdetails.php'"/>
             </div>
         </div>
     </div>

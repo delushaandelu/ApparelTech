@@ -34,15 +34,13 @@
 
     <div class="row">
 
-        <div id="content">
-        <div id="top">
     
 <form method="post" action="Stock_NewReport_DataReportDisplay.php">
       
 
        <div class="col-md-2"></div>
     
-        <div class="col-md-5" id="drop_down" >       
+        <div class="col-md-6" id="drop_down" >       
     
     
             <ul class="drop_down_ul">
@@ -52,7 +50,7 @@
                     
                     <div class="check"></div>
                   </li>
-                  
+                  <br><br><br><br>
                   <li>
                     <input type="radio" id="s-option" name="selector" value="Sewing Machine Spare Parts">
                     <label for="s-option">Sewing Machine Spare Parts</label>
@@ -70,7 +68,7 @@
             </ul>
         </div>
 
-        <div class="col-md-5" id="button_effect">
+        <div class="col-md-4" id="button_effect">
             <input type="submit" id="btnNewReportGenerateReport" name="btnNewReportGenerateReport" value="Generate Report"  />
         </div>
         
@@ -79,9 +77,6 @@
             </div>
         </div>
         </div>
-    </div>
-<div id="footer"></div>
-</div>
         <script type="text/javascript" src="js/plugins/jquery/jquery.min.js"></script>
         <script type="text/javascript" src="js/plugins/jquery/jquery-ui.min.js"></script>
         <script type="text/javascript" src="js/plugins/bootstrap/bootstrap.min.js"></script>        
