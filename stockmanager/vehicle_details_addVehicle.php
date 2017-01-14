@@ -25,7 +25,7 @@
         
         <div id ="top_section">
 
-            <div id = "top_left_vehicle">
+            <div id = "top_left_vehicle">  <!--add vehicle form -->
                 <form method="post" name = "InputForm" onSubmit = "return validateform();" action="vehicle_details_addVehicle.php">
                      <div class="panel-heading-vehicle" align="center">Add Vehicle</div>
                     <table class="ui definition table"  id="vehicletb" border="0" width="800" height="400" >
@@ -76,6 +76,7 @@
                     </table>
              </form>
     </div>
+    <!---------------------------------------->
 </div>
 </div>
 <div id="bottomvehicle">

@@ -32,12 +32,7 @@
                 width:200px;
                 height:40px;
             }    
-            /*#btn{
-                position: relative;
-                margin-top:-30%;
-                margin-left:40%;
-            }
-            */
+            
     </style>
     </head>
 <body>
@@ -46,8 +41,7 @@
 
 <div id="content">
  
-        <table class="table datatable">
-            
+        <table class="table datatable">   <!--driver details table -->
             <tr class='success'>
                 <th><center>driver_id</center></th>
                 <th><center>driverName</center></th>
@@ -78,6 +72,7 @@
             <td colspan="7"><center><a href="driver_details_addDriver.php"><button id="btndriver" class="btn">Add Driver</button></a></center>  </td>
             </tr>
         </table>
+    <!------------------------------------------ -->
                 <?php
        
                     if(!empty($_GET['driver_id']) && !empty($_GET['vehicle_id']) ){
@@ -102,9 +97,7 @@
 </div>
        
 <div id="footer">
-    <!--<div id="btn">
-    <a href="driver_details_addDriver.php"><button id="btndriver" class="btn">Add Driver</button></a>  
-    </div>-->
+    
 </div>
 
 

@@ -61,7 +61,7 @@
                             <li><a href="Stock_ManageStock.php"><span class="fa fa-edit"></span> Manage Stock</a></li>
                              <li><a href="allstock.php"><span class="fa fa-user"></span> All Stock</a></li>
                             <li><a href="Stock_NewReport.php"><span class="fa fa-user"></span> New Report</a></li>
-                            <li><a href="#"><span class="fa fa-users"></span> Previous Report</a></li>   
+                           
                         </ul>
                     </li>
                     <li class="xn-openable">
@@ -84,7 +84,7 @@
                     <li class="xn-openable">
                         <a href="#"><span class="fa fa-square-o"></span> <span class="xn-text">Rent</span></a>
                         <ul>
-                            <li><a href="#"><span class="fa fa-list-ul"></span> Manage Rent</a></li>                            
+                            <li><a href="rent.php"><span class="fa fa-list-ul"></span> Manage Rent</a></li>                            
                             <li><a href="#"><span class="fa fa-pencil-square-o"></span> View Rent Report</a></li>
                         </ul>
                     </li>                    

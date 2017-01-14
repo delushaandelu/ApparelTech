@@ -28,12 +28,6 @@
                 width:200px;
                 height:40px;
             }    
-            /*#btn{
-                position: relative;
-                margin-top:-30%;
-                margin-left:40%;
-            }  */
-        
     </style>
 </head>
 <body>
@@ -41,7 +35,7 @@
 </br></br>
 
 <div id="content">
-        <table class="table datatable">
+        <table class="table datatable">  <!--display vehicle details -->
             <tr class='success'><th>vehicle_id</th><th>vehicleNO</th><th>capacity</th><th>vehicletype</th><th>status</th><th colspan="2"><center>Action</center></th></tr>
                 <?php 
                     $sql = "select * from vehicle";
@@ -64,6 +58,10 @@
             </tr>
         </table>
     
+    
+        <!--vehicle delete -->
+    
+    
               <?php
        
                 if(isset($_GET['vehicle_id'])){
@@ -75,14 +73,14 @@
                     $sqlupdatedriver="UPDATE driver SET vechicle_id='XXX' WHERE vechicle_id=$id";
                     mysqli_query($dbcon,$sqlupdatedriver);
             
-                        if($result){
-                            echo'<script language ="javascript">';
-                                echo "swal({  title: 'Vehicle Deleted!', text: '', type: 'success', confirmButtonText: 'Done!'}, function(){window.location.href='vehicle_details.php'});";
-                            echo'</script>'; }
-                        else{
-                            echo'<script language ="javascript">';
-                                echo "swal({  title: 'Error!', text: '', type: 'error', confirmButtonText: 'Done!'}, function(){window.location.href='vehicle_details.php'});";
-                            echo'</script>'; }
+                    if($result){
+                        echo'<script language ="javascript">';
+                        echo "swal({  title: 'Vehicle Deleted!', text: '', type: 'success', confirmButtonText: 'Done!'}, function(){window.location.href='vehicle_details.php'});";
+                        echo'</script>'; }
+                    else{
+                        echo'<script language ="javascript">';
+                        echo "swal({  title: 'Error!', text: '', type: 'error', confirmButtonText: 'Done!'}, function(){window.location.href='vehicle_details.php'});";
+                        echo'</script>'; }
                 }
             
            ?>
@@ -95,9 +93,7 @@
 </div>
        
 <div id="footer">
-    <!-- <div id="btn">
-    <a href="vehicle_details_addVehicle.php"><button id="btnvehicle" class="btn">Add Vehicle</button></a>  
-    </div> -->  
+     
 </div>
 
 

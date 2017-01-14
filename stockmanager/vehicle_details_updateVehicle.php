@@ -12,12 +12,7 @@
 <?php
     include("../config/stockmgrmenu.php");  
 ?>
-
-<!--<ul class="breadcrumb">
-    <h2>Update Vehicle</li></h2>
-</ul>-->
-    
-    
+    <!--- vehicle update --------------------------->
 <?php
     $vehicle_id= $_GET['ID'];
        if(isset($_POST['update'])){
@@ -44,7 +39,7 @@
         }
 ?>
     
-    
+  <!----------vehicle update display table----------->  
     
 <div class="about">
     <div class="centre">
@@ -66,7 +61,10 @@
         </form>
     </div>
 </div>
-
+<!----------------------------------------------->
+        
+        
+        
         <script type="text/javascript" src="js/plugins/jquery/jquery.min.js"></script>
         <script type="text/javascript" src="js/plugins/jquery/jquery-ui.min.js"></script>
         <script type="text/javascript" src="js/plugins/bootstrap/bootstrap.min.js"></script>        
