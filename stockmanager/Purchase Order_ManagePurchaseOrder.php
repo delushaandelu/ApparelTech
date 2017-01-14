@@ -90,7 +90,7 @@
                             $username = 'appareltech123@gmail.com';
     	                    $hash = 'Priyantha1';
     	
-    	                   // Message details
+        // Message details
                             $sqlsms="SELECT mobile FROM customer WHERE customer_id=$cusid";
                             $sqlsms=mysqli_query($dbcon,$sqlsms);
                             $row=mysqli_fetch_assoc($sqlsms);
@@ -113,7 +113,7 @@
     	                   $response = curl_exec($ch);
     	                   curl_close($ch);
     	
-    	                   // Process your response here
+        // Process your response here
     	                   echo $response;
                              
                             $sqlinsert="INSERT INTO purchasereport(p_id,customer_id,totalprice,created,status) SELECT orders.id,orders.customer_id,orders.total_price,orders.created,'approved' FROM orders WHERE id=$id";
@@ -123,14 +123,14 @@
                             $result=mysqli_query($dbcon,$sqldelete);
 
            
-                                if($resultinsert){
-                                    echo'<script language ="javascript">';
-                                    echo "swal({  title: 'Purchase order Accepted!', text: '', type: 'success', confirmButtonText: 'Done!'}, function(){window.location.href='Purchase Order_ManagePurchaseOrder.php'});";
-                                    echo'</script>'; 
-                                }else{
-                                    echo'<script language ="javascript">';
-                                        echo "swal({  title: 'Error!', text: '', type: 'error', confirmButtonText: 'Done!'}, function(){window.location.href='Purchase Order_ManagePurchaseOrder.php'});";
-                                    echo'</script>';
+                            if($resultinsert){
+                                echo'<script language ="javascript">';
+                                echo "swal({  title: 'Purchase order Accepted!', text: '', type: 'success', confirmButtonText: 'Done!'}, function(){window.location.href='Purchase Order_ManagePurchaseOrder.php'});";
+                                echo'</script>'; 
+                            }else{
+                                echo'<script language ="javascript">';
+                                echo "swal({  title: 'Error!', text: '', type: 'error', confirmButtonText: 'Done!'}, function(){window.location.href='Purchase Order_ManagePurchaseOrder.php'});";
+                                echo'</script>';
                                 }
             
             
@@ -143,7 +143,7 @@
                             $username = 'chamrithjay@gmail.com';
     	                    $hash = '1993Minuwangoda';
     	
-    	                   // Message details
+    	   // Message details
                             $sqlsms="SELECT mobile FROM customer WHERE customer_id=$cusid";
                             $sqlsms=mysqli_query($dbcon,$sqlsms);
                             $row=mysqli_fetch_assoc($sqlsms);
@@ -155,7 +155,7 @@
      
     	                   //$numbers = implode(',', $numbers);
      
-    	                   // Prepare data for POST request
+        // Prepare data for POST request
     	                   $data = array('username' => $username, 'hash' => $hash, 'numbers' => $numbers, "sender" => $sender, "message" => $message);
      
     	// Send the POST request with cURL
@@ -166,7 +166,7 @@
     	                   $response = curl_exec($ch);
     	                   curl_close($ch);
     	
-    	                   // Process your response here
+        // Process your response here
     	                   echo $response;
                             
                             $sqldelete="DELETE FROM orders WHERE id=$id";

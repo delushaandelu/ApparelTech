@@ -15,7 +15,7 @@
 ?>
 
 
-    
+<!-- driver update  query -->    
 <?php
     $driver_id= $_GET['ID'];
     if(isset($_POST['update'])){
@@ -48,11 +48,12 @@
 ?>
     
     
+<!-- display driver details to update  -->
     
 <div class="about">
     <div class="centre">
          <div class="panel-heading" align="center">Update Driver</div>
-        <form action="<?php htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="post">
+        <form action="<?php htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="post">   
             <table  class="ui definition table" id="joblist">
                 <?php 
                     $sql = "select * from driver where driver_id='$driver_id'";
@@ -83,7 +84,9 @@
         </form>
     </div>
 </div>
-
+<!-------------------------------------------------- -->
+        
+        
         <script type="text/javascript" src="js/plugins/jquery/jquery.min.js"></script>
         <script type="text/javascript" src="js/plugins/jquery/jquery-ui.min.js"></script>
         <script type="text/javascript" src="js/plugins/bootstrap/bootstrap.min.js"></script>        

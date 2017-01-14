@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.min.css"/>
     <title>Manager Admin</title>
     <!-- link css, alert files -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -38,6 +39,7 @@
            
             <br><br>
             <form method="post" action="Settings-Change_password.php">
+            <table class="ui definition table" >
             <tr>
                 <td id="table-font" width="30" >
                     Password*
@@ -63,8 +65,12 @@
                     <input type="password" name="Newpwd2" class="form-control" required>
                 </td>
             </tr>
-            <br><br>
-            <button type="submit" id="button1" class="" name="pwd">Change</button>
+           <tr>
+            <td colspan="2">
+                <button type="submit" id="button1" class="" name="pwd">Change</button>
+            </td>
+            </tr>
+            </table>
             </form>
         </div>
         
