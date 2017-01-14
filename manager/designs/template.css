@@ -68,8 +68,9 @@ img
 {
     border-top-left-radius: 4%;
     border-top-right-radius: 4%;
-    height:40%;
-    width:100%;
+    height:50%;
+    width:50%;
+	margin-left: 50px;
 }
 
 #md

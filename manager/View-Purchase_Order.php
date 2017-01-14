@@ -24,7 +24,7 @@
             <h4 class="page-header">Purchase Order Details</h4>
         </div>
         <div class="2">
-            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="&#x26B2   Search by order id..." style="width: 300px">
+            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="&#x26B2   yyyy-mm-dd" style="width: 300px">
         </div>
         
     </div>
@@ -91,7 +91,7 @@
                 table = document.getElementById("myTable");
                 tr = table.getElementsByTagName("tr");
                 for (i = 0; i < tr.length; i++) {
-                    td = tr[i].getElementsByTagName("td")[0];
+                    td = tr[i].getElementsByTagName("td")[3];
                     if (td) {
                         if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
                             tr[i].style.display = "";
