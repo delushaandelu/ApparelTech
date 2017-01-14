@@ -23,13 +23,14 @@ include 'dbConfig.php';
 
 <!-- page content -->
 <div class="right_col" role="main">
+    <h1 class="hfont">Your Purchase Report!</h1>
 <div class="container">
-    <h3>Machinees</h3>
+    <h1>Products</h1>
     <a href="rentviewCart.php" class="cart-link" title="View Cart"><i class="glyphicon glyphicon-shopping-cart"></i></a>
     <div id="products" class="row list-group">
         <?php
         //get rows query
-        $query = $db->query("SELECT * FROM rent_item");
+        $query = $db->query("SELECT * FROM rent_item ORDER BY item_id DESC LIMIT 10");
         if($query->num_rows > 0){ 
             while($row = $query->fetch_assoc()){
         ?>

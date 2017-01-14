@@ -1,6 +1,5 @@
 <?php
 session_start();
-include 'dbConfig.php';
 ?>   
 <!DOCTYPE html>
 <html lang="en">
@@ -24,42 +23,9 @@ include 'dbConfig.php';
 <!-- page content -->
 <div class="right_col" role="main">
     <h2 class="hfont">Cancel Your Rent Here!</h2>
-    <table class="table table-striped">
-      <tr> 
-        <th><h4 align="center">Rent Order ID</h4></th>
-        <th><h4 align="center">Total Price</h4></th>
-        <th><h4 align="center">Created</h4></th>
-        <th><h4 align="center">Action</h4></th>
-      </tr>
-            <?php
-            //get rows query
-            $customer = $_SESSION['csid'];
-            $sql = "select * from rentorders where customer_id='$customer'";
-            $result = mysqli_query($db,$sql);        
-            while($row = mysqli_fetch_array($result)) {
-            ?>
-        <tr class="data">
-            <td><h5 align="center"><?php echo $row['id'] ?></h5></td>
-            <td><h5 align="center"><?php echo $row['total_price'] ?></h5></td>
-            <td><h5 align="center"><?php echo $row['created'] ?></h5></td>
-            <td class="bt"><center><button class="btn btn-danger" value="Cance This Order" onclick="location.href='canceRent.php?id=<?php echo $row['id'] ?>'"><i class="glyphicon glyphicon-trash"></i> Cancel</button></center></td>
-        </tr>
-            <?php 
-            } 
-            ?>
 
-            <?php
-            if(isset($_GET['id'])){
-                $id = $_GET['id'];
-                $sql= "delete from rentorders where id = '$id'";
-                mysqli_query($db,$sql);
 
-                echo'<script language ="javascript">';
-                echo"swal({  title: 'Your rent order has cancelled!', text: '', type: 'success', confirmButtonText: 'Done!'}, function(){window.location.href='canceRent.php'});";
-                echo'</script>';
-
-            }
-            ?>
+    
 </div>
 </body>
 

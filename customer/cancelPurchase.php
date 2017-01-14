@@ -43,11 +43,11 @@ session_start();
     
     ?>
         <tr class="data">
-            <td><h5 align="center"><?php echo $row['id'] ?></h5></td>
-            <td><h5 align="center"><?php echo $row['total_price'] ?></h5></td>
-            <td><h5 align="center"><?php echo $row['created'] ?></h5></td>
-            <td class="bt"><center><button class="btn btn-danger" value="Cance This Order" onclick="location.href='cancelPurchase.php?id=<?php echo $row['id'] ?>'"><i class="glyphicon glyphicon-trash"></i> Cancel</button></center></td>
-        </tr>
+                    <td><h5 align="center"><?php echo $row['id'] ?></h5></td>
+                    <td><h5 align="center"><?php echo $row['total_price'] ?></h5></td>
+                    <td><h5 align="center"><?php echo $row['created'] ?></h5></td>
+                    <td class="bt"><center><button class="btn btn-danger" value="Cance This Order" onclick="location.href='cancelPurchase.php?id=<?php echo $row['id'] ?>'"><i class="glyphicon glyphicon-trash"></i> Cancel</button></center></td>
+                </tr>
                 
                 <?php
             } ?>
