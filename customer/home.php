@@ -26,7 +26,7 @@
     <div id = info>
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2><i class="fa fa-align-left"></i> I am</h2>
+                    <h2><i class="fa fa-align-left"></i> I am</h2>           
                     <ul class="nav navbar-right panel_toolbox">
                       
                     </ul>
@@ -39,18 +39,18 @@
                       <div class="panel">
                        <table>
                             <form method="get">
-                                <tr>
-                                    <td><h4>Customer name </h4></td>
-                                        <td>:
-                                        <?php
-                                        echo $_SESSION['fname'];
-                                        ?></td>
-                                </tr>
-                                <tr>
-                                    <td><h4>Customer ID  </h4></td>
+                                <tr>                                                  
+                                    <td> <h4>Customer ID  </h4></td>
                                         <td>:
                                         <?php
                                         echo $_SESSION['csid'];
+                                        ?></td>
+                                </tr>
+                                <tr>
+                                    <td><h4>Customer name </h4></td>   
+                                        <td>:
+                                        <?php
+                                        echo $_SESSION['fname'];
                                         ?></td>
                                 </tr>
                                 <tr>
@@ -156,13 +156,13 @@
                       <i class="fa fa-edit"></i> Purchase
                     </a>
                     <a class="btn btn-app">
-                      <i class="fa fa-trash-o"></i> Pancel p/o
+                      <i class="fa fa-trash-o"></i> Cancel p/o
                     </a>
                     <a class="btn btn-app">
                       <i class="fa fa-retweet"></i> Rent
                     </a>
                     <a class="btn btn-app">
-                      <i class="fa fa-trash"></i> Cacnel Rent
+                      <i class="fa fa-trash"></i> Cancel Rent
                     </a>
                     <a class="btn btn-app">
                       <i class="fa fa-cart-arrow-down"></i> MyCart

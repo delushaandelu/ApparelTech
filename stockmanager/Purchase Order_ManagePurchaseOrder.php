@@ -246,18 +246,18 @@
     	                   $response = curl_exec($ch);
     	                   curl_close($ch);
     	
-<<<<<<< HEAD
+
         // Process your response here
     	                   echo $response;
-=======
+
     	                   // Process your response here
-    	                   echo $response;*/
->>>>>>> origin/master
+    	                   echo $response;
+
                             
-                           /$sqldelete="DELETE FROM orders WHERE id=$id";
+                           $sqldelete="DELETE FROM orders WHERE id=$id";
                             $result=mysqli_query($dbcon,$sqldelete);
                             $sqldelete1="DELETE FROM order_items WHERE order_id=$id";
-                            $result1=mysqli_query($dbcon,$sqldelete1);*/
+                            $result1=mysqli_query($dbcon,$sqldelete1);
            
                                 if($result && $result1){
                                     echo'<script language ="javascript">';
@@ -272,7 +272,8 @@
             
             
                         }
-                            }
+                            
+                            
     
                     ?>
          
