@@ -86,7 +86,7 @@
                         <a href="#"><span class="fa fa-square-o"></span> <span class="xn-text">Rent</span></a>
                         <ul>
                             <li><a href="rent.php"><span class="fa fa-list-ul"></span> Manage Rent</a></li>                            
-                            <li><a href="#"><span class="fa fa-pencil-square-o"></span> View Rent Report</a></li>
+                            <li><a href="rentreport.php"><span class="fa fa-pencil-square-o"></span> View Rent Report</a></li>
                         </ul>
                     </li>                    
                     <li class="xn-openable">

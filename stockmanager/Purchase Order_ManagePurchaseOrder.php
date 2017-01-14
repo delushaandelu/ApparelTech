@@ -82,6 +82,7 @@
                     <tr class='success'>
                         <th><center>Id</center></th>
                         <th><center>Customer Id</center></th>
+                         <th><center>Customer Name</center></th>
                         <th><center>Total Price</center></th>
                         <th><center>Created</center></th>
                         <th colspan="2"><center>Action</center></th>
@@ -89,7 +90,7 @@
                         
                     </tr>
                         <?php 
-                            $sql = "select * from orders";    //display orders table.
+                            $sql = "select * from orders,customer where orders.customer_id=customer.customer_id";    //display orders table.
                             $result = mysqli_query($dbcon,$sql);        
                             while($row = mysqli_fetch_array($result)) {
                                 $id = $row['id'];
@@ -113,8 +114,10 @@
                             <tr  class="active">
                             <td><center><?php echo $row['id'] ?></center></td>
                             <td><center><?php echo $row['customer_id'] ?></center></td>
+                              <td><center><?php echo $row['fullname'] ?></center></td>
                             <td><center><?php echo $row['total_price'] ?></center></td>
                             <td><center><?php echo $row['created'] ?></center></td>
+                          
 
                                 
                                 <td class="bt"><center><button type="button" id ="btnShow" class="btn btn-danger" onclick="location.href='Purchase Order_ManagePurchaseOrder.php?id=<?php echo $row['id'] ?> & customerid=<?php echo $row['customer_id'] ?>'"><i class="fa fa-trash-o"></i>Reject</button></center></td>

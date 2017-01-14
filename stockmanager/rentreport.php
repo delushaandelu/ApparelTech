@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>        
+    <head>     
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+            
         <title>Stock Manager</title>                   
         <link rel="stylesheet" type="text/css" id="theme" href="css/main.css"/>
         <script src="js/sweetalert-dev.js"></script>
         <link rel="stylesheet" href="js/sweetalert.css">
         <style type="text/css">
+        
         
             .btn{
                 color: white;
@@ -16,7 +22,11 @@
             }
         
         </style>
-        
+    <script>
+  $( function() {
+    $( "#myInput" ).datepicker();
+  } );
+  </script>    
         
     </head>
     <body>
@@ -28,7 +38,10 @@
 <div id="content">
         <div class="panel">
             <div class="panel-heading">
-               
+                  <div class="2">
+                <input type="text" id="myInput" onkeyup="myFunction()" class="form-control" placeholder="&#x26B2   Search for suppliers by name..." style="width: 320px; height: 50px">
+
+                </div>
                 <br>
                 <br>
                 <table class="table datatable" id="potb">
@@ -123,7 +136,25 @@
                     ?>
          
             </div>
-    
+            <script>
+            function myFunction() {
+                var input, filter, table, tr, td, i;
+                input = document.getElementById("myInput");
+                filter = input.value.toUpperCase();
+                table = document.getElementById("potb");
+                tr = table.getElementsByTagName("tr");
+                for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[4];
+                    if (td) {
+                        if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].style.display = "";
+                        } else {
+                            tr[i].style.display = "none";
+                        }
+                    }
+                }
+            }
+        </script>
             
     <div class="panel-body">
         <div class="previous_report_history_table">
