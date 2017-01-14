@@ -33,9 +33,10 @@ include("dbConfig.php");
         $bank = $_POST['bank'];
         $branch = $_POST['branch'];
         $vid = $_POST['vid'];
-        $amount = $_POST['amount'];    
+        $amount = $_POST['amount'];   
+        $status = "Not approved"; 
     
-    $sql="INSERT INTO deliveryrequest (poid,company,address,date,telephone,bank,branch,voucher,amount) VALUES ('$id','$com','$add','$date','$tele','$bank','$branch','$vid','$amount')";
+    $sql="INSERT INTO deliveryrequest (poid,company,address,date,telephone,bank,branch,voucher,amount,status) VALUES ('$id','$com','$add','$date','$tele','$bank','$branch','$vid','$amount','$status')";
     
 
 if ($db->query($sql) === TRUE) {
@@ -44,7 +45,7 @@ if ($db->query($sql) === TRUE) {
                 echo'</script>';
         } else {
              echo'<script language ="javascript">';
-                    echo "swal({  title: 'Error!', text: '', type: 'error', confirmButtonText: 'Done!'}, function(){window.location.href='purchaseReport.php'});";
+                    echo "swal({  title: 'Error!', text: 'You have already requested a delivery for order No. $id ', type: 'error', confirmButtonText: 'Done!'}, function(){window.location.href='purchaseReport.php'});";
                 echo'</script>';
         }
 

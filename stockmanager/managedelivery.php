@@ -18,10 +18,10 @@
                     <h4>Delivery Details</li></h4>
                 </ul>
 <div id="content">
- 
+    <form action="GET">
         <table  class="table datatable">
             
-            <tr class="title">
+            <tr class="success">
                 <th><center>Request Id</center></th>
                 <th><center>Purchase order Id</center></th>
                 <th><center>Company</center></th>
@@ -32,14 +32,15 @@
                 <th><center>Branch</center></th>
                 <th><center>Voucher</center></th>
                 <th><center>Amount</center></th>
+                <th><center>Status</center></th>
                 <center><th colspan="2"><center>Action</center></th></center></tr>
             <?php 
-                    $sql = "select * from deliveryrequest";
+                    $sql = "select * from deliveryrequest where status ='Not approved' ";
                     $result = mysqli_query($dbcon,$sql);        
                         while($row = mysqli_fetch_array($result)) {
     
                 ?>
-                            <tr class="active">
+                        <tr class="active">
                             <td><center><?php echo $row['rid'] ?></center></td>
                             <td><center><?php echo $row['poid'] ?></center></td>
                             <td><center><?php echo $row['company'] ?></center></td>
@@ -50,13 +51,58 @@
                             <td><center><?php echo $row['branch'] ?></center></td>
                             <td><center><?php echo $row['voucher'] ?></center></td>
                             <td><center><?php echo $row['amount'] ?></center></td>
-                                <td class="bt"><center><button type="button" class="btn" name="Update" ><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Accept</button></center></td>
-                                <td class="bt"><center><button type="button" class="btn btn-danger" name="Delete" ><i class="fa fa-trash" ></i> Reject</button></center></td>
-                                
-                            </tr>
+                            <td><center<?php echo $row['status'] ?></center></td>
+                            <td class="bt"><center><button type="button" class="btn" name="Accept" onclick="location.href='managedelivery.php?pid=<?php echo $row['poid'] ?>'"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Accept</button></center></td>
+                            <td class="bt"><center><button type="button" id="delete" name='delete' class="btn" onclick="location.href='managedelivery.php?poid=<?php echo $row['poid'] ?>'"><i class="fa fa-check-square-o" aria-hidden="true"></i> Reject</button>  
+                        </tr>
                 
                  <?php } ?>
         </table>
+        </form>
+       
+        <?php
+            if(isset($_GET['poid'])){
+
+                $id = $_GET['poid'];
+                
+                //query
+                $sql= "DELETE FROM deliveryrequest WHERE poid = '$id'";
+                $result = $dbcon->query($sql);
+        
+                if($result){
+                    echo'<script language ="javascript">';
+                    echo "swal({  title: 'Manage Delivery Reject successfully!', text: '', type: 'success', confirmButtonText: 'Done!'}, function(){window.location.href='managedelivery.php'});";
+                    echo'</script>';
+                }
+                else{
+                    echo'<script language ="javascript">';
+                    echo "swal({  title: 'Error occurs while deleting!', text: '', type: 'error', confirmButtonText: 'Done!'}, function(){window.location.href='managedelivery.php'});";
+                    echo'</script>';
+                }
+            }
+        ?>
+            <?php
+            if(isset($_GET['pid'])){
+                $id = $_GET['pid'];
+                
+                //query
+                $sql= "UPDATE deliveryrequest SET status='Approve' WHERE poid = '$id'";
+                $result = $dbcon->query($sql);
+        
+                if($result){
+                    echo'<script language ="javascript">';
+                    echo "swal({  title: 'Manage Delivery Accept successfully!', text: '', type: 'success', confirmButtonText: 'Done!'}, function(){window.location.href='managedelivery.php'});";
+                    echo'</script>';
+                }
+                else{
+                    echo'<script language ="javascript">';
+                    echo "swal({  title: 'Error occurs while accepting!', text: '', type: 'error', confirmButtonText: 'Done!'}, function(){window.location.href='managedelivery.php'});";
+                    echo'</script>';
+                }
+            }
+        ?>
+</div>
+
                 
 </div>
         <script type="text/javascript" src="js/plugins/jquery/jquery.min.js"></script>

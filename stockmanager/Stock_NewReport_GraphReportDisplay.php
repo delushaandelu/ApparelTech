@@ -18,12 +18,7 @@
           
                
         function display_graph(value){
-                //alert("correct");
-                //alert ("hiii");
-                //var value = $('input[name="type"]:checked').val();
-                alert(value);
-
-               // alert ("caf");
+                
              if(value){
                
                 $.ajax({
@@ -31,12 +26,12 @@
                     
                     type : 'POST',
                     data: {"categoryname" : value},
-                    //alert ($value);
+                   
 
                 
                success : function(data){
                      
-                    alert(data);
+                    //alert(data);
                     console.log(data);
                     var Name = [];
                     var qty = [];
@@ -53,14 +48,15 @@
 
 
                     var chartdata = {
-                         labels : Name,
+
+                        labels : Name,
                         datasets : [
                             {
                                 label : 'Quantity',
-                                backgroundColor : 'rgba(200,200,200,0.75)',
-                                borderColor : 'rgba(200,200,200,0.75)',
-                                hoverBackgroundColor : 'rgba(200,200,200,1)',
-                                hoverBorderColor : 'rgba(200,200,200,1)',
+                                backgroundColor : 'rgba(0,128,128,0.8)',
+                                borderColor : 'rgba(0,128,128,0.8)',
+                                hoverBackgroundColor : 'rgba(0,128,128,0.8)',
+                                hoverBorderColor : 'rgba(0,128,128,0.8)',
                                 data : qty
 
                             }
@@ -113,8 +109,14 @@
       
 
                 <ul class="breadcrumb">
+<<<<<<< HEAD
+                    <h3>Graphical Reports</h3>
+=======
                     <h4>Graphical Reports</h4>
+>>>>>>> e1433cfe5e357cd2e155aba12ccac0cb71eb1a05
                 </ul>
+
+                <h4 align="center"> Stock Quantity Report</h4>
 
 
 

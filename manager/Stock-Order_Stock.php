@@ -18,63 +18,135 @@
 <div id="page-wrapper">
     <div class="row">
         <div class="col-lg-12">
-            <h2 class="page-header">View Order Stock</h2>
+            <h4 class="page-header">Order Stock</h4>
         </div>
-        
         
     </div>
     <div class="row">
-         <div id="content">
 
-        <div id="top">
-            <h4 style="center">Order Stock</h4>
-        <?php
-
-        //include('database_connection.php');
-
-        $sql = "SELECT item_id,itemName,brand,catagery,stockQty FROM item WHERE stockQty<=reOrderLevel ";
-        $result = $dbcon->query($sql);
-
-        if ($result->num_rows > 0) {
-            echo "<table class='table' id='myTable' >";
-            echo"<tr class='success'>
-                <th>Item ID </th>
-                <th>Item Name </th>
-                <th>Brand </th>
-                <th>Category </th>
-                <th>Stock Qty </th>
-            </tr>";
-
-            while($row = $result->fetch_assoc()) {
-                echo "<tr>
-                    <td><h5 align='center'> " . $row["item_id"]. "</h5></td>
-                    <td><h5 align='center'>" . $row["itemName"]. "</h5></td>
-                    <td><h5 align='center'>" . $row["brand"]. "</h5></td>
-                    <td><h5 align='center'>" . $row["catagery"]. "</h5></td>
-                    <td><h5 align='center'>" . $row["stockQty"]. "</h5></td>
+        <div id="content">
+        <div id="top3">
+              <?php
+                $query = "SELECT * FROM item";
+                //echo ($query);
+                $res = mysqli_query($dbcon,$query);
+                 if(mysqli_num_rows($res) > 0){
                     
-                </tr>";
-            }
-            echo "</table>";
-        } else {
-            echo "0 results";
-        }
+                        echo "<table border = '0' class='table table-hover'>";
+                            echo "<tr bgcolor='#C0C0C0' width = '10px' >";
+                            
+                                echo "<th>Item ID</th>"; echo"<td width = 10%></td>";
+                                echo "<th >Item Name</th>";echo"<td width = 2%></td>";
+                                echo "<th>Category</th>";echo"<td width=2%></td>";
+                                echo "<th>Brand</th>";echo"<td width=2%></td>";
+                                echo "<th>Buying Price</th>";echo"<td width = 2%></td>";
+                                echo "<th>Selling Price</th>";echo"<td width=2%></td>";
+                                echo "<th>Quantity</th>";echo"<td width=2%></td>";
+                                
+                            echo "</tr>";
+                            
 
-        $dbcon->close();
+                        while($row = mysqli_fetch_array($res)){
+                            if($row['stockQty'] <= $row['reOrderLevel']){
+                            echo "<tr>";
+                                echo "<td>" . $row['item_id'] . "</td>"; echo"<td ></td>";
+                                echo "<td>" . $row['itemName'] . "</td>";echo"<td></td>";
+                                echo "<td>" . $row['catagery'] . "</td>";echo"<td></td>";
+                                echo "<td>" . $row['brand'] . "</td>";echo"<td></td>";
+                                echo "<td>" . $row['buyingPrice'] . "</td>";echo"<td></td>";
+                                echo "<td>" . $row['sellingPrice'] . "</td>";echo"<td></td>";
+                                echo "<td>" . $row['stockQty'] . "</td>";echo"<td></td>";
+                                 
 
-        ?>
-        <input type="button" id="button2" class="pdfbtn" name="submitpdf" value="download pdf" onclick="location.href='../manager/tcpdf/project/stockdetails.php'"/>
+                         echo "</td>";
+                            echo "</tr>";}
+                        }
+                        echo "</table>";
+                        // Close result set
+                        mysqli_free_result($result);
+                    }
+                
 
+
+            ?>
+            
+            
         </div>
-             
 
-    </div>
+        <div id="bottom3">
+            <div id="bottom-left3">
+                <div data-role="main" class="ui-content">
+                    <a href="#myPopupDialog" data-rel="popup" data-position-to="window" data-transition="fade" class="ui-btn ui-corner-all ui-shadow ui-btn-inline">Confirm Item</a>
+
+                    <div data-role="popup" id="myPopupDialog">
+
+
+                        <div data-role="main" class="ui-content">
+                            <tr>
+                                <td id="table-font" width="30" >
+                                    Item ID
+                                </td>
+                                <td>
+                                    <input type="text" name="Item ID" class="form-control" style="width: 30%">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td id="table-font" width="30" >
+                                    Item Name
+                                </td>
+                                <td>
+                                    <input type="text" name="Item Name" class="form-control" style="width: 30%">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td id="table-font" width="30" >
+                                    Unit Price
+                                </td>
+                                <td>
+                                    <input type="text" name="Unit Price" class="form-control" style="width: 30%">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td id="table-font" width="30" >
+                                    Qty
+                                </td>
+                                <td>
+                                    <<input type="number" name="Qty" min="1" max="50" class="form-control" style="width: 30%">
+                                </td>
+                            </tr>
+                            <br><br>
+
+                            <button type="button" id="button1" class="btn btn-default btn-lg active">Confirm</button>
+                            <button type="button" id="button1" class="btn btn-default btn-lg active">Cancel</button>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+            
+            <div id="bottom-right3">
+                <tr>
+                    <td id="table-font" width="30" >
+                        Supplier e-mail
+                    </td>
+                    <td>
+                        <input type="text" name="Supplier e-mail" class="form-control" style="width: 40%">
+                    </td>
+                </tr>
+                <br><br>
+                <button type="button" id="button1" class="btn btn-default btn-lg active">Send</button>
+
+            </div>
+        </div>
         
         <p>&nbsp;</p>
         <p>&nbsp;</p>
     </div>
     <div id="footer"></div>
-    </div>  
+    </div>      
+</div>
 
 <script src="vendor/jquery/jquery.min.js"></script>
 <script src="vendor/bootstrap/js/bootstrap.min.js"></script>

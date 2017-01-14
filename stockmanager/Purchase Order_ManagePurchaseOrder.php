@@ -5,7 +5,30 @@
         <link rel="stylesheet" type="text/css" id="theme" href="css/main.css"/>
         <script src="js/sweetalert-dev.js"></script>
         <link rel="stylesheet" href="js/sweetalert.css">
+        <script type="text/javascript" src="js/jquery.leanModal.min.js"></script>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="//code.jquery.com/jquery-1.12.0.min.js"></script> 
+
+        <script type="text/javascript">
+                $(function () {
+
+                    $("#dialog").dialog({
+
+                        modal: true,
+                        autoOpen: false,
+                        title: "Send Email",
+                        display: "block",
+                        width: 400,
+                        height: 400,
+                    });
+                    $("#btnShow").click(function () {
+                        $('#dialog').dialog('open');
+                    });
+                });
+            </script>
         <style type="text/css">
+
         
             .btn{
                 color: white;
@@ -17,6 +40,7 @@
         
         </style>
         
+
         
     </head>
     <body>
@@ -28,13 +52,15 @@
 <div id="content">
         <div class="panel">
             <div class="panel-heading">
+                <div class="panel-body">
                 <table class="table datatable" id="potb">
                     <tr class='success'>
-                        <th><center>id</center></th>
-                        <th><center>customerid</center></th>
-                        <th><center>totalprice</center></th>
-                        <th><center>created</center></th>
+                        <th><center>Id</center></th>
+                        <th><center>Customer Id</center></th>
+                        <th><center>Total Price</center></th>
+                        <th><center>Created</center></th>
                         <th colspan="3"><center>Action</center></th>
+                        
                     </tr>
                         <?php 
                             $sql = "select * from orders";    //display orders table.
@@ -49,11 +75,11 @@
                             <td><center><?php echo $row['total_price'] ?></center></td>
                             <td><center><?php echo $row['created'] ?></center></td>
                                 
-                                <td class="bt"><center><button type="button" class="btn btn-danger" onclick="location.href='Purchase Order_ManagePurchaseOrder.php?id=<?php echo $row['id'] ?> & customerid=<?php echo $row['customer_id'] ?>'"><i class="fa fa-trash-o"></i>Reject</button></center></td>
+                                <td class="bt"><center><button type="button" id ="btnShow" class="btn btn-danger" onclick="location.href='Purchase Order_ManagePurchaseOrder.php?id=<?php echo $row['id'] ?> & customerid=<?php echo $row['customer_id'] ?>'"><i class="fa fa-trash-o"></i>Reject</button></center></td>
                                 
                                 <td class="bt"><center><button type="button" class="btn" onclick="location.href='Purchase Order_ManagePurchaseOrder.php?ID=<?php echo $row['id'] ?> & customer_id=<?php echo $row['customer_id'] ?>'" ><i class="fa fa-check" aria-hidden="true"></i>Accept</button></center></td>
                                 
-                                <td class="bt"><center><button type="button" class="btn" onclick="location.href='PurchaseOrder_viewPurchaseOrder.php?vi=<?php echo $row['id'] ?>'" ><i class="fa fa-eye" aria-hidden="true"></i>view</center></button></td>
+                                <td class="bt"><center><button type="button" class="btn" onclick="location.href='PurchaseOrder_viewPurchaseOrder.php?vi=<?php echo $row['id'] ?>'" ><i class="fa fa-eye" aria-hidden="true"></i>view</button></center></td>
                             </tr>
                 
                         <?php } ?>
@@ -79,6 +105,34 @@
 
                         ?>
 
+                    
+                           <div id="dialog" style="display: none" align = "center">
+                                <form>
+                                    <table width="350px" height="300px">
+                                    <tr>
+                                        <td>To:</td>
+                                        <td><input type="text" name="name"/></td>
+                                    </tr>
+                                     <tr>
+                                        <td>Subject:</td>
+                                        <td><input type="text" name="subject"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Message:</td>
+                                        <td><textarea name="message" placeholder="write here !" ></textarea></td>
+                                    </tr>
+                                        
+                                    <tr>
+                                        
+                                        <td><input type="submit" value="Send"/></td>
+                                    </tr>
+                                        
+                                    
+                                    </table>
+                                </form>
+                            </div>                      
+                       
+
                 
                         <?php
        
@@ -87,7 +141,7 @@
                             $id=$_GET['ID'];
                             $cusid=$_GET['customer_id'];
                              
-                            $username = 'appareltech123@gmail.com';
+                            /*$username = 'appareltech123@gmail.com';
     	                    $hash = 'Priyantha1';
     	
         // Message details
@@ -115,7 +169,7 @@
     	
         // Process your response here
     	                   echo $response;
-                             
+                             */
                             $sqlinsert="INSERT INTO purchasereport(p_id,customer_id,totalprice,created,status) SELECT orders.id,orders.customer_id,orders.total_price,orders.created,'approved' FROM orders WHERE id=$id";
                             $resultinsert=mysqli_query($dbcon,$sqlinsert);
             
@@ -136,11 +190,11 @@
             
              
                         }
-                        if(!empty($_GET['id']) && !empty($_GET['customerid'])){
+                        /*if(!empty($_GET['id']) && !empty($_GET['customerid'])){
                             $id=$_GET['id'];
-                            $cusid=$_GET['customerid'];
+                            $cusid=$_GET['customerid'];*/
                             
-                            $username = 'chamrithjay@gmail.com';
+                         /*   $username = 'chamrithjay@gmail.com';
     	                    $hash = '1993Minuwangoda';
     	
     	   // Message details
@@ -166,14 +220,19 @@
     	                   $response = curl_exec($ch);
     	                   curl_close($ch);
     	
+<<<<<<< HEAD
         // Process your response here
     	                   echo $response;
+=======
+    	                   // Process your response here
+    	                   echo $response;*/
+>>>>>>> origin/master
                             
-                            $sqldelete="DELETE FROM orders WHERE id=$id";
+                           /* $sqldelete="DELETE FROM orders WHERE id=$id";
                             $result=mysqli_query($dbcon,$sqldelete);
                             $sqldelete1="DELETE FROM order_items WHERE order_id=$id";
-                            $result1=mysqli_query($dbcon,$sqldelete1);
-           
+                            $result1=mysqli_query($dbcon,$sqldelete1);*/
+           /*
                                 if($result && $result1){
                                     echo'<script language ="javascript">';
                                         echo "swal({  title: 'Purchase order Deleted!', text: '', type: 'success', confirmButtonText: 'Done!'}, function(){window.location.href='Purchase Order_ManagePurchaseOrder.php'});";
@@ -182,27 +241,23 @@
                                     echo'<script language ="javascript">';
                                         echo "swal({  title: 'Error!', text: '', type: 'error', confirmButtonText: 'Done!'}, function(){window.location.href='Purchase Order_ManagePurchaseOrder.php'});";
                                     echo'</script>';
-                                }
+                                }*/
             
             
             
-                        }
+                        //}
     
                     ?>
          
             </div>
             
-    <div class="panel-body">
-        <div class="previous_report_history_table">
-           
-        </div>
-                
-    <div class="previous_report_stock_report">
-    
     </div>
                 
     </div>
+            
 </div>
+        
+        
     
         <script type="text/javascript" src="js/plugins/jquery/jquery.min.js"></script>
         <script type="text/javascript" src="js/plugins/jquery/jquery-ui.min.js"></script>
@@ -210,6 +265,29 @@
         <script type="text/javascript" src="js/settings.js"></script>
         <script type="text/javascript" src="js/plugins.js"></script>        
         <script type="text/javascript" src="js/actions.js"></script>
+
+        <script src="//code.jquery.com/jquery-1.12.0.min.js"></script> 
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="/resources/demos/style.css">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+
+         <script type="text/javascript">
+                        $(function () {
+                            $("#dialog").dialog({
+                                modal: true,
+                                autoOpen: false,
+                                title: "Send Email",
+                                display: "block",
+                                width: 400,
+                                height: 400,
+                            });
+                            $("#btnShow").click(function () {
+                                $('#dialog').dialog('open');
+                            });
+                        });
+        </script>
     </body>
 </html>
 

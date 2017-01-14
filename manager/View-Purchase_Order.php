@@ -30,8 +30,8 @@
     </div>
     <div class="row">
 
-            <table class='table' id='myTable' >
-            <tr  class='success'>
+            <table class='table table-hover' id='myTable' >
+            <tr  bgcolor='#C0C0C0' width = '10px'>
                 <th><h5 align='center'><b> Purchase Order ID</b> </h5></th>
                 <th><h5 align='center'><b>Customer ID</b> </h5></th>
                 <th><h5 align='center'><b>Total Price</b> </h5></th>
@@ -50,12 +50,12 @@
             while($row = $result->fetch_assoc()) {
                 ?>
                 <tr>
-                    <td><?php echo $row['p_id'] ?></td>
-                    <td><?php echo $row['customer_id'] ?></td>
-                    <td><?php echo $row['totalprice'] ?></td>
-                    <td><?php echo $row['created'] ?></td>
-                    <td><?php echo $row['status'] ?></td>
-                    <td class="bt"><button type="button" id="button" class="btn btn-info" value="Delete" onclick="location.href='View-Purchase_Order.php?p_id=<?php echo $row['p_id'] ?>'"><i class="fa fa-trash-o"></i></button></td>
+                    <td><h5 align='center'><?php echo $row['p_id'] ?></h5></td>
+                    <td><h5 align='center'><?php echo $row['customer_id'] ?></h5></td>
+                    <td><h5 align='center'><?php echo $row['totalprice'] ?></h5></td>
+                    <td><h5 align='center'><?php echo $row['created'] ?></h5></td>
+                    <td><h5 align='center'><?php echo $row['status'] ?></h5></td>
+                    <td class="bt"><h5 align='center'><button type="button" id="button" class="btn btn-info" value="Delete" onclick="location.href='View-Purchase_Order.php?p_id=<?php echo $row['p_id'] ?>'"><i class="fa fa-trash-o"></i></button></h5></td>
                 </tr>
                 <?php } ?>
             </table>

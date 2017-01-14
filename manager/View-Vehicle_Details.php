@@ -47,8 +47,8 @@
         $result = $dbcon->query($sql);
 
         if ($result->num_rows > 0) {
-            echo "<table class='table table-striped' id='myTable'>";
-            echo"<tr  class='success'>
+            echo "<table class='table table-hover' id='myTable'>";
+            echo"<tr  bgcolor='#C0C0C0' width = '10px'>
                 <th><h5 align='center'><b>Vehicle ID</b></h5></th>
                 <th><h5 align='center'><b>Vehicle No</b> </h5></th>
                 <th><h5 align='center'><b>Capacity</b></h5></th>

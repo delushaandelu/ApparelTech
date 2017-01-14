@@ -9,7 +9,7 @@ if(isset($_REQUEST['action']) && !empty($_REQUEST['action'])){
     if($_REQUEST['action'] == 'addToCart' && !empty($_REQUEST['item_id'])){
         $productID = $_REQUEST['item_id'];
         // get product details
-        $query = $db->query("SELECT * FROM item WHERE item_id = ".$productID);
+        $query = $db->query("SELECT * FROM rent_item WHERE item_id = ".$productID);
         $row = $query->fetch_assoc();
         $itemData = array(
             'item_id' => $row['item_id'],

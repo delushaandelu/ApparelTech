@@ -65,12 +65,17 @@
                     <input type="password" name="Newpwd2" class="form-control" required>
                 </td>
             </tr>
+<<<<<<< HEAD
            <tr>
             <td colspan="2">
                 <button type="submit" id="button1" class="" name="pwd">Change</button>
             </td>
             </tr>
             </table>
+=======
+            <br><br>
+            <button type="submit" id="button3" class="" name="pwd">Change</button>
+>>>>>>> origin/master
             </form>
         </div>
         

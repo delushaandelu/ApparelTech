@@ -29,8 +29,6 @@
     
     <script type="text/javascript">
     function display_graph(value){
-                
-                alert(value);
 
                // alert ("caf");
              if(value){

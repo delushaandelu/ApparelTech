@@ -32,6 +32,7 @@
                         $('#itemname').append("<option value = '0'> Select Item Name </option>");
                         //$('#itemname').html(html);
                         data.forEach(function(data){
+
                             $('#itemname').append('<option>'+data+'</option>');
 
                         });
@@ -69,6 +70,7 @@
                         $('#brandname').append("<option> All </option>");
                         //$('#itemname').html(html);
                         data.forEach(function(data){
+                            
                             $('#brandname').append('<option>'+data+'</option>');
                             
                         });
@@ -120,14 +122,10 @@
 
              function update_item(item_id, sellingPrice,stockQty){
 
-               // alert (sellingPrice);
                 var item_id = item_id;
                 var sellingPrice = sellingPrice;
                 var stockQty = stockQty;
                
-                //var temp = "#"+item_id;
-                //var temp1 = "'"+temp+"'";
-                //alert ("hii");
 
                  $.ajax({
 
@@ -137,7 +135,8 @@
                             data : {"item_id" : item_id , "sellingPrice" : sellingPrice , "stockQty" : stockQty},
                            //alert (item);
                             success : function($result){
-                                alert("Stock upated successfully");
+                                        swal({  title: 'Stock item successfully updated!', text: '', type: 'success', confirmButtonText: 'Done!'}, function(){window.location.href='Stock_ManageItem.php'});
+                                
                                     
                                 
                             }

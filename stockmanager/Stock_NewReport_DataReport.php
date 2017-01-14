@@ -5,41 +5,7 @@
         <link rel="stylesheet" type="text/css" id="theme" href="css/main.css"/> 
         <link rel="stylesheet" type="text/css"  href="Stock_NewReport_Design.css"/>
         
-         <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-       <script>
-           
-    $(document).ready(function(){
-        $("input[type='button']").click(function(){
-            /*$('#categoryname').empty();
-            $('#categoryname').append("<option> Loading </option>");
-            $('#categoryname').append("<option value = '0'> Select Category Name </option>");*/
-
-            
-            var categoryName = $("input[name='categoryname']:checked").val()
-
-            if(categoryName){
-
-                $.ajax({
-                    type : 'GET',
-                    url : '/GroupProject/stockmanager/dropdown.php?categoryname='+categoryName,
-                    //data : 'categoryname=' + categoryName,
-                    dataType:'json',
-                    success : function(data){
-                        $('#itemname').empty();
-                        $('#itemname').append("<option value = '0'> Select Item Name </option>");
-                        //$('#itemname').html(html);
-                        data.forEach(function(data){
-                            $('#itemname').append('<option>'+data+'</option>');
-
-                        });
-                        
-                        
-                    }
-                });
-            }
-        });
-    });
-       </script>            -->            
+               
     </head>
     <body>
         

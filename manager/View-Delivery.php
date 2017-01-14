@@ -50,8 +50,8 @@
         $result = $dbcon->query($sql);
 
         if ($result->num_rows > 0) {
-            echo "<table class='table table-striped'>";
-            echo"<tr class='success'>
+            echo "<table class='table table-hover'>";
+            echo"<tr bgcolor='#C0C0C0' width = '10px'>
                 <th>Rent ID </th>
                 <th>Purchase ID </th>
                 <th>Company </th>
