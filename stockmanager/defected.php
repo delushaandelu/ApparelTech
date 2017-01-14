@@ -7,6 +7,7 @@
     <body>
         
         <?php
+        
             include("../config/stockmgrmenu.php");
         ?>
     <?php  
@@ -38,7 +39,7 @@ if ($dbcon->query($sql) === TRUE) {
                 <ul class="breadcrumb">
                     <h2>Page Heading here!</li></h2>
                 </ul>
-     <div id="delivery">
+     <div id="defect">
         <form method="post">
             <table class="table table-hover">
                 <tr>

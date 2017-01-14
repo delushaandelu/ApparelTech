@@ -31,7 +31,7 @@ session_start();
     <div class="row">
 
         <div id="content">
-        <div id="top">
+        <div id="top3">
             <h5>
                 <font color="#a52a2a" size="+2">Change Password!</font>
             </h5>
