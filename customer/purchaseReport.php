@@ -23,9 +23,32 @@ session_start();
 <!-- page content -->
 <div class="right_col" role="main">
     <h2 class="hfont">Your Purchase Report!</h2>
+    <div class="2">
+                <input type="text" id="myInput" onkeyup="myFunction()" class="form-control" placeholder="&#x26B2   Search reports using your id..." style="width: 320px; height: 50px">
+
+            </div>
+        <script>
+            function myFunction() {
+                var input, filter, table, tr, td, i;
+                input = document.getElementById("myInput");
+                filter = input.value.toUpperCase();
+                table = document.getElementById("myTable");
+                tr = table.getElementsByTagName("tr");
+                for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[0];
+                    if (td) {
+                        if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].style.display = "";
+                        } else {
+                            tr[i].style.display = "none";
+                        }
+                    }
+                }
+            }
+        </script>
  <div class="row">
 
-            <table class='table table-hover'  >
+            <table class='table table-hover' id='myTable' >
             <tr>
                 <th><b><h5 align='center'> Purchase Order ID </h5></b></th>
                 <th><b><h5 align='center'>Total Price </h5></b></th>

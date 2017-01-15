@@ -14,7 +14,7 @@
             include("../config/stockmgrmenu.php");
         ?>
          <div class="2">
-                <input type="text" id="myInput" onkeyup="myFunction()" class="form-control" placeholder="&#x26B2   Search for customer by id..." style="width: 320px; height: 50px">
+                <input type="text" id="myInput" onkeyup="myFunction()" class="form-control" placeholder="&#x26B2   YYYY-MM-DD" style="width: 320px; height: 50px">
 
             </div>
         <script>
@@ -25,7 +25,7 @@
                 table = document.getElementById("myTable");
                 tr = table.getElementsByTagName("tr");
                 for (i = 0; i < tr.length; i++) {
-                    td = tr[i].getElementsByTagName("td")[0];
+                    td = tr[i].getElementsByTagName("td")[4];
                     if (td) {
                         if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
                             tr[i].style.display = "";
