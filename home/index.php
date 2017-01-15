@@ -321,10 +321,8 @@
                                 </div>
                             </div>
                             
-                            <div class="col-sm-12 text-center">
-						        
-						      <button type="submit" name="submit" class="btn-success4"> Submit </button>
-						        
+                            <div class="col-sm-12 text-center">						        
+						      <button type="submit" name="submit" class="btn-success4"> Submit </button>						        
                             </div>
                         </div>
                         
