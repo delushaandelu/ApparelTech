@@ -14,6 +14,7 @@
                 <h2>View Defected Items!</li></h2>
             </ul>
         <div id="content">
+        <form>
         <table  class="table datatable">
             
             <tr class="success">
