@@ -81,7 +81,7 @@
                    
                 </div> 
                 <div class="col-lg-3 col-md-6">
-                    <button class="box effect1" style="background-color:#fff"><a href="Purchase%20Order_ManagePurchaseOrder.php">Rent order</a><i class="fa fa-arrow-circle-right"></i> <!--<i class="fa fa-support fa-5x"></i> --><img class="h1" src="img/rent.png"/></button>
+                    <button class="box effect1" style="background-color:#fff" onclick="window.location.href='rent.php'"><a href="Purchase%20Order_ManagePurchaseOrder.php">Manage Rent </a><i class="fa fa-arrow-circle-right"></i> <!--<i class="fa fa-support fa-5x"></i> --><img class="h1" src="img/rent.png"/></button>
                 
                 </div> 
         </div>                                         
