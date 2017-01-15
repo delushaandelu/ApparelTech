@@ -83,7 +83,7 @@
                     <!-- start accordion -->
                     <div class="accordion" id="accordion" role="tablist" aria-multiselectable="true">
                       <div class="panel">
-                        <a class="panel-heading" role="tab" id="headingOne" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <a class="panel-heading collapsed" role="tab" id="headingTwo" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                           <h4 class="panel-title">Purchase Reports</h4>
                         </a>
                         <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
@@ -122,7 +122,31 @@
                         </a>
                         <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                           <div class="panel-body">
-                              Rent
+                              <table class="table table-bordered">
+                              <thead>
+                                <tr>
+                                  <th>Rent ID</th>
+                                  <th>Total Price</th>
+                                  <th>Created Date</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                  <?php
+
+                                include('dbConfig.php');
+                                $c_id = $_SESSION['csid'];
+                                $sql = "SELECT * FROM rentorders where customer_id=$c_id ";
+                                $result = $db->query($sql);
+                                while($row = $result->fetch_assoc()) {
+                                    ?>
+                                <tr>
+                                  <td><?php echo $row['id'] ?></td>
+                                  <td><?php echo $row['total_price'].'.00' ?></td>
+                                  <td><?php echo $row['created'] ?></td>
+                                </tr>
+                                    <?php } ?>
+                              </tbody>
+                            </table>
                           </div>
                         </div>
                       </div>
