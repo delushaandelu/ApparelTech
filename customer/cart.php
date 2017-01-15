@@ -82,7 +82,12 @@ class Cart {
                 $old_qty = isset($this->cart_contents[$rowid]['qty']) ? (int) $this->cart_contents[$rowid]['qty'] : 0;
                 // re-create the entry with unique identifier and updated quantity
                 $item['rowid'] = $rowid;
+
+                
                 $item['qty'] += $old_qty;
+                
+
+               // $item['qty'] += $old_qty;
                 $this->cart_contents[$rowid] = $item;
                 
                 // save Cart Item
