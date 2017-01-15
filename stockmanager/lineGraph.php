@@ -64,10 +64,10 @@ $.ajax({
         var myChart = new Chart(ctx, {
           type: 'line',
           data: {
-            labels: Name,
+            labels: Name,//x axis
             datasets: [{
               label: 'date',
-              data: qty,
+              data: qty,//y axis
               backgroundColor: "rgba(153,255,51,0.4)"
             }]
           }
