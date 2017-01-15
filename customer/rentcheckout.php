@@ -62,6 +62,9 @@ require ('../config/database.php');
             foreach($cartItems as $item){
         ?>
         <tr>
+            <?php
+            $_SESSION['amount'] = $item["subtotal"];
+            ?>       
             <td><?php echo $item["itemName"]; ?></td>
             <td><?php echo 'Rs.'.$item["rentPrice"]; ?></td>
             <td><?php echo $item["qty"]; ?></td>
