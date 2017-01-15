@@ -155,7 +155,7 @@
                     
                           
 
-                
+                 
                         <?php
        
       
@@ -166,7 +166,7 @@
                            
 
                              
-                            $username = 'appareltech123@gmail.com';
+                           /* $username = 'appareltech123@gmail.com';
     	                    $hash = 'Priyantha1';
     	
     	                   // Message details
@@ -193,7 +193,7 @@
     	                   curl_close($ch);
     	
     	                   // Process your response here
-    	                   echo $response;
+    	                   echo $response;*/
                              
                             $sqlinsert="INSERT INTO purchasereport(p_id,customer_id,totalprice,created,status) SELECT orders.id,orders.customer_id,orders.total_price,orders.created,'approved' FROM orders WHERE id=$id";
                             $resultinsert=mysqli_query($dbcon,$sqlinsert);
@@ -223,7 +223,7 @@
 
                             
                             
-                            $username = 'chamrithjay@gmail.com';
+                          /*  $username = 'chamrithjay@gmail.com';
     	                    $hash = '1993Minuwangoda';
     	
     	                   // Message details
@@ -250,7 +250,7 @@
     	                   curl_close($ch);
     	
     	                   // Process your response here
-    	                   echo $response;
+    	                   echo $response;*/
                             
                            $sqldelete="DELETE FROM orders WHERE id=$id";
                             $result=mysqli_query($dbcon,$sqldelete);
@@ -272,7 +272,7 @@
                         }
                            
     
-                    ?>
+                    ?> 
          
             </div>
             

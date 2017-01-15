@@ -58,7 +58,7 @@ if ($db->query($sql) === TRUE) {
     <h1 class="hfont">Request Your Delivery Here!</h1>
 
     <div id="delivery">
-        <form method="post">
+        <form method="post" name = "InputForm" onSubmit = "return validateform();">
             <table class="table table-hover">
                 <tr>
                     <td>P/O ID</td>
@@ -70,34 +70,34 @@ if ($db->query($sql) === TRUE) {
                 </tr>
                 <tr>
                     <td>Delivery Address</td>
-                    <td><input type="text" class="form-control" name="add"></td>
+                    <td><input type="text" class="form-control" name="add" required></td>
                 </tr>
                 <tr>
                     <td>Delivery Date</td>
-                    <td><input type="date" class="form-control" name="date"></td>
+                    <td><input type="date" class="form-control" name="date" required></td>
                 </tr>
                 <tr>
                     <td>Telephone No for Delivery</td>
-                    <td><input type="tel" class="form-control" name="tele"></td>
+                    <td><input type="text" id="#mob" class="form-control" name="tele" required></td>
                 </tr>
                 <tr>
-                    <td colspan="2"><h4 align="center">Bank Payment Details</h4></td>
+                    <td colspan="2"><h4 align="center">Bank Payment Details</h4> </td>
                 </tr>
                 <tr>
                     <td>Bank Name</td>
-                    <td><input type="text" class="form-control" name="bank"></td>
+                    <td><input type="text" class="form-control" name="bank" required></td>
                 </tr> 
                 <tr>
                     <td>Branch Name</td>
-                    <td><input type="text" class="form-control" name="branch"></td>
+                    <td><input type="text" class="form-control" name="branch" required></td>
                 </tr>
                 <tr>
                     <td>Deposit Voucher ID</td>
-                    <td><input type="text" class="form-control" name="vid"></td>
+                    <td><input type="text" class="form-control" name="vid" required></td>
                 </tr>
                 <tr>
                     <td>Amount</td>
-                    <td><input type="text" class="form-control" name="amount"></td>
+                    <td><input type="text" class="form-control" name="amount" requirext></td>
                 </tr>
                 <tr>
                     <td colspan="2"><center><input type="submit" class="btn btn-success" name="btn" value="Request Delivery"></center></td>
@@ -116,4 +116,25 @@ if ($db->query($sql) === TRUE) {
 <!-- FastClick -->
   <!-- Custom Theme Scripts -->
 <script src="build/js/custom.min.js"></script>
+    <script type="text/javascript">
+    function validateform(){
+      var phone=document.InputForm.mob;
+    var phoneno =/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+    if (phone.value == "")
+			{
+		    	window.alert("Please enter your mobile No.");
+		         phone.focus();
+		    	return false;
+			}
+    else if(!phoneno.test($("#mob").val()))  
+        {  
+        window.alert("wrong mobile phone no");  
+        return false;   
+        }  
+    else{
+          return true;
+      }
+    
+    }
+        </script>
 </html>

@@ -14,73 +14,7 @@
        
 
        <script type="text/javascript" src = "js/Chart.min.js"></script>
-       <!-- <script type="text/javascript">
-
-       alert("hii");
-               
-                $.ajax({
-                    alert("hii");
-                    url: 'lineGraphData.php',
-                    
-                    //type : 'POST',
-                    //data: {"categoryname" : value},
-                   
-
-                
-               success : function(data){
-                     
-                    alert(data);
-                    console.log(data);
-                    var Name = [];
-                    var qty = [];
-                    var itemList = jQuery.parseJSON(data);
-
-                    for(var i in itemList){
-
-                        Name.push(itemList[i][0]);
-
-                        //alert(data[i]);
-                        //alert(itemList[i].itemName);
-                        qty.push(itemList[i][1]);
-                        
-                    }
-                    alert(Name);
-
-
-                    var chartdata = {
-
-                        labels : Name,
-                        datasets : [
-                            {
-                              //  label : 'Quantity',
-                                fillColor: "#79D1CF",
-                                strokeColor: "#79D1CF",
-                                data : qty
-
-                            }
-                        ]
-                    };
-                    //window.location.href = "Stock_NewReport_GraphReportDisplay.php";
-                    var ctx = $ ('#mycanvas');
-                    var barGraph = new Chart(ctx, {
-                        type : 'line',
-                        data : chartdata
-                    });
-                },
-
-                error : function(data){
-                    console.log(data);
-                }
-
-            });
-              
-         
        
-            
-    
-
-       </script>  -->
-      
  <link rel="stylesheet" href="js/sweetalert.css">
 
                   
@@ -94,33 +28,11 @@
 
         
     
-            
-<!-- 
-            <script>
-                
-                display_graph();
-            </script> -->
+<div id>
+    <canvas id="myChart" width="600" height="400"></canvas>
+</div>
 
-      
-
-                <!-- <ul class="breadcrumb">
-
-                    <h3>Priyantha Enterprises</h3>
-                    <h4>Graphical Reports</h4>
-                </ul>
-
-                <h4 align="center"> Stock Quantity Report</h4> -->
-
-
-
-    <!-- <div id="chart-container"> -->
-            
-
-<canvas id="myChart" width="600" height="400"></canvas>
-
-
-       <!--  </div> -->
-
+       
 
 
 

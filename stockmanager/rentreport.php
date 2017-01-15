@@ -13,13 +13,28 @@
 	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 	<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 
-	
+	<style type="text/css">
+        .search_input{
+            margin-left: 30%;
+        }    
+        .search{
+            background-color: #1caf9a;
+            color: aliceblue;
+            width: 100px;
+            height: 25px;
+            border: none;
+        }
+    </style>
 	</head>
 	
 	<body>
     <?php
             include("../config/stockmgrmenu.php");
         ?>
+    <ul class="breadcrumb">
+    <h4>Search Rent</li></h4>
+</ul>
+<div class = "panel">
     <?php
    // require("database_connection.php");
 	$post_at = "";
@@ -30,28 +45,30 @@
 		$post_at = $_POST["post_at"];
 		$post_at_todate =$_POST["post_at_to_date"];
 		/*$sql = "SELECT total_price from rentorders WHERE created >= $post_at  AND created < $post_at_todate ";*/
-        $sql="SELECT * from rentorders WHERE created >= '$post_at' AND created < '$post_at_todate'";
+        $sql="SELECT * from rentorders,customer WHERE customer.customer_id=rentorders.customer_id AND created >= '$post_at' AND created < '$post_at_todate'";
 	   $result = mysqli_query($dbcon,$sql);
     }
 ?>
-   
+   <div class="content">
     <div class="demo-content">
-		<h2 class="title_with_link">Recent Articles</h2>
      
   <form name="frmSearch" method="post" action="">
 	 <p class="search_input">
 		<input type="text" placeholder="From Date" id="post_at" name="post_at"  value="<?php echo $post_at; ?>" class="input-control" />
 	    <input type="text" placeholder="To Date" id="post_at_to_date" name="post_at_to_date" style="margin-left:10px"  value="<?php echo $post_at_to_date; ?>" class="input-control"  />			 
-		<input type="submit" name="submit" value="Search" >
+		<input type="submit" class="search" name="submit" value="Search" >
 	</p>
       <?php if(!empty($result))	 { ?>
-<table class="table-content">
+      <br>
+      
+<table class="table datatable">
           <thead>
-        <tr>
-                      
-          <th width="30%"><span>Post Title</span></th>
-          <th width="50%"><span>Description</span></th>          
-          <th width="20%"><span>Post Date</span></th>	  
+        <tr class='success'>
+           <th width="20%"><span>rentid</span></th>           
+          <th width="30%"><span>customer id</span></th>
+          <th width="50%"><span>customer name</span></th>  
+            <th width="20%"><span>Amount</span></th>
+        
         </tr>
       </thead>
     <tbody>
@@ -59,10 +76,11 @@
 		while($row = mysqli_fetch_assoc($result)) {
 	?>
         <tr>
-			<td><?php echo $row["customer_id"]; ?></td>
+            <td><?php echo $row["id"]; ?></td>
+            <td><?php echo $row["customer_id"]; ?></td>
+            <td><?php echo $row["fullname"]; ?></td>
 			<td><?php echo $row["total_price"]; ?></td>
-			<td><?php echo $row["id"]; ?></td>
-
+			
 		</tr>
    <?php
 		}
@@ -76,7 +94,7 @@
 <script>
 $.datepicker.setDefaults({
 showOn: "button",
-buttonImage: "datepicker.png",
+buttonImage: "img/datepicker.png",
 buttonText: "Date Picker",
 buttonImageOnly: true,
 dateFormat: 'yy-mm-dd'  
@@ -86,4 +104,7 @@ $("#post_at").datepicker();
 $("#post_at_to_date").datepicker();
 });
 </script>
+</div>
+    </div>
+
 </body></html>

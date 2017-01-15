@@ -65,7 +65,24 @@ $cart = new Cart;
             <td><?php echo $item["itemName"]; ?></td>
             <td><?php echo 'Rs.'.$item["sellingPrice"]; ?></td>
             <td><input type="number" class="form-control text-center" value="<?php echo $item["qty"]; ?>" onchange="updateCartItem(this, '<?php echo $item["rowid"]; ?>')"></td>
-            <td><?php echo $item["stockQty"]; ?></td>
+            <?php
+            include 'dbConfig.php';
+                $item_id = $item['rowid'];
+                $sql = "SELECT stockQty FROM item WHERE item_id = '$item_id'";
+                //echo $item_id;
+                $result = mysqli_query($db,$sql);
+                $row = mysqli_fetch_array($result);
+                $maxQty = $row[0];
+                //echo $maxQty;
+                if($item['stockQty'] >= $maxQty ){?>
+                    <script>swal("Alert!", "Maximum quantity exceeded!", "error")</script><?php
+                    
+                }else{?>
+                    <td><?php echo $item["stockQty"]; ?></td><?php
+                }
+
+            ?>
+            
             <td><?php echo 'RS. '.$item["subtotal"]; ?></td>
             <td>
                 <!--<a href="cartAction.php?action=updateCartItem&id=" class="btn btn-info"><i class="glyphicon glyphicon-refresh"></i></a>-->

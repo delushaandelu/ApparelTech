@@ -70,7 +70,8 @@ if(isset($_POST['signin'])){
     $username = mysqli_real_escape_string($conn, $_POST['username']);
     $password = mysqli_real_escape_string($conn, $_POST['password']);
     $username = htmlspecialchars($username);
-    $password = htmlspecialchars($password);
+    $password1 = htmlspecialchars($password1);
+    $password = sha1($password);
    // $password = md5($password);
     $_SESSION['username'] = $username;
     

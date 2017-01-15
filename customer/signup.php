@@ -193,7 +193,7 @@ function validateform(){
 		    	return false;
             }
     var phone=document.InputForm.mob;
-    var phoneno =/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+    var phoneno =/^\(?([0-9]{5})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
     if (phone.value == "")
 			{
 		    	window.alert("Please enter your mobile No.");
