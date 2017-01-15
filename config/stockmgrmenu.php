@@ -61,7 +61,8 @@
                             <li><a href="Stock_ManageStock.php"><span class="fa fa-edit"></span> Manage Stock</a></li>
                              <li><a href="allstock.php"><span class="fa fa-user"></span> All Stock</a></li>
                             <li><a href="Stock_NewReport.php"><span class="fa fa-user"></span> New Report</a></li>
-                           <li><a href="defected.php"><span class="fa fa-user"></span> Defected Stock</a></li>
+                            <li><a href="defected.php"><span class="fa fa-user"></span> Defected Stock</a></li>
+                            <li><a href="viewdefected.php"><span class="fa fa-user"></span>View Defected Stock</a></li>
                            
                         </ul>
                     </li>
