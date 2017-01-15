@@ -55,6 +55,7 @@
                                 echo "<th>Category</th>";echo"<td width=2%></td>";
                                 echo "<th>Brand</th>";echo"<td width=2%></td>";
                                 echo "<th>Quantity</th>";echo"<td width=2%></td>";
+                                echo "<th>Update</th>";echo"<td width=2%></td>";
                                 
                             echo "</tr>";
                             
@@ -152,9 +153,31 @@
             </div>-->
         </div>
         
+        
         <p>&nbsp;</p>
         <p>&nbsp;</p>
     </div>
+    <?php
+    if(isset($_GET['stockQty'])){
+    $qty=$_GET['stockQty'];
+
+        $update_query = "UPDATE item SET status = 'true' WHERE customer_id=$cid";
+
+        $result1=mysqli_query($dbcon,$copy_query);
+        $result2=mysqli_query($dbcon,$update_query);
+
+        if($result1 && $result2){
+            echo'<script language ="javascript">';
+            echo "swal({  title: 'Details of customer saved successfully!', text: '', type: 'success', confirmButtonText: 'Done!'}, function(){window.location.href='ManageUser-Manage_Customer.php'});";
+            echo'</script>';
+        }
+        else{
+            echo'<script language ="javascript">';
+            echo "swal({  title: 'Error occurs while saving data!', text: '', type: 'error', confirmButtonText: 'Done!'}, function(){window.location.href='ManageUser-Manage_Customer.php'});";
+            echo'</script>';
+        }
+    }
+    ?>
     <div id="footer"></div>
     </div> 
 

@@ -1065,7 +1065,7 @@ body.page-container-boxed .page-container {
 }
 .profile .profile-image {
   float: left;
-  width: 100%;
+  width: 50%;
   margin: 0px 0px 10px;
   text-align: center;
 }

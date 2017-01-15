@@ -1,4 +1,23 @@
- <div id="wrapper">
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <style type="text/css">
+
+#holder
+{
+	position:absolute;
+	width:100%;
+	height:100%;
+}
+#holder img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+    </style>
+    </head>
+<body>
+<div id="wrapper">
         <nav class="navbar navbar-default navbar-static-top" role="navigation" style="background-color: #0a0a0a; color: white">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -7,7 +26,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html" style="background-color: #0a0a0a; font-size: 30px; color:#FF4500; margin-left: 10%" >Manager</a>
+                <a class="navbar-brand" href="index.html" style="background-color: #0a0a0a; font-size: 30px; color:#FF4500; margin-left: 10%;" >Manager</a>
             </div>
             <ul class="nav navbar-top-links navbar-right">
                 <li class="dropdown head-dpdn">
@@ -43,14 +62,9 @@
 <div class="navbar-default sidebar" role="navigation" >
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
-                        <li class="sidebar-search">
-                            <div class="input-group custom-search-form">
-                                <input type="text" class="form-control" placeholder="Search...">
-                                <span class="input-group-btn">
-                                <button class="btn btn-default" type="button">
-                                    <i class="fa fa-search"></i>
-                                </button>
-                            </span>
+                        <li class="sidebar-search" margin-botton:70%>
+                            <div class="input-group custom-search-form" style="margin-botton:50%">
+                                <img src="images/avatar.jpg" />
                             </div>
                         </li>
                         <li>
@@ -162,3 +176,5 @@
             </div>
         </nav>
      </div>
+    </div>
+</body>

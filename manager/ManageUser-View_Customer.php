@@ -73,7 +73,7 @@
                         <td><?php echo $row['mobile'] ?></td>
                         <td><?php echo $row['tele'] ?></td>
 
-                        <td class="bt"><button type="button" id="button"  onclick="location.href='ManageUser-View_Customer.php?customer_id=<?php echo $row['customer_id'] ?>'"><i class="fa fa-trash-o"></i></button></td>
+                        <td class="bt"><button type="button" id="button" class="btn btn-info" onclick="location.href='ManageUser-View_Customer.php?customer_id=<?php echo $row['customer_id'] ?>'"><i class="fa fa-trash-o"></i></button></td>
                     </tr>
                     <?php } ?>
                 </table>

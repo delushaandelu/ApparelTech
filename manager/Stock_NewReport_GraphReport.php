@@ -33,7 +33,7 @@
 
        <div class="col-md-2"></div>
     
-        <div class="col-md-5" id="drop_down" >       
+        <div class="col-md-6" id="drop_down" >       
     
     
             <ul class="drop_down_ul">
@@ -42,6 +42,7 @@
                     <label for="f-option">Sewing Machines</label>
                     
                     <div class="check"></div>
+                      <br><br>
                   </li>
                   
                   <li>
@@ -49,6 +50,7 @@
                     <label for="s-option">Sewing Machine Spare Parts</label>
                     
                     <div class="check"><div class="inside"></div></div>
+                       <br><br>
                   </li>
                   
                   <li>
@@ -56,18 +58,20 @@
                     <label for="t-option">Tools</label>
                     
                     <div class="check"><div class="inside"></div></div>
+                     <br><br>                       
 
                   </li>
             </ul>
         </div>
 
-        <div class="col-md-5" id="button_effect">
+        <div class="col-md-4" id="button_effect">
             <input type="submit" id="btnNewReportGenerateReport" name="btnNewReportGenerateReport" value="Generate Report"  />
         </div>
         
     </div>
 </form> 
 </div>
+    </div>
 
 <script src="vendor/jquery/jquery.min.js"></script>
 <script src="vendor/bootstrap/js/bootstrap.min.js"></script>

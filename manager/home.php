@@ -3,19 +3,16 @@
 <head>
     <meta charset="utf-8">
     <title>Manager Admin</title>
+    <!-- css , sweetalert files -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="dist/css/sb-admin-2.css" rel="stylesheet">
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
     <link rel="stylesheet" href="designs/template.css" type="text/css" />
-    
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <link rel="stylesheet" href="assets/plugins/Font-Awesome/css/font-awesome.css" />
-    <link href="assets/plugins/dataTables/dataTables.bootstrap.css" rel="stylesheet" />
-    <link href="assets/css/layout2.css" rel="stylesheet" />
-    <link href="css/home.css" rel="stylesheet" type="text/css">
+    <script src="js/sweetalert-dev.js"></script>
+    <link rel="stylesheet" href="js/sweetalert.css">
+
    <style type="text/css">
-       
-       
        
       /* ==========================*/
     .bt{
@@ -27,13 +24,13 @@
        
     }  
     #dash{
-            margin-top:-38%;
-            margin-left:20%;
+            margin-top:0%;
+            margin-left:5%;
         }
     #dash1{
             margin-top:10%;
-            margin-left: 20%;
-            width: 1080px;
+            margin-left: 5%;
+            
         }
     .bt a {
        text-align: center;
@@ -63,27 +60,28 @@
         }
         
 </style>
-    
-    
-    
 </head>
 
 <body>
 
 <?php
+    //manager's menu
     include ("../config/managermenu.php");
 ?>
             
 <div id="page-wrapper">
-<div id="head">
-    
-</div>
-    
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="1">
+                <h4 class="page-header"></h4>
+            </div>
+        </div>
     </div>
+    <br><br>
+    <div class="row">
   
     <div id="dash">
                 <div class="col-lg-3 col-md-6">
-                    
                     <button class="bt" style="background-color:#fff" onclick="window.location.href='supplier-manage_supplier.php'"><a href="">Manage Supplier</a><i class="fa fa-arrow-circle-right"></i> <!--<i class="fa fa-university fa-5x"></i>--><img class="h1" src="images/sup.png"/></button>
                     
                 </div>
@@ -97,37 +95,32 @@
                     <button class="bt" style="background-color:#fff" onclick="window.location.href='ManageUser-View_Customer.php'"><a href="">View Customer</a><i class="fa fa-arrow-circle-right"></i>  <!--<i class="fa fa-users fa-5x"></i>--><img class="h1" src="images/cus2.png"/></button>
                 </div>
     </div>
-    </br></br></br>
+    <br><br><br>
 
                 <div id="dash1">
-                <div class="col-lg-3 col-md-6">
-                     <button class="bt" style="background-color:#fff" onclick="window.location.href='ManageUser-Manage_Stock_Manager.php'"><a href="">Add user</a><i class="fa fa-arrow-circle-right"></i><!--<i class="fa fa-user-plus fa-5x"></i>--><img class="h1" src="images/cus1.png"/></button>
+                    
+                    <div class="col-lg-3 col-md-6">
+                    <button class="bt" style="background-color:#fff" onclick="window.location.href='ManageUser-Manage_Stock_Manager.php'"><a href="">Add user</a><i class="fa fa-arrow-circle-right"></i> <!--<i class="fa fa-university fa-5x"></i>--><img class="h1" src="images/cus1.png"/></button>
+                    
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <button class="bt" style="background-color:#fff" onclick="window.location.href='Quotation-Manage_Quotation.php'"><a href="">Manage Quotation</a><i class="fa fa-arrow-circle-right"></i><!--<i class="fa fa-quote-left fa-5x"></i>--><img class="h1" src="images/q.png"/></button>
+                    <button class="bt" style="background-color:#fff" onclick="window.location.href='Quotation-Manage_Quotation.php'"><a href="">Manage Quotation</a><i class="fa fa-arrow-circle-right"></i>  <!--<i class="fa fa-stack-overflow fa-5x"></i>--><img class="h1" src="images/q.png"/></button>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <button class="bt" style="background-color:#fff" onclick="window.location.href='backup.php'"><a href="">Backup</a><i class="fa fa-arrow-circle-right"></i><!--<i class="fa fa-cloud-upload fa-5x"></i>--><img class="h1" src="images/back.png"/></button>
+                    <button class="bt" style="background-color:#fff" onclick="window.location.href='backup.php'"><a href="">Backup</a><i class="fa fa-arrow-circle-right"></i> <!-- <i class="fa fa-user fa-5x"></i>--><img class="h1" src="images/back.png"/></button>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <button class="bt" style="background-color:#fff" onclick="window.location.href='Settings-Change_password.php'"><a href="">Change Password</a><i class="fa fa-arrow-circle-right"></i> <!--<i class="fa fa-unlock-alt fa-5x"></i>--><img class="h1" src="images/lock.png"/></button>
+                    <button class="bt" style="background-color:#fff" onclick="window.location.href='Settings-Change_password.php'"><a href="">Change Password</a><i class="fa fa-arrow-circle-right"></i>  <!--<i class="fa fa-users fa-5x"></i>--><img class="h1" src="images/lock.png"/></button>
                 </div>
+                    
+              
             </div>
-        
-                        
-    <div class="row">
-
-
-    </div>      
-</div>
-
+             
+<!-- js files -->
 <script src="vendor/jquery/jquery.min.js"></script>
 <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 <script src="vendor/metisMenu/metisMenu.min.js"></script>
 <script src="dist/js/sb-admin-2.js"></script>
-    
-                        
-    
 
 </body>
 

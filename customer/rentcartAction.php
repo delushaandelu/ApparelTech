@@ -31,9 +31,9 @@ if(isset($_REQUEST['action']) && !empty($_REQUEST['action'])){
     }elseif($_REQUEST['action'] == 'removeCartItem' && !empty($_REQUEST['item_id'])){
         $deleteItem = $cart->remove($_REQUEST['item_id']);
         header("Location: rentviewCart.php");
-    }elseif($_REQUEST['action'] == 'placeOrder' && $cart->total_items() > 0 && !empty($_SESSION['sessCustomerID'])){
+    }elseif($_REQUEST['action'] == 'placeOrder' && $cart->total_items() > 0 && !empty($_SESSION['csid'])){
         // insert order details into database
-        $insertOrder = $db->query("INSERT INTO rentorders (customer_id, total_price, created, modified) VALUES ('".$_SESSION['sessCustomerID']."', '".$cart->total()."', '".date("Y-m-d H:i:s")."', '".date("Y-m-d H:i:s")."')");
+        $insertOrder = $db->query("INSERT INTO rentorders (customer_id, total_price, created, modified) VALUES ('".$_SESSION['csid']."', '".$cart->total()."', '".date("Y-m-d H:i:s")."', '".date("Y-m-d H:i:s")."')");
         
         if($insertOrder){
             $orderID = $db->insert_id;
