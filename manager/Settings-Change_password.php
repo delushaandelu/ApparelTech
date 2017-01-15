@@ -67,12 +67,11 @@
             </tr>
            <tr>
             <td colspan="2">
-                <button type="submit" id="button1" class="" name="pwd">Change</button>
+                <button type="submit" id="button3" class="" name="pwd">Change</button>
             </td>
             </tr>
             </table>
             <br><br>
-            <button type="submit" id="button3" class="" name="pwd">Change</button>
             </form>
         </div>
         

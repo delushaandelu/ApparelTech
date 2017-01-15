@@ -103,8 +103,8 @@ if(isset($_POST["pwd"])){
     $result = mysqli_query($db, $sql_1);
     $row = mysqli_fetch_assoc($result);
     $old_password = $row["password"];
-    if ($old_password == $oldpwd){
-        if($newpwd1==$newpwd2){
+    if ($old_password == $oldpwd){ //check old password correct
+        if($newpwd1==$newpwd2){ //check new password equal
             if (mysqli_query($db, $sql) === TRUE){
                  echo "<script>";
                 echo "sweetAlert('Done...', 'Passowrd changed!!', 'success');";
