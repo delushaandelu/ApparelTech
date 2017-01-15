@@ -20,6 +20,9 @@
     <?php
             include("../config/stockmgrmenu.php");
         ?>
+    <ul class="breadcrumb">
+    <h4>Vehicle Details</li></h4>
+</ul>
     <?php
    // require("database_connection.php");
 	$post_at = "";
@@ -36,7 +39,7 @@
 ?>
    
     <div class="demo-content">
-		<h2 class="title_with_link">Recent Articles</h2>
+		<h4 class="title_with_link">Recent Articles</h4>
      
   <form name="frmSearch" method="post" action="">
 	 <p class="search_input">
