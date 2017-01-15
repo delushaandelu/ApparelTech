@@ -108,7 +108,7 @@
             }
             else{
                 echo'<script language ="javascript">';
-                    echo "swal({  title: 'New Password Did Not Matching!', text: '', type: 'error', confirmButtonText: 'Done!'}, function(){window.location.href='Settings-Change_password.php'});";
+                    echo "swal({  title: 'password change error!', text: '', type: 'error', confirmButtonText: 'Done!'}, function(){window.location.href='Settings-Change_password.php'});";
                 echo'</script>';
                 
             }
