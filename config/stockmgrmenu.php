@@ -45,7 +45,7 @@
                             </div>
                             <div class="profile-data">
                                 <div class="profile-data-name">
-                                    Stock_Manager
+                                  Priyantha Enterprices
                                 </div>
                                 <div class="profile-data-title"><span style="color:#FF4500">ApperalTech</span></div>
                             </div>

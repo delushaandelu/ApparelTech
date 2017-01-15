@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
-    <head>    
+    <head>  
          <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.min.css"/>
         <title>Stock Manager</title>                   
         <link rel="stylesheet" type="text/css" id="theme" href="css/main.css"/>
@@ -12,12 +12,10 @@
                 background-color: #1caf9a;
                 color: aliceblue;
                 width: 100px;
-                font-size: 13px;
                 height: 30px;
                 border: none;
-                
+                font-size: 13px;
                
-            }
         </style>
     </head>
     <body>
@@ -30,19 +28,18 @@
 
 <div class = "ui buttons">
     <ul class="ui labeled icon button" >
-        <li id ="nav_tab_item_effect"><a href="Purchase Order_ManagePurchaseOrder.php"><button class="btnb"> <i class="left chevron icon"></i>Back</button></a></li>
+        <li id ="nav_tab_item_effect"><a href="rent.php"><button class="btnb"> <i class="left chevron icon"></i>Back</button></a></li>
    	</ul>
 </div>
-        <br>
-        <br>
-    
+    <br>
+    <br>
     <?php
     if(isset($_GET['vi'])){
             
             
      $id = $_GET['vi'];
      
-    $sql1="select item_id,itemName,quantity,stockQty from item,order_items where item.item_id=order_items.product_id and order_id=$id ";
+    $sql1="select item_id,itemName,quantity,stockQty from item,rent_order_items where item.item_id=rent_order_items.product_id and id=$id ";
     $result1=mysqli_query($dbcon,$sql1);
                                     
             
@@ -53,7 +50,7 @@
     
     ?>
 <form>
-<table class="table table-striped">
+<table class="table table-striped">  <!----------display quantity table ------>
     <tr class="success">
          
         <th>ProductID</th>
@@ -65,20 +62,20 @@
   
     while ($row = mysqli_fetch_assoc($result1) ){
 
-        echo "<tr class='active'>";
+        echo "<tr>";
             echo "<td>";
             echo $row['item_id'];
             echo "</td>";
             
-            echo "<td class='active' >";
+            echo "<td>";
             echo $row['itemName'];
             echo "</td>";
 
-            echo "<td class='active'>";
+            echo "<td>";
             echo $row['quantity'];
             echo "</td>";
 
-            echo "<td class='active'>";
+            echo "<td>";
             echo $row['stockQty'];
             echo "</td>";
         echo "</tr>";
