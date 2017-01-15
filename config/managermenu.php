@@ -113,13 +113,27 @@
                             <a href="#"><i class="fa fa-files-o fa-fw"></i> Reports<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="Stock_NewReport.php">New Report</a>
+                                    <a href="Stock_NewReport.php"><i class="fa fa-bar-chart"></i> Stock Reports</a>
                                 </li>
                                 <li>
-                                    <a href="../manager/View-Purchase_Order.php">Previous Report</a>
+                            <a href="#"><i class="fa fa-line-chart"></i> Performance Report<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="#"> Purchase order</a>
+                                </li>
+                                <li>
+                                    <a href="#"> Rent</a>
                                 </li>
                             </ul>
                         </li>
+                                
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        
+                        
                         <li>
                             <a href="#"><i class="fa fa-eye"></i> View<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">

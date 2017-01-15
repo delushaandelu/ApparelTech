@@ -79,14 +79,14 @@ include ("../config/managermenu.php");
 if(isset($_POST["add"])){
     $userid=$_POST['userid'];
     $usern=$_POST['username'];
-    $pwd=$_POST['password'];
-    //$pwd=md5($pwd);
+    $pwd1=$_POST['password'];
+    $pwd=sha1($pwd1);
     $cpwd=$_POST['cpassword'];
     $al=$_POST['acclevel'];
 
     $sql = "INSERT INTO user(user_id,username,password,accessLevel) VALUES ('$userid','$usern', '$pwd', '$al')";
     
-    if($pwd == $cpwd){
+    if($pwd1 == $cpwd){
         if (mysqli_query($dbcon, $sql) == TRUE){
             echo "<script>";
             echo "sweetAlert('Done...', 'Added successfully!', 'success');";

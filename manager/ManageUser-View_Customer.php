@@ -39,16 +39,16 @@
 
                 <table class='table table-hover' id='myTable'>
                 <tr bgcolor='#C0C0C0' width = '10px'>
-                    <th>Customer ID </th>
-                    <th>NIC </th>
-                    <th>Full Name </th>
-                    <th>Designation </th>
-                    <th>Company Name </th>
-                    <th>Address </th>
-                    <th>e-mail </th>
-                    <th>Mobile </th>
-                    <th>Telephone </th>
-                    <th>Action </th>
+                    <th><h6>Customer ID </h6></th>
+                    <th><h6>NIC </h6></th>
+                    <th><h6>Full Name </h6></th>
+                    <th><h6>Designation </h6></th>
+                    <th><h6>Company Name </h6></th>
+                    <th><h6>Address </h6></th>
+                    <th><h6>e-mail </h6></th>
+                    <th><h6>Mobile </h6></th>
+                    <th><h6>Telephone </h6></th>
+                    <th><h6>Action </h6></th>
                 </tr>
 
                     <?php
@@ -63,15 +63,15 @@
 
 
                     <tr>
-                        <td><?php echo $row['customer_id'] ?></td>
-                        <td><?php echo $row['nic'] ?></td>
-                        <td><?php echo $row['fullname'] ?></td>
-                        <td><?php echo $row['designation'] ?></td>
-                        <td><?php echo $row['companyname'] ?></td>
-                        <td><?php echo $row['address'] ?></td>
-                        <td><?php echo $row['email'] ?></td>
-                        <td><?php echo $row['mobile'] ?></td>
-                        <td><?php echo $row['tele'] ?></td>
+                        <td><h6 align='center'><?php echo $row['customer_id'] ?></h6></td>
+                        <td><h6 align='center'><?php echo $row['nic'] ?></h6></td>
+                        <td><h6 align='center'><?php echo $row['fullname'] ?></h6></td>
+                        <td><h6 align='center'><?php echo $row['designation'] ?></h6></td>
+                        <td><h6 align='center'><?php echo $row['companyname'] ?></h6></td>
+                        <td><h6 align='center'><?php echo $row['address'] ?></h6></td>
+                        <td><h6 align='center'><?php echo $row['email'] ?></h6></td>
+                        <td><h6 align='center'><?php echo $row['mobile'] ?></h6></td>
+                        <td><h6 align='center'><?php echo $row['tele'] ?></h6></td>
 
                         <td class="bt"><button type="button" id="button" class="btn btn-info" onclick="location.href='ManageUser-View_Customer.php?customer_id=<?php echo $row['customer_id'] ?>'"><i class="fa fa-trash-o"></i></button></td>
                     </tr>

@@ -49,6 +49,43 @@
 				return false;
 			}
 			return true;
+            
+            
+            function Validate(){
+            var x = document.form1.tele.value;
+            var y = document.form1.mobile.value;
+           if(isNaN(x)||x.indexOf(" ")!=-1)
+           {
+              alert("Enter numeric value")
+              return false; 
+           }
+           if (x.length>8)
+           {
+                alert("enter atleast 8 characters");
+                return false;
+           }
+           if (x.charAt(0)!="+")
+           {
+                alert("it should start with + ");
+                return false
+           }
+
+           if(isNaN(y)||y.indexOf(" ")!=-1)
+           {
+              alert("Enter numeric value")
+              return false; 
+           }
+           if (y.length>8)
+           {
+                alert("enter atleast 8 characters");
+                return false;
+           }
+           if (y.charAt(0)!="+")
+           {
+                alert("it should start with + ");
+                return false
+           }
+        }
 		}
 	</script>
 	<!-- css , sweetalert files -->
@@ -107,7 +144,7 @@
                          <tr>
                          	<td id="table_font" width="60%">Contact</td> 
                                       
-							<td><input type="tel" name="tele" class="form-control" required placeholder="Telephone"></td>
+							<td><input type="tel" name="tele" id="tele" class="form-control" required placeholder="Telephone"></td>
                         </tr>       
                         <tr>        
 							<td id="table_font" width="60%" align="left">mobile </td>             
@@ -123,7 +160,7 @@
                          </tr>
                         <tr>
                         <td>
-                            <button type="submit" id="button1"  name="insert" >Add</button> 
+                            <button type="submit" id="button1"  name="insert">Add</button> 
                         </td>
                         </tr>
 

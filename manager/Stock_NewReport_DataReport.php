@@ -8,8 +8,6 @@
         <link href="dist/css/sb-admin-2.css" rel="stylesheet">
         <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="designs/template.css" type="text/css" />
-        <script src="js/sweetalert-dev.js"></script>
-        <link rel="stylesheet" href="js/sweetalert.css">
      
     </head>
     <body>
@@ -50,7 +48,7 @@
                     
                     <div class="check"></div>
                   </li>
-                  <br><br><br><br>
+                  <br><br>
                   <li>
                     <input type="radio" id="s-option" name="selector" value="Sewing Machine Spare Parts">
                     <label for="s-option">Sewing Machine Spare Parts</label>
@@ -58,7 +56,7 @@
                     <div class="check"><div class="inside"></div></div>
                   </li>
                 <br><br>
-                <br><br><br>
+                
                   <li>
                     <input type="radio" id="t-option" name="selector" value="Tools">
                     <label for="t-option">Tools</label>

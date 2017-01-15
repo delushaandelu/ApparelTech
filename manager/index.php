@@ -10,7 +10,8 @@
 if(isset($_POST['login'])){
     require ('../config/database.php');
     $username = $_POST['username'];
-    $password = $_POST['password'];
+    $password1 = $_POST['password'];
+    $password = sha1($password1);
     
     $_SESSION['manager'] = $username;
    

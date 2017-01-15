@@ -55,6 +55,8 @@
         $result = $dbcon->query($sql);
         while ($row = $result->fetch_assoc()) {
         ?>
+            
+            
 
 
             <tr>
@@ -67,7 +69,7 @@
                         <td><h6 align='center'><?php echo $row['email'] ?></h6></td>
                         <td><h6 align='center'><?php echo $row['mobile'] ?></h6></td>
                         <td><h6 align='center'><?php echo $row['tele'] ?></h6></td>
-                        <td class="bt"><button type="button" id="button" class="btn btn-info" onclick="location.href='ManageUser-Manage_Customer.php?cst_id=<?php echo $row['customer_id'] ?>'"><i class="fa fa-check" aria-hidden="true"></i></button></td>
+                <td class="bt"><form method="get"><button type="button" name="accept" id="button" class="btn btn-info" onclick="location.href='ManageUser-Manage_Customer.php?cst_id=<?php echo $row['customer_id'] ?>'"><i class="fa fa-check" aria-hidden="true"></i></button></form></td>
                 
                         <td class="bt"><button type="button" id="button" class="btn btn-success" value="Reject" onclick="location.href='ManageUser-Manage_Customer.php?customer_id=<?php echo $row['customer_id'] ?>'"><i class="fa fa-user-times" aria-hidden="true"></i></button></td>
             </tr>
@@ -87,11 +89,30 @@
             echo'<script language ="javascript">';
             echo "swal({  title: 'Customer deleted successfully!', text: '', type: 'success', confirmButtonText: 'Done!'}, function(){window.location.href='ManageUser-Manage_Customer.php'});";
             echo'</script>';
+            
+            $to = $row['email'];
+            $subject ='Regarding request to join with Priyantha Enterprises';
+            $message ='accepted your request to join with us. Log in to view details. Thank you';
+            $headers = 'From: Appareltech@priyantha.com' . "\r\n" .
+                       'Reply-To: Appareltech@priyantha.com' . "\r\n" .
+                        'X-Mailer: PHP/' . phpversion();
+
+             mail($to, $subject, $message, $headers); 
+            
             }
         else{
             echo'<script language ="javascript">';
             echo "swal({  title: 'Error occurs while deleting!', text: '', type: 'error', confirmButtonText: 'Done!'}, function(){window.location.href='ManageUser-Manage_Customer.php'});";
             echo'</script>';
+            
+            $to = $row['email'];
+            $subject ='Regarding request to join with Priyantha Enterprises';
+            $message ='Your request rejected';
+            $headers = 'From: Appareltech@priyantha.com' . "\r\n" .
+                       'Reply-To: Appareltech@priyantha.com' . "\r\n" .
+                        'X-Mailer: PHP/' . phpversion();
+
+             mail($to, $subject, $message, $headers);
         }
     }
 ?>
@@ -115,6 +136,8 @@
             echo'<script language ="javascript">';
             echo "swal({  title: 'Details of customer saved successfully!', text: '', type: 'success', confirmButtonText: 'Done!'}, function(){window.location.href='ManageUser-Manage_Customer.php'});";
             echo'</script>';
+            
+            
         }
         else{
             echo'<script language ="javascript">';

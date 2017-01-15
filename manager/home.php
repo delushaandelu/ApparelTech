@@ -95,7 +95,7 @@
                     <button class="bt" style="background-color:#fff" onclick="window.location.href='ManageUser-View_Customer.php'"><a href="">View Customer</a><i class="fa fa-arrow-circle-right"></i>  <!--<i class="fa fa-users fa-5x"></i>--><img class="h1" src="images/cus2.png"/></button>
                 </div>
     </div>
-    <br><br><br>
+    <br><br><br><br><br><br>
 
                 <div id="dash1">
                     
