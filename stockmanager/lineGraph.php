@@ -129,9 +129,10 @@
 <script>
 $.ajax({
     url : "lineGraphData.php",
-    success: function(data){
-        //alert(data);
-                   // console.log(data);
+})
+.done(function(data){
+        
+                   //console.log(data);
                     var Name = [];
                     var qty = [];
                     var itemList = jQuery.parseJSON(data);
@@ -159,8 +160,7 @@ $.ajax({
             }]
           }
         });
-    }
-});
+    });
 
 </script>
 
