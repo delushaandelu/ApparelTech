@@ -59,12 +59,12 @@ session_start();
     ?>
 <?php
 
-                                include('dbConfig.php');
-                                $c_id = $_SESSION['csid'];
-                                $sql = "SELECT * FROM customer where customer_id=$c_id ";
-                                $result = $db->query($sql);
-                                while($row = $result->fetch_assoc()) {
-                                 ?>            
+    include('dbConfig.php');
+    $c_id = $_SESSION['csid'];
+    $sql = "SELECT * FROM customer where customer_id=$c_id ";
+    $result = $db->query($sql);
+    while($row = $result->fetch_assoc()) {
+?>            
 <form method="POST">
     <legend>Personal information:</legend>
     <table class="table table-hover">

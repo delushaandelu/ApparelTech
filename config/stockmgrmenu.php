@@ -88,7 +88,7 @@
                         <ul>
                             <li><a href="rent.php"><span class="fa fa-list-ul"></span> Manage Rent</a></li>                            
                             <li><a href="rentreport.php"><span class="fa fa-rss"></span> View Rent Report</a></li>
-                            <li><a href="updaterentitem.php"><span class="fa fa-pencil-square"></span> Update Rent Item</a></li>
+                            <li><a href="addrentitem.php"><span class="fa fa-tasks"></span> Add Rent Item</a></li>
                             <li><a href="rentitemview.php"><span class="fa fa-file-excel-o"></span> View Rent Item</a></li>
                         </ul>
                     </li>                    
