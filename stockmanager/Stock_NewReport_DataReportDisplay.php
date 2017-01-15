@@ -65,6 +65,7 @@
                        <h5><?php echo "Date ".date("d.m.Y");?></h5>
                    </div>
                    <div class='col-md-4'>
+                        <h3 align='center'>Priyantha Enterprises</h3><br>
                         <h3 align='center'>Stock Report</h3><br>
                         <h4 align='center'><?php echo $_POST['selector'];?></h4>
 
@@ -130,13 +131,16 @@
                             echo "</tr>";
                         }
                         echo "<tr>";
+                          echo " <td></td>";
+                        echo "</tr>";
+                        echo "<tr>";
 
-                        echo " <th><td colspan='2'><b><font size = '3'>Total Stock Value</font></b></td></th>";
+                        echo " <th><td colspan='4'><b><font size = '3'>Total Stock Value</font></b></td></th>";
                         
                         echo "<th><td colspan='2'><b> <font size = '3'>$sum </font></b></td></th>";
                         
-                        
-
+                         echo "</tr>";
+                         echo "<tr>";
                         echo " <th><td colspan='4'><b><font size = '3'>Total Estimated Profit</font></b></td></th>";
                         
                          echo "<th><td colspan='2'><b> <font size = '3'>$profit</font></b></td></th>";
