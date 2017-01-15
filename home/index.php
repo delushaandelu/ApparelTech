@@ -285,7 +285,6 @@
             <div class="row">
                 <div class="col-sm-12 text-center">
                     <h2 class="section-heading wow animated pulse animated"><span style="color:white">Contact Us</span></h2><hr />
-                    <h3 class="section-subheading text-muted wow animated pulse animated"><span style="color:white">Something about contact</span></h3>
                 </div>
             </div>
             <div class="row">
@@ -322,34 +321,13 @@
                                 </div>
                             </div>
                             
-						<div class="skill-btn">
-						<button type="submit"name="submit" id="submit">Click Me!</button>
-						
+                            <div class="col-sm-12 text-center">
+						        
+						      <button type="submit" name="submit" class="btn-success4"> Submit </button>
+						        
                             </div>
                         </div>
-                        <?php
-                            include('database_connect.php'); 
-                        if (isset($_POST['submit'])){
-                            $user_name = $_POST["user_name"];
-                            $user_email = $_POST["user_email"];
-                            $phone_number=$_POST["phone_number"];
-                            $message=$_POST["message"]; 
-
-                        $sql="insert into inquiry(name,email,phone,message) VALUES('$user_name','$user_email','$phone_number','$message')";
-                        $res = mysqli_query($dbconn,$sql);
-                                if ($res) {
-                                echo "<script>alert('We will give your account authentication soon! Thank you')</script>";
-                                } else {
-
-                                echo'<script>';
-                                echo"alert('Error in Submition')";
-                                echo'</script>';
-        
-                                }
-                        }
-
-                                mysqli_close($dbconn);
-                        ?>
+                        
                     </form>
                 </div>
             </div>
