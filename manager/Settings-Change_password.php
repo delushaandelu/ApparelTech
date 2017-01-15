@@ -72,7 +72,7 @@
             </tr>
             </table>
             <br><br>
-            <button type="submit" id="button3" class="" name="pwd">Change</button>
+            
             </form>
         </div>
         

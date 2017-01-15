@@ -18,49 +18,78 @@
 <div id="page-wrapper">
     <div class="row">
         <div class="col-lg-12">
-            <h2 class="page-header">Rented Details</h2>
+            <h4 class="page-header">Rented Details</h4>
         </div>
         
     </div>
     <div class="row">
+        
+       <?php
+   // require("database_connection.php");
+	$post_at = "";
+	$post_at_to_date = "";
+	
+	//$queryCondition = "";
+	if(!empty($_POST["submit"])) {			
+		$post_at = $_POST["post_at"];
+		$post_at_todate =$_POST["post_at_to_date"];
+		/*$sql = "SELECT total_price from rentorders WHERE created >= $post_at  AND created < $post_at_todate ";*/
+        $sql="SELECT * from rentorders WHERE created >= '$post_at' AND created < '$post_at_todate'";
+	   $result = mysqli_query($dbcon,$sql);
+    }
+?>
+   
+    <div class="demo-content">
+		<h2 class="title_with_link">Recent Articles</h2>
+     
+  <form name="frmSearch" method="post" action="">
+	 <p class="search_input">
+		<input type="text" placeholder="From Date" id="post_at" name="post_at"  value="<?php echo $post_at; ?>" class="input-control" />
+	    <input type="text" placeholder="To Date" id="post_at_to_date" name="post_at_to_date" style="margin-left:10px"  value="<?php echo $post_at_to_date; ?>" class="input-control"  />			 
+		<input type="submit" name="submit" value="Search" >
+	</p>
+      <?php if(!empty($result))	 { ?>
+<table class="table-content">
+          <thead>
+        <tr>
+                      
+          <th width="30%"><span>Post Title</span></th>
+          <th width="50%"><span>Description</span></th>          
+          <th width="20%"><span>Post Date</span></th>	  
+        </tr>
+      </thead>
+    <tbody>
+	<?php
+		while($row = mysqli_fetch_assoc($result)) {
+	?>
+        <tr>
+			<td><?php echo $row["customer_id"]; ?></td>
+			<td><?php echo $row["total_price"]; ?></td>
+			<td><?php echo $row["id"]; ?></td>
 
-        <?php
-
-        //include('database_connection.php');
-
-        $sql = "SELECT rent_id, item_id, startDate, endDate, rentedQty, rentedOrderAmount FROM renteditem";
-        $result = $dbcon->query($sql);
-
-        if ($result->num_rows > 0) {
-            echo "<table class='table' style='border: solid 2px black;'>";
-            echo"<tr>
-                <th style='border: solid 2px black;'>Rent ID </th>
-                <th style='border: solid 2px black;'>Item ID </th>
-                <th style='border: solid 2px black;'>Start Date </th>
-                <th style='border: solid 2px black;'>End Date </th>
-                <th style='border: solid 2px black;'>Quantity </th>
-                <th style='border: solid 2px black;'>Order Amount </th>
-            </tr>";
-
-            while($row = $result->fetch_assoc()) {
-                echo "<tr>
-                    <td style='border: solid 2px black;'>" . $row["rent_id"]. "</td>
-                    <td style='border: solid 2px black;'>" . $row["item_id"]. "</td>
-                    <td style='border: solid 2px black;'>" . $row["startDate"]. "</td>
-                    <td style='border: solid 2px black;'>" . $row["endDate"]. "</td>
-                    <td style='border: solid 2px black;'>" . $row["rentedQty"]. "</td>
-                    <td style='border: solid 2px black;'>" . $row["rentedOrderAmount"]. "</td>
-                </tr>";
-            }
-            echo "</table>";
-        } else {
-            echo "0 results";
-        }
-
-        $dbcon->close();
-
-        ?>
-
+		</tr>
+   <?php
+		}
+   ?>
+   <tbody>
+  </table>
+<?php } ?>
+  </form>
+  </div>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script>
+$.datepicker.setDefaults({
+showOn: "button",
+buttonImage: "datepicker.png",
+buttonText: "Date Picker",
+buttonImageOnly: true,
+dateFormat: 'yy-mm-dd'  
+});
+$(function() {
+$("#post_at").datepicker();
+$("#post_at_to_date").datepicker();
+});
+</script>
 
     </div>      
 </div>

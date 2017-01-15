@@ -89,7 +89,7 @@ if(isset($_POST["add"])){
     if($pwd1 == $cpwd){
         if (mysqli_query($dbcon, $sql) == TRUE){
             echo "<script>";
-            echo "sweetAlert('Done...', 'Added successfully!', 'success');";
+            echo "swal({  title: 'successfully added', text: '', type: 'success', confirmButtonText: 'Done!'}, function(){window.location.href='ManageUser-Manage_Stock_Manager.php'});";
             echo "</script>";
             header("location:ManageUser-Manage_Stock_Manager.php");
         }
