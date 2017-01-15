@@ -44,23 +44,23 @@
                     <h2>Defected Items!</li></h2>
                 </ul>
      <div id="defect">
-        <form method="post">
+        <form method="post" >
             <table class="table table-hover">
                 <tr>
                     <td>customer ID</td>
-                    <td><input type="text" class="form-control" name="customer_id"></td>
+                    <td><input type="number" class="form-control" name="customer_id"></td>
                 </tr>
                 <tr>
                     <td>Item ID</td>
-                    <td><input type="text" class="form-control" name="item_id"></td>
+                    <td><input type="number" class="form-control" name="item_id"></td>
                 </tr>
                 <tr>
                     <td>Product ID</td>
-                    <td><input type="text" class="form-control" name="po_id"></td>
+                    <td><input type="number" class="form-control" name="po_id"></td>
                 </tr>
                 <tr>
                     <td>Return Item Quantity</td>
-                    <td><input type="text" class="form-control" name="Qty"></td>
+                    <td><input type="number" class="form-control" name="Qty"></td>
                 </tr>
                 <tr>
                     <td>Return Date</td>
