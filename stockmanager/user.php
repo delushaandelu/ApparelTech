@@ -3,9 +3,15 @@ class User{
 public function changepswd(){
     require("database_connection.php");
      
-    $OldPassword=$_POST["oldpassword"];
-    $NewPassword=$_POST["newpassword"];
-    $ConfirmPassword=$_POST["confirmpassword"];
+    $OldPassword1=$_POST["oldpassword"];
+    $OldPassword = sha1($OldPassword1)
+    echo  $OldPassword;
+    $NewPassword1=$_POST["newpassword"];
+    $NewPassword = sha1($NewPassword1);
+    echo  $NewPassword;
+    $ConfirmPassword1=$_POST["confirmpassword"];
+    $ConfirmPassword = sha1($ConfirmPassword1);
+    echo $ConfirmPassword;
     
     $uid = $_SESSION['uid'];
     
