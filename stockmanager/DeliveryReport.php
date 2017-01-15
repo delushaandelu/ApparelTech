@@ -13,8 +13,8 @@
                 <ul class="breadcrumb">
                     <h2>Delivery Reports!</li></h2>
                 </ul>
-        <div id="content">
-    <form action="GET">
+        <div id="delivery">
+        <form >
         <table  class="table datatable">
             
             <tr class="success">

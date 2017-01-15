@@ -6,14 +6,14 @@
                      
                     //echo $categoryname;
                     //int i= 1;
-                    $query1 = "SELECT count(created) FROM purchasereport ";
+                    $query1 = "SELECT count(DISTINCT created) FROM purchasereport ";
                     $query2 = "SELECT DISTINCT created FROM purchasereport";
                     $data = array(array());
                     // echo "$categoryname";
                     $result1 = mysqli_query($dbcon,$query1);
                     $val = mysqli_fetch_array($result1);
 
-                    //print $val[0];
+                   // print $val[0];
                     $dates = array();
 
                     
@@ -26,7 +26,9 @@
                    //echo $dates[4];
                     for ($i =0;$i<$val[0]-1;$i++){
                         $j = 0;
+                        
                         $data[$i][$j] = $dates[$i];
+                        //echo($data[$i][$j]);
                         $query3 = "SELECT count(created) FROM purchasereport WHERE created = '$dates[$i]'";
                        //echo $query3;
                         $result3 = mysqli_query($dbcon,$query3);
@@ -41,7 +43,7 @@
                     echo $data[1][0];
                     echo $data[1][1];*/
 
-					//$result->close();*/
+					//$result->close();
 
 					echo json_encode($data);
 				

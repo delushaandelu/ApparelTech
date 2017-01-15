@@ -13,13 +13,35 @@
         <?php
             include("../config/stockmgrmenu.php");
         ?>
+         <div class="2">
+                <input type="text" id="myInput" onkeyup="myFunction()" class="form-control" placeholder="&#x26B2   YYYY-MM-DD" style="width: 320px; height: 50px">
 
+            </div>
+        <script>
+            function myFunction() {
+                var input, filter, table, tr, td, i;
+                input = document.getElementById("myInput");
+                filter = input.value.toUpperCase();
+                table = document.getElementById("myTable");
+                tr = table.getElementsByTagName("tr");
+                for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[4];
+                    if (td) {
+                        if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].style.display = "";
+                        } else {
+                            tr[i].style.display = "none";
+                        }
+                    }
+                }
+            }
+        </script>
                 <ul class="breadcrumb">
                     <h4>Delivery Details</li></h4>
                 </ul>
 <div id="content">
     <form action="GET">
-        <table  class="table datatable">
+        <table  class="table datatable" id='myTable'>
             
             <tr class="success">
                 <th><center>Request Id</center></th>

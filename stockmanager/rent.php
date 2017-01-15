@@ -58,7 +58,7 @@
                                 
                                 <td class="bt"><center><button type="button" class="btn" onclick="location.href='rent.php?ID=<?php echo $row['id'] ?> & customer_id=<?php echo $row['customer_id'] ?>'" ><i class="fa fa-check" aria-hidden="true"></i>Accept</button></center></td>
                                 
-                                <td class="bt"><center><button type="button" class="btn" onclick="location.href='PurchaseOrder_viewPurchaseOrder.php?vi=<?php echo $row['id'] ?>'" ><i class="fa fa-eye" aria-hidden="true"></i>view</center></button></td>
+                                <td class="bt"><center><button type="button" class="btn" onclick="location.href='view_rent.php?vi=<?php echo $row['id'] ?>'" ><i class="fa fa-eye" aria-hidden="true"></i>view</center></button></td>
                             </tr>
                 
                         <?php } ?>
@@ -101,18 +101,18 @@
                             
                           
                             
-                            $sqldelete="DELETE FROM orders WHERE id=$id";
+                            $sqldelete="DELETE FROM rentorders WHERE id=$id";
                             $result=mysqli_query($dbcon,$sqldelete);
-                            $sqldelete1="DELETE FROM order_items WHERE order_id=$id";
-                            $result1=mysqli_query($dbcon,$sqldelete1);
+                           
+                           
            
-                                if($result && $result1){
+                                if($result){
                                     echo'<script language ="javascript">';
-                                        echo "swal({  title: 'Purchase order Deleted!', text: '', type: 'success', confirmButtonText: 'Done!'}, function(){window.location.href='Purchase Order_ManagePurchaseOrder.php'});";
+                                        echo "swal({  title: 'Rent order Deleted!', text: '', type: 'success', confirmButtonText: 'Done!'}, function(){window.location.href='rent.php'});";
                                     echo'</script>';
                                 }else{
                                     echo'<script language ="javascript">';
-                                        echo "swal({  title: 'Error!', text: '', type: 'error', confirmButtonText: 'Done!'}, function(){window.location.href='Purchase Order_ManagePurchaseOrder.php'});";
+                                        echo "swal({  title: 'Error!', text: '', type: 'error', confirmButtonText: 'Done!'}, function(){window.location.href='rent.php'});";
                                     echo'</script>';
                                 }
             
