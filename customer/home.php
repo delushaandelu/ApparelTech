@@ -83,10 +83,10 @@
                     <!-- start accordion -->
                     <div class="accordion" id="accordion" role="tablist" aria-multiselectable="true">
                       <div class="panel">
-                        <a class="panel-heading collapsed" role="tab" id="headingTwo" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                          <h4 class="panel-title">Purchase Reports</h4>
+                        <a class="panel-heading collapsed" role="tab" id="headingOne" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                          <h4 class="panel-title">Rent Reports</h4>
                         </a>
-                        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                        <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
                           <div class="panel-body">
                             <table class="table table-bordered">
                               <thead>
@@ -156,7 +156,31 @@
                         </a>
                         <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
                           <div class="panel-body">
-                            Delivery
+                            <table class="table table-hover">
+                                <tr>
+                                    <th><center>P/O_ID</center></th>
+                                    <th><center>DATE</center></th>
+                                    <th><center>AMOUNT</center></th>
+                                    <th><center>STATUS</center></th>
+                                </tr>
+                                
+                        <?php
+                            
+                                $sql= "select * from deliveryrequest ";
+                                $result = $db->query($sql);
+                                
+                                while($row = $result->fetch_assoc()) {
+                                        ?>
+                                        <tr>
+                                            <td><center><?php echo $row['poid'] ?></center></td>
+                                            <td><center><?php echo $row['date'] ?></center></td>
+                                            <td><center><?php echo $row['amount'] ?></center></td>
+                                            <td><center><?php echo $row['status'] ?></center></td>            
+                                        </tr>
+                                        <?php } ?>
+
+                                
+                            </table>
                           </div>
                         </div>
                       </div>

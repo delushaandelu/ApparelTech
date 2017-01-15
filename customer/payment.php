@@ -9,7 +9,18 @@ $paypal_id = 'info@delushaan.com'; //Business Email
 <html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Products - Delushaan</title>
+<title>Products | ApparelTech</title>
+<script src="js/sweetalert-dev.js"></script>
+    <link rel="stylesheet" href="js/sweetalert.css">
+    <link href="vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="build/css/custom.min.css" rel="stylesheet">
+<style>
+    #pay{
+        margin-left:45%;
+        margin-top:20%;
+    }
+</style>
 </head>
 <body>
 
@@ -48,10 +59,12 @@ $paypal_id = 'info@delushaan.com'; //Business Email
 		<input type='hidden' name='return' value='http://localhost/paypal_integration_php/success.php'>
         
         <!-- Display the payment button. -->
-        <div 
-        <input type="image" name="submit" border="0"
+        <div id="pay">
+        <button type="submit" name="submit" border="0" class="btn btn-primary btn-lg active"
         src="https://www.paypalobjects.com/en_US/i/btn/btn_buynow_LG.gif" alt="PayPal - The safer, easier way to pay online">
-        <img alt="" border="0" width="1" height="1" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" >
+        <i class="fa fa-cc-paypal fa-5x" aria-hidden="true"></i>
+        </button>
+        </div>
     
     </form>
 </body>
