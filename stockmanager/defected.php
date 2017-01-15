@@ -2,7 +2,10 @@
 <html lang="en">
     <head>        
         <title>Stock Manager</title>                   
-        <link rel="stylesheet" type="text/css" id="theme" href="css/main.css"/>                        
+        <link rel="stylesheet" type="text/css" id="theme" href="css/main.css"/>
+        <script src="js/sweetalert-dev.js"></script>
+        <link rel="stylesheet" href="js/sweetalert.css">
+        
     </head>
     <body>
         
@@ -11,33 +14,34 @@
             include("../config/stockmgrmenu.php");
         ?>
     <?php  
-  if (isset($_POST['btn'])){
-        $customer_id = $_POST['customer_id'];
-        $item_id = $_POST['item_id'];
-        $po_id = $_POST['po_id'];
-        $Qty = $_POST['Qty'];
-        $date = $_POST['date'];
-        $description = $_POST['description'];
+        if (isset($_POST['btn'])){
+            $customer_id = $_POST['customer_id'];
+            $item_id = $_POST['item_id'];
+            $po_id = $_POST['po_id'];
+            $Qty = $_POST['Qty'];
+            $date = $_POST['date'];
+            $description = $_POST['description'];
          
     
-    $sql="INSERT INTO defectitem (customer_id,item_id,po_id,returnItemQty,returnDate,description) VALUES ('$customer_id','$item_id','$po_id','$Qty','$date','$description')";
-    
+            $sql="INSERT INTO defectitem (customer_id,item_id,po_id,returnItemQty,returnDate,description) VALUES ('$customer_id','$item_id','$po_id','$Qty','$date','$description')";
+            $result=$dbcon->query($sql);
 
-if ($dbcon->query($sql) === TRUE) {
-            echo'<script language ="javascript">';
-                    echo "swal({  title: 'Successfully added! Thank you', text: '', type: 'success', confirmButtonText: 'Done!'}, function(){window.location.href='defected.php'});";
+            if($result){
+            
+                echo'<script language ="javascript">';
+                echo "swal({  title: 'Successfully added! Thank you', text: '', type: 'success', confirmButtonText: 'Done!'}, function(){window.location.href='defected.php'});";
                 echo'</script>';
-        } else {
-             echo'<script language ="javascript">';
-                    echo "swal({  title: 'Error!', text: '', type: 'error', confirmButtonText: 'Done!'}, function(){window.location.href='defected.php'});";
+            } else {
+                echo'<script language ="javascript">';
+                echo "swal({  title: 'Error!', text: 'Error', type: 'error', confirmButtonText: 'Done!'}, function(){window.location.href='defected.php'});";
                 echo'</script>';
         }
 
-    mysqli_close($dbcon);
-    }
+        mysqli_close($dbcon);
+        }
     ?>
                 <ul class="breadcrumb">
-                    <h2>Page Heading here!</li></h2>
+                    <h2>Defected Items!</li></h2>
                 </ul>
      <div id="defect">
         <form method="post">
@@ -70,7 +74,7 @@ if ($dbcon->query($sql) === TRUE) {
                 </tr> 
                 
                 <tr>
-                    <td colspan="2"><center><input type="submit" name="btn"></center></td>
+                    <td colspan="3"><center><input type="submit" class="btn btn-success" name="btn" value="Submit"></center></td>
                 </tr>
             </table>
         </form>

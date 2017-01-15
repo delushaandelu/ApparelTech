@@ -28,10 +28,17 @@ require ('../config/database.php');
 
 <!-- page content -->
 <div class="right_col" role="main">
-    <h1 class="hfont">Your Purchase Report!</h1>
+    <h1 class="hfont">Your Rent Order Status !</h1>
     <div class="container">
-    <h1>Order Status</h1>
-    <p>Your order has submitted successfully. Order ID is #<?php echo $_GET['id']; ?></p>
+    </br></br></br></br></br>
+    <div class="panel panel-primary">
+      <div class="panel-heading" align="center">Success!</div>
+      <div class="panel-body">
+      <h3 align="center" >Your Rent order has submitted successfully. Order ID is #<?php echo $_GET['id']; ?></h3>
+      </div>
+      </div>
+      
+    </div>
 </div>
 </div>
 </body>
