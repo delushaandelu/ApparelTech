@@ -155,12 +155,8 @@ function validateform(){
     var uname= document.InputForm.uname;
     var pword= document.InputForm.pword;
    
-   
-    
     // code to get File Extension..
-   
-    
-    
+
     if (fullname.value == "")
             {
 		    	window.alert("Please enter your First Name.");

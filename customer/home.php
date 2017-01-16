@@ -84,7 +84,7 @@
                     <div class="accordion" id="accordion" role="tablist" aria-multiselectable="true">
                       <div class="panel">
                         <a class="panel-heading collapsed" role="tab" id="headingOne" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                          <h4 class="panel-title">Rent Reports</h4>
+                          <h4 class="panel-title">Purchase Reports</h4>
                         </a>
                         <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
                           <div class="panel-body">

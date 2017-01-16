@@ -148,7 +148,7 @@
                                 while ($row = mysqli_fetch_assoc($res)) {
                                     $product_id = $row['product_id'];
                                     $sql = "UPDATE item SET stockQty = stockQty - (SELECT quantity FROM order_items WHERE order_id = '$id' AND product_id = '$product_id') WHERE item_id = '$product_id'";
-                                    echo($sql);
+                                   
                                     $result = mysqli_query($dbcon,$sql) or die(mysqli_error($dbcon));
 
                                 }
