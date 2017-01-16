@@ -74,7 +74,7 @@ $cart = new Cart;
                 $row = mysqli_fetch_array($result);
                 $maxQty = $row[0];
                 //echo $maxQty;
-                if($item['stockQty'] >= $maxQty ){?>
+                if($item['stockQty'] >= $maxQty){?>
                     <script>swal("Alert!", "Maximum quantity exceeded!", "error")</script><?php
                     
                 }else{?>

@@ -60,7 +60,7 @@
 
 
                     var chartdata = {
-                         labels : Name,
+                        labels : Name,
                         datasets : [
                             {
                                 label : 'Quantity',
