@@ -37,6 +37,7 @@ session_start();
 <!-- page content -->
 <div class="right_col" role="main">
 <div id ="invoice">
+<center><h3><p>PRIYANTHA ENTERPRISES</p></h3></center>
         <h4> Purchase Order</h4>
 <style>
     #amount
@@ -161,9 +162,8 @@ session_start();
     </div>
     <div id="action" class="av">
         
-            <p><b><h5>NOTE :- </h5></b>option lets you add additional contextual notes to the invoices, for better clarity. Invoice Notes specific to each customer or subscription can be ... </p>
         
-        <a href="javascript:void(0);" id="print_button2" style="width: 130px; padding: 5px 8px 5px 8px;text-align: center;float: right;background-color: #1caf9a;color: #fff;text-decoration: none; margin: 10px;" onclick="printPageArea('invoice')">Print Invoice</a>
+        <a href="javascript:void(0);" id="print_button2" style="width: 130px; padding: 5px 8px 5px 8px;text-align: center;float: right;background-color: #1caf9a;color: #fff;text-decoration: none; margin: 10px;" onclick="printPageArea('invoice')">Print P/O</a>
         <button type="button" class="btn btn-success">Reply via Email</button>
     </div>
 </div>

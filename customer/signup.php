@@ -73,7 +73,7 @@
 <div class="container">
         <div class="panel panel-default">
 
-<div class="" style="background-color:#1caf9a"><h1 style="margin:-1px auto 3px auto;" class="text-center"><span style="color:white; font-size:30px">Priyntha Enterprices - Lets talk business</span></h1></div>
+<div class="" style="background-color:#1caf9a"><h1 style="margin:-1px auto 3px auto;" class="text-center"><span style="color:white; font-size:30px">PRIYANTHA ENTERPRISES</span></h1></div>
 <div class="row wrap"><div class="col-lg-12">
 <div class="panel-body">
     <div id='progress'><div id='progress-complete'></div></div>
