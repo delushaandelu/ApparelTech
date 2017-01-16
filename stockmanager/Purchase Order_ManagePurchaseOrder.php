@@ -77,12 +77,13 @@
     include("../config/stockmgrmenu.php");
  ?>
 
-<div id="content">
+<!--<div id="content">-->
        <!--<div class="panel">-->
-            <div class="panel-heading">
-                <div class="panel-body">
+           <div class="panel-heading">
+               <div class="panel-body">
                 <br>
                 <br>
+                
                 <table class="table datatable" id="potb">
                     <tr class='success'>
                         <th><center>Id</center></th>
@@ -278,13 +279,12 @@
     
                     ?> 
          
-            </div>
+        </div>
             
- </div>
-                
+</div> 
    <!--</div>-->
             
-</div>
+<!--</div>-->
         
         
     
