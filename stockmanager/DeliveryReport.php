@@ -11,9 +11,11 @@
         ?>
 
                 <ul class="breadcrumb">
-                    <h2>Delivery Reports!</li></h2>
+                    <h4>Delivery Reports!</li></h4>
                 </ul>
         <!-- page content -->
+<div class="panel-heading">
+    <div class="panel-body">
         <div id="delivery">
         <table  class="table datatable">
             
@@ -52,6 +54,9 @@
                 
             <?php } ?>
         </table>
+        </div>
+    </div>
+</div>
 
         <script type="text/javascript" src="js/plugins/jquery/jquery.min.js"></script>
         <script type="text/javascript" src="js/plugins/jquery/jquery-ui.min.js"></script>

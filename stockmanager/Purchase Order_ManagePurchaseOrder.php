@@ -77,6 +77,9 @@
     include("../config/stockmgrmenu.php");
  ?>
 
+<ul class="breadcrumb">
+    <h4>Manage purchase orders</li></h4>
+</ul>
 <!--<div id="content">-->
        <!--<div class="panel">-->
            <div class="panel-heading">
