@@ -8,25 +8,9 @@
     <link href="dist/css/sb-admin-2.css" rel="stylesheet">
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="designs/template.css" type="text/css" />
-    
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"> -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css"  href="Stock_NewReport_Design.css"/>
     <script type="text/javascript" src = "js/Chart.min.js"></script>
-    
-    <script>
-    function printPageArea(areaID){
-	var printContent = document.getElementById(areaID);
-	var WinPrint = window.open('', '', 'width=900,height=650');
-	WinPrint.document.write(printContent.innerHTML);
-	WinPrint.document.close();
-	WinPrint.focus();
-	WinPrint.print();
-	WinPrint.close();
-    }
-    </script>
-    
     
 </head>
 
@@ -50,17 +34,6 @@
     <canvas id="myChart" width="250" height="120"></canvas>
 
 </div>
-<style>
-    /*#myChart{
-        box-shadow:3px 3px 5px 200px #ccc;
-    }*/
-</style>
-
-       
-
-
-
-
 
 <script>
 $.ajax({
