@@ -65,7 +65,15 @@ $cart = new Cart;
             <td><?php echo $item["itemName"]; ?></td>
             <td><?php echo 'Rs.'.$item["sellingPrice"]; ?></td>
             <td><input type="number" class="form-control text-center" value="<?php echo $item["qty"]; ?>" onchange="updateCartItem(this, '<?php echo $item["rowid"]; ?>')"></td>
-            
+            <?php
+            echo $item['stockQty'];
+            echo $item['qty'];
+            if($item['qty'] > $item['stockQty']){
+                     echo'<script language ="javascript">';
+                    echo "swal({  title: 'Stock quantity exceeded!', text: '', type: 'error', confirmButtonText: 'Done!'});";
+                echo'</script>';
+            }
+            ?>
             <td><?php echo $item["stockQty"]; ?></td>
 
             <td><?php echo 'RS. '.$item["subtotal"]; ?></td>
