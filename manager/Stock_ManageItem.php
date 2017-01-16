@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="designs/template.css" type="text/css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
     <link rel="stylesheet" type="text/css"  href="manage_stock_design1.css"/>
-    
+    <script src="js/sweetalert-dev.js"></script>
+    <link rel="stylesheet" href="js/sweetalert.css">
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <style type="text/css">
@@ -204,8 +205,8 @@
                                 echo "<th width='10px' style='text-align:center'>Item Name</th>";
                                 echo "<th width='150px' style='text-align:center'>Category</th>";
                                 echo "<th width='10px' style='text-align:center'>Brand</th>";
-                                echo "<th width='10px' style='text-align:center'>Buying Price</th>";
-                                echo "<th width='70px' style='text-align:center'>Selling Price</th>";
+                                echo "<th width='10px' style='text-align:center'>Buying Price(Rs)</th>";
+                                echo "<th width='70px' style='text-align:center'>Selling Price(Rs)</th>";
                                 echo "<th width='60px' style='text-align:center'>Quantity</th>";
                                 
                             echo "</tr>";
@@ -244,7 +245,9 @@
                         // Close result set
                         mysqli_free_result($result);
                     } else{
-                        echo "No records matching your query were found.";
+                        echo'<script language ="javascript">';
+                        echo "swal({  title: 'No records found!', text: '', type: 'error', confirmButtonText: 'OK!'}, function(){window.location.href='ManageUser-Manage_Customer.php'});";
+                        echo'</script>';
                 }
             } else{
                 echo "ERROR: Could not able to execute $sql. " . mysqli_error($dbcon);

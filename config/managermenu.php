@@ -32,7 +32,7 @@
             <ul class="nav navbar-top-links navbar-right">
                 <li class="dropdown head-dpdn">
                    
-                       <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user-plus" style="color: white"></i><span class="badge">
+                       <a href="../manager/ManageUser-Manage_Customer.php"><i class="fa fa-user-plus" style="color: white"></i><span class="badge">
                            <?php
                         require("database_connection.php"); 
 
@@ -117,15 +117,8 @@
                                     <a href="Stock_NewReport.php"><i class="fa fa-bar-chart"></i> Stock Reports</a>
                                 </li>
                                 <li>
-                            <a href="#"><i class="fa fa-line-chart"></i> Performance Report<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                <li>
-                                    <a href="lineGraph.php"> Purchase order</a>
-                                </li>
-                                <li>
-                                    <a href="#"> Rent</a>
-                                </li>
-                            </ul>
+                            <a href="lineGraph.php"><i class="fa fa-line-chart"></i> Purchase report<span class="fa arrow"></span></a>
+                        
                         </li>
                                 
                             </ul>

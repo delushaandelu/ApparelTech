@@ -55,7 +55,7 @@
                                 echo "<th>Category</th>";echo"<td width=2%></td>";
                                 echo "<th>Brand</th>";echo"<td width=2%></td>";
                                 echo "<th>Quantity</th>";echo"<td width=2%></td>";
-                                echo "<th>Update</th>";echo"<td width=2%></td>";
+                            
                                 
                             echo "</tr>";
                             

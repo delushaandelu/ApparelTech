@@ -104,7 +104,7 @@
                     
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <button class="bt" style="background-color:#fff" onclick="window.location.href='Quotation-Manage_Quotation.php'"><a href="">Manage Quotation</a><i class="fa fa-arrow-circle-right"></i>  <!--<i class="fa fa-stack-overflow fa-5x"></i>--><img class="h1" src="images/q.png"/></button>
+                    <button class="bt" style="background-color:#fff" onclick="window.location.href='Stock_NewReport.php'"><a href="">Stock Reports</a><i class="fa fa-arrow-circle-right"></i>  <!--<i class="fa fa-stack-overflow fa-5x"></i>--><img class="h1" src="images/q.png"/></button>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <button class="bt" style="background-color:#fff" onclick="window.location.href='backup.php'"><a href="">Backup</a><i class="fa fa-arrow-circle-right"></i> <!-- <i class="fa fa-user fa-5x"></i>--><img class="h1" src="images/back.png"/></button>

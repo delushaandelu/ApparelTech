@@ -43,7 +43,7 @@
                 
                success : function(data){
                      
-                    alert(data);
+                    //alert(data);
                     console.log(data);
                     var Name = [];
                     var qty = [];
@@ -112,18 +112,18 @@
     </div>
     <div class="row">
 <div id="content">
-        <div id="top">
+        <div id="top3">
             
 
         <?php
             $value = $_POST['type'];?>
-
+            <h4> <?php echo $value; ?> </h4>
 
             <script>
                 var value = "<?php echo $value; ?>";
                 display_graph(value);
             </script>
-            <h3> <?php echo $value; ?> </h3>
+            
     <div id="chart-container">
             <canvas id = "mycanvas"></canvas>
         </div>
