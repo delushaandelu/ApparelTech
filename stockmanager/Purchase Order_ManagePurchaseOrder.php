@@ -142,7 +142,6 @@
                             
                             if(!empty($_GET['ID']) && !empty($_GET['customer_id'])){
                                 $query = "SELECT * FROM order_items WHERE order_id = '$id' ";
-                                echo($query);
                                 $res = mysqli_query($dbcon,$query);
 
                                 while ($row = mysqli_fetch_assoc($res)) {

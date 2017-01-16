@@ -5,7 +5,7 @@
 	<meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
 	
 	<title>Editable Invoice</title>
-<div id="page-wrap">	
+ <div id="page-wrap">
 	<link rel='stylesheet' type='text/css' href='css/invoice_css/style.css' />
 	<link rel='stylesheet' type='text/css' href='css/invoice_css/print.css' media="print" />
 	<script type='text/javascript' src='js/jquery-1.3.2.min.js'></script>
@@ -41,7 +41,7 @@
 	
     
 <!---------------------- INVOICE ----------------------------------->
-    
+   
 		<textarea id="header">INVOICE</textarea>
         
 		

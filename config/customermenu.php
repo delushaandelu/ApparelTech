@@ -73,7 +73,6 @@
                       <li><a href="e_commerce.html">Calender</a></li>
                     </ul>
                   </li>   
-                  <li><a href="javascript:void(0)"><i class="fa fa-laptop"></i> Online Payment <span class="label label-success pull-right">Coming Soon</span></a></li>
                 </ul>
               </div>
 
