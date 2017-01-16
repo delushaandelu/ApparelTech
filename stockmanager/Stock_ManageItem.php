@@ -32,8 +32,7 @@
                     success : function(data){
                         $('#itemname').empty();
                         $('#itemname').append("<option value = '0'> Select Item Name </option>");
-                        $('#itemname').append("<option> All </option>");
-                        //$('#itemname').html(html);
+                       
                         data.forEach(function(data){
 
                             $('#itemname').append('<option>'+data+'</option>');
@@ -68,13 +67,12 @@
                    
                     dataType:'json',
                     success : function(data){
-                         $('#brandname').empty();
+                        $('#brandname').empty();
                         $('#brandname').append("<option value = '0'> Select Brand Name </option>");
                         $('#brandname').append("<option> All </option>");
                         //$('#itemname').html(html);
                         data.forEach(function(data){
-                            var data = jQuery.parseJSON(data);
-                            alert(data);
+                           
                             $('#brandname').append('<option>'+data+'</option>');
                             
                         });
