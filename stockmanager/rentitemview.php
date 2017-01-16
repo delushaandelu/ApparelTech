@@ -8,6 +8,9 @@
                 color: white;
                 background-color: #1caf9a;
             }
+            .panel-body{
+                background-color: white;
+            }
         </style>
     </head>
     <body>
@@ -15,6 +18,10 @@
         <?php
             include("../config/stockmgrmenu.php");
         ?>
+        <div id="content">
+       <!--<div class="panel">-->
+            <div class="panel-heading">
+                <div class="panel-body">
 
                 <ul class="breadcrumb">
                     <h4>Stock for Rent</li></h4>
@@ -67,6 +74,9 @@
             ?>
             
         </div>
+                        </div>
+                        </div>
+                        </div>
 
         <script type="text/javascript" src="js/plugins/jquery/jquery.min.js"></script>
         <script type="text/javascript" src="js/plugins/jquery/jquery-ui.min.js"></script>
