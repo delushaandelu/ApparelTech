@@ -36,7 +36,7 @@
 
 <div id="content">
         <table class="table datatable">  <!--display vehicle details -->
-            <tr class='success'><th>vehicle_id</th><th>vehicleNO</th><th>capacity</th><th>vehicletype</th><th>status</th><th colspan="2"><center>Action</center></th></tr>
+            <tr class='success'><th>vehicle_id</th><th>vehicleNO</th><th>capacity</th><th>vehicletype</th><th>status</th><th>Action</th></tr>
                 <?php 
                     $sql = "select * from vehicle";
                     $result = mysqli_query($dbcon,$sql);        
@@ -49,7 +49,6 @@
                             <td><?php echo $row['capacity'] ?></td>
                             <td><?php echo $row['vehicleType'] ?></td>
                             <td><?php echo $row['status'] ?></td>
-                            <td class="bt"><input type="button" class="btn btn-danger" value=Delete onclick="location.href='vehicle_details.php?vehicle_id=<?php echo $row['vehicle_id'] ?>'"/></td>
                             <td class="bt"><input type="button" class="btn" value=update onclick="location.href='vehicle_details_updateVehicle.php?ID=<?php echo $row['vehicle_id'] ?>'" ></td>
                             </tr>
                 <?php } ?>
@@ -62,28 +61,7 @@
         <!--vehicle delete -->
     
     
-              <?php
-       
-                if(isset($_GET['vehicle_id'])){
-                    $id = $_GET['vehicle_id'];
-            
-                    $sql= "delete from vehicle where vehicle_id=$id";
-                    $result=mysqli_query($dbcon,$sql);
-            
-                   
-            
-                    if($result){
-                        echo'<script language ="javascript">';
-                        echo "swal({  title: 'Vehicle Deleted!', text: '', type: 'success', confirmButtonText: 'Done!'}, function(){window.location.href='vehicle_details.php'});";
-                        echo'</script>'; }
-                    else{
-                        echo'<script language ="javascript">';
-                        echo "swal({  title: 'Error!', text: '', type: 'error', confirmButtonText: 'Done!'}, function(){window.location.href='vehicle_details.php'});";
-                        echo'</script>'; }
-                }
-            
-           ?>
-    
+             
 
 </div>
 <div id="bottomvehicle">

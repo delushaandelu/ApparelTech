@@ -109,10 +109,10 @@
             <label for="Website">Mobile(xxx-xxx-xxxx)</label>
             <input name="mob" id="mob" type="number" class="form-control" required/>
             </div>
-            <div class="form-group">
+            <!--<div class="form-group">
             <label for="CompanyEmail">Telephone(xxx-xxx-xxxx)</label>
             <input name="tele" id="tele" type="number" class="form-control" required/>
-            </div>
+            </div>-->
             <div class="form-group">
             <label for="Email">Email</label>
             <input name="email" type="email" class="form-control" required />
@@ -193,7 +193,7 @@ function validateform(){
 		    	return false;
             }
     var phone=document.InputForm.mob;
-    var phoneno =/^\(?([0-9]{5})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+    var phoneno =/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
     if (phone.value == "")
 			{
 		    	window.alert("Please enter your mobile No.");
