@@ -33,7 +33,6 @@ session_start();
                     <br><br>
                     <!-- create form -->
                     <form method="post" action="changePassword.php">
-                    <table>
                     <tr>
                         <td id="table-font" width="30" >
                             Password*
@@ -59,8 +58,7 @@ session_start();
                             <input type="password" name="Newpwd2" class="form-control" required>
                         </td>
                     </tr>
-                    <br><br>
-                    </table>
+                    <br><br> 
                     <button type="submit" id="button1" class="" name="pwd">Change</button>
                     </form>
                 </div>
