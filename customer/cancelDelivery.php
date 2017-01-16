@@ -21,25 +21,25 @@ session_start();
     include("../config/customermenu.php");
   ?>
 
-<!-- page content -->
-<div class="right_col" role="main">
-    <h2 class="hfont">Cancel Your Delivery Here!</h2>
-
+      <!-- page content -->
+    <div class="right_col" role="main">
+        <h2 class="hfont">Cancel Your Delivery Here!</h2>
+        <!-- create table -->
         <table class="table table-hover">
-        <tr>
-            <th><center>P/O_ID</center></th>
-            <th><center>ADDRESS</center></th>
-            <th><center>DATE</center></th>
-            <th><center>TELEPHONE</center></th>
-            <th><center>BANK</center></th>
-            <th><center>BRANCH</center></th>
-            <th><center>AMOUNT</center></th>
-            <th><center>STATUS</center></th>
-            <th><center>ACTION</center></th>
-        </tr>
+            <tr>
+                <th><center>P/O_ID</center></th>
+                <th><center>ADDRESS</center></th>
+                <th><center>DATE</center></th>
+                <th><center>TELEPHONE</center></th>
+                <th><center>BANK</center></th>
+                <th><center>BRANCH</center></th>
+                <th><center>AMOUNT</center></th>
+                <th><center>STATUS</center></th>
+                <th><center>ACTION</center></th>
+            </tr>
         
-<?php
-    
+    <?php
+        //sql quary
         $sql= "select * from deliveryrequest where status ='Not approved' ";
         $result = $db->query($sql);
         
@@ -54,23 +54,16 @@ session_start();
                     <td><center><?php echo $row['branch'] ?></center></td>
                     <td><center><?php echo $row['amount'] ?></center></td>
                     <td><center><?php echo $row['status'] ?></center></td>
-                    
                     <td class="bt"><center>
-                        
                         <button type="button" id="delete" class="btn btn-success" onclick="location.href='cancelDelivery.php?poid=<?php echo $row['poid'] ?>'"><i class="fa fa-check-square-o" aria-hidden="true"></i> Cancel</button>
-                        
                         </center></td>
                 </tr>
-                <?php } ?>
-
-        
-    </table>
+                <?php } ?> 
+        </table>
     
         <?php
             if(isset($_GET['poid'])){
-
                 $id = $_GET['poid'];
-                
                 //query
                 $sql= "DELETE FROM deliveryrequest WHERE poid = '$id'";
                 $result = $db->query($sql);

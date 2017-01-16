@@ -13,8 +13,8 @@
                 <ul class="breadcrumb">
                     <h2>Delivery Reports!</li></h2>
                 </ul>
+        <!-- page content -->
         <div id="delivery">
-        <form >
         <table  class="table datatable">
             
             <tr class="success">
@@ -29,6 +29,7 @@
                 <th><center>Voucher</center></th>
                 <th><center>Amount</center></th>
                 <th><center>Status</center></th>
+            </tr>
             <?php 
                 $sql = "select * from deliveryrequest where status ='Approved' || status ='Rejected' ";
                 $result = mysqli_query($dbcon,$sql);        
@@ -51,7 +52,6 @@
                 
             <?php } ?>
         </table>
-        </form>
 
         <script type="text/javascript" src="js/plugins/jquery/jquery.min.js"></script>
         <script type="text/javascript" src="js/plugins/jquery/jquery-ui.min.js"></script>

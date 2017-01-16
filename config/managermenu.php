@@ -13,6 +13,7 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
+    border-radius: 10%;
 }
     </style>
     </head>
@@ -119,7 +120,7 @@
                             <a href="#"><i class="fa fa-line-chart"></i> Performance Report<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="#"> Purchase order</a>
+                                    <a href="lineGraph.php"> Purchase order</a>
                                 </li>
                                 <li>
                                     <a href="#"> Rent</a>

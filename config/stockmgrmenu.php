@@ -45,9 +45,9 @@
                             </div>
                             <div class="profile-data">
                                 <div class="profile-data-name">
-                                  Priyantha Enterprices
+                                  Priyantha Enterprises
                                 </div>
-                                <div class="profile-data-title"><span style="color:#FF4500">ApperalTech</span></div>
+                                <div class="profile-data-title"><span style="color:#FF4500">ApparelTech</span></div>
                             </div>
                         </div>                                                                        
                     </li>
