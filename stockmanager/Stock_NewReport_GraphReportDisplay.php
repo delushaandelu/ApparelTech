@@ -110,11 +110,6 @@
 
                 <ul class="breadcrumb">
                     <h3>Graphical Reports</h3>
-<<<<<<< HEAD
-=======
-                    <h4>Graphical Reports</h4>
-
->>>>>>> origin/master
                 </ul>
 
                 <h4 align="center"> Stock Quantity Report</h4>
