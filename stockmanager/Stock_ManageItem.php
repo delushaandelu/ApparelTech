@@ -183,7 +183,7 @@
                             data : {"item_id" : item_id , "sellingPrice" : sellingPrice , "stockQty" : stockQty,"reorderlevel" : reorderlevel},
                            //alert (item);
                             success : function($result){
-                                        swal({  title: 'Stock item successfully updated!', text: '', type: 'success', confirmButtonText: 'Done!'}, function(){window.location.href='Stock_ManageItem.php'});
+                                        swal({  title: 'Stock item successfully updated!', text: '', type: 'success', confirmButtonText: 'Done!'});
                                 
                                     //alert("stock updated successfully");
                                 
@@ -213,7 +213,7 @@
                             data : {"item_id" : item_id , "sellingPrice" : sellingPrice , "stockQty" : stockQty,"reorderlevel" : reorderlevel},
                            //alert (item);
                             success : function($result){
-                                        swal({  title: 'Stock item successfully updated!', text: '', type: 'success', confirmButtonText: 'Done!'}, function(){window.location.href='Stock_ManageItem.php'});
+                                        swal({  title: 'Stock item successfully updated!', text: '', type: 'success', confirmButtonText: 'Done!'});
                                 
                                     //alert("stock updated successfully");
                                 
@@ -244,7 +244,7 @@
                             data : {"item_id" : item_id , "sellingPrice" : sellingPrice , "stockQty" : stockQty,"reorderlevel" : reorderlevel},
                            //alert (item);
                             success : function($result){
-                                        swal({  title: 'Stock item successfully updated!', text: '', type: 'success', confirmButtonText: 'Done!'}, function(){window.location.href='Stock_ManageItem.php'});
+                                        swal({  title: 'Stock item successfully updated!', text: '', type: 'success', confirmButtonText: 'Done!'});
                                 
                                     //alert("stock updated successfully");
                                 
@@ -277,7 +277,7 @@
                             data : {"item_id" : item_id , "sellingPrice" : sellingPrice , "stockQty" : stockQty,"reorderlevel" : reorderlevel},
                            //alert (item);
                             success : function($result){
-                                        swal({  title: 'Stock item successfully updated!', text: '', type: 'success', confirmButtonText: 'Done!'}, function(){window.location.href='Stock_ManageItem.php'});
+                                        swal({  title: 'Stock item successfully updated!', text: '', type: 'success', confirmButtonText: 'Done!'});
                                 
                                     //alert("stock updated successfully");
                                 
@@ -308,7 +308,7 @@
                             data : {"item_id" : item_id , "sellingPrice" : sellingPrice , "stockQty" : stockQty,"reorderlevel" : reorderlevel},
                            //alert (item);
                             success : function($result){
-                                        swal({  title: 'Stock item successfully updated!', text: '', type: 'success', confirmButtonText: 'Done!'}, function(){window.location.href='Stock_ManageItem.php'});
+                                        swal({  title: 'Stock item successfully updated!', text: '', type: 'success', confirmButtonText: 'Done!'});
                                 
                                     //alert("stock updated successfully");
                                 
@@ -339,7 +339,7 @@
                             data : {"item_id" : item_id , "sellingPrice" : sellingPrice , "stockQty" : stockQty,"reorderlevel" : reorderlevel},
                            //alert (item);
                             success : function($result){
-                                        swal({  title: 'Stock item successfully updated!', text: '', type: 'success', confirmButtonText: 'Done!'}, function(){window.location.href='Stock_ManageItem.php'});
+                                        swal({  title: 'Stock item successfully updated!', text: '', type: 'success', confirmButtonText: 'Done!'});
                                 
                                     //alert("stock updated successfully");
                                 

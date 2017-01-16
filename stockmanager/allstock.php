@@ -41,10 +41,10 @@
                                             <tr class='success'>
                                                 <th>Item Id</th>
                                                 <th>Item Name</th>
-                                                <th>Cost</th>
-                                                <th>Selling Price</th>
+                                                <th>Cost(Rs)</th>
+                                                <th>Selling Price(Rs)</th>
                                                 <th>Brand</th>
-                                                <th>On Hand</th>
+                                                <th>Available Quantity</th>
                                             </tr>
                                         </thead>
                 <?php
