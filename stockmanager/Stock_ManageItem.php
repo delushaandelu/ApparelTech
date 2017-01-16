@@ -32,7 +32,7 @@
                     success : function(data){
                         $('#itemname').empty();
                         $('#itemname').append("<option value = '0'> Select Item Name </option>");
-                         $('#itemname').append("<option> All </option>");
+                        $('#itemname').append("<option> All </option>");
                         //$('#itemname').html(html);
                         data.forEach(function(data){
 
@@ -73,6 +73,7 @@
                         $('#brandname').append("<option> All </option>");
                         //$('#itemname').html(html);
                         data.forEach(function(data){
+                            var data = jQuery.parseJSON(data);
                             alert(data);
                             $('#brandname').append('<option>'+data+'</option>');
                             
