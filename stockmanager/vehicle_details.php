@@ -65,13 +65,12 @@
               <?php
        
                 if(isset($_GET['vehicle_id'])){
-            
                     $id = $_GET['vehicle_id'];
+            
                     $sql= "delete from vehicle where vehicle_id=$id";
                     $result=mysqli_query($dbcon,$sql);
             
-                    $sqlupdatedriver="UPDATE driver SET vechicle_id='XXX' WHERE vechicle_id=$id";
-                    mysqli_query($dbcon,$sqlupdatedriver);
+                   
             
                     if($result){
                         echo'<script language ="javascript">';

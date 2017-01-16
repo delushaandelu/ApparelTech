@@ -127,7 +127,7 @@ if(isset($_POST['DriverInsert'])){
                         <tr>
                         <td id="table_font" align="center">MobileNo<span class="error"><?php echo $Mobileerr;?></span></td>
                         <td>
-                            <input type="text" id="mob" name="mobileNO"  class="form-control" >
+                            <input type="text" id="mob"  name="mobileNo"  class="form-control" >
                         </td>
                         </tr>
                         <tr>

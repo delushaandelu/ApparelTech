@@ -66,7 +66,7 @@
                     <tr><td>Licence No</td><td><input class="form-control" type=text name=LicenceNo value="<?php echo $row['LicenceNo'] ?>"></td></tr>
                     <tr><td>Driver Address</td><td><input class="form-control" type=text name=driverAddress value="<?php echo $row['driverAddress'] ?>"></td></tr>
                     <tr><td>Mobile No</td><td><input class="form-control" type=text name=mobileNo value="<?php echo $row['mobileNo'] ?>"></td></tr>
-                    <tr><td>Vehicle id</td><td><select name="vehicleID" class="form-control">
+                    
                     <tr><td>Vehicle id</td><td><select name="vehicleID" class="form-control">
                     <?php
                         $sql="SELECT vehicle_id FROM vehicle";

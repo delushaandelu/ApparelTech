@@ -8,12 +8,12 @@
         
     </head>
     <body>
-        
+        <!-- get connection -->
         <?php
-        
             include("../config/stockmgrmenu.php");
         ?>
-    <?php  
+        <?php
+        //get inputs
         if (isset($_POST['btn'])){
             $customer_id = $_POST['customer_id'];
             $item_id = $_POST['item_id'];
@@ -22,12 +22,11 @@
             $date = $_POST['date'];
             $description = $_POST['description'];
          
-    
+            //sql quary
             $sql="INSERT INTO defectitem (customer_id,item_id,po_id,returnItemQty,returnDate,description) VALUES ('$customer_id','$item_id','$po_id','$Qty','$date','$description')";
             $result=$dbcon->query($sql);
 
             if($result){
-            
                 echo'<script language ="javascript">';
                 echo "swal({  title: 'Successfully added! Thank you', text: '', type: 'success', confirmButtonText: 'Done!'}, function(){window.location.href='defected.php'});";
                 echo'</script>';
@@ -35,15 +34,17 @@
                 echo'<script language ="javascript">';
                 echo "swal({  title: 'Error!', text: 'Error', type: 'error', confirmButtonText: 'Done!'}, function(){window.location.href='defected.php'});";
                 echo'</script>';
+            }
+            mysqli_close($dbcon);
         }
-
-        mysqli_close($dbcon);
-        }
-    ?>
-                <ul class="breadcrumb">
-                    <h2>Defected Items!</li></h2>
-                </ul>
-     <div id="defect">
+        ?>
+        
+    <!-- page header -->
+    <ul class="breadcrumb">
+        <h2>Defected Items!</li></h2>
+    </ul>
+    <!-- create form-->
+    <div id="defect">
         <form method="post" >
             <table class="table table-hover">
                 <tr>
@@ -79,7 +80,7 @@
             </table>
         </form>
     </div>
-
+        <!-- js files -->
         <script type="text/javascript" src="js/plugins/jquery/jquery.min.js"></script>
         <script type="text/javascript" src="js/plugins/jquery/jquery-ui.min.js"></script>
         <script type="text/javascript" src="js/plugins/bootstrap/bootstrap.min.js"></script>        

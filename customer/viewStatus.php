@@ -14,14 +14,14 @@ session_start();
     <link rel="stylesheet" href="css/viewStatus.css" type="text/css">
   </head>
 
- <body class="nav-md">
-    
+<body class="nav-md">
+  <!-- get database connection -->
   <?php
     include("dbConfig.php");
     include("../config/customermenu.php");
   ?>
 
-<!-- page content -->
+     <!-- page content -->
 <div class="right_col" role="main">
     <h1 class="hfont">View Delivery Status</h1>
    
@@ -37,26 +37,22 @@ session_start();
             <th><center>STATUS</center></th>
         </tr>
         
-<?php
-    
+    <?php 
         $sql= "select * from deliveryrequest ";
-        $result = $db->query($sql);
-        
+        $result = $db->query($sql);  
         while($row = $result->fetch_assoc()) {
-                ?>
-                <tr>
-                    <td><center><?php echo $row['poid'] ?></center></td>
-                    <td><center><?php echo $row['address'] ?></center></td>
-                    <td><center><?php echo $row['date'] ?></center></td>
-                    <td><center><?php echo $row['telephone'] ?></center></td>
-                    <td><center><?php echo $row['bank'] ?></center></td>
-                    <td><center><?php echo $row['branch'] ?></center></td>
-                    <td><center><?php echo $row['amount'] ?></center></td>
-                    <td><center><?php echo $row['status'] ?></center></td>            
-                </tr>
-                <?php } ?>
-
-        
+    ?>
+        <tr>
+            <td><center><?php echo $row['poid'] ?></center></td>
+            <td><center><?php echo $row['address'] ?></center></td>
+            <td><center><?php echo $row['date'] ?></center></td>
+            <td><center><?php echo $row['telephone'] ?></center></td>
+            <td><center><?php echo $row['bank'] ?></center></td>
+            <td><center><?php echo $row['branch'] ?></center></td>
+            <td><center><?php echo $row['amount'] ?></center></td>
+            <td><center><?php echo $row['status'] ?></center></td>            
+        </tr>
+        <?php } ?>     
     </table>
     
         
