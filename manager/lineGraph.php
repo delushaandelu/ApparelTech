@@ -15,7 +15,19 @@
     <link rel="stylesheet" type="text/css"  href="Stock_NewReport_Design.css"/>
     <script type="text/javascript" src = "js/Chart.min.js"></script>
     
-
+    <script>
+    function printPageArea(areaID){
+	var printContent = document.getElementById(areaID);
+	var WinPrint = window.open('', '', 'width=900,height=650');
+	WinPrint.document.write(printContent.innerHTML);
+	WinPrint.document.close();
+	WinPrint.focus();
+	WinPrint.print();
+	WinPrint.close();
+    }
+    </script>
+    
+    
 </head>
 
 <body>
@@ -27,16 +39,17 @@
 <div id="page-wrapper">
     <div class="row">
         <div class="col-lg-12">
-            <h3 class="page-header" align="center">Priyantha Enterprises</h3>   
+            <h3 align='center'>Priyantha Enterprises- purchase order per day</h3>
         </div>
         
     </div>
     <div class="row">
-
-    <h4 align="center">purchase order per day</h4>
+<div id="content">
+        <div id="">
+            <div id>
     <canvas id="myChart" width="250" height="120"></canvas>
 
-
+</div>
 <style>
     /*#myChart{
         box-shadow:3px 3px 5px 200px #ccc;
@@ -87,9 +100,15 @@ $.ajax({
 
 </script>
 
-               
+
+    
+
+
+        </div>
+        
         <p>&nbsp;</p>
         <p>&nbsp;</p>
+    </div>
 
     </div>      
 </div>
