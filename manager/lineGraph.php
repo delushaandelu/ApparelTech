@@ -1,43 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>        
-        
-        
-       
+<head>
     <meta charset="utf-8">
     <title>Manager Admin</title>
+    <!-- link css and sweetalert files -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="dist/css/sb-admin-2.css" rel="stylesheet">
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="designs/template.css" type="text/css" />
-    <script src="js/sweetalert-dev.js"></script>
+    
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"> -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        
+    <link rel="stylesheet" type="text/css"  href="Stock_NewReport_Design.css"/>
     <script type="text/javascript" src = "js/Chart.min.js"></script>
-    <link rel="stylesheet" href="js/sweetalert.css">
+    
+
 </head>
-        
-   
 
-                  
-   
-    <body>
-        
-     <?php
-            include("../config/managermenu.php");
-        ?> 
+<body>
 
+<?php
+    include ("../config/managermenu.php");
+?>
+            
 <div id="page-wrapper">
+    <div class="row">
+        <div class="col-lg-12">
+            <h3 class="page-header" align="center">Priyantha Enterprises</h3>   
+        </div>
+        
+    </div>
+    <div class="row">
 
-                <ul class="breadcrumb">
-                    <h3>Graphical Reports</h3>
-                    <h4 align='center'>Priyantha Enterprises</h4>
-
-                </ul>
-
-                <h4 align="center">Purchase Orders per day</h4>  
-<div id>
+    <h4 align="center">purchase order per day</h4>
     <canvas id="myChart" width="250" height="120"></canvas>
 
-</div>
+
 <style>
     /*#myChart{
         box-shadow:3px 3px 5px 200px #ccc;
@@ -88,22 +87,18 @@ $.ajax({
 
 </script>
 
+               
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
 
-    
-
+    </div>      
 </div>
-        
-        <script type="text/javascript" src="js/plugins/jquery/jquery.min.js"></script>
-        <script type="text/javascript" src="js/plugins/jquery/jquery-ui.min.js"></script>
-        <script type="text/javascript" src="js/plugins/bootstrap/bootstrap.min.js"></script>        
-        <script type="text/javascript" src="js/settings.js"></script>
-        <script type="text/javascript" src="js/plugins.js"></script>        
-        <script type="text/javascript" src="js/actions.js"></script>
-    </body>
+<!-- js files -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="vendor/metisMenu/metisMenu.min.js"></script>
+<script src="dist/js/sb-admin-2.js"></script>
+
+</body>
+
 </html>
-
-
-
-
-
-
