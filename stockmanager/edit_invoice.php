@@ -187,13 +187,27 @@
         </tr>  
         <tr>
             
-            <td colspan="2"><center><input type="submit" value="Send" style="width: 130px;background-color:#A9A9A9;border:none;color: #fff;"/></center></td>
+            <td colspan="2"><center><input type="submit" name="mailBtn" value="Send" style="width: 130px;background-color:#A9A9A9;border:none;color: #fff;"/></center></td>
         </tr>
             
         
         </table>
     </form>
 </div>
+    
+  <?php
+                        if(isset($_POST['mailBtn'])){
+                            $to = $_POST['name'];
+                            $subject = $_POST['subject'];
+                            $message = $_POST['message'];
+                             $headers = 'From: Appareltech@priyantha.com' . "\r\n" .
+                            'Reply-To: Appareltech@priyantha.com' . "\r\n" .
+                            'X-Mailer: PHP/' . phpversion();
+
+                            mail($to, $subject, $message, $headers);
+                        }
+
+                        ?>
  
 <!-------------------- email end ---------------------------------------------->
     

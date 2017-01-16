@@ -39,7 +39,7 @@
             
      $id = $_GET['vi'];
      
-    $sql1="select item_id,itemName,quantity,stockQty from item,rent_order_items where item.item_id=rent_order_items.product_id and id=$id ";
+    $sql1="select item_id,itemName,qty,quantity from rent_item,rent_order_items where rent_item.item_id=rent_order_items.product_id and order_id=$id ";
     $result1=mysqli_query($dbcon,$sql1);
                                     
             
@@ -76,7 +76,7 @@
             echo "</td>";
 
             echo "<td>";
-            echo $row['stockQty'];
+            echo $row['quantity'];
             echo "</td>";
         echo "</tr>";
 
