@@ -24,6 +24,9 @@
             height: 25px;
             border: none;
         }
+         .panel-body{
+                background-color: white;
+            }
     </style>
 	</head>
 	
@@ -34,7 +37,10 @@
     <ul class="breadcrumb">
     <h4>Search Rent</li></h4>
 </ul>
-<div class = "panel">
+ <div class="content">
+<div class="panel-heading">
+<!--<div class = "panel">-->
+     <div class="panel-body">
     <?php
    // require("database_connection.php");
 	$post_at = "";
@@ -49,7 +55,7 @@
 	   $result = mysqli_query($dbcon,$sql);
     }
 ?>
-   <div class="content">
+  
     <div class="demo-content">
      
   <form name="frmSearch" method="post" action="">
@@ -104,7 +110,9 @@ $("#post_at").datepicker();
 $("#post_at_to_date").datepicker();
 });
 </script>
-</div>
+    </div>
+<!--</div>-->
+    </div>
     </div>
 
 </body></html>

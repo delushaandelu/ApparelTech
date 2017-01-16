@@ -37,6 +37,9 @@
             #potb{
                 margin-top: 4px;
             }
+            .panel-body{
+                background-color: white;
+            }
         
         </style>
     <div id="dialog" style="display: none" align = "center">
@@ -75,9 +78,11 @@
  ?>
 
 <div id="content">
-        <div class="panel">
+       <!--<div class="panel">-->
             <div class="panel-heading">
                 <div class="panel-body">
+                <br>
+                <br>
                 <table class="table datatable" id="potb">
                     <tr class='success'>
                         <th><center>Id</center></th>
@@ -132,7 +137,7 @@
 
             
                 </table>
-                
+                                
                         <?php
                             
                             if(!empty($_GET['ID']) && !empty($_GET['customer_id'])){
@@ -155,7 +160,7 @@
                     
                           
 
-                 
+                
                         <?php
        
       
@@ -164,7 +169,7 @@
                             $cusid=$_GET['customer_id'];
                              
                            
-
+               //sms function----------------------------
                              
                            /* $username = 'appareltech123@gmail.com';
     	                    $hash = 'Priyantha1';
@@ -276,9 +281,9 @@
          
             </div>
             
-    </div>
+ </div>
                 
-    </div>
+   <!--</div>-->
             
 </div>
         

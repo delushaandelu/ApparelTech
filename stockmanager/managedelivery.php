@@ -13,10 +13,7 @@
         <?php
             include("../config/stockmgrmenu.php");
         ?>
-         <div class="2">
-                <input type="text" id="myInput" onkeyup="myFunction()" class="form-control" placeholder="&#x26B2   YYYY-MM-DD" style="width: 320px; height: 50px">
-
-            </div>
+         
         <script>
             function myFunction() {
                 var input, filter, table, tr, td, i;
@@ -40,6 +37,13 @@
                     <h4>Delivery Details</li></h4>
                 </ul>
 <div id="content">
+    
+    <div class="2">
+                <input type="text" id="myInput" onkeyup="myFunction()" class="form-control" placeholder="&#x26B2   YYYY-MM-DD" style="width: 320px; height: 50px">
+
+            </div>
+    <br>
+    <br>
     <form action="GET">
         <table  class="table datatable" id='myTable'>
             

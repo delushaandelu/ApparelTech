@@ -24,13 +24,16 @@
 <?php
     include("../config/stockmgrmenu.php");
  ?>
+<ul class="breadcrumb">
+    <h4>Manage Rent</li></h4>
+</ul>
 
 <div id="content">
         <div class="panel">
             <div class="panel-heading">
                
                 <br>
-                <br>
+            
                 <table class="table datatable" id="potb">
                     <tr class='success'>
                         <th><center>id</center></th>
