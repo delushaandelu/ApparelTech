@@ -1,32 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>        
-        <title>Stock Manager</title>                   
-        <link rel="stylesheet" type="text/css" id="theme" href="css/main.css"/>  
         
-        <link rel="stylesheet" type="text/css"  href="Stock_NewReport_Design.css"/>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-      
         
-       <script src="js/sweetalert-dev.js"></script>
        
-
-       <script type="text/javascript" src = "js/Chart.min.js"></script>
-       
- <link rel="stylesheet" href="js/sweetalert.css">
+    <meta charset="utf-8">
+    <title>Manager Admin</title>
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="dist/css/sb-admin-2.css" rel="stylesheet">
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="designs/template.css" type="text/css" />
+    <script src="js/sweetalert-dev.js"></script>
+    <script type="text/javascript" src = "js/Chart.min.js"></script>
+    <link rel="stylesheet" href="js/sweetalert.css">
+</head>
+        
+   
 
                   
-    </head>
+   
     <body>
         
      <?php
-            include("../config/stockmgrmenu.php");
+            include("../config/managermenu.php");
         ?> 
 
-
-        
+<div id="page-wrapper">
 
                 <ul class="breadcrumb">
                     <h3>Graphical Reports</h3>
@@ -92,7 +91,7 @@ $.ajax({
 
     
 
-
+</div>
         
         <script type="text/javascript" src="js/plugins/jquery/jquery.min.js"></script>
         <script type="text/javascript" src="js/plugins/jquery/jquery-ui.min.js"></script>

@@ -32,6 +32,7 @@
                     success : function(data){
                         $('#itemname').empty();
                         $('#itemname').append("<option value = '0'> Select Item Name </option>");
+                         $('#itemname').append("<option> All </option>");
                         //$('#itemname').html(html);
                         data.forEach(function(data){
 
@@ -72,7 +73,7 @@
                         $('#brandname').append("<option> All </option>");
                         //$('#itemname').html(html);
                         data.forEach(function(data){
-                            
+                            alert(data);
                             $('#brandname').append('<option>'+data+'</option>');
                             
                         });
@@ -106,44 +107,52 @@
                 },
             function(isConfirm){
             if (isConfirm) {
-                swal("Deleted!", "The item successfully deleted from the stock.", "success");
+                //swal("Deleted!", "The item successfully deleted from the stock.", "success");
                 $.ajax({
                     url : 'DeleteItem.php',
                     method : 'POST',
                     data : {item:item},
-                    success : function(){
+                    success : function(data){
+                        var data = jQuery.parseJSON(data);
+                        //alert(data);
+                        if(data == 1){
+                             swal({  title: 'Stock available.Cannot delete!', text: '', type: 'error', confirmButtonText: 'Okay!'}
+                                //, function(){window.location.href='Stock_ManageItem.php'}
+                                );
+                            
+                        }else{
+                            swal({  title: 'Stock item successfully deleted!', text: '', type: 'success', confirmButtonText: 'Done!'}
+                               // , function(){window.location.href='Stock_ManageItem.php'}
+                                );
+                           
+                        }
                        
             }
 
            });
-            } else {
+            } /*else {
                 swal("Cancelled", "The item is not deleted from the stock:)", "error");
             
-            }
+            }*/
         });
     }
 
     </script>
     <script type="text/javascript">
 
-             function update_item(item_id, sellingPrice,stockQty,preQty,preSP){
+             function update_item(item_id, sellingPrice,stockQty,reorderlevel,preQty,preSP,preROL){
             
                 var item_id = item_id;
                 var sellingPrice = sellingPrice;
                 var stockQty = stockQty;
-               
+                var reorderlevel = reorderlevel;
 
-                if (stockQty == preQty){
-                        swal({  title: 'Please enter the new quantity you want to change!!!', text: '', type: 'success', confirmButtonText: 'Okay!'}, function(){window.location.href='Stock_ManageItem.php'});
-                       
-                }else{
+                if(sellingPrice!=preSP && stockQty!=preQty && reorderlevel !=preROL){
 
-                 $.ajax({
-
-
+                      $.ajax({
                             url : 'UpdateItem2.php',
                             method : 'POST',
-                            data : {"item_id" : item_id , "sellingPrice" : sellingPrice , "stockQty" : stockQty},
+                            data : {"item_id" : item_id , "sellingPrice" : sellingPrice , "stockQty" : stockQty,"reorderlevel" : reorderlevel},
                            //alert (item);
                             success : function($result){
                                         swal({  title: 'Stock item successfully updated!', text: '', type: 'success', confirmButtonText: 'Done!'}, function(){window.location.href='Stock_ManageItem.php'});
@@ -153,9 +162,201 @@
                             }
 
                         });
-                    }
 
-                }
+                }else if(sellingPrice!=preSP && stockQty != preQty && reorderlevel == preROL){
+                       swal({
+                  title: "Are you sure?",
+                  text: "You did not change the re order level!!",
+                  type: "warning",
+                  showCancelButton: true,
+                  confirmButtonColor: "#DD6B55",
+                  confirmButtonText: "Yes, update it!",
+                  cancelButtonText: "Cancel!",
+                  closeOnConfirm: false,
+                  closeOnCancel: false
+                },
+            function(isConfirm){
+            if (isConfirm) {
+                //swal("Deleted!", "The item successfully deleted from the stock.", "success");
+                $.ajax({
+                            url : 'UpdateItem2.php',
+                            method : 'POST',
+                            data : {"item_id" : item_id , "sellingPrice" : sellingPrice , "stockQty" : stockQty,"reorderlevel" : reorderlevel},
+                           //alert (item);
+                            success : function($result){
+                                        swal({  title: 'Stock item successfully updated!', text: '', type: 'success', confirmButtonText: 'Done!'}, function(){window.location.href='Stock_ManageItem.php'});
+                                
+                                    //alert("stock updated successfully");
+                                
+                            }
+
+                        });
+            } 
+        });
+            }else if(sellingPrice!=preSP && stockQty == preQty && reorderlevel == preROL){
+                  swal({
+                  title: "Are you sure?",
+                  text: "You did not change the stock quantity and re order level!!",
+                  type: "warning",
+                  showCancelButton: true,
+                  confirmButtonColor: "#DD6B55",
+                  confirmButtonText: "Yes, update it!",
+                  cancelButtonText: "Cancel!",
+                  closeOnConfirm: false,
+                  closeOnCancel: false
+                },
+            function(isConfirm){
+            if (isConfirm) {
+                //swal("Deleted!", "The item successfully deleted from the stock.", "success");
+                $.ajax({
+                            url : 'UpdateItem2.php',
+                            method : 'POST',
+                            data : {"item_id" : item_id , "sellingPrice" : sellingPrice , "stockQty" : stockQty,"reorderlevel" : reorderlevel},
+                           //alert (item);
+                            success : function($result){
+                                        swal({  title: 'Stock item successfully updated!', text: '', type: 'success', confirmButtonText: 'Done!'}, function(){window.location.href='Stock_ManageItem.php'});
+                                
+                                    //alert("stock updated successfully");
+                                
+                            }
+
+                        });
+            } 
+        });
+
+            }else if(sellingPrice==preSP && stockQty == preQty && reorderlevel != preROL){
+                     swal({
+                  title: "Are you sure?",
+                  text: "You did not change the selling price and stock quantity!!",
+                  type: "warning",
+                  showCancelButton: true,
+                  confirmButtonColor: "#DD6B55",
+                  confirmButtonText: "Yes, update it!",
+                  cancelButtonText: "Cancel!",
+                  closeOnConfirm: false,
+                  closeOnCancel: false
+                },
+            function(isConfirm){
+            if (isConfirm) {
+                //swal("Deleted!", "The item successfully deleted from the stock.", "success");
+                $.ajax({
+                            url : 'UpdateItem2.php',
+                            method : 'POST',
+                            data : {"item_id" : item_id , "sellingPrice" : sellingPrice , "stockQty" : stockQty,"reorderlevel" : reorderlevel},
+                           //alert (item);
+                            success : function($result){
+                                        swal({  title: 'Stock item successfully updated!', text: '', type: 'success', confirmButtonText: 'Done!'}, function(){window.location.href='Stock_ManageItem.php'});
+                                
+                                    //alert("stock updated successfully");
+                                
+                            }
+
+                        });
+            } 
+        });
+
+            }
+
+            else if(sellingPrice==preSP && stockQty != preQty && reorderlevel != preROL){
+                     swal({
+                  title: "Are you sure?",
+                  text: "You did not change the selling price!!",
+                  type: "warning",
+                  showCancelButton: true,
+                  confirmButtonColor: "#DD6B55",
+                  confirmButtonText: "Yes, update it!",
+                  cancelButtonText: "Cancel!",
+                  closeOnConfirm: false,
+                  closeOnCancel: false
+                },
+            function(isConfirm){
+            if (isConfirm) {
+                //swal("Deleted!", "The item successfully deleted from the stock.", "success");
+                $.ajax({
+                            url : 'UpdateItem2.php',
+                            method : 'POST',
+                            data : {"item_id" : item_id , "sellingPrice" : sellingPrice , "stockQty" : stockQty,"reorderlevel" : reorderlevel},
+                           //alert (item);
+                            success : function($result){
+                                        swal({  title: 'Stock item successfully updated!', text: '', type: 'success', confirmButtonText: 'Done!'}, function(){window.location.href='Stock_ManageItem.php'});
+                                
+                                    //alert("stock updated successfully");
+                                
+                            }
+
+                        });
+            } 
+        });
+
+            }else if(sellingPrice==preSP && stockQty != preQty && reorderlevel == preROL){
+                swal({
+                  title: "Are you sure?",
+                  text: "You did not change the selling price and re order level!!",
+                  type: "warning",
+                  showCancelButton: true,
+                  confirmButtonColor: "#DD6B55",
+                  confirmButtonText: "Yes, update it!",
+                  cancelButtonText: "Cancel!",
+                  closeOnConfirm: false,
+                  closeOnCancel: false
+                },
+            function(isConfirm){
+            if (isConfirm) {
+                //swal("Deleted!", "The item successfully deleted from the stock.", "success");
+                $.ajax({
+                            url : 'UpdateItem2.php',
+                            method : 'POST',
+                            data : {"item_id" : item_id , "sellingPrice" : sellingPrice , "stockQty" : stockQty,"reorderlevel" : reorderlevel},
+                           //alert (item);
+                            success : function($result){
+                                        swal({  title: 'Stock item successfully updated!', text: '', type: 'success', confirmButtonText: 'Done!'}, function(){window.location.href='Stock_ManageItem.php'});
+                                
+                                    //alert("stock updated successfully");
+                                
+                            }
+
+                        });
+            } 
+        });
+
+            }else if(sellingPrice!=preSP && stockQty == preQty && reorderlevel != preROL){
+                 swal({
+                  title: "Are you sure?",
+                  text: "You did not change the stock quantity!!",
+                  type: "warning",
+                  showCancelButton: true,
+                  confirmButtonColor: "#DD6B55",
+                  confirmButtonText: "Yes, update it!",
+                  cancelButtonText: "Cancel!",
+                  closeOnConfirm: false,
+                  closeOnCancel: false
+                },
+            function(isConfirm){
+            if (isConfirm) {
+                //swal("Deleted!", "The item successfully deleted from the stock.", "success");
+                $.ajax({
+                            url : 'UpdateItem2.php',
+                            method : 'POST',
+                            data : {"item_id" : item_id , "sellingPrice" : sellingPrice , "stockQty" : stockQty,"reorderlevel" : reorderlevel},
+                           //alert (item);
+                            success : function($result){
+                                        swal({  title: 'Stock item successfully updated!', text: '', type: 'success', confirmButtonText: 'Done!'}, function(){window.location.href='Stock_ManageItem.php'});
+                                
+                                    //alert("stock updated successfully");
+                                
+                            }
+
+                        });
+            } 
+        })
+            }
+            else{
+                swal({  title: 'You did not update!!!', text: '', type: 'error', confirmButtonText: 'Okay!'});
+               
+            }
+
+
+    }
                
             
       
@@ -271,6 +472,7 @@
                                 echo "<th width='10px' style='text-align:center'>Buying Price</th>";
                                 echo "<th width='70px' style='text-align:center'>Selling Price</th>";
                                 echo "<th width='60px' style='text-align:center'>Quantity</th>";
+                                echo "<th width='60px' style='text-align:center'>Re Order Level</th>";
                                 echo "<th width='2px'></th>";
 
                                 echo "<th width='2px'></th>";
@@ -293,13 +495,14 @@
                                 
                                 $stockQty = $row['stockQty'];
                                 echo "<td style='text-align:center'>" . "<input type='text' style='width:60px' value='$stockQty' name='stockQty' id='stockQty'> ". "</td>";
-                                
 
+                                $reorderlevel= $row['reOrderLevel'];
+                                echo "<td style='text-align:center'>" . "<input type='text' style='width:60px' value='$reorderlevel' name='reorderlevel' id='reorderlevel'> ". "</td>";
                                /* echo "<td>"."<input type ='text' name = \"sellingPrice".$count."\" value ='".$sellingPrice."'>"."</td>";*/
                                 
-                                echo "<td style='text-align:center'>"."<button type='submit' onclick =\"update_item('".$row['item_id']."',document.getElementById('sellingPrice').value,document.getElementById('stockQty').value,$stockQty,$sellingPrice)\"name='manageItemUpdateBtn' class='myButton'>Update</button>"."</td>";
+                                echo "<td style='text-align:center'>"."<button type='submit' onclick =\"update_item('".$row['item_id']."',document.getElementById('sellingPrice').value,document.getElementById('stockQty').value,document.getElementById('reorderlevel').value,$stockQty,$sellingPrice,$reorderlevel)\"name='manageItemUpdateBtn' class='myButton'>Update</button>"."</td>";
                                 $item_id = $row['item_id'];
-                                echo("$item_id");
+                            
                                 echo "<td style='text-align:center'>"."<button type='button' onclick=\"delete_item($item_id)\" name='manageItemDeleteBtn' class='btn btn-danger'>Delete</button>"."</td>";
                                 
                                 
