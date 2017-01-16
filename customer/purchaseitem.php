@@ -17,49 +17,51 @@ session_start();
   <body class="nav-md">
     
   <?php
+    // get database connection
     include("dbConfig.php");
     include("../config/customermenu.php");
   ?>
 
-<!-- page content -->
-<div class="right_col" role="main">
-    <h1 class="hfont">Purchased Items</h1>
-    <center>
-        <h3>Invoice No. 
-            <?php 
-                $id = $_GET['p_id'];
-                echo $id;
-            ?></h3>
-    </center>
-    <table class="table table-hover">
-        <tr>
-            <th><center>Product ID</center></th>
-            <th><center>Product Name</center></th>
-            <th><center>Product Brand</center></th>
-            <th><center>Price</center></th>
-            <th><center>Quantity</center></th>
-        </tr>
+    <!-- page content -->
+    <div class="right_col" role="main">
+        <h1 class="hfont">Purchased Items</h1>
+        <!-- get invoice no -->
+        <center>
+            <h3>Invoice No. 
+                <?php 
+                    $id = $_GET['p_id'];
+                    echo $id;
+                ?></h3>
+        </center>
+        <!-- create table -->
+        <table class="table table-hover">
+            <tr>
+                <th><center>Product ID</center></th>
+                <th><center>Product Name</center></th>
+                <th><center>Product Brand</center></th>
+                <th><center>Price</center></th>
+                <th><center>Quantity</center></th>
+            </tr>
         
-<?php
-    $id = $_GET['p_id'];
-    $sql= "select product_id,itemName,brand,quantity,sellingPrice from item,order_items where item.item_id=order_items.product_id && order_id=$id";
-    $result = $db->query($sql);
+            <?php
+            //sql quary
+            $id = $_GET['p_id'];
+            $sql= "select product_id,itemName,brand,quantity,sellingPrice from item,order_items where item.item_id=order_items.product_id && order_id=$id";
+            $result = $db->query($sql);
         
-    while($row = $result->fetch_assoc()) {
+            while($row = $result->fetch_assoc()) {
                 ?>
-                <tr>
-                    <td><center><?php echo $row['product_id'] ?></center></td>
-                    <td><center><?php echo $row['itemName'] ?></center></td>
-                    <td><center><?php echo $row['brand'] ?></center></td>
-                    <td><center><?php echo $row['sellingPrice'] ?></center></td>
-                    <td><center><?php echo $row['quantity'] ?></center></td>
-                </tr>
-                <?php } ?>
-
-        
-    </table>
-</div>
-</body>
+            <tr>
+                <td><center><?php echo $row['product_id'] ?></center></td>
+                <td><center><?php echo $row['itemName'] ?></center></td>
+                <td><center><?php echo $row['brand'] ?></center></td>
+                <td><center><?php echo $row['sellingPrice'] ?></center></td>
+                <td><center><?php echo $row['quantity'] ?></center></td>
+            </tr>
+            <?php } ?>  
+        </table>
+    </div>
+    </body>
 
 <!-- jQuery -->
 <script src="vendors/jquery/dist/jquery.min.js"></script>
