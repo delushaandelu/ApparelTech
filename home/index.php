@@ -2,22 +2,18 @@
 <html lang="en">
 
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-
     <title>Priyantha Enterprises</title>
-
 	<link href="css/bootstrap.min.css" rel="stylesheet">
-    
 	<link href="css/theme.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
 	<link href="css/animate.css" rel="stylesheet">
 	<link href="css/responsive.css" rel="stylesheet">
-    	<link rel="shortcut icon" href="img/icons/favicon.ico">
+    <link rel="shortcut icon" href="img/icons/favicon.ico">
 	<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 	<link href="css/flexslider.css" rel="stylesheet">
 	<link href="css/jquery.bxslider.css" rel="stylesheet">
@@ -26,10 +22,9 @@
 
 <body id="page-top" class="index">
 
-    
+<!-- navigation bar content-->    
     <nav class="navbar navbar-default navbar-fixed-top" id="slider">
         <div class="container">
-            
             <div class="navbar-header page-scroll">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span>
@@ -64,10 +59,10 @@
                     </li>
                 </ul>
             </div>
-            
         </div>
     </nav>
-
+    
+<!--First Slide-->
 <div class="layer_slider">
     <div id="layerslider-container-fw">        
         <div id="layerslider" style="width: 100%; height: 550px; margin: 0px auto; ">
@@ -134,7 +129,7 @@
 
                 <span class="ls-s-1" style=" color: #fff; line-height:45px; font-weight: 200; font-size: 35px; top:100px; left: 50px; slidedirection : top; slideoutdirection : bottom; durationin : 1000; durationout : 1000; ">
                     " There is extraordinary chemistry</br> that exists in long-term 
-    </br>relationships "
+                    </br>relationships "
                 </span>
 
                 <img src="img/mockup/thread_ussr_buttons_sewing_wood_background_80516_1400x1050.jpg" alt="Slider Image" class="ls-s-1" style=" top:30px; left: 670px; slidedirection : right; slideoutdirection : bottom; durationin : 3000; durationout : 3000; ">
@@ -142,8 +137,9 @@
         </div>         
     </div>
 </div>
+        <!-- End Third Slide -->
 
-
+    <!-- About us section-->    
     <section id="about">
         <div class="container"id="about">
             <div class="row" >
@@ -156,8 +152,8 @@
                       <div class="about-image">
                           <img class="img-circle img-responsive" src="img/about/Apparel-Company.jpg" alt="">
                       </div>
-                   </div>
-                   <div class="col-sm-8">
+                </div>
+                <div class="col-sm-8">
                       <div class="about-panel">
                           <div class="about-heading">
                               <h4 class="subheading">Introduction</h4>
@@ -182,10 +178,9 @@
         </div>
     </section>
 
+    <!-- products section -->
     <section id="team" class ="pro">
         <div class="container"  >	
-			<!-- Codrops top bar -->
-			
 			<div class="row">
                 <div class="col-sm-12 text-center">
                     </br><h2 class="section-heading wow animated pulse animated">Our Products</h2><hr />
@@ -222,6 +217,7 @@
 		</script>
     </section>
     
+    <!-- Service section -->
     <section id="services" class="ser">
         <div class="container">
             <div class="row">
@@ -259,7 +255,7 @@
         </div>
     </section>
 
-    
+    <!-- ourpartners section -->
     <section id="testimonials">
         <div class="container" >
             <div class="row">
@@ -270,16 +266,14 @@
                     <img src="img/about/brandix.jpg" alt="brandix" width="280px" height="200px"/>
                     <img src="img/about/hydramani.jpg" alt="hydramani" width="200px" height="200px"/>
                     <img src="img/about/mas.jpg" alt="mas" width="300px" height="200px"/>
-                    
                     </marquee>
                     </br></br></br></br></br></br>
 			</div>
 		</div>
-       
-       
 	</div>
 </section>
    
+    <!-- contact us section -->
     <section id="contact" class="bg-light-gray">
         <div class="container">
             <div class="row">
@@ -332,7 +326,7 @@
         </div>
     </section>
     
-
+        <!--footer section -->
     <footer class="copyright">
         <div class="container">
             <div class="row">
@@ -361,7 +355,7 @@
         </div>
     </footer>
 
-    <!-- jQuery -->
+    <!-- jQuery plugins -->
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/classie.js"></script>
