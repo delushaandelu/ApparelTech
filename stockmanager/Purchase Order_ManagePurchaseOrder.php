@@ -174,8 +174,8 @@
                            
                //sms function----------------------------
                              
-                           /* $username = 'appareltech123@gmail.com';
-    	                    $hash = 'Priyantha1';
+                            $username = 'uthpala.isiru@gmail.com';
+    	                    $hash = 'Uthpala@123';
     	
     	                   // Message details
                             $sqlsms="SELECT mobile FROM customer WHERE customer_id=$cusid";
@@ -201,7 +201,7 @@
     	                   curl_close($ch);
     	
     	                   // Process your response here
-    	                   echo $response;*/
+    	                   //echo $response;
                              
                             $sqlinsert="INSERT INTO purchasereport(p_id,customer_id,totalprice,created,status) SELECT orders.id,orders.customer_id,orders.total_price,orders.created,'approved' FROM orders WHERE id=$id";
                             $resultinsert=mysqli_query($dbcon,$sqlinsert);
@@ -231,8 +231,8 @@
 
                             
                             
-                          /*  $username = 'chamrithjay@gmail.com';
-    	                    $hash = '1993Minuwangoda';
+                           $username = 'uthpala.isiru@gmail.com';
+    	                    $hash = 'Uthpala@123';
     	
     	                   // Message details
                             $sqlsms="SELECT mobile FROM customer WHERE customer_id=$cusid";
@@ -258,7 +258,7 @@
     	                   curl_close($ch);
     	
     	                   // Process your response here
-    	                   echo $response;*/
+    	                   //echo $response;
                             
                            $sqldelete="DELETE FROM orders WHERE id=$id";
                             $result=mysqli_query($dbcon,$sqldelete);
