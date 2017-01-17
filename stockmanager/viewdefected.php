@@ -29,7 +29,7 @@
                 
             <?php
                 //quary
-                $sql = "select * from defectitem ";
+                $sql = "SELECT * FROM defectitem ";
                 $result = mysqli_query($dbcon,$sql);        
                 while($row = mysqli_fetch_array($result)) {
     

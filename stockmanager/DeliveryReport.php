@@ -31,7 +31,7 @@
                 <th><center>Status</center></th>
             </tr>
             <?php 
-                $sql = "select * from deliveryrequest where status ='Approved' || status ='Rejected' ";
+                $sql = "SELECT * FROM deliveryrequest WHERE status ='Approved' || status ='Rejected' ";
                 $result = mysqli_query($dbcon,$sql);        
                 while($row = mysqli_fetch_array($result)) {
     

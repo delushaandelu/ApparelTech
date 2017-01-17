@@ -81,7 +81,7 @@
     
             //query
             $sql = "UPDATE user SET password='$newpwd1' WHERE accessLevel=1";
-            $sql_1 = "select password from user where accessLevel=1;";
+            $sql_1 = "SELECT password FROM user WHERE accessLevel=1;";
     
             $result = mysqli_query($dbcon, $sql_1);
             $row = mysqli_fetch_assoc($result);

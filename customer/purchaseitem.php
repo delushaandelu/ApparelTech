@@ -46,7 +46,7 @@ session_start();
             <?php
             //sql quary
             $id = $_GET['p_id'];
-            $sql= "select product_id,itemName,brand,quantity,sellingPrice from item,order_items where item.item_id=order_items.product_id && order_id=$id";
+            $sql= "SELECT product_id,itemName,brand,quantity,sellingPrice FROM item,order_items WHERE item.item_id=order_items.product_id && order_id=$id";
             $result = $db->query($sql);
         
             while($row = $result->fetch_assoc()) {

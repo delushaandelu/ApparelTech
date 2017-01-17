@@ -38,7 +38,7 @@ session_start();
         </tr>
         
     <?php 
-        $sql= "select * from deliveryrequest ";
+        $sql= "SELECT * FROM deliveryrequest ";
         $result = $db->query($sql);  
         while($row = $result->fetch_assoc()) {
     ?>
