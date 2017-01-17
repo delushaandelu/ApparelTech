@@ -75,9 +75,12 @@
         <?php  
         //get inputs  
         if(isset($_POST["pwd"])){
-            $newpwd1=$_POST["Newpwd1"];
-            $oldpwd=$_POST["oldpwd"];
-            $newpwd2=$_POST["Newpwd2"];
+            $NewPassword1=$_POST["Newpwd1"];
+            $newpwd1 = sha1($NewPassword1);
+            $OldPassword=$_POST["oldpwd"];
+            $oldpwd = sha1($OldPassword);
+            $NewPassword2=$_POST["Newpwd2"];
+            $newpwd2 = sha1($NewPassword2);
     
             //query
             $sql = "UPDATE user SET password='$newpwd1' WHERE accessLevel=1";
