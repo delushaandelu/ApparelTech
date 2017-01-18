@@ -13,8 +13,9 @@ include("dbConfig.php");
     <link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="build/css/custom.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/requestDelivery.css" type="text/css">
-       <script src="js/sweetalert-dev.js"></script>
-      <link rel="stylesheet" href="js/sweetalert.css">
+    <script src="js/sweetalert-dev.js"></script>
+    <link rel="stylesheet" href="js/sweetalert.css">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
   </head>
 
   <body class="nav-md">
@@ -76,11 +77,11 @@ if ($db->query($sql) === TRUE) {
                 </tr>
                 <tr>
                     <td>Delivery Date</td>
-                    <td><input type="date" class="form-control" name="date"  required></td>
+                    <td><input type="text" placeholder="Date" id="post_at" name="post_at"  class="form-control"  required></td>
                 </tr>
                 <tr>
                     <td>Telephone No for Delivery</td>
-                    <td><input type="text" id="#mob" class="form-control"  name="tele" required></td>
+                    <td><input type="tele" id="mob" class="form-control"  name="tele" required></td>
                 </tr>
                 <tr>
                     <td colspan="2"><h4 align="center">Bank Payment Details</h4> </td>
@@ -120,24 +121,32 @@ if ($db->query($sql) === TRUE) {
   <!-- Custom Theme Scripts -->
 <script src="build/js/custom.min.js"></script>
     <script type="text/javascript">
-    function validateform(){
-      var phone=document.InputForm.mob;
+function validateform(){
     var phoneno =/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
-    if (phone.value == "")
-			{
-		    	window.alert("Please enter your mobile No.");
-		         phone.focus();
-		    	return false;
-			}
-    else if(!phoneno.test($("#mob").val()))  
-        {  
-        window.alert("wrong mobile phone no");  
-        return false;   
+    if(!phoneno.test($("#mob").val())) {  
+            window.alert("wrong mobile phone no");  
+            return false;   
         }  
     else{
           return true;
-      }
+        }
     
     }
         </script>
+
+</script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script>
+$.datepicker.setDefaults({
+showOn: "button",
+buttonImage: "images/datepicker.png",
+buttonText: "Date Picker",
+buttonImageOnly: true,
+dateFormat: 'yy-mm-dd'  
+});
+$(function() {
+$("#post_at").datepicker();
+$("#post_at_to_date").datepicker();
+});
+</script>
 </html>
