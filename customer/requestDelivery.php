@@ -23,7 +23,7 @@ include("dbConfig.php");
   <?php
     include("../config/customermenu.php");
   ?>
-    
+  <!-- get the id from the session --> 
   <?php
     $id = $_GET['p_id'];
     $c_id = $_SESSION['csid'];
@@ -37,7 +37,7 @@ include("dbConfig.php");
         $vid = $_POST['vid'];
         $amount = $_POST['amount'];   
         $status = "Not approved"; 
-    
+   //sql query-insert in  to the table
     $sql="INSERT INTO deliveryrequest (cid,poid,company,address,date,telephone,bank,branch,voucher,amount,status) VALUES ('$c_id','$id','$com','$add','$date','$tele','$bank','$branch','$vid','$amount','$status')";
     
 
@@ -120,33 +120,35 @@ if ($db->query($sql) === TRUE) {
 <!-- FastClick -->
   <!-- Custom Theme Scripts -->
 <script src="build/js/custom.min.js"></script>
-    <script type="text/javascript">
-function validateform(){
-    var phoneno =/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
-    if(!phoneno.test($("#mob").val())) {  
+<!--validate the phone number-->
+<script type="text/javascript">
+    function validateform(){
+        var phoneno =/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+        if(!phoneno.test($("#mob").val())) {  
             window.alert("wrong mobile phone no");  
             return false;   
         }  
-    else{
+        else{
           return true;
         }
     
     }
-        </script>
+</script>
 
 </script>
+<!--input date function with browser comptibility-->
 <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 <script>
-$.datepicker.setDefaults({
-showOn: "button",
-buttonImage: "images/datepicker.png",
-buttonText: "Date Picker",
-buttonImageOnly: true,
-dateFormat: 'yy-mm-dd'  
-});
-$(function() {
-$("#post_at").datepicker();
-$("#post_at_to_date").datepicker();
-});
+    $.datepicker.setDefaults({
+    showOn: "button",
+    buttonImage: "images/datepicker.png",
+    buttonText: "Date Picker",
+    buttonImageOnly: true,
+    dateFormat: 'yy-mm-dd'  
+    });
+    $(function() {
+    $("#post_at").datepicker();
+    $("#post_at_to_date").datepicker();
+    });
 </script>
 </html>

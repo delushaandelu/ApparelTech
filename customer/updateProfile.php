@@ -64,8 +64,9 @@ session_start();
     $sql = "SELECT * FROM customer where customer_id=$c_id ";
     $result = $db->query($sql);
     while($row = $result->fetch_assoc()) {
-?>            
-<form method="POST">
+?> 
+<!--update profile form-->
+<form method="POST" onSubmit = "return validateform();">
     <legend>Personal information:</legend>
     <table class="table table-hover">
         <tr>
@@ -78,11 +79,11 @@ session_start();
         </tr>
         <tr>
             <td><h2>Telephone  </h2></td>
-            <td><input type="number" name="tele" class="form-control" style="font-size:12pt;width:200px;" autocomplete="off" value=<?php echo $row['tele'] ?>></td>
+            <td><input type="text" id="mob" name="tele" class="form-control" style="font-size:12pt;width:200px;" autocomplete="off" value=<?php echo $row['tele'] ?>></td>
         </tr>
         <tr>
             <td><h2>Mobile  </h2></td>
-            <td><input type="number" name="mob" class="form-control" style="font-size:12pt;width:200px;" autocomplete="off" value=<?php echo $row['mobile'] ?>></td>
+            <td><input type="text" id="mob" name="mob" class="form-control" style="font-size:12pt;width:200px;" autocomplete="off" value=<?php echo $row['mobile'] ?>></td>
         </tr>
         <tr>
             <td><h2>NIC  </h2></td>
@@ -118,4 +119,18 @@ session_start();
 <!-- FastClick -->
   <!-- Custom Theme Scripts -->
 <script src="build/js/custom.min.js"></script>
+<!--validate the phone number-->
+<script type="text/javascript">
+    function validateform(){
+        var phoneno =/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+        if(!phoneno.test($("#mob").val())) {  
+            window.alert("wrong mobile phone no");  
+            return false;   
+        }  
+        else{
+          return true;
+        }
+    
+    }
+</script>
 </html>
