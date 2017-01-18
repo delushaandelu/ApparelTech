@@ -12,7 +12,7 @@
 
         
 <?php
-     include("../config/stockmgrmenu.php");
+     include("../config/stockmgrmenu.php");      //include stock manager menu
  ?>
 
 <ul class="breadcrumb">
@@ -20,22 +20,23 @@
 </ul>
 <div class = "panel">
         
-        <style type="text/css">
-        #driverdisplaytb{
-            margin-top:10%;
-            margin-left: 30%;
-            width: 500px;
-            height: 400px;
+<style type="text/css">
+     
+    #driverdisplaytb{         
+        margin-top:10%;
+        margin-left: 30%;      
+        width: 500px;
+        height: 400px;
         }
-            #btndriver{
-                color: white;
-                width:200px;
-                height:40px;
-            }    
+    #btndriver{
+        color: white;
+        width:200px;
+        height:40px;
+        }    
             
-    </style>
-    </head>
-<body>
+</style>
+</head>
+    <body>
 
 </br></br>
 
@@ -72,7 +73,7 @@
             <td colspan="7"><center><a href="driver_details_addDriver.php"><button id="btndriver" class="btn">Add Driver</button></a></center>  </td>
             </tr>
         </table>
-    <!------------------------------------------ -->
+    <!-----------------------END TABLE------------------- -->
                 <?php
        
                     if(!empty($_GET['driver_id']) && !empty($_GET['vehicle_id']) ){

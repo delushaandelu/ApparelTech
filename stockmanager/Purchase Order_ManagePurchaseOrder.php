@@ -7,26 +7,8 @@
         <link rel="stylesheet" href="js/sweetalert.css">
         <script type="text/javascript" src="js/jquery.leanModal.min.js"></script>
         <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-<script src="//code.jquery.com/jquery-1.12.0.min.js"></script> 
-<!-- 
-        <script type="text/javascript">
-                $(function () {
-
-                    $("#dialog").dialog({
-
-                        modal: true,
-                        autoOpen: false,
-                        title: "Send Email",
-                        display: "block",
-                        width: 400,
-                        height: 400,
-                    });
-                    $("#btnShow").click(function () {
-                        $('#dialog').dialog('open');
-                    });
-                });
-            </script> -->
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="//code.jquery.com/jquery-1.12.0.min.js"></script> 
         <style type="text/css">
 
         
@@ -42,7 +24,9 @@
             }
         
         </style>
-    <div id="dialog" style="display: none" align = "center">
+<!-------------- EMAIL INTERFACE -------------------------->
+        
+<div id="dialog" style="display: none" align = "center">
     <form method="post" action="?">
         <table width="350px" height="300px">
         <tr>
@@ -68,30 +52,27 @@
     </form>
 </div>
         
-
-        
-    </head>
+<!--------- END----------------------------------------------->
+    
+</head>
     <body>
         
 <?php
-    include("../config/stockmgrmenu.php");
+    include("../config/stockmgrmenu.php"); // link stock manager menu
  ?>
 
 <ul class="breadcrumb">
     <h4>Manage purchase orders</li></h4>
 </ul>
-<!--<div id="content">-->
-       <!--<div class="panel">-->
-           <div class="panel-heading">
-               <div class="panel-body">
-                <br>
-                <br>
-                
-                <table class="table datatable" id="potb">
+    <div class="panel-heading">
+        <div class="panel-body">
+            <br>
+            <br>
+            <table class="table datatable" id="potb">
                     <tr class='success'>
                         <th><center>Id</center></th>
                         <th><center>Customer Id</center></th>
-                         <th><center>Customer Name</center></th>
+                        <th><center>Customer Name</center></th>
                         <th><center>Total Price</center></th>
                         <th><center>Created</center></th>
                         <th colspan="2"><center>Action</center></th>
@@ -105,9 +86,9 @@
                                 $id = $row['id'];
     
                         ?>
-
-                        <?php
-                        if(isset($_POST['mailBtn'])){
+ 
+                       <?php
+                       /* if(isset($_POST['mailBtn'])){
                             $to = $_POST['name'];
                             $subject = $_POST['subject'];
                             $message = $_POST['message'];
@@ -116,14 +97,14 @@
                             'X-Mailer: PHP/' . phpversion();
 
                             mail($to, $subject, $message, $headers);
-                        }
+                        }*/
 
                         ?>
 
                             <tr  class="active">
                             <td><center><?php echo $row['id'] ?></center></td>
                             <td><center><?php echo $row['customer_id'] ?></center></td>
-                              <td><center><?php echo $row['fullname'] ?></center></td>
+                            <td><center><?php echo $row['fullname'] ?></center></td>
                             <td><center><?php echo $row['total_price'] ?></center></td>
                             <td><center><?php echo $row['created'] ?></center></td>
                           
@@ -137,12 +118,11 @@
                             </tr>
                 
                         <?php } ?>
-
-
-            
-                </table>
-                                
+            </table>
+                        
+            <!------------------Upadate stock ----------------------------------------->
                         <?php
+            
                             
                             if(!empty($_GET['ID']) && !empty($_GET['customer_id'])){
                                 $query = "SELECT * FROM order_items WHERE order_id = '$id' ";
@@ -172,7 +152,7 @@
                             $cusid=$_GET['customer_id'];
                              
                            
-               //sms function----------------------------
+        //sms function----------------------------
                              
                             $username = 'uthpala.isiru@gmail.com';
     	                    $hash = 'Uthpala@123';
@@ -202,6 +182,7 @@
     	
     	                   // Process your response here
     	                   //echo $response;
+        //-------------------------------------P/O accept ----------------------------------
                              
                             $sqlinsert="INSERT INTO purchasereport(p_id,customer_id,totalprice,created,status) SELECT orders.id,orders.customer_id,orders.total_price,orders.created,'approved' FROM orders WHERE id=$id";
                             $resultinsert=mysqli_query($dbcon,$sqlinsert);
@@ -227,7 +208,7 @@
                             $id=$_GET['id'];
                             $cusid=$_GET['customerid'];
 
-                            //Email notificaion code
+                            
 
                             
                             
@@ -259,6 +240,7 @@
     	
     	                   // Process your response here
     	                   //echo $response;
+        //----------------------------------------------P/O delete ------------------------
                             
                            $sqldelete="DELETE FROM orders WHERE id=$id";
                             $result=mysqli_query($dbcon,$sqldelete);
@@ -285,10 +267,7 @@
         </div>
             
 </div> 
-   <!--</div>-->
-            
-<!--</div>-->
-        
+
         
     
         <script type="text/javascript" src="js/plugins/jquery/jquery.min.js"></script>
@@ -304,8 +283,7 @@
         <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
-
-         <script type="text/javascript">
+         <script type="text/javascript"> // email popup window function
                         $(function () {
                             $("#dialog").dialog({
                                 modal: true,

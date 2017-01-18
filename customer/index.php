@@ -72,7 +72,7 @@ if(isset($_POST['signin'])){
     $username = htmlspecialchars($username);
     $password = htmlspecialchars($password);
     $password = sha1($password);
-   // $password = md5($password);
+   
     $_SESSION['username'] = $username;
     
     $res1 =  mysqli_fetch_assoc(mysqli_query($conn,"select fullname from customer where username = '$username' "));
@@ -113,6 +113,8 @@ if(isset($_POST['signin'])){
         echo "</script>";
 }
 ?>
+
+<!----------------------VALIDATION-------------------------------------------->
 <script>
 function validateForm() {
     var username = document.forms["login"]["username"].value;

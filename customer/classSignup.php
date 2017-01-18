@@ -1,16 +1,26 @@
 <?php
 include('dbConfig.php');
-    $fname = $_POST['fullname'];
-    $desi = $_POST['desi'];
-    $address = $_POST['address'];
-    $nic = $_POST['nic'];
-    $mob = $_POST['mob'];
-    $tele = $_POST['tele'];
-    $email = $_POST['email'];
-    $cname = $_POST['cname'];
-    $uname = $_POST['uname'];
-    $pass = $_POST['pword'];
+    $fname = mysqli_real_escape_string($db,$_POST['fullname']);
+    $desi = mysqli_real_escape_string($db,$_POST['desi']);                                     
+    $address = mysqli_real_escape_string ($db,$_POST['address']);
+    $nic =  mysqli_real_escape_string ($db,$_POST['nic']);
+    $mob =  mysqli_real_escape_string ($db,$_POST['mob']);
+    $tele =  mysqli_real_escape_string ($db,$_POST['tele']);
+    $email =  mysqli_real_escape_string ($db,$_POST['email']);
+    $cname =  mysqli_real_escape_string ($db,$_POST['cname']);
+    $uname =  mysqli_real_escape_string ($db,$_POST['uname']);
+    $pass =  mysqli_real_escape_string ($db,$_POST['pword']);
     $password = sha1($pass);
+    $fname=htmlspecialchars($fname);
+    $desi=htmlspecialchars($desi);
+    $address=htmlspecialchars($address);
+    $nic=htmlspecialchars($nic);
+    $mob=htmlspecialchars($mob);
+    $tele=htmlspecialchars($tele);
+    $email=htmlspecialchars($email);
+    $cname=htmlspecialchars($cname);
+    $uname=htmlspecialchars($uname);
+   
     
     
 

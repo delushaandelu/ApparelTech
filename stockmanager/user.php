@@ -1,7 +1,7 @@
 <?php
-class User{
+class User{        //user class
 public function changepswd(){
-    require("database_connection.php");        
+    require("database_connection.php");        //database connection
     $OldPassword1=$_POST["oldpassword"];
     $OldPassword = sha1($OldPassword1);
     $NewPassword1=$_POST["newpassword"];
@@ -27,7 +27,7 @@ public function changepswd(){
                     $updatepswd="UPDATE user SET password='$NewPassword' WHERE user_id=$uid";        // change the password.
                     $result1=mysqli_query($dbcon,$updatepswd);
                         echo'<script language ="javascript">';
-                            echo'alert("password changed succesfully")';
+                            echo'alert("password changed succesfully")';  
                         echo'</script>'; 
          
             }

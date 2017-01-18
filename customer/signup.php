@@ -143,6 +143,8 @@
 </div>
 
 </div>
+<!--------------------------------------VALIDATION ---------------------------------------->
+
 <script type="text/javascript">
 function validateform(){
     
@@ -211,9 +213,6 @@ function validateform(){
 		          address.focus();
 		    	return false;
 			} 
-    
-    
-   
     var phone1=document.InputForm.tele;
     var phoneno1 =/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
      if (phone1.value == "")
@@ -228,8 +227,6 @@ function validateform(){
         return false;   
         }  
      
-    
-      
     var atpos = email.indexOf("@");
     var dotpos = email.lastIndexOf(".");
     if (email.value == "")
@@ -243,7 +240,7 @@ function validateform(){
         return false;
     }
     
-    var imgpath =document.InputForm.word;
+   /* var imgpath =document.InputForm.word;
     var file= /\.(jpe?g|gif|bmp)$/;
     if(imgpath.value == "")
     {
@@ -255,11 +252,10 @@ function validateform(){
         {  
         window.alert("wrong file extension");  
         return false;   
-        }  
+        }  */
     
     
-   
-    if ( uname.value == "")
+   if ( uname.value == "")
 			{
 		    	window.alert("Please enter your user Name.");
 		          uname.focus();
@@ -279,5 +275,7 @@ function validateform(){
 }
 
 </script>
+
+<!-------------------------------- END VALIDATION ---------------------------------------------------->
 </body>
 </html>

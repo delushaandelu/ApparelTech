@@ -374,7 +374,7 @@ body.page-container-boxed .page-container {
 }
 .x-navigation li.active > a {
   background: #1caf9a;
-  color:#fff;
+  color:#FF4500;
   -webkit-transition: all 200ms ease;
   -moz-transition: all 200ms ease;
   -ms-transition: all 200ms ease;
@@ -383,7 +383,7 @@ body.page-container-boxed .page-container {
 }
 .x-navigation li.active > a .fa,
 .x-navigation li.active > a .glyphicon {
-  color: #fff;
+  color: #FF4500;
 }
 .x-navigation li.active > ul {
   max-height: 1200px;
@@ -814,7 +814,7 @@ body.page-container-boxed .page-container {
   background: #1f232a;
 }
 .x-navigation.x-navigation-custom > li.active > a {
-  color: #FFF;
+  color: #FF4500;
   background: #1f232a;
   border-left: 3px solid #b5c1d1;
 }
@@ -1336,7 +1336,7 @@ a.list-group-item:focus {
   line-height: 20px;
 }
 .list-group-contacts .list-group-item.active {
-  background: #F5F5F5;
+  background: #FF4500;
   border-color: #E5E5E5;
   color: #22262e;
 }
@@ -1977,7 +1977,7 @@ ul.panel-controls > li > .dropdown-menu:before {
 .btn-default:active,
 .btn-default.active,
 .open > .dropdown-toggle.btn-default {
-  background-color: #F5F5F5;
+  background-color:#FF4500;
   border-color: #DDD;
 }
 .btn-danger {
@@ -2987,7 +2987,7 @@ blockquote.pull-right {
 .nav-tabs > .dropdown.active.open > a:hover {
   border: 0px;
   border-top: 2px solid #1b1e24;
-  background: #FFF;
+  background:#FF4500;
   -moz-border-radius: 3px 3px 0px 0px;
   -webkit-border-radius: 3px 3px 0px 0px;
   border-radius: 3px 3px 0px 0px;

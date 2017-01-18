@@ -110,14 +110,16 @@
 
                 <ul class="breadcrumb">
                     <h3>Graphical Reports</h3>
+                    
                 </ul>
+                <h3 align='center'>Priyantha Enterprises</h3>
 
                 <h4 align="center"> Stock Quantity Report</h4>
 
 
 
     <div id="chart-container">
-            <canvas id = "mycanvas"></canvas>
+            <canvas id = "mycanvas" width="200" height="60"></canvas>
         </div>
 
 

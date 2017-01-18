@@ -10,7 +10,7 @@
     <body>
         
 <?php
-    include("../config/stockmgrmenu.php");  
+    include("../config/stockmgrmenu.php");  //include stock manager menu
 ?>
     <!--- vehicle update --------------------------->
 <?php
@@ -25,16 +25,15 @@
                 if(!mysqli_query($dbcon,$sql)){
                    echo'<script language ="javascript">';
                         echo"swal({  title: 'Error!', text: '', type: 'error', confirmButtonText: 'Done!'}, function(){window.location.href='driver_details.php'});";
-                                echo'</script>';
+                        echo'</script>';
             }
-            else{
-                echo'<script language ="javascript">';
-                    echo"swal({  title: 'DrVehicle updated!', text: '', type: 'success', confirmButtonText: 'Done!'}, function(){window.location.href='vehicle_details.php'});";
-                echo'</script>';
+                else{
+                    echo'<script language ="javascript">';
+                    echo"swal({  title: 'Vehicle updated!', text: '', type: 'success', confirmButtonText: 'Done!'}, function(){window.location.href='vehicle_details.php'});";
+                    echo'</script>';
             }
             
-            /*$sqlupdatedriver="UPDATE driver SET vechicle_id='111' WHERE vechicle_id=$vehicle_id and $status=0";
-            mysqli_query($dbcon,$sqlupdatedriver);*/
+            
             
         }
 ?>
